@@ -1,0 +1,76 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RiceDoctor.ConsoleApp", "RiceDoctor\RiceDoctor.ConsoleApp\RiceDoctor.ConsoleApp.csproj", "{78DEE6C9-E201-483A-87A5-B75256482CA4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RiceDoctor.Shared", "RiceDoctor\RiceDoctor.Shared\RiceDoctor.Shared.csproj", "{2F4655BF-F657-4A96-A04C-D9B5BC0A608D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{391B7CE6-7A14-48B8-BD46-9ED3D927C529}"
+	ProjectSection(SolutionItems) = preProject
+		RiceDoctor\Resources\conversation-rules.txt = RiceDoctor\Resources\conversation-rules.txt
+		RiceDoctor\Resources\logic-rules.txt = RiceDoctor\Resources\logic-rules.txt
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RiceDoctor.ConversationalAgent", "RiceDoctor\RiceDoctor.ConversationalAgent\RiceDoctor.ConversationalAgent.csproj", "{32771FDC-CCAA-4BF8-874B-6DAE77DFA649}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RiceDoctor.InferenceEngine", "RiceDoctor\RiceDoctor.InferenceEngine\RiceDoctor.InferenceEngine.csproj", "{6486445C-333D-463F-9CA9-8E663C48B4C2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RiceDoctor.RuleManager", "RiceDoctor\RiceDoctor.RuleManager\RiceDoctor.RuleManager.csproj", "{18F630C8-F9CC-4D98-AA21-0364646E8BDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiceDoctor.SemanticCode", "RiceDoctor\RiceDoctor.SemanticCode\RiceDoctor.SemanticCode.csproj", "{F761B5B4-16E0-4610-839D-980B7C998571}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiceDoctor.OntologyManager", "RiceDoctor\RiceDoctor.OntologyManager\RiceDoctor.OntologyManager.csproj", "{0B8956B7-53AA-4944-B264-81321984C98F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiceDoctor.Tests", "RiceDoctor\RiceDoctor.Tests\RiceDoctor.Tests.csproj", "{9C1AD337-3302-4864-9EFD-58705B09118F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiceDoctor.WebApp", "RiceDoctor\RiceDoctor.WebApp\RiceDoctor.WebApp.csproj", "{1C7749A6-A4D5-4D9C-8D0C-0BFAA0ABBD7E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{78DEE6C9-E201-483A-87A5-B75256482CA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78DEE6C9-E201-483A-87A5-B75256482CA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78DEE6C9-E201-483A-87A5-B75256482CA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78DEE6C9-E201-483A-87A5-B75256482CA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F4655BF-F657-4A96-A04C-D9B5BC0A608D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F4655BF-F657-4A96-A04C-D9B5BC0A608D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F4655BF-F657-4A96-A04C-D9B5BC0A608D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F4655BF-F657-4A96-A04C-D9B5BC0A608D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32771FDC-CCAA-4BF8-874B-6DAE77DFA649}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32771FDC-CCAA-4BF8-874B-6DAE77DFA649}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32771FDC-CCAA-4BF8-874B-6DAE77DFA649}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32771FDC-CCAA-4BF8-874B-6DAE77DFA649}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6486445C-333D-463F-9CA9-8E663C48B4C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6486445C-333D-463F-9CA9-8E663C48B4C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6486445C-333D-463F-9CA9-8E663C48B4C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6486445C-333D-463F-9CA9-8E663C48B4C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18F630C8-F9CC-4D98-AA21-0364646E8BDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18F630C8-F9CC-4D98-AA21-0364646E8BDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18F630C8-F9CC-4D98-AA21-0364646E8BDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18F630C8-F9CC-4D98-AA21-0364646E8BDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F761B5B4-16E0-4610-839D-980B7C998571}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F761B5B4-16E0-4610-839D-980B7C998571}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F761B5B4-16E0-4610-839D-980B7C998571}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F761B5B4-16E0-4610-839D-980B7C998571}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B8956B7-53AA-4944-B264-81321984C98F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B8956B7-53AA-4944-B264-81321984C98F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B8956B7-53AA-4944-B264-81321984C98F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B8956B7-53AA-4944-B264-81321984C98F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C1AD337-3302-4864-9EFD-58705B09118F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C1AD337-3302-4864-9EFD-58705B09118F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C1AD337-3302-4864-9EFD-58705B09118F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C1AD337-3302-4864-9EFD-58705B09118F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C7749A6-A4D5-4D9C-8D0C-0BFAA0ABBD7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C7749A6-A4D5-4D9C-8D0C-0BFAA0ABBD7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C7749A6-A4D5-4D9C-8D0C-0BFAA0ABBD7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C7749A6-A4D5-4D9C-8D0C-0BFAA0ABBD7E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

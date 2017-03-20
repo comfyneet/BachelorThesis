@@ -1,0 +1,1281 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://cs.uit.edu.vn/ontologies/rice"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://cs.uit.edu.vn/ontologies/rice">
+    <Prefix name="" IRI="http://cs.uit.edu.vn/ontologies/rice"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocSauSa5-20Ngay"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#coThuoc"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#QuyTrinhBonPhan"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocChinSua"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PhanDam"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PhanHuuCo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PhanVoCo"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#truBenh"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Oc"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PhanViSinh"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#QuyTrinhBonDong"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GiongTBR36"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GiongSV181"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#QuyTrinhTuoiNuoc"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GiongGL105"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PhanKali"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PhanRac"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#QuyTrinhBonLot"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GiaiDoanChin"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#cachCheBien"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GiongSV47"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#coPhanBon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GiongLua"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#QuyTrinhKichThichTro"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Co"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GiongTBR-45"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocNayMam"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#QuyTrinhBonThucDot1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#QuyTrinhKichThichChin"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GiongDV108"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#QuyTrinhKichThich"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GiaiDoanMa"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ten"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#coGiaiDoan"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#denNgay"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#denNgayCachLy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GiongOM8923"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#QuyTrinhBonThucDot2"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PhanBon"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocTrongDeNhanh"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PhanTrungLuong"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TacNhanGayBenh"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#tuNgay"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LaVang"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocChinSap"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GiaiDoanGieo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#coQuyTrinh"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#moTa"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GiaiDoan"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#thanhPhan"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GiongTBR255"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocSauSa20-25Ngay"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GiaiDoanDeNhanh"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocChinHoanToan"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#tuNgayCachLy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#QuyTrinh"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Thuoc"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PhanPhucHop"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GiongDH815-6"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TrieuChung"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GiaiDoanTro"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PhanViLuong"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#QuyTrinhKichThichMa"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Benh"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PhanHonHop"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GiongSV46"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PhanDon"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#loai"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PhanChuong"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GiongTBR-1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PhanSinhHocHuuCo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GiaiDoanLamDong"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SauBenh"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocTro"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PhanXanh"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Armada"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocSauDeNhanh"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PhanLan"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Benh"/>
+        <Class IRI="#TacNhanGayBenh"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Co"/>
+        <Class IRI="#TacNhanGayBenh"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Oc"/>
+        <Class IRI="#TacNhanGayBenh"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PhanHuuCo"/>
+        <Class IRI="#PhanBon"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PhanVoCo"/>
+        <Class IRI="#PhanBon"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#QuyTrinhBonPhan"/>
+        <Class IRI="#QuyTrinh"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#QuyTrinhKichThich"/>
+        <Class IRI="#QuyTrinh"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#QuyTrinhTuoiNuoc"/>
+        <Class IRI="#QuyTrinh"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SauBenh"/>
+        <Class IRI="#TacNhanGayBenh"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Thuoc"/>
+        <NamedIndividual IRI="#Armada"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GiaiDoan"/>
+        <NamedIndividual IRI="#GiaiDoanChin"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GiaiDoan"/>
+        <NamedIndividual IRI="#GiaiDoanDeNhanh"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GiaiDoan"/>
+        <NamedIndividual IRI="#GiaiDoanGieo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GiaiDoan"/>
+        <NamedIndividual IRI="#GiaiDoanLamDong"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GiaiDoan"/>
+        <NamedIndividual IRI="#GiaiDoanMa"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GiaiDoan"/>
+        <NamedIndividual IRI="#GiaiDoanTro"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GiongLua"/>
+        <NamedIndividual IRI="#GiongDH815-6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GiongLua"/>
+        <NamedIndividual IRI="#GiongDV108"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GiongLua"/>
+        <NamedIndividual IRI="#GiongGL105"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GiongLua"/>
+        <NamedIndividual IRI="#GiongOM8923"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GiongLua"/>
+        <NamedIndividual IRI="#GiongSV181"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GiongLua"/>
+        <NamedIndividual IRI="#GiongSV46"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GiongLua"/>
+        <NamedIndividual IRI="#GiongSV47"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GiongLua"/>
+        <NamedIndividual IRI="#GiongTBR-1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GiongLua"/>
+        <NamedIndividual IRI="#GiongTBR-45"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GiongLua"/>
+        <NamedIndividual IRI="#GiongTBR255"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GiongLua"/>
+        <NamedIndividual IRI="#GiongTBR36"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TrieuChung"/>
+        <NamedIndividual IRI="#LaVang"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PhanHuuCo"/>
+        <NamedIndividual IRI="#PhanChuong"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PhanVoCo"/>
+        <NamedIndividual IRI="#PhanDam"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PhanVoCo"/>
+        <NamedIndividual IRI="#PhanDon"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PhanVoCo"/>
+        <NamedIndividual IRI="#PhanHonHop"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PhanVoCo"/>
+        <NamedIndividual IRI="#PhanKali"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PhanVoCo"/>
+        <NamedIndividual IRI="#PhanLan"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PhanVoCo"/>
+        <NamedIndividual IRI="#PhanPhucHop"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PhanHuuCo"/>
+        <NamedIndividual IRI="#PhanRac"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PhanHuuCo"/>
+        <NamedIndividual IRI="#PhanSinhHocHuuCo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PhanVoCo"/>
+        <NamedIndividual IRI="#PhanTrungLuong"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PhanVoCo"/>
+        <NamedIndividual IRI="#PhanViLuong"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PhanHuuCo"/>
+        <NamedIndividual IRI="#PhanViSinh"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PhanHuuCo"/>
+        <NamedIndividual IRI="#PhanXanh"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#QuyTrinhBonPhan"/>
+        <NamedIndividual IRI="#QuyTrinhBonDong"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#QuyTrinhBonPhan"/>
+        <NamedIndividual IRI="#QuyTrinhBonLot"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#QuyTrinhBonPhan"/>
+        <NamedIndividual IRI="#QuyTrinhBonThucDot1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#QuyTrinhBonPhan"/>
+        <NamedIndividual IRI="#QuyTrinhBonThucDot2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#QuyTrinhKichThich"/>
+        <NamedIndividual IRI="#QuyTrinhKichThichChin"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#QuyTrinhKichThich"/>
+        <NamedIndividual IRI="#QuyTrinhKichThichMa"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#QuyTrinhKichThich"/>
+        <NamedIndividual IRI="#QuyTrinhKichThichTro"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#QuyTrinhTuoiNuoc"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocChinHoanToan"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#QuyTrinhTuoiNuoc"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocChinSap"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#QuyTrinhTuoiNuoc"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocChinSua"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#QuyTrinhTuoiNuoc"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocNayMam"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#QuyTrinhTuoiNuoc"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocSauDeNhanh"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#QuyTrinhTuoiNuoc"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocSauSa20-25Ngay"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#QuyTrinhTuoiNuoc"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocSauSa5-20Ngay"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#QuyTrinhTuoiNuoc"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocTro"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#QuyTrinhTuoiNuoc"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocTrongDeNhanh"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coGiaiDoan"/>
+        <NamedIndividual IRI="#QuyTrinhBonDong"/>
+        <NamedIndividual IRI="#GiaiDoanLamDong"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coGiaiDoan"/>
+        <NamedIndividual IRI="#QuyTrinhBonLot"/>
+        <NamedIndividual IRI="#GiaiDoanGieo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coGiaiDoan"/>
+        <NamedIndividual IRI="#QuyTrinhBonThucDot1"/>
+        <NamedIndividual IRI="#GiaiDoanMa"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coGiaiDoan"/>
+        <NamedIndividual IRI="#QuyTrinhBonThucDot2"/>
+        <NamedIndividual IRI="#GiaiDoanLamDong"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coGiaiDoan"/>
+        <NamedIndividual IRI="#QuyTrinhKichThichChin"/>
+        <NamedIndividual IRI="#GiaiDoanChin"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coGiaiDoan"/>
+        <NamedIndividual IRI="#QuyTrinhKichThichMa"/>
+        <NamedIndividual IRI="#GiaiDoanMa"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coGiaiDoan"/>
+        <NamedIndividual IRI="#QuyTrinhKichThichTro"/>
+        <NamedIndividual IRI="#GiaiDoanTro"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coGiaiDoan"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocChinHoanToan"/>
+        <NamedIndividual IRI="#GiaiDoanChin"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coGiaiDoan"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocChinSap"/>
+        <NamedIndividual IRI="#GiaiDoanChin"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coGiaiDoan"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocChinSua"/>
+        <NamedIndividual IRI="#GiaiDoanChin"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coGiaiDoan"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocNayMam"/>
+        <NamedIndividual IRI="#GiaiDoanGieo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coGiaiDoan"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocSauDeNhanh"/>
+        <NamedIndividual IRI="#GiaiDoanLamDong"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coGiaiDoan"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocSauSa20-25Ngay"/>
+        <NamedIndividual IRI="#GiaiDoanLamDong"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coGiaiDoan"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocSauSa5-20Ngay"/>
+        <NamedIndividual IRI="#GiaiDoanMa"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coGiaiDoan"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocTro"/>
+        <NamedIndividual IRI="#GiaiDoanTro"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coGiaiDoan"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocTrongDeNhanh"/>
+        <NamedIndividual IRI="#GiaiDoanLamDong"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#Armada"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Armada</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#thanhPhan"/>
+        <NamedIndividual IRI="#Armada"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Imidacloprid</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#denNgay"/>
+        <NamedIndividual IRI="#GiaiDoanChin"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">105</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#GiaiDoanChin"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Giai đoạn chín</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tuNgay"/>
+        <NamedIndividual IRI="#GiaiDoanChin"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">60</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#denNgay"/>
+        <NamedIndividual IRI="#GiaiDoanDeNhanh"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">20</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#GiaiDoanDeNhanh"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Giai đoạn đẻ nhánh</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tuNgay"/>
+        <NamedIndividual IRI="#GiaiDoanDeNhanh"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#denNgay"/>
+        <NamedIndividual IRI="#GiaiDoanGieo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#GiaiDoanGieo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Giai đoạn gieo</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tuNgay"/>
+        <NamedIndividual IRI="#GiaiDoanGieo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#denNgay"/>
+        <NamedIndividual IRI="#GiaiDoanLamDong"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">45</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#GiaiDoanLamDong"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Giai đoạn làm đồng</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tuNgay"/>
+        <NamedIndividual IRI="#GiaiDoanLamDong"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">20</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#denNgay"/>
+        <NamedIndividual IRI="#GiaiDoanMa"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#GiaiDoanMa"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">[h1]Chọn giống lúa[/h1]
+
+Nên sử dụng các giống có thời gian sinh trưởng từ 90-100 ngày, năng suất cao, chống chịu với một số sâu bệnh chính và có phẩm chất gạo tốt đủ tiêu chuẩn xuất khẩu như OM1490, OMCS2000, IR64, MTL250, VD95-20, AS996, OM3536, Lúa thơm, v.v.
+
+[h1]Chuẩn bị đất[/h1]
+
+[h2]Đối với vụ Đông xuân:[/h2]
+
+Dọn sạch cỏ.
+
+Trục đánh bùn và san bằng mặt ruộng bằng máy cày bánh lồng có trang kèm theo.
+
+[h2]Đối với vụ Hè thu:[/h2]
+
+Cày đất bằng máy với độ sâu từ 15-20 cm.
+
+Phơi ải trong thời gian 1 tháng.
+
+Bừa, trục và san bằng mặt ruộng bằng máy kéo bánh lồng có công cụ trang phẳng mặt ruộng kèm theo.
+
+[i]Chú ý[/i]: Ruộng phải bằng phẳng, có hệ thống thoát nước tốt và không đọng nước.
+
+[h1]Chuẩn bị hạt giống[/h1]
+
+Làm sạch hạt lúa trước khi ngâm ủ bằng cách ngâm hạt trong nước muối 15% để loại bỏ hạt lép lửng và lẫn tạp.
+
+Sau đó, cho vào bao ngâm trong nước sạch 24 - 30 giờ. Xử lý hạt giống trước khi đem ủ bằng phân bón lá HVP GA3
+
+Rửa bằng nước sạch, để ráo nước, ủ trong 24 – 36 giờ tùy giống đảm bảo hạt vừa nhú mầm.
+
+Xử lý với thuốc Cruiser plus (tốt nhất là lúc ngót lần cuối khoảng 12 giờ trước khi gieo) trước khi gieo. 
+
+[h1]Biện pháp gieo sạ[/h1]
+
+Gieo hàng bằng công cụ gieo hàng kéo tay hoặc liên hợp với máy kéo.
+
+Lượng hạt giống gieo: 100-120 kg/ha.
+
+Khoảng cách gieo: hàng cách hàng 20 cm.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#GiaiDoanMa"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Giai đoạn mạ</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tuNgay"/>
+        <NamedIndividual IRI="#GiaiDoanMa"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#denNgay"/>
+        <NamedIndividual IRI="#GiaiDoanTro"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">65</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#GiaiDoanTro"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Giai đoạn trổ</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tuNgay"/>
+        <NamedIndividual IRI="#GiaiDoanTro"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">40</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#GiongDH815-6"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">DH815-6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#GiongDV108"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ĐV 108</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#GiongGL105"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">GL105</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#GiongOM8923"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">OM8923</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#GiongSV181"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">SV 181</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#GiongSV46"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">SV 46</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#GiongSV47"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">SV 47</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#GiongTBR-1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">TBR-1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#GiongTBR-45"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">TBR-45</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#GiongTBR255"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">TBR255</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#GiongTBR36"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">TBR36</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#cachCheBien"/>
+        <NamedIndividual IRI="#PhanChuong"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">[h1]Có 3 phương pháp:[/h1]
+
+[ul]
+[li]Ủ nóng (ủ xốp): Lấy phân ra khỏi chuồng, chất thành lớp, không được nén, tưới nước, giữ ẩm 60-70%, có thể trộn thêm 1% vôi bột và 1-2% Super Lân, sau đó trét bùn che phủ cho kín hàng ngày tưới nước, thời gian ủ ngắn 30-40 ngày, ủ xong là sử dụng được.[/li]
+
+[li]Ủ nguội (ủ chặt): Lấy phân ra khỏi chuồng xếp thành lớp, mỗi lớp rắc khoảng
+(2%) lân, nén chặt. Đống phân ủ rộng khoảng 2-3m, cao 1, 5-2m, trét bùn bên ngoài tránh mưa. Thời gian ủ lâu, 5-6 tháng mới xong.[/li]
+
+[li]Ủ nóng trước nguội sau: Ủ nóng 5-6 ngày, khi nhiệt độ 50-60°c nén chặt ủ tiếp lớp khác lên trên, trét bùn kín, có thể cho thêm vào đống phân ủ các loại phân khác như: phân thỏ, gà, vịt làm phân men để tăng chất lượng phân.[/li]
+[/ul]</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#PhanChuong"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Là hổn hợp chủ yếu của: phân, nước tiểu gia súc và chất độn. Nó không những cung cấp thức ăn cho cây trồng mà còn bổ sung chất hữu cơ cho đất giúp cho đất được tơi xốp, tăng độ phì nhiêu, tăng hiệu quả sử dụng phân hóa học…</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#PhanChuong"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Phân chuồng</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#PhanDam"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Phân đạm</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#PhanDon"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Phân đơn</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#PhanHonHop"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Phân hỗn hợp</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#PhanKali"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Phân kali</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#PhanLan"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Phân lân</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#PhanPhucHop"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Phân phức hợp</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#cachCheBien"/>
+        <NamedIndividual IRI="#PhanRac"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Nguyên liệu chính là phân rác 70%, cung cấp thêm đạm và Kali 2%, còn lại phân men(phân chuồng, lân, vôi). Nguyên liệu được chặt ra thành đoạn ngắn 20-30cm xếp thành lớp cứ 30cm rắc một lớp vôi;trét bùn;ủ khoảng 20 ngày đảo lại rắc thêm phân men, xếp đủ cao trét bùn lại, để hở lỗ tưới nước thường xuyên;ủ khoãng 60 ngày dùng bón lót, để lâu hơn khi phân hoai có thể dùng để bón thúc.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#PhanRac"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Được chế biến từ: cỏ dại, rác, thân lá cây xanh, rơm rạ…ủ với một số phân men như phân chuồng, lân, vôi…đến khi mục thành phân(thành phần dinh dưỡng thấp hơn phân chuồng).</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#PhanRac"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Phân rác</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#cachCheBien"/>
+        <NamedIndividual IRI="#PhanSinhHocHuuCo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Được sản xuất ở dạng bột hoặc dạng lỏng;có thể phun lên lá hoặc bón gốc. Các loại phân sinh hóa hữu cơ hiện nay được sản xuất theo hướng chuyên dùng như phân sinh hóa hữu cơ Komix chuyên dùng cho: cây ăn trái , lúa, mía…</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#PhanSinhHocHuuCo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Là loại phân có nguồn gốc hữu cơ được sản xuất bằng công nghệ sinh học(như lên men vi sinh) và phối trộn thêm một số hoạt chất khác để làm tăng độ hữu hiệu của phân, hoặc khi bón vào đất sẽ tạo môi trường cho các quá trình sinh học trong đất diễn ra thuận lợi góp phần làm tăng năng suất cây trồng, phổ biến như: Phân bón Komix nền…</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#PhanSinhHocHuuCo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Phân sinh học hữu cơ</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#PhanTrungLuong"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Phân trung lượng</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#PhanViLuong"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Phân vi lượng</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#cachCheBien"/>
+        <NamedIndividual IRI="#PhanViSinh"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">[ul]
+[li]Phân vi sinh cố định đạm:
+[ul]
+[li]Phân vi sinh cố định đạm, sống cộng sinh với cây họ đậu: Nitragin, Rhidafo…[/li]
+
+[li]Phân vi sinh cố định đạm, sống tự do: Azotobacterin…[/li]
+[/ul]
+[/li]
+
+[li]Phân vi sinh phân giải lân: Phân lân hữu cơ vi sinh Komix và nhiều loại phân vi sinh phân giải lân khác có tính năng tác dụng giống như nhau.[/li]
+
+[li]Phân vi sinh phân giải chất xơ: chứa các chủng vi sinh vật giúp tăng cường phân giải xác bả thực vật…[/li]
+[/ul]
+
+Ngoài ra trên thị trường còn có những loại phân khác với tên thương phẩm khác nhau nhưng tính năng tác dụng thì cũng giống như các loại phân kể trên.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#PhanViSinh"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Là chế phẩm phân bón được sản xuất bằng cách dùng các loại vi sinh vật hữu ích cấy vào môi trường là chát hữu cơ(như bột than bùn). Khi bón cho đất các chủng loại vi sinhy vật sẽ phát huy vai trò của nó như phân giải chất dinh dưỡng khó tiêu thành dễ tiêu cho cây hấp thụ, hoặc hút đạm khí trời để bổ sung cho đất và cây.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#PhanViSinh"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Phân vi sinh</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#PhanXanh"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Sử dụng các loại cây lá tươi bón ngay vào đất không qua quá trình ủ do đó chỉ dùng để bón lót. Cây phân xanh thường được dùng là cây họ đậu: điền thanh, muồng, keo dậu, cỏ Stylo, điên điển…</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#PhanXanh"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Phân xanh</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#denNgay"/>
+        <NamedIndividual IRI="#QuyTrinhBonDong"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#QuyTrinhBonDong"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Nếu ruộng thiếu đạm bón thêm còn nếu không thì không cần</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#QuyTrinhBonDong"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Quy trình bón đòng</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tuNgay"/>
+        <NamedIndividual IRI="#QuyTrinhBonDong"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">45</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#denNgay"/>
+        <NamedIndividual IRI="#QuyTrinhBonLot"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#QuyTrinhBonLot"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Là bón phân trước cho ruộng khi gieo, cấy. Có thể bón lót cùng với quá trình làm đất, sau khi bón lót xong, tiến hành bừa đất, phân bón lót trên ruộng sẽ càng đều hơn. Cũng có thể làm đất xong rồi bón lót trước khi cấy.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#QuyTrinhBonLot"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Quy trình bón lót</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tuNgay"/>
+        <NamedIndividual IRI="#QuyTrinhBonLot"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#denNgay"/>
+        <NamedIndividual IRI="#QuyTrinhBonThucDot1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#QuyTrinhBonThucDot1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Bón phân cho lúa vào các thời kỳ sinh trưởng nhất định để cung cấp dinh dưỡng cho cây lúa sinh trưởng, phát triển tốt, cho năng suất cao</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#QuyTrinhBonThucDot1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Quy trình bón thúc đợt 1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tuNgay"/>
+        <NamedIndividual IRI="#QuyTrinhBonThucDot1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#denNgay"/>
+        <NamedIndividual IRI="#QuyTrinhBonThucDot2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">25</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#QuyTrinhBonThucDot2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Bón phân cho lúa vào các thời kỳ sinh trưởng nhất định để cung cấp dinh dưỡng cho cây lúa sinh trưởng, phát triển tốt, cho năng suất cao</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#QuyTrinhBonThucDot2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Quy trình bón thúc đợt 2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tuNgay"/>
+        <NamedIndividual IRI="#QuyTrinhBonThucDot2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">20</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#denNgay"/>
+        <NamedIndividual IRI="#QuyTrinhKichThichChin"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">75</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#QuyTrinhKichThichChin"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Hạt không bạc bụng, mấy hạt dưỡng cây tăng năng xuất</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#QuyTrinhKichThichChin"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Quy trình kích thích giai đoạn chín</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tuNgay"/>
+        <NamedIndividual IRI="#QuyTrinhKichThichChin"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">70</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#denNgay"/>
+        <NamedIndividual IRI="#QuyTrinhKichThichMa"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">20</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#QuyTrinhKichThichMa"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Kích thích đẻ nhánh, phát triển thân lá</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#QuyTrinhKichThichMa"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Quy trình thuốc kích thích giai đoạn mạ</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tuNgay"/>
+        <NamedIndividual IRI="#QuyTrinhKichThichMa"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#denNgay"/>
+        <NamedIndividual IRI="#QuyTrinhKichThichTro"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#QuyTrinhKichThichTro"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Kích thích , hình thành và phát triển đòng lúa trỗ đều</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#QuyTrinhKichThichTro"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Quy trình thuốc kích thích giai đoạn trổ</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tuNgay"/>
+        <NamedIndividual IRI="#QuyTrinhKichThichTro"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">40</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocChinHoanToan"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Lúa không cần nước, chỉ cần độ ẩm đất của ruộng lúa từ 60-
+70%  đến khi thu hoạch được, ruộng khô sẽ dễ dàng cho thu hoạch.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocChinHoanToan"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Quy trình tưới nước thời kỳ chín hoàn toàn</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocChinSap"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Sau khi trỗ khoảng 10 ngày, để nước săm sáp mặt ruộng.
+Đến cuối thời kỳ chín sáp (sau trỗ 20 ngày) bắt đầu rút cạn hết nước ở mặt ruộng</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocChinSap"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Quy trình tưới nước thời kỳ chín sáp</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocChinSua"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Mực nước trong ruộng từ 3-5cm</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocChinSua"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Quy trình tưới nước thời kỳ chín sữa</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocNayMam"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Hạt giống mới được gieo xuống ruộng cho đến 2-3 ngày sau gieo (hình
+3.20b &lt;TODO&gt;), ruộng chỉ cần độ ẩm bão hòa. Bị ngập nước ở giai đoạn này còn ảnh hưởng
+xấu đến quá trình mọc mầm của hạt, thậm chí mầm không mọc được.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocNayMam"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Quy trình tưới nước giai đoạn nảy mầm</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocSauDeNhanh"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Từ 30-40 ngày sau sạ (hình 3.28 &lt;TODO&gt;), tức là sau giai đoạn đẻ nhánh. Lúc này
+để ruộng cạn, mặt ruộng không có nước, ruộng lúa khô ráo, thông thoáng, các lá già bên dưới khô, ít bị bệnh.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocSauDeNhanh"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Quy trình tưới nước sau giai đoạn đẻ nhánh</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocSauSa5-20Ngay"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Sau sạ từ 5-7 ngày: Cây lúa cần lớp nước mỏng săm sắp mặt ruộng.
+
+Lúc này ruộng bị khô sẽ tổn thương đến rễ lúa, nên không thể để ruộng khô nứt nẻ. Để bộ rễ lúa không tổn thương, phải luôn duy trì lớp nước trên mặt ruộng đồng thời có tác dụng cho cây lúa hấp thụ phân bón dễ dàng và ém không cho hạt cỏ dại mọc. Duy trì lớp nước ở mặt ruộng cho đến khi cây lúa được 20 ngày sau gieo.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocSauSa5-20Ngay"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Quy trình tưới nước sau sạ 5-20 ngày</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocTro"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Mực nước trong ruộng từ 5-10cm là vừa. Ruộng khô lúa sẽ bị lép nhiều, ruộng ngập nước sâu (trên 20 cm), ảnh hưởng đến trỗ bông, thậm chí bị thối đòng.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocTro"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Quy trình tưới nước giai đoạn trỗ</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocTrongDeNhanh"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Mực nước trong ruộng từ 3-5cm</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocTrongDeNhanh"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Quy trình tưới nước trong giai đoạn đẻ nhánh</Literal>
+    </DataPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#coGiaiDoan"/>
+        <ObjectProperty IRI="#coQuyTrinh"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#coGiaiDoan"/>
+        <Class IRI="#QuyTrinh"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#coPhanBon"/>
+        <Class IRI="#QuyTrinhBonPhan"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#coQuyTrinh"/>
+        <Class IRI="#GiaiDoan"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#coThuoc"/>
+        <Class IRI="#QuyTrinhKichThich"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#truBenh"/>
+        <Class IRI="#Thuoc"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#coGiaiDoan"/>
+        <Class IRI="#GiaiDoan"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#coPhanBon"/>
+        <Class IRI="#PhanBon"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#coQuyTrinh"/>
+        <Class IRI="#QuyTrinh"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#coThuoc"/>
+        <Class IRI="#Thuoc"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#truBenh"/>
+        <ObjectUnionOf>
+            <Class IRI="#Benh"/>
+            <Class IRI="#Co"/>
+            <Class IRI="#Oc"/>
+            <Class IRI="#SauBenh"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#cachCheBien"/>
+        <Class IRI="#PhanHuuCo"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#denNgay"/>
+        <ObjectUnionOf>
+            <Class IRI="#GiaiDoan"/>
+            <Class IRI="#QuyTrinhBonPhan"/>
+            <Class IRI="#QuyTrinhKichThich"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#denNgayCachLy"/>
+        <Class IRI="#Thuoc"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#loai"/>
+        <Class IRI="#TrieuChung"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#moTa"/>
+        <ObjectUnionOf>
+            <Class IRI="#GiaiDoan"/>
+            <Class IRI="#GiongLua"/>
+            <Class IRI="#PhanBon"/>
+            <Class IRI="#QuyTrinh"/>
+            <Class IRI="#Thuoc"/>
+            <Class IRI="#TrieuChung"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ten"/>
+        <ObjectUnionOf>
+            <Class IRI="#GiaiDoan"/>
+            <Class IRI="#GiongLua"/>
+            <Class IRI="#PhanBon"/>
+            <Class IRI="#QuyTrinh"/>
+            <Class IRI="#Thuoc"/>
+            <Class IRI="#TrieuChung"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#thanhPhan"/>
+        <Class IRI="#Thuoc"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tuNgay"/>
+        <ObjectUnionOf>
+            <Class IRI="#GiaiDoan"/>
+            <Class IRI="#QuyTrinhBonPhan"/>
+            <Class IRI="#QuyTrinhKichThich"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tuNgayCachLy"/>
+        <Class IRI="#Thuoc"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#cachCheBien"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#denNgay"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#denNgayCachLy"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#loai"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#moTa"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ten"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#thanhPhan"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#tuNgay"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#tuNgayCachLy"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GiaiDoan</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Giai đoạn</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+

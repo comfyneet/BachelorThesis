@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\Resources\logic-rules.txt" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="1.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.1.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="1.1.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RiceDoctor.ConversationalAgent\RiceDoctor.ConversationalAgent.csproj" />
+    <ProjectReference Include="..\RiceDoctor.InferenceEngine\RiceDoctor.InferenceEngine.csproj" />
+    <ProjectReference Include="..\RiceDoctor.OntologyManager\RiceDoctor.OntologyManager.csproj" />
+    <ProjectReference Include="..\RiceDoctor.RuleManager\RiceDoctor.RuleManager.csproj" />
+    <ProjectReference Include="..\RiceDoctor.SemanticCode\RiceDoctor.SemanticCode.csproj" />
+    <ProjectReference Include="..\RiceDoctor.Shared\RiceDoctor.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

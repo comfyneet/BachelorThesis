@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RiceDoctor.ConversationalAgent\RiceDoctor.ConversationalAgent.csproj" />
+    <ProjectReference Include="..\RiceDoctor.InferenceEngine\RiceDoctor.InferenceEngine.csproj" />
+    <ProjectReference Include="..\RiceDoctor.OntologyManager\RiceDoctor.OntologyManager.csproj" />
+    <ProjectReference Include="..\RiceDoctor.RuleManager\RiceDoctor.RuleManager.csproj" />
+    <ProjectReference Include="..\RiceDoctor.SemanticCode\RiceDoctor.SemanticCode.csproj" />
+    <ProjectReference Include="..\RiceDoctor.Shared\RiceDoctor.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

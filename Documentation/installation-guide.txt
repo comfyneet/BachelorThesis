@@ -1,0 +1,4 @@
+- Install IntelliJ IDEA 2016.3.5 (w/ Java SDK 8u121)
+- Install Visual Studio 2017 (w/ ASP.NET Core 1.1 + IIS 10.0 Express)
+- Open 'RiceDoctor.iml' with IDEA, build & run 'App'
+- Open 'RiceDoctor.sln' with VS, build & run 'WebApp'

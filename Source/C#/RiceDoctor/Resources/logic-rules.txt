@@ -1,0 +1,9 @@
+﻿"Lá"="Vàng" & "Thân"="Ún" -> Benh=BenhVangLa {1.0e+0}
+GiaiDoan=GiaiDoanGieo | GiaiDoan=GiaiDoanMa | GiaiDoan=GiaiDoanDeNhanh -> Oc=OcBuuVang & Oc=OcBoTri
+"Thân"="Lùn" & ("Lá"="Vàng" | "Lá"="Úa") -> HienTuongBenh=HienTuongThieuDam
+"Đẻ nhánh"="Kém" & "Chiều cao"="Thấp" -> HienTuongBenh=HienThuongNgoDocHuuCo
+"Lá"="Vàng" & "Đầu lá"="Cháy" -> HienTuongBenh=HienThuongNgoDocPhen
+"Nhiệt độ"="Cao" & "Độ ẩm"="Thấp" -> Benh=BenhDaoOn {0.5}
+"Nước ruộng"="Cao" -> Oc=OcBuuVang & Oc=OcSenh {0.0e-0}
+"Mưa"="Nhiều" & "Gió"="Lớn" -> Benh=BenhLemLepHat
+"Năng xuất"="Kém" & "Nắng"="Nhiều" -> Benh=BenhVangLa
