@@ -78,8 +78,8 @@ and it continues here </li></ol></li><li>This is line 3</li></ol>Another line</d
         [MemberData(nameof(MockData))]
         public void ParseSemanticCode([NotNull] string semanticCode, [NotNull] string expectedHtml)
         {
-            Check.NotNull(semanticCode, nameof(semanticCode));
-            Check.NotNull(expectedHtml, nameof(expectedHtml));
+            Check.NotEmpty(semanticCode, nameof(semanticCode));
+            Check.NotEmpty(expectedHtml, nameof(expectedHtml));
 
             var lexer = new SemanticLexer(semanticCode);
             var parser = new SemanticParser(lexer);

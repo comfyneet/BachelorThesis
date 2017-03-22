@@ -9,7 +9,7 @@ namespace RiceDoctor.Shared
 
         public FileLogger([NotNull] string filePath)
         {
-            Check.NotNull(filePath, nameof(filePath));
+            Check.NotEmpty(filePath, nameof(filePath));
 
             _filePath = filePath;
         }

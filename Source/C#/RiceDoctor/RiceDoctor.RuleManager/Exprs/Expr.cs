@@ -2,8 +2,8 @@
 
 namespace RiceDoctor.RuleManager
 {
-    public abstract class Expr
+    public abstract class Expr<T>
     {
-        public abstract bool Evaluate([NotNull] RuntimeContext context);
+        public abstract bool Evaluate([NotNull] RuntimeContext<T> context);
     }
 }

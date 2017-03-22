@@ -9,7 +9,6 @@ namespace RiceDoctor.OntologyManager
     public class Attribute : Entity<Attribute>
     {
         [CanBeNull] private IReadOnlyCollection<Class> _allDomains;
-
         private bool _canGetAllDomains;
         private bool _canGetDirectDomains;
         [CanBeNull] private IReadOnlyCollection<Class> _directDomains;

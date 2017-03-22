@@ -33,7 +33,9 @@ namespace RiceDoctor.RuleManager
 
         public override bool Equals(object obj)
         {
-            return Equals(obj as ScalarFact);
+            if (ReferenceEquals(null, obj)) return false;
+            if (ReferenceEquals(this, obj)) return true;
+            return obj.GetType() == GetType() && Equals((ScalarFact) obj);
         }
 
         public override int GetHashCode()

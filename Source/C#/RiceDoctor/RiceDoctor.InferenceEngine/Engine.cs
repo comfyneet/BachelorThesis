@@ -75,7 +75,7 @@ namespace RiceDoctor.InferenceEngine
 
         public int AddFactsToKnown(IReadOnlyCollection<Fact> facts)
         {
-            Check.NotNull(facts, nameof(facts));
+            Check.NotEmpty(facts, nameof(facts));
 
             var count = 0;
             foreach (var fact in facts)
@@ -96,7 +96,7 @@ namespace RiceDoctor.InferenceEngine
 
         private bool AreFactsInKnown([NotNull] IReadOnlyCollection<Fact> facts)
         {
-            Check.NotNull(facts, nameof(facts));
+            Check.NotEmpty(facts, nameof(facts));
 
             return facts.All(IsFactInKnown);
         }

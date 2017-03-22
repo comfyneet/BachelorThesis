@@ -17,7 +17,7 @@ namespace RiceDoctor.Shared
         [NotNull]
         public static T Deserialize<T>([NotNull] string value)
         {
-            Check.NotNull(value, nameof(value));
+            Check.NotEmpty(value, nameof(value));
 
             return Newtonsoft.Json.JsonConvert.DeserializeObject<T>(value);
         }

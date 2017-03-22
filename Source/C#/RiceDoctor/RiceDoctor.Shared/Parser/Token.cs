@@ -7,8 +7,7 @@ namespace RiceDoctor.Shared
         public Token([NotNull] TokenType type)
         {
             Check.NotNull(type, nameof(type));
-            Check.NotNull(type.Name, nameof(type.Name));
-
+            Check.NotEmpty(type.Name, nameof(type.Name));
 
             Type = type;
             Value = type.Name;

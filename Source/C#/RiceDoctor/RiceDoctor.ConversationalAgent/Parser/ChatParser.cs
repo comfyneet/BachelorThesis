@@ -242,8 +242,6 @@ namespace RiceDoctor.ConversationalAgent
 
             Eat(Word);
 
-            Check.NotNull(word, nameof(word));
-
             return (string) word;
         }
 

@@ -3,13 +3,13 @@ using RiceDoctor.Shared;
 
 namespace RiceDoctor.RuleManager
 {
-    public class AndExpr : Expr
+    public class AndExpr<T> : Expr<T>
     {
-        [NotNull] private readonly Expr _left;
+        [NotNull] private readonly Expr<T> _left;
 
-        [NotNull] private readonly Expr _right;
+        [NotNull] private readonly Expr<T> _right;
 
-        public AndExpr([NotNull] Expr left, [NotNull] Expr right)
+        public AndExpr([NotNull] Expr<T> left, [NotNull] Expr<T> right)
         {
             Check.NotNull(left, nameof(left));
             Check.NotNull(right, nameof(right));
@@ -18,7 +18,7 @@ namespace RiceDoctor.RuleManager
             _right = right;
         }
 
-        public override bool Evaluate(RuntimeContext context)
+        public override bool Evaluate(RuntimeContext<T> context)
         {
             return _left.Evaluate(context) && _right.Evaluate(context);
         }

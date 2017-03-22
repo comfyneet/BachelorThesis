@@ -84,28 +84,51 @@ namespace RiceDoctor.RuleManager
         [NotNull]
         private IReadOnlyCollection<IReadOnlyCollection<Fact>> ParseHypothese()
         {
-            var hypothesisTable = new SymbolTable();
+            var hypothesisTable = new SymbolTable<Fact>();
             var hypothesisExpr = ParseExpr(hypothesisTable);
 
-            var hypotheses = new List<IReadOnlyCollection<Fact>>();
-            var hypothesisSubsets = GetSubsets(hypothesisTable.Symbols.ToList());
-            foreach (var hypothesisSubset in hypothesisSubsets)
+            var implicantId = 0;
+            var implicants = new List<Implicant<int>>();
+
+            var subsets = GetSubsets(hypothesisTable.Symbols.ToList());
+            foreach (var subset in subsets)
             {
-                var context = new RuntimeContext(hypothesisTable);
-                foreach (var hypothesis in hypothesisSubset)
+                var context = new RuntimeContext<Fact>(hypothesisTable);
+                foreach (var hypothesis in subset)
                     context[hypothesis] = true;
 
                 if (hypothesisExpr.Evaluate(context))
-                    hypotheses.Add(hypothesisSubset);
+                {
+                    var truthValues = hypothesisTable.Symbols
+                        .Select(hypothesis => (bool?) context[hypothesis])
+                        .ToList()
+                        .AsReadOnly();
+
+                    var implicant = new Implicant<int>(implicantId, truthValues);
+                    implicants.Add(implicant);
+
+                    implicantId++;
+                }
             }
 
-            return hypotheses.AsReadOnly();
+            var minimizedImplicants = QuineMcCluskey<int>.Minimize(implicants.AsReadOnly());
+
+            var hypotheses = minimizedImplicants
+                .Select(
+                    minimizedImplicant => hypothesisTable.Symbols
+                        .Where((symbol, i) => minimizedImplicant.Values[i] == true)
+                        .ToList()
+                        .AsReadOnly())
+                .ToList()
+                .AsReadOnly();
+
+            return hypotheses;
         }
 
         [NotNull]
         private IReadOnlyCollection<Fact> ParseConclusions()
         {
-            var conclusionTable = new SymbolTable();
+            var conclusionTable = new SymbolTable<Fact>();
 
             ParseFact(conclusionTable);
 
@@ -120,7 +143,7 @@ namespace RiceDoctor.RuleManager
         }
 
         [NotNull]
-        private Expr ParseExpr([NotNull] SymbolTable symbolTable)
+        private Expr<Fact> ParseExpr([NotNull] SymbolTable<Fact> symbolTable)
         {
             Check.NotNull(symbolTable, nameof(symbolTable));
 
@@ -132,14 +155,14 @@ namespace RiceDoctor.RuleManager
 
                 var right = ParseTerm(symbolTable);
 
-                expr = new OrExpr(expr, right);
+                expr = new OrExpr<Fact>(expr, right);
             }
 
             return expr;
         }
 
         [NotNull]
-        private Expr ParseTerm([NotNull] SymbolTable symbolTable)
+        private Expr<Fact> ParseTerm([NotNull] SymbolTable<Fact> symbolTable)
         {
             Check.NotNull(symbolTable, nameof(symbolTable));
 
@@ -151,14 +174,14 @@ namespace RiceDoctor.RuleManager
 
                 var right = ParseFactor(symbolTable);
 
-                expr = new AndExpr(expr, right);
+                expr = new AndExpr<Fact>(expr, right);
             }
 
             return expr;
         }
 
         [NotNull]
-        private Expr ParseFactor([NotNull] SymbolTable symbolTable)
+        private Expr<Fact> ParseFactor([NotNull] SymbolTable<Fact> symbolTable)
         {
             Check.NotNull(symbolTable, nameof(symbolTable));
 
@@ -177,17 +200,17 @@ namespace RiceDoctor.RuleManager
         }
 
         [NotNull]
-        private FactExpr ParseFactExpr([NotNull] SymbolTable symbolTable)
+        private IdentExpr<Fact> ParseFactExpr([NotNull] SymbolTable<Fact> symbolTable)
         {
             Check.NotNull(symbolTable, nameof(symbolTable));
 
             var fact = ParseFact(symbolTable);
 
-            return new FactExpr(fact);
+            return new IdentExpr<Fact>(fact);
         }
 
         [NotNull]
-        private Fact ParseFact([NotNull] SymbolTable symbolTable)
+        private Fact ParseFact([NotNull] SymbolTable<Fact> symbolTable)
         {
             Check.NotNull(symbolTable, nameof(symbolTable));
 
@@ -221,7 +244,7 @@ namespace RiceDoctor.RuleManager
         [NotNull]
         private IReadOnlyCollection<IReadOnlyCollection<Fact>> GetSubsets([NotNull] IReadOnlyList<Fact> set)
         {
-            Check.NotNull(set, nameof(set));
+            Check.NotEmpty(set, nameof(set));
 
             var subsets = new List<IReadOnlyCollection<Fact>>();
 

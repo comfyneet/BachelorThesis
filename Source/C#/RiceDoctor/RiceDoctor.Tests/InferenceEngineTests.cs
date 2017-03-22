@@ -12,7 +12,6 @@ namespace RiceDoctor.Tests
     public class InferenceEngineTests : IClassFixture<RuleFixture>, IClassFixture<OntologyFixture>
     {
         [NotNull] private readonly IOntologyManager _ontologyManager;
-
         [NotNull] private readonly IRuleManager _ruleManager;
 
         public InferenceEngineTests([NotNull] RuleFixture ruleFixture, [NotNull] OntologyFixture ontologyFixture)

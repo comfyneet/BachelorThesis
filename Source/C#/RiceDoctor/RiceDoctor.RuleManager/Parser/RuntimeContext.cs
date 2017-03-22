@@ -4,20 +4,20 @@ using RiceDoctor.Shared;
 
 namespace RiceDoctor.RuleManager
 {
-    public class RuntimeContext
+    public class RuntimeContext<T>
     {
-        [NotNull] private readonly Dictionary<Fact, bool> _memory;
+        [NotNull] private readonly Dictionary<T, bool> _memory;
 
-        public RuntimeContext([NotNull] SymbolTable symbolTable)
+        public RuntimeContext([NotNull] SymbolTable<T> symbolTable)
         {
             Check.NotNull(symbolTable, nameof(symbolTable));
 
-            _memory = new Dictionary<Fact, bool>();
-            foreach (var fact in symbolTable.Symbols)
-                _memory.Add(fact, false);
+            _memory = new Dictionary<T, bool>();
+            foreach (var symbol in symbolTable.Symbols)
+                _memory.Add(symbol, false);
         }
 
-        public bool this[Fact key]
+        public bool this[T key]
         {
             get
             {

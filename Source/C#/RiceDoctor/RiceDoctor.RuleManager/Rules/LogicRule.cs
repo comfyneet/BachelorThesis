@@ -10,8 +10,8 @@ namespace RiceDoctor.RuleManager
         public LogicRule([NotNull] IReadOnlyCollection<Fact> hypotheses, [NotNull] IReadOnlyCollection<Fact> conclusions,
             double certaintyFactor)
         {
-            Check.NotNull(hypotheses, nameof(hypotheses));
-            Check.NotNull(conclusions, nameof(conclusions));
+            Check.NotEmpty(hypotheses, nameof(hypotheses));
+            Check.NotEmpty(conclusions, nameof(conclusions));
 
             Hypotheses = hypotheses;
             Conclusions = conclusions;
@@ -30,23 +30,26 @@ namespace RiceDoctor.RuleManager
         {
             if (ReferenceEquals(null, other)) return false;
             if (ReferenceEquals(this, other)) return true;
-
-            return Hypotheses.Equals(other.Hypotheses) && Conclusions.Equals(other.Conclusions)
+            return Hypotheses.ScrambledEqual(other.Hypotheses)
+                   && Conclusions.ScrambledEqual(other.Conclusions)
                    && Math.Abs(CertaintyFactor - other.CertaintyFactor) < double.Epsilon;
         }
 
         public override bool Equals(object obj)
         {
-            return Equals(obj as LogicRule);
+            if (ReferenceEquals(null, obj)) return false;
+            if (ReferenceEquals(this, obj)) return true;
+            return obj.GetType() == GetType() && Equals((LogicRule) obj);
         }
 
         public override int GetHashCode()
         {
             unchecked
             {
-                var hashCode = Hypotheses.GetHashCode();
-                hashCode = (hashCode * 397) ^ Conclusions.GetHashCode();
+                var hashCode = Hypotheses.GetOrderIndependentHashCode();
+                hashCode = (hashCode * 397) ^ Conclusions.GetOrderIndependentHashCode();
                 hashCode = (hashCode * 397) ^ CertaintyFactor.GetHashCode();
+
                 return hashCode;
             }
         }

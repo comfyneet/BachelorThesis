@@ -15,7 +15,7 @@ namespace RiceDoctor.OntologyManager
 
         public Client([NotNull] string ip, int port)
         {
-            Check.NotNull(ip, nameof(ip));
+            Check.NotEmpty(ip, nameof(ip));
 
             _address = new IPEndPoint(IPAddress.Parse(ip), port);
         }
@@ -23,7 +23,7 @@ namespace RiceDoctor.OntologyManager
         [NotNull]
         public string Send([NotNull] string message)
         {
-            Check.NotNull(message, nameof(message));
+            Check.NotEmpty(message, nameof(message));
 
             string result;
             using (var socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp))
