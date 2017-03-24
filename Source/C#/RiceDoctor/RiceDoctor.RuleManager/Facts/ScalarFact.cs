@@ -11,18 +11,14 @@ namespace RiceDoctor.RuleManager
             Check.NotEmpty(name, nameof(name));
             Check.NotEmpty(value, nameof(value));
 
-            Name = name;
+            Name = '"' + name + '"';
             Value = value;
         }
 
-        [NotNull]
-        public string Name { get; }
+        public override string Name { get; }
 
         [NotNull]
         public string Value { get; }
-
-        public override string LValue => '"' + Name + '"';
-
 
         public bool Equals(ScalarFact other)
         {

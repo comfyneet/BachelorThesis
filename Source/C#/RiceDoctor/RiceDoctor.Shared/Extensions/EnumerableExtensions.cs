@@ -10,18 +10,21 @@ namespace RiceDoctor.Shared
             if (ReferenceEquals(first, second)) return true;
             if (ReferenceEquals(null, second)) return false;
 
-            var count = new Dictionary<TSource, int>();
+            var elementCount = new Dictionary<TSource, int>();
+            var nullCount = 0;
 
             foreach (var s in first)
-                if (count.ContainsKey(s))
-                    count[s]++;
-                else count.Add(s, 1);
+                if (s == null) nullCount++;
+                else if (elementCount.ContainsKey(s))
+                    elementCount[s]++;
+                else elementCount.Add(s, 1);
 
             foreach (var s in second)
-                if (count.ContainsKey(s)) count[s]--;
+                if (s == null) nullCount--;
+                else if (elementCount.ContainsKey(s)) elementCount[s]--;
                 else return false;
 
-            return count.Values.All(c => c == 0);
+            return elementCount.Values.All(c => c == 0) && nullCount == 0;
         }
 
         public static int GetOrderIndependentHashCode<TSource>(this IEnumerable<TSource> source)

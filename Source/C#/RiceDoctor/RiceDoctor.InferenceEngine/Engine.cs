@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using JetBrains.Annotations;
 using RiceDoctor.OntologyManager;
@@ -27,16 +28,19 @@ namespace RiceDoctor.InferenceEngine
             _knownFacts = new List<Fact>();
         }
 
-        public bool Infer(string className)
+        public IReadOnlyCollection<Fact> Infer(Request request)
         {
-            Check.NotEmpty(className, nameof(className));
+            Check.NotNull(request, nameof(request));
+
+            if (request.KnownFacts != null)
+                AddFactsToKnown(request.KnownFacts);
 
             _inferredLogicRules.Clear();
 
             while (true)
             {
-                if (IsClassInKnown(className))
-                    return true;
+                var resultFacts = GetRequestFactsInKnown(request);
+                if (resultFacts != null) return resultFacts;
 
                 var hasNewFacts = false;
 
@@ -59,7 +63,49 @@ namespace RiceDoctor.InferenceEngine
                 break;
             }
 
-            return false;
+            return null;
+        }
+
+        public IReadOnlyCollection<Tuple<double, IReadOnlyCollection<Fact>, IReadOnlyCollection<Fact>>>
+            GetIncompleteFacts(Request request)
+        {
+            Check.NotNull(request, nameof(request));
+
+            if (request.KnownFacts != null)
+                AddFactsToKnown(request.KnownFacts);
+
+            var factName = request.RequestType == RequestType.IndividualFact
+                ? request.FactName
+                : '"' + request.FactName + '"';
+
+            var incompleteFacts = new List<Tuple<double, IReadOnlyCollection<Fact>, IReadOnlyCollection<Fact>>>();
+            foreach (var rule in _ruleManager.LogicRules)
+            {
+                var resultFacts = rule.Conclusions
+                    .Where(f => f.Name == factName)
+                    .ToList()
+                    .AsReadOnly();
+
+                if (resultFacts.Count <= 0) continue;
+
+                var neededComplementFacts = new List<Fact>(rule.Hypotheses);
+                foreach (var hypothesis in rule.Hypotheses)
+                    if (_knownFacts.Contains(hypothesis)) neededComplementFacts.Remove(hypothesis);
+
+                var priority = rule.CertaintyFactor * (1 - (double) neededComplementFacts.Count / rule.Hypotheses.Count);
+
+                if (priority > 0)
+                    incompleteFacts.Add(
+                        new Tuple<double, IReadOnlyCollection<Fact>, IReadOnlyCollection<Fact>>(priority,
+                            neededComplementFacts, resultFacts));
+            }
+
+            if (incompleteFacts.Count == 0) return null;
+
+            return incompleteFacts
+                .OrderByDescending(r => r.Item1)
+                .ToList()
+                .AsReadOnly();
         }
 
         public bool AddFactToKnown(Fact fact)
@@ -87,6 +133,22 @@ namespace RiceDoctor.InferenceEngine
             return count;
         }
 
+        [CanBeNull]
+        private IReadOnlyCollection<Fact> GetRequestFactsInKnown([NotNull] Request request)
+        {
+            Check.NotNull(request, nameof(request));
+
+            var factName = request.RequestType == RequestType.IndividualFact
+                ? request.FactName
+                : '"' + request.FactName + '"';
+
+            var requestFacts = _knownFacts
+                .Where(f => f.Name == factName)
+                .ToList();
+
+            return requestFacts.Count == 0 ? null : requestFacts.AsReadOnly();
+        }
+
         private bool IsFactInKnown([NotNull] Fact fact)
         {
             Check.NotNull(fact, nameof(fact));
@@ -99,13 +161,6 @@ namespace RiceDoctor.InferenceEngine
             Check.NotEmpty(facts, nameof(facts));
 
             return facts.All(IsFactInKnown);
-        }
-
-        private bool IsClassInKnown([NotNull] string className)
-        {
-            Check.NotNull(className, nameof(className));
-
-            return _knownFacts.Any(f => f.LValue == className);
         }
 
         private bool InferLogicRule([NotNull] LogicRule rule)
@@ -135,10 +190,14 @@ namespace RiceDoctor.InferenceEngine
                 foreach (var relationValue in relationValues)
                 foreach (var individual in relationValue.Value)
                 {
-                    var newIndividualFact = new IndividualFact(individual.DirectClass.Id, individual.Id);
+                    var directClass = individual.DirectClass;
+                    if (directClass != null)
+                    {
+                        var newIndividualFact = new IndividualFact(directClass.Id, individual.Id);
 
-                    if (AddFactToKnown(newIndividualFact))
-                        hasNewFacts = true;
+                        if (AddFactToKnown(newIndividualFact))
+                            hasNewFacts = true;
+                    }
                 }
 
             return hasNewFacts;

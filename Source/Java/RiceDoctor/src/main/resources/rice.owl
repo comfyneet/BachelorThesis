@@ -155,9 +155,6 @@
         <DataProperty IRI="#tuNgay"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#LaVang"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#QuyTrinhTuoiNuocChinSap"/>
     </Declaration>
     <Declaration>
@@ -203,9 +200,6 @@
         <NamedIndividual IRI="#GiongDH815-6"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#TrieuChung"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#GiaiDoanTro"/>
     </Declaration>
     <Declaration>
@@ -239,6 +233,9 @@
         <NamedIndividual IRI="#PhanSinhHocHuuCo"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#ThuocArmada"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#GiaiDoanLamDong"/>
     </Declaration>
     <Declaration>
@@ -249,9 +246,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#PhanXanh"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Armada"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#QuyTrinhTuoiNuocSauDeNhanh"/>
@@ -295,10 +289,6 @@
         <Class IRI="#SauBenh"/>
         <Class IRI="#TacNhanGayBenh"/>
     </SubClassOf>
-    <ClassAssertion>
-        <Class IRI="#Thuoc"/>
-        <NamedIndividual IRI="#Armada"/>
-    </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#GiaiDoan"/>
         <NamedIndividual IRI="#GiaiDoanChin"/>
@@ -366,10 +356,6 @@
     <ClassAssertion>
         <Class IRI="#GiongLua"/>
         <NamedIndividual IRI="#GiongTBR36"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#TrieuChung"/>
-        <NamedIndividual IRI="#LaVang"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#PhanHuuCo"/>
@@ -487,6 +473,10 @@
         <Class IRI="#QuyTrinhTuoiNuoc"/>
         <NamedIndividual IRI="#QuyTrinhTuoiNuocTrongDeNhanh"/>
     </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Thuoc"/>
+        <NamedIndividual IRI="#ThuocArmada"/>
+    </ClassAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#coGiaiDoan"/>
         <NamedIndividual IRI="#QuyTrinhBonDong"/>
@@ -567,16 +557,6 @@
         <NamedIndividual IRI="#QuyTrinhTuoiNuocTrongDeNhanh"/>
         <NamedIndividual IRI="#GiaiDoanLamDong"/>
     </ObjectPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#ten"/>
-        <NamedIndividual IRI="#Armada"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Armada</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#thanhPhan"/>
-        <NamedIndividual IRI="#Armada"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Imidacloprid</Literal>
-    </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#denNgay"/>
         <NamedIndividual IRI="#GiaiDoanChin"/>
@@ -1125,6 +1105,16 @@ Lúc này ruộng bị khô sẽ tổn thương đến rễ lúa, nên không th
         <NamedIndividual IRI="#QuyTrinhTuoiNuocTrongDeNhanh"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Quy trình tưới nước trong giai đoạn đẻ nhánh</Literal>
     </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#ThuocArmada"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Armada</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#thanhPhan"/>
+        <NamedIndividual IRI="#ThuocArmada"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Imidacloprid</Literal>
+    </DataPropertyAssertion>
     <InverseObjectProperties>
         <ObjectProperty IRI="#coGiaiDoan"/>
         <ObjectProperty IRI="#coQuyTrinh"/>
@@ -1191,32 +1181,6 @@ Lúc này ruộng bị khô sẽ tổn thương đến rễ lúa, nên không th
         <Class IRI="#Thuoc"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="#loai"/>
-        <Class IRI="#TrieuChung"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#moTa"/>
-        <ObjectUnionOf>
-            <Class IRI="#GiaiDoan"/>
-            <Class IRI="#GiongLua"/>
-            <Class IRI="#PhanBon"/>
-            <Class IRI="#QuyTrinh"/>
-            <Class IRI="#Thuoc"/>
-            <Class IRI="#TrieuChung"/>
-        </ObjectUnionOf>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#ten"/>
-        <ObjectUnionOf>
-            <Class IRI="#GiaiDoan"/>
-            <Class IRI="#GiongLua"/>
-            <Class IRI="#PhanBon"/>
-            <Class IRI="#QuyTrinh"/>
-            <Class IRI="#Thuoc"/>
-            <Class IRI="#TrieuChung"/>
-        </ObjectUnionOf>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
         <DataProperty IRI="#thanhPhan"/>
         <Class IRI="#Thuoc"/>
     </DataPropertyDomain>
@@ -1270,8 +1234,208 @@ Lúc này ruộng bị khô sẽ tổn thương đến rễ lúa, nên không th
     </DataPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Benh</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Bệnh</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Co</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cỏ</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#GiaiDoan</IRI>
         <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Giai đoạn</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GiongDH815-6</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Giống DH815-6</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GiongDV108</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Giống ĐV 108</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GiongGL105</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Giống GL105</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GiongLua</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Giống lúa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GiongOM8923</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Giống OM8923</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GiongSV181</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Giống SV 181</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GiongSV46</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Giống SV 46</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GiongSV47</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Giống SV 47</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GiongTBR-1</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Giống TBR-1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GiongTBR-45</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Giống TBR-45</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GiongTBR255</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Giống TBR255</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GiongTBR36</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Giống TBR36</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Oc</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ốc</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PhanBon</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Phân bón</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PhanHuuCo</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Phân hữu cơ</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PhanVoCo</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Phân vô cơ</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#QuyTrinh</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Quy trình</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#QuyTrinhBonPhan</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Quy trình bón phân</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#QuyTrinhKichThich</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Quy trình kích thích</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#QuyTrinhTuoiNuoc</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Quy trình tưới nước</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SauBenh</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Sâu bệnh</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TacNhanGayBenh</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tác nhân gây bệnh</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Thuoc</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thuốc</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ThuocArmada</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thuốc Armada</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#cachCheBien</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">cách chế biến</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#coGiaiDoan</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">có giai đoạn</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#coPhanBon</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">có phân bón</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#coQuyTrinh</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">có quy trình</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#coThuoc</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">có thuốc</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#denNgay</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">đến ngày</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#denNgayCachLy</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">đến ngày cách ly</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#loai</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">loại</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#moTa</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">mô tả</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ten</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">tên</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#thanhPhan</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">thành phần</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#truBenh</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">trừ bệnh</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#tuNgay</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">từ ngày</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#tuNgayCachLy</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">từ ngày cách ly</Literal>
     </AnnotationAssertion>
 </Ontology>
 

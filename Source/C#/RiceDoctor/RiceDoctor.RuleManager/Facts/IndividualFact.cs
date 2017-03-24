@@ -11,23 +11,20 @@ namespace RiceDoctor.RuleManager
             Check.NotEmpty(className, nameof(className));
             Check.NotEmpty(individualName, nameof(individualName));
 
-            Class = className;
+            Name = className;
             Individual = individualName;
         }
 
-        [NotNull]
-        public string Class { get; }
+        public override string Name { get; }
 
         [NotNull]
         public string Individual { get; }
-
-        public override string LValue => Class;
 
         public bool Equals(IndividualFact other)
         {
             if (ReferenceEquals(null, other)) return false;
             if (ReferenceEquals(this, other)) return true;
-            return string.Equals(Class, other.Class) && string.Equals(Individual, other.Individual);
+            return string.Equals(Name, other.Name) && string.Equals(Individual, other.Individual);
         }
 
         public override bool Equals(object obj)
@@ -41,7 +38,7 @@ namespace RiceDoctor.RuleManager
         {
             unchecked
             {
-                return (Class.GetHashCode() * 397) ^ Individual.GetHashCode();
+                return (Name.GetHashCode() * 397) ^ Individual.GetHashCode();
             }
         }
     }

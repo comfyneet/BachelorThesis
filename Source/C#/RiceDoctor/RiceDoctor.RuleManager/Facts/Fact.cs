@@ -5,7 +5,7 @@ namespace RiceDoctor.RuleManager
     public abstract class Fact
     {
         [NotNull]
-        public abstract string LValue { get; }
+        public abstract string Name { get; }
 
         public abstract override bool Equals(object obj);
 

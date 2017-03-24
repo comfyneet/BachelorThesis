@@ -1,4 +1,8 @@
-- Install IntelliJ IDEA 2016.3.5 (w/ Java SDK 8u121)
-- Install Visual Studio 2017 (w/ ASP.NET Core 1.1 + IIS 10.0 Express)
-- Open 'RiceDoctor.iml' with IDEA, build & run 'App'
-- Open 'RiceDoctor.sln' with VS, build & run 'WebApp'
+- Install IntelliJ IDEA 2017.1 + Java SDK 8u121
+- Install Visual Studio 2017 (with 'ASP.NET and web development' workload) + IIS 10.0
+
+- Open 'RiceDoctor.iml' with IDEA, build 'App'
+- Open 'RiceDoctor.sln' with VS, build 'WebApp'
+
+- Run 'App', wait for the 'Ontology is loaded' message in the console window
+- Run 'WebApp', wait for the website to be loaded in the browser

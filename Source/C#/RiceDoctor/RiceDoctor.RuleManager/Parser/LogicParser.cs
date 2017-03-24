@@ -60,7 +60,7 @@ namespace RiceDoctor.RuleManager
 
             var conclusions = ParseConclusions();
 
-            var certaintyFactor = 1.0;
+            var certaintyFactor = 0.6;
             if (CurrentToken.Type == LBrace)
             {
                 Eat(LBrace);
