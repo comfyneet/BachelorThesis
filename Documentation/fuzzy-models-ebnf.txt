@@ -1,0 +1,23 @@
+fuzzy-models = membership-functions linguistic-variables
+membership-functions = membership-function { membership-function }
+membership-function = 'FUNCTION' function-name '(' parameters ')' function-compound-statement ';'
+paremeter = paremeter-name { ',' parameter-name }
+function-compound-statement = 'BEGIN' function-statement { ';' function-statement } 'END'
+function-statement = if-statement | assignment-statement
+if-statement = 'IF' expression 'THEN' statement
+assignment-statement = 'OUTPUT' '<-' expression
+expression = simple-expression [ ( '=' | '!=' | '<' | '<=' | '>' | '>=' ) simple-expression ]
+simple-exression = [ '+' | '-' ] term { ( '+' | '-' | '|') term }
+term = factor { ('*' | '/' | '&') factor }
+factor = 'INPUT' | literal | '(' expression ')' | parameter-name | '!' factor
+linguistic-variables = linguistic-variable { linguistic-variable }
+linguistic-variable = 'VARIABLE' '"' variable-name '"' variable-compound-statement ';'
+variable-compound-statement = 'BEGIN' variable-statement { ';' variable-statement } 'END'
+variable-statement = term-statement
+term-statement = 'TERM' '"' term-name '"' ':' function-name '(' arguments ')'
+arguments = literal { ',' literal }
+function-name = IDENT
+parameter-name = IDENT
+variable-name = UNQUOTEDSTRING
+term-name = UNQUOTEDSTRING
+literal = NUMBER

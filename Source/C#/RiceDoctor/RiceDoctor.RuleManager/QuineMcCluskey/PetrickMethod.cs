@@ -40,8 +40,7 @@ namespace RiceDoctor.RuleManager
             }
 
             var sortedImplicantLists = tmpSortedImplicantLists
-                .ToDictionary(list => list.Key, list => (IReadOnlyCollection<Implicant<T>>) list.Value.AsReadOnly())
-                .AsReadOnly();
+                .ToDictionary(list => list.Key, list => (IReadOnlyCollection<Implicant<T>>) list.Value);
 
             return sortedImplicantLists;
         }
@@ -79,9 +78,7 @@ namespace RiceDoctor.RuleManager
             }
 
             var expandedImplicantLists = expr[0]
-                .Select(list => list.AsReadOnly())
-                .ToList()
-                .AsReadOnly();
+                .ToList();
 
             return expandedImplicantLists;
         }

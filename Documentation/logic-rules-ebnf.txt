@@ -1,0 +1,14 @@
+logic-rules      =  logic-rule { NEWLINE logic-rule }
+logic-rule       = expression '->' conclusions [ '{' certainty-factor '}' ]
+expression       = term [ '|' term ]
+term             = factor [ '&' factor ]
+factor           = fact | '(' expr ')'
+conclusions      = fact [ '&' fact ]
+fact             = scalar-fact | individual-fact
+scalar-fact      = '"' name '"' '=' '"' value '"'
+individual-fact  = class-name '=' individual-name
+certainty-factor = NUMBER
+name             = UNQUOTEDSTRING
+value            = UNQUOTEDSTRING
+class-name       = IDENT
+individual-name  = IDENT

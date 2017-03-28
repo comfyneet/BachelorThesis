@@ -83,8 +83,7 @@ namespace RiceDoctor.InferenceEngine
             {
                 var resultFacts = rule.Conclusions
                     .Where(f => f.Name == factName)
-                    .ToList()
-                    .AsReadOnly();
+                    .ToList();
 
                 if (resultFacts.Count <= 0) continue;
 
@@ -104,8 +103,7 @@ namespace RiceDoctor.InferenceEngine
 
             return incompleteFacts
                 .OrderByDescending(r => r.Item1)
-                .ToList()
-                .AsReadOnly();
+                .ToList();
         }
 
         public bool AddFactToKnown(Fact fact)
@@ -146,7 +144,7 @@ namespace RiceDoctor.InferenceEngine
                 .Where(f => f.Name == factName)
                 .ToList();
 
-            return requestFacts.Count == 0 ? null : requestFacts.AsReadOnly();
+            return requestFacts.Count == 0 ? null : requestFacts;
         }
 
         private bool IsFactInKnown([NotNull] Fact fact)

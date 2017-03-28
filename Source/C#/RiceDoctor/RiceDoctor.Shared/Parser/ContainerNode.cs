@@ -11,11 +11,10 @@ namespace RiceDoctor.Shared
         protected ContainerNode()
         {
             _childNodes = new List<Node<T>>();
-            ChildNodes = _childNodes.AsReadOnly();
         }
 
         [NotNull]
-        protected IReadOnlyList<Node<T>> ChildNodes { get; [param: NotNull] private set; }
+        protected IReadOnlyList<Node<T>> ChildNodes => _childNodes;
 
         [NotNull]
         public virtual Node<T> Append([NotNull] Node<T> node)
@@ -31,7 +30,6 @@ namespace RiceDoctor.Shared
             }
 
             _childNodes.Add(node);
-            ChildNodes = _childNodes.AsReadOnly();
 
             return node;
         }

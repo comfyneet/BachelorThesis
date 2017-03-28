@@ -13,7 +13,7 @@ namespace RiceDoctor.RuleManager
             Check.NotNull(identifier, nameof(identifier));
             Check.NotEmpty(values, nameof(values));
 
-            Identifiers = new List<T> {identifier}.AsReadOnly();
+            Identifiers = new List<T> {identifier};
             Values = values;
         }
 

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using JetBrains.Annotations;
@@ -12,7 +11,7 @@ namespace RiceDoctor.ConversationalAgent
 {
     public class ChatParser : Parser<IReadOnlyCollection<Question>>
     {
-        [CanBeNull] private ReadOnlyCollection<Question> _questions;
+        [CanBeNull] private IReadOnlyCollection<Question> _questions;
 
         public ChatParser([NotNull] ChatLexer lexer) : base(lexer)
         {
@@ -32,7 +31,7 @@ namespace RiceDoctor.ConversationalAgent
         }
 
         [NotNull]
-        private ReadOnlyCollection<Question> ParseQuestionGroups()
+        private IReadOnlyCollection<Question> ParseQuestionGroups()
         {
             var questionGroups = new Dictionary<string, Question>();
 
@@ -50,14 +49,13 @@ namespace RiceDoctor.ConversationalAgent
             var questions = questionGroups
                 .Select(q => q.Value)
                 .OrderByDescending(q => q.Weight)
-                .ToList()
-                .AsReadOnly();
+                .ToList();
 
             return questions;
         }
 
         [NotNull]
-        private ReadOnlyDictionary<string, Question> ParseQuestionGroup()
+        private IReadOnlyDictionary<string, Question> ParseQuestionGroup()
         {
             var questionPatterns = new Dictionary<string, Tuple<MessageNode, int>>();
             do
@@ -141,8 +139,7 @@ namespace RiceDoctor.ConversationalAgent
 
             var questions = questionPatterns
                 .Select(pattern => new Question(pattern.Value.Item2, pattern.Key, answers))
-                .ToDictionary(q => q.Pattern, q => q)
-                .AsReadOnly();
+                .ToDictionary(q => q.Pattern, q => q);
 
             return questions;
         }
@@ -217,7 +214,7 @@ namespace RiceDoctor.ConversationalAgent
         }
 
         [NotNull]
-        private ReadOnlyCollection<TextNode> ParseVertiTexts()
+        private IReadOnlyCollection<TextNode> ParseVertiTexts()
         {
             var texts = new List<TextNode>();
 
@@ -232,7 +229,7 @@ namespace RiceDoctor.ConversationalAgent
                 texts.Add(text);
             }
 
-            return texts.AsReadOnly();
+            return texts;
         }
 
         [NotNull]

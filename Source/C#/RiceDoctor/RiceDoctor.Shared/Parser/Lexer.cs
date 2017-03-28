@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Globalization;
 using System.Linq;
 using System.Text;
@@ -15,11 +14,9 @@ namespace RiceDoctor.Shared
 
         [NotNull] private readonly string _text;
 
-        [NotNull] private readonly IList<Token> _tokens;
-
         private int _pos;
 
-        [CanBeNull] private ReadOnlyCollection<Token> _readOnlyTokens;
+        [NotNull] private readonly List<Token> _tokens;
 
         protected char CurrentChar;
 
@@ -36,8 +33,7 @@ namespace RiceDoctor.Shared
         [NotNull]
         public IReadOnlyList<Token> Tokenize()
         {
-            if (_readOnlyTokens != null)
-                return _readOnlyTokens;
+            if (_tokens.Count > 0) return _tokens;
 
             var token = GetNextToken();
             while (token.Type != Eof)
@@ -47,9 +43,7 @@ namespace RiceDoctor.Shared
             }
             _tokens.Add(token);
 
-            _readOnlyTokens = new ReadOnlyCollection<Token>(_tokens);
-
-            return _readOnlyTokens;
+            return _tokens;
         }
 
         [CanBeNull]

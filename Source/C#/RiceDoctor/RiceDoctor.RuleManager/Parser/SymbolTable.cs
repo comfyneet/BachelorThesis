@@ -11,18 +11,16 @@ namespace RiceDoctor.RuleManager
         public SymbolTable()
         {
             _symbols = new List<T>();
-            Symbols = _symbols.AsReadOnly();
         }
 
         [NotNull]
-        public IReadOnlyList<T> Symbols { get; private set; }
+        public IReadOnlyList<T> Symbols => _symbols;
 
         public bool Add([NotNull] T symbol)
         {
             if (_symbols.Any(s => s.Equals(symbol))) return false;
 
             _symbols.Add(symbol);
-            Symbols = _symbols.AsReadOnly();
 
             return true;
         }

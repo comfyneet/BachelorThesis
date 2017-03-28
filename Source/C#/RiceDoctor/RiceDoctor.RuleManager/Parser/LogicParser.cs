@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using JetBrains.Annotations;
 using RiceDoctor.Shared;
@@ -11,7 +10,7 @@ namespace RiceDoctor.RuleManager
 {
     public class LogicParser : Parser<IReadOnlyCollection<LogicRule>>
     {
-        [CanBeNull] private ReadOnlyCollection<LogicRule> _logicRules;
+        [CanBeNull] private IReadOnlyCollection<LogicRule> _logicRules;
 
         public LogicParser([NotNull] LogicLexer lexer) : base(lexer)
         {
@@ -31,7 +30,7 @@ namespace RiceDoctor.RuleManager
         }
 
         [NotNull]
-        private ReadOnlyCollection<LogicRule> ParseLogicRuleList()
+        private IReadOnlyCollection<LogicRule> ParseLogicRuleList()
         {
             var logicRuleList = new List<LogicRule>();
 
@@ -41,14 +40,12 @@ namespace RiceDoctor.RuleManager
             while (CurrentToken.Type != Eof)
             {
                 Eat(NewLine);
-                while (CurrentToken.Type == NewLine)
-                    Eat(NewLine);
 
                 logicRules = ParseLogicRules();
                 logicRuleList.AddRange(logicRules);
             }
 
-            return logicRuleList.AsReadOnly();
+            return logicRuleList;
         }
 
         [NotNull]
@@ -75,8 +72,7 @@ namespace RiceDoctor.RuleManager
 
             var logicRules = hypotheses
                 .Select(h => new LogicRule(h, conclusions, certaintyFactor))
-                .ToList()
-                .AsReadOnly();
+                .ToList();
 
             return logicRules;
         }
@@ -101,8 +97,7 @@ namespace RiceDoctor.RuleManager
                 {
                     var truthValues = hypothesisTable.Symbols
                         .Select(hypothesis => (bool?) context[hypothesis])
-                        .ToList()
-                        .AsReadOnly();
+                        .ToList();
 
                     var implicant = new Implicant<int>(implicantId, truthValues);
                     implicants.Add(implicant);
@@ -111,16 +106,14 @@ namespace RiceDoctor.RuleManager
                 }
             }
 
-            var minimizedImplicants = QuineMcCluskey<int>.Minimize(implicants.AsReadOnly());
+            var minimizedImplicants = QuineMcCluskey<int>.Minimize(implicants);
 
             var hypotheses = minimizedImplicants
                 .Select(
                     minimizedImplicant => hypothesisTable.Symbols
                         .Where((symbol, i) => minimizedImplicant.Values[i] == true)
-                        .ToList()
-                        .AsReadOnly())
-                .ToList()
-                .AsReadOnly();
+                        .ToList())
+                .ToList();
 
             return hypotheses;
         }
@@ -257,10 +250,10 @@ namespace RiceDoctor.RuleManager
                     if ((i & (1 << j)) > 0)
                         subset.Add(set[j]);
 
-                subsets.Add(subset.AsReadOnly());
+                subsets.Add(subset);
             }
 
-            return subsets.AsReadOnly();
+            return subsets;
         }
     }
 }

@@ -81,8 +81,7 @@ namespace RiceDoctor.RuleManager
                 tmpSortedImplicants[GetTrueElementCount(implicant.Values)].Add(implicant);
 
             var sortedImplicants = tmpSortedImplicants
-                .ToDictionary(i => i.Key, i => (IReadOnlyList<Implicant<T>>) i.Value.AsReadOnly())
-                .AsReadOnly();
+                .ToDictionary(i => i.Key, i => (IReadOnlyList<Implicant<T>>) i.Value);
 
             return sortedImplicants;
         }

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
+using System.Linq;
 using System.Text;
 using JetBrains.Annotations;
 using RiceDoctor.Shared;
@@ -15,7 +15,7 @@ namespace RiceDoctor.SemanticCode
 
         static SemanticParser()
         {
-            var colors = new List<string>
+            ColorTags = new List<string>
             {
                 "red",
                 "green",
@@ -27,9 +27,8 @@ namespace RiceDoctor.SemanticCode
                 "gray",
                 "purple"
             };
-            ColorTags = new ReadOnlyCollection<string>(colors);
 
-            var textContainers = new List<string>
+            TextContainerTags = new List<string>
             {
                 "u",
                 "sub",
@@ -42,23 +41,20 @@ namespace RiceDoctor.SemanticCode
                 "h4",
                 "h5"
             };
-            TextContainerTags = new ReadOnlyCollection<string>(textContainers);
 
-            var singulars = new List<string>
+            SingularTags = new List<string>
             {
                 "hr",
                 "br"
             };
-            SingularTags = new ReadOnlyCollection<string>(singulars);
 
-            var lists = new List<string>
+            ListTags = new List<string>
             {
                 "ul",
                 "ol"
             };
-            ListTags = new ReadOnlyCollection<string>(lists);
 
-            var orderedListType = new List<string>
+            OrderedListTypeTags = new List<string>
             {
                 "1",
                 "A",
@@ -66,16 +62,14 @@ namespace RiceDoctor.SemanticCode
                 "I",
                 "i"
             };
-            OrderedListTypeTags = new ReadOnlyCollection<string>(orderedListType);
 
-            var unorderedListType = new List<string>
+            UnorderedListTypeTags = new List<string>
             {
                 "disc",
                 "circle",
                 "square",
                 "none"
             };
-            UnorderedListTypeTags = new ReadOnlyCollection<string>(unorderedListType);
         }
 
         public SemanticParser([NotNull] SemanticLexer lexer) : base(lexer)
@@ -85,22 +79,22 @@ namespace RiceDoctor.SemanticCode
         public static string OntologyLink { get; [param: NotNull] set; } = "/ontology/";
 
         [NotNull]
-        private static ReadOnlyCollection<string> ColorTags { get; }
+        private static IReadOnlyCollection<string> ColorTags { get; }
 
         [NotNull]
-        private static ReadOnlyCollection<string> TextContainerTags { get; }
+        private static IReadOnlyCollection<string> TextContainerTags { get; }
 
         [NotNull]
-        private static ReadOnlyCollection<string> SingularTags { get; }
+        private static IReadOnlyCollection<string> SingularTags { get; }
 
         [NotNull]
-        private static ReadOnlyCollection<string> ListTags { get; }
+        private static IReadOnlyCollection<string> ListTags { get; }
 
         [NotNull]
-        private static ReadOnlyCollection<string> OrderedListTypeTags { get; }
+        private static IReadOnlyCollection<string> OrderedListTypeTags { get; }
 
         [NotNull]
-        private static ReadOnlyCollection<string> UnorderedListTypeTags { get; }
+        private static IReadOnlyCollection<string> UnorderedListTypeTags { get; }
 
         [NotNull]
         public override TextContainerNode Parse()

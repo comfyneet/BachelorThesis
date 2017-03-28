@@ -15,14 +15,13 @@ namespace RiceDoctor.SemanticCode
 
             Tag = tag;
             _attributes = new Dictionary<string, string>();
-            Attributes = _attributes.AsReadOnly();
         }
 
         [NotNull]
         public string Tag { get; }
 
         [NotNull]
-        public IReadOnlyDictionary<string, string> Attributes { get; [param: NotNull] private set; }
+        public IReadOnlyDictionary<string, string> Attributes => _attributes;
 
         public void AddAttribute([NotNull] string key, [NotNull] string value)
         {
@@ -30,7 +29,6 @@ namespace RiceDoctor.SemanticCode
             Check.NotEmpty(value, nameof(value));
 
             _attributes.Add(key, value);
-            Attributes = _attributes.AsReadOnly();
         }
 
         public override string ToString()
