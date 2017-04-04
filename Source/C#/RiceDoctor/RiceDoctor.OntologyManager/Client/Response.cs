@@ -12,10 +12,10 @@ namespace RiceDoctor.OntologyManager
             Data = data;
         }
 
-        public ResponseType Status { get; private set; }
+        public ResponseType Status { get; }
 
         [CanBeNull]
-        public IReadOnlyDictionary<string, object> Data { get; private set; }
+        public IReadOnlyDictionary<string, object> Data { get; }
 
         [CanBeNull]
         public string Message { get; set; }

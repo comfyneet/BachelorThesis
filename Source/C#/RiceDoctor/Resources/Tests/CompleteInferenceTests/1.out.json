@@ -1,0 +1,16 @@
+{
+  "InferredFacts": [
+    {
+      "Type": "IndividualFact",
+      "Name": "HienTuong",
+      "Value": "HienTuongThieuDam"
+    }
+  ],
+  "ExpectedFacts": [
+    {
+      "Type": "IndividualFact",
+      "Name": "HienTuong",
+      "Value": "HienTuongThieuDam"
+    }
+  ]
+}

@@ -1,21 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Text;
 using JetBrains.Annotations;
 using RiceDoctor.OntologyManager;
 using RiceDoctor.RuleManager;
 using RiceDoctor.Shared;
 using Xunit;
 using IE = RiceDoctor.InferenceEngine;
+using Manager = RiceDoctor.RuleManager.Manager;
 
 namespace RiceDoctor.Tests
 {
     [Collection("Test collection")]
     public class InferenceEngineTests : IClassFixture<RuleFixture>, IClassFixture<OntologyFixture>
     {
-        [NotNull] private readonly IOntologyManager _ontologyManager;
-        [NotNull] private readonly IRuleManager _ruleManager;
-
         public InferenceEngineTests([NotNull] RuleFixture ruleFixture, [NotNull] OntologyFixture ontologyFixture)
         {
             Check.NotNull(ruleFixture, nameof(ruleFixture));
@@ -24,6 +24,9 @@ namespace RiceDoctor.Tests
             _ruleManager = ruleFixture.RuleManager;
             _ontologyManager = ontologyFixture.OntologyManager;
         }
+
+        [NotNull] private readonly IOntologyManager _ontologyManager;
+        [NotNull] private readonly IRuleManager _ruleManager;
 
         public static IEnumerable<object[]> MockTrueData
         {
@@ -147,7 +150,8 @@ namespace RiceDoctor.Tests
 
         [Theory]
         [MemberData(nameof(MockFalseThenTrueData))]
-        public void InferFalseThenTrue([NotNull] IE.Request request, [NotNull] IReadOnlyCollection<Fact> complementFacts,
+        public void InferFalseThenTrue([NotNull] IE.Request request,
+            [NotNull] IReadOnlyCollection<Fact> complementFacts,
             [NotNull] IReadOnlyCollection<Fact> expectedResultFacts)
         {
             Check.NotNull(request, nameof(request));
@@ -163,6 +167,48 @@ namespace RiceDoctor.Tests
 
             actualResultFacts = engine.Infer(request);
             Assert.True(expectedResultFacts.ScrambledEqual(actualResultFacts));
+        }
+
+        [Fact]
+        public void RunCompleteInferenceTestCases()
+        {
+            var path = Path.Combine(AppContext.BaseDirectory,
+                @"..\..\..\..\Resources\Tests\CompleteInferenceTests");
+            var data = Directory.GetFiles(path, "*.in.json")
+                .Select(file => new Tuple<string, string>(File.ReadAllText(file),
+                    File.ReadAllText(Path.Combine(path, file.Substring(0, file.IndexOf(".in.json")) + ".out.json"))))
+                .Select(text => new Tuple<InferenceTestInput, InferenceTestOutput>(
+                    JsonConvert.Deserialize<InferenceTestInput>(text.Item1),
+                    JsonConvert.Deserialize<InferenceTestOutput>(text.Item2)));
+
+            // TODO: relationRules
+            foreach (var d in data)
+            {
+                IRuleManager ruleManager;
+                if (d.Item1.LogicRules != null)
+                {
+                    var ruleData = new StringBuilder();
+                    for (var i = 0; i < d.Item1.LogicRules.Count; ++i)
+                    {
+                        if (i != 0) ruleData.Append('\n');
+                        ruleData.Append(d.Item1.LogicRules[i]);
+                    }
+                    ruleManager = new Manager(ruleData.ToString());
+                }
+                else
+                {
+                    ruleManager = _ruleManager;
+                }
+
+                var engine = LoadEngine(ruleManager, _ontologyManager);
+
+                var request = new IE.Request(d.Item1.Request.Name, d.Item1.Request.Type.ToRequestType(),
+                    d.Item1.Facts.Select(f => f.ToOntologyFact()).ToList());
+
+                var expectedFacts = d.Item2.ExpectedFacts.Select(f => f.ToOntologyFact());
+                var actualResultFacts = engine.Infer(request);
+                Assert.True(expectedFacts.ScrambledEqual(actualResultFacts));
+            }
         }
     }
 }

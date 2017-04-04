@@ -1,0 +1,36 @@
+{
+  "InferredFacts": [
+    {
+      "Type": "IndividualFact",
+      "Name": "Sau",
+      "Value": "BoTri"
+    },
+    {
+      "Type": "IndividualFact",
+      "Name": "Oc",
+      "Value": "OcBuuVang"
+    },
+    {
+      "Type": "ScalarFact",
+      "Name": "Lá",
+      "Value": "Úa"
+    },
+    {
+      "Type": "ScalarFact",
+      "Name": "Thân",
+      "Value": "Rửa"
+    },
+    {
+      "Type": "IndividualFact",
+      "Name": "Thuoc",
+      "Value": "ThuocArmada"
+    }
+  ],
+  "ExpectedFacts": [
+    {
+      "Type": "IndividualFact",
+      "Name": "Thuoc",
+      "Value": "ThuocArmada"
+    }
+  ]
+}

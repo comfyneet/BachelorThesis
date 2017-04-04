@@ -63,7 +63,8 @@ namespace RiceDoctor.OntologyManager
         IReadOnlyCollection<Class> GetIndividualClasses([NotNull] string individualName);
 
         [CanBeNull]
-        IReadOnlyDictionary<Relation, IReadOnlyCollection<Individual>> GetRelationValues([NotNull] string individualName);
+        IReadOnlyDictionary<Relation, IReadOnlyCollection<Individual>> GetRelationValues(
+            [NotNull] string individualName);
 
         [CanBeNull]
         IReadOnlyDictionary<Attribute, IReadOnlyCollection<string>> GetAttributeValues([NotNull] string individualName);

@@ -1,0 +1,29 @@
+﻿{
+  "Request": {
+    "Type": "IndividualFact",
+    "Name": "HienTuong"
+  },
+  "Facts": [
+    {
+      "Type": "ScalarFact",
+      "Name": "Thân",
+      "Value": "Lùn"
+    },
+    {
+      "Type": "ScalarFact",
+      "Name": "Lá",
+      "Value": "Vàng"
+    },
+    {
+      "Type": "ScalarFact",
+      "Name": "Lá",
+      "Value": "Úa"
+    }
+  ],
+  "RelationRules": [
+    "coPhan"
+  ],
+  "LogicRules": [
+    "\"Thân\"=\"Lùn\" & \"Lá\"=\"Vàng\" & \"Lá\"=\"Úa\" -> HienTuong=HienTuongThieuDam"
+  ]
+}

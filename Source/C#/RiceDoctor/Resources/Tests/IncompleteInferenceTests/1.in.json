@@ -1,0 +1,24 @@
+{
+  "Facts": [
+    {
+      "Type": "ScalarFact",
+      "Name": "Thân",
+      "Value": "Lùn"
+    },
+    {
+      "Type": "ScalarFact",
+      "Name": "Lá",
+      "Value": "Vàng"
+    },
+    {
+      "Type": "ScalarFact",
+      "Name": "Lá",
+      "Value": "Cháy"
+    }
+  ],
+  "RelationRules": null,
+  "LogicRules": [
+    "\"Thân\"=\"Lùn\" & \"Lá\"=\"Vàng\" & \"Lá\"=\"Úa\" & Benh=BenhDaoOn -> HienTuong=HienTuongThieuDam",
+    "\"Lá\"=\"Cháy\" & \"Hạt\"=\"Không có\" -> Benh=BenhBacLa"
+  ]
+}

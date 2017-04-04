@@ -14,9 +14,9 @@ namespace RiceDoctor.Shared
 
         [NotNull] private readonly string _text;
 
-        private int _pos;
-
         [NotNull] private readonly List<Token> _tokens;
+
+        private int _pos;
 
         protected char CurrentChar;
 
@@ -134,7 +134,7 @@ namespace RiceDoctor.Shared
             }
             else
             {
-                throw new InvalidOperationException($": Position {_pos}: '{CurrentChar}' is not a digit.");
+                throw new InvalidOperationException($"Position {_pos}: '{CurrentChar}' is not a digit.");
             }
 
             if (CurrentChar == '.')
@@ -143,7 +143,7 @@ namespace RiceDoctor.Shared
                 Advance();
 
                 if ("0123456789".IndexOf(CurrentChar) == -1)
-                    throw new InvalidOperationException($": Position {_pos}: '{CurrentChar}' is not a digit.");
+                    throw new InvalidOperationException($"Position {_pos}: '{CurrentChar}' is not a digit.");
                 while ("0123456789".IndexOf(CurrentChar) != -1)
                 {
                     builder.Append(CurrentChar);
@@ -162,7 +162,7 @@ namespace RiceDoctor.Shared
                 }
 
                 if ("0123456789".IndexOf(CurrentChar) == -1)
-                    throw new InvalidOperationException($": Position {_pos}: '{CurrentChar}' is not a digit.");
+                    throw new InvalidOperationException($"Position {_pos}: '{CurrentChar}' is not a digit.");
                 while ("0123456789".IndexOf(CurrentChar) != -1)
                 {
                     builder.Append(CurrentChar);
@@ -172,7 +172,7 @@ namespace RiceDoctor.Shared
 
             if (double.TryParse(builder.ToString(), NumberStyles.Any, CultureInfo.InvariantCulture, out double number))
                 return new Token(Number, number);
-            throw new InvalidOperationException($": Position {numberPos}: \"{builder}\" is not a number.");
+            throw new InvalidOperationException($"Position {numberPos}: \"{builder}\" is not a number.");
         }
 
 
@@ -231,7 +231,7 @@ namespace RiceDoctor.Shared
                                         hexBuilder.Append(CurrentChar);
                                     else
                                         throw new InvalidOperationException(
-                                            $": Position {_pos}: '{CurrentChar}' is not a hexadecimal digit.");
+                                            $"Position {_pos}: '{CurrentChar}' is not a hexadecimal digit.");
                                 }
 
                                 if (int.TryParse(hexBuilder.ToString(), NumberStyles.HexNumber,
@@ -240,12 +240,12 @@ namespace RiceDoctor.Shared
                                     builder.Append((char) codePoint);
                                 else
                                     throw new InvalidOperationException(
-                                        $": Position {hexPos}: \"{hexBuilder}\" is not an unicode character.");
+                                        $"Position {hexPos}: \"{hexBuilder}\" is not an unicode character.");
                             }
                             else
                             {
                                 throw new InvalidOperationException(
-                                    $": Position {_pos}: '{CurrentChar}' is not a control character.");
+                                    $"Position {_pos}: '{CurrentChar}' is not a control character.");
                             }
                             break;
                     }
@@ -258,7 +258,7 @@ namespace RiceDoctor.Shared
                 Advance();
             }
 
-            throw new InvalidOperationException($": Position {stringPos}: \"{builder}\" is not a string.");
+            throw new InvalidOperationException($"Position {stringPos}: \"{builder}\" is not a string.");
         }
 
         protected abstract Token GetNextToken();

@@ -7,7 +7,8 @@ namespace RiceDoctor.RuleManager
 {
     public class LogicRule : Rule, IEquatable<LogicRule>
     {
-        public LogicRule([NotNull] IReadOnlyCollection<Fact> hypotheses, [NotNull] IReadOnlyCollection<Fact> conclusions,
+        public LogicRule([NotNull] IReadOnlyCollection<Fact> hypotheses,
+            [NotNull] IReadOnlyCollection<Fact> conclusions,
             double certaintyFactor)
         {
             Check.NotEmpty(hypotheses, nameof(hypotheses));

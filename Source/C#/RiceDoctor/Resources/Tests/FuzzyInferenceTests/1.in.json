@@ -1,0 +1,25 @@
+{
+  "Facts": [
+    {
+      "Type": "FuzzyFact",
+      "Name": "Nhiệt độ",
+      "Value": "27"
+    },
+    {
+      "Type": "IndividualFact",
+      "Name": "GiaiDoan",
+      "Value": "GiaiDoanLamDong"
+    },
+    {
+      "Type": "ScalarFact",
+      "Name": "Nước",
+      "Value": "Ít"
+    }
+  ],
+  "RelationRules": null,
+  "LogicRules": [
+    "GiaiDoan=GiaiDoanLamDong & \"Nhiệt độ\"=\"Cao\" & \"Nước\"=\"Ít\" -> Benh=BenhKhoVan & Benh=BenhVangLa",
+    "\"Nhiệt độ\"=\"Cao\" & GiaiDoan=GiaiDoanLamDong -> \"Thân\"=\"Khô\" & \"Bông\"=\"Không có\" & \"Thụ phấn\"=\"Không\"",
+    "GiaiDoan=GiaiDoanLamDong & \"Nắng\"=\"Nhiều\" & \"Nước\"=\"Ít\" & \"Bông\"=\"Không có\" & \"Thân\"=\"Khô\" -> Benh=BenhKhoVan"
+  ]
+}

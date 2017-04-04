@@ -87,16 +87,16 @@ namespace RiceDoctor.InferenceEngine
 
                 if (resultFacts.Count <= 0) continue;
 
-                var neededComplementFacts = new List<Fact>(rule.Hypotheses);
+                var missingFacts = new List<Fact>(rule.Hypotheses);
                 foreach (var hypothesis in rule.Hypotheses)
-                    if (_knownFacts.Contains(hypothesis)) neededComplementFacts.Remove(hypothesis);
+                    if (_knownFacts.Contains(hypothesis)) missingFacts.Remove(hypothesis);
 
-                var priority = rule.CertaintyFactor * (1 - (double) neededComplementFacts.Count / rule.Hypotheses.Count);
+                var priority = rule.CertaintyFactor * (1 - (double) missingFacts.Count / rule.Hypotheses.Count);
 
                 if (priority > 0)
                     incompleteFacts.Add(
                         new Tuple<double, IReadOnlyCollection<Fact>, IReadOnlyCollection<Fact>>(priority,
-                            neededComplementFacts, resultFacts));
+                            missingFacts, resultFacts));
             }
 
             if (incompleteFacts.Count == 0) return null;

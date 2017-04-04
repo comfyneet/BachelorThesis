@@ -1,0 +1,19 @@
+{
+  "Facts": [
+    {
+      "Type": "FuzzyFact",
+      "Name": "Mưa",
+      "Value": "500"
+    },
+    {
+      "Type": "IndividualFact",
+      "Name": "GiaiDoan",
+      "Value": "GiaiDoanLamDong"
+    }
+  ],
+  "RelationRules": null,
+  "LogicRules": [
+    "\"Mưa\"=\"To\" -> \"Đổ cây\"=\"Có\" & \"Thân\"=\"Gãy\" & \"Thụ phấn\"=\"Không\"",
+    "\"Thân\"=\"Gãy\" & GiaiDoan=GiaiDoanLamDong -> Benh=BenhLemLepHat & Sau=Ray"
+  ]
+}

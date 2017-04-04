@@ -212,7 +212,7 @@ namespace RiceDoctor.RuleManager
             {
                 var className = ParseIdentifier();
 
-                Eat(Equal);
+                Eat(Eq);
 
                 var individualName = ParseIdentifier();
 
@@ -222,7 +222,7 @@ namespace RiceDoctor.RuleManager
             {
                 var name = ParseUnquotedString();
 
-                Eat(Equal);
+                Eat(Eq);
 
                 var value = ParseUnquotedString();
 

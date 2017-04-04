@@ -4,10 +4,10 @@ membership-function = 'FUNCTION' function-name '(' parameters ')' function-compo
 paremeter = paremeter-name { ',' parameter-name }
 function-compound-statement = 'BEGIN' function-statement { ';' function-statement } 'END'
 function-statement = if-statement | assignment-statement
-if-statement = 'IF' expression 'THEN' statement
+if-statement = 'IF' boolean-expression 'THEN' assignment-statement
 assignment-statement = 'OUTPUT' '<-' expression
-expression = simple-expression [ ( '=' | '!=' | '<' | '<=' | '>' | '>=' ) simple-expression ]
-simple-exression = [ '+' | '-' ] term { ( '+' | '-' | '|') term }
+boolean-expression = expression [ ( '=' | '!=' | '<' | '<=' | '>' | '>=' ) expression ]
+exression = [ '+' | '-' ] term { ( '+' | '-' | '|') term }
 term = factor { ('*' | '/' | '&') factor }
 factor = 'INPUT' | literal | '(' expression ')' | parameter-name | '!' factor
 linguistic-variables = linguistic-variable { linguistic-variable }

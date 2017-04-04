@@ -6,7 +6,7 @@ namespace RiceDoctor.Shared
     {
         static TokenType()
         {
-            Illegal = new TokenType("Illegal");
+            Illegal = new TokenType("illegal");
             Eof = new TokenType("end of file");
             NewLine = new TokenType("new line");
             Ident = new TokenType("identifier");

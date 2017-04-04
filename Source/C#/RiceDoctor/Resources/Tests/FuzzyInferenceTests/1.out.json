@@ -1,0 +1,41 @@
+{
+  "InferredFacts": [
+    {
+      "Type": "IndividualFact",
+      "Name": "Benh",
+      "Value": "BenhKhoVan"
+    },
+    {
+      "Type": "IndividualFact",
+      "Name": "Benh",
+      "Value": "BenhVangLa"
+    },
+    {
+      "Type": "ScalarFact",
+      "Name": "Thân",
+      "Value": "Khô"
+    },
+    {
+      "Type": "ScalarFact",
+      "Name": "Bông",
+      "Value": "Không có"
+    },
+    {
+      "Type": "ScalarFact",
+      "Name": "Thụ phấn",
+      "Value": "Không"
+    },
+    {
+      "Type": "IndividualFact",
+      "Name": "Benh",
+      "Value": "BenhKhoVan"
+    }
+  ],
+  "ExpectedFacts": [
+    {
+      "Type": "IndividualFact",
+      "Name": "Benh",
+      "Value": "BenhKhoVan"
+    }
+  ]
+}

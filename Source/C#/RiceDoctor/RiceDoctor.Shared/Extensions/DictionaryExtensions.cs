@@ -9,7 +9,8 @@ namespace RiceDoctor.Shared
     public static class DictionaryExtensions
     {
         [NotNull]
-        public static ReadOnlyDictionary<TKey, TValue> AsReadOnly<TKey, TValue>(this Dictionary<TKey, TValue> dictionary)
+        public static ReadOnlyDictionary<TKey, TValue> AsReadOnly<TKey, TValue>(
+            this Dictionary<TKey, TValue> dictionary)
         {
             return new ReadOnlyDictionary<TKey, TValue>(dictionary);
         }

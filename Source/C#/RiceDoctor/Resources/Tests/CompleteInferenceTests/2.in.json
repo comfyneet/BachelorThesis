@@ -1,0 +1,18 @@
+﻿{
+  "Request": {
+    "Type": "IndividualFact",
+    "Name": "Benh"
+  },
+  "Facts": [
+    {
+      "Type": "IndividualFact",
+      "Name": "GiaiDoan",
+      "Value": "GiaiDoanTro"
+    }
+  ],
+  "RelationRules": null,
+  "LogicRules": [
+    "GiaiDoan=GiaiDoanTro -> Benh=BenhBacLa & Benh=BenhVangLa & Benh=BenhLemLepHat & Benh=BenhDaoOn & Benh=BenhKhoVan",
+    "GiaiDoan=GiaiDoanTro -> Sau=SauCanGie & Sau=BoXit & Sau=Ray & Sau=SauDucThan"
+  ]
+}

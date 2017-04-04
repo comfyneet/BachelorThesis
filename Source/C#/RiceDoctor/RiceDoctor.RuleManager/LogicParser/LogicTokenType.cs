@@ -14,7 +14,7 @@ namespace RiceDoctor.RuleManager
             RParen = new LogicTokenType(')');
             LBrace = new LogicTokenType('{');
             RBrace = new LogicTokenType('}');
-            Equal = new LogicTokenType('=');
+            Eq = new LogicTokenType('=');
         }
 
         protected LogicTokenType([NotNull] string name) : base(name)
@@ -47,6 +47,6 @@ namespace RiceDoctor.RuleManager
         public static LogicTokenType RBrace { get; }
 
         [NotNull]
-        public static LogicTokenType Equal { get; }
+        public static LogicTokenType Eq { get; }
     }
 }

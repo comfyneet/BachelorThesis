@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.9
+VisualStudioVersion = 15.0.26228.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RiceDoctor.ConsoleApp", "RiceDoctor\RiceDoctor.ConsoleApp\RiceDoctor.ConsoleApp.csproj", "{78DEE6C9-E201-483A-87A5-B75256482CA4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RiceDoctor.Shared", "RiceDoctor\RiceDoctor.Shared\RiceDoctor.Shared.csproj", "{2F4655BF-F657-4A96-A04C-D9B5BC0A608D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{391B7CE6-7A14-48B8-BD46-9ED3D927C529}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{391B7CE6-7A14-48B8-BD46-9ED3D927C529}"
 	ProjectSection(SolutionItems) = preProject
 		RiceDoctor\Resources\conversation-rules.txt = RiceDoctor\Resources\conversation-rules.txt
 		RiceDoctor\Resources\logic-rules.txt = RiceDoctor\Resources\logic-rules.txt
@@ -26,6 +26,22 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiceDoctor.Tests", "RiceDoctor\RiceDoctor.Tests\RiceDoctor.Tests.csproj", "{9C1AD337-3302-4864-9EFD-58705B09118F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiceDoctor.WebApp", "RiceDoctor\RiceDoctor.WebApp\RiceDoctor.WebApp.csproj", "{1C7749A6-A4D5-4D9C-8D0C-0BFAA0ABBD7E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{3E26CEB5-DB4F-41A7-B527-D3F9E3431E32}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CompleteInferenceTests", "CompleteInferenceTests", "{1F14A492-1E13-46B7-9852-A376CEECD641}"
+	ProjectSection(SolutionItems) = preProject
+		RiceDoctor\Resources\Tests\CompleteInferenceTests\1.in.json = RiceDoctor\Resources\Tests\CompleteInferenceTests\1.in.json
+		RiceDoctor\Resources\Tests\CompleteInferenceTests\1.out.json = RiceDoctor\Resources\Tests\CompleteInferenceTests\1.out.json
+		RiceDoctor\Resources\Tests\CompleteInferenceTests\2.in.json = RiceDoctor\Resources\Tests\CompleteInferenceTests\2.in.json
+		RiceDoctor\Resources\Tests\CompleteInferenceTests\2.out.json = RiceDoctor\Resources\Tests\CompleteInferenceTests\2.out.json
+		RiceDoctor\Resources\Tests\CompleteInferenceTests\3.in.json = RiceDoctor\Resources\Tests\CompleteInferenceTests\3.in.json
+		RiceDoctor\Resources\Tests\CompleteInferenceTests\3.out.json = RiceDoctor\Resources\Tests\CompleteInferenceTests\3.out.json
+		RiceDoctor\Resources\Tests\CompleteInferenceTests\4.in.json = RiceDoctor\Resources\Tests\CompleteInferenceTests\4.in.json
+		RiceDoctor\Resources\Tests\CompleteInferenceTests\4.out.json = RiceDoctor\Resources\Tests\CompleteInferenceTests\4.out.json
+		RiceDoctor\Resources\Tests\CompleteInferenceTests\5.in.json = RiceDoctor\Resources\Tests\CompleteInferenceTests\5.in.json
+		RiceDoctor\Resources\Tests\CompleteInferenceTests\5.out.json = RiceDoctor\Resources\Tests\CompleteInferenceTests\5.out.json
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -72,5 +88,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3E26CEB5-DB4F-41A7-B527-D3F9E3431E32} = {391B7CE6-7A14-48B8-BD46-9ED3D927C529}
+		{1F14A492-1E13-46B7-9852-A376CEECD641} = {3E26CEB5-DB4F-41A7-B527-D3F9E3431E32}
 	EndGlobalSection
 EndGlobal
