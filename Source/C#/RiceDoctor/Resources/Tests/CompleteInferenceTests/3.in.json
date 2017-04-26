@@ -1,19 +1,19 @@
 ﻿{
-  "Request": {
-    "Type": "IndividualFact",
-    "Name": "Benh"
-  },
-  "Facts": [
-    {
-      "Type": "ScalarFact",
-      "Name": "Đất",
-      "Value": "Khô cằn"
-    }
-  ],
-  "RelationRules": null,
-  "LogicRules": [
-    "\"Đất\"=\"Khô cằn\" -> \"Thân\"=\"Khô\" & \"Rễ\"=\"Khô\" & \"Hạt\"=\"Không có\"",
-    "\"Hạt\"=\"Không có\" & \"Rễ\"=\"Khô\" -> Benh=BenhLemLepHat",
-    "\"Thân\"=\"Khô\" & \"Rễ\"=\"Khô\" -> Benh=BenhBacLa"
-  ]
+    "Request": {
+        "Type": "IndividualFact",
+        "Name": "Benh"
+    },
+    "Facts": [
+        {
+            "Type": "ScalarFact",
+            "Name": "Đất",
+            "Value": "Khô cằn"
+        }
+    ],
+    "RelationRules": null,
+    "LogicRules": [
+        "\"Đất\"=\"Khô cằn\" -> \"Thân\"=\"Khô\" & \"Rễ\"=\"Khô\" & \"Hạt\"=\"Không có\"",
+        "\"Hạt\"=\"Không có\" & \"Rễ\"=\"Khô\" -> Benh=BenhLemLepHat",
+        "\"Thân\"=\"Khô\" & \"Rễ\"=\"Khô\" -> Benh=BenhBacLa"
+    ]
 }

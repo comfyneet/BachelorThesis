@@ -33,8 +33,10 @@ namespace RiceDoctor.WebApp
 
             services.AddSingleton<IOntologyManager>(Manager.Instance);
 
+            var problemData = File.ReadAllText(Path.Combine(AppContext.BaseDirectory, "problem-types.json"));
             var logicData = File.ReadAllText(Path.Combine(AppContext.BaseDirectory, "logic-rules.txt"));
-            services.AddSingleton<IRuleManager>(new RuleManager.Manager(logicData));
+            var relationData = File.ReadAllText(Path.Combine(AppContext.BaseDirectory, "relation-rules.txt"));
+            services.AddSingleton<IRuleManager>(new RuleManager.Manager(problemData, logicData, relationData));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

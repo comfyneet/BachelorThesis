@@ -1,31 +1,31 @@
 ﻿{
-  "Request": {
-    "Type": "IndividualFact",
-    "Name": "Thuoc"
-  },
-  "Facts": [
-    {
-      "Type": "IndividualFact",
-      "Name": "GiaiDoan",
-      "Value": "GiaiDoanGieo"
+    "Request": {
+        "Type": "IndividualFact",
+        "Name": "Thuoc"
     },
-    {
-      "Type": "ScalarFact",
-      "Name": "Rễ",
-      "Value": "Ún"
-    },
-    {
-      "Type": "ScalarFact",
-      "Name": "Lá",
-      "Value": "Úa"
-    }
-  ],
-  "RelationRules": [
-    "coThuoc"
-  ],
-  "LogicRules": [
-    "GiaiDoan=GiaiDoanGieo | GiaiDoan=GiaiDoanMa | GiaiDoan=GiaiDoanDeNhanh -> Oc=OcBuuVang & Sau=BoTri {0.8}",
-    "\"Màu ốc\"=\"Vàng\" -> Oc=OcBuuVang",
-    "\"Rễ\"=\"Ún\" -> \"Lá\"=\"Úa\" & \"Thân\"=\"Rữa\""
-  ]
+    "Facts": [
+        {
+            "Type": "IndividualFact",
+            "Name": "GiaiDoan",
+            "Value": "GiaiDoanGieo"
+        },
+        {
+            "Type": "ScalarFact",
+            "Name": "Rễ",
+            "Value": "Ún"
+        },
+        {
+            "Type": "ScalarFact",
+            "Name": "Lá",
+            "Value": "Úa"
+        }
+    ],
+    "RelationRules": [
+        "coThuoc"
+    ],
+    "LogicRules": [
+        "GiaiDoan=GiaiDoanGieo | GiaiDoan=GiaiDoanMa | GiaiDoan=GiaiDoanDeNhanh -> Oc=OcBuuVang & Sau=BoTri {0.8}",
+        "\"Màu ốc\"=\"Vàng\" -> Oc=OcBuuVang",
+        "\"Rễ\"=\"Ún\" -> \"Lá\"=\"Úa\" & \"Thân\"=\"Rữa\""
+    ]
 }

@@ -1,32 +1,32 @@
 ﻿{
-  "Request": {
-    "Type": "IndividualFact",
-    "Name": "HienTuong"
-  },
-  "Facts": [
-    {
-      "Type": "ScalarFact",
-      "Name": "Thân",
-      "Value": "Lùn"
+    "Request": {
+        "Type": "IndividualFact",
+        "Name": "HienTuong"
     },
-    {
-      "Type": "ScalarFact",
-      "Name": "Lá",
-      "Value": "Vàng"
-    },
-    {
-      "Type": "ScalarFact",
-      "Name": "Lá",
-      "Value": "Úa"
-    },
-    {
-      "Type": "IndividualFact",
-      "Name": "Benh",
-      "Value": "BenhDaoOn"
-    }
-  ],
-  "RelationRules": null,
-  "LogicRules": [
-    "\"Thân\"=\"Lùn\" & \"Lá\"=\"Vàng\" & \"Lá\"=\"Úa\" & Benh=BenhDaoOn -> HienTuong=HienTuongThieuDam"
-  ]
+    "Facts": [
+        {
+            "Type": "ScalarFact",
+            "Name": "Thân",
+            "Value": "Lùn"
+        },
+        {
+            "Type": "ScalarFact",
+            "Name": "Lá",
+            "Value": "Vàng"
+        },
+        {
+            "Type": "ScalarFact",
+            "Name": "Lá",
+            "Value": "Úa"
+        },
+        {
+            "Type": "IndividualFact",
+            "Name": "Benh",
+            "Value": "BenhDaoOn"
+        }
+    ],
+    "RelationRules": null,
+    "LogicRules": [
+        "\"Thân\"=\"Lùn\" & \"Lá\"=\"Vàng\" & \"Lá\"=\"Úa\" & Benh=BenhDaoOn -> HienTuong=HienTuongThieuDam"
+    ]
 }

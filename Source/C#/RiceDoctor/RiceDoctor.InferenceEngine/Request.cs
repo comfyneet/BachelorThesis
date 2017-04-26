@@ -7,27 +7,27 @@ namespace RiceDoctor.InferenceEngine
 {
     public class Request
     {
-        public Request([NotNull] string factName, RequestType requestType)
+        public Request([NotNull] Problem problem, RequestType requestType)
         {
-            Check.NotEmpty(factName, nameof(factName));
+            Check.NotNull(problem, nameof(problem));
 
-            FactName = factName;
+            Problem = problem;
             RequestType = requestType;
         }
 
-        public Request([NotNull] string factName, RequestType requestType,
+        public Request([NotNull] Problem problem, RequestType requestType,
             [NotNull] IReadOnlyCollection<Fact> knownFacts)
         {
-            Check.NotEmpty(factName, nameof(factName));
+            Check.NotNull(problem, nameof(problem));
             Check.NotEmpty(knownFacts, nameof(knownFacts));
 
-            FactName = factName;
+            Problem = problem;
             RequestType = requestType;
             KnownFacts = knownFacts;
         }
 
         [NotNull]
-        public string FactName { get; }
+        public Problem Problem { get; }
 
         public RequestType RequestType { get; }
 

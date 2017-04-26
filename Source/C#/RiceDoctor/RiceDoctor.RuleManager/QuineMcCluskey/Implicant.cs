@@ -58,18 +58,15 @@ namespace RiceDoctor.RuleManager
         {
             if (ReferenceEquals(null, obj)) return false;
             if (ReferenceEquals(this, obj)) return true;
-            return obj.GetType() == GetType() && Equals((Implicant<T>) obj);
+            if (obj.GetType() != GetType()) return false;
+            return Equals((Implicant<T>) obj);
         }
 
         public override int GetHashCode()
         {
             unchecked
             {
-                var hashCode = Identifiers.GetOrderIndependentHashCode();
-                foreach (var value in Values)
-                    hashCode = (hashCode * 397) ^ value.GetHashCode();
-
-                return hashCode;
+                return (Identifiers.GetHashCode() * 397) ^ Values.GetHashCode();
             }
         }
     }

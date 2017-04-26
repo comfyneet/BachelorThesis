@@ -1,54 +1,57 @@
-﻿"Lá"="Vàng" & "Thân"="Ún" -> Benh=BenhVangLa {1.0e+0}
+﻿HinhDangThan=Test_ThanUn -> HinhDangThan=Test_ThanLun
+MauLa=Test_LaVang & HinhDangThan=Test_ThanLun -> Benh=Test_BenhVangLa
+MauLa=LaVang & HinhDangThan=ThanUn -> Benh=BenhVangLa {1.0e+0}
 GiaiDoan=GiaiDoanGieo | GiaiDoan=GiaiDoanMa | GiaiDoan=GiaiDoanDeNhanh -> Oc=OcBuuVang & Oc=OcBoTri
-"Thân"="Lùn" & ("Lá"="Vàng" | "Lá"="Úa") -> HienTuong=HienTuongThieuDam
-"Đẻ nhánh"="Kém" & "Chiều cao"="Thấp" -> HienTuong=HienThuongNgoDocHuuCo
-"Lá"="Vàng" & "Đầu lá"="Cháy" -> HienTuong=HienThuongNgoDocPhen
-"Nhiệt độ"="Cao" & "Độ ẩm"="Thấp" -> Benh=BenhDaoOn {0.5}
-"Nước ruộng"="Cao" -> Oc=OcBuuVang & Oc=OcSenh {0.0e-0}
-"Mưa"="Nhiều" & "Gió"="Lớn" -> Benh=BenhLemLepHat
-"Năng xuất"="Kém" & "Nắng"="Nhiều" -> Benh=BenhVangLa
+HinhDangThan=ThanLun & (MauLa=LaVang | HinhDangLa=LaUa) -> HienTuong=HienTuongThieuDam
+TrieuChung=DeNhanhKem & ChieuCao=ChieuCaoThap -> HienTuong=HienThuongNgoDocHuuCo
+MauLa=LaVang & HinhDangLa=DauLaChay -> HienTuong=HienThuongNgoDocPhen
+NhietDo=NhietDoCao & DoAm=DoAmThap -> Benh=BenhDaoOn {0.5}
+NuocRuong=NuocCao -> Oc=OcBuuVang & Oc=OcSenh {0.0e-0}
+LuongMua=MuaNhieu & MoiTruong=GioLon -> Benh=BenhLemLepHat
+TrieuChung=NangXuatKem & MoiTruong=NangNhieu -> Benh=BenhVangLa
 GiaiDoan=GiaiDoanGieo | GiaiDoan=GiaiDoanMa | GiaiDoan=GiaiDoanDeNhanh -> Oc=BuuVang & Sau=BoTri
-GiaiDoan=GiaiDoanDeNhanh | GiaiDoan=GiaiDoanLamDong -> Sau=SauCuonLa & Sau=SauPhao & Sau=SauKeo & Sau=SauDucThan & Sau=doiducbe & Sau=Ray
+GiaiDoan=GiaiDoanDeNhanh | GiaiDoan=GiaiDoanLamDong -> Sau=SauCuonLa & Sau=SauPhao & Sau=SauKeo & Sau=SauDucThan & Sau=SauDoiDucBe & Sau=Ray
 GiaiDoan=GiaiDoanDeNhanh | GiaiDoan=GiaiDoanLamDong -> Benh=BenhDaoOn & Benh=BenhKhoVan & Benh=BenhVangLa & Benh=BenhDomNau
-GiaiDoan=GiaiDoanLamDong | GiaiDoan=GiaiDoanTro -> Sau=SauCuonLa & Sau=SauDucThan & Sau=SauDoiDucBe & Sau=SauRay & Benh=BenhDaoOn & Benh=BenhKhoVan & Benh=BenhVangLa
+GiaiDoan=GiaiDoanLamDong | GiaiDoan=GiaiDoanTro -> Sau=SauCuonLa & Sau=SauDucThan & Sau=SauDoiDucBe & Sau=Ray & Benh=BenhDaoOn & Benh=BenhKhoVan & Benh=BenhVangLa
 GiaiDoan=GiaiDoanTro | GiaiDoan=GiaiDoanChin -> Benh=BenhBacLa & Benh=BenhVangLa & Benh=BenhLemLepHat & Benh=BenhDaoOn & Benh=BenhKhoVan & Sau=SauCanGie & Sau=BoXit & Sau=Ray & Sau=SauDucThan
-"Thân"="Lùn" & ("Lá"="Vàng" | "Lá"="Úa" | "Lá"="Chết") -> Benh=HienTuongThieuDam
-"Đất"="Khô" -> "Thân"="Khô" & "Rễ"="Khô" & "Hạt"="Không có"
-"Nước"="Nhiều" -> "Rễ"="Ún"
-"Rễ"="Ún" -> "Thân"="Thối" & "Lá"="Lá vàng" & "Hạt"="Không có" & "Trổ bông"="Không"
-"Đổ cây"="Có" & "Thân"="Gãy" -> Benh=BenhLemLepHat
-GiaiDoan=GiaiDoanLamDong & "Mưa"="Nhiều" -> "Thân"="Gãy" & "Trổ bông"="Không"
-GiaiDoan=GiaiDoanLamDong & "Nắng"="Nhiều" & "Nước"="Không có" -> Benh=BenhKhoVang & Benh=BenhVangLa
-"Mưa"="Nhiều" & "Độ ẩm"="Cao" & GiaiDoan=GiaiDoanTro -> "Bẹ"="Thối" & "Thân"="Thối"
-"Nhiệt độ"="Cao" & GiaiDoan=GiaiDoanLamDong -> "Thân"="Khô" & "Bông"="Không có" & "Thụ phấn"="Không"
-"Lá"="Cháy" & "Rễ"="Ít" & "Mùi"="Hôi" & "Thân"="Thối" -> Benh=BenhThoiThan
-"Nhiệt độ"="Thấp" & "Độ ẩm"="Trung bình" -> Benh=BenhDaoOn
-"Lá"="Cháy bìa" & "Lá"="Vàng" -> Benh=BenhChayBiaLa
-"Thân"="Lùn" & "Lá"="Vàng nhạt" -> Benh=BenhVangLun
-GiongLua=GiongBT7 -> Benh=BenhBacLaLua
-"Mép lá"="Cháy" -> Benh=BenhChayBiaLa
-"Thân"="Lùn" & "Lá"="Xanh đậm" & "Mép lá"="Rách" & "Chóp lá"="Xoắn" & "Hạt"="Lép" -> Benh=BenhLunXoanLa
-"Thân"="Lùn" & "Lá"="Xanh đậm" & "Đầu lá"="Xoăn" & "Gân lá"="Xưng" -> Benh=BenhLunSocDen
-"Mưa"="To" & GiaiDoan=GiaiDoanTro & Benh=BenhVangLa -> Benh=BenhBacLa
-Benh=BenhChayBiaLa & GiongLua=GiongBT7  & "Lá"="Khô" -> Benh=BenhBacLa
-GiaiDoan=GiaiDoanMa & "Đất"="Ẩm" & "Thân"="Lùn" & "Lá"="Hơi vàng" & "Rễ"="Ngắn" & "Chóp rễ"="Bứu" -> Benh=BenhTuyenTrung
+HinhDangThan=ThanLun & (MauLa=LaVang | HinhDangLa=LaUa | HinhDangLa=LaChet) -> HienTuong=HienTuongThieuDam
+Dat=DatKho -> HinhDangThan=ThanKho & HinhDangRe=ReKho & HinhDangHat=KhongHat
+NuocRuong=NuocCao -> HinhDangRe=ReUn
+HinhDangRe=ReUn -> HinhDangThan=ThanThoi & MauLa=LaVang & HinhDangHat=KhongHat & HinhDangBong=KhongTroBong
+TrieuChung=DoCay & HinhDangThan=ThanGay -> Benh=BenhLemLepHat
+GiaiDoan=GiaiDoanLamDong & LuongMua=MuaNhieu -> HinhDangThan=ThanGay & HinhDangBong=KhongTroBong
+GiaiDoan=GiaiDoanLamDong & MoiTruong=NangNhieu & NuocRuong=KhongNuoc -> Benh=BenhKhoVang & Benh=BenhVangLa
+LuongMua=MuaNhieu & DoAm=DoAmCao & GiaiDoan=GiaiDoanTro -> TrieuChung=BeThoi & HinhDangThan=ThanThoi
+NhietDo=NhietDoCao & GiaiDoan=GiaiDoanLamDong -> HinhDangThan=ThanKho & HinhDangBong=KhongTroBong & TrieuChung=KhongThuPhan
+HinhDangLa=LaChay & HinhDangRe=ReIt & TrieuChung=MuiHoi & HinhDangThan=ThanThoi -> Benh=BenhThoiThan
+NhietDo=NhietDoThap & DoAm=DoAmTrungBinh -> Benh=BenhDaoOn
+HinhDangLa=BiaLaChay & MauLa=LaVang -> Benh=BenhChayBiaLa
+HinhDangThan=ThanLun & MauLa=LaVangNhat -> Benh=BenhVangLun
+GiongLua=GiongBT7 -> Benh=BenhBacLa
+HinhDangLa=MepLaChay -> Benh=BenhChayBiaLa
+HinhDangThan=ThanLun & MauLa=LaXanhDam & HinhDangLa=MepLaRanh & HinhDangLa=MepLaXoan & HinhDangHat=HatLep -> Benh=BenhLunXoanLa
+HinhDangThan=ThanLun & MauLa=LaXanhDam & HinhDangLa=DauLaXoan & HinhDangLa=GanLaXung -> Benh=BenhLunSocDen
+LuongMua=MuaNhieu & GiaiDoan=GiaiDoanTro & Benh=BenhVangLa -> Benh=BenhBacLa
+Benh=BenhChayBiaLa & GiongLua=GiongBT7  & HinhDangLa=LaKho -> Benh=BenhBacLa
+GiaiDoan=GiaiDoanMa & Dat=DatAm & HinhDangThan=ThanLun & MauLa=LaHoiVang & HinhDangRe=ReNgan & HinhDangRe=ChopReBuu -> Benh=BenhTuyenTrung
 Benh=BenhVangLun -> Sau=RayNau
-"Thân"="Lùn" & "Lá"="Cong queo" & ("Lá"="Xanh" | "Lá"="Vàng cam") & "Bông"="Nhỏ" & "Hạt"="Lép" -> Benh=BenhTungo 
-Benh=BenhTungo -> Sau=RayXanhDuoiDen 
+HinhDangThan=ThanLun & HinhDangLa=LaCongQueo & (MauLa=LaXanh | MauLa=LaVangCam) & HinhDangBong=BongNho & HinhDangHat=HatLep -> Benh=BenhTungo 
+Benh=BenhTungo -> Sau=RayXanhDuoiDen
 Benh=BenhVangTamThoi -> Sau=RayXanhDuoiDen
 Benh=BenhKhamVang -> Sau=SauGai & Sau=BoLa
-"Lá"="Vàng" & "Thời tiết"="Khô" & "Rễ"="Thối" -> Benh=BenhBuuRe
-"Nước"="Ít" & "Thời tiết"="Khô" & "Đạm"="Thiếu" -> Benh=BenhVangLaDoCacYeuToBatLoiMoiTruong
-(GiaiDoan=GiaiDoanTro | GiaiDoan=GiaiDoanLamDong) & "Lá"="Vệch đốm" & "Lá"="Xanh" -> Benh=BenhDomVang
-"Lá"="Nâu" & "Hạt"="Lép" -> Benh=BenhDomNauHaiLua
-"Thời tiết"="Bình thường" & "Độ ẩm"="Cao" & "Bông"="Ít" & "Lá"="Bạc" -> Sau=SauDucThan2Cham
-"Nhiệt độ"="Thấp" & GiaiDoan=GiaiDoanLamDong & "Vụ mùa"="Đông xuân" & "Mưa"="Ít" -> Sau=SauDucThan5VachDauNau
-GiaiDoan=GiaiDoanDeNhanh & "Khí hậu"="Bình thường" & "Độ ẩm"="Cao" & "Mưa"="Ít"-> Sau=SauCuonLaNho
-"Mưa" ="Nhiều" & GiaiDoan=GiaiDoanTro & "Khí hậu"="Mát mẻ" -> Sau=SauCuonLaLon
-"Nhiệt độ"="Cao" & "Độ ẩm"="Cao" & GiaiDoan=GiaiDoanMa -> Sau=SauNangHaiLua
-"Mưa" ="Ít" & "Khí hậu"="Mát mẻ" & "Lá"="Hình bậc thang" -> Sau=SauPhao
-"Đạm"="Nhiều" & "Thời tiết"="Nóng" & "Độ ẩm"="Cao" & "Nắng"="Ít" -> Sau=SauGai
-GiaiDoan=GiaiDoanChin -> Sau=ChauChauHaiLua
-"Khí hậu"="Ấm áp" & "Độ ẩm"="Cao" & "Nắng"="Ít" & "Mưa"="Ít" & GiaiDoan=GiaiDoanTro -> Sau=RayNau
-"Đạm"="Nhiều" & "Cấy"="Dày" & GiaiDoan=GiaiDoanLamDong -> Sau=RayLungTrang
-(GiaiDoan=GiaiDoanTroBong | GiaiDoan=GiaiDoanMaNon | GiaiDoan=GiaiDoanDeNhanh) & "Cỏ"="Nhiều" & "Ruộng"="Sâu" -> Sau=BoXit
+MauLa=LaVang & MoiTruong=ThoiTietKho & HinhDangRe=ReThoi -> Benh=BenhBuuRe
+NuocRuong=NuocIt & MoiTruong=ThoiTietKho & TrieuChung=DamThieu -> Benh=BenhVangLa
+(GiaiDoan=GiaiDoanTro | GiaiDoan=GiaiDoanLamDong) & HinhDangLa=LaVechDom & MauLa=LaXanh -> Benh=BenhDomVang
+MauLa=LaNau & HinhDangHat=HatLep -> Benh=BenhDomNauHaiLua
+MoiTruong=ThoiTietBinhThuong & DoAm=DoAmCao & HinhDangBong=BongIt & MauLa=LaBac -> Sau=SauDucThanHaiCham
+NhietDo=NhietDoThap & GiaiDoan=GiaiDoanLamDong & VuMua=VuDongXuan & LuongMua=MuaIt -> Sau=SauDucThanNamVachDauNau
+GiaiDoan=GiaiDoanDeNhanh & MoiTruong=ThoiTietBinhThuong & DoAm=DoAmCao & LuongMua=MuaIt -> Sau=SauCuonLaNho
+LuongMua=MuaNhieu & GiaiDoan=GiaiDoanTro & MoiTruong=ThoiTietMatMe -> Sau=SauCuonLaLon
+NhietDo=NhietDoCao & DoAm=DoAmCao & GiaiDoan=GiaiDoanMa -> Sau=SauNan
+LuongMua=MuaIt & MoiTruong=ThoiTietMatMe & HinhDangLa=LaHinhBacThang -> Sau=SauPhao
+TrieuChung=DamNhieu & MoiTruong=ThoiTietNong & DoAm=DoAmCao & MoiTruong=NangIt -> Sau=SauGai
+GiaiDoan=GiaiDoanChin -> Sau=ChauChau
+MoiTruong=ThoiTietAmAp & DoAm=DoAmCao & MoiTruong=NangIt & LuongMua=MuaIt & GiaiDoan=GiaiDoanTro -> Sau=RayNau
+TrieuChung=DamNhieu & TrieuChung=CayDay & GiaiDoan=GiaiDoanLamDong -> Sau=RayLungTrang
+(GiaiDoan=GiaiDoanTroBong | GiaiDoan=GiaiDoanMa | GiaiDoan=GiaiDoanDeNhanh) & TrieuChung=CoNhieu & DoSauRuong=RuongSau -> Sau=BoXit
+TrieuChung=DamThieu -> HienTuong=HienTuongThieuDam

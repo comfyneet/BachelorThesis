@@ -12,7 +12,7 @@ namespace RiceDoctor.InferenceEngine
     {
         [NotNull] private readonly IList<IndividualFact> _inferredIndividualFacts;
         [NotNull] private readonly IList<LogicRule> _inferredLogicRules;
-        [NotNull] private readonly IList<Fact> _knownFacts;
+        [NotNull] private readonly ISet<Fact> _knownFacts;
         [NotNull] private readonly IOntologyManager _ontologyManager;
         [NotNull] private readonly IRuleManager _ruleManager;
 
@@ -25,7 +25,7 @@ namespace RiceDoctor.InferenceEngine
             _ontologyManager = ontologyManager;
             _inferredLogicRules = new List<LogicRule>();
             _inferredIndividualFacts = new List<IndividualFact>();
-            _knownFacts = new List<Fact>();
+            _knownFacts = new HashSet<Fact>();
         }
 
         public IReadOnlyCollection<Fact> Infer(Request request)
@@ -33,18 +33,86 @@ namespace RiceDoctor.InferenceEngine
             Check.NotNull(request, nameof(request));
 
             if (request.KnownFacts != null)
-                AddFactsToKnown(request.KnownFacts);
+                AddFactsToKnown(request.KnownFacts.ToArray());
 
-            _inferredLogicRules.Clear();
+            //_inferredLogicRules.Clear();
+
+            var forwardChainingResults = InferForwardChaining(request);
+            return forwardChainingResults ?? InferBackwardChaining(request);
+        }
+
+        public IReadOnlyCollection<ValueTuple<double, IReadOnlyCollection<Fact>, IReadOnlyCollection<Fact>>>
+            GetIncompleteFacts(Request request)
+        {
+            Check.NotNull(request, nameof(request));
+
+            if (request.KnownFacts != null)
+                AddFactsToKnown(request.KnownFacts.ToArray());
+
+            var logicRules = GetLogicRulesForRequest(request);
+
+            var incompleteFacts = new List<ValueTuple<double, IReadOnlyCollection<Fact>, IReadOnlyCollection<Fact>>>();
+            foreach (var rule in logicRules)
+            {
+                var resultFacts = new List<Fact>();
+                foreach (var conclusion in rule.Conclusions)
+                foreach (var desireType in request.Problem.DesireTypes)
+                    if (_ruleManager.CanFactCaptureClass(conclusion, desireType))
+                    {
+                        resultFacts.Add(conclusion);
+                        break;
+                    }
+
+                //var resultFacts = rule.Conclusions
+                //    .Where(f => request.Problem.DesireTypes.Contains(f.Name))
+                //    .ToList();
+
+                if (resultFacts.Count <= 0) continue;
+
+                var missingFacts = new List<Fact>(rule.Hypotheses);
+                foreach (var hypothesis in rule.Hypotheses)
+                    if (_knownFacts.Contains(hypothesis)) missingFacts.Remove(hypothesis);
+
+                var priority = rule.CertaintyFactor * (1 - (double) missingFacts.Count / rule.Hypotheses.Count);
+
+                if (priority > 0)
+                    incompleteFacts.Add((priority, missingFacts, resultFacts));
+            }
+
+            if (incompleteFacts.Count == 0) return null;
+
+            return incompleteFacts
+                .OrderByDescending(r => r.Item1)
+                .ToList();
+        }
+
+        public int AddFactsToKnown(params Fact[] facts)
+        {
+            Check.NotEmpty(facts, nameof(facts));
+
+            var count = 0;
+            foreach (var fact in facts)
+                if (!_knownFacts.Any(f => f.Equals(facts)))
+                {
+                    _knownFacts.Add(fact);
+                    count++;
+                }
+
+            return count;
+        }
+
+        [CanBeNull]
+        private IReadOnlyCollection<Fact> InferForwardChaining([NotNull] Request request)
+        {
+            Check.NotNull(request, nameof(request));
+
+            var logicRules = GetLogicRulesForRequest(request);
 
             while (true)
             {
-                var resultFacts = GetRequestFactsInKnown(request);
-                if (resultFacts != null) return resultFacts;
-
                 var hasNewFacts = false;
 
-                foreach (var rule in _ruleManager.LogicRules)
+                foreach (var rule in logicRules)
                 {
                     hasNewFacts = InferLogicRule(rule);
                     if (hasNewFacts) break;
@@ -63,88 +131,98 @@ namespace RiceDoctor.InferenceEngine
                 break;
             }
 
-            return null;
-        }
-
-        public IReadOnlyCollection<Tuple<double, IReadOnlyCollection<Fact>, IReadOnlyCollection<Fact>>>
-            GetIncompleteFacts(Request request)
-        {
-            Check.NotNull(request, nameof(request));
-
-            if (request.KnownFacts != null)
-                AddFactsToKnown(request.KnownFacts);
-
-            var factName = request.RequestType == RequestType.IndividualFact
-                ? request.FactName
-                : '"' + request.FactName + '"';
-
-            var incompleteFacts = new List<Tuple<double, IReadOnlyCollection<Fact>, IReadOnlyCollection<Fact>>>();
-            foreach (var rule in _ruleManager.LogicRules)
-            {
-                var resultFacts = rule.Conclusions
-                    .Where(f => f.Name == factName)
-                    .ToList();
-
-                if (resultFacts.Count <= 0) continue;
-
-                var missingFacts = new List<Fact>(rule.Hypotheses);
-                foreach (var hypothesis in rule.Hypotheses)
-                    if (_knownFacts.Contains(hypothesis)) missingFacts.Remove(hypothesis);
-
-                var priority = rule.CertaintyFactor * (1 - (double) missingFacts.Count / rule.Hypotheses.Count);
-
-                if (priority > 0)
-                    incompleteFacts.Add(
-                        new Tuple<double, IReadOnlyCollection<Fact>, IReadOnlyCollection<Fact>>(priority,
-                            missingFacts, resultFacts));
-            }
-
-            if (incompleteFacts.Count == 0) return null;
-
-            return incompleteFacts
-                .OrderByDescending(r => r.Item1)
-                .ToList();
-        }
-
-        public bool AddFactToKnown(Fact fact)
-        {
-            Check.NotNull(fact, nameof(fact));
-
-            if (_knownFacts.Any(f => f.Equals(fact)))
-                return false;
-
-            _knownFacts.Add(fact);
-            return true;
-        }
-
-        public int AddFactsToKnown(IReadOnlyCollection<Fact> facts)
-        {
-            Check.NotEmpty(facts, nameof(facts));
-
-            var count = 0;
-            foreach (var fact in facts)
-            {
-                var added = AddFactToKnown(fact);
-                if (added) count++;
-            }
-
-            return count;
+            var desireFacts = GetDesireFactsInKnown(request);
+            return desireFacts;
         }
 
         [CanBeNull]
-        private IReadOnlyCollection<Fact> GetRequestFactsInKnown([NotNull] Request request)
+        private IReadOnlyCollection<Fact> InferBackwardChaining([NotNull] Request request)
         {
             Check.NotNull(request, nameof(request));
 
-            var factName = request.RequestType == RequestType.IndividualFact
-                ? request.FactName
-                : '"' + request.FactName + '"';
+            var logicRules = GetLogicRulesForRequest(request);
 
-            var requestFacts = _knownFacts
-                .Where(f => f.Name == factName)
-                .ToList();
+            foreach (var rule in logicRules)
+            {
+                var allHypothesesInKnown = true;
+                foreach (var hypothesis in rule.Hypotheses)
+                    if (!Backtrack(hypothesis, 0))
+                    {
+                        allHypothesesInKnown = false;
+                        break;
+                    }
+                if (allHypothesesInKnown)
+                    AddFactsToKnown(rule.Conclusions.ToArray());
+            }
 
-            return requestFacts.Count == 0 ? null : requestFacts;
+            var desireFacts = GetDesireFactsInKnown(request);
+            return desireFacts;
+        }
+
+        private bool Backtrack([NotNull] Fact goal, int level)
+        {
+            if (IsFactInKnown(goal)) return true;
+
+            var inferableRules = new List<LogicRule>();
+            foreach (var rule in _ruleManager.LogicRules)
+                if (rule.Conclusions.Any(c => c.Equals(goal)))
+                    inferableRules.Add(rule);
+            inferableRules = inferableRules.OrderBy(r => CountFactsInKnown(r.Hypotheses)).ToList();
+
+            foreach (var rule in inferableRules)
+            {
+                var allHypothesesInKnown = true;
+                foreach (var hypothesis in rule.Hypotheses)
+                    if (!Backtrack(hypothesis, level + 1))
+                    {
+                        allHypothesesInKnown = false;
+                        break;
+                    }
+
+                if (allHypothesesInKnown)
+                {
+                    AddFactsToKnown(goal);
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        [NotNull]
+        private IReadOnlyCollection<LogicRule> GetLogicRulesForRequest([NotNull] Request request)
+        {
+            Check.NotNull(request, nameof(request));
+
+            var rules = new List<LogicRule>();
+
+            foreach (var rule in _ruleManager.LogicRules)
+                if (rule.Problems != null && rule.Problems.Contains(request.Problem))
+                    rules.Add(rule);
+
+            return rules.AsReadOnly();
+        }
+
+        [CanBeNull]
+        private IReadOnlyCollection<Fact> GetDesireFactsInKnown([NotNull] Request request)
+        {
+            Check.NotNull(request, nameof(request));
+
+            //var desireFacts = _knownFacts
+            //    .Where(f => request.Problem.DesireTypes.Contains(f.Name))
+            //    .ToList();
+
+            var desireFacts = new List<Fact>();
+
+            foreach (var fact in _knownFacts)
+            foreach (var desireType in request.Problem.DesireTypes)
+                if (_ruleManager.CanFactCaptureClass(fact, desireType))
+                {
+                    desireFacts.Add(fact);
+                    break;
+                }
+
+            return desireFacts.Count == 0 ? null : desireFacts;
         }
 
         private bool IsFactInKnown([NotNull] Fact fact)
@@ -154,11 +232,11 @@ namespace RiceDoctor.InferenceEngine
             return _knownFacts.Any(f => f.Equals(fact));
         }
 
-        private bool AreFactsInKnown([NotNull] IReadOnlyCollection<Fact> facts)
+        private int CountFactsInKnown([NotNull] IReadOnlyCollection<Fact> facts)
         {
             Check.NotEmpty(facts, nameof(facts));
 
-            return facts.All(IsFactInKnown);
+            return facts.Count(IsFactInKnown);
         }
 
         private bool InferLogicRule([NotNull] LogicRule rule)
@@ -167,11 +245,11 @@ namespace RiceDoctor.InferenceEngine
 
             if (_inferredLogicRules.Any(rule.Equals)) return false;
 
-            if (!AreFactsInKnown(rule.Hypotheses)) return false;
+            if (CountFactsInKnown(rule.Hypotheses) != rule.Hypotheses.Count) return false;
 
             _inferredLogicRules.Add(rule);
 
-            return AddFactsToKnown(rule.Conclusions) > 0;
+            return AddFactsToKnown(rule.Conclusions.ToArray()) > 0;
         }
 
         private bool InferIndividualFact([NotNull] IndividualFact individualFact)
@@ -186,15 +264,20 @@ namespace RiceDoctor.InferenceEngine
             var relationValues = _ontologyManager.GetRelationValues(individualFact.Individual);
             if (relationValues != null)
                 foreach (var relationValue in relationValues)
-                foreach (var individual in relationValue.Value)
                 {
-                    var directClass = individual.DirectClass;
-                    if (directClass != null)
-                    {
-                        var newIndividualFact = new IndividualFact(directClass.Id, individual.Id);
+                    if (!_ruleManager.RelationRules.Contains(relationValue.Key.Id))
+                        continue;
 
-                        if (AddFactToKnown(newIndividualFact))
-                            hasNewFacts = true;
+                    foreach (var individual in relationValue.Value)
+                    {
+                        var directClass = individual.DirectClass;
+                        if (directClass != null)
+                        {
+                            var newIndividualFact = new IndividualFact(directClass.Id, individual.Id);
+
+                            if (AddFactsToKnown(newIndividualFact) > 0)
+                                hasNewFacts = true;
+                        }
                     }
                 }
 

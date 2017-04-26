@@ -5,7 +5,7 @@ using RiceDoctor.Shared;
 
 namespace RiceDoctor.RuleManager
 {
-    public class LogicRule : Rule, IEquatable<LogicRule>
+    public class LogicRule : IEquatable<LogicRule>
     {
         public LogicRule([NotNull] IReadOnlyCollection<Fact> hypotheses,
             [NotNull] IReadOnlyCollection<Fact> conclusions,
@@ -18,6 +18,9 @@ namespace RiceDoctor.RuleManager
             Conclusions = conclusions;
             CertaintyFactor = certaintyFactor;
         }
+
+        [CanBeNull]
+        public IReadOnlyCollection<Problem> Problems { get; internal set; }
 
         [NotNull]
         public IReadOnlyCollection<Fact> Hypotheses { get; }
@@ -36,11 +39,25 @@ namespace RiceDoctor.RuleManager
                    && Math.Abs(CertaintyFactor - other.CertaintyFactor) < double.Epsilon;
         }
 
+        public static bool operator ==(LogicRule rule1, LogicRule rule2)
+        {
+            if (ReferenceEquals(rule1, rule2)) return true;
+            if (ReferenceEquals(null, rule1)) return false;
+            if (ReferenceEquals(null, rule2)) return false;
+            return rule1.Equals(rule2);
+        }
+
+        public static bool operator !=(LogicRule rule1, LogicRule rule2)
+        {
+            return !(rule1 == rule2);
+        }
+
         public override bool Equals(object obj)
         {
             if (ReferenceEquals(null, obj)) return false;
             if (ReferenceEquals(this, obj)) return true;
-            return obj.GetType() == GetType() && Equals((LogicRule) obj);
+            if (obj.GetType() != GetType()) return false;
+            return Equals((LogicRule) obj);
         }
 
         public override int GetHashCode()
@@ -50,7 +67,6 @@ namespace RiceDoctor.RuleManager
                 var hashCode = Hypotheses.GetOrderIndependentHashCode();
                 hashCode = (hashCode * 397) ^ Conclusions.GetOrderIndependentHashCode();
                 hashCode = (hashCode * 397) ^ CertaintyFactor.GetHashCode();
-
                 return hashCode;
             }
         }

@@ -10,10 +10,16 @@ namespace RiceDoctor.Tests
     {
         public RuleFixture()
         {
+            var problemPath = Path.Combine(AppContext.BaseDirectory, @"..\..\..\..\Resources\problem-types.json");
+            var problemData = File.ReadAllText(problemPath);
+
             var logicPath = Path.Combine(AppContext.BaseDirectory, @"..\..\..\..\Resources\logic-rules.txt");
             var logicData = File.ReadAllText(logicPath);
 
-            RuleManager = new Manager(logicData);
+            var relationPath = Path.Combine(AppContext.BaseDirectory, @"..\..\..\..\Resources\relation-rules.txt");
+            var relationData = File.ReadAllText(relationPath);
+
+            RuleManager = new Manager(problemData, logicData, relationData);
 
             Assert.NotNull(RuleManager.LogicRules);
         }

@@ -1,0 +1,14 @@
+{
+    "Problems": [
+        {
+            "Type": "TrieuChung -> TacNhanGayBenh",
+            "DesireFactTypes": ["TacNhanGayBenh"],
+            "SuggestFactTypes": ["TrieuChung"]
+        },
+        {
+            "Type": "GiaiDoan -> TacNhanGayBenh",
+            "DesireFactTypes": ["TacNhanGayBenh"],
+            "SuggestFactTypes": ["GiaiDoan"]
+        }
+    ]
+}

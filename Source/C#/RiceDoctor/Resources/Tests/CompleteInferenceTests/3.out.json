@@ -1,31 +1,31 @@
 {
-  "InferredFacts": [
-    {
-      "Type": "ScalarFact",
-      "Name": "Thân",
-      "Value": "Khô"
-    },
-    {
-      "Type": "ScalarFact",
-      "Name": "Rễ",
-      "Value": "Khô"
-    },
-    {
-      "Type": "ScalarFact",
-      "Name": "Hạt",
-      "Value": "Không có"
-    },
-    {
-      "Type": "IndividualFact",
-      "Name": "Benh",
-      "Value": "BenhLemLepHat"
-    }
-  ],
-  "ExpectedFacts": [
-    {
-      "Type": "IndividualFact",
-      "Name": "Benh",
-      "Value": "BenhLemLepHat"
-    }
-  ]
+    "InferredFacts": [
+        {
+            "Type": "ScalarFact",
+            "Name": "Thân",
+            "Value": "Khô"
+        },
+        {
+            "Type": "ScalarFact",
+            "Name": "Rễ",
+            "Value": "Khô"
+        },
+        {
+            "Type": "ScalarFact",
+            "Name": "Hạt",
+            "Value": "Không có"
+        },
+        {
+            "Type": "IndividualFact",
+            "Name": "Benh",
+            "Value": "BenhLemLepHat"
+        }
+    ],
+    "ExpectedFacts": [
+        {
+            "Type": "IndividualFact",
+            "Name": "Benh",
+            "Value": "BenhLemLepHat"
+        }
+    ]
 }
