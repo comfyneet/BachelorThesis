@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using RiceDoctor.InferenceEngine;
+using RiceDoctor.OntologyManager;
 using RiceDoctor.RuleManager;
 using RiceDoctor.Shared;
+using Manager = RiceDoctor.RuleManager.Manager;
+using Request = RiceDoctor.InferenceEngine.Request;
+using RequestType = RiceDoctor.InferenceEngine.RequestType;
 
 namespace RiceDoctor.ConsoleApp
 {
@@ -15,15 +18,15 @@ namespace RiceDoctor.ConsoleApp
             var logger = new ConsoleLogger();
             Logger.OnLog += logger.Log;
 
-            var (engine, problems) = CreateEngine();
+            var (ruleManager, ontologyManager) = CreateEngine();
 
             Console.WriteLine("Cac dang bai toan:");
-            for (var i = 0; i < problems.Count; ++i)
-                Console.WriteLine($"[{i}] {problems[i].Type}");
+            for (var i = 0; i < ruleManager.Problems.Count; ++i)
+                Console.WriteLine($"[{i}] {ruleManager.Problems[i].Type}");
 
             Console.Write("Chon bai toan: ");
             var type = int.Parse(Console.ReadLine());
-            var problem = problems[type];
+            var problem = ruleManager.Problems[type];
 
             Console.Write("Nhap so su kien input: ");
             var inputCount = int.Parse(Console.ReadLine());
@@ -38,7 +41,8 @@ namespace RiceDoctor.ConsoleApp
             }
 
             var request = new Request(problem, RequestType.IndividualFact, facts);
-            var resultFacts = engine.Infer(request);
+            IInferenceEngine engine = new Engine(ruleManager, ontologyManager, request);
+            var resultFacts = engine.Infer();
 
             Console.Write("Ket qua: ");
             if (resultFacts == null)
@@ -58,7 +62,7 @@ namespace RiceDoctor.ConsoleApp
             Console.ReadKey();
         }
 
-        private static (IInferenceEngine, IReadOnlyList<Problem>) CreateEngine()
+        private static (IRuleManager, IOntologyManager) CreateEngine()
         {
             var problemPath = Path.Combine(AppContext.BaseDirectory, @"..\..\..\..\Resources\problem-types.json");
             var problemData = File.ReadAllText(problemPath);
@@ -69,10 +73,10 @@ namespace RiceDoctor.ConsoleApp
             var relationPath = Path.Combine(AppContext.BaseDirectory, @"..\..\..\..\Resources\relation-rules.txt");
             var relationData = File.ReadAllText(relationPath);
 
-            var ruleManager = new Manager(problemData, logicData, relationData);
-            var ontologyManager = OntologyManager.Manager.Instance;
+            IRuleManager ruleManager = new Manager(problemData, logicData, relationData);
+            IOntologyManager ontologyManager = OntologyManager.Manager.Instance;
 
-            return (new Engine(ruleManager, ontologyManager), ruleManager.Problems.ToList());
+            return (ruleManager, ontologyManager);
         }
     }
 }

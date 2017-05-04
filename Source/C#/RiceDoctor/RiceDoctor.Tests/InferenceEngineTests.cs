@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using JetBrains.Annotations;
+using RiceDoctor.InferenceEngine;
 using RiceDoctor.OntologyManager;
 using RiceDoctor.RuleManager;
 using RiceDoctor.Shared;
 using Xunit;
-using IE = RiceDoctor.InferenceEngine;
+using Request = RiceDoctor.InferenceEngine.Request;
+using RequestType = RiceDoctor.InferenceEngine.RequestType;
 
 namespace RiceDoctor.Tests
 {
@@ -96,27 +98,21 @@ namespace RiceDoctor.Tests
         //    }
         //}
 
-        [NotNull]
-        public IE.IInferenceEngine CreateEngine()
-        {
-            return new IE.Engine(_ruleManager, _ontologyManager);
-        }
-
         [Fact]
         public void InferTrue()
         {
-            var mockData = new List<ValueTuple<IE.Request, IList<Fact>>>
+            var mockData = new List<ValueTuple<Request, IList<Fact>>>
             {
-                (new IE.Request(_ruleManager.Problems.First(p => p.Type == "TrieuChung -> TacNhanGayBenh"),
-                    IE.RequestType.IndividualFact, new List<Fact>
+                (new Request(_ruleManager.Problems.First(p => p.Type == "TrieuChung -> TacNhanGayBenh"),
+                    RequestType.IndividualFact, new List<Fact>
                     {
                         new IndividualFact("MauLa", "Test_LaVang"),
                         new IndividualFact("HinhDangThan", "Test_ThanLun")
                     }),
                 new List<Fact> {new IndividualFact("Benh", "Test_BenhVangLa")}),
 
-                (new IE.Request(_ruleManager.Problems.First(p => p.Type == "TrieuChung -> TacNhanGayBenh"),
-                    IE.RequestType.IndividualFact, new List<Fact>
+                (new Request(_ruleManager.Problems.First(p => p.Type == "TrieuChung -> TacNhanGayBenh"),
+                    RequestType.IndividualFact, new List<Fact>
                     {
                         new IndividualFact("MauLa", "Test_LaVang"),
                         new IndividualFact("HinhDangThan", "Test_ThanUn")
@@ -126,17 +122,17 @@ namespace RiceDoctor.Tests
 
             foreach (var data in mockData)
             {
-                var engine = CreateEngine();
-                var actualResultFacts = engine.Infer(data.Item1);
+                IInferenceEngine engine = new Engine(_ruleManager, _ontologyManager, data.Item1);
+                var actualResultFacts = engine.Infer();
                 Assert.True(data.Item2.ScrambledEqual(actualResultFacts));
             }
         }
-        //        expectedIncompleteFacts)
-        //    [CanBeNull] IReadOnlyList<Tuple<double, IReadOnlyCollection<Fact>, IReadOnlyCollection<Fact>>>
-        //public void InferFalse([NotNull] IE.Request request,
-        //[MemberData(nameof(MockFalseData))]
 
         //[Theory]
+        //[MemberData(nameof(MockFalseData))]
+        //public void InferFalse([NotNull] IE.Request request,
+        //    [CanBeNull] IReadOnlyList<Tuple<double, IReadOnlyCollection<Fact>, IReadOnlyCollection<Fact>>>
+        //        expectedIncompleteFacts)
         //{
         //    Check.NotNull(request, nameof(request));
 

@@ -13,9 +13,6 @@ namespace RiceDoctor.Tests
 
         public Fact ToOntologyFact()
         {
-            if (Type == TestFactType.ScalarFact)
-                return new ScalarFact(Name, Value);
-
             if (Type == TestFactType.IndividualFact)
                 return new IndividualFact(Name, Value);
 

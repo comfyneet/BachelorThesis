@@ -10,10 +10,10 @@ namespace RiceDoctor.InferenceEngine
         int AddFactsToKnown([NotNull] params Fact[] facts);
 
         [CanBeNull]
-        IReadOnlyCollection<Fact> Infer([NotNull] Request request);
+        IReadOnlyCollection<Fact> Infer();
 
         [CanBeNull]
-        IReadOnlyCollection<ValueTuple<double, IReadOnlyCollection<Fact>, IReadOnlyCollection<Fact>>> GetIncompleteFacts(
-            [NotNull] Request request);
+        IReadOnlyCollection<ValueTuple<double, IReadOnlyCollection<Fact>, IReadOnlyCollection<Fact>>>
+            GetIncompleteFacts();
     }
 }

@@ -17,7 +17,9 @@ namespace RiceDoctor.RuleManager
             Check.NotEmpty(logicData, nameof(logicData));
             Check.NotEmpty(relationData, nameof(relationData));
 
-            (Problems, LogicRules) = MakeLogicRules(problemData, logicData);
+            Problems = JsonTemplates.JsonRoot.Deserialize(problemData, _ontologyManager);
+
+            LogicRules = MakeLogicRules(logicData);
 
             RelationRules = relationData
                 .Split(new[] {"\r\n", "\n"}, StringSplitOptions.None)
@@ -26,7 +28,7 @@ namespace RiceDoctor.RuleManager
                 .AsReadOnly();
         }
 
-        public IReadOnlyCollection<Problem> Problems { get; }
+        public IReadOnlyList<Problem> Problems { get; }
 
         public IReadOnlyCollection<LogicRule> LogicRules { get; }
 
@@ -46,18 +48,16 @@ namespace RiceDoctor.RuleManager
             return false;
         }
 
-        private (IReadOnlyCollection<Problem>, IReadOnlyCollection<LogicRule>) MakeLogicRules(string problemData,
-            string logicData)
+        private IReadOnlyCollection<LogicRule> MakeLogicRules(string logicData)
         {
             var lexer = new LogicLexer(logicData);
             var parser = new LogicParser(lexer);
-            var rules = parser.Parse();
-            var problems = JsonTemplates.JsonProblemRoot.Deserialize(problemData, _ontologyManager);
+            var rules = parser.Parse().ToList();
 
             foreach (var rule in rules)
             {
                 List<Problem> tmpProblems = null;
-                foreach (var problem in problems)
+                foreach (var problem in Problems)
                     if (CanRuleHaveProblem(rule, problem))
                     {
                         if (tmpProblems == null) tmpProblems = new List<Problem>();
@@ -66,19 +66,19 @@ namespace RiceDoctor.RuleManager
                 rule.Problems = tmpProblems;
             }
 
-            return (problems, rules);
+            return rules.AsReadOnly();
         }
 
         private bool CanRuleHaveProblem(LogicRule rule, Problem problem)
         {
-            var hasDesireType = false;
-            foreach (var desireType in problem.DesireTypes)
+            var hasGoalType = false;
+            foreach (var goalType in problem.GoalTypes)
             {
-                hasDesireType = rule.Conclusions.Any(fact => CanFactCaptureClass(fact, desireType));
-                if (hasDesireType) break;
+                hasGoalType = rule.Conclusions.Any(fact => CanFactCaptureClass(fact, goalType));
+                if (hasGoalType) break;
             }
 
-            if (!hasDesireType) return false;
+            if (!hasGoalType) return false;
 
             var hasSuggestType = false;
             foreach (var suggestType in problem.SuggestTypes)
@@ -95,45 +95,44 @@ namespace RiceDoctor.RuleManager
             public class JsonProblem
             {
                 public string Type { get; set; }
-                public List<string> DesireFactTypes { get; set; }
-                public List<string> SuggestFactTypes { get; set; }
+                public List<string> GoalTypes { get; set; }
+                public List<string> SuggestTypes { get; set; }
             }
 
-            public class JsonProblemRoot
+            public class JsonRoot
             {
                 public List<JsonProblem> Problems { get; set; }
 
                 [NotNull]
-                public static IReadOnlyCollection<Problem> Deserialize([NotNull] string jsonProblems,
+                public static IReadOnlyList<Problem> Deserialize(
+                    [NotNull] string json,
                     [NotNull] IOntologyManager ontologyManager)
                 {
-                    Check.NotEmpty(jsonProblems, nameof(jsonProblems));
+                    Check.NotEmpty(json, nameof(json));
                     Check.NotNull(ontologyManager, nameof(ontologyManager));
 
-                    var templateProblems = JsonConvert.Deserialize<JsonProblemRoot>(jsonProblems);
+                    var templateProblems = JsonConvert.Deserialize<JsonRoot>(json);
 
                     var problems = new List<Problem>();
                     var allTypes = new Dictionary<string, Class>();
                     foreach (var templateProblem in templateProblems.Problems)
                     {
-                        var desireTypes = new List<Class>();
-                        foreach (var templateDesireType in templateProblem.DesireFactTypes)
+                        var goalTypes = new List<Class>();
+                        foreach (var templateGoalType in templateProblem.GoalTypes)
                         {
-                            Class desireType;
-                            if (!allTypes.TryGetValue(templateDesireType, out desireType))
+                            if (!allTypes.TryGetValue(templateGoalType, out Class goalType))
                             {
-                                desireType = ontologyManager.GetClass(templateDesireType);
-                                if (desireType == null) throw new ArgumentException("Type doesn't exist.");
-                                allTypes.Add(templateDesireType, desireType);
+                                goalType = ontologyManager.GetClass(templateGoalType);
+                                if (goalType == null) throw new ArgumentException("Type doesn't exist.");
+                                allTypes.Add(templateGoalType, goalType);
                             }
-                            desireTypes.Add(desireType);
+                            goalTypes.Add(goalType);
                         }
 
                         var suggestTypes = new List<Class>();
-                        foreach (var templateSuggestType in templateProblem.SuggestFactTypes)
+                        foreach (var templateSuggestType in templateProblem.SuggestTypes)
                         {
-                            Class suggestType;
-                            if (!allTypes.TryGetValue(templateSuggestType, out suggestType))
+                            if (!allTypes.TryGetValue(templateSuggestType, out Class suggestType))
                             {
                                 suggestType = ontologyManager.GetClass(templateSuggestType);
                                 if (suggestType == null) throw new ArgumentException("Type doesn't exist.");
@@ -142,7 +141,7 @@ namespace RiceDoctor.RuleManager
                             suggestTypes.Add(suggestType);
                         }
 
-                        problems.Add(new Problem(templateProblem.Type, desireTypes, suggestTypes));
+                        problems.Add(new Problem(templateProblem.Type, goalTypes, suggestTypes));
                     }
 
                     return problems.AsReadOnly();

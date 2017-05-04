@@ -74,11 +74,32 @@ namespace RiceDoctor.RuleManager
                 .Select(h => new LogicRule(h, conclusions, certaintyFactor))
                 .ToList();
 
-            return logicRules;
+            for (var i = 0; i < logicRules.Count;)
+            {
+                var tmpConclusions = new List<Fact>(logicRules[i].Conclusions);
+
+                for (var j = 0; j < logicRules[i].Hypotheses.Count;)
+                    if (tmpConclusions.Contains(logicRules[i].Hypotheses[j]))
+                        tmpConclusions.Remove(logicRules[i].Hypotheses[j]);
+                    else ++j;
+
+                if (tmpConclusions.Count == 0)
+                {
+                    logicRules.RemoveAt(i);
+                }
+                else
+                {
+                    logicRules[i].Conclusions = tmpConclusions.AsReadOnly();
+
+                    ++i;
+                }
+            }
+
+            return logicRules.Distinct().ToList().AsReadOnly();
         }
 
         [NotNull]
-        private IReadOnlyCollection<IReadOnlyCollection<Fact>> ParseHypothese()
+        private IReadOnlyList<IReadOnlyList<Fact>> ParseHypothese()
         {
             var hypothesisTable = new SymbolTable<Fact>();
             var hypothesisExpr = ParseExpr(hypothesisTable);
@@ -86,7 +107,7 @@ namespace RiceDoctor.RuleManager
             var implicantId = 0;
             var implicants = new List<Implicant<int>>();
 
-            var subsets = GetSubsets(hypothesisTable.Symbols.ToList());
+            var subsets = GetSubsets(hypothesisTable.Symbols);
             foreach (var subset in subsets)
             {
                 var context = new RuntimeContext<Fact>(hypothesisTable);
@@ -113,13 +134,14 @@ namespace RiceDoctor.RuleManager
                     minimizedImplicant => hypothesisTable.Symbols
                         .Where((symbol, i) => minimizedImplicant.Values[i] == true)
                         .ToList())
-                .ToList();
+                .ToList()
+                .AsReadOnly();
 
             return hypotheses;
         }
 
         [NotNull]
-        private IReadOnlyCollection<Fact> ParseConclusions()
+        private IReadOnlyList<Fact> ParseConclusions()
         {
             var conclusionTable = new SymbolTable<Fact>();
 

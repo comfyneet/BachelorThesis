@@ -1,5 +1,9 @@
-﻿HinhDangThan=Test_ThanUn -> HinhDangThan=Test_ThanLun
-MauLa=Test_LaVang & HinhDangThan=Test_ThanLun -> Benh=Test_BenhVangLa
+﻿Dat=Test_DuplicateHypothesis & Dat=Test_DuplicateHypothesis -> Dat=Test_Conclusion {0.1e-10}
+Dat=Test_Hypothesis -> Dat=Test_DuplicateConclusion & Dat=Test_DuplicateConclusion {0.1e-10}
+Dat=Test_Duplicate & Dat=Test_Hypothesis -> Dat=Test_Duplicate & Dat=Test_Conclusion {0.1e-10}
+Dat=Test_Duplicate -> Dat=Test_Duplicate {0.1e-10}
+HinhDangThan=Test_ThanUn -> HinhDangThan=Test_ThanLun {0.1e-10}
+MauLa=Test_LaVang & HinhDangThan=Test_ThanLun -> Benh=Test_BenhVangLa {0.1e-10}
 MauLa=LaVang & HinhDangThan=ThanUn -> Benh=BenhVangLa {1.0e+0}
 GiaiDoan=GiaiDoanGieo | GiaiDoan=GiaiDoanMa | GiaiDoan=GiaiDoanDeNhanh -> Oc=OcBuuVang & Oc=OcBoTri
 HinhDangThan=ThanLun & (MauLa=LaVang | HinhDangLa=LaUa) -> HienTuong=HienTuongThieuDam

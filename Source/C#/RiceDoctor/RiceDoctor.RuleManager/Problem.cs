@@ -9,15 +9,15 @@ namespace RiceDoctor.RuleManager
     public class Problem : IEquatable<Problem>
     {
         public Problem([NotNull] string type,
-            [NotNull] IReadOnlyCollection<Class> desireTypes,
+            [NotNull] IReadOnlyCollection<Class> goalTypes,
             [NotNull] IReadOnlyCollection<Class> suggestTypes)
         {
             Check.NotEmpty(type, nameof(type));
-            Check.NotEmpty(desireTypes, nameof(desireTypes));
+            Check.NotEmpty(goalTypes, nameof(goalTypes));
             Check.NotEmpty(suggestTypes, nameof(suggestTypes));
 
             Type = type;
-            DesireTypes = desireTypes;
+            GoalTypes = goalTypes;
             SuggestTypes = suggestTypes;
         }
 
@@ -25,7 +25,7 @@ namespace RiceDoctor.RuleManager
         public string Type { get; }
 
         [NotNull]
-        public IReadOnlyCollection<Class> DesireTypes { get; }
+        public IReadOnlyCollection<Class> GoalTypes { get; }
 
         [NotNull]
         public IReadOnlyCollection<Class> SuggestTypes { get; }

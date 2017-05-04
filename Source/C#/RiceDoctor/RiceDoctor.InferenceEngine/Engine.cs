@@ -10,54 +10,55 @@ namespace RiceDoctor.InferenceEngine
 {
     public class Engine : IInferenceEngine
     {
-        [NotNull] private readonly IList<IndividualFact> _inferredIndividualFacts;
+        [NotNull] private readonly IDictionary<Fact, bool> _guessableFacts;
+        [NotNull] private readonly IList<LogicRule> _inferableRules;
         [NotNull] private readonly IList<LogicRule> _inferredLogicRules;
+        [NotNull] private readonly IList<IndividualFact> _inferredRelationalFacts;
         [NotNull] private readonly ISet<Fact> _knownFacts;
         [NotNull] private readonly IOntologyManager _ontologyManager;
+        [NotNull] private readonly Request _request;
         [NotNull] private readonly IRuleManager _ruleManager;
 
-        public Engine([NotNull] IRuleManager ruleManager, [NotNull] IOntologyManager ontologyManager)
+        public Engine(
+            [NotNull] IRuleManager ruleManager,
+            [NotNull] IOntologyManager ontologyManager,
+            [NotNull] Request request)
         {
             Check.NotNull(ruleManager, nameof(ruleManager));
             Check.NotNull(ontologyManager, nameof(ontologyManager));
+            Check.NotNull(request, nameof(request));
 
             _ruleManager = ruleManager;
             _ontologyManager = ontologyManager;
-            _inferredLogicRules = new List<LogicRule>();
-            _inferredIndividualFacts = new List<IndividualFact>();
-            _knownFacts = new HashSet<Fact>();
-        }
+            _request = request;
 
-        public IReadOnlyCollection<Fact> Infer(Request request)
-        {
-            Check.NotNull(request, nameof(request));
+            _inferableRules = SortInferableRulesForRequest();
+            _inferredLogicRules = new List<LogicRule>();
+            _inferredRelationalFacts = new List<IndividualFact>();
+            _knownFacts = new HashSet<Fact>();
 
             if (request.KnownFacts != null)
                 AddFactsToKnown(request.KnownFacts.ToArray());
+        }
 
-            //_inferredLogicRules.Clear();
-
-            var forwardChainingResults = InferForwardChaining(request);
-            return forwardChainingResults ?? InferBackwardChaining(request);
+        public IReadOnlyCollection<Fact> Infer()
+        {
+            var forwardChainingResults = InferForwardChaining();
+            return forwardChainingResults ?? InferBackwardChaining();
         }
 
         public IReadOnlyCollection<ValueTuple<double, IReadOnlyCollection<Fact>, IReadOnlyCollection<Fact>>>
-            GetIncompleteFacts(Request request)
+            GetIncompleteFacts()
         {
-            Check.NotNull(request, nameof(request));
-
-            if (request.KnownFacts != null)
-                AddFactsToKnown(request.KnownFacts.ToArray());
-
-            var logicRules = GetLogicRulesForRequest(request);
+            var logicRules = SortInferableRulesForRequest();
 
             var incompleteFacts = new List<ValueTuple<double, IReadOnlyCollection<Fact>, IReadOnlyCollection<Fact>>>();
             foreach (var rule in logicRules)
             {
                 var resultFacts = new List<Fact>();
                 foreach (var conclusion in rule.Conclusions)
-                foreach (var desireType in request.Problem.DesireTypes)
-                    if (_ruleManager.CanFactCaptureClass(conclusion, desireType))
+                foreach (var goalType in _request.Problem.GoalTypes)
+                    if (_ruleManager.CanFactCaptureClass(conclusion, goalType))
                     {
                         resultFacts.Add(conclusion);
                         break;
@@ -102,17 +103,13 @@ namespace RiceDoctor.InferenceEngine
         }
 
         [CanBeNull]
-        private IReadOnlyCollection<Fact> InferForwardChaining([NotNull] Request request)
+        private IReadOnlyCollection<Fact> InferForwardChaining()
         {
-            Check.NotNull(request, nameof(request));
-
-            var logicRules = GetLogicRulesForRequest(request);
-
             while (true)
             {
                 var hasNewFacts = false;
 
-                foreach (var rule in logicRules)
+                foreach (var rule in _inferableRules)
                 {
                     hasNewFacts = InferLogicRule(rule);
                     if (hasNewFacts) break;
@@ -131,16 +128,14 @@ namespace RiceDoctor.InferenceEngine
                 break;
             }
 
-            var desireFacts = GetDesireFactsInKnown(request);
-            return desireFacts;
+            var goalFacts = GetGoalFactsInKnown();
+            return goalFacts;
         }
 
         [CanBeNull]
-        private IReadOnlyCollection<Fact> InferBackwardChaining([NotNull] Request request)
+        private IReadOnlyCollection<Fact> InferBackwardChaining()
         {
-            Check.NotNull(request, nameof(request));
-
-            var logicRules = GetLogicRulesForRequest(request);
+            var logicRules = SortInferableRulesForRequest();
 
             foreach (var rule in logicRules)
             {
@@ -155,8 +150,8 @@ namespace RiceDoctor.InferenceEngine
                     AddFactsToKnown(rule.Conclusions.ToArray());
             }
 
-            var desireFacts = GetDesireFactsInKnown(request);
-            return desireFacts;
+            var goalFacts = GetGoalFactsInKnown();
+            return goalFacts;
         }
 
         private bool Backtrack([NotNull] Fact goal, int level)
@@ -190,39 +185,37 @@ namespace RiceDoctor.InferenceEngine
         }
 
         [NotNull]
-        private IReadOnlyCollection<LogicRule> GetLogicRulesForRequest([NotNull] Request request)
+        private IList<LogicRule> SortInferableRulesForRequest()
         {
-            Check.NotNull(request, nameof(request));
+            throw new NotImplementedException();
 
             var rules = new List<LogicRule>();
 
             foreach (var rule in _ruleManager.LogicRules)
-                if (rule.Problems != null && rule.Problems.Contains(request.Problem))
+                if (rule.Problems != null && rule.Problems.Contains(_request.Problem))
                     rules.Add(rule);
 
-            return rules.AsReadOnly();
+            return rules;
         }
 
         [CanBeNull]
-        private IReadOnlyCollection<Fact> GetDesireFactsInKnown([NotNull] Request request)
+        private IReadOnlyCollection<Fact> GetGoalFactsInKnown()
         {
-            Check.NotNull(request, nameof(request));
-
             //var desireFacts = _knownFacts
             //    .Where(f => request.Problem.DesireTypes.Contains(f.Name))
             //    .ToList();
 
-            var desireFacts = new List<Fact>();
+            var goalFacts = new List<Fact>();
 
             foreach (var fact in _knownFacts)
-            foreach (var desireType in request.Problem.DesireTypes)
-                if (_ruleManager.CanFactCaptureClass(fact, desireType))
+            foreach (var goalType in _request.Problem.GoalTypes)
+                if (_ruleManager.CanFactCaptureClass(fact, goalType))
                 {
-                    desireFacts.Add(fact);
+                    goalFacts.Add(fact);
                     break;
                 }
 
-            return desireFacts.Count == 0 ? null : desireFacts;
+            return goalFacts.Count == 0 ? null : goalFacts;
         }
 
         private bool IsFactInKnown([NotNull] Fact fact)
@@ -256,9 +249,9 @@ namespace RiceDoctor.InferenceEngine
         {
             Check.NotNull(individualFact, nameof(individualFact));
 
-            if (_inferredIndividualFacts.Any(individualFact.Equals)) return false;
+            if (_inferredRelationalFacts.Any(individualFact.Equals)) return false;
 
-            _inferredIndividualFacts.Add(individualFact);
+            _inferredRelationalFacts.Add(individualFact);
 
             var hasNewFacts = false;
             var relationValues = _ontologyManager.GetRelationValues(individualFact.Individual);

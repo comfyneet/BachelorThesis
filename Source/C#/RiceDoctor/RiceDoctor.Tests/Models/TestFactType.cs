@@ -8,7 +8,6 @@ namespace RiceDoctor.Tests
     [JsonConverter(typeof(StringEnumConverter))]
     public enum TestFactType
     {
-        ScalarFact,
         IndividualFact,
         FuzzyFact
     }
@@ -19,8 +18,6 @@ namespace RiceDoctor.Tests
         {
             switch (testFactType)
             {
-                case TestFactType.ScalarFact:
-                    return RequestType.ScalarFact;
                 case TestFactType.IndividualFact:
                     return RequestType.IndividualFact;
                 default:

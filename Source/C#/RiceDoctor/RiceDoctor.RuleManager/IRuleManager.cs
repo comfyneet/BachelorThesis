@@ -7,7 +7,7 @@ namespace RiceDoctor.RuleManager
     public interface IRuleManager
     {
         [NotNull]
-        IReadOnlyCollection<Problem> Problems { get; }
+        IReadOnlyList<Problem> Problems { get; }
 
         [NotNull]
         IReadOnlyCollection<LogicRule> LogicRules { get; }

@@ -7,8 +7,9 @@ namespace RiceDoctor.RuleManager
 {
     public class LogicRule : IEquatable<LogicRule>
     {
-        public LogicRule([NotNull] IReadOnlyCollection<Fact> hypotheses,
-            [NotNull] IReadOnlyCollection<Fact> conclusions,
+        public LogicRule(
+            [NotNull] IReadOnlyList<Fact> hypotheses,
+            [NotNull] IReadOnlyList<Fact> conclusions,
             double certaintyFactor)
         {
             Check.NotEmpty(hypotheses, nameof(hypotheses));
@@ -23,10 +24,10 @@ namespace RiceDoctor.RuleManager
         public IReadOnlyCollection<Problem> Problems { get; internal set; }
 
         [NotNull]
-        public IReadOnlyCollection<Fact> Hypotheses { get; }
+        public IReadOnlyList<Fact> Hypotheses { get; internal set; }
 
         [NotNull]
-        public IReadOnlyCollection<Fact> Conclusions { get; }
+        public IReadOnlyList<Fact> Conclusions { get; internal set; }
 
         public double CertaintyFactor { get; }
 
