@@ -6,7 +6,7 @@ using static RiceDoctor.OntologyManager.GetType;
 
 namespace RiceDoctor.OntologyManager
 {
-    public class Class : Entity<Class>
+    public class Class : Entity<Class>, IEquatable<Class>
     {
         [CanBeNull] private IReadOnlyCollection<Individual> _allIndividuals;
         [CanBeNull] private IReadOnlyCollection<Class> _allSubClasses;
@@ -229,6 +229,39 @@ namespace RiceDoctor.OntologyManager
                 _allIndividuals = value;
                 _canGetAllIndividuals = true;
             }
+        }
+
+        public bool Equals(Class other)
+        {
+            if (ReferenceEquals(null, other)) return false;
+            if (ReferenceEquals(this, other)) return true;
+            return base.Equals(other);
+        }
+
+        public static bool operator ==(Class class1, Class class2)
+        {
+            if (ReferenceEquals(class1, class2)) return true;
+            if (ReferenceEquals(null, class1)) return false;
+            if (ReferenceEquals(null, class2)) return false;
+            return class1.Equals(class2);
+        }
+
+        public static bool operator !=(Class class1, Class class2)
+        {
+            return !(class1 == class2);
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj)) return false;
+            if (ReferenceEquals(this, obj)) return true;
+            if (obj.GetType() != GetType()) return false;
+            return Equals((Class) obj);
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
         }
     }
 }

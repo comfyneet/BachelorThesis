@@ -13,7 +13,7 @@ namespace RiceDoctor.RuleManager
         IReadOnlyCollection<LogicRule> LogicRules { get; }
 
         [NotNull]
-        IReadOnlyCollection<string> RelationRules { get; }
+        IReadOnlyCollection<Relation> RelationRules { get; }
 
         bool CanFactCaptureClass([NotNull] Fact fact, [NotNull] Class type);
     }

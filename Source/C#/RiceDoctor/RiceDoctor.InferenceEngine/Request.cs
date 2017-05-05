@@ -18,10 +18,9 @@ namespace RiceDoctor.InferenceEngine
         public Request(
             [NotNull] Problem problem,
             RequestType requestType,
-            [NotNull] IReadOnlyCollection<Fact> knownFacts)
+            [CanBeNull] IReadOnlyCollection<Fact> knownFacts)
         {
             Check.NotNull(problem, nameof(problem));
-            Check.NotEmpty(knownFacts, nameof(knownFacts));
 
             Problem = problem;
             RequestType = requestType;

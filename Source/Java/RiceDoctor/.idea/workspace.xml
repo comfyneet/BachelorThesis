@@ -23,18 +23,8 @@
       <file leaf-file-name="RequestType.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/vn/edu/uit/server/RequestType.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="901">
-              <caret line="53" column="43" lean-forward="false" selection-start-line="53" selection-start-column="43" selection-end-line="53" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Server.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/vn/edu/uit/server/Server.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="55" column="48" lean-forward="false" selection-start-line="55" selection-start-column="48" selection-end-line="55" selection-end-column="48" />
+            <state relative-caret-position="305">
+              <caret line="33" column="25" lean-forward="false" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -43,21 +33,27 @@
       <file leaf-file-name="OntologyManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/vn/edu/uit/ontologymanager/OntologyManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="574" column="49" lean-forward="true" selection-start-line="574" selection-start-column="49" selection-end-line="574" selection-end-column="49" />
+            <state relative-caret-position="202">
+              <caret line="1055" column="13" lean-forward="true" selection-start-line="1055" selection-start-column="13" selection-end-line="1055" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#parseClass#0;class#OntologyManager#0" expanded="false" />
                 <element signature="method#parseSuperClasses#0;class#OntologyManager#0" expanded="false" />
                 <element signature="method#parseSubClasses#0;class#OntologyManager#0" expanded="false" />
+                <element signature="method#parseDomainRelations#0;class#OntologyManager#0" expanded="false" />
+                <element signature="method#parseRangeRelations#0;class#OntologyManager#0" expanded="false" />
+                <element signature="method#parseClassIndividuals#0;class#OntologyManager#0" expanded="false" />
                 <element signature="method#parseRelation#0;class#OntologyManager#0" expanded="false" />
                 <element signature="method#parseRelations#0;class#OntologyManager#0" expanded="false" />
+                <element signature="method#parseRelationDomains#0;class#OntologyManager#0" expanded="false" />
                 <element signature="method#parseAttribute#0;class#OntologyManager#0" expanded="false" />
                 <element signature="method#parseAttributes#0;class#OntologyManager#0" expanded="false" />
+                <element signature="method#parseAttributeDomains#0;class#OntologyManager#0" expanded="false" />
+                <element signature="method#parseIndividual#0;class#OntologyManager#0" expanded="false" />
                 <element signature="method#parseIndividuals#0;class#OntologyManager#0" expanded="false" />
+                <element signature="method#parseIndividualClasses#0;class#OntologyManager#0" expanded="false" />
                 <element signature="method#parseRelationValues#0;class#OntologyManager#0" expanded="false" />
                 <element signature="method#parseAttributeValues#0;class#OntologyManager#0" expanded="false" />
-                <element signature="method#getSubClasses#0;class#OntologyManager#0" expanded="false" />
                 <element signature="method#getClassAttributes#0;class#OntologyManager#0" expanded="false" />
                 <element signature="method#getClassIndividuals#0;class#OntologyManager#0" expanded="false" />
                 <element signature="method#getRelation#0;class#OntologyManager#0" expanded="false" />
@@ -65,8 +61,8 @@
                 <element signature="method#getRelationRanges#0;class#OntologyManager#0" expanded="false" />
                 <element signature="method#getAttribute#0;class#OntologyManager#0" expanded="false" />
                 <element signature="method#getAttributeDomains#0;class#OntologyManager#0" expanded="false" />
-                <element signature="method#getIndividual#0;class#OntologyManager#0" expanded="false" />
                 <element signature="method#getRelationValues#0;class#OntologyManager#0" expanded="false" />
+                <element signature="method#getAttributeValues#0;class#OntologyManager#0" expanded="false" />
                 <element signature="method#getLabel#0;class#OntologyManager#0" expanded="false" />
                 <element signature="method#getOWLClass#0;class#OntologyManager#0" expanded="false" />
                 <element signature="method#getOWLRelation#0;class#OntologyManager#0" expanded="false" />
@@ -80,7 +76,7 @@
       <file leaf-file-name="Individual.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/vn/edu/uit/ontologymanager/model/Individual.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
+            <state relative-caret-position="17">
               <caret line="34" column="40" lean-forward="false" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
               <folding />
             </state>
@@ -90,7 +86,7 @@
       <file leaf-file-name="Relation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/vn/edu/uit/ontologymanager/model/Relation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
+            <state relative-caret-position="17">
               <caret line="40" column="32" lean-forward="false" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
               <folding />
             </state>
@@ -120,16 +116,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>assert</find>
-      <find>data</find>
-      <find>&gt; 0</find>
-      <find>.getclass</find>
-      <find>.getclasses</find>
-      <find>.size()</find>
-      <find>getrelation</find>
-      <find>getrelation(</find>
-      <find>range</find>
-      <find>fromclass</find>
       <find>dataproperty</find>
       <find>domain</find>
       <find>getsubclasses(</find>
@@ -150,6 +136,16 @@
       <find>\&quot;</find>
       <find>rangerelation</find>
       <find>parseran</find>
+      <find>parseRelationRanges</find>
+      <find>parseRelationValues</find>
+      <find>getRelationValues</find>
+      <find>Relation</find>
+      <find>getRelationValue</find>
+      <find>GetInverseRelation</find>
+      <find>inverse</find>
+      <find>Node</find>
+      <find>Set&lt;</find>
+      <find>.iterator</find>
     </findStrings>
     <replaceStrings>
       <replace>GET_ALL</replace>
@@ -200,8 +196,8 @@
         <option value="$PROJECT_DIR$/src/main/java/vn/edu/uit/server/Response.java" />
         <option value="$PROJECT_DIR$/src/main/java/vn/edu/uit/server/Request.java" />
         <option value="$PROJECT_DIR$/src/main/java/vn/edu/uit/server/Server.java" />
-        <option value="$PROJECT_DIR$/src/main/java/vn/edu/uit/server/RequestType.java" />
         <option value="$PROJECT_DIR$/src/main/java/vn/edu/uit/ontologymanager/model/Individual.java" />
+        <option value="$PROJECT_DIR$/src/main/java/vn/edu/uit/server/RequestType.java" />
         <option value="$PROJECT_DIR$/src/main/java/vn/edu/uit/ontologymanager/OntologyManager.java" />
       </list>
     </option>
@@ -244,8 +240,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="1616" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -317,6 +313,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -329,209 +328,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RiceDoctor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RiceDoctor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RiceDoctor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RiceDoctor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RiceDoctor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RiceDoctor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RiceDoctor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RiceDoctor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shared" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RiceDoctor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RiceDoctor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RiceDoctor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RiceDoctor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ontologymanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RiceDoctor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RiceDoctor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ontologymanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -544,6 +342,18 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Code/BachelorThesis/Source/Java/RiceDoctor/src/main/java/vn/edu/uit/ontologymanager/model/Entity.java&#10;LOGGER.info&#9;null&#9;null" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Application.App">
     <configuration default="false" name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -805,13 +615,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32936078" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3319239" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33159268" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -823,19 +632,19 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32936078" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18802084" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982087" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25687104" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3929504" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24947807" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="92" y="92" width="1736" height="856" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="567" y="346" width="466" height="168" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -844,11 +653,13 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="140" />
+      <option name="time" value="153" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
-        <watch expression="Charset.forName(&quot;UTF-8&quot;).encode(resultMessage)" language="JAVA" />
+        <watch expression="((OWLObjectPropertyNode) owlInverseRelation).entities" language="JAVA" custom="org.semanticweb.owlapi.reasoner.impl.OWLObjectPropertyNode" />
+        <watch expression="owlInverseRelation.getNamedProperty().getIRI().getShortForm()" language="JAVA" />
+        <watch expression="owlInverseRelations" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
@@ -881,14 +692,20 @@
             <element signature="method#parseClass#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#parseSuperClasses#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#parseSubClasses#0;class#OntologyManager#0" expanded="false" />
+            <element signature="method#parseDomainRelations#0;class#OntologyManager#0" expanded="false" />
+            <element signature="method#parseRangeRelations#0;class#OntologyManager#0" expanded="false" />
+            <element signature="method#parseClassIndividuals#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#parseRelation#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#parseRelations#0;class#OntologyManager#0" expanded="false" />
+            <element signature="method#parseRelationDomains#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#parseAttribute#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#parseAttributes#0;class#OntologyManager#0" expanded="false" />
+            <element signature="method#parseAttributeDomains#0;class#OntologyManager#0" expanded="false" />
+            <element signature="method#parseIndividual#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#parseIndividuals#0;class#OntologyManager#0" expanded="false" />
+            <element signature="method#parseIndividualClasses#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#parseRelationValues#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#parseAttributeValues#0;class#OntologyManager#0" expanded="false" />
-            <element signature="method#getSubClasses#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#getClassAttributes#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#getClassIndividuals#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#getRelation#0;class#OntologyManager#0" expanded="false" />
@@ -896,8 +713,8 @@
             <element signature="method#getRelationRanges#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#getAttribute#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#getAttributeDomains#0;class#OntologyManager#0" expanded="false" />
-            <element signature="method#getIndividual#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#getRelationValues#0;class#OntologyManager#0" expanded="false" />
+            <element signature="method#getAttributeValues#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#getLabel#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#getOWLClass#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#getOWLRelation#0;class#OntologyManager#0" expanded="false" />
@@ -950,14 +767,20 @@
             <element signature="method#parseClass#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#parseSuperClasses#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#parseSubClasses#0;class#OntologyManager#0" expanded="false" />
+            <element signature="method#parseDomainRelations#0;class#OntologyManager#0" expanded="false" />
+            <element signature="method#parseRangeRelations#0;class#OntologyManager#0" expanded="false" />
+            <element signature="method#parseClassIndividuals#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#parseRelation#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#parseRelations#0;class#OntologyManager#0" expanded="false" />
+            <element signature="method#parseRelationDomains#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#parseAttribute#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#parseAttributes#0;class#OntologyManager#0" expanded="false" />
+            <element signature="method#parseAttributeDomains#0;class#OntologyManager#0" expanded="false" />
+            <element signature="method#parseIndividual#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#parseIndividuals#0;class#OntologyManager#0" expanded="false" />
+            <element signature="method#parseIndividualClasses#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#parseRelationValues#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#parseAttributeValues#0;class#OntologyManager#0" expanded="false" />
-            <element signature="method#getSubClasses#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#getClassAttributes#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#getClassIndividuals#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#getRelation#0;class#OntologyManager#0" expanded="false" />
@@ -965,8 +788,8 @@
             <element signature="method#getRelationRanges#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#getAttribute#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#getAttributeDomains#0;class#OntologyManager#0" expanded="false" />
-            <element signature="method#getIndividual#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#getRelationValues#0;class#OntologyManager#0" expanded="false" />
+            <element signature="method#getAttributeValues#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#getLabel#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#getOWLClass#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#getOWLRelation#0;class#OntologyManager#0" expanded="false" />
@@ -1021,13 +844,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/App.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/net/sourceforge/owlapi/org.semanticweb.hermit/1.3.8.500/org.semanticweb.hermit-1.3.8.500.jar!/org/semanticweb/HermiT/Reasoner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="165" column="45" lean-forward="true" selection-start-line="165" selection-start-column="45" selection-end-line="165" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/net/sourceforge/owlapi/org.semanticweb.hermit/1.3.8.500/org.semanticweb.hermit-1.3.8.500.jar!/org/semanticweb/HermiT/Reasoner.class" />
     <entry file="file://$PROJECT_DIR$/src/main/java/vn/edu/uit/ontologymanager/type/Class.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/vn/edu/uit/ontologymanager/type/NamedObject.java" />
     <entry file="file://$PROJECT_DIR$/RiceDoctor.iml">
@@ -1044,13 +861,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/net/sourceforge/owlapi/org.semanticweb.hermit/1.3.8.500/org.semanticweb.hermit-1.3.8.500.jar!/org/semanticweb/HermiT/structural/OWLClausification.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="133" column="0" lean-forward="false" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/net/sourceforge/owlapi/org.semanticweb.hermit/1.3.8.500/org.semanticweb.hermit-1.3.8.500.jar!/org/semanticweb/HermiT/structural/OWLClausification.class" />
     <entry file="jar://$MAVEN_REPOSITORY$/net/sourceforge/owlapi/owlapi-api/5.0.0/owlapi-api-5.0.0.jar!/org/semanticweb/owlapi/model/OWLOntologyID.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -1082,13 +893,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/function/Predicate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="48" column="12" lean-forward="false" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/function/Predicate.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/vn/edu/uit/ontologymanager/loadtype/LoadSuperClassType.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/vn/edu/uit/ontologymanager/retrievetype/RetrieveClassType.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/vn/edu/uit/server/ResponseType.java">
@@ -1099,14 +904,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="976" column="0" lean-forward="false" selection-start-line="976" selection-start-column="0" selection-end-line="976" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/lang/String.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/net/sourceforge/owlapi/owlapi-osgidistribution/4.2.7/owlapi-osgidistribution-4.2.7.jar!/uk/ac/manchester/cs/owl/owlapi/OWLClassImpl.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="629">
@@ -1128,14 +926,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/Map.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5973">
-          <caret line="211" column="6" lean-forward="false" selection-start-line="211" selection-start-column="6" selection-end-line="211" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/Map.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/vn/edu/uit/shared/Pair.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1233,53 +1024,59 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/vn/edu/uit/ontologymanager/model/Relation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
+        <state relative-caret-position="17">
           <caret line="40" column="32" lean-forward="false" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/vn/edu/uit/ontologymanager/model/Individual.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="34" column="40" lean-forward="false" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/vn/edu/uit/server/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
+        <state relative-caret-position="261">
           <caret line="55" column="48" lean-forward="false" selection-start-line="55" selection-start-column="48" selection-end-line="55" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/vn/edu/uit/ontologymanager/model/Individual.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="34" column="40" lean-forward="false" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/vn/edu/uit/server/RequestType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="53" column="43" lean-forward="false" selection-start-line="53" selection-start-column="43" selection-end-line="53" selection-end-column="43" />
+        <state relative-caret-position="305">
+          <caret line="33" column="25" lean-forward="false" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/vn/edu/uit/ontologymanager/OntologyManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="574" column="49" lean-forward="true" selection-start-line="574" selection-start-column="49" selection-end-line="574" selection-end-column="49" />
+        <state relative-caret-position="202">
+          <caret line="1055" column="13" lean-forward="true" selection-start-line="1055" selection-start-column="13" selection-end-line="1055" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#parseClass#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#parseSuperClasses#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#parseSubClasses#0;class#OntologyManager#0" expanded="false" />
+            <element signature="method#parseDomainRelations#0;class#OntologyManager#0" expanded="false" />
+            <element signature="method#parseRangeRelations#0;class#OntologyManager#0" expanded="false" />
+            <element signature="method#parseClassIndividuals#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#parseRelation#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#parseRelations#0;class#OntologyManager#0" expanded="false" />
+            <element signature="method#parseRelationDomains#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#parseAttribute#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#parseAttributes#0;class#OntologyManager#0" expanded="false" />
+            <element signature="method#parseAttributeDomains#0;class#OntologyManager#0" expanded="false" />
+            <element signature="method#parseIndividual#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#parseIndividuals#0;class#OntologyManager#0" expanded="false" />
+            <element signature="method#parseIndividualClasses#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#parseRelationValues#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#parseAttributeValues#0;class#OntologyManager#0" expanded="false" />
-            <element signature="method#getSubClasses#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#getClassAttributes#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#getClassIndividuals#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#getRelation#0;class#OntologyManager#0" expanded="false" />
@@ -1287,8 +1084,8 @@
             <element signature="method#getRelationRanges#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#getAttribute#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#getAttributeDomains#0;class#OntologyManager#0" expanded="false" />
-            <element signature="method#getIndividual#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#getRelationValues#0;class#OntologyManager#0" expanded="false" />
+            <element signature="method#getAttributeValues#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#getLabel#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#getOWLClass#0;class#OntologyManager#0" expanded="false" />
             <element signature="method#getOWLRelation#0;class#OntologyManager#0" expanded="false" />

@@ -11,6 +11,8 @@ namespace RiceDoctor.RuleManager
 
         public abstract override int GetHashCode();
 
+        public abstract override string ToString();
+
         public static bool operator ==(Fact fact1, Fact fact2)
         {
             if (ReferenceEquals(fact1, fact2)) return true;

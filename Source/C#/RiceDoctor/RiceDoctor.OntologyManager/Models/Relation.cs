@@ -6,7 +6,7 @@ using static RiceDoctor.OntologyManager.GetType;
 
 namespace RiceDoctor.OntologyManager
 {
-    public class Relation : Entity<Relation>
+    public class Relation : Entity<Relation>, IEquatable<Relation>
     {
         [CanBeNull] private IReadOnlyCollection<Class> _allDomains;
         [CanBeNull] private IReadOnlyCollection<Class> _allRanges;
@@ -133,6 +133,39 @@ namespace RiceDoctor.OntologyManager
                 _allRanges = value;
                 _canGetAllRanges = true;
             }
+        }
+
+        public bool Equals(Relation other)
+        {
+            if (ReferenceEquals(null, other)) return false;
+            if (ReferenceEquals(this, other)) return true;
+            return base.Equals(other);
+        }
+
+        public static bool operator ==(Relation relation1, Relation relation2)
+        {
+            if (ReferenceEquals(relation1, relation2)) return true;
+            if (ReferenceEquals(null, relation1)) return false;
+            if (ReferenceEquals(null, relation2)) return false;
+            return relation1.Equals(relation2);
+        }
+
+        public static bool operator !=(Relation relation1, Relation relation2)
+        {
+            return !(relation1 == relation2);
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj)) return false;
+            if (ReferenceEquals(this, obj)) return true;
+            if (obj.GetType() != GetType()) return false;
+            return Equals((Relation) obj);
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
         }
     }
 }

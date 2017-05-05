@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 using JetBrains.Annotations;
 using RiceDoctor.Shared;
 
@@ -70,6 +71,29 @@ namespace RiceDoctor.RuleManager
                 hashCode = (hashCode * 397) ^ CertaintyFactor.GetHashCode();
                 return hashCode;
             }
+        }
+
+        public override string ToString()
+        {
+            var builder = new StringBuilder();
+
+            for (var i = 0; i < Hypotheses.Count; ++i)
+            {
+                if (i > 0) builder.Append(" & ");
+                builder.Append(Hypotheses[i]);
+            }
+
+            builder.Append(" -> ");
+
+            for (var i = 0; i < Conclusions.Count; ++i)
+            {
+                if (i > 0) builder.Append(" & ");
+                builder.Append(Conclusions[i]);
+            }
+
+            builder.Append($" {{{CertaintyFactor}}}");
+
+            return builder.ToString();
         }
     }
 }

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using RiceDoctor.InferenceEngine;
 using RiceDoctor.OntologyManager;
@@ -28,20 +27,25 @@ namespace RiceDoctor.ConsoleApp
             var type = int.Parse(Console.ReadLine());
             var problem = ruleManager.Problems[type];
 
+            var request = new Request(problem, RequestType.IndividualFact, null);
+            IInferenceEngine engine = new Engine(ruleManager, ontologyManager, request);
+
+            PrintRules(engine);
+
             Console.Write("Nhap so su kien input: ");
             var inputCount = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Nhap danh sach su kien: <Ten>=<Gia_Tri> (VD: Benh=BenhVangLa)");
-            var facts = new List<Fact>();
+            var facts = new Fact[inputCount];
             for (var i = 0; i < inputCount; ++i)
             {
                 var input = Console.ReadLine().Split('=');
                 var fact = new IndividualFact(input[0], input[1]);
-                facts.Add(fact);
+                facts[i] = fact;
             }
 
-            var request = new Request(problem, RequestType.IndividualFact, facts);
-            IInferenceEngine engine = new Engine(ruleManager, ontologyManager, request);
+            engine.AddFactsToKnown(facts);
+
             var resultFacts = engine.Infer();
 
             Console.Write("Ket qua: ");
@@ -77,6 +81,26 @@ namespace RiceDoctor.ConsoleApp
             IOntologyManager ontologyManager = OntologyManager.Manager.Instance;
 
             return (ruleManager, ontologyManager);
+        }
+
+        private static void PrintRules(IInferenceEngine engine)
+        {
+            Console.WriteLine("Danh sach luat:");
+            Console.WriteLine($"Luat quan he uu tien cao: {engine.HighPriorityRelationRules.Count}");
+            foreach (var relationRule in engine.HighPriorityRelationRules)
+                Console.WriteLine(relationRule);
+
+            Console.WriteLine($"Luat tuong minh uu tien cao: {engine.HighPriorityLogicRules.Count}");
+            foreach (var logicRule in engine.HighPriorityLogicRules)
+                Console.WriteLine(logicRule);
+
+            Console.WriteLine($"Luat quan he uu tien thap: {engine.LowPriorityRelationRules.Count}");
+            foreach (var relationRule in engine.LowPriorityRelationRules)
+                Console.WriteLine(relationRule);
+
+            Console.WriteLine($"Luat tuong minh uu tien thap: {engine.LowPriorityLogicRules.Count}");
+            foreach (var logicRule in engine.LowPriorityLogicRules)
+                Console.WriteLine(logicRule);
         }
     }
 }

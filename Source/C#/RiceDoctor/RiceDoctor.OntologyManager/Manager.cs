@@ -359,8 +359,7 @@ namespace RiceDoctor.OntologyManager
             return @class;
         }
 
-        [CanBeNull]
-        public IReadOnlyCollection<Class> GetIndividualClasses([NotNull] string individualName)
+        public IReadOnlyCollection<Class> GetIndividualClasses(string individualName)
         {
             Check.NotEmpty(individualName, nameof(individualName));
 
@@ -380,6 +379,29 @@ namespace RiceDoctor.OntologyManager
                 .ToList();
 
             return classes;
+        }
+
+        public IReadOnlyCollection<Individual> GetRelationValue(
+            string individualName,
+            string relationName)
+        {
+            Check.NotEmpty(individualName, nameof(individualName));
+            Check.NotEmpty(relationName, nameof(relationName));
+
+            var data = new Dictionary<string, object>
+            {
+                {"Individual", individualName},
+                {"Relation", relationName}
+            };
+            var request = new Request(RequestType.GetRelationValue, data);
+
+            var response = Send(request);
+            if (response.Status != Success) return null;
+
+            var jsonRelationValue = response.Data["RelationValue"];
+            var relationValue = JsonConvert.Deserialize<IReadOnlyCollection<Individual>>(jsonRelationValue.ToString());
+
+            return relationValue;
         }
 
         public IReadOnlyDictionary<Relation, IReadOnlyCollection<Individual>> GetRelationValues(string individualName)

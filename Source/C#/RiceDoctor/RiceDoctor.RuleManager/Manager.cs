@@ -21,18 +21,14 @@ namespace RiceDoctor.RuleManager
 
             LogicRules = MakeLogicRules(logicData);
 
-            RelationRules = relationData
-                .Split(new[] {"\r\n", "\n"}, StringSplitOptions.None)
-                .Distinct()
-                .ToList()
-                .AsReadOnly();
+            RelationRules = MakeRelationRules(relationData);
         }
 
         public IReadOnlyList<Problem> Problems { get; }
 
         public IReadOnlyCollection<LogicRule> LogicRules { get; }
 
-        public IReadOnlyCollection<string> RelationRules { get; }
+        public IReadOnlyCollection<Relation> RelationRules { get; }
 
         public bool CanFactCaptureClass(Fact fact, Class type)
         {
@@ -41,18 +37,17 @@ namespace RiceDoctor.RuleManager
 
             if (fact.Name == type.Id) return true;
 
-            if (type.AllSuperClasses != null && type.AllSuperClasses.Any(sc => sc.Id == fact.Name)) return true;
-
             if (type.AllSubClasses != null && type.AllSubClasses.Any(sc => sc.Id == fact.Name)) return true;
 
             return false;
         }
 
+        [NotNull]
         private IReadOnlyCollection<LogicRule> MakeLogicRules(string logicData)
         {
             var lexer = new LogicLexer(logicData);
             var parser = new LogicParser(lexer);
-            var rules = parser.Parse().ToList();
+            var rules = parser.Parse();
 
             foreach (var rule in rules)
             {
@@ -66,7 +61,29 @@ namespace RiceDoctor.RuleManager
                 rule.Problems = tmpProblems;
             }
 
-            return rules.AsReadOnly();
+            return rules;
+        }
+
+        [NotNull]
+        private IReadOnlyCollection<Relation> MakeRelationRules(string relationData)
+        {
+            var relationRules = relationData
+                .Split(new[] {"\r\n", "\n"}, StringSplitOptions.None);
+
+            var relations = new HashSet<Relation>();
+            foreach (var relationRule in relationRules)
+            {
+                var relation = _ontologyManager.GetRelation(relationRule);
+                if (relation == null) throw new ArgumentException($"Relation rule '{relationRule}' doesn't exist");
+
+                if (!relations.Contains(relation)) relations.Add(relation);
+
+                var inverseRelation = relation.InverseRelation;
+                if (inverseRelation != null && !relations.Contains(inverseRelation))
+                    relations.Add(inverseRelation);
+            }
+
+            return relations;
         }
 
         private bool CanRuleHaveProblem(LogicRule rule, Problem problem)
@@ -123,7 +140,8 @@ namespace RiceDoctor.RuleManager
                             if (!allTypes.TryGetValue(templateGoalType, out Class goalType))
                             {
                                 goalType = ontologyManager.GetClass(templateGoalType);
-                                if (goalType == null) throw new ArgumentException("Type doesn't exist.");
+                                if (goalType == null)
+                                    throw new ArgumentException($"Type '{templateGoalType}' doesn't exist.");
                                 allTypes.Add(templateGoalType, goalType);
                             }
                             goalTypes.Add(goalType);
@@ -135,7 +153,8 @@ namespace RiceDoctor.RuleManager
                             if (!allTypes.TryGetValue(templateSuggestType, out Class suggestType))
                             {
                                 suggestType = ontologyManager.GetClass(templateSuggestType);
-                                if (suggestType == null) throw new ArgumentException("Type doesn't exist.");
+                                if (suggestType == null)
+                                    throw new ArgumentException($"Type '{templateSuggestType}' doesn't exist.");
                                 allTypes.Add(templateSuggestType, suggestType);
                             }
                             suggestTypes.Add(suggestType);

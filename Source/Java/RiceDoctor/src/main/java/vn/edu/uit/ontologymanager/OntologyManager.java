@@ -105,6 +105,9 @@ public class OntologyManager {
                 case GET_RELATIONS:
                     response = parseRelations();
                     break;
+                case GET_INVERSE_RELATION:
+                    response = parseInverseRelation(data);
+                    break;
                 case GET_RELATION_DOMAINS:
                     response = parseRelationDomains(data);
                     break;
@@ -128,6 +131,9 @@ public class OntologyManager {
                     break;
                 case GET_INDIVIDUAL_CLASSES:
                     response = parseIndividualClasses(data);
+                    break;
+                case GET_RELATION_VALUE:
+                    response = parseRelationValue(data);
                     break;
                 case GET_RELATION_VALUES:
                     response = parseRelationValues(data);
@@ -398,6 +404,33 @@ public class OntologyManager {
     }
 
     @NotNull
+    private Response parseInverseRelation(@NotNull final Map<String, Object> data) {
+        final String relationName = (String) data.get("Relation");
+
+        final OWLObjectProperty owlRelation = getOWLRelation(relationName);
+
+        final Response.Builder builder;
+        if (owlRelation == null) {
+            builder = new Response.Builder(FAIL);
+            builder.message("Relation \"" + relationName + "\" not found.");
+        } else {
+            final OWLObjectProperty owlInverseRelation = getOWLInverseRelation(owlRelation);
+
+            if (owlInverseRelation == null) {
+                builder = new Response.Builder(FAIL);
+                builder.message("Inverse relation of \"" + relationName + "\" not found.");
+            } else {
+                final Relation relation = getRelation(owlRelation);
+
+                builder = new Response.Builder(SUCCESS);
+                builder.data("InverseRelation", relation);
+            }
+        }
+
+        return builder.build();
+    }
+
+    @NotNull
     private Response parseRelationDomains(@NotNull final Map<String, Object> data) {
         final String relationName = (String) data.get("Relation");
         final GetType getDomainType = gson.fromJson((String) data.get("GetDomainType"), GetType.class);
@@ -585,6 +618,36 @@ public class OntologyManager {
                 if (getClassType == GET_DIRECT)
                     builder.data("IndividualClass", classes.iterator().next());
                 else builder.data("IndividualClasses", classes);
+            }
+        }
+
+        return builder.build();
+    }
+
+    @NotNull
+    private Response parseRelationValue(@NotNull final Map<String, Object> data) {
+        final String individualName = (String) data.get("Individual");
+        final String relationName = (String) data.get("Relation");
+
+        final OWLNamedIndividual owlIndividual = getOWLIndividual(individualName);
+        final OWLObjectProperty owlRelation = getOWLRelation(relationName);
+
+        final Response.Builder builder;
+        if (owlIndividual == null) {
+            builder = new Response.Builder(FAIL);
+            builder.message("Individual \"" + individualName + "\" not found.");
+        } else if (owlRelation == null) {
+            builder = new Response.Builder(FAIL);
+            builder.message("Relation \"" + relationName + "\" not found.");
+        } else {
+            final List<Individual> relationValue = getRelationValue(owlIndividual, owlRelation);
+
+            if (relationValue == null) {
+                builder = new Response.Builder(FAIL);
+                builder.message("Relation value \"" + relationName + "\" of \"" + individualName + "\" not found.");
+            } else {
+                builder = new Response.Builder(SUCCESS);
+                builder.data("RelationValue", relationValue);
             }
         }
 
@@ -924,6 +987,22 @@ public class OntologyManager {
     }
 
     @Nullable
+    private List<Individual> getRelationValue(@NotNull final OWLNamedIndividual owlIndividual, @NotNull final OWLObjectProperty owlRelation) {
+
+        final Set<OWLNamedIndividual> owlIndividualValues = reasoner.getObjectPropertyValues(owlIndividual, owlRelation).getFlattened();
+        if (owlIndividualValues.size() == 0) return null;
+
+        final List<Individual> values = new ArrayList<>();
+        for (final OWLNamedIndividual owlIndividualValue : owlIndividualValues) {
+            final Individual individual = getIndividual(owlIndividualValue);
+
+            values.add(individual);
+        }
+
+        return values;
+    }
+
+    @Nullable
     private Set<Pair<Attribute, List<String>>> getAttributeValues(@NotNull final OWLNamedIndividual owlIndividual) {
         Set<Pair<Attribute, List<String>>> attributeValues = null;
 
@@ -972,6 +1051,21 @@ public class OntologyManager {
         }
 
         return owlClass;
+    }
+
+    @Nullable
+    private OWLObjectProperty getOWLInverseRelation(@NotNull final OWLObjectProperty owlRelation) {
+        final Set<OWLObjectPropertyExpression> owlInverseRelations = reasoner.getInverseObjectProperties(owlRelation).getEntities();
+
+        if (owlInverseRelations.size() == 2) {
+            final Iterator<OWLObjectPropertyExpression> owlInverseRelationIterator = owlInverseRelations.iterator();
+            final OWLObjectPropertyExpression owlInverseRelation = owlInverseRelationIterator.next();
+            if (!owlInverseRelation.getNamedProperty().getIRI().getShortForm().equals(owlRelation.getIRI().getShortForm()))
+                return owlInverseRelation.asOWLObjectProperty();
+            else {
+                return owlInverseRelationIterator.next().asOWLObjectProperty();
+            }
+        } else return null;
     }
 
     @Nullable

@@ -1,4 +1,6 @@
 coGiaiDoan
-coPhanBon
-coThuoc
+coOc
 coQuyTrinh
+coSau
+coThuoc
+coTrieuChung

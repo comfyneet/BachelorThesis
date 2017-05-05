@@ -30,6 +30,9 @@ public enum RequestType {
     @SerializedName("GetRelations")
     GET_RELATIONS,
 
+    @SerializedName("GetInverseRelation")
+    GET_INVERSE_RELATION,
+
     @SerializedName("GetRelationDomains")
     GET_RELATION_DOMAINS,
 
@@ -53,6 +56,9 @@ public enum RequestType {
 
     @SerializedName("GetIndividualClasses")
     GET_INDIVIDUAL_CLASSES,
+
+    @SerializedName("GetRelationValue")
+    GET_RELATION_VALUE,
 
     @SerializedName("GetRelationValues")
     GET_RELATION_VALUES,

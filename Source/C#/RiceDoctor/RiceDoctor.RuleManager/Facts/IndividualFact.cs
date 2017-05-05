@@ -27,6 +27,19 @@ namespace RiceDoctor.RuleManager
             return string.Equals(Name, other.Name) && string.Equals(Individual, other.Individual);
         }
 
+        public static bool operator ==(IndividualFact individualFact1, IndividualFact individualFact2)
+        {
+            if (ReferenceEquals(individualFact1, individualFact2)) return true;
+            if (ReferenceEquals(null, individualFact1)) return false;
+            if (ReferenceEquals(null, individualFact2)) return false;
+            return individualFact1.Equals(individualFact2);
+        }
+
+        public static bool operator !=(IndividualFact individualFact1, IndividualFact individualFact2)
+        {
+            return !(individualFact1 == individualFact2);
+        }
+
         public override bool Equals(object obj)
         {
             if (ReferenceEquals(null, obj)) return false;
@@ -41,6 +54,11 @@ namespace RiceDoctor.RuleManager
             {
                 return (Name.GetHashCode() * 397) ^ Individual.GetHashCode();
             }
+        }
+
+        public override string ToString()
+        {
+            return $"{Name}={Individual}";
         }
     }
 }

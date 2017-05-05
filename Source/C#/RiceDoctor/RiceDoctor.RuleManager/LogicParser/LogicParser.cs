@@ -248,7 +248,8 @@ namespace RiceDoctor.RuleManager
 
                 var value = ParseUnquotedString();
 
-                fact = new ScalarFact(name, value);
+                //fact = new ScalarFact(name, value);
+                fact = null;
             }
 
             symbolTable.Add(fact);
