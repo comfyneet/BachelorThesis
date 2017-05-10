@@ -11,7 +11,6 @@ namespace RiceDoctor.InferenceEngine
 {
     public class Engine : IInferenceEngine
     {
-        [NotNull] private readonly IDictionary<Fact, bool> _guessableFacts;
         [NotNull] private readonly IList<LogicRule> _highPriorityLogicRules;
         [NotNull] private readonly IList<LogicRule> _inferredLogicRules;
         [NotNull] private readonly IList<KeyValuePair<IndividualFact, Relation>> _inferredRelationalRules;
@@ -20,6 +19,7 @@ namespace RiceDoctor.InferenceEngine
         [NotNull] private readonly IOntologyManager _ontologyManager;
         [NotNull] private readonly Request _request;
         [NotNull] private readonly IRuleManager _ruleManager;
+        [NotNull] private readonly IList<Fact> _unknownFacts;
 
         public Engine(
             [NotNull] IRuleManager ruleManager,
@@ -36,6 +36,7 @@ namespace RiceDoctor.InferenceEngine
 
             (HighPriorityRelationRules, LowPriorityRelationRules, _highPriorityLogicRules, _lowPriorityLogicRules) =
                 SortRulesByRequest();
+            _unknownFacts = new List<Fact>();
             _inferredLogicRules = new List<LogicRule>();
             _inferredRelationalRules = new List<KeyValuePair<IndividualFact, Relation>>();
             _knownFacts = new List<Fact>();
@@ -44,10 +45,52 @@ namespace RiceDoctor.InferenceEngine
                 AddFactsToKnown(request.KnownFacts.ToArray());
         }
 
-        public IReadOnlyCollection<Fact> Infer()
+        public void HandleGuessableFact(Tuple<Fact, bool?> guessableFact)
         {
-            var forwardChainingResults = InferForwardChaining();
-            return forwardChainingResults /*?? InferBackwardChaining()*/;
+            Check.NotNull(guessableFact, nameof(guessableFact));
+
+            if (guessableFact.Item2 == true)
+            {
+                AddFactsToKnown(guessableFact.Item1);
+            }
+            else if (guessableFact.Item2 == false)
+            {
+                for (var i = 0; i < _highPriorityLogicRules.Count;)
+                    if (_highPriorityLogicRules[i].Hypotheses.Contains(guessableFact.Item1) ||
+                        _highPriorityLogicRules[i].Conclusions.Contains(guessableFact.Item1))
+                        _highPriorityLogicRules.RemoveAt(i);
+                    else ++i;
+
+                for (var i = 0; i < _lowPriorityLogicRules.Count;)
+                    if (_lowPriorityLogicRules[i].Hypotheses.Contains(guessableFact.Item1) ||
+                        _lowPriorityLogicRules[i].Conclusions.Contains(guessableFact.Item1))
+                        _lowPriorityLogicRules.RemoveAt(i);
+                    else ++i;
+            }
+            else
+            {
+                _unknownFacts.Add(guessableFact.Item1);
+            }
+        }
+
+        public Response Infer()
+        {
+            var forwardResults = InferForwardChaining();
+            if (forwardResults != null)
+                return new Response(forwardResults);
+
+            try
+            {
+                var backwardResults = InferBackwardChaining();
+                if (backwardResults != null)
+                    return new Response(backwardResults);
+            }
+            catch (GuessableFactException e)
+            {
+                return new Response(e.Fact);
+            }
+
+            return new Response();
         }
 
         public IReadOnlyCollection<ValueTuple<double, IReadOnlyCollection<Fact>, IReadOnlyCollection<Fact>>>
@@ -128,7 +171,8 @@ namespace RiceDoctor.InferenceEngine
                     foreach (var fact in _knownFacts)
                     {
                         if (!(fact is IndividualFact individualFact)) continue;
-                        if (relationRule.AllDomains != null && relationRule.AllDomains.Contains(new Class(individualFact.Name)))
+                        if (relationRule.AllDomains != null &&
+                            relationRule.AllDomains.Contains(new Class(individualFact.Name)))
                         {
                             hasNewFacts = InferIndividualFact(individualFact, relationRule);
                             if (hasNewFacts) break;
@@ -155,7 +199,8 @@ namespace RiceDoctor.InferenceEngine
                         foreach (var fact in _knownFacts)
                         {
                             if (!(fact is IndividualFact individualFact)) continue;
-                            if (relationRule.AllDomains != null && relationRule.AllDomains.Contains(new Class(individualFact.Name)))
+                            if (relationRule.AllDomains != null &&
+                                relationRule.AllDomains.Contains(new Class(individualFact.Name)))
                             {
                                 hasNewFacts = InferIndividualFact(individualFact, relationRule);
                                 if (hasNewFacts) break;
@@ -188,36 +233,40 @@ namespace RiceDoctor.InferenceEngine
         [CanBeNull]
         private IReadOnlyCollection<Fact> InferBackwardChaining()
         {
-            throw new NotImplementedException();
+            foreach (var rule in _highPriorityLogicRules)
+            {
+                var allHypothesesInKnown = true;
+                foreach (var hypothesis in rule.Hypotheses)
+                    if (!Backtrack(hypothesis, 0))
+                    {
+                        allHypothesesInKnown = false;
+                        break;
+                    }
+                if (allHypothesesInKnown)
+                {
+                    AddFactsToKnown(rule.Conclusions.ToArray());
 
-            //var logicRules = SortRulesByRequest();
+                    break;
+                }
+            }
 
-            //foreach (var rule in logicRules)
-            //{
-            //    var allHypothesesInKnown = true;
-            //    foreach (var hypothesis in rule.Hypotheses)
-            //        if (!Backtrack(hypothesis, 0))
-            //        {
-            //            allHypothesesInKnown = false;
-            //            break;
-            //        }
-            //    if (allHypothesesInKnown)
-            //        AddFactsToKnown(rule.Conclusions.ToArray());
-            //}
-
-            //var goalFacts = GetGoalFactsInKnown();
-            //return goalFacts;
+            var goalFacts = GetGoalFactsInKnown();
+            return goalFacts;
         }
 
         private bool Backtrack([NotNull] Fact goal, int level)
         {
             if (IsFactInKnown(goal)) return true;
 
-            var inferableRules = new List<LogicRule>();
-            foreach (var rule in _ruleManager.LogicRules)
-                if (rule.Conclusions.Any(c => c.Equals(goal)))
-                    inferableRules.Add(rule);
-            inferableRules = inferableRules.OrderBy(r => CountFactsInKnown(r.Hypotheses)).ToList();
+            if (!_unknownFacts.Contains(goal))
+                throw new GuessableFactException(goal);
+
+            var logicRules = _highPriorityLogicRules.ToList();
+            logicRules.AddRange(_lowPriorityLogicRules);
+            var inferableRules = logicRules
+                .Where(rule => rule.Conclusions.Any(c => c.Equals(goal)))
+                .OrderBy(r => CountFactsInKnown(r.Hypotheses))
+                .ToList();
 
             foreach (var rule in inferableRules)
             {

@@ -4,6 +4,7 @@ using RiceDoctor.InferenceEngine;
 using RiceDoctor.OntologyManager;
 using RiceDoctor.RuleManager;
 using RiceDoctor.Shared;
+using static RiceDoctor.InferenceEngine.ResponseType;
 using Manager = RiceDoctor.RuleManager.Manager;
 using Request = RiceDoctor.InferenceEngine.Request;
 using RequestType = RiceDoctor.InferenceEngine.RequestType;
@@ -30,7 +31,7 @@ namespace RiceDoctor.ConsoleApp
             var request = new Request(problem, RequestType.IndividualFact, null);
             IInferenceEngine engine = new Engine(ruleManager, ontologyManager, request);
 
-            PrintRules(engine);
+            //PrintRules(engine);
 
             Console.Write("Nhap so su kien input: ");
             var inputCount = int.Parse(Console.ReadLine());
@@ -46,17 +47,30 @@ namespace RiceDoctor.ConsoleApp
 
             engine.AddFactsToKnown(facts);
 
-            var resultFacts = engine.Infer();
+            var response = engine.Infer();
+            while (response.Type == GuessableFact)
+            {
+                Console.Write($"Su kien {response.GuessableFact} co ton tai khong (Co:0, Khong:1, Khong biet:2)? ");
+                var existInt = int.Parse(Console.ReadLine());
+
+                bool? exist = null;
+                if (existInt == 0) exist = true;
+                else if (existInt == 1) exist = false;
+
+                engine.HandleGuessableFact(new Tuple<Fact, bool?>(response.GuessableFact, exist));
+                response = engine.Infer();
+            }
 
             Console.Write("Ket qua: ");
-            if (resultFacts == null)
+
+            if (response.Type == NoResults)
             {
-                Console.WriteLine("Suy dien tien va lui khong thanh cong");
+                Console.WriteLine("Suy dien khong thanh cong");
             }
             else
             {
                 Console.WriteLine("Suy dien thanh cong");
-                foreach (var resultFact in resultFacts)
+                foreach (var resultFact in response.Results)
                 {
                     var individual = (IndividualFact) resultFact;
                     Console.WriteLine($"{individual.Name}={individual.Individual}");

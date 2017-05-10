@@ -1,6 +1,2 @@
+coTacNhanGayBenh
 coGiaiDoan
-coOc
-coQuyTrinh
-coSau
-coThuoc
-coTrieuChung

@@ -35,10 +35,10 @@
         <NamedIndividual IRI="#MuaNhieu"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#KhongNuoc"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <NamedIndividual IRI="#KhongNuoc"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#BenhDomVang"/>
@@ -47,13 +47,16 @@
         <NamedIndividual IRI="#SauCanGie"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#ThayGay"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#GiongLua"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#ThayGay"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#KhongTroBong"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#coGiaiDoan2"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#GiongTBR-45"/>
@@ -65,10 +68,10 @@
         <NamedIndividual IRI="#ChopReBuu"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#coGiaiDoan"/>
+        <NamedIndividual IRI="#ThoiTietNong"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#ThoiTietNong"/>
+        <ObjectProperty IRI="#coGiaiDoan"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasMembershipFunction"/>
@@ -78,9 +81,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#DeNhanhKem"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#coTrieuChung"/>
     </Declaration>
     <Declaration>
         <Class IRI="#DoSauRuong"/>
@@ -116,10 +116,10 @@
         <NamedIndividual IRI="#BenhDomNauHaiLua"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#ReKho"/>
+        <NamedIndividual IRI="#PhanHonHop"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#PhanHonHop"/>
+        <NamedIndividual IRI="#ReKho"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ChauChau"/>
@@ -146,10 +146,10 @@
         <NamedIndividual IRI="#QuyTrinhTuoiNuocTro"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#QuyTrinhTuoiNuocSauDeNhanh"/>
+        <Class IRI="#DoAm"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#DoAm"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocSauDeNhanh"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#QuyTrinhTuoiNuocSauSa5-20Ngay"/>
@@ -158,10 +158,10 @@
         <NamedIndividual IRI="#NhietDoThap"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#PhanDam"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocChinSua"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#QuyTrinhTuoiNuocChinSua"/>
+        <NamedIndividual IRI="#PhanDam"/>
     </Declaration>
     <Declaration>
         <Class IRI="#PhanHuuCo"/>
@@ -221,10 +221,10 @@
         <NamedIndividual IRI="#QuyTrinhBonThucDot1"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#QuyTrinhKichThich"/>
+        <NamedIndividual IRI="#GiongDV108"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#GiongDV108"/>
+        <Class IRI="#QuyTrinhKichThich"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#MuaIt"/>
@@ -233,10 +233,10 @@
         <NamedIndividual IRI="#NhietDoCao"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#denNgay"/>
+        <NamedIndividual IRI="#BenhKhamVang"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#BenhKhamVang"/>
+        <DataProperty IRI="#denNgay"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#GiongOM8923"/>
@@ -275,10 +275,10 @@
         <NamedIndividual IRI="#ThanUn"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#GiaiDoan"/>
+        <NamedIndividual IRI="#GanLaXung"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#GanLaXung"/>
+        <Class IRI="#GiaiDoan"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#QuyTrinhTuoiNuocSauSa20-25Ngay"/>
@@ -308,6 +308,9 @@
         <NamedIndividual IRI="#SauCuonLa"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#BoXit"/>
     </Declaration>
     <Declaration>
@@ -317,10 +320,10 @@
         <NamedIndividual IRI="#SauNan"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#PhanViLuong"/>
+        <NamedIndividual IRI="#LaHoiVang"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#LaHoiVang"/>
+        <NamedIndividual IRI="#PhanViLuong"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#BenhVangTamThoi"/>
@@ -341,9 +344,6 @@
         <NamedIndividual IRI="#ReIt"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#coSau"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#BenhBuuRe"/>
     </Declaration>
     <Declaration>
@@ -359,10 +359,10 @@
         <Class IRI="#PhanVoCo"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#LaXanhDam"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
     </Declaration>
     <Declaration>
-        <Datatype abbreviatedIRI="xsd:string"/>
+        <NamedIndividual IRI="#LaXanhDam"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#RayNau"/>
@@ -398,19 +398,19 @@
         <NamedIndividual IRI="#DauLaChay"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#LaCongQueo"/>
+        <NamedIndividual IRI="#LaChet"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#LaChet"/>
+        <NamedIndividual IRI="#LaCongQueo"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#HienTuongNgoDocHuuCo"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#RayXanhDuoiDen"/>
+        <NamedIndividual IRI="#NuocCao"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#NuocCao"/>
+        <NamedIndividual IRI="#RayXanhDuoiDen"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#denNgayCachLy"/>
@@ -437,10 +437,10 @@
         <NamedIndividual IRI="#BenhTungo"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#DatKho"/>
+        <Class IRI="#Dat"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Dat"/>
+        <NamedIndividual IRI="#DatKho"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ReNgan"/>
@@ -464,9 +464,6 @@
         <NamedIndividual IRI="#MuiHoi"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#coOc"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#DoCay"/>
     </Declaration>
     <Declaration>
@@ -483,9 +480,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#PhanLan"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#coThuoc"/>
     </Declaration>
     <Declaration>
         <Class IRI="#MoiTruong"/>
@@ -539,10 +533,10 @@
         <NamedIndividual IRI="#GiaiDoanMa"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#SauDoiDucBe"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#SauDoiDucBe"/>
+        <DataProperty IRI="#ten"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#CayDay"/>
@@ -560,10 +554,10 @@
         <NamedIndividual IRI="#LaXanh"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#QuyTrinhTuoiNuocChinSap"/>
+        <NamedIndividual IRI="#BenhDaoOn"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#BenhDaoOn"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocChinSap"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#GiaiDoanGieo"/>
@@ -575,10 +569,10 @@
         <DataProperty IRI="#thanhPhan"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#GiongTBR255"/>
+        <NamedIndividual IRI="#SauDucThan"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#SauDucThan"/>
+        <NamedIndividual IRI="#GiongTBR255"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#LaVangCam"/>
@@ -608,13 +602,13 @@
         <NamedIndividual IRI="#HatLep"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#GiongDH815-6"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#PhanPhucHop"/>
     </Declaration>
     <Declaration>
         <Class IRI="#HienTuong"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GiongDH815-6"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#GioLon"/>
@@ -623,10 +617,10 @@
         <NamedIndividual IRI="#GiaiDoanTro"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#LaHinhBacThang"/>
+        <NamedIndividual IRI="#BenhLunXoanLa"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#BenhLunXoanLa"/>
+        <NamedIndividual IRI="#LaHinhBacThang"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#BoTri"/>
@@ -2568,6 +2562,26 @@ Lúc này ruộng bị khô sẽ tổn thương đến rễ lúa, nên không th
         <ObjectProperty IRI="#coGiaiDoan"/>
         <ObjectProperty IRI="#coQuyTrinh"/>
     </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#coGiaiDoan2"/>
+        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#coGiaiDoan"/>
+        <Class IRI="#GiaiDoan"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <Class IRI="#GiaiDoan"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#coGiaiDoan"/>
+        <Class IRI="#QuyTrinh"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <Class IRI="#TacNhanGayBenh"/>
+    </ObjectPropertyRange>
     <DataPropertyDomain>
         <DataProperty IRI="#cachCheBien"/>
         <Class IRI="#PhanHuuCo"/>
@@ -2824,8 +2838,8 @@ Lúc này ruộng bị khô sẽ tổn thương đến rễ lúa, nên không th
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#coOc</IRI>
-        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">có ốc</Literal>
+        <IRI>#coGiaiDoan2</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">có giai đoạn</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2834,18 +2848,8 @@ Lúc này ruộng bị khô sẽ tổn thương đến rễ lúa, nên không th
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#coSau</IRI>
-        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">có sâu</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#coThuoc</IRI>
-        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">có thuốc</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#coTrieuChung</IRI>
-        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">có triệu chứng</Literal>
+        <IRI>#coTacNhanGayBenh</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">có tác nhân gây bệnh</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

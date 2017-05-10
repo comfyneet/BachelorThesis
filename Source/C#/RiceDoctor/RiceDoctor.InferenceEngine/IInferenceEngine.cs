@@ -22,8 +22,10 @@ namespace RiceDoctor.InferenceEngine
 
         int AddFactsToKnown([NotNull] params Fact[] facts);
 
-        [CanBeNull]
-        IReadOnlyCollection<Fact> Infer();
+        void HandleGuessableFact([NotNull] Tuple<Fact, bool?> guessableFact);
+
+        [NotNull]
+        Response Infer();
 
         [CanBeNull]
         IReadOnlyCollection<ValueTuple<double, IReadOnlyCollection<Fact>, IReadOnlyCollection<Fact>>>
