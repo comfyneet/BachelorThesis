@@ -4,11 +4,8 @@ expression       = term [ '|' term ]
 term             = factor [ '&' factor ]
 factor           = fact | '(' expr ')'
 conclusions      = fact [ '&' fact ]
-fact             = scalar-fact | individual-fact
-scalar-fact      = '"' name '"' '=' '"' value '"'
+fact             = individual-fact
 individual-fact  = class-name '=' individual-name
 certainty-factor = NUMBER
-name             = UNQUOTEDSTRING
-value            = UNQUOTEDSTRING
 class-name       = IDENT
 individual-name  = IDENT

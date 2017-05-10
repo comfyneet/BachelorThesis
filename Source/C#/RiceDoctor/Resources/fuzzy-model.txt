@@ -1,0 +1,41 @@
+﻿FUNCTION trapmf(a, b, c, d)
+BEGIN
+    IF INPUT <= a THEN OUTPUT <- 0;
+    IF (a <= INPUT) & (INPUT <= b) THEN OUTPUT <- (INPUT - a) / (b - a);
+    IF b <= INPUT & INPUT <= c THEN OUTPUT <- 1;
+    IF (c <= INPUT) & INPUT <= d THEN OUTPUT <- (d - INPUT) / (d - c);
+    IF (d <= INPUT) THEN INPUT <- 0;
+END;
+
+FUNCTION trimf(a, b, c)
+BEGIN
+    IF INPUT <= a THEN OUTPUT <- 0;
+    IF a <= INPUT & INPUT <= b THEN OUTPUT <- (INPUT - a) / (b - a);
+    IF b <= INPUT & INPUT <= c THEN OUTPUT <- (c - INPUT) / (c - b);
+    IF c <= INPUT THEN INPUT <- 0;   
+END;
+
+VARIABLE DoAm
+BEGIN
+    TERM DoAmThap      : trimf(0, 10, 20);
+    TERM DoAmTrungBinh : trimf(10, 20, 30);
+    TERM DoAmCao       : trimf(20, 30, 40);
+END;
+
+VARIABLE DoSauRuong
+BEGIN
+    TERM RuongSau : trimf(0, 10, 20);
+END;
+
+
+VARIABLE LuongMua
+BEGIN
+    TERM MuaIt    : trimf(0, 10, 20);
+    TERM MuaNhieu : trimf(10, 20, 30);
+END;
+
+VARIABLE NhietDo
+BEGIN
+    TERM NhietDoCao  : trimf(0, 10, 20);
+    TERM NhietDoThap : trimf(10, 20, 30);
+END;
