@@ -1,0 +1,135 @@
+﻿@using OM = RiceDoctor.OntologyManager;
+@if (ViewBag.co == '1')
+{
+    <div class="col-md-10 col-sm-8 main-content ">
+        <!--Main content code to be written here -->
+        
+        @if (ViewBag.directRanges!=null)
+        {
+            <h1> Ranges </h1>
+            foreach (var a in ViewBag.directRanges)
+            {           
+                    string s = "GetInvidual?id=" + @a.Id;
+                <h1 > <a href=@s> @a.Id </a> </h1>
+            }
+        }
+        @if (ViewBag.inverseRelation != null)
+        {
+            <h1>inverseRelation </h1>
+            foreach (var a in ViewBag.inverseRelation)
+            {
+
+                string s = "GetInvidual?id=" + @a.Id;
+                 <h1><a href=@s>@a.Id</a>
+                 </h1>
+             }
+        }
+        @if (ViewBag.directDomain != null)
+        {
+            <h1>directDomain </h1>
+            foreach (var a in ViewBag.directDomains)
+             {
+                 string s = "GetInvidual?id=" + @a.Id;
+                 <h1><a href=@s>@a.Id</a>
+                 </h1>
+             }
+        }
+        @if (ViewBag.allRanges != null)
+        {
+            <h1>allRanges </h1>
+            foreach (var a in ViewBag.allRanges)
+            {
+                string s = "GetInvidual?id=" + @a.Id;
+                <h1>
+                    <a href=@s>@a.Id</a>
+                </h1>
+            }
+        }
+        @if (ViewBag.allDomains != null)
+        {
+            <h1>allDomains </h1>
+            foreach (var a in ViewBag.allDomains)
+            {
+                string s = "GetInvidual?id=" + @a.Id;
+                <h1>
+                    <a href=@s>@a.Id</a>
+                </h1>
+            }
+        }
+      
+    </div>
+   }
+   
+@if (ViewBag.co == '2')
+{
+    <div class="col-md-10 col-sm-8 main-content ">
+        <!--Main content code to be written here -->    
+     
+        @*@if (ViewBag.directClass != null)
+        {
+            <h1> directDomains </h1>
+            foreach (var a in ViewBag.directClass)
+            {
+                string s = "GetInvidual?id=" + @a.Id;
+                <h1> <a href=@s> @a.Id </a> </h1>
+            }
+        }*@
+        @*@if (ViewBag.allClasses != null)
+        {
+            <h1> directDomains </h1>
+            foreach (var a in ViewBag.allClasses)
+            {
+                string s = "GetInvidual?id=" + @a.Id;
+                <h1> <a href=@s> @a.Id </a> </h1>
+            }
+        }*@
+
+        <ul>
+            @foreach (var a in ViewBag.Value)
+            {
+                <li>
+                    @{
+                        var tmp = (KeyValuePair<OM.Attribute, List<string>>) a;
+                        @Html.Raw(tmp.Key);
+                        <ul>
+                        @foreach (var value in tmp.Value)
+                        {
+                            <li>@Html.Raw(value)</li>
+                        }
+                       </ul>
+                      
+                    }
+                </li>
+            }
+        </ul>
+    </div>
+}
+
+@if (ViewBag.co == '3')
+{
+    <div class="col-md-10 col-sm-8 main-content ">
+        <!--Main content code to be written here -->
+
+        @if (ViewBag.directDomains != null)
+        {
+            <h1> directDomains </h1>
+            foreach (var a in ViewBag.directDomains)
+            {
+                string s = "GetInvidual?id=" + @a.Id;
+                <h1> <a href=@s> @a.Id </a> </h1>
+            }
+        }
+        @if (ViewBag.allDomains != null)
+        {
+            <h1>allDomains </h1>
+            foreach (var a in ViewBag.allDomains)
+            {
+
+                string s = "GetInvidual?id=" + @a.Id;
+                <h1>
+                    <a href=@s>@a.Id</a>
+                </h1>
+            }
+        }      
+    </div>
+}
