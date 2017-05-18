@@ -26,6 +26,9 @@
         <Class IRI="#Oc"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#DacTinhCuaThuoc"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#BongNho"/>
     </Declaration>
     <Declaration>
@@ -47,16 +50,19 @@
         <NamedIndividual IRI="#SauCanGie"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#GiongLua"/>
+        <NamedIndividual IRI="#ThayGay"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#ThayGay"/>
+        <Class IRI="#GiongLua"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#KhongTroBong"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#coGiaiDoan2"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#NguonGoc"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#GiongTBR-45"/>
@@ -68,16 +74,19 @@
         <NamedIndividual IRI="#ChopReBuu"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#ThoiTietNong"/>
+        <ObjectProperty IRI="#coGiaiDoan"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#coGiaiDoan"/>
+        <NamedIndividual IRI="#ThoiTietNong"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasMembershipFunction"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#BeThoi"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OcChery"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#DeNhanhKem"/>
@@ -92,7 +101,16 @@
         <NamedIndividual IRI="#ThanThoi"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#OcGao"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#LuongPhanBon"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#DamNhieu"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Damycine"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#DoAmTrungBinh"/>
@@ -102,6 +120,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#BenhKhoVan"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#dandy_15_EC"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#LaKho"/>
@@ -116,10 +137,10 @@
         <NamedIndividual IRI="#BenhDomNauHaiLua"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#PhanHonHop"/>
+        <NamedIndividual IRI="#ReKho"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#ReKho"/>
+        <NamedIndividual IRI="#PhanHonHop"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ChauChau"/>
@@ -137,6 +158,9 @@
         <NamedIndividual IRI="#GiaiDoanLamDong"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#NgoDocPhen"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#SauDucThanNamVachDauNau"/>
     </Declaration>
     <Declaration>
@@ -146,10 +170,10 @@
         <NamedIndividual IRI="#QuyTrinhTuoiNuocTro"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#DoAm"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocSauDeNhanh"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#QuyTrinhTuoiNuocSauDeNhanh"/>
+        <Class IRI="#DoAm"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#QuyTrinhTuoiNuocSauSa5-20Ngay"/>
@@ -158,10 +182,10 @@
         <NamedIndividual IRI="#NhietDoThap"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#QuyTrinhTuoiNuocChinSua"/>
+        <NamedIndividual IRI="#PhanDam"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#PhanDam"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocChinSua"/>
     </Declaration>
     <Declaration>
         <Class IRI="#PhanHuuCo"/>
@@ -200,6 +224,9 @@
         <NamedIndividual IRI="#ChieuCaoThap"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#OcNhot"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#ChopLaXoan"/>
     </Declaration>
     <Declaration>
@@ -209,10 +236,10 @@
         <NamedIndividual IRI="#BenhTuyenTrung"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#NangIt"/>
+        <Class IRI="#Co"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Co"/>
+        <NamedIndividual IRI="#NangIt"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Sau"/>
@@ -221,10 +248,10 @@
         <NamedIndividual IRI="#QuyTrinhBonThucDot1"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#GiongDV108"/>
+        <Class IRI="#QuyTrinhKichThich"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#QuyTrinhKichThich"/>
+        <NamedIndividual IRI="#GiongDV108"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#MuaIt"/>
@@ -275,28 +302,28 @@
         <NamedIndividual IRI="#ThanUn"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#GanLaXung"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#GiaiDoan"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#QuyTrinhTuoiNuocSauSa20-25Ngay"/>
+        <NamedIndividual IRI="#GanLaXung"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Phan"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Ray"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocSauSa20-25Ngay"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#LaChay"/>
+        <NamedIndividual IRI="#Ray"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#BenhChayBiaLa"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#tuNgayCachLy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LaChay"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#SauKeo"/>
@@ -320,10 +347,13 @@
         <NamedIndividual IRI="#SauNan"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#LaHoiVang"/>
+        <NamedIndividual IRI="#VuHeThu"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#PhanViLuong"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LaHoiVang"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#BenhVangTamThoi"/>
@@ -344,6 +374,12 @@
         <NamedIndividual IRI="#ReIt"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#OcNgua"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Binhtin_75_WP"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#BenhBuuRe"/>
     </Declaration>
     <Declaration>
@@ -356,19 +392,28 @@
         <Class IRI="#NuocRuong"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#PhanVoCo"/>
+        <DataProperty IRI="#BienPhapKhacPhuc"/>
     </Declaration>
     <Declaration>
-        <Datatype abbreviatedIRI="xsd:string"/>
+        <DataProperty IRI="#LuongThuoc"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PhanVoCo"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#LaXanhDam"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#RayNau"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#OcBoTri"/>
+        <DataProperty IRI="#TinhThichNghi"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ĐacTinhNongHoc"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RayNau"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#QuyTrinhBonLot"/>
@@ -386,10 +431,10 @@
         <NamedIndividual IRI="#LaVechDom"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#BenhThoiThan"/>
+        <Class IRI="#VuMua"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#VuMua"/>
+        <NamedIndividual IRI="#BenhThoiThan"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#NuocIt"/>
@@ -407,19 +452,34 @@
         <NamedIndividual IRI="#HienTuongNgoDocHuuCo"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#denNgayCachLy"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#NuocCao"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#RayXanhDuoiDen"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#denNgayCachLy"/>
+        <DataProperty IRI="#LieuLuong"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#NhuCauNuocOGiaiDoan"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ThoiGianPhunThuoc"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ReUn"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#dana-win_12.5_WP"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#DamThieu"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#dibavil_50FL_50_WP"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#moTa"/>
@@ -434,19 +494,22 @@
         <NamedIndividual IRI="#SauDucThanHaiCham"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#BenhTungo"/>
+        <NamedIndividual IRI="#DatKho"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Dat"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#DatKho"/>
+        <NamedIndividual IRI="#BenhTungo"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ReNgan"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#RuongSau"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#TriSauBenhHai"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#QuyTrinhKichThichMa"/>
@@ -479,6 +542,9 @@
         <NamedIndividual IRI="#KhongHat"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#LuongNuoc"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#PhanLan"/>
     </Declaration>
     <Declaration>
@@ -495,6 +561,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#QuyTrinhTuoiNuoc"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RuongCan"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#GiongGL105"/>
@@ -533,10 +602,16 @@
         <NamedIndividual IRI="#GiaiDoanMa"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#SauDoiDucBe"/>
+        <NamedIndividual IRI="#A1VAN_6.4SL"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#ten"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SauDoiDucBe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Bisomin_6WP_2SL"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#CayDay"/>
@@ -554,34 +629,40 @@
         <NamedIndividual IRI="#LaXanh"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#DIBAZOLE_5SC"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#BenhDaoOn"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#QuyTrinhTuoiNuocChinSap"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#GiaiDoanGieo"/>
+        <NamedIndividual IRI="#BiaLaChay"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#BiaLaChay"/>
+        <NamedIndividual IRI="#GiaiDoanGieo"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#thanhPhan"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#SauDucThan"/>
+        <DataProperty IRI="#DacDiem"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#GiongTBR255"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#LaVangCam"/>
+        <NamedIndividual IRI="#SauDucThan"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#GiaiDoanDeNhanh"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#QuyTrinhTuoiNuocChinHoanToan"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LaVangCam"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#BenhVangLun"/>
@@ -593,13 +674,16 @@
         <NamedIndividual IRI="#SauCuonLaNho"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Thuoc"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#BongIt"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Thuoc"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#HatLep"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GiongDH815-6"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#PhanPhucHop"/>
@@ -608,19 +692,19 @@
         <Class IRI="#HienTuong"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#GiongDH815-6"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#GioLon"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#GiaiDoanTro"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#BenhLunXoanLa"/>
+        <NamedIndividual IRI="#OcLac"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#LaHinhBacThang"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BenhLunXoanLa"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#BoTri"/>
@@ -630,6 +714,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Benh"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ChatLuongGao"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#GiongSV46"/>
@@ -741,6 +828,10 @@
         <Class IRI="#Sau"/>
         <Class IRI="#TacNhanGayBenh"/>
     </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Thuoc"/>
+        <NamedIndividual IRI="#A1VAN_6.4SL"/>
+    </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#TrieuChung"/>
         <NamedIndividual IRI="#BeThoi"/>
@@ -822,6 +913,14 @@
         <NamedIndividual IRI="#BiaLaChay"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Thuoc"/>
+        <NamedIndividual IRI="#Binhtin_75_WP"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Thuoc"/>
+        <NamedIndividual IRI="#Bisomin_6WP_2SL"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Sau"/>
         <NamedIndividual IRI="#BoLa"/>
     </ClassAssertion>
@@ -866,12 +965,20 @@
         <NamedIndividual IRI="#CoNhieu"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Thuoc"/>
+        <NamedIndividual IRI="#DIBAZOLE_5SC"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#TrieuChung"/>
         <NamedIndividual IRI="#DamNhieu"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#TrieuChung"/>
         <NamedIndividual IRI="#DamThieu"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Thuoc"/>
+        <NamedIndividual IRI="#Damycine"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Dat"/>
@@ -1106,6 +1213,10 @@
         <NamedIndividual IRI="#NangXuatKem"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#HienTuong"/>
+        <NamedIndividual IRI="#NgoDocPhen"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#NhietDo"/>
         <NamedIndividual IRI="#NhietDoCao"/>
     </ClassAssertion>
@@ -1123,11 +1234,27 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Oc"/>
-        <NamedIndividual IRI="#OcBoTri"/>
+        <NamedIndividual IRI="#OcBuuVang"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Oc"/>
-        <NamedIndividual IRI="#OcBuuVang"/>
+        <NamedIndividual IRI="#OcChery"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Oc"/>
+        <NamedIndividual IRI="#OcGao"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Oc"/>
+        <NamedIndividual IRI="#OcLac"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Oc"/>
+        <NamedIndividual IRI="#OcNgua"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Oc"/>
+        <NamedIndividual IRI="#OcNhot"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Oc"/>
@@ -1287,6 +1414,10 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#DoSauRuong"/>
+        <NamedIndividual IRI="#RuongCan"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DoSauRuong"/>
         <NamedIndividual IRI="#RuongSau"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1385,6 +1516,22 @@
         <Class IRI="#VuMua"/>
         <NamedIndividual IRI="#VuDongXuan"/>
     </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#VuMua"/>
+        <NamedIndividual IRI="#VuHeThu"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Thuoc"/>
+        <NamedIndividual IRI="#dana-win_12.5_WP"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Thuoc"/>
+        <NamedIndividual IRI="#dandy_15_EC"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Thuoc"/>
+        <NamedIndividual IRI="#dibavil_50FL_50_WP"/>
+    </ClassAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#coGiaiDoan"/>
         <NamedIndividual IRI="#QuyTrinhBonDong"/>
@@ -1465,6 +1612,46 @@
         <NamedIndividual IRI="#QuyTrinhTuoiNuocTrongDeNhanh"/>
         <NamedIndividual IRI="#GiaiDoanLamDong"/>
     </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DacTinhCuaThuoc"/>
+        <NamedIndividual IRI="#A1VAN_6.4SL"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">là thuốc diệt khuẩn mạnh, phổ tác dụng rộng , hiệu lực cao kích thích sinh trưởng cây trồng, k</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#LieuLuong"/>
+        <NamedIndividual IRI="#A1VAN_6.4SL"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">0,3-0,5 lít / ha</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#LuongNuoc"/>
+        <NamedIndividual IRI="#A1VAN_6.4SL"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">320-400lít</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#LuongThuoc"/>
+        <NamedIndividual IRI="#A1VAN_6.4SL"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">pha 8 - 10 ml/ bình 8 lít</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ThoiGianPhunThuoc"/>
+        <NamedIndividual IRI="#A1VAN_6.4SL"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">phun trên mặt lá, phun trước 9 h sáng hoặc sau 4 h chiều</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#TriSauBenhHai"/>
+        <NamedIndividual IRI="#A1VAN_6.4SL"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">bệnh đốm sọc vi khuẩn ( bạc lá), đạo ôn,</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#thanhPhan"/>
+        <NamedIndividual IRI="#A1VAN_6.4SL"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Coppercitrate</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tuNgayCachLy"/>
+        <NamedIndividual IRI="#A1VAN_6.4SL"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">7 ngày</Literal>
+    </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#BeThoi"/>
@@ -1536,6 +1723,96 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Bìa lá cháy</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#DacTinhCuaThuoc"/>
+        <NamedIndividual IRI="#Binhtin_75_WP"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">là thuốc trừ bệnh nội hấp, đặc trị bệnh đạo ôn hại lúa từ giai đoạn mạ đến khi thu hoạch do nấm Pyricularia Oryzae gây</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#LieuLuong"/>
+        <NamedIndividual IRI="#Binhtin_75_WP"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">2 LÍT / HA</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#LuongNuoc"/>
+        <NamedIndividual IRI="#Binhtin_75_WP"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">320-400</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#LuongThuoc"/>
+        <NamedIndividual IRI="#Binhtin_75_WP"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">400 - 600 lít / ha</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#LuongThuoc"/>
+        <NamedIndividual IRI="#Binhtin_75_WP"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">PHA 50 ML/ BÌNH 8 lít  pha 4 bình 8 lít / 1000 m^2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#LuongThuoc"/>
+        <NamedIndividual IRI="#Binhtin_75_WP"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">pha 5-6 g / bình 8 lít  Phun 4-5 bình / công</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ThoiGianPhunThuoc"/>
+        <NamedIndividual IRI="#Binhtin_75_WP"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">phun khi bện mới chớm xuất hiện nếu bện nặng phun lần 2 sau 7- 10 ngày</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#TriSauBenhHai"/>
+        <NamedIndividual IRI="#Binhtin_75_WP"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">đạo ôn lá, thân lúa, cổ bông,</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#thanhPhan"/>
+        <NamedIndividual IRI="#Binhtin_75_WP"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Tricyclazole 75 %</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tuNgayCachLy"/>
+        <NamedIndividual IRI="#Binhtin_75_WP"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">7 ngày</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DacTinhCuaThuoc"/>
+        <NamedIndividual IRI="#Bisomin_6WP_2SL"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">có nguốn gốc sinh học có tác dụng động nội hấp đặc trị bệnh đạo ôn, bạc lá lúa , thối quả còn phòng trị được các bênh do vi khuẩn gây ra như thối nhũn héo úa..</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#LieuLuong"/>
+        <NamedIndividual IRI="#Bisomin_6WP_2SL"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">2 LÍT / HA</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#LuongNuoc"/>
+        <NamedIndividual IRI="#Bisomin_6WP_2SL"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">400-600 lít/ ha</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#LuongThuoc"/>
+        <NamedIndividual IRI="#Bisomin_6WP_2SL"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">PHA 50 ML/ BÌNH 8 lít  pha 4 bình 8 lít / 1000 m^2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ThoiGianPhunThuoc"/>
+        <NamedIndividual IRI="#Bisomin_6WP_2SL"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">phun khi bệnh vừa chớm xuất hiện</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#TriSauBenhHai"/>
+        <NamedIndividual IRI="#Bisomin_6WP_2SL"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">bệnh đạo ôn, bạc lá lúa, thối hạt</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#thanhPhan"/>
+        <NamedIndividual IRI="#Bisomin_6WP_2SL"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Kasugamycin 6 % - 2 %</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tuNgayCachLy"/>
+        <NamedIndividual IRI="#Bisomin_6WP_2SL"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">7 ngày</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#BoLa"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Bọ lá</Literal>
@@ -1591,6 +1868,31 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Cỏ nhiều</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#DacTinhCuaThuoc"/>
+        <NamedIndividual IRI="#DIBAZOLE_5SC"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">là thuốc trừ bệnh có tác dụng nội hấp , phổ tác dụng rộng , có tác dụng phòng trừ bệnh hại</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ThoiGianPhunThuoc"/>
+        <NamedIndividual IRI="#DIBAZOLE_5SC"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">phun ngay sau khi bệnh chớm xuất hiện để có hiệu quả cao nhất</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#TriSauBenhHai"/>
+        <NamedIndividual IRI="#DIBAZOLE_5SC"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">vàng lá chín sớm, lem lép hạt, đạo ôn, gỉ sắt, phấn trắng , phấn trắng, khô vằn</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#thanhPhan"/>
+        <NamedIndividual IRI="#DIBAZOLE_5SC"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Hexaconazole 5 % - 10 % dung môi và phụ gia vừa đủ</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tuNgayCachLy"/>
+        <NamedIndividual IRI="#DIBAZOLE_5SC"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">10 ngày</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#DamNhieu"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Đạm nhiều</Literal>
@@ -1599,6 +1901,46 @@
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#DamThieu"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Đạm thiếu</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DacTinhCuaThuoc"/>
+        <NamedIndividual IRI="#Damycine"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">là thuốc kháng sinh trừ nấm bệnh có tính lưu dẫn cao, đặc tị đùng để trị bệnh khô vằng hại lúa</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#LieuLuong"/>
+        <NamedIndividual IRI="#Damycine"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">3SL</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#LuongNuoc"/>
+        <NamedIndividual IRI="#Damycine"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">400-600 lít</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#LuongThuoc"/>
+        <NamedIndividual IRI="#Damycine"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">1.5-2 lít / ha</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ThoiGianPhunThuoc"/>
+        <NamedIndividual IRI="#Damycine"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">phun khi bệnh vừa chớm xuất hiên</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#TriSauBenhHai"/>
+        <NamedIndividual IRI="#Damycine"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">khô vằng</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#thanhPhan"/>
+        <NamedIndividual IRI="#Damycine"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Validamycin A 3 % - 5 %</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tuNgayCachLy"/>
+        <NamedIndividual IRI="#Damycine"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">14 ngày</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
@@ -1676,6 +2018,13 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">10</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#NhuCauNuocOGiaiDoan"/>
+        <NamedIndividual IRI="#GiaiDoanGieo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Hạt giống mới được gieo xuống ruộng  cho đến 2-3 ngày sau gieo (hình
+3.20b), ruộng chỉ cần độ ẩm bão hòa. Bị ngập nước ở giai đoạn này còn ảnh hưởng
+xấu đến quá trình mọc mầm của hạt, thậm chí mầm không mọc được.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#denNgay"/>
         <NamedIndividual IRI="#GiaiDoanGieo"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
@@ -1691,6 +2040,14 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#NhuCauNuocOGiaiDoan"/>
+        <NamedIndividual IRI="#GiaiDoanLamDong"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Lúc này cây lúa bắt đầu bướcvào thời kỳ đẻ nhánh. Chỉ cần mựcnước săm sắp mặt ruộng.
+Nước ngập sâu cây lúa đẻ nhánh yếu.
+lúa trong giai đoạn đẻ nhánh: Mực nước trong ruộng từ 3-5cm
+lúa sau giai đoạn đẻ nhánh: Từ 30-40 ngày sau sạ (hình 3.28), tức là sau giai đoạn đẻ nhánh. Lúc này để ruộng cạn, mặt ruộng không có nước, ruộng lúa khô ráo, thông thoáng,các lá già bên dưới khô, ít bị bệnh</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#denNgay"/>
         <NamedIndividual IRI="#GiaiDoanLamDong"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">45</Literal>
@@ -1704,6 +2061,23 @@
         <DataProperty IRI="#tuNgay"/>
         <NamedIndividual IRI="#GiaiDoanLamDong"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">20</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#NhuCauNuocOGiaiDoan"/>
+        <NamedIndividual IRI="#GiaiDoanMa"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Sau sạ từ 5-7 ngày: Cây
+lúa cần lớp nước mỏng săm
+sắp mặt ruộng . - Lúc này ruộng bị khô sẽ
+tổn thương đến rễ lúa, nên
+không thể để ruộng khô nứt nẻ
+.Để bộ rễ lúa không tổn
+thương, phải luôn duy trì lớp
+nước trên mặt ruộng đồng thời có tác dụng
+cho cây lúa hấp thụ phân bón
+dễ dàng và ém không cho hạt
+cỏ dại mọc.  Duy trì lớp nước ở mặt
+ruộng cho đến khi cây lúa
+được 20 ngày sau gieo.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#denNgay"/>
@@ -1764,6 +2138,21 @@ Khoảng cách gieo: hàng cách hàng 20 cm.</Literal>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#NhuCauNuocOGiaiDoan"/>
+        <NamedIndividual IRI="#GiaiDoanTro"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">nhu cầu nước của cây lúa ở thời kỳ chín sáp: 
+Đầu thời kỳ chín sáp tức là sau khi trỗ khoảng 10 ngày, để nước săm sáp mặt ruộng.Đến cuối thời kỳ chín sáp (sautrỗ 20 ngày) bắt đầu rút cạn hết
+nước ở mặt ruộng.
+ nhu cầu nước của cây lúa ở thời kỳ chín hoàn toàn: 
+Ở thời kỳ chín hoàn toàn,lúa không cần nước, chỉ cần độẩm đất của ruộng lúa từ 60-70%  đến khi thuhoạch được, ruộng khô sẽ dễ
+dàng cho thu hoạch.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#NhuCauNuocOGiaiDoan"/>
+        <NamedIndividual IRI="#GiaiDoanTro"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Ở giai đoạn lúa trỗ, mực nước trong ruộng từ 5-10cm là vừa. Ruộng khô lúa sẽ bị lép nhiều, ruộng ngập nước sâu (trên 20 cm), ảnh hưởng đến trỗ bông, thậm chí bị thối đòng.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#denNgay"/>
         <NamedIndividual IRI="#GiaiDoanTro"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">65</Literal>
@@ -1784,9 +2173,47 @@ Khoảng cách gieo: hàng cách hàng 20 cm.</Literal>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Gió lớn</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#ChatLuongGao"/>
+        <NamedIndividual IRI="#GiongBT7"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Ra hạt gạo chất lượng tốt.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#NguonGoc"/>
+        <NamedIndividual IRI="#GiongBT7"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Là giống lúa thơm, chất lượng cao có nguồn gốc xuất xứ từ Trung Quốc.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#TinhThichNghi"/>
+        <NamedIndividual IRI="#GiongBT7"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Thời vụ gieo cấy nên kết hợp theo hướng dẫn của TT khuyến nông mỗi địa phương.
+
+– Tuyệt đối không được bón đạm lai dai.
+
+– Có thể sử dụng các loại phân NPK khác, bón theo hướng dẫn trên bao bì…
+
+– Phòng trừ sâu đục thân và bệnh bạc lá đặc biệt trong vụ Mùa.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#GiongBT7"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Giống BT7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ĐacTinhNongHoc"/>
+        <NamedIndividual IRI="#GiongBT7"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Là giống cảm ôn, nên gieo cấy được cả hai vụ,, vụ mùa và vụ xuân.
+
+– Thời gian sinh trưởng: vụ Xuân 130-135 ngày, vụ Mùa 105-110 ngày.
+
+– Cao cây từ 90-100 cm, đẻ nhánh khá, hạt thon nhỏ, màu vàng sẫm.
+
+– Khối lượng 1000 hạt 19-20 gram, phẩm chất gạo ngon, cơm thơm, mềm.
+
+– Năng suất trung bình 45-50 tạ/ha, thâm canh tốt có thể đạt 55 – 60 tạ/ha.
+
+– Ra hạt gạo chất lượng tốt.
+
+– Chống đổ trung bình, chịu rét khá.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
@@ -1794,9 +2221,59 @@ Khoảng cách gieo: hàng cách hàng 20 cm.</Literal>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Giống DH815-6</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#ChatLuongGao"/>
+        <NamedIndividual IRI="#GiongDV108"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Gạo trong, chất lượng trung bình.
+
+Năng suất trung bình: 75 - 80 tạ/ha.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#NguonGoc"/>
+        <NamedIndividual IRI="#GiongDV108"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Là giống lúa thuần nhập nội từ Trung Quốc, có tên gốc là Phong việt.
+Được công nhận giống theo Quyết định số 5218 BNN-KHCN/QĐ, ngày 16 tháng 11 năm 2000.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#TinhThichNghi"/>
+        <NamedIndividual IRI="#GiongDV108"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Khả năng chịu rét, chống đổ, chịu nóng và chịu hạn khá.
+
+Là giống nhiễm nhẹ với bệnh Đạo ôn và bệnh</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#GiongDV108"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Giống ĐV 108</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ĐacTinhNongHoc"/>
+        <NamedIndividual IRI="#GiongDV108"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ĐV 108 là giống cảm ôn, ngắn ngày, thích ứng rộng, gieo cấy được cả 2 vụ. Thời gian sinh trưởng ở trà Đông Xuân là 125 - 130 ngày, ở trà vụ Mùa l 105 – 110 ngày.
+
+Chiều cao cây: 90 - 95 cm. Sinh trưởng khá mạnh, dạng hình đẹp, năng suất ổn định.
+
+Hạt hơi bầu, màu vàng sáng.
+
+Chiều dài hạt trung bình: 6,25 mm.
+
+Tỷ lệ chiều dài/ chiều rộng hạt là: 2,85.
+
+Trọng lượng 1000 hạt: 22 – 23 gram.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ChatLuongGao"/>
+        <NamedIndividual IRI="#GiongGL105"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Hạt gạo thon dài, trong, phẩm chất gạo ngon, cơm mềm, đậm, giòn.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#NguonGoc"/>
+        <NamedIndividual IRI="#GiongGL105"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Giống lúa Gia Lộc 105 (GL105) được lai tạo từ tổ hợp P6/Xi23//IRBB7/Q5 và chọn lọc theo phương pháp phả hệ. Giống đã được công nhận giống cây trồng mới theo Quyết định số 398/QĐ-TT-CLT ngày 26/9/2019 của Cục Trồng trọt, Bộ Nông nghiệp và PTNT.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#TinhThichNghi"/>
+        <NamedIndividual IRI="#GiongGL105"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Giống thích hợp gieo trồng cả  2 vụ/năm trên các chân đất vàn, vàn cao, vàn thấp</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
@@ -1804,9 +2281,34 @@ Khoảng cách gieo: hàng cách hàng 20 cm.</Literal>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Giống GL105</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#ĐacTinhNongHoc"/>
+        <NamedIndividual IRI="#GiongGL105"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">- Thời gian sinh trưởng: Vụ mùa: 105 - 110 ngày; Vụ xuân: 130 - 140 ngày.
+- Chiều cao cây: 100 cm, sinh trưởng nhanh, mạnh, đẻ nhánh khỏe và đều, bộ lá màu xanh đậm, bông to, hạt thon dài, xếp hạt trung bình và có màu vàng sáng, chắc rất cao, hạt mẩy. Khối lượng 1000 hạt từ 22 - 23 gam.
+- Giống GL105 có khả năng chống đổ tốt, ít nhiễm đạo ôn, rầy nâu và bạc lá.
+- Năng suất thực thu trung bình:
++ Vụ xuân: 70 - 75 tạ/ha, thâm canh tốt có thể đạt 80 – 85 tạ /ha.
+ + Vụ mùa: 60 - 65 tạ/ha, thâm canh tốt có thể đạt 75 tạ/ha.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#GiongOM8923"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Giống OM8923</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ChatLuongGao"/>
+        <NamedIndividual IRI="#GiongSV181"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Cơm thơm ngon, gạo trong ít bạc bụng, cơm mềm, đậm cơm, mùi thơm nhẹ.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#NguonGoc"/>
+        <NamedIndividual IRI="#GiongSV181"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Do Công ty TNHH MTV Giống cây trồng Quảng Bình chọn tạo, sản xuất và cung ứng. Sản phẩm độc quyền đã được đăng ký quyền sở hữu trí tuệ.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#TinhThichNghi"/>
+        <NamedIndividual IRI="#GiongSV181"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Căn cứ vào thời gian sinh trưởng của giống và điều kiện sản xuất của địa phương để bố trí thời vụ thích hợp, gieo cùng trà giống PC6 và sau trà giống HT1, KD18 khoảng 5-7 ngày.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
@@ -1814,9 +2316,19 @@ Khoảng cách gieo: hàng cách hàng 20 cm.</Literal>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Giống SV 181</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#ĐacTinhNongHoc"/>
+        <NamedIndividual IRI="#GiongSV181"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">hiều cao cây 95-105 cm, sinh trưởng tốt, đẻ nhánh khỏe và tập trung, bộ lá đứng màu xanh nhạt. Bông to, xếp gié dày, nhiều hạt 170 - 200 hạt/bông, dạng hạt dài bầu, tỷ lệ chắc cao, vỏ trấu màu vàng sáng, khối lượng 1000 hạt 23-24 gam. Chống chịu rét, chịu nóng khá và chống đổ ngã tốt. Giống lúa phổ thích ứng sản xuất rộng trên nhiều vùng miền, nhiều chân đất đều cho năng suất cao.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#GiongSV46"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Giống SV 46</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ChatLuongGao"/>
+        <NamedIndividual IRI="#GiongSV47"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">chất lượng gạo ngon hơn hẳn giống Khang dân 18.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
@@ -1824,9 +2336,51 @@ Khoảng cách gieo: hàng cách hàng 20 cm.</Literal>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Giống SV 47</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#ĐacTinhNongHoc"/>
+        <NamedIndividual IRI="#GiongSV47"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">SV47 có TGST vụ HT 90-95 ngày; vụ ĐX 95-100 ngày, tương đương giống Khang dân 18. Chiều cao cây 100-105 cm, dạng hình đẹp, cứng cây, đẻ nhánh khá. Chiều dài bông 23,5-24 cm, bông to, nhiều hạt, hạt xếp sít, nhiều gié, số hạt/bông 140-200 hạt, dạng hạt thon.  Tiềm tăng năng suất từ 65-70 tạ/ha, vượt giống Khang dân 18 từ 10-12%. Nếu đầu tư thâm canh cao có thể đạt trên 70 tạ/ha, chất lượng gạo ngon hơn hẳn giống Khang dân 18.Qua khảo nghiệm, giống SV47 chống chịu sâu bệnh khá, nhiều vụ chưa thấy xuất hiện các loại sâu bệnh nguy hại chính, chịu úng và rét khá, chịu thâm canh, thích ứng rộng.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ChatLuongGao"/>
+        <NamedIndividual IRI="#GiongTBR-1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Tỷ lệ gạo lật 83,0%, tỷ lệ gạo xát 72,1%, tỷ lệ gạo nguyên/gạo xát 78,6%, chiều dài hạt gạo 6,0 - 6,2 mm, tỷ lệ D/R 2,3 - 2,4, hàm lượng Amylose trung bình 24,7%; chất lượng gạo khá, hàm lượng tinh bột cao, phù hợp với chế biến.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#NguonGoc"/>
+        <NamedIndividual IRI="#GiongTBR-1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">TBR-1 là giống lúa thuần do Công ty CP Tổng Công ty Giống cây trồng Thái Bình chọn tạo, được công nhận giống Quốc gia năm 2006.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#TinhThichNghi"/>
+        <NamedIndividual IRI="#GiongTBR-1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Nhiễm nhẹ bệnh đạo ôn (điểm 0 - 1), bạc lá (điểm 1 - 3), khô vằn (điểm 0 - 3), rầy nâu (điểm 0 - 1).
+ TBR-1 là giống lúa cảm ôn, canh tác được các vụ trong năm. Thích ứng rộng, thích hợp với chân đất vàn, vàn cao.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#GiongTBR-1"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Giống TBR-1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ĐacTinhNongHoc"/>
+        <NamedIndividual IRI="#GiongTBR-1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Thời gian sinh trưởng ở Miền Bắc: vụ Xuân 125 - 135 ngày, vụ Mùa 105 - 110 ngày; chiều cao cây 105 - 110 cm; cứng cây, đẻ nhánh trung bình, lá đòng thẳng, trỗ bông tập trung; bông dài 26 - 27 cm; xếp sít, hạt bán thon, khối lượng 1000 hạt 25 - 26 gam; năng suất trung bình 70 - 75 tạ/ha, thâm canh tốt đạt 80 - 90 tạ/ha.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ChatLuongGao"/>
+        <NamedIndividual IRI="#GiongTBR-45"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Tỷ lệ gạo lật 79,4 - 80,6%, tỷ lệ gạo xát 65,5 - 71,6%, tỷ lệ gạo nguyên/gạo xát 70,5 - 75,1%, chiều dài hạt gạo 6,0 - 6,4 mm, tỷ lệ D/R 3,0 - 3,2, hàm lượng Amylose thấp 14,7%; chất lượng gạo ngon, cơm mềm, dẻo, thích hợp làm các loại bánh gạo.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#NguonGoc"/>
+        <NamedIndividual IRI="#GiongTBR-45"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">TBR45 là giống lúa thuần do Công ty CP Tổng Công ty Giống cây trồng Thái Bình chọn tạo, được công nhận giống Quốc gia năm 2011.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#TinhThichNghi"/>
+        <NamedIndividual IRI="#GiongTBR-45"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Chịu rét tốt và khả năng chịu mặn 3 - 4‰; chống đổ tốt; chống chịu tốt với bệnh đạo ôn (điểm 0 - 1), bạc lá (điểm 1 - 3), khô vằn (điểm 1 - 3), rầy nâu (điểm 0 - 3), nhiễm nhẹ bệnh đốm nâu (điểm 0 - 1) và đốm sọc vi khuẩn.
+TBR45 là giống cảm ôn, ngắn ngày, canh tác được các vụ trong năm; thích hợp với chân đất vàn, vàn cao, có thể gieo cấy trên đất mặn 3 - 4‰.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
@@ -1834,9 +2388,45 @@ Khoảng cách gieo: hàng cách hàng 20 cm.</Literal>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Giống TBR-45</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#ĐacTinhNongHoc"/>
+        <NamedIndividual IRI="#GiongTBR-45"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Thời gian sinh trưởng ở Miền Bắc: Vụ Xuân 125 - 135 ngày, vụ Mùa 105 - 110 ngày; chiều cao cây 110 - 115 cm, cứng cây, dạng hình đẹp, trỗ bông tập trung, bông dài 27 – 29 cm, nhiều gié, hạt thon dài,  khối lượng 1000 hạt 19 - 21 gam; năng suất trung bình 65 - 70 tạ/ha, thâm canh tốt đạt 75 - 80 tạ/ha.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ChatLuongGao"/>
+        <NamedIndividual IRI="#GiongTBR255"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">chất lượng gạo ngon, gạo trắng, trong, cơm mềm, vị đậm, có mùi thơm đặc trưng.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#NguonGoc"/>
+        <NamedIndividual IRI="#GiongTBR255"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">TBR225 là giống lúa thuần do Công ty CP Tổng Công ty Giống cây trồng Thái Bình lai tạo, được công nhận giống Quốc gia năm 2015.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#GiongTBR255"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Giống TBR255</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ĐacTinhNongHoc"/>
+        <NamedIndividual IRI="#GiongTBR255"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">TBR225 là giống cảm ôn, ngắn ngày, gieo cấy được cả 2 vụ trong năm; thích ứng rộng; chịu thâm canh, có khả năng làm lúa tái sinh tốt, đẻ nhánh khỏe; phù hợp gieo cấy theo công nghệ hàng rộng, hàng hẹp; thời gian sinh trưởng: Vụ Xuân 120 - 132 ngày, vụ Mùa 105 - 110 ngày; chiều cao cây 110 - 115 cm, cứng cây, trỗ bông tập trung; bông to, dài, nhiều hạt, hạt thon dài, khối lượng 1000 hạt 24 - 25 gam; nhiễm nhẹ bệnh đạo ôn, bạc lá; năng suất trung bình 70 - 75 tạ/ha, thâm canh tốt đạt 85 - 90 tạ/ha; tỷ lệ gạo xay xát cao (68 - 72%); chất lượng gạo ngon, gạo trắng, trong, cơm mềm, vị đậm, có mùi thơm đặc trưng.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ChatLuongGao"/>
+        <NamedIndividual IRI="#GiongTBR36"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Tỷ lệ gạo lật 79,8 - 81,0%, tỷ lệ gạo xát 67,8 - 71,6%, tỷ lệ gạo nguyên/gạo xát 70,5 - 78,3%, chiều dài hạt gạo 6,6 - 6,7 mm, tỷ lệ D/R 3,2 - 3,3, hàm lượng Amylose rất cao 29,0 - 30,1%; chất lượng gạo trung bình, thích hợp cho chế biến thức ăn.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#NguonGoc"/>
+        <NamedIndividual IRI="#GiongTBR36"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">TBR36 là giống lúa thuần do Công ty CP Tổng Công ty Giống cây trồng Thái Bình chọn tạo, được công nhận giống Quốc gia năm 2011.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#TinhThichNghi"/>
+        <NamedIndividual IRI="#GiongTBR36"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Chịu hạn và chua phèn tốt; chống đổ tốt; chống chịu tốt với bệnh đạo ôn (điểm 0 - 1), khô vằn (điểm 1 - 3), bạc lá (0 - 3), rầy nâu (điểm 0 - 3).
+ TBR36 là giống cảm ôn, canh tác được các vụ trong năm. Thích ứng rộng, cấy được trên nhiều loại chân đất kể cả đất chua phèn.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
@@ -1844,14 +2434,39 @@ Khoảng cách gieo: hàng cách hàng 20 cm.</Literal>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Giống TBR36</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#ĐacTinhNongHoc"/>
+        <NamedIndividual IRI="#GiongTBR36"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Thời gian sinh trưởng ở Miền Bắc: vụ Xuân 120 - 130 ngày, vụ Mùa 100 - 105 ngày; chiều cao cây 115 - 120 cm, cứng cây, đẻ nhánh khá, dạng hình đẹp, lá đòng thẳng; trỗ bông tập trung; bông dài 25 - 27 cm, rất nhiều gié, hạt thon dài, khối lượng 1000 hạt 22 - 23 gam; năng suất trung bình 70 - 75 tạ/ha, thâm canh tốt đạt 80 - 85 tạ/ha.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#HatLep"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Hạt lép</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#BienPhapKhacPhuc"/>
+        <NamedIndividual IRI="#HienTuongNgoDocHuuCo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">sử dụng viên giải độc GENO-Sica để bón cho cây giúp giải độc các hiện tượng ngộ độc hữu cơ, ngộ độc phèn.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DacDiem"/>
+        <NamedIndividual IRI="#HienTuongNgoDocHuuCo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">cây không phát triển chiều cao, đẻ nhánh kém, lá lúa vàng nhợt nhạc , trên lá lúa có nhiều vết đốm nâu nhỏ, khi nặng lá</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#HienTuongNgoDocHuuCo"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Hiện tượng ngộ độc hữu cơ</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#BienPhapKhacPhuc"/>
+        <NamedIndividual IRI="#HienTuongThieuDam"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">sử dụng GENO-N - sữa để bón bổ sung thêm nhằm khắc phục tình trạng thiếu hụt đạm nghiêm trọng trên mọi vùng đất .</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DacDiem"/>
+        <NamedIndividual IRI="#HienTuongThieuDam"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">khi bị thiếu đạm cây lúa bị còi cọc , thân cây lùn , lá vàng, các lá già và có khi tất cả các lá có màu xanh sáng va úa vàng .</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
@@ -1994,6 +2609,16 @@ Khoảng cách gieo: hàng cách hàng 20 cm.</Literal>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Năng xuất kém</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#BienPhapKhacPhuc"/>
+        <NamedIndividual IRI="#NgoDocPhen"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">sử dụng viên giải độc GENO-Sica để bón cho cây giúp giải độc các hiện tượng ngộ độc hữu cơ, ngộ độc phèn. Ngoài ra</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DacDiem"/>
+        <NamedIndividual IRI="#NgoDocPhen"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">chóp lá ngã màu vàng và cháy khô đầu lá, rễ lúa ngã nâu nhạt, vuốt rễ thấy nhám tay</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#NhietDoCao"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Nhiệt độ cao</Literal>
@@ -2015,13 +2640,33 @@ Khoảng cách gieo: hàng cách hàng 20 cm.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
-        <NamedIndividual IRI="#OcBoTri"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Ốc bọ trĩ</Literal>
+        <NamedIndividual IRI="#OcBuuVang"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Ốc bưu vàng</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
-        <NamedIndividual IRI="#OcBuuVang"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Ốc bưu vàng</Literal>
+        <NamedIndividual IRI="#OcChery"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ốc chery</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#OcGao"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ốc gạo</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#OcLac"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ốc lác</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#OcNgua"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ốc ngữa</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#OcNhot"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ốc nhớt</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
@@ -2053,9 +2698,37 @@ Khoảng cách gieo: hàng cách hàng 20 cm.</Literal>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Phân chuồng</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#DacDiem"/>
+        <NamedIndividual IRI="#PhanDam"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Phân đạm là tên gọi chung của các loại phân bón vô cơ cung cấp đạm cho cây.
+
+Đạm là chất dinh dưỡng rất cần thiết và rất quan trọng đối với cây. Đạm là nguyên tố tham gia vào thành phần chính của clorophin, prôtit, các axit amin, các enzym và nhiều loại vitamin trong cây. Bón đạm thúc đẩy quá trình tăng trưởng của cây, làm cho cây ra nhiều nhánh, phân cành, ra lá nhiều; lá cây có kích thước to, màu xanh; lá quang hợp mạnh, do đó làm tăng năng suất cây.
+ Phân đạm vô cơ gồm có:
++ Phân urê CO(NH2)2 có 46% N.
+
++ Phân đạm sunfat còn gọi là đạm SA (NH )2SO4 chứa 21% N.
+
++ Phân Clorua Amon NH4Cl có chứa 24 – 25% N
+
+
+ 
++ Phân Nitrat Amon NH4NO3 có chứa khoảng 35% N.
+
++ Phân Nitrat Canxi Ca(NO3)2 có chứa 13 -15% N.
+
++ Phân Nitrat Natri NaNO3 có chứa 15 -16% N.
+
++ Phân Cyanamit Canxi CaCN2 có chứa 20 – 21% N.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#PhanDam"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Phân đạm</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DacDiem"/>
+        <NamedIndividual IRI="#PhanDon"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">là loại phân chỉ chứa 1 trong 3 nguyên tố dinh dưỡng chủ yếu là N,P hoặc K.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
@@ -2063,9 +2736,46 @@ Khoảng cách gieo: hàng cách hàng 20 cm.</Literal>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Phân đơn</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#DacDiem"/>
+        <NamedIndividual IRI="#PhanHonHop"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Là những loại phân có chứa ít nhất là 2 dưỡng chất . Chúng bao gồm phân trộn và phân phức hợp. Hàm lượng dinh dưõng trong phân theo thứ tự là N, P,K được tính theo nồng độ phần trăm. Ví dụ: Phân NPK-16-8 tức là trong 100kg phân trên có 16kg đạm nguyên chất, 16kg p205 và 8kg K20… Ngoài các chất đa lượng  N, P, K hiện nay ở một số chủng loại phân còn có cả các chất trung và vi lượng. Thông thường phân hỗn hợp có 2 loại:
+
+– Phân trộn: Là phân được tạo thành do sự trộn đều các loại phân NPK… mà không có sự tổ hợp hóa học giữa những chất đó. Loại phân này thường có nhiều màu.
+
+– Phân phức hợp: Là loại phân có được do con đường phản ứng hóa học từ những nguyên liệu căn bản để tạo ra.
+
+– Các dạng phân hỗn hợp:
+
++ Các dạng phân đôi: Là loại phân hỗn hợp có 2 dưỡng chất quan trọng.
+
++ MAP (Monoamonium Phosphate) hàm lượng phổ biến là 12 – 61 – 0.
+
++ MKP (Mono potassium Phosphate) hàm lượng phổ biến là 0 – 52 – 34.
+
++ DAP Diamon Phosphate hàm lượng phổ biến là 18 – 46 – 0.
+
+– Các dạng phân NPK thường là: 16 – 16 – 8, 20 – 20 – 15, 24 – 24 – 20…</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#PhanHonHop"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Phân hỗn hợp</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DacDiem"/>
+        <NamedIndividual IRI="#PhanKali"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">hóm phân bón cung cấp chất dinh dưỡng kali cho cây. Kali có vai trò chủ yếu trong việc chuyển hoá năng lượng trong quá trình đồng hoá các chất dinh dưỡng của cây. Kali làm tăng khả năng chống chịu của cây đối với các tác động không lợi từ bên ngoài và chống chịu đối với một số loại bệnh. Kali tạo cho cây cứng chắc, ít đổ ngã, tăng khả năng chịu úng, chịu hạn, chịu rét. Kali làm tăng phẩm chất nông sản và góp phần làm tăng năng suất của cây.
+
+Để sử dụng hợp lý phân kali cần chú ý đến những điều sau đây:
+
+Bón kali ở các loại đất trung tính dễ làm cho đất trở nên chua. Vì vậy ở các loại đất trung tính nên kịp thời bón thêm vôi.
+Kali nên bón kết hợp với các loại phân khác.
+Kali có thể bón thúc bằng cách phun dung dịch lên lá vào các thời gian cây kết hoa, làm củ, tạo sợi.
+Có thể bón tro bếp để thay thế phân kali.
+Bón quá nhiều kali có thể gây tác động xấu lên rễ cây, làm cây teo rễ. Nếu bón quá thừa phân kali trong nhiều năm, có thể làm cho mất cân đối với natri, magiê. Khi xảy ra trường hợp này cần bón bổ sung các nguyên tố vi lượng magiê, natri.
++ Phân Kali clorua KCl có chứa 60% K20.
+
++ Phân kali sunfat K2SO4 có chứa 48 – 50% K2O.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
@@ -2073,9 +2783,24 @@ Khoảng cách gieo: hàng cách hàng 20 cm.</Literal>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Phân kali</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#DacDiem"/>
+        <NamedIndividual IRI="#PhanLan"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Phân lân super có chứa 16 – 20% P2O5
+
++ Phân lân nung chảy (Thermophotphat, lân Văn Điển) có chứa 16% P205.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#PhanLan"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Phân lân</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DacDiem"/>
+        <NamedIndividual IRI="#PhanPhucHop"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Phân phức hợp là phân trong đó chứa từ hai hay nhiều nguyên tố dinh dưỡng cần thiết cho cây trồng. * Loại phân này chủ yếulà hỗn hợp của 3 nguyên tố dinh dưỡng đa lượng (NPK).
+Sản xuất: Phân hỗn hợp được tạo thành bằng cách trộn các phân đơn (đạm, lân, kali) lại với nhau. Ví dụ trộn: 40kg phân sulfate amon, 15kg supe lân, 28kg aptit nghiền và 17 kg KCl, sẽ được 1 tạ phân hỗn hợp có thành phần NPK = 8-12-10. Trộn 40kg (NH4)2SO4, 40kg apatite và 120kg KCl được 1 tạ phân hỗn hợp có NPK = 8-12-12 Tức là trong 1 tạ phân này có 8%N, 12%P2O5, 12% K2O.
++ Hiện nay ở các nước tiên tiến người ta sản xuất phân hỗn hợp lỏng. Loại phân này bón được đều hơn, hiệu quả cao và nhanh hơn phân rắn.
+Phân lỏng thường có (15-15-15; 12-24-12; 10-30-10; 9-27-18.. .).</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
@@ -2113,9 +2838,43 @@ Khoảng cách gieo: hàng cách hàng 20 cm.</Literal>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Phân sinh học hữu cơ</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#DacDiem"/>
+        <NamedIndividual IRI="#PhanTrungLuong"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Các nguyên tó như canxi, magiê, lưu huỳnh thường được cung cấp qua thành phần phụ của phân đa lượng và chất cải tạo đất. Trong một số trường hợp cũng có bón từng loại phân riêng.
+Canxi được cấp qua bón vôi và các loại phân như phân nung chảy, supe lân.
+Lưu huỳnh được cung cấp qua bón supe lân hoặc sunfat amon.
+Magiê có nhiều trong phân nung chảy và phân kali - magiê.
+Để đáp ứng nhu cầu của cây về các nguyên tố thứ yếu phải căn cứ vào cây và phối hợp các loại phân.
+* Phân magiêlà những muối tan, tác dụng nhanh (chủ yếu là các sunphat) hoặc ở dạng tác dụng chậm. Hàm lượng dinh dưỡng có thể biểu diễn bằng Mg hoặc MgO.
+Trong các loại phân magiê tác dụng nhanh có:
+- Magiê sunfat dưới dạng muối Epson (10%Mg) hoặc phân KMg.
+- Kali magiê sunfat (coi như phân kali) hoặc phân KMg.
+Loại phân magiê tác dụng chậm có magiê cacbonat (vôi đôlômit).
+Tỷ lệ sử dụng và khả năng bị rửa trôi của Mg tan trong nước đều giống như đối với K.
+Với những vùng đất cần bón vôi thì nguồn MG rẻ nhất là vôi chứa Mg và bón mức cao sẽ đảm bảo cung cấp đủ Mg trong nhiều năm mà không sợ có tác dụng gây hai.
+* Phân lưu huỳnh là gì?
+Lưu huỳnh có tác dụng nhiều đối với cây họ đậu, cây hoa mầu (cải dầu). Phân S ngày càng được sử dụng nhiều hơn trong thực tế.
+Có loại phân lưu huỳnh tác dụng nhanh, tan trong nước như: kali sunfat hoặc magie sunfat (18%S), có hiệu quả nhất đối với hoa mầu đang lớn và có thể kể cả amôni sunfat (24%S).
+Các dạng tác dụng chậm như thạch cao (18%S) hoặc canxi sunfat là sản phẩm phụ của supe photphat (14%S) đều có thể đem dùng nếu bị sợ rửa trôi.
+Có thể bón lưu huỳnh nguyên tố (100%S) hoặc ở dạng bột hoặc ở dạng vỏ bọc ure (10-20%S).
+Tất cả các dạng phân tan và tác dụng chậm đều bón vào thời kỳ gieo hạt.
+* Phân canxi là gì?
+Canxi thường chỉ được bón thêm khi đã bón vôi mà còn thiếu. Có một số nguồn phân canxi không làm tăng pH là:
+- Loại tác dụng nhanh: Canxi clorua rắn hoặc trong dung dịch, các hợp phần có canxi dùng tưới cho lá.
+- Loại tác dụng chậm: thạch cao.
+Phân canxi bón vào đất tuy dễ sử dụng nhưng thường không tốt vì sự di chuyển trong cây bị hạn chế, trong những trường hợp này thì tưới cho lá sẽ có lợi hơn.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#PhanTrungLuong"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Phân trung lượng</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DacDiem"/>
+        <NamedIndividual IRI="#PhanViLuong"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Phân vi lượng gồm các hỗn hợp những chất hóa học nhằm cung cấp các loại nguyên tố vi lượng cho cây. Bên cạnh phân vi lượng, nhiều khi người ta còn bổ sung các nguyên tố siêu vi lượng, đất hiếm, chất kích thích sinh trưởng.
+ 
+Thiếu các nguyên tốt vi lượng, cây phát triển không toàn diện, tuy nếu bón quá dư thừa phân vi lượng các hoạt động của cây trở nên rối loạn. Hơn nữa, nó còn ảnh hưởng tới sức khỏe của con người và vật nuôi khi sử dụng sản phẩm nông sản. Phân vi lượng có thể sử dụng để bón vào đất, trộn với các loại phân khác để bón. Có thể bón phân vi lượng lên lá cây, ngâm hạt giống, dùng để nhúng rễ, nhúng hom trước khi trồng.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
@@ -2162,6 +2921,11 @@ Ngoài ra trên thị trường còn có những loại phân khác với tên t
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Phân xanh</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#LuongPhanBon"/>
+        <NamedIndividual IRI="#QuyTrinhBonDong"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">(6-7kg) Ure cho 1000 m2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#denNgay"/>
         <NamedIndividual IRI="#QuyTrinhBonDong"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">50</Literal>
@@ -2180,6 +2944,17 @@ Ngoài ra trên thị trường còn có những loại phân khác với tên t
         <DataProperty IRI="#tuNgay"/>
         <NamedIndividual IRI="#QuyTrinhBonDong"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">45</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#LuongPhanBon"/>
+        <NamedIndividual IRI="#QuyTrinhBonLot"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">600-900 kg phân hữu cơ (phân chuồng); 5-6 kg urea; 30-45 kg supperlan; 5-6 kg
+cloruakali.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#NhuCauNuocOGiaiDoan"/>
+        <NamedIndividual IRI="#QuyTrinhBonLot"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Là bón phân trước cho ruộng khi gieo, cấy. Có thể bón lót cùng với quá trình làm đất, sau khi bón lót xong, tiến hành bừa đất, phân bón lót trên ruộng sẽ càng đều hơn. Cũng có thể làm đất xong rồi bón lót trước khi cấy.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#denNgay"/>
@@ -2202,6 +2977,11 @@ Ngoài ra trên thị trường còn có những loại phân khác với tên t
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#LuongPhanBon"/>
+        <NamedIndividual IRI="#QuyTrinhBonThucDot1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Bón 25-30 kg urea và 6-7 kg cloruakali cho 1000 m2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#denNgay"/>
         <NamedIndividual IRI="#QuyTrinhBonThucDot1"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">10</Literal>
@@ -2220,6 +3000,11 @@ Ngoài ra trên thị trường còn có những loại phân khác với tên t
         <DataProperty IRI="#tuNgay"/>
         <NamedIndividual IRI="#QuyTrinhBonThucDot1"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#LuongPhanBon"/>
+        <NamedIndividual IRI="#QuyTrinhBonThucDot2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Bón 20-25 kg urea và 6-7 kg cloruakali cho 1000 m2</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#denNgay"/>
@@ -2435,6 +3220,11 @@ Lúc này ruộng bị khô sẽ tổn thương đến rễ lúa, nên không th
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#RuongCan"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ruộng cạn</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#RuongSau"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Ruộng sâu</Literal>
     </DataPropertyAssertion>
@@ -2544,6 +3334,21 @@ Lúc này ruộng bị khô sẽ tổn thương đến rễ lúa, nên không th
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Thời tiết nóng</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#DacTinhCuaThuoc"/>
+        <NamedIndividual IRI="#ThuocArmada"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">là thuốc trừ rầy có tác dụng tiếp xúc, vị độc, và nội hấp mạnh, đặc trị rầy nâu hại lúa.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ThoiGianPhunThuoc"/>
+        <NamedIndividual IRI="#ThuocArmada"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">rầy vừa chớm xuất hiện</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#TriSauBenhHai"/>
+        <NamedIndividual IRI="#ThuocArmada"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">rầy nâu, bọ trĩ, rầy xanh, rệp,, rệp sáp, rệp muội, rầy xanh, nhện đỏ.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#ThuocArmada"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Armada</Literal>
@@ -2554,9 +3359,134 @@ Lúc này ruộng bị khô sẽ tổn thương đến rễ lúa, nên không th
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Imidacloprid</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#tuNgayCachLy"/>
+        <NamedIndividual IRI="#ThuocArmada"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">7 -14 ngày</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#VuDongXuan"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Vụ đông xuân ở miền trung bắt đầu từ tháng 12 âm lịch đến tháng 4 âm lịch. Vụ đông xuân là vụ cho năng xuất tốt nhất vì lúc này là thời điểm thuận lợi nhất để cây trồng phát triển tốt nhất có thể.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#VuDongXuan"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Vụ đông xuân</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#VuHeThu"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Sau vụ đông xuân là vụ hè thu, vụ hè thu bắt đầu từ tháng 4 -&gt; 8 âm lịch. Vì thời tiết của vụ này thường là nóng oai bức nên vụ này sẽ có năng xuất kém hơn vụ đông xuân nhìu.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#VuHeThu"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Vụ Hè Thu</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DacTinhCuaThuoc"/>
+        <NamedIndividual IRI="#dana-win_12.5_WP"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">là thuốc trừ nấm có tính nội hấp ,ức chế cao , phổ tác dụng rộng</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#LieuLuong"/>
+        <NamedIndividual IRI="#dana-win_12.5_WP"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">12.5 WP</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#LuongNuoc"/>
+        <NamedIndividual IRI="#dana-win_12.5_WP"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">500-800 lít /ha</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#LuongThuoc"/>
+        <NamedIndividual IRI="#dana-win_12.5_WP"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">2,5-5,0 g/ bình 8 lít</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ThoiGianPhunThuoc"/>
+        <NamedIndividual IRI="#dana-win_12.5_WP"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">phun khi bệnh vừa chớm xuất hiện</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#TriSauBenhHai"/>
+        <NamedIndividual IRI="#dana-win_12.5_WP"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">lem lép hạt</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#thanhPhan"/>
+        <NamedIndividual IRI="#dana-win_12.5_WP"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Diniconazole 12.5 %</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tuNgayCachLy"/>
+        <NamedIndividual IRI="#dana-win_12.5_WP"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">7 ngày</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DacDiem"/>
+        <NamedIndividual IRI="#dandy_15_EC"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">chuyên trị các loại nhện gây hại cho cây trồng</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ThoiGianPhunThuoc"/>
+        <NamedIndividual IRI="#dandy_15_EC"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ThoiGianPhunThuoc"/>
+        <NamedIndividual IRI="#dandy_15_EC"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">nhện vừa xuất hiện</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#TriSauBenhHai"/>
+        <NamedIndividual IRI="#dandy_15_EC"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">nhện đỏ, nhện nâu, nhện vàng, nhện trắng</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#thanhPhan"/>
+        <NamedIndividual IRI="#dandy_15_EC"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Pyridaben 15 %</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tuNgayCachLy"/>
+        <NamedIndividual IRI="#dandy_15_EC"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">3 ngày</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#DacTinhCuaThuoc"/>
+        <NamedIndividual IRI="#dibavil_50FL_50_WP"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">là thuốc trừ bệnh bảo vệc cây trồng chống được bệnh vàng lá có tác dụng rộng diệt trừ nấm bệnh hại phòng trừ bệnh</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#LuongNuoc"/>
+        <NamedIndividual IRI="#dibavil_50FL_50_WP"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">400- 600 lít /ha</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#LuongThuoc"/>
+        <NamedIndividual IRI="#dibavil_50FL_50_WP"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">0,4-1 lít / ha pha 10 - 25 ml/ bình 8 lít</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ThoiGianPhunThuoc"/>
+        <NamedIndividual IRI="#dibavil_50FL_50_WP"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">phun ngay sau khi bệnh chớm xuất hiện, nếu bệnh nặng phun lầm 2 sau 7- 10 ngày</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#TriSauBenhHai"/>
+        <NamedIndividual IRI="#dibavil_50FL_50_WP"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">khô vằn dẫn đến lem lép hạt, vàng lá</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#thanhPhan"/>
+        <NamedIndividual IRI="#dibavil_50FL_50_WP"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Carbendazim 50 % dung môi và phụ gia 50 %</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tuNgayCachLy"/>
+        <NamedIndividual IRI="#dibavil_50FL_50_WP"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">7 ngày</Literal>
     </DataPropertyAssertion>
     <InverseObjectProperties>
         <ObjectProperty IRI="#coGiaiDoan"/>
@@ -2582,6 +3512,74 @@ Lúc này ruộng bị khô sẽ tổn thương đến rễ lúa, nên không th
         <ObjectProperty IRI="#coTacNhanGayBenh"/>
         <Class IRI="#TacNhanGayBenh"/>
     </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#BienPhapKhacPhuc"/>
+        <Class IRI="#HienTuong"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ChatLuongGao"/>
+        <Class IRI="#GiongLua"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#DacDiem"/>
+        <Class IRI="#GiaiDoan"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#DacDiem"/>
+        <Class IRI="#GiongLua"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#DacDiem"/>
+        <Class IRI="#HienTuong"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#DacDiem"/>
+        <Class IRI="#PhanVoCo"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#DacDiem"/>
+        <Class IRI="#QuyTrinhBonPhan"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#DacDiem"/>
+        <Class IRI="#VuMua"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#DacTinhCuaThuoc"/>
+        <Class IRI="#Thuoc"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#LieuLuong"/>
+        <Class IRI="#Thuoc"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#LuongNuoc"/>
+        <Class IRI="#Thuoc"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#LuongPhanBon"/>
+        <Class IRI="#QuyTrinhBonPhan"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#LuongThuoc"/>
+        <Class IRI="#Thuoc"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#NguonGoc"/>
+        <Class IRI="#GiongLua"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#NhuCauNuocOGiaiDoan"/>
+        <Class IRI="#GiaiDoan"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ThoiGianPhunThuoc"/>
+        <Class IRI="#Thuoc"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#TinhThichNghi"/>
+        <Class IRI="#GiongLua"/>
+    </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#cachCheBien"/>
         <Class IRI="#PhanHuuCo"/>
@@ -2618,6 +3616,58 @@ Lúc này ruộng bị khô sẽ tổn thương đến rễ lúa, nên không th
         <DataProperty IRI="#tuNgayCachLy"/>
         <Class IRI="#Thuoc"/>
     </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ĐacTinhNongHoc"/>
+        <Class IRI="#GiongLua"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#BienPhapKhacPhuc"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ChatLuongGao"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#DacDiem"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#DacTinhCuaThuoc"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#LieuLuong"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#LuongNuoc"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#LuongPhanBon"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#LuongThuoc"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#NguonGoc"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#NhuCauNuocOGiaiDoan"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ThoiGianPhunThuoc"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#TinhThichNghi"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#cachCheBien"/>
         <Datatype abbreviatedIRI="xsd:string"/>
@@ -2659,7 +3709,11 @@ Lúc này ruộng bị khô sẽ tổn thương đến rễ lúa, nên không th
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#tuNgayCachLy"/>
-        <Datatype abbreviatedIRI="xsd:int"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ĐacTinhNongHoc"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
