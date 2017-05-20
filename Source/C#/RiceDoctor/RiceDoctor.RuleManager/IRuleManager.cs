@@ -15,6 +15,6 @@ namespace RiceDoctor.RuleManager
         [NotNull]
         IReadOnlyCollection<Relation> RelationRules { get; }
 
-        bool CanFactCaptureClass([NotNull] Fact fact, [NotNull] Class type);
+        bool CanClassCaptureFact([NotNull] Class type, [NotNull] Fact fact);
     }
 }

@@ -12,10 +12,16 @@ namespace RiceDoctor.InferenceEngine
         IReadOnlyCollection<Relation> HighPriorityRelationRules { get; }
 
         [NotNull]
+        IReadOnlyCollection<Relation> MidPriorityRelationRules { get; }
+
+        [NotNull]
         IReadOnlyCollection<Relation> LowPriorityRelationRules { get; }
 
         [NotNull]
         IReadOnlyCollection<LogicRule> HighPriorityLogicRules { get; }
+
+        [NotNull]
+        IReadOnlyCollection<LogicRule> MidPriorityLogicRules { get; }
 
         [NotNull]
         IReadOnlyCollection<LogicRule> LowPriorityLogicRules { get; }

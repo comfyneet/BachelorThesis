@@ -12,17 +12,19 @@ namespace RiceDoctor.InferenceEngine
 
     public class Request
     {
-        public Request([NotNull] Problem problem, RequestType requestType)
+        public Request([NotNull] Problem problem, RequestType requestType, int? totalGoals)
         {
             Check.NotNull(problem, nameof(problem));
 
             Problem = problem;
             RequestType = requestType;
+            TotalGoals = totalGoals;
         }
 
         public Request(
             [NotNull] Problem problem,
             RequestType requestType,
+            int? totalGoals,
             [CanBeNull] IReadOnlyCollection<Fact> knownFacts)
         {
             Check.NotNull(problem, nameof(problem));
@@ -36,6 +38,8 @@ namespace RiceDoctor.InferenceEngine
         public Problem Problem { get; }
 
         public RequestType RequestType { get; }
+
+        public int? TotalGoals { get; }
 
         [CanBeNull]
         public IReadOnlyCollection<Fact> KnownFacts { get; }
