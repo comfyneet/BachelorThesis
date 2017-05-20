@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="RiceDoctor" />
+        <module name="rice-doctor" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="RiceDoctor" target="1.8" />
+      <module name="rice-doctor" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
