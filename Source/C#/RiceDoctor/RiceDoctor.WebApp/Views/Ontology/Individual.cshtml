@@ -1,0 +1,90 @@
+﻿@using RiceDoctor.OntologyManager
+@using Attribute = RiceDoctor.OntologyManager.Attribute
+@{
+    var individual = (Individual) ViewData["Individual"];
+    var directClass = (Class) ViewData["DirectClass"];
+    var allClasses = (IReadOnlyCollection<Class>) ViewData["AllClasses"];
+    var relationValues = (IReadOnlyDictionary<Relation, IReadOnlyCollection<Individual>>) ViewData["RelationValues"];
+    var attributeValues = (IReadOnlyDictionary<Attribute, IReadOnlyCollection<string>>) ViewData["AttributeValues"];
+    var individuals = (IReadOnlyCollection<Individual>) ViewData["Individuals"];
+    ViewData["Title"] = "Thể hiện " + individual;
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <h4>Thể hiện</h4>
+
+        @if (individuals != null)
+        {
+            <ul>
+                @foreach (var tmpIndividual in individuals)
+                {
+                    <li>
+                        @Html.ActionLink(tmpIndividual.ToString(), "Individual", "Ontology", new {individualName = tmpIndividual.Id})
+                        @if (tmpIndividual == individual)
+                        {
+                            @: (this)
+                        }
+                    </li>
+                }
+            </ul>
+        }
+    </div>
+    <div class="col-md-8">
+        <h2>@individual</h2>
+
+        @if (individual != null)
+        {
+            <h4>Lớp của @individual</h4>
+            if (allClasses != null)
+            {
+                <ul>
+                    @foreach (var cls in allClasses)
+                    {
+                        <li>
+                            <a asp-controller="Ontology" asp-action="Class" asp-route-className="@cls.Id">@cls</a>
+                            @if (directClass == cls)
+                            {
+                                @:(trực tiếp)
+                            }
+                        </li>
+                    }
+                </ul>
+            }
+
+            <h4>Giá trị khách thể của quan hệ với @individual là chủ thể</h4>
+            if (relationValues != null)
+            {
+                foreach (var relationValuesPair in relationValues)
+                {
+                    <ul>
+                        @foreach (var value in relationValuesPair.Value)
+                        {
+                            <li>
+                                <a asp-controller="Ontology" asp-action="Relation" asp-route-relationName="@relationValuesPair.Key.Id">@relationValuesPair.Key</a>:
+                                <a asp-controller="Ontology" asp-action="Class" asp-route-className="@value.Id">@value</a>
+                            </li>
+                        }
+                    </ul>
+                }
+            }
+
+            <h4>Giá trị thuộc tính của @individual</h4>
+            if (attributeValues != null)
+            {
+                foreach (var attributeValuesPair in attributeValues)
+                {
+                    <ul>
+                        @foreach (var value in attributeValuesPair.Value)
+                        {
+                            <li>
+                                <a asp-controller="Ontology" asp-action="Attribute" asp-route-attributeName="@attributeValuesPair.Key.Id">@attributeValuesPair.Key</a>
+                                @Html.Raw(value)
+                            </li>
+                        }
+                    </ul>
+                }
+            }
+        }
+    </div>
+</div>

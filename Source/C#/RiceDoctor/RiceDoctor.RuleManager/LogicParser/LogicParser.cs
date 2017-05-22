@@ -45,7 +45,7 @@ namespace RiceDoctor.RuleManager
                 logicRuleList.AddRange(logicRules);
             }
 
-            return logicRuleList;
+            return logicRuleList.Distinct().ToList();
         }
 
         [NotNull]
@@ -89,13 +89,13 @@ namespace RiceDoctor.RuleManager
                 }
                 else
                 {
-                    logicRules[i].Conclusions = tmpConclusions.AsReadOnly();
+                    logicRules[i].Conclusions = tmpConclusions;
 
                     ++i;
                 }
             }
 
-            return logicRules.Distinct().ToList().AsReadOnly();
+            return logicRules;
         }
 
         [NotNull]
@@ -134,8 +134,7 @@ namespace RiceDoctor.RuleManager
                     minimizedImplicant => hypothesisTable.Symbols
                         .Where((symbol, i) => minimizedImplicant.Values[i] == true)
                         .ToList())
-                .ToList()
-                .AsReadOnly();
+                .ToList();
 
             return hypotheses;
         }

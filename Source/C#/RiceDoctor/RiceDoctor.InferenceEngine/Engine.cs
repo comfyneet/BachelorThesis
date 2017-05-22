@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using JetBrains.Annotations;
 using RiceDoctor.OntologyManager;
@@ -19,9 +18,9 @@ namespace RiceDoctor.InferenceEngine
         [NotNull] private readonly IRuleManager _ruleManager;
         [NotNull] private readonly IList<Fact> _unknownFacts;
         [CanBeNull] private List<Fact> _goalFacts;
-        [NotNull] private IList<LogicRule> _highPriorityLogicRules;
-        [NotNull] private IList<LogicRule> _lowPriorityLogicRules;
-        [NotNull] private IList<LogicRule> _midPriorityLogicRules;
+        [NotNull] private List<LogicRule> _highPriorityLogicRules;
+        [NotNull] private List<LogicRule> _lowPriorityLogicRules;
+        [NotNull] private List<LogicRule> _midPriorityLogicRules;
 
         public Engine(
             [NotNull] IRuleManager ruleManager,
@@ -147,14 +146,11 @@ namespace RiceDoctor.InferenceEngine
         public IReadOnlyCollection<Relation> MidPriorityRelationRules { get; private set; }
         public IReadOnlyCollection<Relation> LowPriorityRelationRules { get; private set; }
 
-        public IReadOnlyCollection<LogicRule> HighPriorityLogicRules =>
-            new ReadOnlyCollection<LogicRule>(_highPriorityLogicRules);
+        public IReadOnlyCollection<LogicRule> HighPriorityLogicRules => _highPriorityLogicRules;
 
-        public IReadOnlyCollection<LogicRule> MidPriorityLogicRules =>
-            new ReadOnlyCollection<LogicRule>(_midPriorityLogicRules);
+        public IReadOnlyCollection<LogicRule> MidPriorityLogicRules => _midPriorityLogicRules;
 
-        public IReadOnlyCollection<LogicRule> LowPriorityLogicRules =>
-            new ReadOnlyCollection<LogicRule>(_lowPriorityLogicRules);
+        public IReadOnlyCollection<LogicRule> LowPriorityLogicRules => _lowPriorityLogicRules;
 
         public int AddFactsToKnown(params Fact[] facts)
         {

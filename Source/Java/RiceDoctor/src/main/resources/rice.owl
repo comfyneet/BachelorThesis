@@ -68,10 +68,10 @@
         <NamedIndividual IRI="#ChopReBuu"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#ThoiTietNong"/>
+        <ObjectProperty IRI="#coGiaiDoan"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#coGiaiDoan"/>
+        <NamedIndividual IRI="#ThoiTietNong"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasMembershipFunction"/>
@@ -137,16 +137,13 @@
         <NamedIndividual IRI="#BenhDomNauHaiLua"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#PhanHonHop"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#ReKho"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#ChauChau"/>
+        <NamedIndividual IRI="#PhanHonHop"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#loai"/>
+        <NamedIndividual IRI="#ChauChau"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ThanLun"/>
@@ -221,19 +218,19 @@
         <NamedIndividual IRI="#PhanRac"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#ChieuCaoThap"/>
+        <DataProperty IRI="#cachCheBien"/>
     </Declaration>
     <Declaration>
         <Class IRI="#HinhDangLa"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#cachCheBien"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#ChopLaXoan"/>
+        <NamedIndividual IRI="#ChieuCaoThap"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#OcNhot"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ChopLaXoan"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ThoiTietKho"/>
@@ -242,19 +239,19 @@
         <NamedIndividual IRI="#BenhTuyenTrung"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Co"/>
+        <NamedIndividual IRI="#NangIt"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#NangIt"/>
+        <Class IRI="#Co"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Sau"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#dacTinhCuaThuoc"/>
+        <NamedIndividual IRI="#QuyTrinhBonThucDot1"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#QuyTrinhBonThucDot1"/>
+        <DataProperty IRI="#dacTinhCuaThuoc"/>
     </Declaration>
     <Declaration>
         <Class IRI="#QuyTrinhKichThich"/>
@@ -269,10 +266,10 @@
         <NamedIndividual IRI="#NhietDoCao"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#BenhKhamVang"/>
+        <DataProperty IRI="#denNgay"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#denNgay"/>
+        <NamedIndividual IRI="#BenhKhamVang"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#GiongOM8923"/>
@@ -287,10 +284,10 @@
         <NamedIndividual IRI="#QuyTrinhTuoiNuocTrongDeNhanh"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#PhanTrungLuong"/>
+        <Class IRI="#TacNhanGayBenh"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#TacNhanGayBenh"/>
+        <NamedIndividual IRI="#PhanTrungLuong"/>
     </Declaration>
     <Declaration>
         <Class IRI="#ChieuCao"/>
@@ -311,19 +308,19 @@
         <NamedIndividual IRI="#ThanUn"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#GanLaXung"/>
+        <Class IRI="#GiaiDoan"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#GiaiDoan"/>
+        <NamedIndividual IRI="#GanLaXung"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#nhuCauNuocOGiaiDoan"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Phan"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocSauSa20-25Ngay"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#QuyTrinhTuoiNuocSauSa20-25Ngay"/>
+        <Class IRI="#Phan"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Ray"/>
@@ -338,10 +335,13 @@
         <DataProperty IRI="#tuNgayCachLy"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#QuyTrinh"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#SauKeo"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#QuyTrinh"/>
+        <DataProperty IRI="#dacTinhNongHoc"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#SauCuonLa"/>
@@ -362,10 +362,10 @@
         <NamedIndividual IRI="#VuHeThu"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#PhanViLuong"/>
+        <NamedIndividual IRI="#LaHoiVang"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#LaHoiVang"/>
+        <NamedIndividual IRI="#PhanViLuong"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#BenhVangTamThoi"/>
@@ -437,10 +437,10 @@
         <NamedIndividual IRI="#LaVechDom"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#VuMua"/>
+        <NamedIndividual IRI="#BenhThoiThan"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#BenhThoiThan"/>
+        <Class IRI="#VuMua"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#NuocIt"/>
@@ -449,22 +449,22 @@
         <NamedIndividual IRI="#DauLaChay"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#LaChet"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#LaCongQueo"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#HienTuongNgoDocHuuCo"/>
+        <NamedIndividual IRI="#LaChet"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#denNgayCachLy"/>
+        <NamedIndividual IRI="#HienTuongNgoDocHuuCo"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#NuocCao"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#RayXanhDuoiDen"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#denNgayCachLy"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#tinhThichNghi"/>
@@ -494,10 +494,10 @@
         <NamedIndividual IRI="#SauDucThanHaiCham"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#BenhTungo"/>
+        <NamedIndividual IRI="#DatKho"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#DatKho"/>
+        <NamedIndividual IRI="#BenhTungo"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Dat"/>
@@ -518,10 +518,10 @@
         <DataProperty IRI="#chatLuongGao"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#GiongTBR-1"/>
+        <NamedIndividual IRI="#PhanSinhHocHuuCo"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#PhanSinhHocHuuCo"/>
+        <NamedIndividual IRI="#GiongTBR-1"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#MuiHoi"/>
@@ -617,9 +617,6 @@
         <Class IRI="#NhietDo"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#đacTinhNongHoc"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#RayLungTrang"/>
     </Declaration>
     <Declaration>
@@ -647,19 +644,19 @@
         <DataProperty IRI="#thanhPhan"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#GiongTBR255"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#SauDucThan"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#QuyTrinhTuoiNuocChinHoanToan"/>
+        <NamedIndividual IRI="#GiongTBR255"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GiaiDoanDeNhanh"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#LaVangCam"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#GiaiDoanDeNhanh"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocChinHoanToan"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#BenhVangLun"/>
@@ -671,22 +668,22 @@
         <NamedIndividual IRI="#SauCuonLaNho"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#BongIt"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Thuoc"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#HatLep"/>
+        <NamedIndividual IRI="#BongIt"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#PhanPhucHop"/>
+        <NamedIndividual IRI="#HatLep"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#GiongDH815-6"/>
     </Declaration>
     <Declaration>
         <Class IRI="#HienTuong"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PhanPhucHop"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#GioLon"/>
@@ -698,10 +695,10 @@
         <NamedIndividual IRI="#OcLac"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#BenhLunXoanLa"/>
+        <NamedIndividual IRI="#LaHinhBacThang"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#LaHinhBacThang"/>
+        <NamedIndividual IRI="#BenhLunXoanLa"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#BoTri"/>
@@ -2178,6 +2175,23 @@ dàng cho thu hoạch.</Literal>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Ra hạt gạo chất lượng tốt.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#dacTinhNongHoc"/>
+        <NamedIndividual IRI="#GiongBT7"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Là giống cảm ôn, nên gieo cấy được cả hai vụ,, vụ mùa và vụ xuân.
+
+– Thời gian sinh trưởng: vụ Xuân 130-135 ngày, vụ Mùa 105-110 ngày.
+
+– Cao cây từ 90-100 cm, đẻ nhánh khá, hạt thon nhỏ, màu vàng sẫm.
+
+– Khối lượng 1000 hạt 19-20 gram, phẩm chất gạo ngon, cơm thơm, mềm.
+
+– Năng suất trung bình 45-50 tạ/ha, thâm canh tốt có thể đạt 55 – 60 tạ/ha.
+
+– Ra hạt gạo chất lượng tốt.
+
+– Chống đổ trung bình, chịu rét khá.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#nguonGoc"/>
         <NamedIndividual IRI="#GiongBT7"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Là giống lúa thơm, chất lượng cao có nguồn gốc xuất xứ từ Trung Quốc.</Literal>
@@ -2199,23 +2213,6 @@ dàng cho thu hoạch.</Literal>
 – Phòng trừ sâu đục thân và bệnh bạc lá đặc biệt trong vụ Mùa.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#đacTinhNongHoc"/>
-        <NamedIndividual IRI="#GiongBT7"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Là giống cảm ôn, nên gieo cấy được cả hai vụ,, vụ mùa và vụ xuân.
-
-– Thời gian sinh trưởng: vụ Xuân 130-135 ngày, vụ Mùa 105-110 ngày.
-
-– Cao cây từ 90-100 cm, đẻ nhánh khá, hạt thon nhỏ, màu vàng sẫm.
-
-– Khối lượng 1000 hạt 19-20 gram, phẩm chất gạo ngon, cơm thơm, mềm.
-
-– Năng suất trung bình 45-50 tạ/ha, thâm canh tốt có thể đạt 55 – 60 tạ/ha.
-
-– Ra hạt gạo chất lượng tốt.
-
-– Chống đổ trung bình, chịu rét khá.</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#GiongDH815-6"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Giống DH815-6</Literal>
@@ -2226,6 +2223,21 @@ dàng cho thu hoạch.</Literal>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Gạo trong, chất lượng trung bình.
 
 Năng suất trung bình: 75 - 80 tạ/ha.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dacTinhNongHoc"/>
+        <NamedIndividual IRI="#GiongDV108"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ĐV 108 là giống cảm ôn, ngắn ngày, thích ứng rộng, gieo cấy được cả 2 vụ. Thời gian sinh trưởng ở trà Đông Xuân là 125 - 130 ngày, ở trà vụ Mùa l 105 – 110 ngày.
+
+Chiều cao cây: 90 - 95 cm. Sinh trưởng khá mạnh, dạng hình đẹp, năng suất ổn định.
+
+Hạt hơi bầu, màu vàng sáng.
+
+Chiều dài hạt trung bình: 6,25 mm.
+
+Tỷ lệ chiều dài/ chiều rộng hạt là: 2,85.
+
+Trọng lượng 1000 hạt: 22 – 23 gram.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#nguonGoc"/>
@@ -2246,24 +2258,19 @@ Năng suất trung bình: 75 - 80 tạ/ha.</Literal>
 Là giống nhiễm nhẹ với bệnh Đạo ôn và bệnh</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#đacTinhNongHoc"/>
-        <NamedIndividual IRI="#GiongDV108"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ĐV 108 là giống cảm ôn, ngắn ngày, thích ứng rộng, gieo cấy được cả 2 vụ. Thời gian sinh trưởng ở trà Đông Xuân là 125 - 130 ngày, ở trà vụ Mùa l 105 – 110 ngày.
-
-Chiều cao cây: 90 - 95 cm. Sinh trưởng khá mạnh, dạng hình đẹp, năng suất ổn định.
-
-Hạt hơi bầu, màu vàng sáng.
-
-Chiều dài hạt trung bình: 6,25 mm.
-
-Tỷ lệ chiều dài/ chiều rộng hạt là: 2,85.
-
-Trọng lượng 1000 hạt: 22 – 23 gram.</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="#chatLuongGao"/>
         <NamedIndividual IRI="#GiongGL105"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Hạt gạo thon dài, trong, phẩm chất gạo ngon, cơm mềm, đậm, giòn.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dacTinhNongHoc"/>
+        <NamedIndividual IRI="#GiongGL105"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">- Thời gian sinh trưởng: Vụ mùa: 105 - 110 ngày; Vụ xuân: 130 - 140 ngày.
+- Chiều cao cây: 100 cm, sinh trưởng nhanh, mạnh, đẻ nhánh khỏe và đều, bộ lá màu xanh đậm, bông to, hạt thon dài, xếp hạt trung bình và có màu vàng sáng, chắc rất cao, hạt mẩy. Khối lượng 1000 hạt từ 22 - 23 gam.
+- Giống GL105 có khả năng chống đổ tốt, ít nhiễm đạo ôn, rầy nâu và bạc lá.
+- Năng suất thực thu trung bình:
++ Vụ xuân: 70 - 75 tạ/ha, thâm canh tốt có thể đạt 80 – 85 tạ /ha.
+ + Vụ mùa: 60 - 65 tạ/ha, thâm canh tốt có thể đạt 75 tạ/ha.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#nguonGoc"/>
@@ -2281,16 +2288,6 @@ Trọng lượng 1000 hạt: 22 – 23 gram.</Literal>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Giống thích hợp gieo trồng cả  2 vụ/năm trên các chân đất vàn, vàn cao, vàn thấp</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#đacTinhNongHoc"/>
-        <NamedIndividual IRI="#GiongGL105"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">- Thời gian sinh trưởng: Vụ mùa: 105 - 110 ngày; Vụ xuân: 130 - 140 ngày.
-- Chiều cao cây: 100 cm, sinh trưởng nhanh, mạnh, đẻ nhánh khỏe và đều, bộ lá màu xanh đậm, bông to, hạt thon dài, xếp hạt trung bình và có màu vàng sáng, chắc rất cao, hạt mẩy. Khối lượng 1000 hạt từ 22 - 23 gam.
-- Giống GL105 có khả năng chống đổ tốt, ít nhiễm đạo ôn, rầy nâu và bạc lá.
-- Năng suất thực thu trung bình:
-+ Vụ xuân: 70 - 75 tạ/ha, thâm canh tốt có thể đạt 80 – 85 tạ /ha.
- + Vụ mùa: 60 - 65 tạ/ha, thâm canh tốt có thể đạt 75 tạ/ha.</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#GiongOM8923"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Giống OM8923</Literal>
@@ -2299,6 +2296,11 @@ Trọng lượng 1000 hạt: 22 – 23 gram.</Literal>
         <DataProperty IRI="#chatLuongGao"/>
         <NamedIndividual IRI="#GiongSV181"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Cơm thơm ngon, gạo trong ít bạc bụng, cơm mềm, đậm cơm, mùi thơm nhẹ.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dacTinhNongHoc"/>
+        <NamedIndividual IRI="#GiongSV181"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">hiều cao cây 95-105 cm, sinh trưởng tốt, đẻ nhánh khỏe và tập trung, bộ lá đứng màu xanh nhạt. Bông to, xếp gié dày, nhiều hạt 170 - 200 hạt/bông, dạng hạt dài bầu, tỷ lệ chắc cao, vỏ trấu màu vàng sáng, khối lượng 1000 hạt 23-24 gam. Chống chịu rét, chịu nóng khá và chống đổ ngã tốt. Giống lúa phổ thích ứng sản xuất rộng trên nhiều vùng miền, nhiều chân đất đều cho năng suất cao.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#nguonGoc"/>
@@ -2316,11 +2318,6 @@ Trọng lượng 1000 hạt: 22 – 23 gram.</Literal>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Căn cứ vào thời gian sinh trưởng của giống và điều kiện sản xuất của địa phương để bố trí thời vụ thích hợp, gieo cùng trà giống PC6 và sau trà giống HT1, KD18 khoảng 5-7 ngày.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#đacTinhNongHoc"/>
-        <NamedIndividual IRI="#GiongSV181"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">hiều cao cây 95-105 cm, sinh trưởng tốt, đẻ nhánh khỏe và tập trung, bộ lá đứng màu xanh nhạt. Bông to, xếp gié dày, nhiều hạt 170 - 200 hạt/bông, dạng hạt dài bầu, tỷ lệ chắc cao, vỏ trấu màu vàng sáng, khối lượng 1000 hạt 23-24 gam. Chống chịu rét, chịu nóng khá và chống đổ ngã tốt. Giống lúa phổ thích ứng sản xuất rộng trên nhiều vùng miền, nhiều chân đất đều cho năng suất cao.</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#GiongSV46"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Giống SV 46</Literal>
@@ -2331,19 +2328,24 @@ Trọng lượng 1000 hạt: 22 – 23 gram.</Literal>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">chất lượng gạo ngon hơn hẳn giống Khang dân 18.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#dacTinhNongHoc"/>
+        <NamedIndividual IRI="#GiongSV47"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">SV47 có TGST vụ HT 90-95 ngày; vụ ĐX 95-100 ngày, tương đương giống Khang dân 18. Chiều cao cây 100-105 cm, dạng hình đẹp, cứng cây, đẻ nhánh khá. Chiều dài bông 23,5-24 cm, bông to, nhiều hạt, hạt xếp sít, nhiều gié, số hạt/bông 140-200 hạt, dạng hạt thon.  Tiềm tăng năng suất từ 65-70 tạ/ha, vượt giống Khang dân 18 từ 10-12%. Nếu đầu tư thâm canh cao có thể đạt trên 70 tạ/ha, chất lượng gạo ngon hơn hẳn giống Khang dân 18.Qua khảo nghiệm, giống SV47 chống chịu sâu bệnh khá, nhiều vụ chưa thấy xuất hiện các loại sâu bệnh nguy hại chính, chịu úng và rét khá, chịu thâm canh, thích ứng rộng.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#GiongSV47"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Giống SV 47</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#đacTinhNongHoc"/>
-        <NamedIndividual IRI="#GiongSV47"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">SV47 có TGST vụ HT 90-95 ngày; vụ ĐX 95-100 ngày, tương đương giống Khang dân 18. Chiều cao cây 100-105 cm, dạng hình đẹp, cứng cây, đẻ nhánh khá. Chiều dài bông 23,5-24 cm, bông to, nhiều hạt, hạt xếp sít, nhiều gié, số hạt/bông 140-200 hạt, dạng hạt thon.  Tiềm tăng năng suất từ 65-70 tạ/ha, vượt giống Khang dân 18 từ 10-12%. Nếu đầu tư thâm canh cao có thể đạt trên 70 tạ/ha, chất lượng gạo ngon hơn hẳn giống Khang dân 18.Qua khảo nghiệm, giống SV47 chống chịu sâu bệnh khá, nhiều vụ chưa thấy xuất hiện các loại sâu bệnh nguy hại chính, chịu úng và rét khá, chịu thâm canh, thích ứng rộng.</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="#chatLuongGao"/>
         <NamedIndividual IRI="#GiongTBR-1"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Tỷ lệ gạo lật 83,0%, tỷ lệ gạo xát 72,1%, tỷ lệ gạo nguyên/gạo xát 78,6%, chiều dài hạt gạo 6,0 - 6,2 mm, tỷ lệ D/R 2,3 - 2,4, hàm lượng Amylose trung bình 24,7%; chất lượng gạo khá, hàm lượng tinh bột cao, phù hợp với chế biến.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dacTinhNongHoc"/>
+        <NamedIndividual IRI="#GiongTBR-1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Thời gian sinh trưởng ở Miền Bắc: vụ Xuân 125 - 135 ngày, vụ Mùa 105 - 110 ngày; chiều cao cây 105 - 110 cm; cứng cây, đẻ nhánh trung bình, lá đòng thẳng, trỗ bông tập trung; bông dài 26 - 27 cm; xếp sít, hạt bán thon, khối lượng 1000 hạt 25 - 26 gam; năng suất trung bình 70 - 75 tạ/ha, thâm canh tốt đạt 80 - 90 tạ/ha.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#nguonGoc"/>
@@ -2362,14 +2364,14 @@ Trọng lượng 1000 hạt: 22 – 23 gram.</Literal>
  TBR-1 là giống lúa cảm ôn, canh tác được các vụ trong năm. Thích ứng rộng, thích hợp với chân đất vàn, vàn cao.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#đacTinhNongHoc"/>
-        <NamedIndividual IRI="#GiongTBR-1"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Thời gian sinh trưởng ở Miền Bắc: vụ Xuân 125 - 135 ngày, vụ Mùa 105 - 110 ngày; chiều cao cây 105 - 110 cm; cứng cây, đẻ nhánh trung bình, lá đòng thẳng, trỗ bông tập trung; bông dài 26 - 27 cm; xếp sít, hạt bán thon, khối lượng 1000 hạt 25 - 26 gam; năng suất trung bình 70 - 75 tạ/ha, thâm canh tốt đạt 80 - 90 tạ/ha.</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="#chatLuongGao"/>
         <NamedIndividual IRI="#GiongTBR-45"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Tỷ lệ gạo lật 79,4 - 80,6%, tỷ lệ gạo xát 65,5 - 71,6%, tỷ lệ gạo nguyên/gạo xát 70,5 - 75,1%, chiều dài hạt gạo 6,0 - 6,4 mm, tỷ lệ D/R 3,0 - 3,2, hàm lượng Amylose thấp 14,7%; chất lượng gạo ngon, cơm mềm, dẻo, thích hợp làm các loại bánh gạo.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dacTinhNongHoc"/>
+        <NamedIndividual IRI="#GiongTBR-45"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Thời gian sinh trưởng ở Miền Bắc: Vụ Xuân 125 - 135 ngày, vụ Mùa 105 - 110 ngày; chiều cao cây 110 - 115 cm, cứng cây, dạng hình đẹp, trỗ bông tập trung, bông dài 27 – 29 cm, nhiều gié, hạt thon dài,  khối lượng 1000 hạt 19 - 21 gam; năng suất trung bình 65 - 70 tạ/ha, thâm canh tốt đạt 75 - 80 tạ/ha.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#nguonGoc"/>
@@ -2388,14 +2390,14 @@ Trọng lượng 1000 hạt: 22 – 23 gram.</Literal>
 TBR45 là giống cảm ôn, ngắn ngày, canh tác được các vụ trong năm; thích hợp với chân đất vàn, vàn cao, có thể gieo cấy trên đất mặn 3 - 4‰.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#đacTinhNongHoc"/>
-        <NamedIndividual IRI="#GiongTBR-45"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Thời gian sinh trưởng ở Miền Bắc: Vụ Xuân 125 - 135 ngày, vụ Mùa 105 - 110 ngày; chiều cao cây 110 - 115 cm, cứng cây, dạng hình đẹp, trỗ bông tập trung, bông dài 27 – 29 cm, nhiều gié, hạt thon dài,  khối lượng 1000 hạt 19 - 21 gam; năng suất trung bình 65 - 70 tạ/ha, thâm canh tốt đạt 75 - 80 tạ/ha.</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="#chatLuongGao"/>
         <NamedIndividual IRI="#GiongTBR255"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">chất lượng gạo ngon, gạo trắng, trong, cơm mềm, vị đậm, có mùi thơm đặc trưng.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dacTinhNongHoc"/>
+        <NamedIndividual IRI="#GiongTBR255"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">TBR225 là giống cảm ôn, ngắn ngày, gieo cấy được cả 2 vụ trong năm; thích ứng rộng; chịu thâm canh, có khả năng làm lúa tái sinh tốt, đẻ nhánh khỏe; phù hợp gieo cấy theo công nghệ hàng rộng, hàng hẹp; thời gian sinh trưởng: Vụ Xuân 120 - 132 ngày, vụ Mùa 105 - 110 ngày; chiều cao cây 110 - 115 cm, cứng cây, trỗ bông tập trung; bông to, dài, nhiều hạt, hạt thon dài, khối lượng 1000 hạt 24 - 25 gam; nhiễm nhẹ bệnh đạo ôn, bạc lá; năng suất trung bình 70 - 75 tạ/ha, thâm canh tốt đạt 85 - 90 tạ/ha; tỷ lệ gạo xay xát cao (68 - 72%); chất lượng gạo ngon, gạo trắng, trong, cơm mềm, vị đậm, có mùi thơm đặc trưng.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#nguonGoc"/>
@@ -2408,14 +2410,14 @@ TBR45 là giống cảm ôn, ngắn ngày, canh tác được các vụ trong n�
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Giống TBR255</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#đacTinhNongHoc"/>
-        <NamedIndividual IRI="#GiongTBR255"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">TBR225 là giống cảm ôn, ngắn ngày, gieo cấy được cả 2 vụ trong năm; thích ứng rộng; chịu thâm canh, có khả năng làm lúa tái sinh tốt, đẻ nhánh khỏe; phù hợp gieo cấy theo công nghệ hàng rộng, hàng hẹp; thời gian sinh trưởng: Vụ Xuân 120 - 132 ngày, vụ Mùa 105 - 110 ngày; chiều cao cây 110 - 115 cm, cứng cây, trỗ bông tập trung; bông to, dài, nhiều hạt, hạt thon dài, khối lượng 1000 hạt 24 - 25 gam; nhiễm nhẹ bệnh đạo ôn, bạc lá; năng suất trung bình 70 - 75 tạ/ha, thâm canh tốt đạt 85 - 90 tạ/ha; tỷ lệ gạo xay xát cao (68 - 72%); chất lượng gạo ngon, gạo trắng, trong, cơm mềm, vị đậm, có mùi thơm đặc trưng.</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="#chatLuongGao"/>
         <NamedIndividual IRI="#GiongTBR36"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Tỷ lệ gạo lật 79,8 - 81,0%, tỷ lệ gạo xát 67,8 - 71,6%, tỷ lệ gạo nguyên/gạo xát 70,5 - 78,3%, chiều dài hạt gạo 6,6 - 6,7 mm, tỷ lệ D/R 3,2 - 3,3, hàm lượng Amylose rất cao 29,0 - 30,1%; chất lượng gạo trung bình, thích hợp cho chế biến thức ăn.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dacTinhNongHoc"/>
+        <NamedIndividual IRI="#GiongTBR36"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Thời gian sinh trưởng ở Miền Bắc: vụ Xuân 120 - 130 ngày, vụ Mùa 100 - 105 ngày; chiều cao cây 115 - 120 cm, cứng cây, đẻ nhánh khá, dạng hình đẹp, lá đòng thẳng; trỗ bông tập trung; bông dài 25 - 27 cm, rất nhiều gié, hạt thon dài, khối lượng 1000 hạt 22 - 23 gam; năng suất trung bình 70 - 75 tạ/ha, thâm canh tốt đạt 80 - 85 tạ/ha.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#nguonGoc"/>
@@ -2432,11 +2434,6 @@ TBR45 là giống cảm ôn, ngắn ngày, canh tác được các vụ trong n�
         <NamedIndividual IRI="#GiongTBR36"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Chịu hạn và chua phèn tốt; chống đổ tốt; chống chịu tốt với bệnh đạo ôn (điểm 0 - 1), khô vằn (điểm 1 - 3), bạc lá (0 - 3), rầy nâu (điểm 0 - 3).
  TBR36 là giống cảm ôn, canh tác được các vụ trong năm. Thích ứng rộng, cấy được trên nhiều loại chân đất kể cả đất chua phèn.</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#đacTinhNongHoc"/>
-        <NamedIndividual IRI="#GiongTBR36"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Thời gian sinh trưởng ở Miền Bắc: vụ Xuân 120 - 130 ngày, vụ Mùa 100 - 105 ngày; chiều cao cây 115 - 120 cm, cứng cây, đẻ nhánh khá, dạng hình đẹp, lá đòng thẳng; trỗ bông tập trung; bông dài 25 - 27 cm, rất nhiều gié, hạt thon dài, khối lượng 1000 hạt 22 - 23 gam; năng suất trung bình 70 - 75 tạ/ha, thâm canh tốt đạt 80 - 85 tạ/ha.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
@@ -3512,10 +3509,6 @@ Lúc này ruộng bị khô sẽ tổn thương đến rễ lúa, nên không th
         <ObjectProperty IRI="#coTacNhanGayBenh"/>
         <Class IRI="#TacNhanGayBenh"/>
     </ObjectPropertyRange>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#thanhPhan"/>
-        <DataProperty IRI="#thoiGianPhunThuoc"/>
-    </SubDataPropertyOf>
     <DataPropertyDomain>
         <DataProperty IRI="#bienPhapKhacPhuc"/>
         <Class IRI="#HienTuong"/>
@@ -3530,31 +3523,22 @@ Lúc này ruộng bị khô sẽ tổn thương đến rễ lúa, nên không th
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#dacDiem"/>
-        <Class IRI="#GiaiDoan"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#dacDiem"/>
-        <Class IRI="#GiongLua"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#dacDiem"/>
-        <Class IRI="#HienTuong"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#dacDiem"/>
-        <Class IRI="#PhanVoCo"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#dacDiem"/>
-        <Class IRI="#QuyTrinhBonPhan"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#dacDiem"/>
-        <Class IRI="#VuMua"/>
+        <ObjectUnionOf>
+            <Class IRI="#GiaiDoan"/>
+            <Class IRI="#GiongLua"/>
+            <Class IRI="#HienTuong"/>
+            <Class IRI="#PhanVoCo"/>
+            <Class IRI="#QuyTrinhBonPhan"/>
+            <Class IRI="#VuMua"/>
+        </ObjectUnionOf>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#dacTinhCuaThuoc"/>
         <Class IRI="#Thuoc"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#dacTinhNongHoc"/>
+        <Class IRI="#GiongLua"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#denNgay"/>
@@ -3589,12 +3573,20 @@ Lúc này ruộng bị khô sẽ tổn thương đến rễ lúa, nên không th
         <Class IRI="#Thuoc"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#moTa"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#nguonGoc"/>
         <Class IRI="#GiongLua"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#nhuCauNuocOGiaiDoan"/>
         <Class IRI="#GiaiDoan"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ten"/>
+        <Class abbreviatedIRI="owl:Thing"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#thanhPhan"/>
@@ -3620,10 +3612,6 @@ Lúc này ruộng bị khô sẽ tổn thương đến rễ lúa, nên không th
         <DataProperty IRI="#tuNgayCachLy"/>
         <Class IRI="#Thuoc"/>
     </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#đacTinhNongHoc"/>
-        <Class IRI="#GiongLua"/>
-    </DataPropertyDomain>
     <DataPropertyRange>
         <DataProperty IRI="#bienPhapKhacPhuc"/>
         <Datatype abbreviatedIRI="xsd:string"/>
@@ -3645,6 +3633,10 @@ Lúc này ruộng bị khô sẽ tổn thương đến rễ lúa, nên không th
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="#dacTinhNongHoc"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#denNgay"/>
         <Datatype abbreviatedIRI="xsd:int"/>
     </DataPropertyRange>
@@ -3661,10 +3653,6 @@ Lúc này ruộng bị khô sẽ tổn thương đến rễ lúa, nên không th
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#lieuLuong"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#loai"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -3713,10 +3701,6 @@ Lúc này ruộng bị khô sẽ tổn thương đến rễ lúa, nên không th
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#tuNgayCachLy"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#đacTinhNongHoc"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <AnnotationAssertion>
@@ -3887,7 +3871,7 @@ Lúc này ruộng bị khô sẽ tổn thương đến rễ lúa, nên không th
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#bienPhapKhacPhuc</IRI>
-        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Biện pháp khắc phục</Literal>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">biện pháp khắc phục</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3931,6 +3915,11 @@ Lúc này ruộng bị khô sẽ tổn thương đến rễ lúa, nên không th
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#dacTinhNongHoc</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">đặc tính nông học</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#denNgay</IRI>
         <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">đến ngày</Literal>
     </AnnotationAssertion>
@@ -3948,11 +3937,6 @@ Lúc này ruộng bị khô sẽ tổn thương đến rễ lúa, nên không th
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#lieuLuong</IRI>
         <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">liều lượng</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#loai</IRI>
-        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">loại</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3977,12 +3961,12 @@ Lúc này ruộng bị khô sẽ tổn thương đến rễ lúa, nên không th
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#nguonGoc</IRI>
-        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Nguồn Gốc</Literal>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">nguồn gốc</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#nhuCauNuocOGiaiDoan</IRI>
-        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Nhu cầu nước ở giai đoạn</Literal>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">nhu cầu nước ở giai đoạn</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -4018,11 +4002,6 @@ Lúc này ruộng bị khô sẽ tổn thương đến rễ lúa, nên không th
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#tuNgayCachLy</IRI>
         <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">từ ngày cách ly</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#đacTinhNongHoc</IRI>
-        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">đặc tính nông học</Literal>
     </AnnotationAssertion>
 </Ontology>
 

@@ -11,14 +11,14 @@ namespace RiceDoctor.WebApp.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Trang giới thiệu về khoá luận tốt nghiệp.";
+            ViewData["Message"] = "Trang giới thiệu về khoá luận tốt nghiệp";
 
             return View();
         }
 
         public IActionResult Contact()
         {
-            ViewData["Message"] = "Trang liên hệ.";
+            ViewData["Message"] = "Trang liên hệ";
 
             return View();
         }

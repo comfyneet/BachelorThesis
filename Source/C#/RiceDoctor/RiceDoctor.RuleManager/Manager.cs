@@ -49,18 +49,6 @@ namespace RiceDoctor.RuleManager
             var parser = new LogicParser(lexer);
             var rules = parser.Parse();
 
-            //foreach (var rule in rules)
-            //{
-            //    List<Problem> tmpProblems = null;
-            //    foreach (var problem in Problems)
-            //        if (CanRuleHaveProblem(rule, problem))
-            //        {
-            //            if (tmpProblems == null) tmpProblems = new List<Problem>();
-            //            tmpProblems.Add(problem);
-            //        }
-            //    rule.Problems = tmpProblems;
-            //}
-
             return rules;
         }
 
@@ -84,27 +72,6 @@ namespace RiceDoctor.RuleManager
             }
 
             return relations;
-        }
-
-        private bool CanRuleHaveProblem(LogicRule rule, Problem problem)
-        {
-            var hasGoalType = false;
-            foreach (var goalType in problem.GoalTypes)
-            {
-                hasGoalType = rule.Conclusions.Any(fact => CanClassCaptureFact(goalType, fact));
-                if (hasGoalType) break;
-            }
-
-            if (!hasGoalType) return false;
-
-            var hasSuggestType = false;
-            foreach (var suggestType in problem.SuggestTypes)
-            {
-                hasSuggestType = rule.Hypotheses.Any(fact => CanClassCaptureFact(suggestType, fact));
-                if (hasSuggestType) break;
-            }
-
-            return hasSuggestType;
         }
 
         private class JsonTemplates
@@ -163,7 +130,7 @@ namespace RiceDoctor.RuleManager
                         problems.Add(new Problem(templateProblem.Type, goalTypes, suggestTypes));
                     }
 
-                    return problems.AsReadOnly();
+                    return problems;
                 }
             }
         }

@@ -704,7 +704,7 @@ public class OntologyManager {
         return builder.build();
     }
 
-    @Nullable
+    @NotNull
     private Class getClass(@NotNull final OWLClass owlClass) {
         final String classLabel = getLabel(owlClass);
         final Class.Builder builder = new Class.Builder(owlClass.getIRI().getShortForm(), classLabel);
@@ -791,7 +791,7 @@ public class OntologyManager {
         return individuals;
     }
 
-    @Nullable
+    @NotNull
     private Relation getRelation(@NotNull final OWLObjectProperty owlRelation) {
         final String relationLabel = getLabel(owlRelation);
         final Relation.Builder builder = new Relation.Builder(owlRelation.getIRI().getShortForm(), relationLabel);
@@ -865,7 +865,7 @@ public class OntologyManager {
         return ranges;
     }
 
-    @Nullable
+    @NotNull
     private Attribute getAttribute(@NotNull final OWLDataProperty owlAttribute) {
         final String attributeLabel = getLabel(owlAttribute);
         final Attribute.Builder builder = new Attribute.Builder(owlAttribute.getIRI().getShortForm(), attributeLabel);
@@ -913,22 +913,25 @@ public class OntologyManager {
         final Set<OWLDataPropertyRangeAxiom> owlAxioms = ontology.getDataPropertyRangeAxioms(owlAttribute);
         if (owlAxioms.size() != 1) return null;
 
-        final OWLDatatype owlDataType = owlAxioms.iterator().next().getRange().asOWLDatatype();
+        final OWLDataRange owlDataRange = owlAxioms.iterator().next().getRange();
+        if (owlDataRange.isDatatype()) {
+            final OWLDatatype owlDataType = owlDataRange.asOWLDatatype();
 
-        final DataType range;
-        if (owlDataType.isString()) range = STRING;
-        else if (owlDataType.isBoolean()) range = BOOLEAN;
-        else {
-            final String owlDataTypeName = owlDataType.getIRI().getShortForm();
+            final DataType range;
+            if (owlDataType.isString()) range = STRING;
+            else if (owlDataType.isBoolean()) range = BOOLEAN;
+            else {
+                final String owlDataTypeName = owlDataType.getIRI().getShortForm();
 
-            if (owlDataTypeName.equals("int")) range = INT;
-            else range = UNKNOWN;
-        }
+                if (owlDataTypeName.equals("int")) range = INT;
+                else range = UNKNOWN;
+            }
 
-        return range;
+            return range;
+        } else return UNKNOWN;
     }
 
-    @Nullable
+    @NotNull
     private Individual getIndividual(@NotNull final OWLNamedIndividual owlIndividual) {
         final String individualLabel = getLabel(owlIndividual);
         final Individual.Builder builder = new Individual.Builder(owlIndividual.getIRI().getShortForm(), individualLabel);

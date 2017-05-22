@@ -60,6 +60,7 @@ namespace RiceDoctor.OntologyManager
             var jsonSuperClasses = (JArray) response.Data["SuperClasses"];
             var superClasses = jsonSuperClasses
                 .Select(c => Class.Deserialize(c.ToString()))
+                .OrderBy(c => c.Id)
                 .ToList();
 
             return superClasses;
@@ -82,6 +83,7 @@ namespace RiceDoctor.OntologyManager
             var jsonSubClasses = (JArray) response.Data["SubClasses"];
             var subClasses = jsonSubClasses
                 .Select(c => Class.Deserialize(c.ToString()))
+                .OrderBy(c => c.Id)
                 .ToList();
 
             return subClasses;
@@ -100,6 +102,7 @@ namespace RiceDoctor.OntologyManager
             var jsonRelations = (JArray) response.Data["DomainRelations"];
             var relations = jsonRelations
                 .Select(r => Relation.Deserialize(r.ToString()))
+                .OrderBy(r => r.Id)
                 .ToList();
 
             return relations;
@@ -118,6 +121,7 @@ namespace RiceDoctor.OntologyManager
             var jsonRelations = (JArray) response.Data["RangeRelations"];
             var relations = jsonRelations
                 .Select(r => Relation.Deserialize(r.ToString()))
+                .OrderBy(r => r.Id)
                 .ToList();
 
             return relations;
@@ -136,6 +140,7 @@ namespace RiceDoctor.OntologyManager
             var jsonAttributes = (JArray) response.Data["ClassAttributes"];
             var attributes = jsonAttributes
                 .Select(a => Attribute.Deserialize(a.ToString()))
+                .OrderBy(a => a.Id)
                 .ToList();
 
             return attributes;
@@ -158,6 +163,7 @@ namespace RiceDoctor.OntologyManager
             var jsonIndividuals = (JArray) response.Data["ClassIndividuals"];
             var individuals = jsonIndividuals
                 .Select(i => JsonTemplates.JsonIndividual.Deserialize(i.ToString()))
+                .OrderBy(i => i.Id)
                 .ToList();
 
             return individuals;
@@ -189,6 +195,7 @@ namespace RiceDoctor.OntologyManager
             var jsonRelations = (JArray) response.Data["Relations"];
             var relations = jsonRelations
                 .Select(r => Relation.Deserialize(r.ToString()))
+                .OrderBy(r => r.Id)
                 .ToList();
 
             return relations;
@@ -227,6 +234,7 @@ namespace RiceDoctor.OntologyManager
             var jsonDomains = (JArray) response.Data["RelationDomains"];
             var domains = jsonDomains
                 .Select(d => Class.Deserialize(d.ToString()))
+                .OrderBy(d => d.Id)
                 .ToList();
 
             return domains;
@@ -249,6 +257,7 @@ namespace RiceDoctor.OntologyManager
             var jsonRanges = (JArray) response.Data["RelationRanges"];
             var ranges = jsonRanges
                 .Select(r => Class.Deserialize(r.ToString()))
+                .OrderBy(r => r.Id)
                 .ToList();
 
             return ranges;
@@ -280,6 +289,7 @@ namespace RiceDoctor.OntologyManager
             var jsonAttributes = (JArray) response.Data["Attributes"];
             var attributes = jsonAttributes
                 .Select(a => Attribute.Deserialize(a.ToString()))
+                .OrderBy(a => a.Id)
                 .ToList();
 
             return attributes;
@@ -302,6 +312,7 @@ namespace RiceDoctor.OntologyManager
             var jsonDomains = (JArray) response.Data["AttributeDomains"];
             var domains = jsonDomains
                 .Select(d => Class.Deserialize(d.ToString()))
+                .OrderBy(d => d.Id)
                 .ToList();
 
             return domains;
@@ -333,13 +344,13 @@ namespace RiceDoctor.OntologyManager
             var jsonIndividuals = (JArray) response.Data["Individuals"];
             var individuals = jsonIndividuals
                 .Select(i => JsonTemplates.JsonIndividual.Deserialize(i.ToString()))
+                .OrderBy(i => i.Id)
                 .ToList();
 
             return individuals;
         }
 
-        [CanBeNull]
-        public Class GetIndividualClass([NotNull] string individualName)
+        public Class GetIndividualClass(string individualName)
         {
             Check.NotEmpty(individualName, nameof(individualName));
 
@@ -376,6 +387,7 @@ namespace RiceDoctor.OntologyManager
             var jsonClasses = (JArray) response.Data["IndividualClasses"];
             var classes = jsonClasses
                 .Select(d => Class.Deserialize(d.ToString()))
+                .OrderBy(d => d.Id)
                 .ToList();
 
             return classes;
@@ -417,7 +429,14 @@ namespace RiceDoctor.OntologyManager
             var jsonRelationValues = (JArray) response.Data["RelationValues"];
             var relationValues = jsonRelationValues
                 .Select(r => JsonConvert.Deserialize<JsonTemplates.JsonRelationValue>(r.ToString()))
-                .ToDictionary(r => r.Left, r => r.Right);
+                .Select(r => new JsonTemplates.JsonRelationValue
+                {
+                    Left = r.Left,
+                    Right = r.Right.OrderBy(i => i.Id).ToList()
+                })
+                .ToDictionary(r => r.Left, r => r.Right)
+                .OrderBy(r => r.Key.Id)
+                .ToDictionary(r => r.Key, r => r.Value);
 
             return relationValues;
         }
@@ -435,7 +454,14 @@ namespace RiceDoctor.OntologyManager
             var jsonAttributeValues = (JArray) response.Data["AttributeValues"];
             var attributeValues = jsonAttributeValues
                 .Select(a => JsonConvert.Deserialize<JsonTemplates.JsonAttributeValue>(a.ToString()))
-                .ToDictionary(a => a.Left, a => a.Right);
+                .Select(a => new JsonTemplates.JsonAttributeValue
+                {
+                    Left = a.Left,
+                    Right = a.Right.OrderBy(v => v).ToList()
+                })
+                .ToDictionary(a => a.Left, a => a.Right)
+                .OrderBy(a => a.Key.Id)
+                .ToDictionary(a => a.Key, a => a.Value);
 
             return attributeValues;
         }

@@ -1,0 +1,81 @@
+﻿@using RiceDoctor.OntologyManager
+@{
+    var relation = (Relation) ViewData["Relation"];
+    var inverseRelation = (Relation) ViewData["InverseRelation"];
+    var directDomains = (IReadOnlyCollection<Class>) ViewData["DirectDomains"];
+    var allDomains = (IReadOnlyCollection<Class>) ViewData["AllDomains"];
+    var directRanges = (IReadOnlyCollection<Class>) ViewData["DirectRanges"];
+    var allRanges = (IReadOnlyCollection<Class>) ViewData["AllRanges"];
+    var relations = (IReadOnlyCollection<Relation>) ViewData["Relations"];
+    ViewData["Title"] = "Quan hệ " + relation;
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <h4>Quan hệ</h4>
+
+        @if (relations != null)
+        {
+            <ul>
+                @foreach (var tmpRelation in relations)
+                {
+                    <li>
+                        @Html.ActionLink(tmpRelation.ToString(), "Relation", "Ontology", new {relationName = tmpRelation.Id})
+                        @if (tmpRelation == relation)
+                        {
+                            @: (this)
+                        }
+                    </li>
+                }
+            </ul>
+        }
+    </div>
+    <div class="col-md-8">
+        <h2>@relation</h2>
+
+        @if (relation != null)
+        {
+            <h4>
+                Quan hệ phản đối của @relation
+                @if (inverseRelation != null)
+                {
+                    @:là @inverseRelation
+                }
+            </h4>
+
+            <h4>Chủ thể của @relation</h4>
+            if (allDomains != null)
+            {
+                <ul>
+                    @foreach (var allDomain in allDomains)
+                    {
+                        <li>
+                            <a asp-controller="Ontology" asp-action="Class" asp-route-className="@allDomain.Id">@allDomain</a>
+                            @if (directDomains != null && directDomains.Contains(allDomain))
+                            {
+                                @:(trực tiếp)
+                            }
+                        </li>
+                    }
+                </ul>
+            }
+
+            <h4>Khách thể của @relation</h4>
+            if (allRanges != null)
+            {
+                <ul>
+                    @foreach (var allRange in allRanges)
+                    {
+                        <li>
+                            <a asp-controller="Ontology" asp-action="Class" asp-route-className="@allRange.Id">@allRange</a>
+                            @if (directRanges != null && directRanges.Contains(allRange))
+                            {
+                                @:(trực tiếp)
+                            }
+                        </li>
+                    }
+                </ul>
+            }
+        }
+    </div>
+</div>

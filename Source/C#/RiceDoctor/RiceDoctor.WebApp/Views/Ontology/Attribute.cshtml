@@ -1,0 +1,63 @@
+﻿@using RiceDoctor.OntologyManager
+@using Attribute = RiceDoctor.OntologyManager.Attribute
+@{
+    var attribute = (Attribute) ViewData["Attribute"];
+    var directDomains = (IReadOnlyCollection<Class>) ViewData["DirectDomains"];
+    var allDomains = (IReadOnlyCollection<Class>) ViewData["AllDomains"];
+    var range = (DataType?) ViewData["Range"];
+    var attributes = (IReadOnlyCollection<Attribute>) ViewData["Attributes"];
+    ViewData["Title"] = "Thuộc tính " + attribute;
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <h4>Thuộc tính</h4>
+
+        @if (attributes != null)
+        {
+            <ul>
+                @foreach (var tmpAttribute in attributes)
+                {
+                    <li>
+                        @Html.ActionLink(tmpAttribute.ToString(), "Attribute", "Ontology", new {attributeName = tmpAttribute.Id})
+                        @if (tmpAttribute == attribute)
+                        {
+                            @: (this)
+                        }
+                    </li>
+                }
+            </ul>
+        }
+    </div>
+    <div class="col-md-8">
+        <h2>@attribute</h2>
+
+        @if (attribute != null)
+        {
+            <h4>
+                Kiểu dữ liệu của @attribute
+                @if (range != null)
+                {
+                    @:là @range
+                }
+            </h4>
+
+            <h4>Chủ thể của @attribute</h4>
+            if (allDomains != null)
+            {
+                <ul>
+                    @foreach (var allDomain in allDomains)
+                    {
+                        <li>
+                            <a asp-controller="Ontology" asp-action="Class" asp-route-className="@allDomain.Id">@allDomain</a>
+                            @if (directDomains != null && directDomains.Contains(allDomain))
+                            {
+                                @:(trực tiếp)
+                            }
+                        </li>
+                    }
+                </ul>
+            }
+        }
+    </div>
+</div>

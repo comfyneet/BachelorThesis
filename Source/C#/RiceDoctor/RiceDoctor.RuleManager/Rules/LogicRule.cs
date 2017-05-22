@@ -21,9 +21,6 @@ namespace RiceDoctor.RuleManager
             CertaintyFactor = certaintyFactor;
         }
 
-        //[CanBeNull]
-        //public IReadOnlyCollection<Problem> Problems { get; internal set; }
-
         [NotNull]
         public IReadOnlyList<Fact> Hypotheses { get; internal set; }
 

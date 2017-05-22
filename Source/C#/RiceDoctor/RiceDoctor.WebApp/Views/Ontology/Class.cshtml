@@ -1,0 +1,169 @@
+﻿@using System.Text
+@using RiceDoctor.OntologyManager
+@using Attribute = RiceDoctor.OntologyManager.Attribute
+@{
+    var cls = (Class) ViewData["Class"];
+    var directSuperClassesTree = (List<IList<Class>>) ViewData["DirectSuperClassesTree"];
+    var directSuperClasses = (IReadOnlyCollection<Class>) ViewData["DirectSuperClasses"];
+    var allSuperClasses = (IReadOnlyCollection<Class>) ViewData["AllSuperClasses"];
+    var directSubClasses = (IReadOnlyCollection<Class>) ViewData["DirectSubClasses"];
+    var allSubClasses = (IReadOnlyCollection<Class>) ViewData["AllSubClasses"];
+    var attributes = (IReadOnlyCollection<Attribute>) ViewData["Attributes"];
+    var domainRelations = (IReadOnlyCollection<Relation>) ViewData["DomainRelations"];
+    var rangeRelations = (IReadOnlyCollection<Relation>) ViewData["RangeRelations"];
+    var directIndividuals = (IReadOnlyCollection<Individual>) ViewData["DirectIndividuals"];
+    var allIndividuals = (IReadOnlyCollection<Individual>) ViewData["AllIndividuals"];
+    ViewData["Title"] = "Lớp " + cls;
+
+    var beginTree = new StringBuilder();
+    var endTree = new StringBuilder();
+    foreach (var tmpDirectSuperClasses in directSuperClassesTree)
+    {
+        beginTree.Append("<ul><li>");
+        for (var i = 0; i < tmpDirectSuperClasses.Count; ++i)
+        {
+            if (i > 0)
+            {
+                beginTree.Append(", ");
+            }
+            beginTree.Append("<a href=\"");
+            beginTree.Append(Url.Action("Class", "Ontology", new {className = tmpDirectSuperClasses[i].Id}));
+            beginTree.Append("\">" + tmpDirectSuperClasses[i] + "</a>");
+        }
+        endTree.Insert(0, "</li></ul>");
+    }
+
+    beginTree.Append("<ul><li><a href=\"");
+    beginTree.Append(Url.Action("Class", "Ontology", new {className = cls.Id}));
+    beginTree.Append("\">" + cls + "</a> (this)");
+    endTree.Insert(0, "</li></ul>");
+
+    if (cls.Id != "Thing")
+    {
+        beginTree.Insert(0, "<ul><li><a href=\"" + Url.Action("Class", "Ontology", new {className = "Thing"}) + "\">Thing</a>");
+        endTree.Append("</li></ul>");
+    }
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <h4>Quan hệ phân cấp cha-con</h4>
+
+        @Html.Raw(beginTree)
+
+        @if (directSubClasses != null)
+        {
+            <ul>
+                @foreach (var directSubClass in directSubClasses)
+                {
+                    <li>@Html.ActionLink(directSubClass.ToString(), "Class", "Ontology", new {className = directSubClass.Id})</li>
+                }
+            </ul>
+        }
+
+        @Html.Raw(endTree)
+    </div>
+    <div class="col-md-8">
+        <h2>@cls</h2>
+
+        @*
+            
+        <p>
+                @foreach (var allIndividual in allIndividuals)
+                {
+                    <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@allIndividual.Id">@allIndividual</a>
+                    if (directIndividuals != null && directIndividuals.Contains(allIndividual))
+                    {
+                        @:(trực tiếp)
+                    }
+                    @:,
+                }
+            </p>*@
+
+        <h4>Lớp cha của @cls</h4>
+        @if (allSuperClasses != null)
+        {
+            <p>
+                @foreach (var allSuperClass in allSuperClasses)
+                {
+                    <a asp-controller="Ontology" asp-action="Class" asp-route-className="@allSuperClass.Id">@allSuperClass</a>
+                    if (directSuperClasses != null && directSuperClasses.Contains(allSuperClass))
+                    {
+                        @:(trực tiếp)
+                    }
+                    @:,
+                }
+            </p>
+        }
+
+        <h4>Lớp con của @cls</h4>
+        @if (allSubClasses != null)
+        {
+            <p>
+                @foreach (var allSubClass in allSubClasses)
+                {
+                    <a asp-controller="Ontology" asp-action="Class" asp-route-className="@allSubClass.Id">@allSubClass</a>
+                    if (directSubClasses != null && directSubClasses.Contains(allSubClass))
+                    {
+                        @:(trực tiếp)
+                    }
+                    @:,
+                }
+            </p>
+        }
+
+        <h4>Thuộc tính của @cls</h4>
+        @if (attributes != null)
+        {
+            <ul>
+                @foreach (var attribute in attributes)
+                {
+                    <li>
+                        <a asp-controller="Ontology" asp-action="Attribute" asp-route-attributeName="@attribute.Id">@attribute</a> @attribute.Range</li>
+                }
+            </ul>
+        }
+
+        <h4>Quan hệ của @cls với @cls là chủ thể</h4>
+        @if (domainRelations != null)
+        {
+            <ul>
+                @foreach (var domainRelation in domainRelations)
+                {
+                    <li>
+                        <a asp-controller="Ontology" asp-action="Relation" asp-route-relationName="@domainRelation.Id">@domainRelation</a>
+                    </li>
+                }
+            </ul>
+        }
+
+        <h4>Quan hệ của @cls với @cls là khách thể</h4>
+        @if (rangeRelations != null)
+        {
+            <ul>
+                @foreach (var rangeRelation in rangeRelations)
+                {
+                    <li>
+                        <a asp-controller="Ontology" asp-action="Relation" asp-route-relationName="@rangeRelation.Id">@rangeRelation</a>
+                    </li>
+                }
+            </ul>
+        }
+
+        <h4>Thể hiện của @cls</h4>
+        @if (allIndividuals != null)
+        {
+            <p>
+                @foreach (var allIndividual in allIndividuals)
+                {
+                    <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@allIndividual.Id">@allIndividual</a>
+                    if (directIndividuals != null && directIndividuals.Contains(allIndividual))
+                    {
+                        @:(trực tiếp)
+                    }
+                    @:,
+                }
+            </p>
+        }
+    </div>
+</div>
