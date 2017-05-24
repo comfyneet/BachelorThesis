@@ -30,6 +30,8 @@ namespace RiceDoctor.WebApp
         {
             // Add framework services.
             services.AddMvc();
+            services.AddDistributedMemoryCache();
+            services.AddSession();
 
             services.AddSingleton<IOntologyManager>(Manager.Instance);
 
@@ -58,6 +60,7 @@ namespace RiceDoctor.WebApp
                 app.UseExceptionHandler("/Home/Error");
             }
 
+            app.UseSession();
             app.UseStaticFiles();
 
             app.UseMvc(routes =>

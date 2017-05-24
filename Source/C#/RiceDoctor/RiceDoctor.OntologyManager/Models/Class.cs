@@ -33,209 +33,191 @@ namespace RiceDoctor.OntologyManager
 
         public override EntityType Type => EntityType.Class;
 
-        [CanBeNull]
-        public IReadOnlyCollection<Class> DirectSuperClasses
-        {
-            get
-            {
-                if (_canGetDirectSuperClasses) return _directSuperClasses;
-
-                _directSuperClasses = Manager.Instance.GetSuperClasses(Id, GetDirect);
-                _canGetDirectSuperClasses = true;
-
-                return _directSuperClasses;
-            }
-            set
-            {
-                if (_canGetDirectSuperClasses)
-                    throw new InvalidOperationException(CoreStrings.CannotSetAgain(nameof(DirectSuperClasses)));
-
-                _directSuperClasses = value;
-                _canGetDirectSuperClasses = true;
-            }
-        }
-
-        [CanBeNull]
-        public IReadOnlyCollection<Class> AllSuperClasses
-        {
-            get
-            {
-                if (_canGetAllSuperClasses) return _allSuperClasses;
-
-                _allSuperClasses = Manager.Instance.GetSuperClasses(Id, GetAll);
-                _canGetAllSuperClasses = true;
-
-                return _allSuperClasses;
-            }
-            set
-            {
-                if (_canGetAllSuperClasses)
-                    throw new InvalidOperationException(CoreStrings.CannotSetAgain(nameof(AllSuperClasses)));
-
-                _allSuperClasses = value;
-                _canGetAllSuperClasses = true;
-            }
-        }
-
-        [CanBeNull]
-        public IReadOnlyCollection<Class> DirectSubClasses
-        {
-            get
-            {
-                if (_canGetDirectSubClasses) return _directSubClasses;
-
-                _directSubClasses = Manager.Instance.GetSubClasses(Id, GetDirect);
-                _canGetDirectSubClasses = true;
-
-                return _directSubClasses;
-            }
-            set
-            {
-                if (_canGetDirectSubClasses)
-                    throw new InvalidOperationException(CoreStrings.CannotSetAgain(nameof(DirectSubClasses)));
-
-                _directSubClasses = value;
-                _canGetDirectSubClasses = true;
-            }
-        }
-
-        [CanBeNull]
-        public IReadOnlyCollection<Class> AllSubClasses
-        {
-            get
-            {
-                if (_canGetAllSubClasses) return _allSubClasses;
-
-                _allSubClasses = Manager.Instance.GetSubClasses(Id, GetAll);
-                _canGetAllSubClasses = true;
-
-                return _allSubClasses;
-            }
-            set
-            {
-                if (_canGetAllSubClasses)
-                    throw new InvalidOperationException(CoreStrings.CannotSetAgain(nameof(AllSubClasses)));
-
-                _allSubClasses = value;
-                _canGetAllSubClasses = true;
-            }
-        }
-
-        [CanBeNull]
-        public IReadOnlyCollection<Relation> DomainRelations
-        {
-            get
-            {
-                if (_canGetDomainRelations) return _domainRelations;
-
-                _domainRelations = Manager.Instance.GetDomainRelations(Id);
-                _canGetDomainRelations = true;
-
-                return _domainRelations;
-            }
-            set
-            {
-                if (_canGetDomainRelations)
-                    throw new InvalidOperationException(CoreStrings.CannotSetAgain(nameof(DomainRelations)));
-
-                _domainRelations = value;
-                _canGetDomainRelations = true;
-            }
-        }
-
-        [CanBeNull]
-        public IReadOnlyCollection<Relation> RangeRelations
-        {
-            get
-            {
-                if (_canGetRangeRelations) return _rangeRelations;
-
-                _rangeRelations = Manager.Instance.GetRangeRelations(Id);
-                _canGetRangeRelations = true;
-
-                return _rangeRelations;
-            }
-            set
-            {
-                if (_canGetRangeRelations)
-                    throw new InvalidOperationException(CoreStrings.CannotSetAgain(nameof(RangeRelations)));
-
-                _rangeRelations = value;
-                _canGetRangeRelations = true;
-            }
-        }
-
-        [CanBeNull]
-        public IReadOnlyCollection<Attribute> Attributes
-        {
-            get
-            {
-                if (_canGetAttributes) return _attributes;
-
-                _attributes = Manager.Instance.GetClassAttributes(Id);
-                _canGetAttributes = true;
-
-                return _attributes;
-            }
-            set
-            {
-                if (_canGetAttributes)
-                    throw new InvalidOperationException(CoreStrings.CannotSetAgain(nameof(Attributes)));
-
-                _attributes = value;
-                _canGetAttributes = true;
-            }
-        }
-
-        [CanBeNull]
-        public IReadOnlyCollection<Individual> DirectIndividuals
-        {
-            get
-            {
-                if (_canGetDirectIndividuals) return _directIndividuals;
-
-                _directIndividuals = Manager.Instance.GetClassIndividuals(Id, GetDirect);
-                _canGetDirectIndividuals = true;
-
-                return _directIndividuals;
-            }
-            set
-            {
-                if (_canGetDirectIndividuals)
-                    throw new InvalidOperationException(CoreStrings.CannotSetAgain(nameof(DirectIndividuals)));
-
-                _directIndividuals = value;
-                _canGetDirectIndividuals = true;
-            }
-        }
-
-        [CanBeNull]
-        public IReadOnlyCollection<Individual> AllIndividuals
-        {
-            get
-            {
-                if (_canGetAllIndividuals) return _allIndividuals;
-
-                _allIndividuals = Manager.Instance.GetClassIndividuals(Id, GetAll);
-                _canGetAllIndividuals = true;
-
-                return _allIndividuals;
-            }
-            set
-            {
-                if (_canGetAllIndividuals)
-                    throw new InvalidOperationException(CoreStrings.CannotSetAgain(nameof(AllIndividuals)));
-
-                _allIndividuals = value;
-                _canGetAllIndividuals = true;
-            }
-        }
-
         public bool Equals(Class other)
         {
             if (ReferenceEquals(null, other)) return false;
             if (ReferenceEquals(this, other)) return true;
             return base.Equals(other);
+        }
+
+        [CanBeNull]
+        public IReadOnlyCollection<Class> GetDirectSuperClasses()
+        {
+            if (_canGetDirectSuperClasses) return _directSuperClasses;
+
+            _directSuperClasses = Manager.Instance.GetSuperClasses(Id, GetDirect);
+            _canGetDirectSuperClasses = true;
+
+            return _directSuperClasses;
+        }
+
+        public void SetDirectSuperClasses([CanBeNull] IReadOnlyCollection<Class> directSuperClasses)
+        {
+            if (_canGetDirectSuperClasses)
+                throw new InvalidOperationException(CoreStrings.CannotSetAgain(nameof(SetDirectSuperClasses)));
+
+            _directSuperClasses = directSuperClasses;
+            _canGetDirectSuperClasses = true;
+        }
+
+        [CanBeNull]
+        public IReadOnlyCollection<Class> GetAllSuperClasses()
+        {
+            if (_canGetAllSuperClasses) return _allSuperClasses;
+
+            _allSuperClasses = Manager.Instance.GetSuperClasses(Id, GetAll);
+            _canGetAllSuperClasses = true;
+
+            return _allSuperClasses;
+        }
+
+        public void SetAllSuperClasses([CanBeNull] IReadOnlyCollection<Class> allSuperClasses)
+        {
+            if (_canGetAllSuperClasses)
+                throw new InvalidOperationException(CoreStrings.CannotSetAgain(nameof(SetAllSuperClasses)));
+
+            _allSuperClasses = allSuperClasses;
+            _canGetAllSuperClasses = true;
+        }
+
+        [CanBeNull]
+        public IReadOnlyCollection<Class> GetDirectSubClasses()
+        {
+            if (_canGetDirectSubClasses) return _directSubClasses;
+
+            _directSubClasses = Manager.Instance.GetSubClasses(Id, GetDirect);
+            _canGetDirectSubClasses = true;
+
+            return _directSubClasses;
+        }
+
+        public void SetDirectSubClasses([CanBeNull] IReadOnlyCollection<Class> directSubClasses)
+        {
+            if (_canGetDirectSubClasses)
+                throw new InvalidOperationException(CoreStrings.CannotSetAgain(nameof(SetDirectSubClasses)));
+
+            _directSubClasses = directSubClasses;
+            _canGetDirectSubClasses = true;
+        }
+
+        [CanBeNull]
+        public IReadOnlyCollection<Class> GetAllSubClasses()
+        {
+            if (_canGetAllSubClasses) return _allSubClasses;
+
+            _allSubClasses = Manager.Instance.GetSubClasses(Id, GetAll);
+            _canGetAllSubClasses = true;
+
+            return _allSubClasses;
+        }
+
+        public void SetAllSubClasses([CanBeNull] IReadOnlyCollection<Class> allSubClasses)
+        {
+            if (_canGetAllSubClasses)
+                throw new InvalidOperationException(CoreStrings.CannotSetAgain(nameof(SetAllSubClasses)));
+
+            _allSubClasses = allSubClasses;
+            _canGetAllSubClasses = true;
+        }
+
+        [CanBeNull]
+        public IReadOnlyCollection<Relation> GetDomainRelations()
+        {
+            if (_canGetDomainRelations) return _domainRelations;
+
+            _domainRelations = Manager.Instance.GetDomainRelations(Id);
+            _canGetDomainRelations = true;
+
+            return _domainRelations;
+        }
+
+        public void SetDomainRelations([CanBeNull] IReadOnlyCollection<Relation> domainRelations)
+        {
+            if (_canGetDomainRelations)
+                throw new InvalidOperationException(CoreStrings.CannotSetAgain(nameof(SetDomainRelations)));
+
+            _domainRelations = domainRelations;
+            _canGetDomainRelations = true;
+        }
+
+        [CanBeNull]
+        public IReadOnlyCollection<Relation> GetRangeRelations()
+        {
+            if (_canGetRangeRelations) return _rangeRelations;
+
+            _rangeRelations = Manager.Instance.GetRangeRelations(Id);
+            _canGetRangeRelations = true;
+
+            return _rangeRelations;
+        }
+
+        public void SetRangeRelations([CanBeNull] IReadOnlyCollection<Relation> rangeRelations)
+        {
+            if (_canGetRangeRelations)
+                throw new InvalidOperationException(CoreStrings.CannotSetAgain(nameof(SetRangeRelations)));
+
+            _rangeRelations = rangeRelations;
+            _canGetRangeRelations = true;
+        }
+
+        [CanBeNull]
+        public IReadOnlyCollection<Attribute> GetAttributes()
+        {
+            if (_canGetAttributes) return _attributes;
+
+            _attributes = Manager.Instance.GetClassAttributes(Id);
+            _canGetAttributes = true;
+
+            return _attributes;
+        }
+
+        public void SetAttributes([CanBeNull] IReadOnlyCollection<Attribute> attributes)
+        {
+            if (_canGetAttributes)
+                throw new InvalidOperationException(CoreStrings.CannotSetAgain(nameof(GetAttributes)));
+
+            _attributes = attributes;
+            _canGetAttributes = true;
+        }
+
+        [CanBeNull]
+        public IReadOnlyCollection<Individual> GetDirectIndividuals()
+        {
+            if (_canGetDirectIndividuals) return _directIndividuals;
+
+            _directIndividuals = Manager.Instance.GetClassIndividuals(Id, GetDirect);
+            _canGetDirectIndividuals = true;
+
+            return _directIndividuals;
+        }
+
+        public void SetDirectIndividuals([CanBeNull] IReadOnlyCollection<Individual> directIndividuals)
+        {
+            if (_canGetDirectIndividuals)
+                throw new InvalidOperationException(CoreStrings.CannotSetAgain(nameof(SetDirectIndividuals)));
+
+            _directIndividuals = directIndividuals;
+            _canGetDirectIndividuals = true;
+        }
+
+        [CanBeNull]
+        public IReadOnlyCollection<Individual> GetAllIndividuals()
+        {
+            if (_canGetAllIndividuals) return _allIndividuals;
+
+            _allIndividuals = Manager.Instance.GetClassIndividuals(Id, GetAll);
+            _canGetAllIndividuals = true;
+
+            return _allIndividuals;
+        }
+
+        public void SetAllIndividuals([CanBeNull] IReadOnlyCollection<Individual> allIndividuals)
+        {
+            if (_canGetAllIndividuals)
+                throw new InvalidOperationException(CoreStrings.CannotSetAgain(nameof(SetAllIndividuals)));
+
+            _allIndividuals = allIndividuals;
+            _canGetAllIndividuals = true;
         }
 
         public static bool operator ==(Class class1, Class class2)

@@ -7,6 +7,7 @@ namespace RiceDoctor.OntologyManager
     public enum DataType
     {
         Unknown,
+        Enumerated,
         Int,
         String,
         Boolean

@@ -6,6 +6,8 @@ namespace RiceDoctor.OntologyManager
     [JsonConverter(typeof(StringEnumConverter))]
     public enum RequestType
     {
+        SearchIndividuals,
+
         GetClass,
         GetSubClasses,
         GetSuperClasses,

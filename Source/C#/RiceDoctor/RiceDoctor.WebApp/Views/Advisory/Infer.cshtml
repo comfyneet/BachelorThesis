@@ -1,0 +1,26 @@
+﻿@using RiceDoctor.RuleManager
+@using RiceDoctor.WebApp.Models
+@model Advisory
+@{
+    var result = (bool) ViewData["Result"];
+    ViewData["Title"] = "Tư vấn/Chuẩn đoán";
+}
+
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-8">
+        @if (result)
+        {
+            <h2>Suy diễn thành công</h2>
+            foreach (var resultFact in Model.Results)
+            {
+                var individual = (IndividualFact) resultFact;
+                <p>@individual.Name=@individual.Individual</p>
+            }
+        }
+        else
+        {
+            <h2>Suy diễn không thành công</h2>
+        }
+    </div>
+</div>

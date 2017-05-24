@@ -97,6 +97,17 @@ namespace RiceDoctor.SemanticCode
         private static IReadOnlyCollection<string> UnorderedListTypeTags { get; }
 
         [NotNull]
+        public static string Parse([NotNull] string text)
+        {
+            Check.NotEmpty(text, nameof(text));
+
+            var lexer = new SemanticLexer(text);
+            var parser = new SemanticParser(lexer);
+
+            return parser.Parse().ToString();
+        }
+
+        [NotNull]
         public override TextContainerNode Parse()
         {
             if (_root != null) return _root;

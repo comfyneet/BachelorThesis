@@ -1,0 +1,45 @@
+﻿@model IReadOnlyDictionary<RiceDoctor.OntologyManager.Individual, IReadOnlyDictionary<RiceDoctor.OntologyManager.Attribute, IReadOnlyCollection<string>>>
+@{
+    var keywords = (string) ViewData["Keywords"];
+    ViewData["Title"] = "Tra cứu " + keywords;
+}
+
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-8">
+        <h2>Tra cứu "@keywords"</h2>
+
+        @if (Model == null)
+        {
+            <h4>Không tìm thấy từ khóa</h4>
+        }
+        else
+        {
+            <h4>
+                Tìm thấy từ khóa
+            </h4>
+
+            <ol>
+                @foreach (var searchIndividual in Model)
+                {
+                    <li>
+                        <a asp-controller="Ontology" asp-action="Class" asp-route-className="@searchIndividual.Key.Id">@searchIndividual.Key</a>
+                        @if (searchIndividual.Value != null)
+                        {
+                            foreach (var attributeValues in searchIndividual.Value)
+                            {
+                                foreach (var value in attributeValues.Value)
+                                {
+                                    <p>
+                                        <a asp-controller="Ontology" asp-action="Attribute" asp-route-attrubuteName="@attributeValues.Key.Id">@attributeValues.Key</a>:
+                                        @Html.Raw(value)
+                                    </p>
+                                }
+                            }
+                        }
+                    </li>
+                }
+            </ol>
+        }
+    </div>
+</div>

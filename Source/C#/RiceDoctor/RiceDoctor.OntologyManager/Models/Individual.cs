@@ -23,91 +23,85 @@ namespace RiceDoctor.OntologyManager
         public override EntityType Type => EntityType.Individual;
 
         [CanBeNull]
-        public Class DirectClass
+        public Class GetDirectClass()
         {
-            get
-            {
-                if (_canGetDirectClass) return _directClass;
+            if (_canGetDirectClass) return _directClass;
 
-                _directClass = Manager.Instance.GetIndividualClass(Id);
-                _canGetDirectClass = true;
+            _directClass = Manager.Instance.GetIndividualClass(Id);
+            _canGetDirectClass = true;
 
-                return _directClass;
-            }
-            set
-            {
-                if (_canGetDirectClass)
-                    throw new InvalidOperationException(CoreStrings.CannotSetAgain(nameof(DirectClass)));
+            return _directClass;
+        }
 
-                _directClass = value;
-                _canGetDirectClass = true;
-            }
+        public void SetDirectClass([CanBeNull] Class directClass)
+        {
+            if (_canGetDirectClass)
+                throw new InvalidOperationException(CoreStrings.CannotSetAgain(nameof(SetDirectClass)));
+
+            _directClass = directClass;
+            _canGetDirectClass = true;
         }
 
         [CanBeNull]
-        public IReadOnlyCollection<Class> AllClasses
+        public IReadOnlyCollection<Class> GetAllClasses()
         {
-            get
-            {
-                if (_canGetAllClasses) return _allClasses;
+            if (_canGetAllClasses) return _allClasses;
 
-                _allClasses = Manager.Instance.GetIndividualClasses(Id);
-                _canGetAllClasses = true;
+            _allClasses = Manager.Instance.GetIndividualClasses(Id);
+            _canGetAllClasses = true;
 
-                return _allClasses;
-            }
-            set
-            {
-                if (_canGetAllClasses)
-                    throw new InvalidOperationException(CoreStrings.CannotSetAgain(nameof(AllClasses)));
+            return _allClasses;
+        }
 
-                _allClasses = value;
-                _canGetAllClasses = true;
-            }
+        public void SetAllClasses([CanBeNull] IReadOnlyCollection<Class> allClasses)
+        {
+            if (_canGetAllClasses)
+                throw new InvalidOperationException(CoreStrings.CannotSetAgain(nameof(SetAllClasses)));
+
+            _allClasses = allClasses;
+            _canGetAllClasses = true;
         }
 
         [CanBeNull]
-        public IReadOnlyDictionary<Relation, IReadOnlyCollection<Individual>> RelationValues
+        public IReadOnlyDictionary<Relation, IReadOnlyCollection<Individual>> GetRelationValues()
         {
-            get
-            {
-                if (_canGetRelationValues) return _relationValues;
+            if (_canGetRelationValues) return _relationValues;
 
-                _relationValues = Manager.Instance.GetRelationValues(Id);
-                _canGetRelationValues = true;
+            _relationValues = Manager.Instance.GetRelationValues(Id);
+            _canGetRelationValues = true;
 
-                return _relationValues;
-            }
-            set
-            {
-                if (_canGetRelationValues)
-                    throw new InvalidOperationException(CoreStrings.CannotSetAgain(nameof(RelationValues)));
+            return _relationValues;
+        }
 
-                _relationValues = value;
-                _canGetRelationValues = true;
-            }
+        public void SetRelationValues(
+            [CanBeNull] IReadOnlyDictionary<Relation, IReadOnlyCollection<Individual>> relationValues)
+        {
+            if (_canGetRelationValues)
+                throw new InvalidOperationException(CoreStrings.CannotSetAgain(nameof(SetRelationValues)));
+
+            _relationValues = relationValues;
+            _canGetRelationValues = true;
         }
 
         [CanBeNull]
-        public IReadOnlyDictionary<Attribute, IReadOnlyCollection<string>> AttributeValues
+        public IReadOnlyDictionary<Attribute, IReadOnlyCollection<string>> GetAttributeValues()
         {
-            get
-            {
-                if (_canGetAttributeValues) return _attributeValues;
+            if (_canGetAttributeValues) return _attributeValues;
 
-                _attributeValues = Manager.Instance.GetAttributeValues(Id);
-                _canGetAttributeValues = true;
+            _attributeValues = Manager.Instance.GetAttributeValues(Id);
+            _canGetAttributeValues = true;
 
-                return _attributeValues;
-            }
-            set
-            {
-                if (_canGetAttributeValues)
-                    throw new InvalidOperationException(CoreStrings.CannotSetAgain(nameof(AttributeValues)));
+            return _attributeValues;
+        }
 
-                _attributeValues = value;
-                _canGetAttributeValues = true;
-            }
+        public void SetAttributeValues(
+            [CanBeNull] IReadOnlyDictionary<Attribute, IReadOnlyCollection<string>> attributeValues)
+        {
+            if (_canGetAttributeValues)
+                throw new InvalidOperationException(CoreStrings.CannotSetAgain(nameof(SetAttributeValues)));
+
+            _attributeValues = attributeValues;
+            _canGetAttributeValues = true;
         }
     }
 }

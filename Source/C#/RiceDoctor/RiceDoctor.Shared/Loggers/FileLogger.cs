@@ -5,6 +5,8 @@ namespace RiceDoctor.Shared
 {
     public class FileLogger
     {
+        [NotNull] private static readonly object LogWriteLock = new object();
+
         [NotNull] private readonly string _filePath;
 
         public FileLogger([NotNull] string filePath)
@@ -18,9 +20,12 @@ namespace RiceDoctor.Shared
         {
             Check.NotNull(e, nameof(e));
 
-            using (var writer = File.AppendText(_filePath))
+            lock (LogWriteLock)
             {
-                writer.WriteLine(e.ToString());
+                using (var writer = File.AppendText(_filePath))
+                {
+                    writer.WriteLine(e.ToString());
+                }
             }
         }
     }

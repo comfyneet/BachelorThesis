@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using JetBrains.Annotations;
+using Newtonsoft.Json;
 using RiceDoctor.RuleManager;
 using RiceDoctor.Shared;
 
@@ -12,6 +13,7 @@ namespace RiceDoctor.InferenceEngine
 
     public class Request
     {
+        [JsonConstructor]
         public Request([NotNull] Problem problem, RequestType requestType, int? totalGoals)
         {
             Check.NotNull(problem, nameof(problem));

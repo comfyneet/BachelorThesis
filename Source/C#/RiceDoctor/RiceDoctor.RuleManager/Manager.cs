@@ -37,7 +37,7 @@ namespace RiceDoctor.RuleManager
 
             if (fact.Name == type.Id) return true;
 
-            if (type.AllSubClasses != null && type.AllSubClasses.Any(sc => sc.Id == fact.Name)) return true;
+            if (type.GetAllSubClasses() != null && type.GetAllSubClasses().Any(sc => sc.Id == fact.Name)) return true;
 
             return false;
         }
@@ -66,7 +66,7 @@ namespace RiceDoctor.RuleManager
 
                 if (!relations.Contains(relation)) relations.Add(relation);
 
-                var inverseRelation = relation.InverseRelation;
+                var inverseRelation = relation.GetInverseRelation();
                 if (inverseRelation != null && !relations.Contains(inverseRelation))
                     relations.Add(inverseRelation);
             }

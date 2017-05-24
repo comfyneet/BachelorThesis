@@ -28,88 +28,68 @@ namespace RiceDoctor.WebApp.Controllers
 
         public IActionResult Class(string className)
         {
-            if (string.IsNullOrEmpty(className)) className = "Thing";
+            className = string.IsNullOrWhiteSpace(className) ? "Thing" : className.Trim();
 
             var @class = _ontologyManager.GetClass(className);
             if (@class == null) return NotFound($"Class \"{className}\" not found.");
 
             var directSuperClassesTree = new List<IList<Class>>();
-            GetDirectSuperClassesTree(@class.DirectSuperClasses?.ToList(), directSuperClassesTree, 0);
+            GetDirectSuperClassesTree(@class.GetDirectSuperClasses()?.ToList(), directSuperClassesTree, 0);
 
-            ViewData["Class"] = @class;
             ViewData["DirectSuperClassesTree"] = directSuperClassesTree;
-            ViewData["DirectSubClasses"] = @class.DirectSubClasses;
-            ViewData["AllSubClasses"] = @class.AllSubClasses;
-            ViewData["DirectSuperClasses"] = @class.DirectSuperClasses;
-            ViewData["AllSuperClasses"] = @class.AllSuperClasses;
-            ViewData["Attributes"] = @class.Attributes;
-            ViewData["DomainRelations"] = @class.DomainRelations;
-            ViewData["RangeRelations"] = @class.RangeRelations;
-            ViewData["DirectIndividuals"] = @class.DirectIndividuals;
-            ViewData["AllIndividuals"] = @class.AllIndividuals;
 
-            return View();
+            return View(@class);
         }
 
         public IActionResult Relation(string relationName)
         {
-            if (!string.IsNullOrEmpty(relationName))
+            Relation relation = null;
+            if (!string.IsNullOrWhiteSpace(relationName))
             {
-                var relation = _ontologyManager.GetRelation(relationName);
+                relationName = relationName.Trim();
+                relation = _ontologyManager.GetRelation(relationName);
                 if (relation == null) return NotFound($"Relation \"{relationName}\" not found.");
-
-                ViewData["Relation"] = relation;
-                ViewData["InverseRelation"] = relation.InverseRelation;
-                ViewData["DirectDomains"] = relation.DirectDomains;
-                ViewData["AllDomains"] = relation.AllDomains;
-                ViewData["DirectRanges"] = relation.DirectRanges;
-                ViewData["AllRanges"] = relation.AllRanges;
             }
 
             ViewData["Relations"] = _ontologyManager.GetRelations();
 
-            return View();
+            return View(relation);
         }
 
         public IActionResult Attribute(string attributeName)
         {
-            if (!string.IsNullOrEmpty(attributeName))
+            Attribute attribute = null;
+            if (!string.IsNullOrWhiteSpace(attributeName))
             {
-                var attribute = _ontologyManager.GetAttribute(attributeName);
+                attributeName = attributeName.Trim();
+                attribute = _ontologyManager.GetAttribute(attributeName);
                 if (attribute == null) return NotFound($"Attribute \"{attributeName}\" not found");
-
-                ViewData["Attribute"] = attribute;
-                ViewData["DirectDomains"] = attribute.DirectDomains;
-                ViewData["AllDomains"] = attribute.AllDomains;
-                ViewData["Range"] = attribute.Range;
             }
 
             ViewData["Attributes"] = _ontologyManager.GetAttributes();
 
-            return View();
+            return View(attribute);
         }
 
         public IActionResult Individual(string individualName)
         {
-            if (!string.IsNullOrEmpty(individualName))
+            Individual individual = null;
+            if (!string.IsNullOrWhiteSpace(individualName))
             {
-                var individual = _ontologyManager.GetIndividual(individualName);
+                individualName = individualName.Trim();
+                individual = _ontologyManager.GetIndividual(individualName);
                 if (individual == null) return NotFound($"Individual \"{individualName}\" not found");
 
-                ViewData["Individual"] = individual;
-                ViewData["DirectClass"] = individual.DirectClass;
-                ViewData["AllClasses"] = individual.AllClasses;
-                ViewData["RelationValues"] = individual.RelationValues;
-                ViewData["AttributeValues"] = individual.AttributeValues?
+                ViewData["AttributeValues"] = individual.GetAttributeValues()?
                     .Select(av => new KeyValuePair<Attribute, IReadOnlyCollection<string>>(
                         av.Key,
-                        av.Value.Select(GetSemanticCode).ToList()))
+                        av.Value.Select(SemanticParser.Parse).ToList()))
                     .ToDictionary(av => av.Key, av => av.Value);
             }
 
             ViewData["Individuals"] = _ontologyManager.GetIndividuals();
 
-            return View();
+            return View(individual);
         }
 
         private void GetDirectSuperClassesTree(
@@ -129,7 +109,7 @@ namespace RiceDoctor.WebApp.Controllers
                 var newDirectSuperClasses = new List<Class>();
                 foreach (var directSuperClass in directSuperClasses)
                 {
-                    var tmpDirectSuperClasses = directSuperClass.DirectSuperClasses;
+                    var tmpDirectSuperClasses = directSuperClass.GetDirectSuperClasses();
                     if (tmpDirectSuperClasses != null)
                         foreach (var tmpDirectSuperClass in tmpDirectSuperClasses)
                             if (!newDirectSuperClasses.Contains(tmpDirectSuperClass))
@@ -139,16 +119,6 @@ namespace RiceDoctor.WebApp.Controllers
                 if (newDirectSuperClasses.Count > 0)
                     GetDirectSuperClassesTree(newDirectSuperClasses, directSuperClassesTree, count + 1);
             }
-        }
-
-        [NotNull]
-        private string GetSemanticCode([NotNull] string source)
-        {
-            Check.NotNull(source, nameof(source));
-
-            var lexer = new SemanticLexer(source);
-            var parser = new SemanticParser(lexer);
-            return parser.Parse().ToString();
         }
     }
 }

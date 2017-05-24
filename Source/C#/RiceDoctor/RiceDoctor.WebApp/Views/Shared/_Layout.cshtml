@@ -35,12 +35,18 @@
                     <a asp-controller="Ontology" asp-action="Index">Ontology</a>
                 </li>
                 <li>
+                    <a asp-controller="Advisory" asp-action="Index">Tư vấn</a>
+                </li>
+                <li>
                     <a asp-controller="Home" asp-action="About">Giới thiệu</a>
                 </li>
                 <li>
                     <a asp-controller="Home" asp-action="Contact">Liên hệ</a>
                 </li>
             </ul>
+            <form asp-controller="Search" asp-action="Index" method="post" class="navbar-form navbar-right">
+                <input name="keywords" type="text" class="form-control" placeholder="Tìm kiếm...">
+            </form>
         </div>
     </div>
 </nav>

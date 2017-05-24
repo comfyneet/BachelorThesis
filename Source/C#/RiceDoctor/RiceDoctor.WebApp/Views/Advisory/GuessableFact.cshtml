@@ -1,0 +1,36 @@
+﻿@using RiceDoctor.WebApp.Models
+@model Advisory
+@{
+    var className = (string) ViewData["ClassName"];
+    var individualName = (string) ViewData["IndividualName"];
+    ViewData["Title"] = "Tư vấn/Chuẩn đoán";
+}
+
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-8">
+        <h2>Sự kiện @className=@individualName có tồn tại hay không?</h2>
+
+        <form asp-controller="Advisory" asp-action="GuessableFact" method="post">
+            <input type="hidden" name="guid" value="@Model.Guid"/>
+            <input type="hidden" name="className" value="@className"/>
+            <input type="hidden" name="individualName" value="@individualName"/>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="isGuessable" value="1">Có
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="isGuessable" value="0">Không
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="isGuessable" value="-1">Không biết
+                </label>
+            </div>
+            <input class="btn btn-default" type="submit" value="Trả lời">
+        </form>
+    </div>
+</div>

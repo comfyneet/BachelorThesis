@@ -188,8 +188,8 @@ namespace RiceDoctor.InferenceEngine
                     foreach (var fact in _knownFacts)
                     {
                         if (!(fact is IndividualFact individualFact)) continue;
-                        if (relationRule.AllDomains != null &&
-                            relationRule.AllDomains.Any(d => d.Id == individualFact.Name))
+                        if (relationRule.GetAllDomains() != null &&
+                            relationRule.GetAllDomains().Any(d => d.Id == individualFact.Name))
                         {
                             hasNewFacts = InferIndividualFact(individualFact, relationRule);
                             if (hasNewFacts) break;
@@ -224,8 +224,8 @@ namespace RiceDoctor.InferenceEngine
                     foreach (var fact in _knownFacts)
                     {
                         if (!(fact is IndividualFact individualFact)) continue;
-                        if (relationRule.AllDomains != null &&
-                            relationRule.AllDomains.Any(d => d.Id == individualFact.Name))
+                        if (relationRule.GetAllDomains() != null &&
+                            relationRule.GetAllDomains().Any(d => d.Id == individualFact.Name))
                         {
                             hasNewFacts = InferIndividualFact(individualFact, relationRule);
                             if (hasNewFacts) break;
@@ -260,8 +260,8 @@ namespace RiceDoctor.InferenceEngine
                     foreach (var fact in _knownFacts)
                     {
                         if (!(fact is IndividualFact individualFact)) continue;
-                        if (relationRule.AllDomains != null &&
-                            relationRule.AllDomains.Any(d => d.Id == individualFact.Name))
+                        if (relationRule.GetAllDomains() != null &&
+                            relationRule.GetAllDomains().Any(d => d.Id == individualFact.Name))
                         {
                             hasNewFacts = InferIndividualFact(individualFact, relationRule);
                             if (hasNewFacts) break;
@@ -367,12 +367,13 @@ namespace RiceDoctor.InferenceEngine
             for (var i = 0; i < relationRules.Count;)
             {
                 var hasGoalType = false;
-                if (relationRules[i].AllRanges != null)
-                    hasGoalType = _request.Problem.GoalTypes.Any(g => relationRules[i].AllRanges.Contains(g));
+                if (relationRules[i].GetAllRanges() != null)
+                    hasGoalType = _request.Problem.GoalTypes.Any(g => relationRules[i].GetAllRanges().Contains(g));
 
                 var hasSuggestType = false;
-                if (hasGoalType && relationRules[i].AllDomains != null)
-                    hasSuggestType = _request.Problem.SuggestTypes.Any(s => relationRules[i].AllDomains.Contains(s));
+                if (hasGoalType && relationRules[i].GetAllDomains() != null)
+                    hasSuggestType =
+                        _request.Problem.SuggestTypes.Any(s => relationRules[i].GetAllDomains().Contains(s));
 
                 if (hasGoalType)
                 {
@@ -456,7 +457,7 @@ namespace RiceDoctor.InferenceEngine
             if (relationValue != null)
                 foreach (var individual in relationValue)
                 {
-                    var directClass = individual.DirectClass;
+                    var directClass = individual.GetDirectClass();
                     if (directClass != null)
                     {
                         var newIndividualFact = new IndividualFact(directClass.Id, individual.Id);

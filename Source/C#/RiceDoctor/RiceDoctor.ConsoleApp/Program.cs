@@ -152,7 +152,7 @@ namespace RiceDoctor.ConsoleApp
                 suggestTypes.Add(suggestType);
             }
 
-            var problem = new Problem("Dang tong quat", goalTypes, suggestTypes);
+            var problem = new Problem("General", goalTypes, suggestTypes);
 
             return problem;
         }

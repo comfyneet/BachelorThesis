@@ -27,6 +27,39 @@ namespace RiceDoctor.OntologyManager
         [NotNull]
         public static Manager Instance { get; }
 
+        public IReadOnlyDictionary<Individual, IReadOnlyDictionary<Attribute, IReadOnlyCollection<string>>>
+            SearchIndividuals(string keywords)
+        {
+            Check.NotEmpty(keywords, nameof(keywords));
+
+            var data = new Dictionary<string, object> {{"Keywords", keywords}};
+            var request = new Request(RequestType.SearchIndividuals, data);
+
+            var response = Send(request);
+            if (response.Status != Success) return null;
+
+            var jsonSearchIndividuals = (JArray) response.Data["SearchIndividuals"];
+            var searchIndividuals = jsonSearchIndividuals
+                .Select(jsonSi => JsonConvert.Deserialize<JsonTemplates.JsonSearchIndividual>(jsonSi.ToString()))
+                .Select(jsonSi => new KeyValuePair<Individual,
+                    IReadOnlyDictionary<Attribute, IReadOnlyCollection<string>>>(
+                    jsonSi.Left,
+                    jsonSi.Right.Select(jsonAv => new JsonTemplates.JsonAttributeValue
+                        {
+                            Left = jsonAv.Left,
+                            Right = jsonAv.Right.OrderBy(v => v).ToList()
+                        })
+                        .ToDictionary(jsonAv => jsonAv.Left, jsonAv => jsonAv.Right.Count == 0 ? null : jsonAv.Right)
+                        .OrderBy(av => av.Key.Id)
+                        .ToDictionary(av => av.Key, av => av.Value)
+                ))
+                .ToDictionary(si => si.Key, si => si.Value.Count == 0 ? null : si.Value)
+                .OrderBy(si => si.Key.Id)
+                .ToDictionary(si => si.Key, si => si.Value);
+
+            return searchIndividuals;
+        }
+
         public Class GetClass(string className)
         {
             Check.NotEmpty(className, nameof(className));
@@ -492,6 +525,12 @@ namespace RiceDoctor.OntologyManager
                 public IReadOnlyCollection<string> Right { get; set; }
             }
 
+            public class JsonSearchIndividual
+            {
+                public Individual Left { get; set; }
+                public IReadOnlyCollection<JsonAttributeValue> Right { get; set; }
+            }
+
             public class JsonIndividual
             {
                 public string Id { get; set; }
@@ -510,14 +549,14 @@ namespace RiceDoctor.OntologyManager
                     var individual = new Individual(templateIndividual.Id, templateIndividual.Label);
 
                     if (templateIndividual.AttributeValues != null)
-                        individual.AttributeValues = templateIndividual
+                        individual.SetAttributeValues(templateIndividual
                             .AttributeValues
-                            .ToDictionary(a => a.Left, a => a.Right);
+                            .ToDictionary(a => a.Left, a => a.Right));
 
                     if (templateIndividual.RelationValues != null)
-                        individual.RelationValues = templateIndividual
+                        individual.SetRelationValues(templateIndividual
                             .RelationValues
-                            .ToDictionary(r => r.Left, r => r.Right);
+                            .ToDictionary(r => r.Left, r => r.Right));
 
                     return individual;
                 }

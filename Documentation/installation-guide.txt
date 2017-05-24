@@ -1,8 +1,8 @@
 - Install IntelliJ IDEA 2017.1 + Java SDK 8u121
 - Install Visual Studio 2017 (with 'ASP.NET and web development' workload) + IIS 10.0
 
-- Open 'rice-doctor.iml' with IDEA, build 'App'
-- Open 'RiceDoctor.sln' with VS, build 'WebApp'
+- Import 'pom.xml' from Source\Java with IDEA, build 'App'
+- Open 'RiceDoctor.sln' from Source\C# with VS, build 'WebApp'
 
 - Run 'App', wait for the 'INFO: Ontology is loaded.' message in the console window
 - Run 'WebApp', wait for the website to be loaded in the browser

@@ -1,0 +1,53 @@
+﻿@using RiceDoctor.WebApp.Models
+@model Advisory
+@{
+    ViewData["Title"] = "Tư vấn/Chuẩn đoán";
+}
+
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-8">
+        <h2>Danh sách luật cho bài toán @Model.Request.Problem.Type</h2>
+
+        <h4>Luật quan hệ ưu tiên cao</h4>
+        @foreach (var rule in Model.Engine.HighPriorityRelationRules)
+        {
+            <p>@rule</p>
+        }
+
+        <h4>Luật tường minh ưu tiên cao</h4>
+        @foreach (var rule in Model.Engine.HighPriorityLogicRules)
+        {
+            <p>@rule</p>
+        }
+
+        <h4>Luật quan hệ ưu tiên trung</h4>
+        @foreach (var rule in Model.Engine.MidPriorityRelationRules)
+        {
+            <p>@rule</p>
+        }
+
+        <h4>Luật tường minh ưu tiên cao</h4>
+        @foreach (var rule in Model.Engine.MidPriorityLogicRules)
+        {
+            <p>@rule</p>
+        }
+
+        <h4>Luật quan hệ ưu tiên thấp</h4>
+        @foreach (var rule in Model.Engine.LowPriorityRelationRules)
+        {
+            <p>@rule</p>
+        }
+
+        <h4>Luật tường minh ưu tiên thấp</h4>
+        @foreach (var rule in Model.Engine.LowPriorityLogicRules)
+        {
+            <p>@rule</p>
+        }
+
+        <form asp-controller="Advisory" asp-action="Infer" method="post">
+            <input type="hidden" name="guid" value="@Model.Guid"/>
+            <input class="btn btn-default" type="submit" value="Suy diễn">
+        </form>
+    </div>
+</div>

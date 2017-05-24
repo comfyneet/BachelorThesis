@@ -25,121 +25,111 @@ namespace RiceDoctor.OntologyManager
 
         public override EntityType Type => EntityType.Relation;
 
-        [CanBeNull]
-        public Relation InverseRelation
-        {
-            get
-            {
-                if (_canGetInverseRelation) return _inverseRelation;
-
-                _inverseRelation = Manager.Instance.GetInverseRelation(Id);
-                _canGetInverseRelation = true;
-
-                return _inverseRelation;
-            }
-            set
-            {
-                if (_canGetInverseRelation)
-                    throw new InvalidOperationException(CoreStrings.CannotSetAgain(nameof(InverseRelation)));
-
-                _inverseRelation = value;
-                _canGetInverseRelation = true;
-            }
-        }
-
-        [CanBeNull]
-        public IReadOnlyCollection<Class> DirectDomains
-        {
-            get
-            {
-                if (_canGetDirectDomains) return _directDomains;
-
-                _directDomains = Manager.Instance.GetRelationDomains(Id, GetDirect);
-                _canGetDirectDomains = true;
-
-                return _directDomains;
-            }
-            set
-            {
-                if (_canGetDirectDomains)
-                    throw new InvalidOperationException(CoreStrings.CannotSetAgain(nameof(DirectDomains)));
-
-                _directDomains = value;
-                _canGetDirectDomains = true;
-            }
-        }
-
-        [CanBeNull]
-        public IReadOnlyCollection<Class> AllDomains
-        {
-            get
-            {
-                if (_canGetAllDomains) return _allDomains;
-
-                _allDomains = Manager.Instance.GetRelationDomains(Id, GetAll);
-                _canGetAllDomains = true;
-
-                return _allDomains;
-            }
-            set
-            {
-                if (_canGetAllDomains)
-                    throw new InvalidOperationException(CoreStrings.CannotSetAgain(nameof(AllDomains)));
-
-                _allDomains = value;
-                _canGetAllDomains = true;
-            }
-        }
-
-        [CanBeNull]
-        public IReadOnlyCollection<Class> DirectRanges
-        {
-            get
-            {
-                if (_canGetDirectRanges) return _directRanges;
-
-                _directRanges = Manager.Instance.GetRelationRanges(Id, GetDirect);
-                _canGetDirectRanges = true;
-
-                return _directRanges;
-            }
-            set
-            {
-                if (_canGetDirectRanges)
-                    throw new InvalidOperationException(CoreStrings.CannotSetAgain(nameof(DirectRanges)));
-
-                _directRanges = value;
-                _canGetDirectRanges = true;
-            }
-        }
-
-        [CanBeNull]
-        public IReadOnlyCollection<Class> AllRanges
-        {
-            get
-            {
-                if (_canGetAllRanges) return _allRanges;
-
-                _allRanges = Manager.Instance.GetRelationRanges(Id, GetAll);
-                _canGetAllRanges = true;
-
-                return _allRanges;
-            }
-            set
-            {
-                if (_canGetAllRanges)
-                    throw new InvalidOperationException(CoreStrings.CannotSetAgain(nameof(AllRanges)));
-
-                _allRanges = value;
-                _canGetAllRanges = true;
-            }
-        }
-
         public bool Equals(Relation other)
         {
             if (ReferenceEquals(null, other)) return false;
             if (ReferenceEquals(this, other)) return true;
             return base.Equals(other);
+        }
+
+        [CanBeNull]
+        public Relation GetInverseRelation()
+        {
+            if (_canGetInverseRelation) return _inverseRelation;
+
+            _inverseRelation = Manager.Instance.GetInverseRelation(Id);
+            _canGetInverseRelation = true;
+
+            return _inverseRelation;
+        }
+
+        public void SetInverseRelation([CanBeNull] Relation inverseRelation)
+        {
+            if (_canGetInverseRelation)
+                throw new InvalidOperationException(CoreStrings.CannotSetAgain(nameof(SetInverseRelation)));
+
+            _inverseRelation = inverseRelation;
+            _canGetInverseRelation = true;
+        }
+
+        [CanBeNull]
+        public IReadOnlyCollection<Class> GetDirectDomains()
+        {
+            if (_canGetDirectDomains) return _directDomains;
+
+            _directDomains = Manager.Instance.GetRelationDomains(Id, GetDirect);
+            _canGetDirectDomains = true;
+
+            return _directDomains;
+        }
+
+        public void SetDirectDomains([CanBeNull] IReadOnlyCollection<Class> directDomains)
+        {
+            if (_canGetDirectDomains)
+                throw new InvalidOperationException(CoreStrings.CannotSetAgain(nameof(SetDirectDomains)));
+
+            _directDomains = directDomains;
+            _canGetDirectDomains = true;
+        }
+
+        [CanBeNull]
+        public IReadOnlyCollection<Class> GetAllDomains()
+        {
+            if (_canGetAllDomains) return _allDomains;
+
+            _allDomains = Manager.Instance.GetRelationDomains(Id, GetAll);
+            _canGetAllDomains = true;
+
+            return _allDomains;
+        }
+
+        public void SetAllDomains([CanBeNull] IReadOnlyCollection<Class> allDomains)
+        {
+            if (_canGetAllDomains)
+                throw new InvalidOperationException(CoreStrings.CannotSetAgain(nameof(SetAllDomains)));
+
+            _allDomains = allDomains;
+            _canGetAllDomains = true;
+        }
+
+        [CanBeNull]
+        public IReadOnlyCollection<Class> GetDirectRanges()
+        {
+            if (_canGetDirectRanges) return _directRanges;
+
+            _directRanges = Manager.Instance.GetRelationRanges(Id, GetDirect);
+            _canGetDirectRanges = true;
+
+            return _directRanges;
+        }
+
+        public void SetDirectRanges([CanBeNull] IReadOnlyCollection<Class> directRanges)
+        {
+            if (_canGetDirectRanges)
+                throw new InvalidOperationException(CoreStrings.CannotSetAgain(nameof(SetDirectRanges)));
+
+            _directRanges = directRanges;
+            _canGetDirectRanges = true;
+        }
+
+        [CanBeNull]
+        public IReadOnlyCollection<Class> GetAllRanges()
+        {
+            if (_canGetAllRanges) return _allRanges;
+
+            _allRanges = Manager.Instance.GetRelationRanges(Id, GetAll);
+            _canGetAllRanges = true;
+
+            return _allRanges;
+        }
+
+        public void SetAllRanges([CanBeNull] IReadOnlyCollection<Class> allRanges)
+        {
+            if (_canGetAllRanges)
+                throw new InvalidOperationException(CoreStrings.CannotSetAgain(nameof(SetAllRanges)));
+
+            _allRanges = allRanges;
+            _canGetAllRanges = true;
         }
 
         public static bool operator ==(Relation relation1, Relation relation2)

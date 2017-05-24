@@ -1,13 +1,8 @@
 ﻿@using RiceDoctor.OntologyManager
+@model RiceDoctor.OntologyManager.Relation
 @{
-    var relation = (Relation) ViewData["Relation"];
-    var inverseRelation = (Relation) ViewData["InverseRelation"];
-    var directDomains = (IReadOnlyCollection<Class>) ViewData["DirectDomains"];
-    var allDomains = (IReadOnlyCollection<Class>) ViewData["AllDomains"];
-    var directRanges = (IReadOnlyCollection<Class>) ViewData["DirectRanges"];
-    var allRanges = (IReadOnlyCollection<Class>) ViewData["AllRanges"];
     var relations = (IReadOnlyCollection<Relation>) ViewData["Relations"];
-    ViewData["Title"] = "Quan hệ " + relation;
+    ViewData["Title"] = "Quan hệ " + Model;
 }
 
 <div class="row">
@@ -21,7 +16,7 @@
                 {
                     <li>
                         @Html.ActionLink(tmpRelation.ToString(), "Relation", "Ontology", new {relationName = tmpRelation.Id})
-                        @if (tmpRelation == relation)
+                        @if (tmpRelation == Model)
                         {
                             @: (this)
                         }
@@ -31,50 +26,46 @@
         }
     </div>
     <div class="col-md-8">
-        <h2>@relation</h2>
+        <h2>@Model</h2>
 
-        @if (relation != null)
+        @if (Model != null)
         {
             <h4>
-                Quan hệ phản đối của @relation
-                @if (inverseRelation != null)
+                Quan hệ phản đối của @Model
+                @if (Model.GetInverseRelation() != null)
                 {
-                    @:là @inverseRelation
+                    @:là @Model.GetInverseRelation()
                 }
             </h4>
 
-            <h4>Chủ thể của @relation</h4>
-            if (allDomains != null)
+            <h4>Chủ thể của @Model</h4>
+            if (Model.GetAllDomains() != null)
             {
-                <ul>
-                    @foreach (var allDomain in allDomains)
-                    {
-                        <li>
-                            <a asp-controller="Ontology" asp-action="Class" asp-route-className="@allDomain.Id">@allDomain</a>
-                            @if (directDomains != null && directDomains.Contains(allDomain))
-                            {
-                                @:(trực tiếp)
-                            }
-                        </li>
-                    }
-                </ul>
+                foreach (var allDomain in Model.GetAllDomains())
+                {
+                    <p>
+                        <a asp-controller="Ontology" asp-action="Class" asp-route-className="@allDomain.Id">@allDomain</a>
+                        @if (Model.GetDirectDomains()?.Contains(allDomain) == true)
+                        {
+                            @:(trực tiếp)
+                        }
+                    </p>
+                }
             }
 
-            <h4>Khách thể của @relation</h4>
-            if (allRanges != null)
+            <h4>Khách thể của @Model</h4>
+            if (Model.GetAllRanges() != null)
             {
-                <ul>
-                    @foreach (var allRange in allRanges)
-                    {
-                        <li>
-                            <a asp-controller="Ontology" asp-action="Class" asp-route-className="@allRange.Id">@allRange</a>
-                            @if (directRanges != null && directRanges.Contains(allRange))
-                            {
-                                @:(trực tiếp)
-                            }
-                        </li>
-                    }
-                </ul>
+                foreach (var allRange in Model.GetAllRanges())
+                {
+                    <p>
+                        <a asp-controller="Ontology" asp-action="Class" asp-route-className="@allRange.Id">@allRange</a>
+                        @if (Model.GetDirectRanges()?.Contains(allRange) == true)
+                        {
+                            @:(trực tiếp)
+                        }
+                    </p>
+                }
             }
         }
     </div>

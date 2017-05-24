@@ -81,10 +81,7 @@ and it continues here </li></ol></li><li>This is line 3</li></ol>Another line</d
             Check.NotEmpty(semanticCode, nameof(semanticCode));
             Check.NotEmpty(expectedHtml, nameof(expectedHtml));
 
-            var lexer = new SemanticLexer(semanticCode);
-            var parser = new SemanticParser(lexer);
-
-            var actualHtml = parser.Parse().ToString();
+            var actualHtml = SemanticParser.Parse(semanticCode);
 
             Assert.Equal(expectedHtml, actualHtml);
         }

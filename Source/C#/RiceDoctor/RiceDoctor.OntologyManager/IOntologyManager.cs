@@ -6,6 +6,10 @@ namespace RiceDoctor.OntologyManager
     public interface IOntologyManager
     {
         [CanBeNull]
+        IReadOnlyDictionary<Individual, IReadOnlyDictionary<Attribute, IReadOnlyCollection<string>>> SearchIndividuals(
+            [NotNull] string keywords);
+
+        [CanBeNull]
         Class GetClass([NotNull] string className);
 
         [CanBeNull]
