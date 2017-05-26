@@ -68,10 +68,10 @@
         <NamedIndividual IRI="#ChopReBuu"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#coGiaiDoan"/>
+        <NamedIndividual IRI="#ThoiTietNong"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#ThoiTietNong"/>
+        <ObjectProperty IRI="#coGiaiDoan"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasMembershipFunction"/>
@@ -137,10 +137,10 @@
         <NamedIndividual IRI="#BenhDomNauHaiLua"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#ReKho"/>
+        <NamedIndividual IRI="#PhanHonHop"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#PhanHonHop"/>
+        <NamedIndividual IRI="#ReKho"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ChauChau"/>
@@ -174,6 +174,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#QuyTrinhTuoiNuocSauSa5-20Ngay"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ditacin_8L"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#NhietDoThap"/>
@@ -218,19 +221,19 @@
         <NamedIndividual IRI="#PhanRac"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#cachCheBien"/>
+        <NamedIndividual IRI="#ChieuCaoThap"/>
     </Declaration>
     <Declaration>
         <Class IRI="#HinhDangLa"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#ChieuCaoThap"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#OcNhot"/>
+        <DataProperty IRI="#cachCheBien"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ChopLaXoan"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OcNhot"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ThoiTietKho"/>
@@ -239,19 +242,19 @@
         <NamedIndividual IRI="#BenhTuyenTrung"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#NangIt"/>
+        <Class IRI="#Co"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Co"/>
+        <NamedIndividual IRI="#NangIt"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Sau"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#QuyTrinhBonThucDot1"/>
+        <DataProperty IRI="#dacTinhCuaThuoc"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#dacTinhCuaThuoc"/>
+        <NamedIndividual IRI="#QuyTrinhBonThucDot1"/>
     </Declaration>
     <Declaration>
         <Class IRI="#QuyTrinhKichThich"/>
@@ -266,10 +269,10 @@
         <NamedIndividual IRI="#NhietDoCao"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#denNgay"/>
+        <NamedIndividual IRI="#BenhKhamVang"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#BenhKhamVang"/>
+        <DataProperty IRI="#denNgay"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#GiongOM8923"/>
@@ -284,10 +287,10 @@
         <NamedIndividual IRI="#QuyTrinhTuoiNuocTrongDeNhanh"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#TacNhanGayBenh"/>
+        <NamedIndividual IRI="#PhanTrungLuong"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#PhanTrungLuong"/>
+        <Class IRI="#TacNhanGayBenh"/>
     </Declaration>
     <Declaration>
         <Class IRI="#ChieuCao"/>
@@ -308,19 +311,19 @@
         <NamedIndividual IRI="#ThanUn"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#GiaiDoan"/>
+        <NamedIndividual IRI="#GanLaXung"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#GanLaXung"/>
+        <Class IRI="#GiaiDoan"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#nhuCauNuocOGiaiDoan"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#QuyTrinhTuoiNuocSauSa20-25Ngay"/>
+        <Class IRI="#Phan"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Phan"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocSauSa20-25Ngay"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Ray"/>
@@ -335,16 +338,13 @@
         <DataProperty IRI="#tuNgayCachLy"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#QuyTrinh"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#SauKeo"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#dacTinhNongHoc"/>
+        <Class IRI="#QuyTrinh"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#SauCuonLa"/>
+        <DataProperty IRI="#dacTinhNongHoc"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#coTacNhanGayBenh"/>
@@ -362,13 +362,13 @@
         <NamedIndividual IRI="#VuHeThu"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#LaHoiVang"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#PhanViLuong"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#BenhVangTamThoi"/>
+        <NamedIndividual IRI="#LaHoiVang"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Bassa_50EC"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#LaNau"/>
@@ -422,6 +422,9 @@
         <NamedIndividual IRI="#RayNau"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#xuatHienOGiaiDoan"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#QuyTrinhBonLot"/>
     </Declaration>
     <Declaration>
@@ -431,16 +434,19 @@
         <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Bactocide_12WP"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#HienTuongThieuDam"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#LaVechDom"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#BenhThoiThan"/>
+        <Class IRI="#VuMua"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#VuMua"/>
+        <NamedIndividual IRI="#BenhThoiThan"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#NuocIt"/>
@@ -449,22 +455,22 @@
         <NamedIndividual IRI="#DauLaChay"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#LaCongQueo"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#LaChet"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#LaCongQueo"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#HienTuongNgoDocHuuCo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#denNgayCachLy"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#NuocCao"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#RayXanhDuoiDen"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#denNgayCachLy"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#tinhThichNghi"/>
@@ -482,6 +488,9 @@
         <NamedIndividual IRI="#dibavil_50FL_50_WP"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#CoThuoc"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#moTa"/>
     </Declaration>
     <Declaration>
@@ -494,10 +503,10 @@
         <NamedIndividual IRI="#SauDucThanHaiCham"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#DatKho"/>
+        <NamedIndividual IRI="#BenhTungo"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#BenhTungo"/>
+        <NamedIndividual IRI="#DatKho"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Dat"/>
@@ -515,13 +524,19 @@
         <NamedIndividual IRI="#ThoiTietMatMe"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Antracol_70WP"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#chatLuongGao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GiongTBR-1"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#PhanSinhHocHuuCo"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#GiongTBR-1"/>
+        <NamedIndividual IRI="#Hoả_Tiễn_50WP"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#MuiHoi"/>
@@ -542,6 +557,9 @@
         <NamedIndividual IRI="#KhongHat"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Actara_25WWG"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#PhanLan"/>
     </Declaration>
     <Declaration>
@@ -555,6 +573,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#DoAmThap"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Admire_50EC"/>
     </Declaration>
     <Declaration>
         <Class IRI="#QuyTrinhTuoiNuoc"/>
@@ -599,13 +620,13 @@
         <NamedIndividual IRI="#GiaiDoanMa"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Trebon_20ND"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#A1VAN_6.4SL"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#ten"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#SauDoiDucBe"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Bisomin_6WP_2SL"/>
@@ -644,19 +665,25 @@
         <DataProperty IRI="#thanhPhan"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#SauDucThan"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#GiongTBR255"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#GiaiDoanDeNhanh"/>
+        <NamedIndividual IRI="#SauDucThan"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sasa_20WP"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Tilt_Super_300_EC"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocChinHoanToan"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#LaVangCam"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#QuyTrinhTuoiNuocChinHoanToan"/>
+        <NamedIndividual IRI="#GiaiDoanDeNhanh"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#BenhVangLun"/>
@@ -668,22 +695,22 @@
         <NamedIndividual IRI="#SauCuonLaNho"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Thuoc"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#BongIt"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Thuoc"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#HatLep"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PhanPhucHop"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#GiongDH815-6"/>
     </Declaration>
     <Declaration>
         <Class IRI="#HienTuong"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#PhanPhucHop"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#GioLon"/>
@@ -695,10 +722,16 @@
         <NamedIndividual IRI="#OcLac"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#BenhLunXoanLa"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#LaHinhBacThang"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#BenhLunXoanLa"/>
+        <NamedIndividual IRI="#Staner_20WP"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CBA"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#BoTri"/>
@@ -830,6 +863,26 @@
         <NamedIndividual IRI="#A1VAN_6.4SL"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Thuoc"/>
+        <NamedIndividual IRI="#Actara_25WWG"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Thuoc"/>
+        <NamedIndividual IRI="#Admire_50EC"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Thuoc"/>
+        <NamedIndividual IRI="#Antracol_70WP"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Thuoc"/>
+        <NamedIndividual IRI="#Bactocide_12WP"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Thuoc"/>
+        <NamedIndividual IRI="#Bassa_50EC"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#TrieuChung"/>
         <NamedIndividual IRI="#BeThoi"/>
     </ClassAssertion>
@@ -902,10 +955,6 @@
         <NamedIndividual IRI="#BenhVangLun"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Benh"/>
-        <NamedIndividual IRI="#BenhVangTamThoi"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#HinhDangLa"/>
         <NamedIndividual IRI="#BiaLaChay"/>
     </ClassAssertion>
@@ -936,6 +985,10 @@
     <ClassAssertion>
         <Class IRI="#HinhDangBong"/>
         <NamedIndividual IRI="#BongNho"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Thuoc"/>
+        <NamedIndividual IRI="#CBA"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#TrieuChung"/>
@@ -992,6 +1045,10 @@
     <ClassAssertion>
         <Class IRI="#TrieuChung"/>
         <NamedIndividual IRI="#DeNhanhKem"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Thuoc"/>
+        <NamedIndividual IRI="#Ditacin_8L"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#DoAm"/>
@@ -1100,6 +1157,10 @@
     <ClassAssertion>
         <Class IRI="#HienTuong"/>
         <NamedIndividual IRI="#HienTuongThieuDam"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Thuoc"/>
+        <NamedIndividual IRI="#Hoả_Tiễn_50WP"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#HinhDangHat"/>
@@ -1418,12 +1479,12 @@
         <NamedIndividual IRI="#RuongSau"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Sau"/>
-        <NamedIndividual IRI="#SauCanGie"/>
+        <Class IRI="#Thuoc"/>
+        <NamedIndividual IRI="#Sasa_20WP"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Sau"/>
-        <NamedIndividual IRI="#SauCuonLa"/>
+        <NamedIndividual IRI="#SauCanGie"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Sau"/>
@@ -1432,10 +1493,6 @@
     <ClassAssertion>
         <Class IRI="#Sau"/>
         <NamedIndividual IRI="#SauCuonLaNho"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Sau"/>
-        <NamedIndividual IRI="#SauDoiDucBe"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Sau"/>
@@ -1464,6 +1521,10 @@
     <ClassAssertion>
         <Class IRI="#Sau"/>
         <NamedIndividual IRI="#SauPhao"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Thuoc"/>
+        <NamedIndividual IRI="#Staner_20WP"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#HinhDangThan"/>
@@ -1510,6 +1571,14 @@
         <NamedIndividual IRI="#ThuocArmada"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Thuoc"/>
+        <NamedIndividual IRI="#Tilt_Super_300_EC"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Thuoc"/>
+        <NamedIndividual IRI="#Trebon_20ND"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#VuMua"/>
         <NamedIndividual IRI="#VuDongXuan"/>
     </ClassAssertion>
@@ -1529,6 +1598,61 @@
         <Class IRI="#Thuoc"/>
         <NamedIndividual IRI="#dibavil_50FL_50_WP"/>
     </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#CoThuoc"/>
+        <NamedIndividual IRI="#BenhBacLa"/>
+        <NamedIndividual IRI="#Bactocide_12WP"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#CoThuoc"/>
+        <NamedIndividual IRI="#BenhBacLa"/>
+        <NamedIndividual IRI="#Ditacin_8L"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#CoThuoc"/>
+        <NamedIndividual IRI="#BenhBacLa"/>
+        <NamedIndividual IRI="#Hoả_Tiễn_50WP"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#CoThuoc"/>
+        <NamedIndividual IRI="#BenhBacLa"/>
+        <NamedIndividual IRI="#Sasa_20WP"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#CoThuoc"/>
+        <NamedIndividual IRI="#BenhBacLa"/>
+        <NamedIndividual IRI="#Staner_20WP"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#CoThuoc"/>
+        <NamedIndividual IRI="#BenhDomNau"/>
+        <NamedIndividual IRI="#Tilt_Super_300_EC"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#CoThuoc"/>
+        <NamedIndividual IRI="#BenhVangLa"/>
+        <NamedIndividual IRI="#Antracol_70WP"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#CoThuoc"/>
+        <NamedIndividual IRI="#BenhVangLun"/>
+        <NamedIndividual IRI="#Actara_25WWG"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#CoThuoc"/>
+        <NamedIndividual IRI="#BenhVangLun"/>
+        <NamedIndividual IRI="#Admire_50EC"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#CoThuoc"/>
+        <NamedIndividual IRI="#BenhVangLun"/>
+        <NamedIndividual IRI="#Bassa_50EC"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#CoThuoc"/>
+        <NamedIndividual IRI="#BenhVangLun"/>
+        <NamedIndividual IRI="#Trebon_20ND"/>
+    </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#coGiaiDoan"/>
         <NamedIndividual IRI="#QuyTrinhBonDong"/>
@@ -1655,6 +1779,24 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Bẹ thối</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#BenhBacLa"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Bệnh bạc lá lúa xuất hiện trên phiến lá, đầu tiên là ở ngọn lá. Khi mới xuất hiện vết bệnh có màu xanh tái, gặp nắng vết bệnh héo đi, tế bào chết dần tạo thành vết dài màu trắng xám. Bìa vết bệnh có hình gợn sóng, thời tiết ẩm, hay sáng sớm trên vết bệnh có giọt dịch màu trắng đục, lúc khô có màu vàng hoặc nâu chứa đầy vi khuẩn. Bệnh nặng có thể làm cho khô trắng cả phiến lá, làm tỷ lệ hạt lửng lép 50-70%.
+
+Bệnh bạc lá lúa năm nay có thể hại nặng lúa giai đoạn trổ bông đến thu hoạch, nhất là những ruộng lúa cấy giống nhiễm bệnh, bón thừa đạm vào giai đoạn cuối làm cho bộ lá đòng (gồm lá đòng và 3 lá dưới lá đòng) có màu xanh thẫm, xanh đen.
+
+Chọn thuốc trừ bệnh bạc lá lúa: Hiện nay chưa có loại thuốc đặc hiệu trừ bệnh bạc lá lúa. Chỉ có loại thuốc mới, khả năng phòng bệnh tốt, trừ được bệnh khi mới phát sinh, cấp bệnh nhẹ (cấp bệnh C1-2) và một số loại thuốc thành phẩm thông dụng có nhiều trên thị trường có tác dụng phòng trị bệnh bạc lá lúa.
+
+Ditacin 8L với hoạt chất Ningnamycin là một loại kháng sinh có nguồn gốc sinh học mạnh, phổ rộng với nhiều loại nấm và vi khuẩn gây bệnh cho cây trồng, sản phẩm đã được đăng ký trong danh mục các loại thuốc BVTV mới an toàn với môi trường sống và người sử dụng. Ditacin 8L do Công ty BVTV Lâm Sinh độc quyền sản xuất, phân phối được xem là loại thuốc có hiệu quả nhất với vi khuẩn gây bệnh bạc lá lúa hiện nay. Liều lượng sử dụng: Phòng bệnh với những ruộng lúa khi trổ bông xanh tốt, biểu hiện thừa đạm, giống lúa nhiễm bệnh, 2gói/2bình 8-10lít/sào Bắc bộ. Trị bệnh, khi bệnh mới xuất hiện (cấp bệnh C1-2), 3gói/2bình/sào; phun nhắc lại lần 2 sau lần 1 từ 5-7ngày.
+
+Ngoài ra có thể sử dụng các loại thuốc thành phẩm sau: Staner 20WP; Hoả Tiễn 50WP; CBA; Bactocide 12WP; Sasa 20WP cũng cho kết quả phòng, trị bệnh tương đối tốt, cần phun 2 lần, mỗi lần cách nhau 5-7 ngày.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nguonGoc"/>
+        <NamedIndividual IRI="#BenhBacLa"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Bệnh bạc lá do vi khuẩn Xanthomonas Oryzae gây lên. Bệnh thường phát sinh đầu tiên ở rìa lá, mút lá sau đó lan dần vào trong phiến lá tạo thành các vết dài màu xanh nhạt sau chuyển thành màu trắng xám. Giữa phần lá bệnh và không bệnh thường có đường gợn sóng, vào sáng sớm có thể quan sát các giọt dịch vi khuẩn tròn nhỏ màu vàng nâu trên mép lá.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#BenhBacLa"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Bệnh bạc lá</Literal>
@@ -1665,14 +1807,41 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Bệnh cháy bìa lá</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#BenhDaoOn"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#BenhDaoOn"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Bệnh đạo ôn</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#bienPhapKhacPhuc"/>
+        <NamedIndividual IRI="#BenhDomNau"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Xử dụng các giống ít nhiễm bệnh trên những vùng thường xuyên bị nhiễm bệnh này.
+
+● Đảm bao xuống giống, gieo cây đúng mùa vụ; cung cấp đủ nước cho vùng khô hạn, giảm độc chất phèn hay ngộ độc hữu cơ bằng hệ thống mương thoát phèn; tăng cường bón sớm vôi và các loại phân lân
+
+● Xử lý hạt giống là biện pháp quan trọng để giảm sự gây hại. Sử dụng Carban 50SC ngâm giống theo liều lượng hướng dẫn trên bao bì trong 16-24 giờ, sau đó rửa bằng nước sạch và ủ bình thường.
+
+● Trừ bệnh bằng cách phun Tilt Super 300 EC hay Bonanza 100SL trước khi lúa trỗ.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#BenhDomNau"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Bệnh đốm nâu do nấm gây nên. Có thể quan sát dễ dàng thấy những vết bệnh màu nâu tròn hay bầu dục trên lá, trên bẹ, cuống gié lúa và vỏ hạt lúa. Trong thời kỳ ngâm ủ, bệnh làm cho rễ mầm bị thối đen, lá mầm bị biến dạng, nếu bị nặng cây mầm bị chết hoặc phát triển không bình thường.
+
+Vết bệnh trên lá ban đầu là những chấm nhỏ màu nâu nhạt, sau đó phát triển thành các vết bệnh màu nâu đậm hơn. Ở giống lúa kháng bệnh, đốm bệnh hẹp, ngắn, màu nâu đậm có kích thước từ 2-10 x 1 mm; với những giống nhiễm bệnh, đốm bệnh dài và rộng hơn, có màu nâu nhạt hơn và ở giữa có màu sáng. Tổng thể đốm bệnh thường có màu nâu đỏ, ở mép lá màu nhạt hơn nên ruộng bị nhiễm nặng có màu đỏ rực. Vết bệnh gây hại trên hạt có màu nâu, sau biến màu đen. Nấm bệnh tồn tại trên hạt và là nguồn bệnh cho vụ sau.
+
+Bệnh đốm nâu phát triển ở vùng đất nghèo chất dinh dưỡng như vùng đất phèn, vùng đất cát bán sơn địa ven chân núi hay ở vùng đất bị độc hữu cơ, nói chung là những nơi đất có vấn đề làm bộ rễ lúa phát triển kém. Bệnh cũng thường xuất hiện ở những vùng đất quá úng hay khô hạn. Các bất lợi từ việc đất thường xuyên bị khô hay ngập liên tục làm cho bộ rễ lúa kém phát triển, không lấy được dinh dưỡng làm giảm tính kháng và cây lúa dễ nhiễm bệnh hơn. Bệnh phát sinh phát triển thích hợp trong điều kiện nhiệt độ cao, ẩm độ thấp.
+
+Khi nhiều vết bệnh đốm nâu xuất hiện trên lá làm cho lá bị cháy vàng, ruộng có vẻ xơ xác. Giai đoạn lúa trỗ và sau trỗ bệnh tấn công vào hạt gây lem lép gọi là lúa bị trứng cút, hạt bị lửng hoặc lép, giảm phẩm chất gạo.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#BenhDomNau"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Bệnh đốm nâu</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Bệnh đốm nâu(Bipolaris oryzae)</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
@@ -1705,9 +1874,53 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Bệnh thối thân</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#BenhVangLa"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Bệnh do một số nguyên nhân chính gây ra như ngộ độc hữu cơ, ngộ độc phèn, do virus, do nấm, do vi khuẩn và do điều kiện khí hậu bất lợi.
+
+Vàng lá do virus
+
+Thường thì khi thấy vàng lá, cơ quan chuyên môn gửi mẫu đi test virus. Tuy nhiên ở miền Bắc có thể loại trừ khả năng bệnh vàng lá do virus (vàng lùn). Do bệnh vàng lùn phải có sự phối trộn của 3 loại virus lùn lúa cỏ, lùn xoăn lá do rầy nâu truyền bệnh và bênh Tungro do rầy xanh đuôi đen truyền bệnh. Trong những năm gần đây việc đồng thời xuất hiện dịch rầy nâu và rầy xanh đuôi đen không đáng kể.
+
+Vàng lá do ngộ độc hữu cơ, ngộ độc phèn
+
+Triệu chứng biểu hiện giống bệnh vàng lùn, cây lúa bị vàng và lùn. Khi gặp trường hợp này, chúng ta chỉ cần nhổ khóm lúa lên, rửa sạch rễ và kiểm tra. Nếu thấy rễ đen (ngộ độc hữu cơ), đỏ vàng (ngộ độc phèn) kèm theo rễ bị thối, ít hoặc không có rễ trắng (rễ mới), cây không hút đủ nước và dinh dưỡng gây nên hiện tượng vàng và lùn xuống.
+Khuyến cáo người dân ngừng bón đạm, rút nước ra khỏi ruộng nếu điều kiện thủy lợi cho phép (ngộ độc phèn cần thay nước nhiều lần). Bón khoảng 400 kg/ha vôi bột đã và để ruộng khô nứt chân chim sau đó cho nước vào ruộng.
+
+Trường hợp lá lúa dày quá, không thể bón vôi thì nên rút nước ra khỏi ruộng, sau đó đắp bờ và hòa vôi bột đầu dòng nước chảy vào ruộng. Phun phân bón lá có hàm lượng lân cao (siêu lân). Sau 1 tuần bón thêm khoảng 200 kg/ha Super lân. Có thể phun phòng trừ các nấm bệnh bằng các thuốc như Nevo 300EC, Tilt Super 300EC, Anvil 5SC nếu cần.
+
+Vàng lá do nấm
+
+Tác nhân chính là nấm Gonatophragmium sp, bắt đầu giữa lá lúa xuất hiện một chấm vàng nhỏ. Sau đó chấm vàng to dần lên, lan ngược đỉnh lá lúa, sọc vàng nhỏ dần khi hướng lên chóp lá. Bệnh nặng nửa trên có thể bị vàng hết. Để phòng trừ đối tượng này, chúng ta có thể sử dụng các thuốc như Ridomil Gold 68WG, Nevo 330EC, Tilt Super 300EC, Amistar Top 325SC, Score 250SC.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#BenhVangLa"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Bệnh vàng lá</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#BenhVangLun"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Bệnh vàng lùn do vi rút Rice Grassy Stunt Virus (RGSV) gây ra. Virut này xâm nhập vào cây lúa và gây bệnh thông qua môi giới là Rầy nâu (Nilaparvata lugens). Bệnh được phát hiện đầu tiên ở vùng Khu 4 cũ và sau này lây lan ra khắp các tỉnh trong cả nước, nhưng gây hại chủ yếu tại các tỉnh miền Trung và Đồng bằng sông Cửu long.
+
+
+Triệu chứng của bệnh vàng lùn có hai dạng điển hình là: lúa vàng lùn và lúa cỏ. Triệu chứng của các dạng này như sau:a) Triệu chứng lúa vàng lùn: lá lúa từ màu xanh nhạt chuyển dần sang màu vàng nhạt, vàng da cam rồi vàng khô. Vị trí các lá bị vàng lan dần từ các lá bên dưới lên các lá phía trên. Vết vàng trên lá xuất hiện từ chóp lá, lan dần vào phía bẹ lá. Tất cả các lá bị bệnh có xu hướng xoè ngang. Các chồi lúa bị bệnh giảm chiều cao và bệnh cũng làm giảm số chồi trên bụi lúa mắc bệnh. Quần thể ruộng lúa bị bệnh ngả màu vàng, chiều cao cây lúa không đồng đều.
+
+
+b) Triệu chứng lúa cỏ: bụi lúa lùn, cho ra nhiều chồi mọc thẳng, có dạng giống như bụi cỏ. Lá lúa ngắn, hẹp, màu xanh vàng hoặc màu vàng cam. Tại các lá non có nhiều đốm gỉ sắt hoặc màu vàng đỏ.Ruéng lóa BÖnh vi rót lóa cá
+Cỏ lồng vực bị bệnh vi rút lúa cỏBệnh lùn xoắn lá do vi rút Rice Ragged Stunt Virus (RRSV) gây ra. Virut này xâm nhập vào cây lúa và gây bệnh thông qua môi giới là Rầy nâu (Nilaparvata lugens). Bệnh được phát hiện đầu tiên ở Việt Nam vào năm 1977 tại Tiền Giang. Năm 2006 bệnh đã gây hại nghiêm trọng trong các trà lúa ở nhiều tỉnh thuộc khu vực Nam Trung bộ, Tây Nguyên, Đông Nam bộ và Đồng bằng sông Cửu long.
+Triệu chứng của bệnh lùn xoắn lá biểu hiện như sau: cây lúa bị lùn, màu lá xanh đậm. Rìa lá bị rách và gợn sóng, dọc theo gân lá có bướu. Chóp lá bị biến dạng, xoăn tít lại. Cây lúa bị nghẹn đòng không trỗ được, hạt lép. Rầy nâu trích hút vào cây lúa bị bệnh và mang theo virut gây bệnh. Cá thể rầy nâu mang virut gây bệnh chích hút trên cây lúa không bị bệnh và chỉ một vài giờ sau khiến cây lúa đó bị bệnh.
+
+Cỏ lồng vực (Echinochloa Crus-galli) và cỏ đuôi phượng (Leptochloa chinnensis) là hai loại ký chủ trung gian quan trọng của bệnh. Do đó trừ các loại này cũng góp phần hạn chế nguồn bệnh lùn xoắn lá lúa trên đồng ruộng. Những kết quả nghiên cứu hiện đã ghi nhận virut lùn xoắn lá không truyền lan qua hạt giống, đất, tiếp xúc cơ giới dịch cây và qua trứng rầy nâu.
+Cây lúa bị bệnh lùn xoắn lá sinh trường cằn cọc, cây thấp lùn, chiều cao cây, chiều dài lá, rễ... đều bị giảm sút, co ngắn lại khoảng 40-60% so cây bình thường. Hầu hết số dảnh không có bông hoặc trỗ bông muộn, trỗ không thoát; bông lúa ngắn, ít hạt, lép lửng dẫn đến thất thu hoàn toàn hoặc giảm năng suất nghiêm trọng. Lưu ý có trường hợp trên một bụi lúa đồng thời xuất hiện cả hai triệu trứng bệnh vàng lùn và lùn xoắn lá.
+
+Phòng trừ bằng cách:
+a) Phòng bệnh: Bệnh vàng lùn và lùn xoắn lá do vi rút gây ra cho đến nay chưa có thuốc đặc trị, vì vậy biện pháp an toàn và hữu hiệu nhất vẫn là phòng bệnh.● Cày bừa, làm đất kỹ, vùi lấp tàn dư và nguồn bệnh; vệ sinh đồng ruộng sạch sẽ, dọn sạch các tàn dư và ký chủ trung gian của bệnh.
+● Gieo cấy tập trung, đồng loạt cùng một cánh đồng, từng vùng để né rầy theo khuyến cáo của cán bộ chuyên ngành của địa phương.● Sử dụng các giống lúa kháng bệnh, giống lúa cứng cây có khả năng chống chịu bệnh. Chăm sóc hợp lý, tạo điều kiện cho cây lúa khoẻ (nhất là giai đoạn lúa non) để tăng cường sức đề kháng, chống chịu bệnh.
+
+
+b) Trừ bệnh:Biện pháp trừ bệnh hữu hiệu nhất đối với bệnh này là thực hiện việc tiêu huỷ nguồn bệnh trên đồng ruộng.
+● Giai đoạn lúa còn non (dưới 40 ngày tuổi) nếu ruộng lúa bị nhiễm bệnh nặng, không còn khả năng phục hồi, cho năng suất thì phải tiêu huỷ bằng cách cày trục cả ruộng để diệt mầm bệnh, trước khi cày vùi phải phun thuốc trừ rầy nâu để tránh phát tán truyền bệnh sang ruộng lúa khác. Phát hiện thấy bệnh nhiễm nhẹ thì ngay lập tức phải nhổ bỏ, vùi các bụi lúa bị bệnh đồng thời phun thuốc trừ rầy.● Giai đoạn lúa sau gieo sạ, cấy 40 ngày, phải thường xuyên thăm đồng thấy ruộng bi bbệnh thì phải nhổ bỏ, vùi bỏ bụi lúa bệnh, nếu thấy mật độ dầy cám ³ 3 con/dảnh (tép) thì phải phun thuốc trừ rầy. Nếu ruộng bị nhiễm quá nặng thì phải tiêu huỷ bằng cách như phần trên.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
@@ -1815,14 +2028,63 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Bọ lá</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#BoTri"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Bọ trĩ hay còn gọi là bù lạch xuất hiện nhiều khi ruộng khô, gây hại làm cho đầu lá lúa quắn lại và biến màu vàng. Khi trời mưa bọ trĩ giảm số lượng rõ rệt, nhất là giai đoạn bọ trĩ lớn.
+Bọ trĩ xuất hiện khi cây lúa mới mọc đến đẻ nhánh thì mật độ tăng cao, sau đó giảm vì lá lúa cứng không thích hợp cho chúng gây hại. Bọ trĩ gây hại làm lá bị cuốn lại ở chóp, lá héo, tóp lại và khô vàng; đặc biệt nặng ở các ruộng khô nước.
+
+Đặc điểm nhận dạng: Bọ trĩ non rất nhỏ, dài độ 1 mm màu vàng nhạt, hình dáng giống con trưởng thành nhưng chưa có cánh. Con trưởng thành có màu đen thon dài 1,5 - 2 mm.
+
+Cách nhận biết: Có nhiều triệu chứng lúa bị vàng đọt giống bọ trĩ gây hại, nên cần nhận biết bọ trĩ để xác định vì chúng rất nhỏ. Nhận biết bằng cách đặt lòng bàn tay xuống nước cho ướt rồi dùng lòng bàn tay quét trên ngọn cây lúa, nếu thấy nhiều bọ trĩ bám trên tay thì đó là những nơi có mật độ cao cần phải phun thuốc trừ ngay.
+Bọ trĩ gây hại không quan trọng đến mức làm giảm năng suất lúa, chỉ hạn chế sinh trưởng giai đoạn đầu và làm cho cánh đồng có màu vàng nên nông dân thấy khó chịu.
+
+Theo kinh nghiệm của nông dân Nguyễn Văn Hưng có gần 32 năm SX lúa, ở ấp E2, xã Thạnh Lợi, huyện Vĩnh Thạnh, TP. Cần Thơ thì biện pháp quản lý bọ trĩ trước tiên là làm sạch cỏ dại xung quanh ruộng. Sử dụng Plastimula 1SL chuyên dùng xử lý giống trước khi sạ để cây mạ xanh và khỏe hạn chế bọ trĩ gây hại.
+
+Sau sạ 5 ngày vô nước lấy ngót để ruộng luôn đủ ẩm không bị khô trong điều kiện thời tiết nắng nóng. Bón phân sau sạ 10 ngày và giữ nước liên tục 3 cm trong giai đoạn lúa đẻ nhánh.
+
+Sau khi bón phân 4 ngày thì tiến hành phun Platimula tăng cường sức sống để giúp cây lúa đẻ nhánh tối đa cho chồi hữu hiệu, tạo bộ rễ phát triển mạnh, đồng thời giúp cây lúa khỏe hạn chế được bọ trĩ gây hại.
+
+Khi trên ruộng xuất hiện bọ trĩ gây hại nặng (40 - 50% ruộng) thì theo kinh nghiệm của nông dân Trần Văn Liêng, ở ấp E2, xã Thạnh Lợi: Lúa 15 ngày sau sạ do lúa hơi thưa nên phải cấy dặm lại. Vì vậy để ruộng khô nước tới ngày 18 thì phát hiện bọ trĩ đã gây hại nặng, các đầu lá tóp lại và khô vàng, do đó phải mua thuốc để phun trị.
+
+Phun Plastimula 1SL liều lượng 20 ml/bình 16 lít nước phối trộn với Supergen 5SC liều lượng 20 ml/bình 16 lít nước, phun 2 bình trên 1.000 m2. Phun thuốc 2 ngày thì bón phân đợt 2. Sau 5 ngày phun thuốc thì thấy lúa phát triển tốt trở lại, các đầu lá bung ra, lá xanh mướt, cây đẻ nhánh mạnh, bộ rễ phát triển hơn và ra nhiều rễ trắng.
+
+Ông Liêng còn chia sẻ thêm: “Hiện nay lúa 32 ngày sau sạ phun Plastimula phối trộn với Supergen 5SC vẫn chưa thấy xuất hiện sâu cuốn lá, trong khi ruộng bên cạnh đang có sâu gây hại”.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#BoTri"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Bọ trĩ</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#BoXit"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Triệu chứng
+Bọ trưởng thành và bọ non sống tập trung ở gốc lúa ngay phía trên mặt nước, hút nhựa làm bẹ lúa thâm đen, lá vàng. Nếu mật độ cao cây lúa có thể bị héo chết hoặc bị cháy giống như hiện tượng cháy rầy.
+Có thể phát sinh gây hại các vụ lúa trong năm, tuy vậy mật độ và tác hại thường cao trong vụ hè thu khi thời tiết nóng, ẩm, mưa nhiều.
+Trong vụ lúa bọ xít thường phát sinh gây hại khi lúa ở giai đoạn đẻ nhánh rộ đến có đòng.
+ Đặc điểm hình thái
+Bọ trưởng thành màu đen hoặc màu nâu đen, hình gần như lục giác, dài 7-8 mm, hai bên đốt ngực có gai nhọn.
+Trứng đẻ thành ổ khoảng 10-15 trứng xếp thành những hàng dọc theo gân lá lúa phía dưới gần mặt nước.
+Bọ non hình dạng giống trưởng thành, không cánh, màu nâu vàng, trên có những chấm đen. Không có giai đoạn nhộng.
+ Đặc điểm sinh học và sinh thái
+* Vòng đời: 50-60 ngày
+- Trứng: 4-5 ngày
+- Bọ non: 40 - 45 ngày
+- Bọ trưởng thành: 10-15 ngày
+Bọ trưởng thành và bọ non sống tụ tập ở gốc lúa ngay phía trên mặt nước cả ngày, ban đêm di chuyển lên trên và vào đèn nhiều. Trong mùa khô bọ trưởng thành và bọ non sống ở kẻ nứt của đất nơi có cỏ, gặp điều kiện thích hợp di chuyển đến ruộng lúa để phá hại. Một con cái có thể đẻ tới 200 trứng.
+Bọ xít đen có thể gây hại ở các vụ lúa trong năm, tuy nhiên gây hại nặng nhất ở vụ hè thu có điều kiện thời tiết nóng và ẩm. Bọ thường gây hại nặng ở giai đoạn lúa đẻ nhánh rộ đến làm đòng và thường tập trung chích hút ở mắt thân lúa. Có nhiều loại thiên địch có thể hạn chế bọ xít đen.
+ Biện pháp phòng trừ
+- Gieo cấy mật độ vừa phải, không bón nhiều phân đạm, để ruộng thông thoáng, cây lúa cứng cáp đẻ nhánh tập trung không thuận lợi cho bọ xít phát sinh gây hại.
+- Làm sạch cỏ dại trong ruộng và bờ bao.
+- Dùng thuốc trừ sâu phun trực tiếp vào gốc lúa nơi có nhiều bọ xít tập trung. Các loại thuốc trừ sâu thông thường đều có thể diệt được bọ xít.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#BoXit"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Bọ xít</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Bọ xít đen
+TÊN KHOA HỌC: SCOTINOPHARA SPP.
+HỌ: PENTATOMIDAE
+BỘ: HEMIPTERA</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
@@ -1840,9 +2102,47 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Cấy dày</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#ChauChau"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Đặc điểm hình thái:
+
+- Trứng hình ống hơi cong ở giữa, một đầu hơi to màu vàng đậm, ổ trứng hình túi, trong đó trứng xếp xiên hai hàng. Trứng đẻ thành ổ từ 10-30 quả trong thân lúa, nếp gấp của lá lúa và trong những bụi cỏ trên mặt nước.
+
+- Châu chấu non thường có 6 tuổi, màu xanh, râu sợi chỉ, mảnh lưng ngực trước dài hơn đầu, mầm cánh kéo dài tới đốt thứ giữa bụng.
+
+- Châu chấu trưởng thành con cái thân dài hơn con đực, màu xanh vàng hoặc nâu bóng; râu đầu sợi chỉ có 23-28 đốt; mắt kép. Góc dưới phía sau mảnh lưng đốt bụng 3, 4 con cái có dạng gai. Mép sau mảnh sinh dục dưới có 4 răng, cự ly giữa các răng bằng nhau.
+
+Đặc điểm sinh học, sinh thái và gây hại:
+
+Vòng đời của châu chấu khoảng 200-210 ngày
+
++ Giai đoạn trứng: 15-21 ngày.
+
++ Giai đoạn sâu non: 100 ngày.
+
++ Giai đoạn trưởng thành: khoảng 3 tháng.
+
+Con trưởng thành của châu chấu sống khoảng 3 tháng, trong đó con cái sống lâu hơn con đực. Sau khi hóa trưởng thành được 5-40 ngày thì bắt đầu giao phối, sau 10-41 ngày (trung bình trên dưới 20 ngày) bắt đầu đẻ trứng. Mỗi con cái có thể đẻ 3 ổ, mỗi ổ có 10-102 quả. Châu chấu thường thích đẻ trứng ở đất ẩm, xốp, có nhiều cỏ dại, nhiều ánh nắng, thích đẻ trên đất cát pha.
+
+Châu chấu non ngay sau khi nở đã bắt đầu phá hại. Trưởng thành hoạt động mạnh vào 7-10 giờ và 16-17 giờ. Ban đêm châu chấu có xu hướng bay vào ánh lửa sáng hoặc đèn tia tử ngoại, khi nhảy xuống mặt nước có thể bơi. Châu chấu phá hại quanh năm, đặc biệt là những nơi cấy cả vụ sớm và muộn.
+
+Châu chấu phân bố phổ biến ở khắp các vùng trồng lúa của Việt Nam và trên thế giới. Cả trưởng thành và sâu non đều gây hại và gây hại tất cả các thời kỳ phát triển của cây lúa.
+
+Phòng trừ:
+
+● Dọn sạch cỏ ở các bờ ruộng hoặc sơn bờ ruộng. Thời kỳ mạ, lúa con gái có thể dùng vợt bắt châu chấu. Các vùng trung du và mièn núi đốt các đống lửa để bẫy diệt châu chấu.
+
+● Dùng các loại thuốc có vị độc, tiếp xúc như: Sherpa 25EC, Fastac 5EC... Có thể dùng hỗn hợp thuốc lân hữu cơ và cúc tổng hợp có hiệu quả cao nhất: Bà con có thể tự pha trộn hoặc dùng các thuốc đã hỗn hợp sẵn như Dragon, Fenbis, Sherzol… Ngoài ra, cũng có thể dùng một số thuốc khác như Gà Nòi, Pyrinex, Sagosuper… Để kết hợp bảo vệ thiên địch, có thể dùng các chế phẩm nấm Metarhizium cũng có hiệu quả tốt.
+
+Khi châu chấu trưởng thành phát sinh với mật độ cao trên diện rộng thì việc phun thuốc diệt trừ đòi hỏi phải làm đồng loạt, rất tốn công sức và chi phí. Tốt nhất nên theo dõi phát hiện châu chấu non xuất hiện vào đầu mùa mưa rồi dùng thuốc trừ ngay thì hiệu quả sẽ cao hơn nhiều. Ngoài việc phun thuốc, nhiều nơi bà con có kinh nghiệm dùng hạt bắp xâu thành chuỗi nhúng vào dung dịch thuốc pha lẫn rỉ đường treo rải rác trong vườn để làm bả diệt châu chấu, hiệu quả cũng khá tốt.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#ChauChau"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Châu chấu</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Châu chấu
+(Tên khoa học: Oxya chinensis Thunberg Oxya velox Fabr)
+
+Thuộc Họ: Acrididae Bộ: Orthoptera</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
@@ -1990,6 +2290,16 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">105</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#GiaiDoanChin"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ba giai đoạn cuối cùng trong vòng đời của cây lúa:
+7. Giai đoạn hạt chín sữa,
+9. Giai đoạn hạt chín hoàn toàn nằm trong thời kỳ chín của cây lúa. Cũng như thời kỳ sinh trưởng sinh thực của cây lúa, thời gian của thời kỳ chín biến đổi không nhiều trước những tác động của các yếu tố ngoại cảnh. Thời gian này kéo dài khoảng 30 ngày.
+Giai đoạn chín sữa bắt đầu sau khi phơi màu từ 5-7 ngày, chất dự trữ trong hạt lúa ở dạng lỏng và trắng như sữa; hình dạng hạt đã hoàn thành, lưng hạt có màu xanh; trọng lượng hạt trong thời kỳ này tăng rất nhanh, có thể đạt 75-80% trọng lượng cuối cùng của hạt thóc.
+Giai đoạn chín sáp là giai đoạn mà chất dịch trong hạt thóc dần dần đặc lại, khiến cho hạt lúa cứng; màu xanh ở lưng hạt thóc dần chuyển màu vàng và trong giai đoạn này trọng lượng hạt thóc tiếp tục tăng lên.
+Giai đoạn chín hoàn toàn khi ta nhận thấy vỏ trấu từ màu vàng chuyển sang vàng nhạt và hạt thóc chắc cứng, cũng là lúc hạt thóc đạt trọng lượng tối đa. Lúc này có thể bắt đầu tiến hành thu hoạch lúa.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#GiaiDoanChin"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Giai đoạn chín</Literal>
@@ -2005,6 +2315,28 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">20</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#GiaiDoanDeNhanh"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Đối với lúa sạ, sau giai đoạn cây con, cây lúa bước sang giai đoạn đẻ nhánh. Còn đối với lúa cấy, sau khi cấy, cây lúa cần một thời gian để bén rễ, phục hồi rồi bước ngay vào giai đoạn đẻ nhánh. Nếu điều kiện ngoại cảnh thuận lợi thì sau khoảng 5-7 ngày cây lúa có thể bén rễ, phục hồi; nếu điều kiện khí hậu thời tiết bất lợi như: trời lạnh, âm u, thiếu ánh sáng… thì thời gian bén rễ, phục hồi có thể kéo dài đến 15-20 ngày (Bùi Huy Đáp, 1989).
+Thời gian đẻ nhánh dài hay ngắn còn phụ thuộc vào giống, thời vụ và biện pháp kỹ thuật tác động. Có giống lúa đẻ nhánh sớm và tập trung nhưng cũng có giống đẻ nhánh muộn và lai rai. Vụ mùa có thời tiết thuận lợi cây lúa sẽ đẻ nhánh sớm và trong thời gian ngắn.
+Ở giai đoạn đẻ nhánh, cây lúa sinh trưởng nhanh và mạnh. Giai đoạn này cây lúa tập trung vào các quá trình phát triển của bộ rễ, ra lá và đẻ nhánh, nở bụi nhanh; cho đến khi đạt được số chồi tối đa thì không tăng nữa, các chồi yếu (chồi vô hiệu hay còn gọi là chồi vô ích) bắt đầu rụi dần, số chồi giảm xuống đến một mức nhất định. Thời điểm có chồi tối đa có thể đạt được trước, cùng lúc hay sau thời kỳ bắt đầu phân hóa đòng tùy theo giống lúa.
+Thường các giống lúa rất ngắn ngày và ngắn ngày có giai đoạn tăng trưởng ngắn và thời điểm phân hóa đòng có thể xảy ra trước hoặc ngay khi cây lúa đạt được chồi tối đa. Ngược lại, các giống lúa dài ngày (trên 4 tháng) thường đạt được chồi tối đa trước khi phân hóa đòng. Đặc biệt, các giống lúa mùa quang cảm mạnh, nếu gieo cấy sớm, thì sau khi đạt chồi tối đa, cây lúa tăng trưởng chậm lại và chờ đến khi có quang kỳ thích hợp mới bắt đầu phân hóa đòng để trổ bông. Thời gian này cây lúa sống chậm, không sản sinh gì thêm gọi là thời kỳ ngưng tăng trưởng, có khi rất dài .
+Giai đoạn đẻ nhánh là giai đoạn quyết định đến sự phát triển diện tích lá và số bông, do đó cần chú ý đến các biện pháp kỹ thuật nhằm làm tăng diện tích lá để tăng khả năng quang hợp và tăng số chồi hữu hiệu là yếu tố quan trọng để tăng năng suất.
+Đối với lúa cấy, sau khi phục hồi, tốc độ ra lá sẽ nhanh hơn, trung bình 5-7 ngày ra một lá hoặc nhiều hơn (Bùi Huy Đáp, 1989). Diện tích lá trong giai đoạn này cũng tăng dần. Tất cả điều đó còn tùy thuộc vào thời tiết, lượng nước trong ruộng và cách bón phân.
+Quá trình đẻ nhánh (nảy chồi), nở bụi có liên quan mật thiết đến quá trình ra lá và theo Trương Dích (2000) bao gồm 4 giai đoạn:
+1. Phân hóa mầm nhánh
+2. Hình thành nhánh
+3. Nhánh dài ra trong bẹ
+4. Nhánh xuất hiện.
+Khả năng đẻ nhánh của cây lúa thì phụ thuộc vào phạm vi mắt đẻ, giống, điều kiện ngoại cảnh, mật độ gieo sạ hay cấy, cách bón phân và mực nước trên ruộng…:
+- Về phạm vi mắt đẻ: tức là số lá trên cây mẹ, tuổi mạ và số lóng đốt kéo dài của lúa thân cây lúa.
+- Về giống: Các giống thường có sự khác nhau về khả năng đẻ nhán. Khả năng đẻ nhánh của một giống chỉ có thể đạt được mức tối đa khi gặp các điều kiện thuận lợi.
+- Về mật độ gieo sạ hay cấy: Khi ta tăng khoảng cách gieo sạ hoặc cấy lúa (tức là mật độ càng thưa) thì số nhánh lúa trên một cây càng tăng nhưng chỉ đến một giới hạn nhất định. Nếu với mật độ quá thưa đến bất hợp lý thì số nhánh lúa trên một đơn vị diện tích sẽ bị giảm đi, ảnh hưởng nhiều đến năng suất lúa. Riêng đối với một số nơi đất nhiễm phèn hay nhiễm mặn, lượng giống gieo sạ có thể tăng hơn vùng khác, do ở những vùng này khả năng đẻ nhánh của cây lúa sẽ kém hơn.
+- Về cách bón phân: Có một nguyên tắc, nếu bón lượng cao hơn và sớm hơn, tập trung thì số nhánh đẻ cũng nhiều hơn, tập trung và ít đẻ chồi vô hiệu. Nếu bón phân nhiều, bón thúc muộn thời gian đẻ nhánh sẽ kéo dài hơn. Nếu bón thúc đạm sớm, quá trình đẻ nhánh sẽ diễn ra sớm hơn. Cây lúa cần nhiều đạm trong giai đoạn đẻ nhánh, nhất là lúc đẻ nhánh cực đại. Còn nếu cây lúa thiếu lân, cây sẽ còi cọc, đẻ nhánh kém hơn. 
+- Về mực nước trên ruộng: Nếu mực nước ruộng quá cao, cây lúa sẽ khó đẻ nhánh. Thông thường trong giai đoạn này, nếu giữ mực nước thấp (vào khoảng 3-5 cm) cây lúa sẽ nảy chồi dễ dàng hơn (Trung tâm Khuyến Nông tỉnh An Giang, 2012). Sau khi kết thúc giai đoạn đẻ nhánh hữu hiệu, tiếp tục cho nước ngập sâu 7-10 cm để khống chế lúa tiếp tục đẻ nhánh lai rai (Chi cục Bảo vệ Thực vật tỉnh An Giang, 2013). Và để cho ruộng được đồng đều khi đẻ nhánh cần tiến hành tỉa dặm sớm (đối với các giống lúa cao sản là khoảng 15-20 ngày sau khi sạ). 
+Theo Nguyễn Ngọc Đệ (2008), thông thường số chồi hình thành bông (chồi hữu hiệu hay còn gọi là chồi có ích) thấp hơn so với số chồi tối đa và ổn định khoảng 10 ngày trước khi đạt được chồi tối đa. Các chồi ra sau đó, thời gian sinh trưởng ngắn, số lá ít hơn, thường sẽ tự rụi đi không cho bông được do chồi nhỏ, yếu không đủ khả năng cạnh tranh dinh dưỡng, ánh sáng với các chồi khác, gọi là chồi vô hiệu. Trong canh tác, người ta hạn chế đến mức thấp nhất việc sản sinh ra số chồi vô hiệu này bằng cách tạo điều kiện cho lúa nở bụi càng sớm càng tốt và khống chế sự mọc thêm chồi từ khoảng 7 ngày trước khi phân hóa đòng trở đi, để tập trung dinh dưỡng cho những chồi hữu hiệu.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#GiaiDoanDeNhanh"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Giai đoạn đẻ nhánh</Literal>
@@ -2018,6 +2350,18 @@
         <DataProperty IRI="#denNgay"/>
         <NamedIndividual IRI="#GiaiDoanGieo"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#GiaiDoanGieo"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Đất lúa cần phải được cày, bừa kỹ và nên tranh thủ làm sớm sau khi thu hoạch.  Tùy thuộc địa hình và chân đất mà nên làm ruộng theo kiểu (làm dầm hay làm ải). Ruộng làm dầm phải giữ được nước, ruộng làm ải cần được phơi kỹ, giữa đợt nên cày đảo ải và tiến hành đổ ải trước cấy 5-7 ngày. Làm ải giúp tăng cường quá trình giải phóng dinh dưỡng trong đất, đồng thời hạn chế các độc tố gây hại cây trồng và giúp tiêu diệt tàn dư dịch hại trong đất. Tực tế trong sản xuất cha ông ta đã có câu “Một hòn đất nỏ bằng một giỏ phân”.
+
+Đất lúa phải được cày sâu, bừa kỹ cho thật nhuyễn, mặt ruộng phải phẳng giúp thuận lợi cho cấy và điều tiết nước. Yêu cầu đất lúa trước khi cấy phải sạch gốc rạ và cỏ dại (lúa cấy mạ non ruộng càng phải được làm kỹ, mặt ruộng phải phẳng hơn và để mức nước nông) giúp lúa cấy xong phát triển thuận lợi.
+Gieo cấy, trồng lúa
+- Tuổi mạ: Tuổi mạ cấy tùy thuộc vào giống, thời vụ và phương pháp làm mạ. Để tính tuổi mạ có thể dùng ngày tuổi hoặc số lá. Ở vụ mùa tính tuổi mạ theo ngày tuổi (15-18 ngày), còn ở vụ đông xuân theo số lá (mạ dược 5-6 lá, mạ sân hoặc mạ trên nền đất cứng 2-3 lá).
+- Mật độ cấy: Vụ có nhiệt độ thấp cấy dầy hơn vụ có nhiệt độ cao (cấy 1-2 dảnh/khóm); vụ xuân cấy mật độ: 40-45 khóm/m2; vụ mùa cấy mật độ: 35- 40 khóm/m2
+
+- Kỹ thuật cấy: Cấy thẳng hàng, cấy nông 2-3 cm, cấy sâu sẽ làm cho lúa phát sinh 2 tầng rễ, các mắt đẻ ở vị trí thấp sẽ không phân hoá được mầm nhánh, lúa đẻ nhánh kém, số nhánh hữu hiệu giảm. Vụ chiêm xuân nhiệt độ thấp cần phải cấy sâu hơn vụ mùa để hạn chế tỷ lệ chết rét “Chiêm đào sâu chôn chặt, mùa vừa đặt vừa đi”.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#nhuCauNuocOGiaiDoan"/>
@@ -2040,6 +2384,21 @@ xấu đến quá trình mọc mầm của hạt, thậm chí mầm không mọc
         <DataProperty IRI="#denNgay"/>
         <NamedIndividual IRI="#GiaiDoanLamDong"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">45</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#GiaiDoanLamDong"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Khi cây lúa ở giai đoạn từ 35-40 ngày tuổi là giai đoạn lúa đang chuẩn bị làm đòng. Bón phân đón đòng cho lúa ở giai đoạn này có tác động rất lớn đến năng lúa của cả vụ. Ngoài đặc tính giống lúa thì kết quả của bông to nhiều hạt còn được quyết định bởi quá trình canh tác mà đặc biệt là kỹ thuật canh tác và kích hoạt ngay khi lúa hình thành đòng sẽ giúp có được đòng to, bông dài và quan trọng nhất là gia tăng số hạt trên bông. Do đó việc bón phân đón đòng đúng thời điểm và đúng loại phân bảo vệ lá đòng ở giai đoạn này là rất quan trọng.
+Ở giai đoạn làm đòng cây lúa cần tích lũy nhiều dinh dưỡng để nuôi đòng, do đó lúa có nhu cầu rất cao, cần cung cấp thêm dinh dưỡng cho lúa. Tuy nhiên, việc bón phân cũng cần lưu ý một số vấn đề  đó là bón phải vừa đủ, đảm bảo cung cấp đủ các loại dưỡng chất, ngoài những dưỡng chất cần thiết như N, P, K  thì cũng cần cung cấp thêm một số chất trung vi lượng như canxi, silic những chất này sẽ giúp cho lá lúa cứng, thẳng đứng, tăng cường khả năng chống chịu cho cây lúa trước sự tấn công của dịch bệnh. Điều quan trọng là xác định đúng thời điểm để việc bón phân đón đòng mang lại hiệu quả cao.
+
+Việc xác định đúng thời điểm bón phân đón đòng và bón vừa đủ sẽ giúp đảm bảo số hạt trên bông tối hảo nhất, cho bông to, cây lúa giữ được bộ lá xanh bền, số hạt chắc sẽ nhiều hơn, hạn chế được sự đổ ngã, những chồi vô hiệu sẽ không nhiều và cũng hạn chế được sự bùng phát của các loại dịch hại. Ông Lâm Văn Mương, nông dân thị xã Ngã Năm chia sẻ kinh nghiệm xác định thời điểm bón phân đón đòng: “ Rất khó để biết chính xác thời điểm bón phân đón đòng của từng giống lúa, cho nên cách dễ nhất là xé đòng ra xem thử nếu thấy có một lóng rưỡi, thì ở lóng thứ hai đã có nhú đòng đòng đất (có người gọi là tim đèn, hoặc là ngòi viết) màu trắng, khoảng 1mm thì đó là thời điểm thích hợp để bón phân đón đòng”.
+Ngay thời điểm tượng đòng, giai đoạn này cây lúa cũng rất mẫn cảm với nhiều loại bệnh hại như bệnh đạo ôn, đốm vằn, vàng lá chín sớm và các loại sâu hại như là sâu cuốn lá nhỏ, rầy nâu, nhện gié đã tích lũy từ các lứa trước và tiếp tục gây hại.
+
+Để gia tăng số hạt cần  cung cấp dưỡng chất lớn cho cây lúa sung mãn, tuy nhiên giai đoạn này cây lúa dễ  bị sâu bệnh tấn công, kết hợp với điều kiện thời tiết không thuận lợi trong vụ hè thu nên sau khi bón phân nuôi đòng xong phải chú ý và phòng trị kịp thời côn trùng phá hại bộ lá đòng như sâu cuốn lá, nhện gié… để lá được nguyên vẹn. Ông Ngô Tuấn Thêm, nông dân thị xã Ngã Năm chia sẻ: “Nhện ghé thường xuất hiện nhiều ở giai đoạn lúa làm đòng, nên khi thăm ruộng thấy cây lúa hơi tim tím bẹ ở khúc dưới là tiến hành phun thuốc phòng trừ ngay”.
+
+Trước khi bón phân bà con cần quan sát vào màu sắc lá lúa để bón phân đạm theo kinh nghiệm sản xuất của mình. Nếu thấy lá lúa rất xanh và cây lúa non, có triệu chứng đổ ngã là dấu hiệu cho thấy ruộng lúa đã thừa đạm, vì vậy không nên bón thêm phân đạm mà cần tăng lượng phân kali cho cứng cây. Điều đặc biệt là phải quan tâm đến bệnh đạo ôn. Thời tiết ở Nam Bộ mùa này ngày nắng nhiều, đêm lạnh, sáng nhiều sương rất thích hợp cho bệnh đạo ôn phát triển. Nếu trên ruộng đang có bệnh đạo ôn thì bà con cần phải phun thuốc trị bệnh đạo ôn trước. Cần chọn những loại thuốc có hiệu quả cao và phun nhiều nước để thuốc trải đều trên bề mặt lá và thấm xuống tầng lá bên dưới, diệt sạch mầm bệnh. Khi thấy vết bệnh khô đi, không còn dấu hiệu phát triển và lây lan thì mới tiến hành bón phân và nên giảm lượng phân urea xuống 30 kg/ha bởi vì ở giai đoạn này tán lá lúa phát triển tốt, thời tiết cũng thuận lợi. Nếu có đạm nhiều thì bệnh rất dễ tái phát gây ra đạo ôn cổ bông và cổ gié sẽ làm giảm năng suất. Các loại thuốc dùng để trị bệnh đạo ôn như  Bump + Camilo để diệt nhanh và ngăn cản bào tử nấm tái phát và sạch lá chân, dưỡng nuôi đòng.
+
+Hiện nay do thời tiết ngày nắng, đêm lạnh nhiều nên các loại bệnh do nấm và vi khuẩn tấn công khá nặng trên nhiều ruộng lúa, vậy để phòng trị bệnh do nấm và vi khuẩn gây ra chúng ta cần phải hiểu triệu chứng và cách tấn công của chúng để kịp thời phòng trị.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#nhuCauNuocOGiaiDoan"/>
@@ -2108,6 +2467,23 @@ Lượng hạt giống gieo: 100-120 kg/ha.
 Khoảng cách gieo: hàng cách hàng 20 cm.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#GiaiDoanMa"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ời kỳ mạ dài, ngắn tuỳ thuộc vào giống, mùa vụ hoặc phương pháp gieo trồng. Gieo mạ ruộng (mạ dược) đối với các giống lúa cũ dàI ngày, thời kỳ mạ khoảng 40 – 45 ngày ở vụ mùa, 50 -60 ngày ở vụ đông xuân, các giống lúa ngắn ngày khoảng 25 -30 ngày. Gieo mạ nền, mạ sân tuổi mạ 15 -18 ngày ở trà xuân muộn, gieo mạ khay (mạ Nhật bản) thời gian tuổi mạ chỉ 7-10 ngày tương ứng với 2,5 -3 lá ở vụ mùa.
+
+Từ lúc gieo đến khi ra được 3 lá thật tốc độ hình thành các lá đầu tương đối nhanh, rễ phôi cũng phát triển và hình thành vài lứa rễ đầu tiên nhưng số lượng rễ chưa nhiều.để cho cây mạ sinh trưởng thuận lợi sau khi gieo cần giữ ẩm cho ruộng mạ, tránh bị ngập hoặc hạn.
+
+Thời kỳ này dinh dưỡng của cây mạ chủ yếu dựa vào chất dự trữ trong hạt nên chưa cần bón thúc. Cây mạ còn nhỏ, yếu, khả năng chống chịu kém. Vì vậy cần tạo điều kiện để cây mạ có khả năng chống chịu rét, sâu bệnh. ..
+
+Từ khi cây mạ có 4 lá thật đến khi có 5 – 6 lá đối với giống trung ngày và 6 – 7 lá đối với giống dài ngày là có thể nhổ cấy.
+
+Thời kỳ này cây mạ sử dụng dinh dưỡng từ môi trường để sống, cần chú ‎ chăm sóc, bón thúc cho mạ phát triển. Chiều cao cây, kích thước cây mạ tăng mạnh, có thể ra được 4 – 5 lứa rễ, khả năng chống chịu cũng tăng lên.
+
+Ở phía Bắc, những năm rét nhiều, mạ sinh trưởng chậm, tốc độ ra lá chậm nên thời kỳ mạ thường kéo dài. Ngược lại, năm ấm tốc độ ra lá nhanh, sớm đạt tuổi mạ cấy, cần có biện pháp hãm mạ để tránh mạ già, mạ ống.
+
+Thời kỳ mạ có ý nghĩa quan trọng, chăm sóc cho mạ tốt, mạ khoẻ giúp cho cây lúa khi cấy chóng hồi xanh, khả năng đẻ nhánh tốt, tạo điều kiện cho các giai đoạn sinh trưởng phát triển sau này.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#nhuCauNuocOGiaiDoan"/>
         <NamedIndividual IRI="#GiaiDoanMa"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Sau sạ từ 5-7 ngày: Cây
@@ -2138,6 +2514,17 @@ ruộng cho đến khi cây lúa
         <DataProperty IRI="#denNgay"/>
         <NamedIndividual IRI="#GiaiDoanTro"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">65</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#GiaiDoanTro"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Khi đòng đã hoàn chỉnh cây lúa bắt đầu trỗ. Toàn bộ bông lúa thoát ra khỏi bẹ lá đòng là quá trình trỗ xong với thời gian 4-6 ngày. Thời gian trỗ càng ngắn càng có khả năng tránh được các điều kiện thời tiết bất thuận. Cùng với quá trình trỗ bông, có giống vừa nở hoa vừa thụ phấn ngay, nhưng cũng có giống phải chờ trỗ xong mới tiến hành nở hoa thụ phấn.
+Giai đoạn nở hoa, thụ phấn và thụ tinh
+- Trên một bông, những hoa ở đầu bông và đầu gié nở trước, các hoa ở gốc bông thường nở cuối cùng. Trình tự nở hoa có liên quan đến trình tự vào chắc. Những hoa gốc bông nở cuối cùng, nên vào chắc muộn và khi gặp điều kiện bất thuận thường dễ bị lép và khối lượng hạt thấp.
+- Thời gian hoa nở rộ thường vào 8-9 giờ sáng khi điều kiện thời tiêt thuận lợi.
+Khi nở hoa phơi màu, vỏ trấu mở ra. Bao phấn vỡ, hạt phấn rơi vào đầu nhụy, ống phấn vươn dài tới phôi nang, vỡ ra, giải phóng 2 hạch đực. 1 hạch kết hợp với trứng và phát triển thành phôi. Hạch đực còn lại kết hợp với hạch thứ cấp và phát triển thành phôi nhũ.
+Sau 8-10 ngày có thể phân biệt rõ các bộ phận của phôi như trục phôi, mầm và rễ phôi. Sau 2 tuần phôi đã phát triển xong và nằm ở dưới bụng hạt.
+Phải mất khoảng một tuần các hoa trên cùng một bông lúa mới nở hết. sau khi trỗ 10 ngày thì tất cả các hoa trên bông lúa ều được thụ tinh xong, bắt đầu phát triển thành hạt. Những hoa lúa không đợưc thụ tinh, hạt sẽ bị lép.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#nhuCauNuocOGiaiDoan"/>
@@ -2451,6 +2838,35 @@ TBR45 là giống cảm ôn, ngắn ngày, canh tác được các vụ trong n�
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">cây không phát triển chiều cao, đẻ nhánh kém, lá lúa vàng nhợt nhạc , trên lá lúa có nhiều vết đốm nâu nhỏ, khi nặng lá</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#HienTuongNgoDocHuuCo"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Nguyên nhân: Do đất thiếu oxi, gây tình trạng yếm khí ức chế sự hô hấp của rễ lúa. Thường là do nông dân SX liên tục trên một thửa ruộng, rơm rạ của vụ trước bị vùi trong đất phân hủy trong điều kiện yếm khí tiết ra các chất độc gây hại cho lúa vụ sau (các chất độc hữu cơ đó là phenolic, hydro sulfic, khí metan, các axit hữu cơ làm tăng độ chua của đất).
+Hiện tượng này cũng thường xảy ra khi bón nhiều phân hữu cơ chưa hoai mục, đất ruộng có thành phần cơ giới nặng, đất không được phơi ải, đất ngập nước thường xuyên, đất còn lẫn rơm rạ chưa phân hủy…
+
+Triệu chứng: Khi bệnh mới phát sinh, ngọn lá lúa biến vàng đỏ, khô từ chóp lá lan dần xuống dưới, lá có khuynh hướng dựng đứng. Bệnh nặng thì nhiều lá phía trên bị vàng đỏ đến 1/3 lá, cây lúa ngừng sinh trưởng, đẻ nhánh ít, bộ rễ thối đen có mùi tanh hôi, rễ mới không phát sinh. Dù có bón phân đầy đủ lúa vẫn không xanh. Nếu không kịp chữa trị, lúa sẽ lụi dần và chết.
+
+Hiện tượng này thường xảy ra khi lúa được 15 - 30 ngày tuổi sau khi sạ cấy.
+
+Biện pháp khắc phục: Khi thấy cây lúa có hiện tượng trên, bà con nông dân cần ngưng bón phân urê, DAP hoặc NPK ngay, vì lúc này rễ lúa đã bị hư hại, khả năng hấp thu dinh dưỡng trong đất kém.
+
+Để khắc phục tình trạng cây lúa bị ngộ độc hữu cơ và giúp lúa phục hồi chức năng của bộ rễ cần thực hiện các bước sau:
+
+Bước 1: Từ 10 - 20 ngày sau khi sạ, nếu thấy chóp lá lúa bị vàng hoặc đỏ, nhỗ lúa để quan sát rễ. Thấy rễ thối đen thì phải tháo cạn nước trong ruộng ra, đánh rảnh để tháo thật hết nước nơi trũng nhằm loại bỏ các khí độc, chất độc đang có trong nước. Cho nước mới ngoài kênh rạch vào ruộng.
+
+Bước 2: Bón 5 kg phân Calcium Nitrate cho 1 công đất (1.000 m2) để nhanh chóng nâng cao độ pH của đất, trung hòa các axit hữu cơ… giúp bộ rễ lúa thoát khỏi tình trạng ngộ độc và kích thích tế bào phát triển dài ra. Sau khi bón Calcium Nitrate khoảng 5 ngày nên thay nước mới để xả các chất độc còn tồn lại trong nước.
+Phân bón gốc Calcium Nitrate có chứa 15,5% chất đạm và 26,5% chất Canxi ở dạng hoà tan nhanh (CaO) nên có tác dụng giải độc nhanh và tốt hơn so với phương pháp bón vôi thông thường.
+
+Bước 3: Để giúp bộ rễ mau phục hồi, cũng như cung cấp kịp thời các chất dinh dưỡng cần thiết cho cây lúa sinh trưởng trong thời gian chưa ra rễ mới, bà con cần kịp thời phun thêm phân bón lá cao cấp Poly-feed 19-19-19 hai lần cách nhau 5-7 ngày với liều lượng 60-80 gr cho bình máy 25 lít nước. Phun 1,5 bình cho 1.000 m2 vào lúc trời mát.
+
+Phân Poly-feed 19-19-19 là loại phân bón lá rất cao cấp vì có chứa đầy đủ 3 nguyên tố dinh dưỡng đa lượng (N = 19%, P2O5 = 19%, K2O = 19%) và 6 loại vi lượng thiết yếu là Cu, Fe, Zn, Mn, B và Mo.
+
+Sau khi phun phân bón lá 5-7 ngày, nhỗ bụi lúa lên quan sát, nếu thấy các rễ trắng xuất hiện tức là bộ rễ lúa đã phục hồi, cây lúa đã vượt qua tình trạng bị ngộ độc hữu cơ. Lúc này cần bón thêm phân DAP hoặc phân hỗn hợp NPK để cung cấp đầy đủ các chất dinh dưỡng thiết yếu theo nhu cầu của cây lúa.
+
+Ngoài ra, bà con cũng có thể áp dụng cách khắc phục lúa ngộc độc hữu cơ cho trường hợp lúa bị ngộ độc phèn (rễ có màu nâu, lúa sinh trưởng còi cọc, thường xảy ra vào vụ HT hàng năm do nắng hạn và thiếu nước, đất bị xì phèn).
+
+Hai sản phẩm phân bón Calcium Nitrate, Poly-feed 19-19-19 được SX i Cy Haifa của Israel, do Cty CP BVTV Sài Gòn (SPC) phân phối, được nhiều bà con nông dân sử dụng.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#HienTuongNgoDocHuuCo"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Hiện tượng ngộ độc hữu cơ</Literal>
@@ -2616,6 +3032,27 @@ TBR45 là giống cảm ôn, ngắn ngày, canh tác được các vụ trong n�
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">chóp lá ngã màu vàng và cháy khô đầu lá, rễ lúa ngã nâu nhạt, vuốt rễ thấy nhám tay</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#NgoDocPhen"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">1. NGUYÊN NHÂN
+Do lượng mưa ít và phân bố không đều vào đầu vụ Hè Thu, nắng hạn kéo dài lại không chủ động nguồn nước tưới bổ sung, làm cho các tầng đất chứa vật liệu sinh phèn dễ bị Oxy hóa dẫn đến hiện tượng xì phèn thông qua các kẻ nứt và các mạch mao quản trong đất. Vào thời điểm này đất có độ pH rất chua, đồng thời nồng độ Fe2+ và Al3+ di động trong dung dịch đất cũng rất cao là nguyên nhân chính làm cho rễ lúa và cây lúa bị ngộ độc.
+2. TRIỆU CHỨNG
+Triệu chứng ngộ độc phèn do sắt (Fe2+):
+Khi cây lúa bị ngộ độc phèn sắt (còn gọi là phèn nóng), triệu chứng thường thấy là cây lúa có màu hơi vàng, trên lá già xuất hiện những đốm nhỏ màu nâu, lan dần từ chóp lá trở xuống, dần dần cả lá trở màu nâu, bầm tím, vàng hoặc cam.
+
+Trường hợp bị nhiễm độc sắt nặng, tất cả các lá trở nên nâu và những lá già bị rụi sớm. Cây lúa lùn lại và kém nở bụi. Nếu nhỗ bụi lúa lên kiểm tra sẽ thấy rễ thưa, ngắn, có màu nâu đậm và quăn queo,
+Do sự kém phát triển của bộ rễ nên khả năng hấp thu nước và dinh dưỡng cung cấp cho cây bị hạn chế khiến cây lúa bị suy dinh dưỡng, nếu tình trạng này kéo dài cây lúa sẽ bị suy kiệt dần, chết rải rác hoặc từng chòm.
+Triệu chứng ngộ độc phèn nhôm (Al3+):
+Phèn nhôm (còn gọi là phèn lạnh) ở nồng độ cao gây ngộ độc cho cây lúa, làm ảnh hưởng đến sinh trưởng và phát triển của cây.
+Ngộ độc nhôm trên lúa thường xuất hiện các biểu hiện ở những lá già trước. Đặc trưng biểu hiện là những vệt vàng lục hoặc màu trắng lục trên các gân lá.
+Cây lúa còi cọc.
+Rễ phát triển chậm và biến dạng dẫn đến khả năng hút nước và dinh dưỡng kém.
+Nhôm là ion gây độc bậc nhất trong đất phèn.
+3. ĐẶC TRỊ BỆNH : CHẾ PHẨM SINH HỌC “PHÂN HỦY GỐC RẠ”
+phan-huy-goc-rom-ra– Sau khi thu họach lúa nên cày ải, để rơm rạ được phân hủy ít nhất 1 tháng, và chỉ sạ lúa sau khi cho đất ngập từ 2 đến 3 tuần.
+– Trong trường hợp không cày ải được vì phải gieo sạ lại ngay sau khi thu hoạch, chúng ta cần sử dụng chế phẩm “PHÂN HỦY GỐC RẠ” để phân hủy gốc rạ ngay tại ruộng. Chỉ sau 5 – 7 ngày sử dụng chế phẩm, gốc rạ trở thành phân hữu cơ giúp bà con giảm được 30 – 50% lượng phân bón hóa học.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#NhietDoCao"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Nhiệt độ cao</Literal>
@@ -2688,6 +3125,72 @@ TBR45 là giống cảm ôn, ngắn ngày, canh tác được các vụ trong n�
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Là hổn hợp chủ yếu của: phân, nước tiểu gia súc và chất độn. Nó không những cung cấp thức ăn cho cây trồng mà còn bổ sung chất hữu cơ cho đất giúp cho đất được tơi xốp, tăng độ phì nhiêu, tăng hiệu quả sử dụng phân hóa học…</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#PhanChuong"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Phân chuồng là loại phân do gia súc thải ra. Chất lượng và giá trị của phân chuồng phụ thuộc rất nhiều vào cách chăm sóc, nuôi dưỡng, chất liệu độn chuồng và cách ủ phân.
+
+Đọc thêm: &gt;&gt; Ủ xác bả thực vật, phân chuồng bằng chế phẩm Trichoderma
+
+Trung bình mỗi đầu gia súc nuôi nhốt trong chuồng, sau mỗi năm có thể cung cấp một lượng phân chuồng (kể cả độn) như sau:
+
+Lợn : 1,8 – 2,0 tấn/con/năm
+Dê : 0,8 – 0,9 tấn/con/năm
+Trâu bò : 8,0 – 9,0 tấn/con/năm
+Ngựa : 6,0 – 7,0 tấn/con/năm
+
+Phân chuồng tốt thường có các thành phần dinh dưỡng như ở bảng sau:
+
+
+
+Trong 10 tấn phân chuồng có thể lấy ra được một số nguyên tố vi lượng như sau:
+
+Bo: 50 – 200 g;	Mn: 500 – 2000 g;	Co: 2 – 10 g
+Cu: 50 – 150 g;	Zn: 200 – 1000 g;	Mo: 2 – 25 g
+Độn chuồng : Độ chuồng vừa có tác dụng giữ ấm, tạo điều kiện khô ráo cho gia súc, vừa tăng thêm khối lượng phân. Vì vậy chất độn chuồng cần có tác dụng hút nước phân, nước giải, giữ đạm và tăng cả khối lượng lẫn chất lượng phân chuồng. Cần chọn chất độn chuồng tốt và tiến hành độn chuồng cẩn thận.
+
+Nông dân ta thường dùng rơm rạ, thân lá cây họ đậu, cây phân xanh, lá cây, cỏ khô… để làm chất độn chuồng.
+
+Ủ phân : Là biện pháp cần thiết trước khi đem phân chuồng ra bón ruộng. Bởi vì trong phân chuồng tươi còn có nhiều hạt cỏ dại, nhiều kén nhộng côn trùng, nhiều bảo tử, ngủ nghỉ của nấm, xạ khuẩn, vi khuẩn và tuyến trùng gây bệnh. Ủ phân vừa có tác dụng sử dụng nhiệt độ tương đối cao trong quá trình phân huỷ chất hữu cơ để tiêu diệt hạt cỏ dại và mầm mống côn trùng, bệnh cây vừa thúc đẩy quá trình phân huỷ chất hữu cơ, đẩy nhanh quá trình khoáng hoá để khi bón vào đất phân hữu cơ có thể nhanh chóng cung cấp chất dinh dưỡng cho cây.
+
+Mặt khác, trong phân tươi tỷ lệ C/N cao, là điều kiện thuận lợi cho các loài vi sinh vật phân huỷ các chất hữu cơ ở các giai đoạn đầu hoạt động mạnh. Chúng sẽ sử dụng nhiều chất dinh dưỡng nên có khả năng tranh chấp chất dinh dưỡng với cây.
+
+Ủ phân làm cho trọng lượng phân chuồng có thể giảm xuống, nhưng chất lượng phân chuồng tăng lên. Sản phẩm cuối cùng của quá trình ủ phân là loại phân hữu cơ được gọi là phân ủ, trong đó có mùn, một phần chất hữu cơ chưa phân huỷ, muối khoáng, các sản phẩm trung gian của quá trình phân huỷ, một số enzym, chất kích thích và nhiều loài vi sinh vật hoại sinh.
+
+Trong điều kiện khí hậu nhiệt đới ở nước ta với ẩm độ cao, nắng nhiều, nhiệt độ tương đối cao, quá trình phân huỷ các chất hữu cơ diễn ra tương đối nhanh… Sử dụng phân chuồng bán phân giải là tốt nhất, bởi vì ủ lâu phân ủ sẽ mất nhiều đạm.
+
+Chất lượng và khối lượng phân ủ thay đổi nhiều tuỳ thuộc vào thời gian và phương pháp ủ phân. Thời gian và phương pháp ủ phân ảnh hưởng đến thành phần và hoạt động của tập đoàn vi sinh vật phân huỷ và chuyển hoá chất hữu cơ thành mùn, qua đó mà ảnh hưởng đến chất lượng và khối lượng phân ủ.
+
+Để đảm bảo cho các quá trình hoạt động của vi sinh vật được tiến hành thuận lợi, nơi ủ phân phải có nền không thấm nước, cao ráo, tránh ứ đọng nước mưa. Đống phân ủ phải có mái che mưa và để tránh mất đạm. Cạnh nơi ủ phân cần có hố để chứa nước từ đồng phân chảy ra. Dùng nước phân ở hố này tưới lại đống phân để giữ độ ẩm cần thiết, tạo điều kiện thuận lợi cho tập đoàn vi sinh vật hoạt động mạnh.
+
+CÁC PHƯƠNG PHÁP Ủ PHÂN
+
+Có 3 phương pháp ủ phân:
+
+1. Ủ nóng : Khi lấy phân ra khỏi chuồng để ủ, phân được xếp thành từng lớp ở nơi có nền không thấm nước, nhưng không được nén. Sau đó tưới nước phân lên, giữ độ ẩm trong đống phân 60 – 70%. Có thể trộn thêm 1% vôi bột (tính theo khối lượng) trong trường hợp phân có nhiều chất độn. Trộn thêm 1 – 2% supe lân để giữ đạm. Sau đó trát bùn bao phủ bên ngoài đống phân. Hàng ngày tưới nước phân lên đống phân.
+
+Sau 4 – 6 ngày, nhiệt độ trong đống phân có thể lên đến 60oC. Các loài vi sinh vật phân giải chất hữu cơ phát triển nhanh và mạnh. Các loài vi sinh vật háo khí chiếm ưu thế. Do tập đoàn vi sinh vật hoạt động mạnh cho nên nhiệt độ trong đống phân tăng nhanh và đạt mức cao. Để đảm bảo cho các loài vi sinh vật háo khí hoạt động tốt cần giữ cho đống phân tơi, xốp, thoáng.
+
+Phương pháp ủ nóng có tác dụng tốt trong việc tiêu diệt các hạt cỏ dại, loại trừ các mầm mống sâu bệnh. Thời gian ủ tương đối ngắn. Chỉ 30 – 40 ngày là ủ xong, phân ủ có thể đem sử dụng. Tuy vậy, phương pháp này có nhược điểm là để mất nhiều đạm.
+
+2. Ủ nguội : Phân được lấy ra khỏi chuồng, xếp thành lớp và nén chặt. Trên mỗi lớp phân chuống rắc 2% phân lân. Sau đó ủ đất bột hoặc đất bùn khô đập nhỏ, rồi nén chặt. Thường đống phân được xếp với chiều rộng 2 – 3 m, chiều dài tuỳ thuộc vào chiều dài nền đất. Các lớp phân được xếp lần lượt cho đến độ cao 1,5 – 2 m. Sau đó trát bùn phủ bên ngoài.
+
+Do bị nén chặt cho nên bên trong đống phân thiếu oxy, môi trưởng trở nên yếm khí, khí cacbonic trong đống phân tăng. Vi sinh vật hoạt động chậm, bởi vậy nhiệt độ trong đống phân không tăng cao và chỉ ở mức 30 – 35oC. Đạm trong đống phân chủ yếu ở dạng amôn cacbonat, là dạng khó phân huỷ thành amôniăc, nên lượng đạm bị mất giảm đi nhiều.
+
+Theo phương pháp này, thời gian ủ phân phải kéo dài 5 – 6 tháng phân ủ mới dùng được. Nhưng phân có chất lượng tốt hơn ủ nóng.
+
+3. Ủ nóng trước, nguội sau : Phân chuồng lấy ra xếp thành lớp không nén chặt ngay. Để như vậy cho vi sinh vật hoạt động mạnh trong 5 – 6 ngày. Khi nhiệt độ đạt 50 – 60oC tiến hành nén chặt để chuyển đống phân sang trạng thái yếm khí.
+
+Sau khi nén chặt lại xếp lớp phân chuồng khác lên, không nén chặt. Để 5 – 6 ngày cho vi sinh vật hoạt động. Khi đạt đến nhiệt độ 50 – 60oC lại nén chặt.
+
+Cứ như vậy cho đến khi đạt được độ cao cần thiết thì trát bùn phủ chung quanh đống phân. Quá trình chuyển hoá trong đống phân diễn ra như sau: ủ nóng cho phân bắt đầu ngấu, sau đó chuyển sang ủ nguội bằng cách nén chặt lớp phân để giữ cho đạm không bị mất.
+
+Để thúc đẩy cho phân chóng ngấu ở giai đoạn ủ nóng, người ta dùng một số phân khác làm men như phân bắc, phân tằm, phân gà, vịt… Phân men được cho thêm vào lớp phân khi chưa bị nén chặt.
+
+Ủ phân theo cách này có thể rút ngắn được thời gian so với cách ủ nguội, nhưng phải có thời gian dài hơn cách ủ nóng.
+
+Tuỳ theo thời gian có nhu cầu sử dụng phân mà áp dụng phương pháp ủ phân thích hợp để vừa đảm bảo có phân dùng đúng lúc vừa đảm bảo được chất lượng phân.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#PhanChuong"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Phân chuồng</Literal>
@@ -2716,6 +3219,55 @@ TBR45 là giống cảm ôn, ngắn ngày, canh tác được các vụ trong n�
 + Phân Cyanamit Canxi CaCN2 có chứa 20 – 21% N.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#PhanDam"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Khái niệm về phân đạm: Phân đạm là từ chung, dùng để chỉ các loại phân có chứa nitơ. Căn cứ vào gốc chứa đạm mà phân thành 2 loại, loại chứa gốc amôn gọi là phân amôn và loại chứa gốc nitrat gọi là phân nitrat.
+
+Các loại phân amôn:
+- Amôn sunfat (NH4)2SO4 – còn gọi là phân SA: có chứa 20-21%N và 23-24%S. Phân amôn sufat có thể  làm chua đất, khắc phục bằng cách kết hợp với các loại phân lân kiềm như phân lân nung chảy hoặc bột phôtphorit. Là loại phân tốt vì có cả N và S, hai chất dinh dưỡng thiết yếu cho cây trồng. Có tác dụng nhanh đối với các loại cây trồng, cảnh giác khi bón cho cây con vì dễ bị cháy lá.
+
+- Amôn clorua (NH4Cl): chứa 24-25%N và 75%Cl-. Amôn clorua không được ưa chuộng vì: gây chua và để lại ion Cl- tồn dư trong đất. Cl- tích lũy nhiều có thể gây mặn và ảnh hưởng xấu đến hệ sinh vật trong đất. Một số cây hạn chế sử dụng amôn clorua như: thuốc lá, thuốc lào, hành, tỏi, khoai tây, cà chua, cỏ chăn nuôi, cà rốt, đậu rau …
+
+- Diamôn phôphat (DAP): là loại phân phức chứa 2 yếu tố nitơ và phôtpho với tỷ lệ 18-20% N và 46-50%P2O5.
+
+- Urê [CO(NH2)2]: chứa 44-48% N ở dạng amin (NH2). Urê có thể dùng cho các loại cây trồng và các loại đất, thích hợp đất chua phèn. Urê có thể trộn được với phân lân Tômat hay Tômat sơlăc, phân lân nung chảy nhưng không nên giữ quá lâu.
+
+- Amôn bicacbônat (NH4HCO3): là loại phân kết tinh màu trắng có chứa 17,5%N, hòa tan trong nước dễ dàng và tạo phản ứng kiềm tạm thời, có thể khắc phục độ chua của đất nhưng khi gốc amôn được cây hút thì phản ứng trở lại trung tính.
+
+- Canxi xianamit (CaCN2): có 2 loại trắng và xám đen. Chứa 20-21% CN2 và 20-28% CaO. Canxi xianamit có tác dụng khử chua mạnh. Canxi xianamit có thể dùng bón thúc nếu được sử dụng trộn với đất 5-7 ngày trước lúc bón.
+
+Các loại phân nitrat
+- Natri nitrat (NaNO3): Phân đạm được sử dụng đầu tiên là natri nitrat, chứa 16% N và 25% Na2O và một ít vi lượng Bo. Nó thường được sử dụng làm phân phức có chứa Na và Bo có lợi cho cây lấy đường như mía, củ cải đường và các loại cây lấy củ như cà rốt, khoai tây, khoai lang …
+
+- Canxi nitrat [Ca(NO3)2]: chứa 15-15,5%N và 25%CaO. Canxi nitrat là loại phân kiềm mạnh nên rất có lợi cho vùng đất chua. Một tỷ lệ canxi nitrat trong phân phức sẽ là nguồn cung cấp canxi thích hợp cho cây trồng đất chua.
+
+- Canxi-magiê nitrat: 13-15%N và 8%MgO dễ tan. Loại phân này thường được sử dụng ở các loại đất thiếu magiê.
+
+- Amôn nitrat: (NH4NO3): Chứa 33-35%N ở cả 2 dạng NH4+ và NO3-. Dạng tinh thể, màu vàng xám, dễ chảy nước. Là phân sinh lý chua, thích hợp với cây trồng cạn như bắp, thuốc lá, bông, mía…
+
+- Phân kali nitrat (KNO3): Chứa 13%N và 44%K2O. Vì kali trong phân cao hơn N nên thường dùng như một loại phân kali.
+
+Vai trò của phân đạm đối với cây trồng
+Đạm là một nguyên tố quan trọng bật nhất trong các nguyên tố cấu tạo nên sự sống. Đạm có trong thành phần tất cả các protein đơn giản và phức tạp, mà nó là thành phần chính của màng tế bào thực vật, tham gia vào thành phần của axit Nucleic (tức ADN và ARN), có vai trò cực kỳ quan trọng trong trao đổi vật chất của các cơ quan thực vật. Đạm còn có trong thành phần của diệp lục tố, mà thiếu nó cây xanh không có khả năng quang hợp, có trong các hợp chất Alcaloid, các phecmen và trong nhiều vật chất quan trong khác của tế bào thực vật
+
+Thiếu đạm cây có biểu hiện sinh trưởng còi cọc, lá toàn thân biến vàng. Thiếu đạm có nghĩa là thiếu vật chất cơ bản để hình thành tế bào nên khả năng sinh trưởng bị đình trệ, hàng loạt các quá trình sinh lý sinh hóa trong cây cũng bị ngưng trệ, diệp lục ít được hình thành nên làm lá chuyển vàng. Tuy nhiên nếu bón thừa đạm cũng không tốt. Thừa đạm sẽ làm cho cây không chuyển hóa hết được sang dạng hữu cơ, làm tích lũy nhiều dạng đạm vô cơ gây độc cho cây. Thừa đạm sẽ làm cho cây sinh trưởng thái quá, gây vóng. Các hợp chất cacbon phải huy động nhiều cho việc giải độc đạm nên không hình thành được các chất “xơ” nên làm cây yếu, các quá trình hình thành hoa quả bị đình trệ làm giảm hoặc không cho thu hoạch ….
+
+Bón đạm quá mức thường gây ảnh hưởng xấu sau đây: cành lá phát triển mạnh nhưng ra hoa quả ít và muộn. Rễ phát triển ít mà nông. Phần trên mặt đất, cành lá rậm rạp, không cân đối với phần dưới mặt đất, cây dễ bị đổ... Cây lá rậm rạp, xanh non, ẩm độ cao, thiếu ánh sáng chiếu trực tiếp nên sâu bệnh phát triển nhiều hơn. Cành, thân, lá non mềm sâu bệnh dễ xâm nhập.
+
+Những điểm cần lưu ý khi sử dụng phân đạm
+- Phân bốc nhanh, xanh lá, đẻ nhiều
+
+- Cần thiết cho cây trồng lấy lá
+
+- Đối với những cây có nhu cầu đạm nhiều, khi bón cần chia ra làm nhiều lần bón nhất là đối với chân đất chua, độ mùn trong đất kém, dung tích hấp thụ thấp… Cần bón đúng đặc tính và nhu cầu của cây, đất đai. Đối với các loại cây trồng cạn như: ngô, mía, bông v.v.. bón đạm nitrat là thích hợp, nhưng đối với lúa nước nên bón đạm clorua hoặc SA. Cây họ đậu thời gian đầu chưa có nốt sần vần bón phân đạm (20-30kg N/ha) tốt nhất là phân đạm trộn với phân chuồng hoai.
+
+- Phần lớn phân đạm và phân chua sinh lý, cần chú ý phối hợp với phân kiềm, tro hoặc vôi kẻo chua đất và hiệu lực kém.
+
+- Không bón khi trời sắp mưa, giông sẽ thất thoát do tràn bờ, rửa trôi. Nếu không tưới được, nắng hạn kéo dài cũng không bón đạm.
+
+- Bảo quản phân đạm chú ý không đổ ra nền, không tựa vào tường, phải để vào bao giấy tốt hoặc bao nilon, kê cao …</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#PhanDam"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Phân đạm</Literal>
@@ -2724,6 +3276,43 @@ TBR45 là giống cảm ôn, ngắn ngày, canh tác được các vụ trong n�
         <DataProperty IRI="#dacDiem"/>
         <NamedIndividual IRI="#PhanDon"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">là loại phân chỉ chứa 1 trong 3 nguyên tố dinh dưỡng chủ yếu là N,P hoặc K.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#PhanDon"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">I Phân Đơn: Là loại phân chỉ chứa 1 trong 3 nguyên tố dinh dưỡng chủ yếu là N, P hoặc K
+1- Phân đạm vô cơ gồm có:
+1. 1- Phân Urea [CO(NH2)2] có 46%N
+1. 2- Phân đạm Sunphat còn gọi là đạm SA [(NH4)2SO4] chứa 21%N
+1. 3- Phân Clorua Amon [NH4Cl] có chứa 24-25% N
+1. 4- Phân Nitrat Amon [NH4NO3] có chứa khoảng 35% N
+1. 5- Phân Nitrat Canxi [Ca(NO3)2] có chứa 13-15% N
+1. 6- Phân Nitrat Natri [NaNO3] có chứa 15-16% N
+1. 7- Phân Cyanamit Canxi [CaCN2] có chứa 20-21% N
+* Cách tính từ phân đơn ra phân hổn hợp
+Ví dụ: Muốn pha trộn một loại phân có công thức là 5-10-10 từ phân SA, Super Lân và KCl thì ta pha như sau:
+-SA có 21%N, cần cung cấp 5kg thì ta phải có lượng SA là:
+5X100 = 23. 8kg
+2
+- Super Lân có 20% P2O5, muốn có 10kgP2O5 thì lượng Super Lân sẽ là:
+10X100 =50 kg
+20
+- KCl có 60% K2O, muốn có 10 kg K2O thì lượng KCl sẽ là:
+10X100 = 16, 6 kg
+60
+* Tổng số phân các loại là 23, 8+50+16, 6=90, 4kg còn lại 9, 6 kg phải dùng chất độn(đất, cát hoặc thạch cao), trộn vô cho đủ 100kg.
+* Cách tính từ phân hỗn hợp ra phân đơn
+Ví dụ: Theo khuyến cáo cần dùng 100kg Urê, 200kg Super Lân, 50kg Clorua Kali để bón cho cây, nhưng nhà vườn đã bón 100kg NPK(20-20-15), như vậy lượng NPK thừa hay thiếu, cách tính như sau:
+-Lượng Urê có trong 100kg NPK 20-20-15
+100X20 = 43kg
+46
+- Lượng Super Lân có trong 100kg NPK 20-20-15
+100X20 = 100kg
+20
+- Lượng Clorua Kali có trong 100kg NPK 20-20-15
+100X15 = 25Kg
+60
+* Vậy phải thêm 57kg Urê + 100kg Super Lân + 25kg Clorua Kali thì mới đủ lượng phân như đã khuyến cáo.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
@@ -2752,6 +3341,101 @@ TBR45 là giống cảm ôn, ngắn ngày, canh tác được các vụ trong n�
 – Các dạng phân NPK thường là: 16 – 16 – 8, 20 – 20 – 15, 24 – 24 – 20…</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#PhanHonHop"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Phân tổng hợp là các loại phân đã được sản xuất thông qua các phản ứng hoá học để tạo thành một thể phân bón gồm nhiều nguyên tố dinh dưỡng. Phân này còn được gọi là phân phức hợp.             Phân hỗn hợp là các loại phân tạo được do quá trình trộn lẫn 2 hoặc nhiều loại phân đơn với nhau một cách cơ giới và đều đặn. 
+
+Phân tổng hợp cũng như hân hỗn hợp có các tỷ lệ NPK ở các tổ hợp khác nhau được lựa chọn phù hợp với từng loại đất và từng nhóm cây trồng. Nhiều trường hợp trong phân tổng hợp cũng như phân hỗn hợp còn có thêm cả các nguyên tố Mg, Ca, S và các nguyên tố vi lượng khác.             Trên thị trường hiện đang có các loại phân sau đây: 
+            - Loại 2 yếu tố N và P với tỷ lệ NPK: 18:46:0 và 20:20:0. 
+            - Loại 3 yếu tố NPK với tỷ lệ: 20:20:10 và 15:15:15. 
+            - Loại 4 yếu tố N, P, K, Mg với tỷ lệ: 14:9:21:2; 12:12:17:2; v.v.. 
+            Các loại phân tổng hợp và hỗn hợp chỉ phát huy hiệu lực tốt khi được bón đúng với yêu cầu của cây và phù hợp với tính chất của các loại đất. Vì vậy, muốn sử dụng có hiệu quả các loại phân này cần nắm được đầy đủ và cụ thể đặc điểm của cây và tính chất của đất. 
+            Trên cơ sở các kết quả nghiên cứu khoa học, hiện nay các xí nghiệp phân bón đã sản xuất ra các loại phân tổng hợp và phân hỗn hợp chuyên dùng cho từng loại cây cụ thể, như phân bón cho cao su, cho cà phê, cho chè, cho rau, cho đậu, v.v.. 
+ 
+            * Phân NP: 
+            Loại phân 2 yếu tố này trên thị trường có nhiều thương hiệu khác nhau. 
+            &lt;i&gt;* Phân amophor:&lt;/i&gt; 
+            Có tỷ lệ các nguyên tố dinh dưỡng (N, P, K) là: 1:1:0. 
+            Thành phần của phân này gồm: 18% N, 18% P&lt;sub&gt;2&lt;/sub&gt;O&lt;sub&gt;5&lt;/sub&gt;. 
+            Phân có dạng viên rời, khô. Phân có khả năng hoà tan hoàn toàn trong nước. 
+            Thường phân này được sản xuất bằng cách trộn supe lân với sunphat amôn. 
+            Phân này được sử dụng để bón trên đất có hàm lượng kali cao như các loại đất phù sa, đất phèn… 
+            &lt;i&gt;* Phân diamophos (DAP):&lt;/i&gt; 
+            Phân có tỷ lệ các chất dinh dưỡng (N, P, K) là: 1:2,6:0. 
+Phân này được sản xuất bằng cách trộn supe lân kép với sunphat amôn. Phân có thành phần P&lt;sub&gt;2&lt;/sub&gt;O&lt;sub&gt;5&lt;/sub&gt; – 40%, N – 18%. 
+Phân có hàm lượng lân cao, cho nên sử dụng thích hợp cho các vùng đất phèn, đất bazan. 
+Diamophos có thể sử dụng để bón cho nhiều loại cây trồng khác nhau. Phân có thể sử dụng để bón lót hoặc bón thúc. 
+Phân này thường được dùng để bón cho đất có hàm lượng NPK trung bình hoặc các loại đất có N, K&lt;sub&gt;2&lt;/sub&gt;O lớn hơn P&lt;sub&gt;2&lt;/sub&gt;O&lt;sub&gt;5&lt;/sub&gt;. Người ta ít dùng phân này để bón cho đất thiếu kali như đất bạc màu, đất cát nhẹ, đất xám, đất trung tính. 
+Phân này ít được dùng để bón cho cây lấy củ, bón cho lúa gieo khô… 
+Phân DAP có đạm, lân dễ tiêu, không làm chua đất. 
+&lt;i&gt;* Phân hỗn hợp: &lt;/i&gt;20:20:0; 23:23:0; 10:10:0 được sản xuất ra chuyên sử dụng để bón lót vào đất. 
+ 
+* Phân NK: 
+&lt;i&gt;* Phân kali nitrat: &lt;/i&gt;Dạng phân 2 yếu tố chứa 13% N và 45% K&lt;sub&gt;2&lt;/sub&gt;O. 
+Phân này được dùng để bón cho đất nghèo kali. Thường được dùng để bón cho cây ăn quả, cây lấy củ. 
+&lt;i&gt;* Phân hỗn hợp: &lt;/i&gt;30:0:10; 20:0:20; 20:0:10. 
+Các dạng phân này có chưa NK và một số nguyên tố trung lượng. Trong các dạng phân này không có lân. Các dạng phân này được dùng để bón vào cuối thời kỳ sinh trưởng của cây trồng, vì vào thời kỳ này cây không còn yêu cầu đối với lân. 
+ 
+* Phân PK: 
+&lt;i&gt;* Phân PK  0:1:3 &lt;/i&gt;. Người ta sản xuất phân này bằng cách trộn 55% supe lân với 45% KCl. 
+Phân được dùng để bón cho đất quá nghèo kali như đất bạc màu, đất cát nhẹ v.v.. Phân cũng được dùng chủ yếu để bón cho các loài cây cần nhiều kali như khoai tây, khoai lang, v.v.. 
+&lt;i&gt;* Phân PK  0:1:2 &lt;/i&gt;. Được sản xuất bằng cách trộn 65% supe phôtphat với 35% KCl. 
+&lt;i&gt;* Phân PK  0:1:2 &lt;/i&gt;chưa 5,8% P&lt;sub&gt;2&lt;/sub&gt;O&lt;sub&gt;5&lt;/sub&gt; và 11,75% KCl. 
+Phân này được dùng để bón cho các loại đất nghèo kali và dùng chủ yếu để bón cho các loại ngũ cốc. 
+* Phân N, P, K: 
+&lt;i&gt;- Phân amsuka &lt;/i&gt;: có tỷ lệ NPK là 1: 0,4:0,8. 
+Phân này được sản xuất bằng cách trộn amôn với supe lân đã trung hòa vào muối KCl. 
+Phân được dùng để bón cho cây có yêu cầu NPK trung bình, bón ở các loại đất có NPK trung bình. 
+- &lt;i&gt;Phân nitro phoska&lt;/i&gt;: có 2 loại 
+Loại có tỷ lệ NPK: 1:0,4:1,3 
+Được sản xuất bằng cách trộn các muối nitrat với axit phosphoric. Trong phân có chứa: N – 13%; P&lt;sub&gt;2&lt;/sub&gt;O&lt;sub&gt;5&lt;/sub&gt; – 5,7%; K&lt;sub&gt;2&lt;/sub&gt;O – 17,4%. 
+Phân này được dùng để bón cho đất thiếu K nghiêm trọng và thường được dùng để bón cho cây lấy củ. 
+Loại có tỷ lệ N, P, K: 1:0,3:0,9 
+Được sản xuất bằng cách trộn các muối nitrat với axit sunphuric. Trong phân có chứa: N – 13,6%; P&lt;sub&gt;2&lt;/sub&gt;O&lt;sub&gt;5&lt;/sub&gt; – 3,9%; K&lt;sub&gt;2&lt;/sub&gt;O – 12,4%. 
+Phân được dùng để bón cho nhiều loại cây trồng và thường bón cho đất có NPK trung bình. 
+&lt;i&gt;- Phân amphoska:&lt;/i&gt; 
+Có tỷ lệ NPK: 1:0,1:0,8 
+Trong phân có chứa N – 17%; P&lt;sub&gt;2&lt;/sub&gt;O&lt;sub&gt;5&lt;/sub&gt; – 7,4%; K&lt;sub&gt;2&lt;/sub&gt;O – 14,1%. 
+Phân này được dùng để bón cho đất trung tính và thường dùng để bón cho cây lấy củ. 
+&lt;i&gt;- Phân viên NPK Văn Điển:&lt;/i&gt; 
+Có tỷ lệ NPK: 5:10:3 
+Trong phân chứa NPK, ngoài ra còn có MgO – 6,7%; SiO&lt;sub&gt;2&lt;/sub&gt; – 10 – 11%; CaO – 13 – 14%. 
+Phân này thích hợp cho nhiều loại cây trồng trên nhiều loại đất khác nhau. Cách bón và liều lượng bón được dùng như đối với phân lân nung chảy. Đối với cây trồng cạn cần bón xa hạt, xa gốc cây. Sau khi bón phân cần lấp đất phủ kín phân. 
+&lt;i&gt;- Phân hỗn hợp NPK 3 màu:&lt;/i&gt; 
+Do nhà máy phân bón Bình Điền II sản xuất. có các dạng: 
+15:15:15 
+20:20:15 
+15:10:15 
+16:16:8 
+14:8:6 
+15:15:6 
+Tuỳ theo yêu cầu của cây và đặc tính của đất, người nông dân có thể mua loại phân thích hợp để bón. 
+&lt;i&gt;- Phân tổng hợp NPK:&lt;/i&gt; 
+Do nhà máy phân bón Đồng Nai sản xuất 
+Có các dạng: 
+16:16:8 
+14:8:6 
+10:10:5 
+15:15:20 
+ * Những điều cần lưu ý khi trộn phân: 
+Có những loại phân trộn được với nhau và khi bón cho cây các nguyên tố dinh dưỡng trong hỗn hợp đều phát huy được tác dụng tốt. Tuy vậy, có những loại phân không trộn lẫn với nhau được, bởi vì khi trộn, loại phân này có thể làm mất hoặc giảm các nguyên tố dinh dưỡng có ở trong loại phân kia, hoặc tạo thành các chất có hại cho cây, làm xấu đất. Khả năng trộn của các loại phân xin xem bảng sau: 
+ 
+Khả năng trộn lẫn các loại phân  
+ 
+Sunphat đạm, clorua đạm, phôtphat đạm 
+Nitrat đạm 
+Đạm urê 
+Supe lân 
+Apatit, phosphorit 
+Tecmô phôtphat 
+Clorua kali 
+Sunphat kali 
+DAP 
+Vôi, tro 
+Phân chuồng 
+Sunphat đạm, clorua đạm, phôtphat đạm</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#PhanHonHop"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Phân hỗn hợp</Literal>
@@ -2773,6 +3457,56 @@ Bón quá nhiều kali có thể gây tác động xấu lên rễ cây, làm c�
 + Phân kali sunfat K2SO4 có chứa 48 – 50% K2O.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#PhanKali"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Phân Kali giúp cho quang hợp trên cây trồng tiến hành bình thường, đẩy nhanh quá trình vận chuyển hydrat carbon tổng hợp được từ lá sang các bộ phận khác. Thiếu phân kali cây trồng sẽ đồng hóa CO2   kém. Sự chuyển hóa hydrat từ dạng này sang dạng khác bị kìm hãm khi thiếu kali. Đường glucoza chuyển hóa thành sacaroza chậm hoặc đình trệ khi thiếu kali. Do vậy cây không được cung cấp đủ kali thì củ cải đường, mía, đu đủ…. kém ngọt.
+
+Kali trong không bào tăng khả năng chống lạnh cho cây tốt hơn. Khi dinh dưỡng đủ kali, trời lạnh hiện tượng đông nguyên sinh tế bào được hạn chế, tăng tính chịu lạnh cho cây tốt hơn.
+Với ngũ cốc, phân kali tăng sức đẻ nhánh của cây trồng.
+
+Ngoài ra phân Kali giúp cho những cây trồng lấy sợi tạo ra sợ dài và bền hơn. Hầu hết các men trong cây hoạt động nhờ có sự kích thích của kali. Kali tạo cho bề dày của các bó mạch gỗ dày hơn nên cây cứng và chống đổ tốt hơn.
+Nếu cây trồng thiếu phân kali sẽ làm cho sự hình thành N protit giảm, cây trồng hay bị yểu lả, dễ bị lụi, gãy đổ và dễ bị nhiễm bệnh hơn.
+
+Phân loại và phân biệt phân K thật giả:
+Phân loại
++ Phân KCl: Hàm lượng K nguyên chất trong phân là 50 – 60%. Ngoài ra trong phân còn có một ít muối ăn (NaCl).
++ Phân K2SO4: Hàm lượng K nguyên chất trong sunphat K là 45 – 50%. Ngoài ra trong phân còn chứa lưu huỳnh 18%.
++ Một số loại phân K khác: Phân K – magiê sunphat có dạng bột mịn màu xám. Phân có hàm lượng K2O: 20 – 30%; MgO: 5 – 7%; S: 16 – 22%. Phân “Agripac” của Canada có hàm lượng K2O là 61%....
+Các loại phân hỗn hợp thường dùng:
++ Loại hai yếu tố N và P với tỉ lệ N:P:K là 18:46:0 và 20:20:0.
++ Loại ba yếu tố N:P:K với tỉ lệ 20:20:10 và 15:15:15.
++ Loại bốn yếu tố với N:P:K:Mg tỉ lệ 14:9:21:2 và 12:12:17:2.
+Ngoài ra còn có:
++ Phân NK chứa 2 yếu tố chứa 13% N và 45% K2O
++ Phân PK tỉ lệ 1:3 và 1:2
++ Phân NPK
++ Phân Amsuka có tỉ lệ N:P:K là 1:0.4:0.8
++ Phân nitro phoska tỉ lệ N:P:K là 1:0.4:1.3 và tỉ lệ N:P:K là 1:0.3:0.9
+Phân biệt một số loại phân K thật giả
+Phân chứa hàm lượng K2O ≥60% (MOP hay KCl): đây là loại nhập khẩu 100%, nên khi mua cần xem rõ nhãn để biết rõ nguồn gốc. Ngoài ra ta có thể dùng cách này sau đây để phân biệt: cho khoảng vài gram (5-7 gram) phân vào cốc nước trong, nếu:
+Cốc chưa có màu hồng đỏ, một phần chìm trong nước, một phần nổi trên mặt nước. Dùng đũa sạch khuấy đều, mạnh dung dịch chuyển sang hồng nhạt, không đục, có váng đỏ bám quanh thành cốc và phân tan hết. Đó chính là phân thật
+Cốc có màu hồng đỏ lập tức, tất cả chìm vào trong nước. Dùng đũa khuấy mạnh thì dung dịch có màu hồng đỏ và vẩn đục, không có váng bám vào thành cốc, có thể để lại một ít cặn lắng. Đó là phân K giả.
+Phân chứa hàm lượng K2O ≥50% (SOP, K2SO4): đây cũng là loại nhập khẩu như trên. Phân có màu trắng, dạng hạt nhỏ hoặc bột. Cách phân biệt: làm giống như trên, nếu:
++ Cốc có dung dịch trong suốt, phân tan hết đó là phân K thật.
++ Cốc có dung dịch bị vẩn đục hay còn cặn lắng đó là phân K giả.
+Vừa qua, ngày 28/2/2014 tại Bình Định Chi cục Quản lý thị trường tỉnh Bình Định đã tạm giữ 25 bao (1.220 kg) phân bón NPK 20-20-50 mang nhãn hiệu Đầu Trâu có dấu hiệu giả nhãn hiệu của Công ty CP Phân bón Bình Điền tại Công ty TNHH thương mại dịch vụ Anh Trang. Hay cũ hơn, trong số 19 mẫu phân bón (PB) mà đoàn thanh tra nông nghiệp tỉnh Đồng Tháp lấy mẫu vào cuối tháng 10/2008, thì có đến 6 mẫu có kết quả giám định là PB chất lượng kém, như: NPK 20-20-15, NPK 16-16-8-13S, NPK 20-20-15 và NPK 16-16-8-13S... Vì vậy, trước khi quyết định mua chúng ta nên xem thật kỹ nguồn gốc, xuất xứ cũng như thành phần chất lượng để tránh những tổn thất không mong muốn.
+Sử dụng phân kali như thế nào mới hiệu quả
+Tất cả các dạng phân kali thông thường đều rất dễ tan trong nước, dễ bị rửa trôi như phân đạm. nên khi bón vào đất, kali cũng như các cation khác có trong phân kali đều ở dạng ion hòa tan trong dung dịch đất (K+, Na+, Mg2+). Ánh sáng kích thích sự hút kali của cây. Ban ngày cây hút kali mạnh và vận chuyển lên các bộ phận trên của cây, ban đêm tối ánh sáng yếu kali không được cây hút lên mà một phần kali còn được vận chuyển ngược xuống rễ cây và thoát ra ngoài. Hầu hết kali trong cây tồn tại dạng ion K+ kết hợp với các axit hữu cơ tạo nên các muối hòa tan, dễ dàng rút ra bằng nước.Việc sử dụng phân kali tùy vào các yếu tố sau
+
+-Tùy theo loại đất.
+Đất ít chua hay không chua, nhiều Ca2+, Mg2+, khi bón phân kali vào thì ion K+ sẽ  đẩy Ca2+, Mg2+ ra khỏi keo đất, do đó bón lâu ngày, nhất là khi bón lượng nhiều thì dễ làm cho đất bị chua hóa. Vậy nên phải bón vôi khử chua, bổ sung Ca2+, Mg2+ cho đất.
+Đất chua, bão hòa nhiều Al3+, H+ khi bón phân kali thì đẩy các ion Al3+, H+ này ra dung dịch đất làm đất bị chua tạm thời. Nếu đất quá chua mà không có bón vôi thì có thể lượng ion Al3+, H+ bị đẩy ra nhiều đủ gây độc cho cây trồng. Do đó phải bón vôi khử chua trước khi bón kali.
+-Tùy  vào loại cây
+Nhóm 1: Rất mẫn cảm với Clo (Cl): thuốc lá, cây lấy tinh dầu, cam, quýt, nho… nên bón phân kali không có Clo.
+Nhóm 2: Mẫm cảm với clo, thích hợp với nồng độ kali cao: khoai tây, cây họ đậu.
+Nhóm 3: có Thể bón những lượng kali cao như: bông, đay, lanh, dưa chuột…
+Nhóm 4: Thích hợp với loại phân kali 40% K2O, tức là chịu được nồng độ bón kali thuộc trung bình (các cây có lấy hạt và đồng cỏ).
+Nhóm 5: Thích hợp nhất với phân kali có chứa một ít natri: củ cải đường, của cải, cây lấy củ làm thức ăn cho gia súc thuộc họa hòa thảo.
+ – Lưu ý khác khi không có phân kali bón cho cây trồng
+
+Trường hợp không có phân kali thì khắc phục bằng cách bón bằng tro bếp để thay thế phân kali, vì tro bếp hàm lượng kali khá cao, kết hợp  bón vôi, tăng lượng tro bếp bón lên nhiều lần.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#PhanKali"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Phân kali</Literal>
@@ -2783,6 +3517,25 @@ Bón quá nhiều kali có thể gây tác động xấu lên rễ cây, làm c�
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Phân lân super có chứa 16 – 20% P2O5
 
 + Phân lân nung chảy (Thermophotphat, lân Văn Điển) có chứa 16% P205.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#PhanLan"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Lân có tác dụng gì với cây?
+ 
+Lân có trong thành phần của protit tạo nên nhân tế bào, vì vậy nó là chất không thể thiếu cho sự sổng của cây. Lân rất cần cho sự hình thành nên các bộ phận mới ra mầm non, đẻ nhánh, phân cành, ra hoa, đậu quả và phát triển hệ rễ. Lân ảnh hưởng đến sự vận chuyển đường, bột tích lũy về hạt và các bộ phận thu hoạch. Lân còn ảnh hưởng đến tính lưu động của chất nguyên sinh làm cho cây chống được lạnh, chống được nóng. Lân còn có tác dụng đệm, làm cho cây chịu được chua, kiềm.
+ 
+Cây hút lân ở đâu, dưới dạng nào?
+ 
+Trong đất có các chất hữu cơ có chứa lân và các khoáng vật có chứa lân. Phần lớn lân trong đất ở dạng các phốt phát canxi, apatit, các phốt phát , sắt,  nhóm khó hòa tan, nên cây khó sử dụng. Chỉ một phần rất nhỏ tan trong nước hoặc tan trong axit yếu cây mới sử dụng được gọi là lân dễ tiêu. Phần lớn lân ở dạng hữu cơ cũng phải qua quá trình chuyển thành dễ tiêu cây mới có thể sử dụng được.
+ 
+Thế nào là dùng lân tăng đạm?
+ 
+Cây họ đậu được bón lân phát triển tốt, nhiều nốt rễ. Vi sinh vật ở nốt rễ có khả năng cố định đạm khí trời làm tăng luợng đạm trong đất. mà cây có thể hấp thụ được. Trồng cây họ đậu, vùi thân lá làm phân xanh, là cách làm tăng đạm dễ tiêu trong đất cho cây trồng vụ sau. Cách làm này gọi là dùng lân tăng đạm. Bón lân cho cây họ đậu để cây họ đậu phát triển  cung cấp được nhiều đạm cho cây trồng vụ sau.
+ 
+Bón thừa phân lân có gây hại gì không?
+ 
+Phân lân “hiền hòa” nhất. Cho đến nay, chưa thấy gây hại gì rõ rệt đến năng suất và phẩm chất nông sản. Một số trường hợp mới phát hiện thấy hiện tượng thiếu kẽm ở ruộng lúa khi bón nhiều lân. Trái lại lân tồn dư trong đất,cây có thể sử dụng cho các vụ sau. Vụ đầu cây chỉ sử dụng 10-25% lân trong supe lân. Phần còn lại tồn lưu trong đất. Bón lân nhiều năm hệ số sử dụng nâng cao.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
@@ -2796,6 +3549,19 @@ Bón quá nhiều kali có thể gây tác động xấu lên rễ cây, làm c�
 Sản xuất: Phân hỗn hợp được tạo thành bằng cách trộn các phân đơn (đạm, lân, kali) lại với nhau. Ví dụ trộn: 40kg phân sulfate amon, 15kg supe lân, 28kg aptit nghiền và 17 kg KCl, sẽ được 1 tạ phân hỗn hợp có thành phần NPK = 8-12-10. Trộn 40kg (NH4)2SO4, 40kg apatite và 120kg KCl được 1 tạ phân hỗn hợp có NPK = 8-12-12 Tức là trong 1 tạ phân này có 8%N, 12%P2O5, 12% K2O.
 + Hiện nay ở các nước tiên tiến người ta sản xuất phân hỗn hợp lỏng. Loại phân này bón được đều hơn, hiệu quả cao và nhanh hơn phân rắn.
 Phân lỏng thường có (15-15-15; 12-24-12; 10-30-10; 9-27-18.. .).</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#PhanPhucHop"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Phân phức hợp là phân trong đó chứa từ hai hay nhiều nguyên tố dinh dưỡng cần thiết cho cây trồng. * Loại phân này chủ yếulà hỗn hợp của 3 nguyên tố dinh dưỡng đa lượng (NPK).
+Phân phức hợp là phân trong đó chứa từ hai hay nhiều nguyên tố dinh dưỡng cần thiết cho cây trồng.
+* Loại phân này chủ yếulà hỗn hợp của 3 nguyên tố dinh dưỡng đa lượng (NPK).
+- Sản xuất: Phân hỗn hợp được tạo thành bằng cách trộn các phân đơn (đạm, lân, kali) lại với nhau. Ví dụ trộn: 40kg phân sulfate amon, 15kg supe lân, 28kg aptit nghiền và 17 kg KCl, sẽ được 1 tạ phân hỗn hợp có thành phần NPK = 8-12-10. Trộn 40kg (NH4)2SO4, 40kg apatite và 120kg KCl được 1 tạ phân hỗn hợp có NPK = 8-12-12 Tức là trong 1 tạ phân này có 8%N, 12%P2O5, 12% K2O.
++ Hiện nay ở các nước tiên tiến người ta sản xuất phân hỗn hợp lỏng. Loại phân này bón được đều hơn, hiệu quả cao và nhanh hơn phân rắn.
+Phân lỏng thường có (15-15-15; 12-24-12; 10-30-10; 9-27-18.. .).
+* Ngoài phương phápsản xuất bằng cách hỗn hợp như trên, phân phức hợp còn được sản xuất bằng cách hóa hợp (phân hóa hợp). Loại phân này các dinh dưỡng được hóa hợp theo các phản ứng hóa học. Ví dụ phân Amophot: hóa hợp H3PO4+ NH3= NH4H2PO4 hay diamophot: H3PO4+2NH3= (NH4)HPO4.
+* Phân phức tạp:
+- Hóa hợp với nhau qua các phản ứng hóa lý hóa học.. . Loại phân này ngoài NPK còn có thêm các thành phần khác như các nguyên tố vi lượng, kích thích sinh trưởng, thuốc trừ sâu</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
@@ -2860,6 +3626,33 @@ Canxi thường chỉ được bón thêm khi đã bón vôi mà còn thiếu. C
 Phân canxi bón vào đất tuy dễ sử dụng nhưng thường không tốt vì sự di chuyển trong cây bị hạn chế, trong những trường hợp này thì tưới cho lá sẽ có lợi hơn.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#PhanTrungLuong"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Trên thực tế không sản xuất phân trung lượng. Các nguyên tó như canxi, magiê, lưu huỳnh thường được cung cấp qua thành phần phụ của phân đa lượng và chất cải tạo đất. Trong một số trường hợp cũng có bón từng loại phân riêng.
+Canxi được cấp qua bón vôi và các loại phân như phân nung chảy, supe lân.
+Lưu huỳnh được cung cấp qua bón supe lân hoặc sunfat amon.
+Magiê có nhiều trong phân nung chảy và phân kali - magiê.
+Để đáp ứng nhu cầu của cây về các nguyên tố thứ yếu phải căn cứ vào cây và phối hợp các loại phân.
+* Phân magiêlà những muối tan, tác dụng nhanh (chủ yếu là các sunphat) hoặc ở dạng tác dụng chậm. Hàm lượng dinh dưỡng có thể biểu diễn bằng Mg hoặc MgO.
+Trong các loại phân magiê tác dụng nhanh có:
+- Magiê sunfat dưới dạng muối Epson (10%Mg) hoặc phân KMg.
+- Kali magiê sunfat (coi như phân kali) hoặc phân KMg.
+Loại phân magiê tác dụng chậm có magiê cacbonat (vôi đôlômit).
+Tỷ lệ sử dụng và khả năng bị rửa trôi của Mg tan trong nước đều giống như đối với K.
+Với những vùng đất cần bón vôi thì nguồn MG rẻ nhất là vôi chứa Mg và bón mức cao sẽ đảm bảo cung cấp đủ Mg trong nhiều năm mà không sợ có tác dụng gây hai.
+* Phân lưu huỳnh là gì?
+Lưu huỳnh có tác dụng nhiều đối với cây họ đậu, cây hoa mầu (cải dầu). Phân S ngày càng được sử dụng nhiều hơn trong thực tế.
+Có loại phân lưu huỳnh tác dụng nhanh, tan trong nước như: kali sunfat hoặc magie sunfat (18%S), có hiệu quả nhất đối với hoa mầu đang lớn và có thể kể cả amôni sunfat (24%S).
+Các dạng tác dụng chậm như thạch cao (18%S) hoặc canxi sunfat là sản phẩm phụ của supe photphat (14%S) đều có thể đem dùng nếu bị sợ rửa trôi.
+Có thể bón lưu huỳnh nguyên tố (100%S) hoặc ở dạng bột hoặc ở dạng vỏ bọc ure (10-20%S).
+Tất cả các dạng phân tan và tác dụng chậm đều bón vào thời kỳ gieo hạt.
+* Phân canxi là gì?
+Canxi thường chỉ được bón thêm khi đã bón vôi mà còn thiếu. Có một số nguồn phân canxi không làm tăng pH là:
+- Loại tác dụng nhanh: Canxi clorua rắn hoặc trong dung dịch, các hợp phần có canxi dùng tưới cho lá.
+- Loại tác dụng chậm: thạch cao.
+Phân canxi bón vào đất tuy dễ sử dụng nhưng thường không tốt vì sự di chuyển trong cây bị hạn chế, trong những trường hợp này thì tưới cho lá sẽ có lợi hơn.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#PhanTrungLuong"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Phân trung lượng</Literal>
@@ -2870,6 +3663,45 @@ Phân canxi bón vào đất tuy dễ sử dụng nhưng thường không tốt 
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Phân vi lượng gồm các hỗn hợp những chất hóa học nhằm cung cấp các loại nguyên tố vi lượng cho cây. Bên cạnh phân vi lượng, nhiều khi người ta còn bổ sung các nguyên tố siêu vi lượng, đất hiếm, chất kích thích sinh trưởng.
  
 Thiếu các nguyên tốt vi lượng, cây phát triển không toàn diện, tuy nếu bón quá dư thừa phân vi lượng các hoạt động của cây trở nên rối loạn. Hơn nữa, nó còn ảnh hưởng tới sức khỏe của con người và vật nuôi khi sử dụng sản phẩm nông sản. Phân vi lượng có thể sử dụng để bón vào đất, trộn với các loại phân khác để bón. Có thể bón phân vi lượng lên lá cây, ngâm hạt giống, dùng để nhúng rễ, nhúng hom trước khi trồng.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#PhanViLuong"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Phân vi lượng gồm các hỗn hợp những chất hóa học nhằm cung cấp các loại nguyên tố vi lượng cho cây. Bên cạnh phân vi lượng, nhiều khi người ta còn bổ sung các nguyên tố siêu vi lượng, đất hiếm, chất kích thích sinh trưởng.
+ 
+Thiếu các nguyên tốt vi lượng, cây phát triển không toàn diện, tuy nếu bón quá dư thừa phân vi lượng các hoạt động của cây trở nên rối loạn. Hơn nữa, nó còn ảnh hưởng tới sức khỏe của con người và vật nuôi khi sử dụng sản phẩm nông sản. Phân vi lượng có thể sử dụng để bón vào đất, trộn với các loại phân khác để bón. Có thể bón phân vi lượng lên lá cây, ngâm hạt giống, dùng để nhúng rễ, nhúng hom trước khi trồng. Các loại phân vi lượng:
+ 
+Phân đồng (Cu): Đồng tham gia vào thành phần cấu tạo enzim thúc đẩy chức năng hô hấp, chuyển hoá chất dinh dưỡng, thúc đẩy quá trình hình thành vitamin A trong cây, loại vitamin rất cần cho sự phát triển bình thường của hạt. Đồng làm tăng hiệu lực của kẽm, mangan, Bo.
+ 
+Phèn xanh (CuS04.7H20) có thể sử dụng làm phân bón có đồng. Trong phèn xanh có 25,9% Cu. Phèn xanh là những tinh thể màu xanh, tơi, rời, dễ hoà tan trong nước. Phèn xanh được sủ dụng để bón vào đất với lượng 10 – 25kg/ha. Phèn xanh cũng có thể dùng để xử lý hạt giống với dung dịch có nồng độ 0,01 – 0,02% hoặc phun lên cây với nồng độ 0,02 – 0,05%.
+ 
+Phân sắt (Fe): Có vai trò quan trọng trong quá trình quang hợp của cây. Cây thiếu sắt không có khả năng tổng hợp được chất diệp lục, lá bị hủy hoại. Thiếu sắt nặng làm cho cây chết. Triệu chứng đầu tiên của tình trạng thiếu sắt là lá chuyển sang màu vàng, nhưng gân lá vẫn giữ màu xanh. Trong nông nghiệp, để bổ sung sắt cho đất thường người ta tăng cường bón phân chuồng, phân xanh.
+ 
+Cây trồng có những dấu hiệu thiếu sắt, người ta thường dùng một số hợp chất có chứa sắt như sunphat sắt, cácbonat sắt, sunphat araôn sắt, lignin sunfonat sắt để phun lên cây nồng độ 1 – 3%. Những loại cây có yêu cầu về sắt nhiều như cam, quít, nho, lạc, đậu tương, các loại rau…
+ 
+Phân kẽm (Zn): Đây là chất tham gia vào việc thúc đẩy quá trình hình thành các hoocmôn trong cây, làm tăng tính chịu nóng, chịu hạn và chống lại sự xâm nhập của sâu bệnh hại. Kẽm làm tăng khả năng tổng hợp prôtit, các axit nucleic, thúc đẩy việc sử dụng và chuyển hóa đạm trong cây. Cây thiếu kẽm giảm năng suất rõ rệt.
+ 
+Sunphat kẽm (ZnSO4.7H20): Phân có dạng tinh thể màu trắng, các tinh thể phân tan trong nước. Phân chứa 22,8% Zn. Phân vi lượng này được sử dụng đề xử lý hạt giống với nồng độ 0,1%, phun lên lá với nồng độ 0,02-0,05%. Trong quá trình chăm sóc, nếu bón quá nhiều vôi, nhiều lân cũng thường xảy ra trường hợp thiếu kẽm. Đất kiềm, đất trung tính cũng thường hay thiếu kẽm.
+ 
+Phân bo (B): Đây là chất đảm bảo cho hoạt động bình thường của mô phân sinh ngọn cây. Bo thúc đẩy quá trình tổng hợp các prôtit, lignin. Nó còn tham gia vào việc chuyển hoá các hydrat cacbon, thúc đẩy quá trình phân chia tế bào. Bo tăng cường việc hút Ca của cây, đảm bảo cân đối tỷ lệ K:Ca trong cây. Bón bo cho cây vào thời kỳ chuẩn bị ra hoa sẽ làm tăng tỷ lệ đậu hoa, quả.
+ 
+Phân Borat natri (Na2B407.10H20) có hàm lượng B trong phân là 11,3%, dùng để phun lên lá, xử lý hạt giống.
+ 
+Phân borat magiê, chứa 1,4% B và 19% Mg. Phân được sử dụng để bón vào đất hoặc phun lên lá.
+ 
+Phân axit boiric (H2Bo3) chứa 17,5% B, có dạng tinh thể màu trắng, dễ tan trong nước, phân thường ở trong trạng thái tơi rời, dễ sử dụng để bón cho cây. Người ta sử dụng loại phân này để phun lên lá với nồng độ 0,03 – 0,05%, xử lý hạt giống, bón cho những nơi có hàm lượng B dễ tiêu dưới 0,2mg/100g đất.
+ 
+Nhìn chung cây bị thiếu B khả năng sinh trưởng kém, lá nhỏ, có màu nhạt, cây đâm chồi lách nhiều, rễ phát triển kém…
+ 
+Phân côban (Co): Loại phân vi lượng này rất cần cho quá trình cố định đạm không khí của vi sinh vật. Co làm tăng khả năng hút lân của cây. Co rất thích hợp với các loài cây có nhiều vitamin B12. Nó còn làm tăng chất lượng thức ăn gia súc, giúp cho gia súc tiêu hoá thức ăn, làm tăng số lượng hồng cầu trong máu gia súc. Bởi vậy, ngưòi ta thường bón phân vi lượng này lên trên các đồng cỏ.
+ 
+Phân mangan (Mn): Tham gia vào việc thúc đẩy cây nảy mầm sớm, làm cho hệ rễ khoẻ, cây ra hoa kết quả nhiều, hạt chắc mẩy. Nên bón phân vào giai đoạn cây đang ra hoa. Mangan có tác dụng tăng hiệu lực phân lân, thúc đẩy quá trình hô hấp trong cây, xúc tiến quá trình oxy hoá các hyđrat cacbon tạo thành CO2 và H2O và tăng hoạt tính của men trong quá trình tổng hợp chất diệp lục.
+ 
+Phân sunphat mangan (MnSO4.5H20) chứa 24,6% mangan. Đây là loại phân vi lượng ít tan trong nước, dùng để xử lý hạt giống, phun lên lá, bón vào đất.
+ 
+Phân molipđen (Mo): Đây là loại phân vi lượng có vai trò quan trọng trong việc làm tăng khả năng quang hợp của cây và tổng hợp vitamin C trong cây. Mo giúp cây hấp thụ được nhiều N và giúp cho quá trình cố định đạm. Mo rất cần cho vi sinh vật cố định đạm cộng sinh ở rễ cây và giúp cho sự phát triển nhiều nốt sần ở rễ cây họ đậu. Mo làm tăng hiệu lực của phân lân.
+ 
+Molipdat natri (NaMoO4. 2H20) chứa 39% Mo, Molipdat Amôn (NH4)2.Mo7O3.4H2O) chứa 54% Mo. Hai loại phân vi lượng này có dạng tinh thể dùng để bón cho nhiều loại cây trồng khác nhau, trên nhiều loại đất khác nhau. Trường hợp đất chua, Mo làm tăng hiệu quả của việc bón vôi và phân lân. Người ta thường sử dụng phân vi lượng này để xử lý hạt giống, phun lên lá với nồng độ 0,06 – 0,10%.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
@@ -2894,12 +3726,51 @@ Ngoài ra trên thị trường còn có những loại phân khác với tên t
     <DataPropertyAssertion>
         <DataProperty IRI="#moTa"/>
         <NamedIndividual IRI="#PhanViSinh"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">. Các loại phân vi sinh
+1. Phân vi sinh vật cố định đạm. 
+Có nhiều loài vi sinh vật có khả năng cố định N từ không khí. Đáng chú ý có các loài: tảo lam (Cyanobacterium), vi khuẩn Azotobacter, Bradyrhizobium, Rhyzobium; xạ khuẩn Actinomyces, Klebsiella. Phần lớn các loài vi khuẩn cố định đạm thường sống cộng sinh với các cây họ đậu. Chúng xâm nhập vào rễ cây và sống cộng sinh trong đó, tạo thành các nốt sần ở rễ cây. Chúng sử dụng chất hữu cơ của cây để sinh trưởng đồng thời hút đạm từ không khí để cung cấp cho cây, một phần tích luỹ lại trong cơ thể chúng.Thí dụ như tảo lam cộng sinh với bèo hoa dâu và hút đạm tích luỹ lại làm cho bèo hoa dâu có hàm lượng đạm cao, trở thành cây phân xanh rất quý. Thời gian gần đây, cùng với những tiến bộ của khoa học và công nghệ, các nhà khoa học đã sử dụng công nghệ gen để tạo ra các chủng vi sinh vật cố định đạm có nhiều đặc điểm tốt: khả năng cố định đạm cao, khả năng cộng sinh tốt. Công nghệ sinh học cũng giúp tạo ra những chủng vi sinh vật có đặc tính cạnh tranh cao với các loài vi sinh vật trong đất. Mặt khác, công nghệ sinh học đã cho phép các nhà khoa học tách được gen quy định đặc tính cố định đạm từ vi khuẩn và đem cấy vào nhân tế bào cây trồng, làm cho một số loài cây trồng cũng tạo được khả năng cố định đạm như vi khuẩn. Hiện nay trên thị trường phân bón nước ta, phân vi sinh vật cố định đạm được bán dưới các tên thương phẩm sau đây:
+            Phân nitragin chứa vi khuẩn nốt sần cây đậu tương.
+            Phân rhidafo chứa vi khuẩn nốt sần cây lạc.
+            Azotobacterin chứa vi khuẩn hút đạm tự do.
+            Azozin chứa vi khuẩn hút đạm từ không khí sống trong ruộng lúa. Loại phân này có thể trộn với hạt giống lúa.
+ 
+2. Vi sinh vật hoà tan lân.
+Cây chỉ có thể hút được lân ở dạng dễ tiêu trong đất. Lân ở dạng khó tan trong đất cây không hút được. Vì vậy, có nhiều loại đất như đất đỏ bazan, đất đen, v.v.. hàm lượng lân trong đất khá cao, nhưng cây không hút được vì lân ở dưới dạng khó hoà tan. Trong đất thường tồn tại một nhóm vi sinh vật có khả năng hoà tan lân. Nhóm vi sinh vật này được các nhà khoa học đặt tên cho là nhóm HTL (hoà tan lân, các nước nói tiếng Anh đặt tên cho nhóm này là PSM – phosphate solubilizing microorganisms). Nhóm hoà tan lân bao gồm: Aspergillus niger, một số loài thuộc các chi vi khuẩn Pseudomonas, Bacillus, Micrococens. Nhóm vi sinh vật này dễ dàng nuôi cấy trên môi trường nhân tạo. Nhiều nơi người ta đã đưa trộn sinh khối hoặc bào tử các loại vi sinh vật hoà tan lân sau khi nuôi cấy và nhân lên trong phòng thí nghiệm, với bột phosphorit hoặc apatit rồi bón cho cây. Sử dụng các chế phẩm vi sinh vật HTL đem lại hiệu quả cao ở những vùng đất cây bị thiếu lân. Một số loài vi sinh vật sống cộng sinh trên rễ cây có khả năng hút lân để cung cấp cho cây. Trong số này, đáng kể là loài VA mycorrhiza. Loài này có thể hoà tan phosphat sắt trong đất để cung cấp lân cho cây. Ngoài ra loài này còn có khả năng huy động các nguyên tố Cu, Zn, Fe… cho cây trồng. Nhiều nơi người ta sử dụng VA mycorrhiza đã làm tăng năng suất cam, chanh, táo, cà phê… Nuôi cấy VA mycorrhiza trên môi trường nhân tạo rất khó. Vì vậy hiện nay các chế phẩm có chưa VA mycorrhiza chỉ có bán rất hạn chế trên thị trường phân bón Mỹ. Những năm gần đây, trên thị trường phân bón ở một số nước có bán chế phẩm Phospho – bacterin trong có chứa vi khuẩn giải phóng lân dễ tiêu từ các chất hữu cơ.
+3. Vi sinh vật kích thích tăng trưởng cây.
+Gồm một nhóm nhiều loài vi sinh vật khác nhau, trong đó có vi khuẩn, nấm, xạ khuẩn, v.v.. Nhóm này được các nhà khoa học phân lập ra từ tập đoàn vi sinh vật đất. Người ta sử dụng những chế phẩm gồm tập đoàn vi sinh vật được chọn lọc để phun lên cây hoặc bón vào đất làm cho cây sinh trưởng và phát triển tốt, ít sâu bệnh, tăng năng suất. Chế phẩm này còn làm tăng khả năng nảy mầm của hạt, tăng trọng lượng hạt, thúc đẩy bộ rễ cây phát triển mạnh. Như vậy, chế phẩm này có tác động tổng hợp lên cây trồng. Để sản xuất chế phẩm vi sinh vật kích thích tăng trưởng của cây, người ta sử dụng công nghệ lên men vi sinh vật. Ở các nước phát triển người ta sử dụng các thiết bị lên men tự động, công suất lớn. Ở nước ta, đã dùng kỹ thuật lên men trên môi trường bán rắn để sản xuất chế phẩm này, bước đầu cho kết quả khá tốt. Những năm gần đây ở nước ta đang tiến hành khảo nghiệm chế phẩm EM của giáo sư người Nhật Teruo Higa. Chế phẩm này được đặt tên là vi sinh vật hữu hiệu (Effective microorganisms – EM). Đây là chế phẩm trộn lẫn một nhóm các loài vi sinh vật có ích trong đó có vi khuẩn axitlactic, một số nấm men, một số xạ khuẩn, vi khuẩn quang hợp, v.v.. Tại hội nghị đánh giá kết quả sử dụng EM tại Thái Lan năm 1989, các nhà khoa học đã đánh giá tác dụng tốt của EM như sau:
+            - Cải tạo lý hoá tính và đặc tính sinh học của đất.
+            - Làm giảm mầm mống sâu bệnh trong đất.
+            - Tăng hiệu quả của phân bón hữu cơ.
+            - Cây trồng sinh trưởng và phát triển tốt, cho năng suất cao, phẩm chất nông sản tốt.
+            - Hạn chế sâu bệnh hại cây trồng.
+            - Góp phần làm sạch môi trường.
+ Chế phẩm EM còn được sử dụng trong chăn nuôi. Cho gia súc ăn, EM làm tăng hệ vi sinh vật trong đường ruột, làm tăng sức khoẻ, giảm mùi hôi của phân. EM còn được dùng để làm sạch môi trường nước nuôi thuỷ sản.
+ Một số điểm cần chú ý khi sử dụng phân vi sinh vật :
+Phân vi sinh vật sản xuất ở nước ta thường có dạng bột màu nâu, đen, vì phần lớn các nơi sản xuất đã dùng than bùn làm chất độn, chất mang vi khuẩn. Phân vi sinh vật sản xuất trong nước thường được sử dụng bằng cách trộn với các hạt giống đã được vảy nước để ẩm hạt trước khi gieo 10 – 20 phút. Nồng độ sử dụng là 100 kg hạt giống trộn với 1 kg phân vi sinh vật. Các chế phẩm vi sinh vật sản xuất trong nước thường không cất giữ được lâu. Thường sau từ 1 đến 6 tháng hoạt tính của các vi sinh vật trong chế phẩm giảm mạnh. Vì vậy, khi sử dụng cần xem kỹ ngày sản xuất và thời gian sử dụng được ghi trên bao bì. Chế phẩm vi sinh vật là một vật liệu sống, vì vậy nếu cất giữ trong điều kiện nhiệt độ cao hơn 30oC hoặc ở nơi có ánh nắng trực tiếp chiếu vào, thì một số vi sinh vật bị chết. Do đó hiệu quả của chế phẩm bị giảm sút. Cần cất giữ phân vi sinh vật ở nơi mát và không bị ánh nắng chiếu vào.
+Phân vi sinh vật thường chỉ phát huy tác dụng trong những điều kiện đất đai và khí hậu thích hợp. Thường chúng phát huy tốt ở các chân đất cao, đối với các loại cây trồng cạn.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#PhanViSinh"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Là chế phẩm phân bón được sản xuất bằng cách dùng các loại vi sinh vật hữu ích cấy vào môi trường là chát hữu cơ(như bột than bùn). Khi bón cho đất các chủng loại vi sinhy vật sẽ phát huy vai trò của nó như phân giải chất dinh dưỡng khó tiêu thành dễ tiêu cho cây hấp thụ, hoặc hút đạm khí trời để bổ sung cho đất và cây.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#PhanViSinh"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Phân vi sinh</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#PhanXanh"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Phân xanh là loại&lt;li&gt; phân hữu cơ&lt;/li&gt;, dùng cây xanh phân hủy để bón lót cho cây trồng và thường được sử dụng tươi, không qua quá trình ủ.
+
+Tạo phân xanh là trồng những cây cụ thể để cải tạo đất trong nông nghiệp, khi chuẩn bị đất để trồng cây ăn quả, trồng nho và rau quả. Không giống như các loại cây trồng, các cây phân xanh thường không được thu hoạch mà để chết khô, để lại nguồn phân đạm tự nhiên. Thường là cây được trồng luân canh, cứ một vụ trồng cây trồng chính lại một vụ trồng cây phân xanh, khi cây phân xanh ra hoa được cầy vùi chung vào trong đất để tăng cường độ màu mỡ cho đất và loại trừ các loài sâu bệnh hại cây trồng chính.
+
+Nguyên liệu để làm phân xanh thường là các cây cỏ dại, cây thảo mộc, lá xoan, cây họ đậu…, trong đó cây họ đậu cho hiệu quả cao nhất.
+
+Tại châu Âu, thường dùng những rau họ cải như mù tạc, cải dầu, cây họ đậu như đậu cánh chim, đậu tằm, đậu răng ngựa hoặc cỏ ba lá, cỏ như họ Hòa thảo và các loài khác như hướng dương,...
+
+Tại Việt Nam thường dùng những cây xanh như bèo hoa dâu, bớp bớp, keo dậu, lục lạc sợi, điên điển, lục bình, dã quỳ, đậu triều...</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#moTa"/>
@@ -2920,6 +3791,23 @@ Ngoài ra trên thị trường còn có những loại phân khác với tên t
         <DataProperty IRI="#luongPhanBon"/>
         <NamedIndividual IRI="#QuyTrinhBonDong"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">(6-7kg) Ure cho 1000 m2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#QuyTrinhBonDong"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Có nhiều thuật ngữ “bón đón đòng”, “bón nuôi đòng”, “bón rước đòng”, “bón thúc đòng”.
+Thế nào là bón đón đòng? Có 3 tiêu chí để đưa đến quyết định thời điểm bón phân, một là căn cứ vào số ngày sau sạ tùy giống như đã nói ở trên, hai là căn cứ vào trạng thái đòng, thời điểm bón là lúc đòng (tim đèn) phải tượng được 1 - 3 mm, ba là trạng thái cây lúa, nếu lúa chưa ngả màu vàng tranh thì chưa bón.
+
+Nếu cây lúa hội được 3 điều kiện trên thì bón phân ngay, gọi là bón đón đòng (hay rước đòng).
+
+Nếu cây lúa đã hội tụ được 2 điều kiện nhưng lúa vẫn chưa ngả màu vàng tranh (hoặc gặp mưa dầm) thì cần nán lại 3 - 5 ngày, lúc này đòng đã lú đến 1 cm, mới bón nên gọi là bón nuôi đòng (thúc đòng)
+Việc bón phân giai đoạn này quyết định đến năng suất lúa và cũng là khó xác định thời điểm và liều lượng bón nhất.
+
+Để đảm bảo cho cây lúa ngả màu vàng tranh (bậc 3 trong bảng so màu lá lúa) vào thời điểm bón đón đòng thì khi được 32 ngày sau sạ nên tiến hành cắt nước để tạo điều kiện cho cây lúa không đẻ nhánh nữa (vì toàn bộ lúc này các chồi mọc thêm đều vô hiệu), đồng thời việc cắt nước cũng giúp cho lá lúa từ trạng thái nằm ngang sang trạng thái đứng để giúp cây đón được nhiều ánh sáng, quang hợp tốt hơn, ít sâu bệnh hơn.
+
+Nếu sử dụng phân đơn bón đúng thời điểm với 3 điều kiện như ở trên thì dùng 5 kg urea + 5 kg KCl/1.000 m2; Nếu màu lá có màu xanh lợt thì chỉ nên sử dụng 3 kg urea + 5 kg KCl/1.000 m2; Nếu màu lá vẫn xanh tốt (hoặc ở trong rợp) thì chỉ cần bón 5 kg KCl/1.000 m2. Tuy nhiên khi giảm, hoặc không sử dụng phân đạm thì cần xem mã lúa để có thể bón 2 kg urea/1.000 m2 khi lúa bắt đầu cong trái me.
+
+Để chuẩn hóa và thuận tiện cho việc quyết định liều lượng bón phân, Cty Bình Điền đã SX nên bộ sản phẩm chuyên dùng cho lúa là Đầu trâu 999 + TVL và Đầu trâu Agrotain + TE. Công thức của 2 loại phân này gần giống nhau, Đầu trâu 999 có hàm lượng N-20, K-20 và trung vi lượng, còn Đầu trâu Agrotain Lúa 2 + TE chứa 18N, 4 P2O5 và 22 K2O. Phân chuyên dùng Lúa 2 Agrotain + TE là sản phẩm được sản xuất ở thế hệ sau với công nghệ hiện đại hơn. Lượng đạm trong Đầu trâu Agrotain + TE thấp hơn nhưng nhờ có Agrotain nên vẫn giảm được thất thoát, vẫn thỏa mãn cho nhu cầu của cây, đồng thời hàm lượng trung vi lượng lại cao hơn.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#moTa"/>
@@ -2946,6 +3834,39 @@ Ngoài ra trên thị trường còn có những loại phân khác với tên t
         <NamedIndividual IRI="#QuyTrinhBonLot"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">600-900 kg phân hữu cơ (phân chuồng); 5-6 kg urea; 30-45 kg supperlan; 5-6 kg
 cloruakali.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#QuyTrinhBonLot"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">+ Trong bón phân cho lúa thường bón lót toàn bộ phân chuồng và phân lân, một phần phân đạm và kali. Thường bón lót phân chuồng trong quá trình làm đất; phân lân, kali, cùng phân đạm bón trước khi cày bừa lần cuối.
+
+            + Cây hút khá nhiều lân trong các giai đoạn sinh trưởng đầu, giai đoạn cây con lúa bi khủng hoảng lân do vậy phân lân cần được bón lót toàn bộ hoặc bón lót và bón thúc sớm. Phân lân nên bón rải đều trên mặt ruộng trước khi cày bừa lần cuối để gieo cấy.
+
+            + Nên bón lót nhiều phân kali trong các trường hợp: giống lúa đẻ nhánh nhiều, giống lúa ngắn ngày, lúa có hiện tượng bị ngộ độc sắt, mưa nhiều, ngập nước sâu, khí hậu lạnh
+
+            + Thường dành 1/3-2/3 tổng lượng đạm để bón lót cho lúa. Cần bón lót nhiều đạm hơn khi cấy bằng mạ già, các giống lúa ngắn ngày
+&lt;h3&gt;Bón lót (Bón trước khi cấy hoặc gieo sạ)&lt;h3&gt;
+C1: Bón phân đơn:
+
++ Supe Lân: 15 - 20kg/500m2 (300 - 400kg/ha)
+
++ Đạm Urea: 2 - 4kg/500m2 (40 - 80kg/ha)
+
++ Kali Clorua: 1 - 1,5kg/500m2 (20 - 30kg/ha)
+
+C2: Bón phân NPK
+
+(Chọn các sản phẩm chuyên lót cho lúa có hàm lượng lân cao, hàm lượng đạm và kali thấp)
+
++ NPK 5.10.3; NPK 6.8.4; NPK 6.9.3... : 25 - 30kg/500m2 (500 - 600kg/ha)
+
+hoặc DAP (18-46): 7 - 10kg/kg/500m2 (140 - 200kg/ha).
+
+Nếu bón loại hàm lượng cao hơn có thể giảm lượng bón theo tỷ lệ thích hợp hoặc theo khuyến cáo của nhà sản xuất.
+
+Không nên chọn loại phân có hàm lượng Đạm và Kali quá cao mà Lân thấp (VD: NPK 8.2.8; 12.2.10; 20.5.15...) để bón lót làm mất cân bằng dinh dưỡng, lúa dễ bị sâu bệnh.
+
+Cách bón: Trộn đều phân và rải đều khắp mặt ruộng trước khi cấy, sạ.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#moTa"/>
@@ -2983,6 +3904,11 @@ cloruakali.</Literal>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Bón phân cho lúa vào các thời kỳ sinh trưởng nhất định để cung cấp dinh dưỡng cho cây lúa sinh trưởng, phát triển tốt, cho năng suất cao</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#QuyTrinhBonThucDot1"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Bón thúc 1 (sau sạ 7 – 10 ngày): Bón thúc lần này giúp cây lúa tăng trưởng nhanh hơn (tăng chiều cao và sinh khối của bộ rễ).</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#QuyTrinhBonThucDot1"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Quy trình bón thúc đợt 1</Literal>
@@ -3006,6 +3932,11 @@ cloruakali.</Literal>
         <DataProperty IRI="#moTa"/>
         <NamedIndividual IRI="#QuyTrinhBonThucDot2"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Bón phân cho lúa vào các thời kỳ sinh trưởng nhất định để cung cấp dinh dưỡng cho cây lúa sinh trưởng, phát triển tốt, cho năng suất cao</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#QuyTrinhBonThucDot2"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Bón thúc 2 (sau sạ 18 – 22 ngày): Bón thúc lần 2 để giúp cây lúa đẻ nhánh nhanh, tập trung và hạn chế nhánh vô hiệu, tăng số nhánh hữu hiệu (đạt tiêu chuẩn số bông tối thích trên một đơn vị diện tích đất).</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
@@ -3170,19 +4101,109 @@ Lúc này ruộng bị khô sẽ tổn thương đến rễ lúa, nên không th
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Rầy</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#RayLungTrang"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Đặc điểm hình thái:
+ 
+- Trứng rầy lưng trắng có dạng ”quả chuối tiêu” như trứng rầy nâu nhưng nhỏ, dài và nhọn hơn. Trứng được đẻ thành từng ổ theo chiều dọc, chìm trong bẹ hoặc gân chính của lá, mỗi ổ từ 2-7 quả. Trứng mới đẻ trong suốt, sau chuyển màu vàng, sắp nở có hai điểm mắt đỏ.
+ 
+- Rầy non mới nở có màu trắng đục, đến tuổi 3 xuất hiện các vệt vằn trên lưng.
+ 
+- Rầy trưởng thành có màu đen nâu với một dải trắng trên mảnh lưng giữa. Cơ thể màu trắng kem, bụng màu đen. Con cái có hai dạng: cánh dài và cánh ngắn; con đực chỉ có một dạng hình cánh dài.
+ 
+Đặc điểm sinh học, sinh thái và gây hại:
+ 
+Vòng đời của sâu gai từ 24-28 ngày.
+ 
++ Giai đoạn rầy non: 12-17 ngày.
+ 
++ Thời kỳ tiền đẻ trứng: 3-8 ngày.
+ 
+Rầy cái trưởng thành có thể đẻ 150-350 trứng và đẻ liên tục trong 6 ngày, rầy trưởng thành có tính hướng quang mạnh. Con trưởng thành và rầy non đều hút nhựa cây từ dảnh và lá lúa. Rầy lưng trắng xâm nhập vào ruộng lúa khi gieo được khoảng 30 ngày và thường ít lứa trong một vụ hơn so với rầy nâu. Nếu rầy gây hại vào giai đoạn lúa trỗ bông làm cho số lượng bông và chiều dài bông giảm, hạt lúa bị lép, lửng và làm chậm quá trình chín của hạt. Rầy lưng trắng còn là môi giới truyền bệnh virus cho lúa.
+ 
+Rầy lưng trắng gây hại cùng với rầy nâu, nhưng trong cùng một lứa thì rầy lưng trắng phát sinh rộ sớm hơn. Rầy lưng trắng thường có mật độ cao, gây hại nặng vào giai đoạn lúa làm đòng.
+ 
+Cũng như rầy nâu, rầy lưng trắng thích hợp với điều kiện khí hậu ấm nóng, ẩm độ cao, mưa nắng xen kẽ. Ở vùng Đồng bằng sông Hồng một năm có 6-7 lứa rầy, quan trọng nhất là lứa rầy vào tháng 4 (vụ xuân) và cuối tháng 8 đầu tháng 9 (vụ mùa). Vụ xuân thường gây hại nặng hơn vụ mùa. Rầy lưng trắng hại nặng trên các giống lúa nhiễm rầy, lúa lai; nếu thâm canh cao, bón nhiều đạm, ruộng lúa cấy dày, rậm rạp là điều kiện cho rầy lưng trắng phát sinh, phát triển. Rầy lưng trắng phân bố rộng rãi trên khắp các vùng trồng lúa của Việt Nam và trên thế giới, nó có khả năng du nhập và di truyển rất cao.
+Phòng trừ:
+ 
+● Sử dụng các giống lúa kháng rầy.
+ 
+● Cấy lúa với mật độ vừa phải, bón phân cân đối NPK. Có thể thả vịt vào ruộng lúa để diệt rầy.
+ 
+● Khi mật độ rầy cám 18-20 con/khóm cần phun thuốc diệt rầy. Dùng các loại thuốc diệt côn trùng và thuốc diệt côn trùng nội hấp rất hữu hiệu. Có thể sử dụng các loại thuốc sau: Bassa 50EC, Regent 800WP, Trebon 20ND, Mipcin 20WP, Actara 25WG.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#RayLungTrang"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Rầy lưng trắng</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Rầy lưng trắng
+Thuộc Họ: Delphacidae Bộ: Homoptera
+(Tên khoa học: Sogatella furcifera Horvath)</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#RayNau"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">a. Triệu chứng gây hại:
+- Rầy trưởng thành và rầy non dùng miệng chích vào thân cây lúa để hút dịch cây. Bị hại nhẹ, các lá dưới có thể bị héo, bị hại nặng gây hiện tượng ‘cháy rầy’, cả ruộng bị khô héo. Hiện tượng cháy rầy đầu tiên mang tính cục bộ một vài mét vuông, nhưng nếu gặp điều kiện thuận lợi ‘cháy rầy’ lan tỏa rất nhanh ra một đến vài ha hoặc cả khu đồng trong 1 - 2 tuần.
+
+b.  Đặc điểm hình thái:
+- Rầy trưởng thành có màu nâu tối, con đực nhỏ hơn con cái. Có 2 dạng rầy trưởng thành: loại cánh dài và loại cánh ngắn.
+- Trứng: Hình bầu dục hơi cong giống hình quả chuối, cuối quả trứng hơi thon, nắp quả trứng tựa hình thang, trứng mới đẻ có màu trắng sữa, sau biến thành màu vàng xám, trước khi nở 3 - 5 ngày phía đầu có điểm mắt màu nâu đỏ.
+- Rầy non rất linh hoạt, mới nở có màu xám trắng, tuổi 2-3 trở lên có màu nâu vàng, trong điều kiện mật độ cao có màu nâu sẫm. Rầy non có 5 tuổi.
+c. Đặc điểm sinh học và sinh thái:
+
+- Thời gian sinh trưởng và phát dục các giai đoạn của rầy nâu biến động phụ thuộc vào các yếu tố ngoại cảnh, đặc biệt liên quan chặt chẽ với yếu tố nhiệt độ và ẩm độ. Trung bình, thời gian phát dục các giai đoạn của rầy biến động như sau:
+
++ Thời gian trứng: 6 - 8 ngày
++ Rầy non: 12 - 14 ngày, mỗi tuổi 2 -3 ngày.
++ Trưởng thành sống: 20 - 30 ngày.
++ Từ vũ hoá đến đẻ trứng: 3 - 5 ngày.
+
+- Rầy trưởng thành thường tập trung thành từng đám trên thân cây lúa phía dưới khóm để hút nhựa cây. Khi lúa ở thời kỳ chín, phần dưới của thân cây lúa đã khô cứng thì chúng bò lên phía trên cây lúa hoặc gần chỗ non mềm của cuống bông để hút nhựa. Rầy trưởng thành có xu tính bắt ánh sáng mạnh.
+- Sự xuất hiện dạng cánh dài và cánh ngắn phụ thuộc điều kiện nhiệt độ, ẩm độ và dinh dưỡng. Nhiệt độ thấp, ẩm độ cao, thức ăn phong phú thì xuất hiện dạng cánh ngắn nhiều, vag ngược lại. Dạng cánh ngắn có thời gian sống dài,  tỷ lệ cái/ đực cao, số lượng trứng cao hơn loại cánh dài; hơn nữa, rầy cánh ngắn đẻ trứng sớm hơn do vòng đời ngắn hơn rầy cánh dài. Vì thế khi rầy cánh ngắn xuất hiện nhiều thì hiện tượng “cháy rầy” dễ xảy ra.
+ Rầy trưởng thành sau khi vũ hoá 3 - 5 ngày thì đẻ trứng, thời gian đẻ trứng dài. Mỗi con cái có thể đẻ từ 50 - 600 quả trứng; chúng thường đẻ trứng thành ổ, vào buổi chiều. Mỗi ổ có từ 3 - 48 trứng, thông thường 15 - 30 quả trứng. Ngoài lúa, rầy cũng thích đẻ trứng trên cỏ lồng vực. Các quả trứng trong 1 ổ thường nở rải rác trong 1 ngày.
+- Hàng năm ở Hải Phòng có 7 - 8 đợt rầy, trong đó đáng lưu ý là đợt 2 - 3 hại lúa đông xuân vào tháng 4 và tháng 5; đợt 6 hại lúa mùa vào trung tuần  tháng  9 đến đầu tháng 10.
+
+d.  Biện pháp phòng trừ:
+Áp dụng chương trình IPM một cách triệt để là biện pháp tốt nhất hiện nay đảm bảo ngăn ngừa được rầy nâu một cách lâu bền, các biện pháp cụ thể  bao gồm:
+- Vệ sinh đồng ruộng sạch sẽ ;
+- Sử dụng các giống lúa kháng rầy ;
+- Cấy lúa với mật độ vừa phải, bón phân cân đối NPK. Có thể thả vịt vào ruộng lúa để diệt rầy ;
+- Tạo môi trường thuận lợi cho thiên địch của rầy phát triển ;
+- Trên ruộng lúa có nước, có thể sử dụng biện pháp rắc cát có tẩm dầu kèm theo khua động làm cho rầy “giả chết” rơi xuống nước, khi bò lên dầu vít lỗ thở của chúng làm cho chúng bị chết ;
+- Khi rầy vượt qua ngưỡng phòng trừ có thể sử dụng các loại thuốc có tác động chọn lọc và áp dụng chiến lược thay thuốc. Các loại thuốc có thể sử dụng gồm: Chersieu 50WG, Apta 30WP, Babsax 600EC, Penalty gold 50EC, Victory 585EC, Dragon 585EC, Chatot 600WG, Oshin 20WP, Actadan 750WP,  Actara 25WG,...</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#RayNau"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Rầy nâu</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Rầy nâu
+ Tên khoa học: Nilaparvata lugens Stal.
+ Họ: Delphacidae
+ Bộ: Homoptera.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#RayXanhDuoiDen"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">1. Đặc điểm nhận biết
+ - Rầy trưởng thành có màu xanh lá mạ, cuối cánh có vệt đen lớn, giữa cánh trước của rầy đực có chấm màu đen, của rầy cái có màu nâu nhạt. Cánh dài che hết bụng.
+- Trứng hình quả chuối, đầu to, đầu nhỏ. Mới đẻ màu trắng, sau có màu nâu và có màu đỏ ở đầu trứng.
+- Rầy non màu xanh vàng hay xanh lá mạ không có cánh, rầy có 5 tuổi, dài từ 1- 4 mm. Tuổi 1 - 2 có màu xanh nhạt. Tuổi 3 - 4 có màu xanh vàng. Tuổi 5 có màu xanh lá mạ.
+Rầy non và trưởng thành đều hút dịch cây làm cây còi cọc không lớn được, cây vàng, khô héo và chết. Rầy còn là môi giới truyền bệnh virut (bệnh vàng lụi) rất nguy hiểm cho các vùng trồng lúa.
+2. Điều kiện phát sinh gây hại
+Lúa thường bị rầy xanh đuôi đen gây hại nặng ở thời kỳ mưa ít, nhiệt độ thấp và ẩm độ cao.
+Dịch rầy thường xuất hiện ở những ruộng trũng gần làng, vào thời kỳ lúa làm đòng đến ngậm sữa, ở những năm mưa nhiều tiếp theo là nắng khô, nhiệt độ cao.
+Một năm rầy phát sinh 8 lứa, trong đó cần chú ý lứa 3: từ đầu tháng 4 - cuối tháng 6). Lứa 4 (lứa thứ nhất trong vụ mùa): từ cuối tháng 5 - đầu tháng 8, lứa 5: từ cuối tháng 7 – trung tuần tháng 8
+3. Biện pháp phòng, trừ:
+- Sử dụng giống kháng rầy.
+- Mật độ cấy hợp lý, bón phân cân đối, tránh bón quá nhiều đạm.
+- Trên những ruộng lúa có nước có thể sử dụng biện pháp rắc cát có tẩm dầu kèm theo khua động làm cho rầy “giả chết” rơi xuống nước, dầu vít lỗ thở của chúng làm cho chúng bị chết.
+- Tạo môi trường thuận lợi cho tập đoàn thiên địch phong phú của rầy nâu cư trú và phát triển.
+- Thường xuyên thăm đồng, cần đặc biệt chú ý tới những điểm thường có các ổ rầy những vụ trước.
+- Khi mật độ rầy cám từ 2000 con/m2 giai đoạn lúa làm đòng, 3000con/m2 giai đoạn lúa trỗ cần phun thuốc diệt rầy. Dùng các loại thuốc Bassa 50EC, Regent 800WP, Trebon 20ND,... khi phun rẽ hàng lúa, phun vào gốc thì mới có hiệu quả. Nếu dùng thuốc nội hấp Actara 25WG ở thời kỳ lúa đẻ nhánh - trỗ bôngthì không cần rạch hàng.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#RayXanhDuoiDen"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Rầy xanh đuôi đen</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Rầy xanh đuôi đen (Nephotetix bipunctatus)</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
@@ -3220,24 +4241,176 @@ Lúc này ruộng bị khô sẽ tổn thương đến rễ lúa, nên không th
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Ruộng sâu</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#ten"/>
+        <DataProperty IRI="#moTa"/>
         <NamedIndividual IRI="#SauCanGie"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Sâu cắn gié</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Đặc điểm hình thái:
+ 
+- Trứng sâu cắn gié hơi tròn, không có lông tơ phủ bên ngoài, bề mặt trứng có những vân khía hình mạng lưới, mắt vân có hình đa giác không đầu. Trứng xếp thành hàng hoặc chồng lên nhau thành ổ. Trứng mới đẻ có màu vàng sáng sau chuyển màu vàng đậm, khi sắp nở có màu tím than.
+ 
+- Sâu non (ấu trùng) có màu nâu vàng nhạt, phía lưng có 4 vệt màu đen xám chạy dọc, đầu có màu nâu đậm.
+ 
+- Nhộng: có màu nâu đỏ, từ đốt bụng thứ 5-7 về phía mép trước có đường sống nổi ngang màu nâu đen, trên đường đó có một dãy chấm lõm, cuối bụng có một đôi gai thô và hai đôi gan nhỏ.
+ 
+- Con trưởng thành: là loài bướm có thân dài màu nâu tro nhạt hoặc nâu vàng nhạt. Cánh trước có màu giống thân, có nhiều chấm đen nhỏ. Góc dưới buồng giữa cánh có chấm trắng rõ, hai bên chấm trắng có hai chấm đen. Có một đường vân đen chạy xiên từ đỉnh cánh tới mép sau của cánh. Mép ngoài cánh có 7 điểm đen. Phía trong của cánh sau có màu nâu tro nhạt, phía ngoài màu nâu.
+ 
+Đặc điểm sinh học, sinh thái và gây hại:
+ 
+Vòng đời của sâu cắn gié từ 34-71 ngày có:
+ 
++ Thời gian trứng: 3-11 ngày.
+ 
++ Thời gian sâu non: 18-41 ngày.
+ 
++ Thời gian nhộng: 7-22 ngày.
+ 
++ Thời gian trưởng thành: 6-11 ngày.
+ 
+Con trưởng thành đẻ trứng thành từng ổ và được che phủ bằng một chất keo, chúng đẻ chứng nhiều trên lá cuốn hơn là lá thẳng, trên lá chưa mốc và ở các lá dưới gốc. Trung bình một con cái đẻ khoảng trên 100 quả trứng, số trứng đẻ phụ thuộc vào điều kiện dinh dưỡng và nhiệt độ, ẩm độ và tỉ lệ nở của trứng cũng rất cao. Sâu non mới nở sống tập trung, ẩn nấp trong lá nõn hoặc mặt dưới lá hay bẹ lá. Lượng ăn của sâu tuổi 4-6 chiếm 90% tổng lượng ăn của cả đời sâu non. Sâu có thể di truyển thành đàn, sâu non tuổi càng lớn càng sợ ánh sáng, loài sâu này còn có tập tính giả chết. Sâu non đẫy sức di chuyển từ trên cây xuống đất để hoá nhộng, nằm nằm dưới đất ở độ sâu 5-10 cm dưới gốc cây lúa, cũng có thể sâu non di chuyển lên bờ ruộng để hoá nhộng.
+ 
+Sâu cắn gié là loài ưa điều kiện mát mẻ, hơi lạnh và độ ẩm cao. Nhiệt độ cao, khô hạn, điều kiện thức ăn... ảnh hưởng đến khả năng đẻ trứng của con trưởng thành. Sâu thường phát sinh nhiều trên những cánh đồng thấp, cây cỏ rậm rạp, khó tưới tiêu nước, có độ ẩm cao. Sâu xuất hiện tập trung nên còn gọi là sâu đàn. Sâu non tuổi 1 phá hại để lại những vệt trắng dài nham nhở; sâu tuổi 2-3 gặm khuyết lá; sâu tuổi 4-6 ăn từ mép, bìa lá vào chỉ chừa gân lá và thân; chúng còn cắn đứt ngang cuống bông và cuống gié lúa
+Con trưởng thành của sâu cắn gié hoạt động vào ban đem, ban ngày thường ẩn dưới gốc lúa hay trong đám cỏ. Bướm ưa thích mùi vị chua, ngọt và nó có thể bay xa hàng chục cây số.
+ 
+Phòng trừ:
+ 
+● Làm đất thật kỹ, dọn sạch cỏ dại trong ruộng lúa và cả trên bờ.
+ 
+● Khi lúa chín không nên để ruộng khô nước sớm. Khi mật độ sâu chưa đủ ngưỡng phun thuốc, áp dụng cách bẫy bằng những bó rạ khô tẩm dấm mật và thuốc trừ sâu.
+ 
+● Từ tháng 11-12 nếu có điều kiền có thể cuốc sạch cỏ hay phun thuốc trừ cỏ để diệt trứng, sâu non và nhộng. Bảo vệ ong ký sinh và các loài ký sinh thiên địch khác. Trường hợp cần phun thuốc thì đợi đến khi sâu tuổi 4 đạt cao nhất thì phun thuốc vì lúc này ong ký sinh đã rời khỏi ký chủ.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
-        <NamedIndividual IRI="#SauCuonLa"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Sâu cuốn lá</Literal>
+        <NamedIndividual IRI="#SauCanGie"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Sâu cắn gié
+Tên khoa học: Mythimna separata Walker)
+ 
+Thuộc họ: Noctuidae Bộ: Lepidoptera</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#SauCuonLaLon"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Đặc điểm hình thái:
+- Trứng hình bán cầu, đỉnh bằng, giữa hơi lõm, mới đẻ có màu tro sau có màu nâu vàng, bề mặt có vân, khi sắp nở có màu đen tím.
+- Sâu non mới nở màu xanh lục, đầu lớn hơn thân. Khi sâu nở ra ăn vỏ trứng rồi bò ra đầu, mép lá nhả tơ dệt thành bao nấp ở đó. Sâu tuổi lớn hơn tiếp tục dệt các lá kế cận thành một bao lớn nằm ở trong gặm lá.
+- Nhộng hình đầu đạn, đầu bằng, đít nhọn màu vàng nhạt. Khi sắp vũ hóa thì nhộng có màu đen, vòi kéo dài ra khỏi mút cánh tới đốt bụng thứ 2. Sâu khi hóa nhộng nhả tơ dệt kén ở phía dưới khóm giữa các thân cây lúa.
+- Con trưởng thành (bướm) thân có màu đen lẫn vàng kim; đầu và ngực to bằng nhau; râu đầu mọc gần cánh mắt kép và có hình gậy (phía cuối phình to có một móc câu); cánh trước màu nâu tối, gần giữa có 8 chấm trắng to nhỏ khác nhau xếp hình vòng cung; cánh sau có màu nâu đen, gần mép ngoài có 4 đốm tắng xếp thành một đường.
+Đặc điểm sinh học, sinh thái và gây hại:
+Vòng đời của sâu cuốn lá lớn từ 32-40 ngày:
++ Thời gian trứng: 4 ngày.
++ Thời gian sâu non: 18-19 ngày.
++ Thời gian nhộng: 6-7 ngày.
++ Thời gian bướm: 4-5 ngày.
+Bướm đẻ trứng vào buổi sáng và đẻ rải rác ở mặt sau lá gần gân chính, mỗi lá từ 1-6 quả, một bướm cái có thể đẻ 120 quả trứng. Sau khi vũ hóa 20 phút là bướm có thể bay đi kiếm ăn. Bướm bay nhanh từng đoạn ngắn theo đường gấp khúc. Thường sau khi giao phối một ngày (cũng có thể sau 2 giờ) sau thì bướm sẽ đẻ trứng. Một năm sâu cuốn lá lớn phát sinh 6-7 lứa. Điều kiện hơi nóng bức và ẩm là thích hợp cho sâu phát sinh gây hại.
+Sâu non nhả tơ cuốn lá thành bao lớn và cắn khuyết lá. Bị hại nặng cây lúa có thể trụi hẳn lá làm ảnh hưởng đến sinh trưởng, phát triển. Cây bị hại thường thấp nhỏ, đòng ngắn, thời gian lúa chín kéo dài hoặc đòng bị cuốn cong, không trỗ thoát hoặc gãy gập, không nở hoa kết hạt.
+Sâu cuốn lá lớn phát sinh, gây hại từ giai đoạn lúa mới cấy cho đến khi lúa chín. Vào những năm mưa nhiều, thời tiết mát mẻ, sâu phát sinh nặng. Sâu cuốn lá lớn phân bố ở tất cả các vùng trồng lúa ở trong nước và trên thế giới. Ở Việt Nam, vùng trung du và miền núi bị hại nặng hơn vùng đồng bằng, vùng có bố trí cơ cấu cây trồng phức tạp cũng dễ bị hại nặng.
+Phòng trừ:
+● Cấy lúa với mật độ vừa phải; chăm sóc, bón phân cân đối, hợp lý.
+● Bảo vệ các thiên địch trên đồng ruộng.
+● Ruộng bị hại nặng phá vỡ tổ rồi phun thuốc Regent 800WG, Padan 95SP hoặc Trebon Karate 25EC diệt sâu non.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#SauCuonLaLon"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Sâu cuốn lá lớn</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Sâu cuốn lá lớn
+Tên khoa học: Parnara guttata Bremer et Grey)
+Họ: Hesperiidae Bộ: Lepidoptera</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#SauCuonLaNho"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">1. Triệu chứng gây hại:
+- Lá lúa bị cuốn, sâu non ăn biểu bì mặt trên và diệp lục của lá dọc theo gân lá tạo thành những vệt trắng dài, các vệt này có thể nối liền với nhau thành từng mảng làm giảm diện tích quang hợp và đặc biệt là trên lá đòng hoặc lá công năng sẽ làm giảm năng suất rõ rệt.
+2.  Đặc điểm hình thái:
+
+- Trưởng thành: mép trước của cánh trước có màu nâu vàng, có hai vệt xiên màu nâu đen từ trên mép cánh xuống 2/3 cánh. Trứng: Hình bầu dục có vân mạng lưới rất nhỏ, đẻ từng quả ở mặt trên và mặt dưới lá, trứng mới đẻ có màu hơi đục khi gần nở chuyển màu ngà vàng.
+Trứng: Hình bầu dục có vân mạng lưới rất nhỏ, đẻ từng quả ở mặt trên và mặt dưới lá, trứng mới đẻ có màu hơi đục khi gần nở chuyển màu ngà vàng.
+Sâu non: Sâu non có 5 tuổi, mới mở màu trắng trong, đầu có màu nâu đen, khi lớn cơ thể chuyển màu xanh lá mạ - màu vàng, đầu màu nâu sáng.
+- Nhộng có  màu  vàng - nâu đậm, thường thấy trong lá bị cuốn.   
+3.  Đặc điểm sinh học và sinh thái:
+
+- Thời gian đẻ trứng:  6 - 7 ngày;
+- Sâu non: 14 - 16 ngày;
+- Nhộng: 6 - 7 ngày;
+- Trưởng thành sống: 2 - 6 ngày.
+
+    Vòng đời sâu cuốn lá nhỏ từ 28 - 36 ngày. Trưởng thành hoạt động đẻ trứng về đêm, ban ngày ẩn nấp, có xu tính mạnh với ánh sáng, con cái mạnh hơn con đực. Ngài thường tìm những ruộng xanh tốt để đẻ trứng, mỗi con cái có thể đẻ trên 100 quả trứng, rải rác trên lá lúa. 
+
+    Sâu non có 5 tuổi: Tuổi 1 rất linh hoạt có thể bò khắp trên lá, chui vào lá nõn, mặt trong bẹ lá hoặc bao lá cũ; tuổi 2, 3 trở đi nhả tơ để khâu 2 mép lá cuốn thành tổ nằm trong đó gây hại. Sâu có khả năng di chuyển ra khỏi bao cũ để phá hại lá mới, mỗi con sâu non có thể phá hại từ 5 -9 lá, thời gian di chuyển thường vào buổi chiều (từ 6 giờ - 9 giờ tối), ngày trời mưa hoặc râm mát thì có thể di chuyển bất cứ lúc nào trong ngày. Sâu non đẫy sức chuyển màu vàng hồng chui ra khỏi bao bò xuống gốc lúa, bẹ lá dệt kén mỏng hoá nhộng hoặc hoá nhộng ngay trong bao cũ.
+
+    Hàng năm ở Hải Phòng thường có 7 lứa sâu phát sinh, trong đó có lứa 3 và lứa 6 có mật độ sâu non cao nhất, hiện tượng gối lứa thường xuyên xuất hiện.
+
+4.  Biện pháp phòng trừ :
+
+- Vệ sinh đồng ruộng, làm sạch cỏ dại,
+- Điều chỉnh mật độ cấy phù hợp,
+- Bón phân cân đối, hợp lý, đặc biệt bón phân đạm vừa phải,
+- Chỉ phun trừ sâu Cuốn lá nhỏ trên những diện tích có mật độ sâu non đến ngưỡng phòng trừ (từ 50 con/m2 trở lên đối với giai đoạn đẻ nhánh, từ 20 con/m2 trở lên đối với giai đoạn làm đòng). Một số loại thuốc có thể sử dụng để phòng trừ sâu Cuốn lá nhỏ: Silsau super 4EC, Tasieu 5WG, Shertin 3.6EC, Takumi 20WG, Ammate 150SC, Virtako 40WG, Chief 520 WP, Tasodant 600 EC, Wavotox 585 EC..</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#SauCuonLaNho"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Sâu cuốn lá nhỏ</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Sâu cuốn lá nhỏ 
+Tên tiếng anh: Rice leaf folder
+Tên khoa học: Cnaphalocrosis medinalis G
+Bộ: Lepidoptera</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#SauDucThan"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Sâu đục thân hay sâu đục cành là thuật ngữ chỉ về bất kỳ những con côn trùng hoặc nhện sống ký sinh ở thân cây, cành cây. Thông thường những loại sâu trùng này là đối tượng gây hại cho nông nghiệp đặc biệt là cây lương thực, cây công nghiệp và cây ăn trái.
+Triệu chứng
+
+Sâu đục thân gây hại biến đổi tùy theo giai đoạn sinh trưởng của cây lúa và tuổi phát dục của sâu. Lúa từ thời kỳ mạ đến lúc trỗ bông đều có thể bị hại. Cây mạ khi còn nhỏ bị hại có thể chết khô, nếu mạ đã lớn bị hại thì dễ bị đứt gốc khi nhổ mạ.
+
+Cây lúa ở thời kỳ đẻ nhánh, sâu đục vào phần dưới của thân, cắt đứt tổ chức bên trong phá hại chức năng dẫn nhựa làm cho lá non trước tiên bị cuốn dọc, có màu xanh tái sẫm, dần chuyển sang màu vàng và héo khô.
+
+Thời kỳ lúa đứng cái làm đòng, sâu non tập trung phá hại phía trong bẹ và đục vào ống.
+
+Thời kỳ trỗ bông, sâu đục vào cuống bông, cắt đứt sự vận chuyển dinh dưỡng của bông lúa hoặc sâu tuổi nhỏ tập trung cắn nát đòng, bông lúa không trỗ hoặc nếu trỗ thì các hạt bị lép trắng (bạc bông).
+
+Hình thái
+
+Trứng đẻ thành ổ hình bầu dục dài, trên mặt phủ một lớp lông màu vàng nhạt ở giữa hơi nhô lên.
+
+ Mới đẻ trứng màu trắng sau chuyển màu ngà vàng sắp nở màu đen. Sâu non đẫy sức dài 21 - 25 mm màu trắng sữa, đầu màu nâu vàng.
+
+Ngài đực có đầu ngực và cánh trước màu nâu nhạt, giữa cánh có một chấm đen. Ngài cái thân dài 10 - 13 mm, thân màu trắng vàng hoặc vàng nhạt, cuối bụng có chùm lông màu vàng nhạt, giữa cánh trước có một chấm đen.
+
+Tập quán sinh sống và quy luật gây hại
+
+Thời gian sinh trưởng và phát dục các giai đoạn của sâu có liên quan mật thiết với điều kiện nhiệt độ và ẩm độ.
+
+Ở điều kiện nhiệt độ từ 26 - 30 độ C, thời gian phát dục của trứng là 7 ngày, sâu non từ 25 - 33 ngày, nhộng 8 - 10 ngày, bướm vũ hóa đẻ trứng 3 ngày.
+
+Ngài thường vũ hóa về đêm, ban ngày ngài đậu yên nấp trong khóm lúa rậm rạp gần mặt nước, khi trời tối ngài hoạt động mạnh từ 19 - 20 giờ.
+
+Sau khi vũ hóa thì ngay trong đêm đó ngài có thể giao phối và đêm thứ 2 bắt đầu đẻ trứng. Mỗi ngài cái có thể đẻ 1 - 5 ổ trứng, mỗi ổ trứng có từ 100 - 150 quả trứng.
+
+Trứng được đẻ ở mút ngọn lúa ở thời kỳ mạ và khoảng gần giữa mặt trên hay dưới lá ở thời kỳ cấy.
+
+Sâu non khi nở gặm phá chất keo và lông phủ trên ổ trứng chui ra. Nếu lúa đang ở thời kỳ mạ hoặc đẻ nhánh, sâu đục qua bẹ vào đến nõn giữa phá làm cho dảnh lúa bị héo.
+
+Nếu lúa sắp trỗ hoặc mới trỗ, sâu đục qua lá bao của đòng và chui vào giữa rồi bò xuống đục ăn điểm sinh trưởng, cắt đứt các mạch dẫn dinh dưỡng làm cho bông lép trắng.
+
+Sâu đục thân bướm hai chấm phá hại nặng trên lúa mùa hơn lúa xuân. Các giống lúa đang trồng chưa có giống nào kháng sâu đục thân hai chấm, giống lúa nếp bị hại nặng hơn giống lúa tẻ.
+
+Cùng một giống lúa, giai đoạn sinh trưởng khác nhau mức độ hại khác nhau, lúa ở thời kỳ đẻ nhánh rộ, làm đòng, trỗ gặp lứa sâu ra rộ thì mức độ bị hại có khả năng lớn hơn so với các giai đoạn sinh trưởng khác.
+
+Một năm có 6 - 7 lứa, quan trọng là lứa 2 và 5 trùng với tháng 5 và tháng 9. Đây là hai lứa sâu hại cần chú ý phòng trừ vì nó ảnh hưởng trực tiếp đến năng suất.
+
+Bướm vũ hóa sau khi lúa trỗ hoặc trùng với thời gian lúa trỗ tỷ lệ bị hại nhẹ, bướm vũ hóa rộ trước khi lúa trỗ từ 5 - 7 ngày, tỷ lệ bị hại rất nặng.
+
+Biện pháp phòng trừ
+
++ Biện pháp kỹ thuật canh tác: Trên các khu đồng lúa hoặc mạ cần sạch cỏ, phát bờ trước khi gieo cấy, khu vực ruộng mạ nên gieo thành từng khoảnh, từng giống để tiện chăm sóc và phòng trừ sâu hại.
+
+Bón phân cân đối theo quy trình kỹ thuật đối với giống nếp cái hoa vàng, không sử dụng phân đạm quá nhiều hoặc bón không đúng quy trình.
+
+Điều khiển nước tưới hợp lý, chủ động để cây lúa sinh trưởng phát triển tốt, có sức chống chịu sâu bệnh cao.
+
+Khi mật độ trứng sâu đục thân lúa hai chấm khoảng 0,5 ổ/m2 ở giai đoạn làm đòng và theo dõi bướm vũ hóa rộ trước khi lúa trỗ từ 5 - 7 ngày thì sử dụng thuốc BVTV để phun trừ bằng một trong các loại thuốc sau: DuponTMprevathon 5SC, Virtako 40WG, Alocbale 40EC, Regent 800WG, Enasin 32WP… nồng độ và liều lượng theo hướng dẫn ghi trên vỏ bao bì thuốc.
+
++ Lưu ý: Phun đủ 25 - 30 lít nước thuốc đã pha/sào (360 m2). Khi phun thuốc trừ sâu đục thân bướm 2 chấm trong thời gian 4 giờ mà gặp mưa thì nhất thiết phải phun lại.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
@@ -3245,9 +4418,75 @@ Lúc này ruộng bị khô sẽ tổn thương đến rễ lúa, nên không th
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Sâu đục thân</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#SauDucThanHaiCham"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">1. Triệu chứng gây hại:
+ - Thời kỳ mạ hoặc đẻ nhánh, sâu đục qua bẹ phía ngoài vào đến nõn giữa phá hại làm cho dảnh lúa bị héo.
+ - Thời kỳ sắp trỗ hoặc mới trỗ, sâu  đục qua lá bao của  đòng chui vào giữa rồi bò xuống đục ăn điểm sinh trưởng, cắt đứt các mạch dẫn dinh dưỡng làm cho bông lép trắng.
+2.  Đặc điểm hình thái:
+
+- Trưởng thành:  màu trắng vàng hoặc vàng nhạt,  cánh  trước mỗi bên có một chấm đen rất rõ,  phía cuối bụng có chùm lông màu vàng. Khi đậu có hình khum như mái nhà.
+- Trứng đẻ thành ổ,  hình bầu dục, trên mặt ổ trứng có phủ lớp lông màu vàng nhạt.
+- Sâu non màu trắng sữa - vàng nhạt. Sâu non tuổi 1 đầu có màu đen, tuổi 2 đến tuổi 5 có màu nâu.
+- Nhộng màu nâu nhạt, mầm chân sau dài tới hết đốt bụng thứ 5 ở nhộng cái, tới đốt bụng thứ 8 ở nhộng dực.
+3.  Đặc điểm sinh học và sinh thái:
+
+   Ở nhiệt độ 26 - 300C, vòng đời sâu đục thân hai chấm từ  40 – 50 ngày:
+- Thời gian đẻ trứng:  7 ngày;
+- Sâu non: 25 - 33 ngày;
+- Nhộng: 8 - 10 ngày;
+- Trưởng thành sống: 3 ngày.
+
+  Trưởng thành thường vũ hoá vào ban đêm, ban ngày ngày nấp dưới khóm lúa rậm rạp gần mặt nước. Thời gian hoạt động mạnh từ 19 - 20 giờ (đối với ngài cái) và 23 - 1giờ ngày hôm sau (đối với ngài đực). Ngài có xu tính bắt ánh sánh mạnh. Sau khi vũ hoá thì ngay trong đêm ngày có thể giao phối. Sau giao phối, đêm thứ 2 có thể bắt đầu đẻ trứng, có thể đẻ từ  2 - 6 đêm liền, nhiều nhất là đêm thứ 2 và thứ 3. Mỗi  trưởng thành  cái có thể đẻ từ 1 - 5 ổ trứng, số lượng trứng của mỗi ổ có thể thay đổi từ 53 - 217 quả tuỳ theo lứa.
+
+  Sâu non có tập quán hoá nhộng trong gốc thân lúa dưới mặt đất 1-2 cm. Trước khi hoá nhộng sâu đục sẵn một lỗ ở thân lúa chừa lại một lớp biểu bì mỏng để khi vũ hoá chui ra.
+
+  Lứa 2 là lứa cuối trong vụ đông xuân và cũng là lứa sâu quan trọng nhất về mặt số lượng, mức độ gây hại và là nguồn sâu chuyển từ vụ chiêm xuân sang vụ mùa; Lứa 3 là lứa đầu tiên trong vụ mùa, thường tập trung phá trên mạ mùa sớm, đây là lứa sâu bắc cầu từ lúa đông xuân sang lúa mùa; Lứa 4 gây hại trên lúa mùa sớm; Lứa 5 gây hại trên lúa mùa chính vụ và mùa muộn.
+
+4.  Biện pháp phòng trừ:        
+
+- Cày lật gốc rạ kèm theo ngâm nước, làm dầm kịp thời (đặc biệt đối với lúa vụ mùa sau khi gặt).
+- Vệ sinh đồng ruộng sạch sẽ.
+- Bón phân cân đối giữa các loại phân theo quy trình kỹ thuật bón được quy định cho từng vụ, từng chân đất, từng giống lúa. Hạn chế sử dụng phân đạm quá liều lượng và bón không đúng cách tạo nên tình trạng lúa lốp hoặc đẻ lai rai, sâu có thể phá hoại. Nếu đều kiện tưới tiêu chủ động có thể điều chỉnh mực nước ở ruộng để diệt sâu.
+- Phát huy tác dụng của nhóm thiên địch, nhất là ong ký sinh trứng.
+- Dùng bẫy đèn bắt bướm khi bướm rộ.
+- Thường xuyên theo dõi mật độ sâu trên đồng ruộng. Chỉ phun thuốc khi đến quá ngưỡng phòng trừ:  giai đoạn đẻ nhánh: 0,5 ổ trứng/m2; đòng già -  bắt đầu trỗ: 0,3 - 0,5 ổ trứng/m2.
+- Phun thuốc nên tiến hành khi lúa trỗ 3 - 5% hoặc phun lần 2 vào lúc lúa hé đòng và sau đó 5 ngày cho hiệu quả cao nhất. Các loại thuốc sử dụng để phòng trừ sâu đục thân hiện nay: Tasodant 600EC, Prevathon 5SC, Wavotox 600EC, Winter 635EC, Virtako 40WG, Vitashield Gold 600EC,......</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#SauDucThanHaiCham"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Sâu đục thân hai chấm</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Sâu đục thân hai chấm
+  Tên khoa học: Scirpophaga incertulas Walker              
+Họ: Pyralidae
+ Bộ: Lepidoptera</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#SauDucThanNamVachDauNau"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Đặc điểm nhận biết 
+
+ - Ngài: Thân dài 10-15mm, sải cánh rộng: 20-31mm. Đầu và ngực màu nâu tro nhạt. Con đực phía trên buồng giữa cánh trước có một chấm màu tím đen, phía dưới có 3 chấm cùng màu xếp thành hình xiên. Con cái trên cánh không có những chấm vệt như con đực, mép ngoài cánh có 7 chấm đen.
+
+- Sâu non: đẫy sức dài 20mm, màu nâu nhạt, trên thân có 5 vạch dọc màu nâu sẫm.
+
+- Nhộng: màu nâu vàng, dài 12 mm. Mặt lưng của bụng vẫn còn thấy rõ 5 vạch màu nâu.
+
+- Trứng: đẻ thành ổ xếp dạng vẩy cá. Trứng hình bầu dục dẹt. Trứng mới đẻ màu trắng, sau chuyển dần thành màu nâu, sắp nở có màu đen; Sâu non gây hiện tượng nõn héo hoặc bông bạc.
+
+*Điều kiện phát sinh gây hại
+
+- Sâu hại nặng ở giai đoạn lúa con gái- làm đòng; vụ xuân hại nặng hơn vụ mùa.
+
+- Hàng năm sâu phát sinh 6 lứa, quan trọng nhất là lứa 1 (phát sinh cuối tháng 2, rộ giữa - cuối tháng 3), lứa 2 (phát sinh từ đầu - giữa tháng 4, rộ cuối tháng 4 - giữa tháng 5) hại lúa chiêm xuân và lứa 4 (phát sinh đầu - giữa tháng 7, rộ cuối tháng 7 - giữa tháng 8) hại lúa mùa.
+
+*Biện pháp phòng trừ:
+
+- Thường xuyên điều tra để dự báo chính xác lứa sâu.
+
+- Sau khi thu hoạch, thu rơm rạ đem đốt hoặc cày ngâm dầm để diệt nguồn sâu. Chăm sóc, bón phân cân đối.
+
+- Phun phòng trừ bằng các loại thuốc Padan 95SP, Regent 800WP. Dùng thuốc Basudin 10G trộn với đất bột, rắc khi bướm rộ. Khi rắc thuốc chú ý ruộng phải có nước.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
@@ -3255,19 +4494,113 @@ Lúc này ruộng bị khô sẽ tổn thương đến rễ lúa, nên không th
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Sâu đục thân năm vạch đầu nâu</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#SauGai"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Phân loại
+Bọ gai hại lúa có tên khoa học là Dicladispa (= Hispa) armigera (Olivier), thuộc họ Chrysomelidae (Ánh Kim), bộ Coleoptera (Cánh Cứng).
+
+Phân bố
+Bọ gai được ghi nhận xuất hiện ở các quốc gia như Ấn Độ, Bangladesh, Bhutan, Miến Điện, Indonesia, Campuchia, Lào, Malaysia, Miến Điện, Nepal, Pakistan, Thái Lan và Việt Nam.
+
+Ký chủ
+Ngoài lúa, bọ gai có thể sinh sống trên lúa mì, mía, cỏ Digitaria, Leersia, Echinochloa, Zizania.
+
+Đặc điểm hình thái và sinh học
+Thành trùng màu xanh dương đen óng ánh, ngực và cánh có nhiều gai. Thành trùng dài từ 5-6 mm, sống từ 1-2 tháng, một thành trùng cái đẻ từ 50-60 trứng.
+Trứng rất nhỏ, hình bầu dục, màu trắng, thời gian ủ trứng từ 4-7 ngày.
+Ấu trùng màu trắng sữa, có 4 tuổi, phát triển từ 10-15 ngày.
+Nhộng trần màu nâu, thời gian nhộng từ 5-7 ngày.
+Tập quán sinh sống và cách gây hại
+Bọ gai xuất hiện nhiều trong mùa mưa và hoạt động mạnh vào ban ngày.
+Thành trùng cạp ăn mặt trên lá, để lại sọc trắng.
+Trứng bọ gai được đẻ gần đầu lá non, ghim vào mặt dưới lá một phần và một phần lồi ra ngoài được bao phủ bằng một chất tiết ra từ bụng thành trùng cái.
+Sau khi nở, ấu trùng đục ngay vào bên trong lá như sâu đục lá và ăn phần xanh của lá, chỉ chừa lại lớp biểu bì màu trắng và làm nhộng ngay trong đường đục. Cả thành trùng và ấu trùng đều thích lá lúa ở giai đoạn tăng trưởng. Khi bọ gai xuất hiện với mật số cao, lá lúa bị vàng khô, cây héo và chết. Sự thiệt hại bắt đầu từ chỗ đẻ trứng, gần chóp lá và lan dần xuống dưới phiến lá.
+
+Biện pháp phòng trị
+Vệ sinh đồng ruộng, diệt cỏ dại trong và xung quanh ruộng. 
+Không cấy dày. 
+Quan sát đồng ruộng và nhặt bỏ thành trùng, ấu trùng và trứng trên lá lúa khi mật số bọ gai còn ít. 
+Sử dụng các loại thuốc hóa học thông thường. 
+Dùng dây thừng nhúng vào dầu lửa và nước, mỗi thứ 1 phần bằng nhau, 2 người kéo trên tán lá lúa dọc theo ruộng.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#SauGai"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Sâu gai</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Sâu gai hại lúa (Dicladispa (= Hispa) armigera (Olivier))</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#SauKeo"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">1. Đặc điểm nhận biết
+- Ngài: thân dài 14-16mm, sải cánh rộng 30-36mm. Đầu, ngực màu nâu tối, toàn thân màu đen xám.
+- Trứng hình cầu hơi dẹt, đường kính khoảng 0,47-0,51mm. Trứng xếp thành hàng hoặc chồng thành ổ, có lông phủ màu vàng xám.
+- Sâu: sâu non đẫy sức dài 35-37mm, màu sắc thay đổi nhiều. Sâu tuổi 5-6 có màu lục lam.
+- Nhộng dài 17-18mm, màu nâu đỏ.
+Sâu non gây hại cả lá lúa và bông lúa, tập trung thành đám.
+2. Điều kiện phát sinh gây hại
+Sâu ưa nhiệt độ cao và ẩm độ bão hoà. Hàng năm, sau những trận mưa tập trung, kéo dài gây ngập, lụt, úng thì thường tiếp theo là nạn dịch sâu keo phát sinh phá lúa mùa.
+Hàng năm, cần chú ý các đợt sâu: Đợt 1 từ hạ tuần tháng 6 - hạ tuần tháng 7, đợt 2 từ hạ tuần tháng 7 - hạ tuần tháng 8.
+3. Biện pháp phòng, trừ
+- Làm đất kỹ, dọn sạch cỏ dại trong ruộng và bờ.
+- Dùng bả chua ngọt để bẫy diệt trưởng thành theo công thức: mật (4 phần) + rượu (1 phần) + dấm (4 phần) + bột thấm nước Padan với tỷ lệ bằng 1/100 trọng lượng các hỗn hợp trên. Mỗi hacta có thể cắm 20-30 bó, 4-5 ngày thay bó mới và đem thiêu huỷ các bó cũ.
+- Khi phát hiện có sâu non tuổi nhỏ quanh bờ ruộng hay trong ruộng hoặc sau khi ra rộ 4-5 ngày cần kịp thời tổ chức phun thuốc.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#SauKeo"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Sâu keo</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Sâu keo (Spodoptera mauitia)</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#SauNan"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Đặc điểm hình thái:
+ 
+- Trứng hình bầu dục dài, bề mặt trơn bóng, mới đẻ màu trắng sữa, sau chuyển sang màu đỏ tím.
+ 
+- Sâu non có 3 tuổi, đẫy sức màu trắng sữa, dịch cơ thể màu hồng nhạt. Mặt bụng ngực trước có một mẩu cứng chẻ đôi. Điểm sinh trưởng bị hại biến dị thành ống hành. Khi ống hành đã vươn ra ngoài cũng là lúc sâu non đã hoá nhộng.
+ 
+- Nhộng của sâu năn có thể di chuyển lên xuống trong ống hành. Nhộng có màu da cam, đỉnh đầu có một đôi gai, lúc nhộng sắp hoá muỗi thì chuyển lên trên ngọn chui ½ mình ra, lột vỏ nhộng để lại trên đầu ống hành.
+ 
+- Muỗi cái có thân dài hơn muỗi đực. Đầu nhỏ, hầu như bị mắt kép màu đen choán hết. Râu đầu màu vàng dạng chuỗi hạt. Chân dài, bàn chân có 5 đốt. Bụng có 10 đốt, màu đỏ da cam. Cánh trong có nhiều lông mịn, có 4 mạch cánh.
+ 
+Đặc điểm sinh học, sinh thái và gây hại:
+ 
+Vòng đời của sâu năn từ 25-35 ngày.
+ 
++ Giai đoạn trứng: 3-8 ngày.
+ 
++ Giai đoạn sâu non: 13-28 ngày.
+ 
++ Giai đoạn nhộng: 3-15 ngày.
+ 
++ Giai đoạn trưởng thành (muỗi): 1-3 ngày.
+ 
+Muỗi đẻ trứng về đêm, mỗi con cái có thể đẻ từ 100-200 trứng. Muỗi hoạt động mạnh và giao phối về đêm; thời kỳ mạ muỗi đẻ rải rác trên các phiến lá ở gié, thời kỳ lúa đẻ trên bẹ lá, cách mặt nước 30 cm.Muỗi sâu năn ưa ánh sáng đèn với cường độ mạnh.
+ 
+Các lứa 3, 5 và 7 của sâu lăn gây hại cho các trà lúa tương ứng với các tháng 4, 5 và 10. Nhiệt độ ấm nóng và độ ẩm cao là điều kiện thích hợp cho sâu năn phát sinh phát triển. Những năm mưa nhiều sâu năn phát sinh phát triển mạnh; miền núi bị sâu năn phá hại nặng hơn đồng bằng; ruộng lúa đủ nước bị phá hại nặng hơn ruộng hạn, ruộng có nhiều cỏ Leersia sâu năn cũng phát triển mạnh. Sâu năn gây hại trong vụ mùa nặng hơn vụ xuân và mùa sớm nặng hơn mùa muộn. Bón phân không cân đối cũng là nguyên nhân để sâu năn gây hại.
+ 
+Sâu năn phá hại đỉnh sinh trưởng làm lá non biến dạng “cọng hành”, cây lúa bé, sinh trưởng không bình thường. Sâu năn phá hại lúa từ giai đoạn mạ đến giai đoạn cuối đẻ nhánh. Các giai đoạn sau không còn thích hợp với sâu năn.
+Phòng trừ:
+ 
+● Sử dụng các giống lúa kháng sâu năn.Cấy lúa với mật độ vừa phải, khi cấy loại bỏ mạ cọng hành. Ruộng lúa bị sâu năn hại cần kịp thời tháo nước phơi ruộng để hạn chế sự lây lan phát triển.
+ 
+● Vệ sinh đồng ruộng, diệt trừ cỏ dại, đặc biệt là cỏ Leersia; xử lý lúa chét.
+ 
+● Bón phân cân đối NPK. Đặc biệt chú ý tăng lượng phân lân.
+ 
+● Dùng bẫy đèn diệt muỗi, bảo vệ ong mắt đỏ là thiên địch.của sâu năn
+ 
+● Dùng các loại thuốc dạng hạt như Vibasu 10H, Furadan 3G trộn với đất bột rắc để diệt sâu non.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#SauNan"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Sâu năn</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Sâu năn
+Tên khoa học: Pachydiplosis oryzae Wood- Mason
+ 
+hoăc tên khác: Orseolia oryzae Wood-Mason)
+ 
+Thuộc Họ: Cecidomyiidae Bộ: Diptera</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
@@ -3488,6 +4821,10 @@ Lúc này ruộng bị khô sẽ tổn thương đến rễ lúa, nên không th
         <ObjectProperty IRI="#coTacNhanGayBenh"/>
     </InverseObjectProperties>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#CoThuoc"/>
+        <Class IRI="#TacNhanGayBenh"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#coGiaiDoan"/>
         <Class IRI="#GiaiDoan"/>
     </ObjectPropertyDomain>
@@ -3495,6 +4832,10 @@ Lúc này ruộng bị khô sẽ tổn thương đến rễ lúa, nên không th
         <ObjectProperty IRI="#coTacNhanGayBenh"/>
         <Class IRI="#GiaiDoan"/>
     </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#CoThuoc"/>
+        <Class IRI="#Thuoc"/>
+    </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#coGiaiDoan"/>
         <Class IRI="#QuyTrinh"/>
