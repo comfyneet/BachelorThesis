@@ -35,10 +35,10 @@
         <NamedIndividual IRI="#MuaNhieu"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#KhongNuoc"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <NamedIndividual IRI="#KhongNuoc"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#BenhDomVang"/>
@@ -53,10 +53,10 @@
         <NamedIndividual IRI="#ThayGay"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#coGiaiDoan2"/>
+        <NamedIndividual IRI="#KhongTroBong"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#KhongTroBong"/>
+        <ObjectProperty IRI="#coGiaiDoan2"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#GiongTBR-45"/>
@@ -182,10 +182,10 @@
         <NamedIndividual IRI="#NhietDoThap"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#PhanDam"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocChinSua"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#QuyTrinhTuoiNuocChinSua"/>
+        <NamedIndividual IRI="#PhanDam"/>
     </Declaration>
     <Declaration>
         <Class IRI="#PhanHuuCo"/>
@@ -224,10 +224,10 @@
         <NamedIndividual IRI="#ChieuCaoThap"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#HinhDangLa"/>
+        <DataProperty IRI="#cachCheBien"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#cachCheBien"/>
+        <Class IRI="#HinhDangLa"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ChopLaXoan"/>
@@ -251,10 +251,10 @@
         <Class IRI="#Sau"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#dacTinhCuaThuoc"/>
+        <NamedIndividual IRI="#QuyTrinhBonThucDot1"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#QuyTrinhBonThucDot1"/>
+        <DataProperty IRI="#dacTinhCuaThuoc"/>
     </Declaration>
     <Declaration>
         <Class IRI="#QuyTrinhKichThich"/>
@@ -287,10 +287,10 @@
         <NamedIndividual IRI="#QuyTrinhTuoiNuocTrongDeNhanh"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#PhanTrungLuong"/>
+        <Class IRI="#TacNhanGayBenh"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#TacNhanGayBenh"/>
+        <NamedIndividual IRI="#PhanTrungLuong"/>
     </Declaration>
     <Declaration>
         <Class IRI="#ChieuCao"/>
@@ -320,22 +320,22 @@
         <DataProperty IRI="#nhuCauNuocOGiaiDoan"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Phan"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#QuyTrinhTuoiNuocSauSa20-25Ngay"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Phan"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Ray"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#tuNgayCachLy"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#LaChay"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#BenhChayBiaLa"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#tuNgayCachLy"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#SauKeo"/>
@@ -350,22 +350,25 @@
         <ObjectProperty IRI="#coTacNhanGayBenh"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#TrieuChung"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#BoXit"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#SauNan"/>
+        <Class IRI="#TrieuChung"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#VuHeThu"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#PhanViLuong"/>
+        <NamedIndividual IRI="#SauNan"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#LaHoiVang"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PhanViLuong"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Furadan_3_H"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Bassa_50EC"/>
@@ -434,9 +437,6 @@
         <Datatype abbreviatedIRI="rdf:PlainLiteral"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Bactocide_12WP"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#HienTuongThieuDam"/>
     </Declaration>
     <Declaration>
@@ -455,22 +455,22 @@
         <NamedIndividual IRI="#DauLaChay"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#LaChet"/>
+        <NamedIndividual IRI="#LaCongQueo"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#LaCongQueo"/>
+        <NamedIndividual IRI="#LaChet"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#HienTuongNgoDocHuuCo"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#denNgayCachLy"/>
+        <NamedIndividual IRI="#RayXanhDuoiDen"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#NuocCao"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#RayXanhDuoiDen"/>
+        <DataProperty IRI="#denNgayCachLy"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#tinhThichNghi"/>
@@ -485,10 +485,10 @@
         <NamedIndividual IRI="#dana-win_12.5_WP"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#dibavil_50FL_50_WP"/>
+        <ObjectProperty IRI="#CoThuoc"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#CoThuoc"/>
+        <NamedIndividual IRI="#dibavil_50FL_50_WP"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#moTa"/>
@@ -503,13 +503,13 @@
         <NamedIndividual IRI="#SauDucThanHaiCham"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#BenhTungo"/>
+        <Class IRI="#Dat"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#DatKho"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Dat"/>
+        <NamedIndividual IRI="#BenhTungo"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ReNgan"/>
@@ -602,10 +602,10 @@
         <Class IRI="#HinhDangRe"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#BenhLunSocDen"/>
+        <NamedIndividual IRI="#BenhVangLa"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#BenhVangLa"/>
+        <NamedIndividual IRI="#BenhLunSocDen"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#QuyTrinhTuoiNuocNayMam"/>
@@ -617,10 +617,10 @@
         <NamedIndividual IRI="#ThoiTietBinhThuong"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#GiaiDoanMa"/>
+        <NamedIndividual IRI="#Trebon_20ND"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Trebon_20ND"/>
+        <NamedIndividual IRI="#GiaiDoanMa"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#A1VAN_6.4SL"/>
@@ -656,19 +656,19 @@
         <NamedIndividual IRI="#BenhDaoOn"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#BiaLaChay"/>
+        <NamedIndividual IRI="#GiaiDoanGieo"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#GiaiDoanGieo"/>
+        <NamedIndividual IRI="#BiaLaChay"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#thanhPhan"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#GiongTBR255"/>
+        <NamedIndividual IRI="#SauDucThan"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#SauDucThan"/>
+        <NamedIndividual IRI="#GiongTBR255"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Sasa_20WP"/>
@@ -695,19 +695,19 @@
         <NamedIndividual IRI="#SauCuonLaNho"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#BongIt"/>
+        <Class IRI="#Thuoc"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Thuoc"/>
+        <NamedIndividual IRI="#BongIt"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#HatLep"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#PhanPhucHop"/>
+        <NamedIndividual IRI="#GiongDH815-6"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#GiongDH815-6"/>
+        <NamedIndividual IRI="#PhanPhucHop"/>
     </Declaration>
     <Declaration>
         <Class IRI="#HienTuong"/>
@@ -722,10 +722,10 @@
         <NamedIndividual IRI="#OcLac"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#BenhLunXoanLa"/>
+        <NamedIndividual IRI="#LaHinhBacThang"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#LaHinhBacThang"/>
+        <NamedIndividual IRI="#BenhLunXoanLa"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Staner_20WP"/>
@@ -761,10 +761,10 @@
         <NamedIndividual IRI="#OcBuuVang"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#luongThuoc"/>
+        <NamedIndividual IRI="#MepLaRach"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#MepLaRach"/>
+        <DataProperty IRI="#luongThuoc"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="#Benh"/>
@@ -873,10 +873,6 @@
     <ClassAssertion>
         <Class IRI="#Thuoc"/>
         <NamedIndividual IRI="#Antracol_70WP"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Thuoc"/>
-        <NamedIndividual IRI="#Bactocide_12WP"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Thuoc"/>
@@ -1065,6 +1061,10 @@
     <ClassAssertion>
         <Class IRI="#TrieuChung"/>
         <NamedIndividual IRI="#DoCay"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Thuoc"/>
+        <NamedIndividual IRI="#Furadan_3_H"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#HinhDangLa"/>
@@ -1599,9 +1599,44 @@
         <NamedIndividual IRI="#dibavil_50FL_50_WP"/>
     </ClassAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#CoThuoc"/>
+        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <NamedIndividual IRI="#A1VAN_6.4SL"/>
         <NamedIndividual IRI="#BenhBacLa"/>
-        <NamedIndividual IRI="#Bactocide_12WP"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <NamedIndividual IRI="#A1VAN_6.4SL"/>
+        <NamedIndividual IRI="#BenhDaoOn"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <NamedIndividual IRI="#Actara_25WWG"/>
+        <NamedIndividual IRI="#BoTri"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <NamedIndividual IRI="#Actara_25WWG"/>
+        <NamedIndividual IRI="#RayNau"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <NamedIndividual IRI="#Antracol_70WP"/>
+        <NamedIndividual IRI="#BenhVangLa"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <NamedIndividual IRI="#Bassa_50EC"/>
+        <NamedIndividual IRI="#BoXit"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <NamedIndividual IRI="#Bassa_50EC"/>
+        <NamedIndividual IRI="#RayNau"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <NamedIndividual IRI="#Bassa_50EC"/>
+        <NamedIndividual IRI="#SauKeo"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#CoThuoc"/>
@@ -1625,8 +1660,43 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#CoThuoc"/>
+        <NamedIndividual IRI="#BenhBuuRe"/>
+        <NamedIndividual IRI="#Furadan_3_H"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#CoThuoc"/>
         <NamedIndividual IRI="#BenhDomNau"/>
         <NamedIndividual IRI="#Tilt_Super_300_EC"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coGiaiDoan"/>
+        <NamedIndividual IRI="#BenhLemLepHat"/>
+        <NamedIndividual IRI="#GiaiDoanLamDong"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coGiaiDoan"/>
+        <NamedIndividual IRI="#BenhLemLepHat"/>
+        <NamedIndividual IRI="#GiaiDoanTro"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coGiaiDoan"/>
+        <NamedIndividual IRI="#BenhLunSocDen"/>
+        <NamedIndividual IRI="#GiaiDoanDeNhanh"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coGiaiDoan"/>
+        <NamedIndividual IRI="#BenhLunSocDen"/>
+        <NamedIndividual IRI="#GiaiDoanLamDong"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coGiaiDoan"/>
+        <NamedIndividual IRI="#BenhLunSocDen"/>
+        <NamedIndividual IRI="#GiaiDoanMa"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coGiaiDoan"/>
+        <NamedIndividual IRI="#BenhLunSocDen"/>
+        <NamedIndividual IRI="#GiaiDoanTro"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#CoThuoc"/>
@@ -1652,6 +1722,31 @@
         <ObjectProperty IRI="#CoThuoc"/>
         <NamedIndividual IRI="#BenhVangLun"/>
         <NamedIndividual IRI="#Trebon_20ND"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <NamedIndividual IRI="#Binhtin_75_WP"/>
+        <NamedIndividual IRI="#BenhDaoOn"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <NamedIndividual IRI="#Bisomin_6WP_2SL"/>
+        <NamedIndividual IRI="#BenhBacLa"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <NamedIndividual IRI="#Bisomin_6WP_2SL"/>
+        <NamedIndividual IRI="#BenhDaoOn"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <NamedIndividual IRI="#Damycine"/>
+        <NamedIndividual IRI="#BenhKhoVan"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <NamedIndividual IRI="#Hoả_Tiễn_50WP"/>
+        <NamedIndividual IRI="#BenhBacLa"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#coGiaiDoan"/>
@@ -1733,6 +1828,61 @@
         <NamedIndividual IRI="#QuyTrinhTuoiNuocTrongDeNhanh"/>
         <NamedIndividual IRI="#GiaiDoanLamDong"/>
     </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <NamedIndividual IRI="#Sasa_20WP"/>
+        <NamedIndividual IRI="#BenhBacLa"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <NamedIndividual IRI="#Sasa_20WP"/>
+        <NamedIndividual IRI="#BenhChayBiaLa"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <NamedIndividual IRI="#Sasa_20WP"/>
+        <NamedIndividual IRI="#BenhLemLepHat"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <NamedIndividual IRI="#Staner_20WP"/>
+        <NamedIndividual IRI="#BenhChayBiaLa"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <NamedIndividual IRI="#Staner_20WP"/>
+        <NamedIndividual IRI="#BenhLemLepHat"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <NamedIndividual IRI="#ThuocArmada"/>
+        <NamedIndividual IRI="#BoTri"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <NamedIndividual IRI="#ThuocArmada"/>
+        <NamedIndividual IRI="#RayNau"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <NamedIndividual IRI="#ThuocArmada"/>
+        <NamedIndividual IRI="#RayXanhDuoiDen"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <NamedIndividual IRI="#Tilt_Super_300_EC"/>
+        <NamedIndividual IRI="#BenhDomVang"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <NamedIndividual IRI="#Tilt_Super_300_EC"/>
+        <NamedIndividual IRI="#BenhVangLa"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <NamedIndividual IRI="#dana-win_12.5_WP"/>
+        <NamedIndividual IRI="#BenhLemLepHat"/>
+    </ObjectPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#dacTinhCuaThuoc"/>
         <NamedIndividual IRI="#A1VAN_6.4SL"/>
@@ -1774,6 +1924,119 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">7 ngày</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#dacDiem"/>
+        <NamedIndividual IRI="#Actara_25WWG"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tên thương mại	ACTARA 25 WG – Sự bảo vệ khôn ngoan
+Hoạt chất	Thiamethoxam
+Qui cách	1 g, 2 g
+Độ độc	Nhóm 3
+Cơ chế tác động	Tiếp xúc, vị độc, bảo vệ tức thì cây trồng ngay sau khi xử lý thuốc</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#luongThuoc"/>
+        <NamedIndividual IRI="#Actara_25WWG"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Bọ trĩ	
+– Pha 25-30 g/ha
+– Pha 1 g/bình 8 lit
+– Lượng nước phun: 320-500 lít/ha
+– Phun đều
+Rầy nâu	
+– Pha 40-80 g/ha
+– Pha 1 g/bình 8 lit
+– Phun đều 4-6 bình 8 lít/1.000m2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#Actara_25WWG"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ACTARA 25 WG</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#triSauBenhHai"/>
+        <NamedIndividual IRI="#Actara_25WWG"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Công dụng	Tiêu diệt rất hiệu quả hơn 70 loại côn trùng chích hút khó trừ</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dacDiem"/>
+        <NamedIndividual IRI="#Admire_50EC"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tên thương phẩm :	Admire 050EC, 200OD
+Tên hoạt chất :	Imidacloprid (min 96 %)
+Loại thuốc :	Thuốc trừ sâu
+Nhóm thuốc :	Neonicotinoit
+Danh mục thuốc :	Được phép sử dụng
+Dạng thuốc :	050EC: Nhũ dầu. 200OD: Dung dịch</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#luongThuoc"/>
+        <NamedIndividual IRI="#Admire_50EC"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Liều lượng sử dụng :	0.3 – 0.4 lít/ha
+Cách dùng :	pha 10 – 14 ml/bình 16 lít
+Khả năng hỗn hợp :	có thể hỗn hợp với thuốc khác</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#Admire_50EC"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ADMIRE 50EC – THUỐC ĐẶC TRỊ RẦY</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#triSauBenhHai"/>
+        <NamedIndividual IRI="#Admire_50EC"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Đối tượng phòng trừ :	050EC: Bọ trĩ/lúa. Rầy xanh/lúa. Rầy nâu/lúa. Rầy xanh/bông vải. Rệp/bông vải.
+200OD: Bọ trĩ/lúa. Rầy nâu/lúa. Rệp sáp/cà phê. Rệp vảy/cà phê. Bọ trĩ/điều. Rầy xanh/bông vải. Rệp muội/bông vải</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tuNgayCachLy"/>
+        <NamedIndividual IRI="#Admire_50EC"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dacDiem"/>
+        <NamedIndividual IRI="#Antracol_70WP"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Propineb: 700 g/kg
+
+Phụ gia: 300 g/kg
+
+Khối lượng tịnh: 25g, 100g, 1kg
+
+Xuất xứ: Bayer S.A.S - Pháp</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#Antracol_70WP"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ANTRACOL 70WP</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#triSauBenhHai"/>
+        <NamedIndividual IRI="#Antracol_70WP"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thuốc trừ bệnh phổ rộng trên cây ăn quả, rau màu và lúa.
+Rất an toàn cho cây, phun được ngay cả giai đoạn ra bông.
+Bổ sung vi lượng kẽm Zn++ dễ tiêu cho cây trồng → mặc áo giáp kẽm cho cây.
+Dưỡng lá nuôi đòng, giúp tăng năng suất, chất lượng lúa.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dacDiem"/>
+        <NamedIndividual IRI="#Bassa_50EC"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Hoạt chất: Fenobucarb 50%
+Hoạt chất Fenobucarb có tác động tiếp xúc, vị độc và hiệu lực trừ sâu cao, nhanh và kéo dài. Trong danh mục thuốc Bảo vệ thực vật Fenobucarb được đăng ký trừ:
+  - Rầy nâu, bọ xít và sâu keo hại lúa; bọ trĩ, rệp và rầy hại cây có múi; bọ xít hại hồ tiêu; Rệp hại bông, vải,; Rệp hại đậu tương, thuốc lá; Rệp sáp hại cà phê và rệp hại cây ăn quả.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#luongThuoc"/>
+        <NamedIndividual IRI="#Bassa_50EC"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">dụng dùng thuốc Bassa 50EC trừ rầy nâu hại lúa, Rệp sáp hại bông.
+   - Lượng dùng và cách pha: Lượng dùng 1 - 1,5 lít/ha, pha 20 - 25 ml thuốc với 8-10 lít nước, và phun khoảng 600 lít nước thuốc đã pha cho 1 ha.
+   - Thời điểm phun: Phun thuốc Bassa 50EC khi rầy mới xuất hiện (Rầy cám).</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#Bassa_50EC"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thuốc trừ sâu Bassa 50EC</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tuNgayCachLy"/>
+        <NamedIndividual IRI="#Bassa_50EC"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">14</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#BeThoi"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Bẹ thối</Literal>
@@ -1800,6 +2063,43 @@ Ngoài ra có thể sử dụng các loại thuốc thành phẩm sau: Staner 20
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#BenhBacLa"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Bệnh bạc lá</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#BenhBuuRe"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Bệnh bướu rể lúa do tuyến trùng Meloidogyne graminicola.
+
+Đây là loại tuyến trùng nội ký sinh, ấu trùng có dạng con sán (lãi) kim. Khi phát triển giới tính, tuyến trùng cái đổi thành dạng hình quả lê, trong khi tuyến trùng đực vẫn giử dạng lãi kim. Tuyến trùng cái đẻ trứng bên trong bướu.
+
+Tuyến trùng cần khoảng 41 giờ để đầu tuyến trùng xâm nhập được vào mô phân sinh rễ. Tế bào vỏ rễ bắt đầu nở to và sinh sản nhanh để thành lập bướu trong vòng 72 giờ. Sau khi xâm nhiễm 4 ngày, các đại tế bào được thành hình.
+
+Trong một bướu có thể có đến 62 con tuyến trùng, trong đó có đến 45 con cái đang đẻ trứng.
+
+Vòng đời của tuyến trùng có thể từ 26-51 ngày, tùy điều kiện và tuyến trùng có thể kích thích sự phát triển ở mô phân sinh, mô vỏ, biểu bì trong, chu luân, mô mộc.
+Triệu chứng bệnh
+
+Trên đồng ruộng, cây lúa khoảng một tháng tuổi thường thấy có triệu chứng bệnh. Bệnh phát triển mạnh trên đất cạn và ẩm, đây là loài tuyến trùng háo khí, chúng ngừng phát triển trong đất ngập nước.
+
+Cây bị lùn, lá hơi vàng, tăng trưởng chậm. Nhổ rễ lên, thấy rễ vẫn trắng tốt nhưng bị ngắn lại, bướu xuất hiện ở nhiều đoạn của rể hoặc ở chóp  rể. Nơi có ổ tuyến trùng bị phù to tạo bướu 1-2 mm.
+
+Khi bị tuyến trùng ký sinh, cây lúa bị bệnh bướu rể nên tốn nhiều phân bón và cây lúa phát triển kém.
+Các biện pháp phòng trị chủ yếu:
+
+-Không để ruộng mất nước bệnh sẽ phát triển mạnh.
+
+-Khi cây lúa bị bướu rể bơm nước và giữ nước ngập liên tục 5-7 ngày.
+
+-Nông dân chưa có thói quen dùng thuốc hóa học vì chưa hiểu rõ bệnh.
+
+Khi bệnh nặng có thể rải thuốc Furadan 3 H hay thuốc Mocap.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#BenhBuuRe"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Bệnh bướu rể do tuyến trùng hại lúa
+Tên khoa học: Meloidogyne graminicola.
+
+-Tên tiếng Anh: Root Knot Nematode.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
@@ -1854,9 +2154,94 @@ Khi nhiều vết bệnh đốm nâu xuất hiện trên lá làm cho lá bị c
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Bệnh khô vằn</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#BenhLemLepHat"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thế nào là lem lép hạt lúa
+Lem lép hạt lúa là tên gọi để chỉ chung hiện tượng hạt lúa có vỏ trấu sậm màu biến đổi từ màu nâu đến đen; từ đen lốm đốm đến đen toàn bộ vỏ trấu; bao gồm cả trên hạt lúa có gạo và hạt lúa lép không có gạo ở giai đoạn cây lúa còn trên đồng ruộng trước khi thu hoạch.
+Tác nhân gây bệnh
+
+Theo các kết quả điều tra nghiên cứu của Viện Bảo vệ thực vật (1995); Trung tâm Bảo vệ thực vật phía Nam (1997); Viện Lúa đồng bằng sông Cửu Long (2000) kết hợp với các tài liệu ở nước ngoài có thể xác định được nhiều nguyên nhân.
+
+* Do nhện gié thường sống trong các bẹ lá lúa khi mật số cao chúng có thể bò lên trên bông lúa chích hút các gié lúa đang phát triển, các bông lúa bị hại thường mọc thẳng đứng và phần lớn số hạt đều bị lép.
+
+* Do vi khuẩn Pseudomonas glumae (tên mới Bukhoderia glumae) làm thối đen hạt hoặc gây vết bệnh trên vỏ hạt.
+
+* Do nấm là chủ yếu : Alternaria padwickii, Bipolaris oryzae, Fusarium sp, Curvularia lunata, Microdochium oryzae, Phoma sp, Pyricularia oryzae, Sarocladium oryzae, Septoria sp, Tilletia barclayana, Ustilagonoides virens
+Sự phát sinh và tác hại
+
+Thời kỳ cây lúa dễ mẫn cảm với bệnh là từ trổ bông đến chín sữa và rơi vào những tháng có nhiệt độ thấp ẩm độ không khí cao, lượng mưa lớn và số ngày mưa nhiều.
+
+* Lem lép hạt làm ảnh hưởng đến năng suất và chất lượng hạt lúa, đồng thời tác hại vào vụ sau.
+Biện pháp phòng trừ tổng hợp
+
+Giống : Gieo cấy hạt giống ít mang mầm bệnh hoặc dùng giống lúa có xác nhận tuyệt đối không lấy giống ở chân ruộng vụ trước bị lem lép nặng để gieo sạ lại. Trước khi ngâm ủ phơi khô rê sạch loại bỏ những hạt lép lửng, biến màu. 
+
+* Thời vụ: Gieo cấy lúa vào thời kỳ thích hợp để khi lúa trổ không trùng với thời kỳ mưa gió nhều; khi lúa có đòng - trổ không để ruộng bị khô hạn. 
+
+* Phân bón : Bón phân đầy đủ và cân đối tuỳ theo giống lúa điều kiện đất đai, mùa vụ của từng vùng. Có thể áp dụng phương pháp bón phân theo màu lá lúa dựa vào bảng so màu hoặc bón phân đón đòng theo kỹ thuật &quot;Không ngày, Không số&quot;. 
+
+* Sâu bệnh : Phòng trừ tốt các loại sâu bệnh phát sinh vào giai đoạn đòng - trổ là sẽ giảm bệnh lem lép hạt. 
+
+* Cỏ dại: Cỏ dại ký chủ của nhiều nấm gây bệnh trên lá và hạt lúa. Cần phòng trừ cỏ trong ruộng cũng như trên bờ ruộng. 
+
+Biện pháp hóa học 
+
+Những điều cần lưu ý để sử dụng thuốc hóa học đạt hiệu quả cao : 
+
+* Xử lý hạt giống trước khi gieo sạ: 
+
+- Biện pháp này rất có hiệu quả và kinh tế nhất mà chúng ta thường không chú ý. 
+
+- Pha hoạt chất Benomyl (Viben 50BTN), Carben dazim (Vicarben 50HP) nồng độ 3‰ cho hạt lúa giống đã phơi khô rê sạch vào ngâm 24 – 36 giờ vớt ra rửa sạch bằng nước trong sau đó ủ bình thường. 
+
+- Xử lý hạt giống giúp phòng ngừa ngoài bệnh lem lép hạt còn thêm các bệnh khác như lúa von, đạo ôn lá, vàng lá chín sớm, … 
+
+* Chọn lựa thuốc và phun phòng là chính: 
+
+* Nên chọn thuốc trừ bệnh phổ rộng để phun như: Vicarben 50HP (hoạt chất Carbendazim), Vivil 5SC (hoạt chất Hexaconazole), Vixazol 275SC (hoạt chất Carbendazim + Hexaconazole), Vitin-New 250EC (hoạt chất Propiconazole), Viroval 50BTN (hoạt chất Iprodione), Workup 9SL (hoạt chất Metconazole). Liều lượng các loại thuốc trên đã có ghi ở nhãn bao bì. 
+
+* Thời điểm phun là rất quan trọng. Nên phun phòng là chính nếu để bệnh đã xâm nhập vào hạt lúa rồi thì rất khó có kết quả tốt. Phun hai lần vào thời kỳ lúa bắt đầu trổ và trổ đều để hạn chế các loại nấm phát triển trên vỏ hạt lúa. Chú ý nếu phun thuốc muộn khi lúa vào mẩy hoặc chín sữa thì hiệu lực thuốc không cao. Phun thuốc vào giai đoạn đòng trổ này còn phòng trừ được các bệnh khác như đốm vằn, vàng lá chín sớm, đạo ôn cổ bông, thối bẹ lá đòng. 
+
+Ước mong những hiểu biết trên đây sẽ giúp bà con nông dân phòng trừ tốt bệnh lem lép hạt lúa để có những vụ mùa bội thu.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#BenhLemLepHat"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Bệnh lem lép hạt</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#bienPhapKhacPhuc"/>
+        <NamedIndividual IRI="#BenhLunSocDen"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">1. Vệ sinh đồng ruộng
+Vệ sinh đồng ruộng bằng cách cày vùi gốc rạ để diệt lúa chét, lúa tái sinh, dọn sạch cỏ bờ ruộng, mương dẫn nước, đốt dọn tàn dư thực vật từ cây ngô.
+2. Phòng ngừa rầy môi giới
+a) Né rầy
+Theo dõi bẫy đèn để xác định đỉnh cao của các đợt rầy lư­ng trắng và các loại rầy hại lúa khác. Thời điểm gieo mạ, cấy lúa hoặc gieo thẳng có thể né rầy là khoảng 4 - 6 ngày sau đỉnh cao của rầy vào đèn.
+b) Bảo vệ mạ
+Thực hiện gieo mạ có che ny lông để kết hợp chắn rầy với chống rét trong vụ Đông Xuân. Không gieo mạ ở những ruộng vụ trước có bệnh.
+Ở những địa bàn vụ trước lúa bị bệnh lùn sọc đen, xử lý hạt giống bằng thuốc hóa học hoặc sinh học để tạo sức đề kháng của cây mạ đối với rầy và tiến hành phun thuốc trừ rầy cho mạ, dùng thuốc nội hấp.
+Thư­ờng xuyên thăm đồng, kết hợp với theo dõi bẫy đèn để dự báo mật số rầy trên đồng ruộng, xét nghiệm mẫu rầy để phát hiện nguồn rầy mang vi rút.
+c) Các biện pháp canh tác
+ Hạn chế sử dụng những giống lúa đã xác định nhiễm bệnh nặng, sử dụng các giống kháng (chống chịu) rầy hoặc ít nhiễm rầy.
+Bón phân cân đối, đặc biệt không bón thừa phân đạm, áp dụng kỹ thuật “3 giảm 3 tăng” hoặc SRI ở nơi có điều kiện để tăng tính chống chịu của lúa đối với dịch hại.
+Bố trí cơ cấu mùa vụ lúa hợp lý theo hướng giảm tỷ lệ trà lúa Xuân sớm, Xuân trung. Bố trí có thời gian cách ly giữa vụ Xuân và vụ Hè Thu - Mùa tiếp theo trong điều kiện không làm ảnh hưởng đến thời vụ của vụ Đông để cắt cầu nối truyền bệnh và có đủ thời gian để vệ sinh đồng ruộng.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#BenhLunSocDen"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">1. Tác nhân gây bệnh
+Tác nhân gây bệnh lùn sọc đen hại lúa là vi rút lùn sọc đen phương Nam (Southern Rice Black Streaked Dwarf Virus - SRBSDV) thuộc nhóm Fijivirus-2, họ Reoviridae và rầy lưng trắng (Sogatella furcifera) là môi giới lây truyền vi rút này.  
+2. Triệu chứng và tác hại
+Cây lúa bị bệnh có triệu chứng chung là thấp lùn, lá xanh đậm hơn bình thường. Lá lúa bị bệnh có thể xoăn ở đầu lá hoặc toàn bộ lá. Gân lá ở mặt sau bị sưng lên. Khi cây còn non gân chính trên bẹ lá cũng bị sưng phồng.
+Từ giai đoạn làm đòng và khi lúa có lóng, cây bị bệnh thường nảy chồi trên đốt thân và mọc nhiều rễ bất định. Trên bẹ và lóng thân xuất hiện nhiều u sáp và sọc đen. Bị bệnh nặng cây lúa không trổ bông được hoặc trỗ bông không thoát và hạt thường bị đen.
+Một số triệu chứng của bệnh lùn sọc đen hại lúa được trình bày ở Phụ lục 1 ban hành kèm theo Thông tư này.
+3. Môi giới truyền bệnh và cơ chế lan truyền của bệnh
+Rầy lưng trắng là môi giới chính truyền bệnh lùn sọc đen hại lúa. Cả rầy non và rầy trưởng thành đều truyền bệnh.
+Rầy lưng trắng sau khi đã nhiễm vi rút có thể truyền bệnh đến khi chết. Vi rút không truyền qua trứng rầy.
+Bệnh không truyền qua hạt giống lúa, không truyền qua đất và tiếp xúc giữa cây bệnh và cây khỏe.
+4. Tồn tại của bệnh trên đồng ruộng
+Ngoài cây lúa, bệnh lùn sọc đen còn gây hại trên ngô, lúa mì, cỏ lồng vực, cỏ chát, cỏ đuôi phụng, vì các cây này cũng là ký chủ của rầy lưng trắng và cũng là nguồn chứa vi rút để rầy lưng trắng truyền sang cây lúa. Bệnh cũng có thể lưu tồn trên lúa chét của cây lúa bị bệnh trước đó.
+Vi rút gây bệnh tồn tại trong cơ thể của rầy lưng trắng sống qua đông hoặc di chuyển rất xa theo gió và bão để gây bệnh cho lúa và một số loài cây khác ở các vùng khác hoặc vụ tiếp theo.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
@@ -1864,9 +2249,67 @@ Khi nhiều vết bệnh đốm nâu xuất hiện trên lá làm cho lá bị c
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Bệnh lùn sọc đen</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#triSauBenhHai"/>
+        <NamedIndividual IRI="#BenhLunSocDen"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">1. Trừ bệnh khi lúa xuất hiện bệnh
+a) Giai đoạn lúa từ gieo cấy -  đứng cái
+Nhổ, vùi những cây lúa bị bệnh, cấy dặm cây lúa khỏe.
+Phun thuốc trừ rầy bằng loại thuốc nội hấp trên ruộng bị bệnh và những ruộng xung quanh.
+Chăm sóc để cây lúa mau chóng phục hồi: bón cân đối N-P-K, lưu ý không bón thừa đạm; khi lúa chưa phục hồi ra lá mới, chỉ nên bón lân và kali.
+Sau khi thu hoạch lúa ở ruộng bị bệnh tiến hành ngay cày vùi ruộng đó để tiêu diệt triệt để mầm bệnh.
+b) Giai đoạn lúa từ phân hóa đòng trở đi
+Nhổ, vùi những cây lúa bị bệnh.
+Thường xuyên quan sát kỹ ruộng bị bệnh lùn sọc đen để phát hiện rầy lưng trắng, khi phát hiện có rầy rưng trắng tiến hành ngay phun thuốc trừ rầy ở ruộng đó và các ruộng xung quanh, sử dụng loại thuốc theo thời kỳ sinh trưởng của cây lúa:
+Giai đoạnlúa phân hóa đòng - trỗ dùng thuốc trừ rầy nội hấp hoặc thuốc trừ rầy tiếp xúc, hoặc kết hợp.
+Giai đoạn sau trỗ - chín dùng thuốc trừ rầy tiếp xúc.
+Chăm sóc lúa mau phục hồi như nêu trên.
+Sau khi thu hoạch lúa ở ruộng bị bệnh tiến hành ngay cày vùi ruộng đó.
+2. Tiêu hủy cả ruộng lúa bị bệnh
+Tiêu hủy cả ruộng lúa bị bệnh chỉ thực hiện khi ruộng lúa không còn khả năng cho năng suất (nhiễm nặng, khó phục hồi được).
+Trước khi tiêu hủy phun thuốc trừ rầy bằng loại thuốc tiếp xúc.
+Tiêu hủy và tiến hành cấy, gieo thẳng lại nếu còn thời vụ, nếu hết thời vụ trồng cây khác (ngoại trừ ngô) thay lúa nếu điều kiện cho phép.
+Tiêu hủy bằng cày vùi phải thực hiện ngay dù không cấy, gieo lại hoặc trồng cây khác.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#bienPhapKhacPhuc"/>
+        <NamedIndividual IRI="#BenhLunXoanLa"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">a) Phòng bệnh:  lùn xoắn lá do vi rút gây ra cho đến nay chưa có thuốc đặc trị, vì vậy biện pháp an toàn và hữu hiệu nhất vẫn là phòng bệnh.● Cày bừa, làm đất kỹ, vùi lấp tàn dư và nguồn bệnh; vệ sinh đồng ruộng sạch sẽ, dọn sạch các tàn dư và ký chủ trung gian của bệnh.
+● Gieo cấy tập trung, đồng loạt cùng một cánh đồng, từng vùng để né rầy theo khuyến cáo của cán bộ chuyên ngành của địa phương.● Sử dụng các giống lúa kháng bệnh, giống lúa cứng cây có khả năng chống chịu bệnh. Chăm sóc hợp lý, tạo điều kiện cho cây lúa khoẻ (nhất là giai đoạn lúa non) để tăng cường sức đề kháng, chống chịu bệnh.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#moTa"/>
+        <NamedIndividual IRI="#BenhLunXoanLa"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">a. Tác nhân 
+Bệnh lùn xoắn lá do vi rút có tên RRSV (Rice Ragged Stunt Virus) gây ra. 
+b. Nhận dạng 
+Trên chứng bệnh trên cây lúa biểu hiện như sau: 
+-Cây bị lùn, màu lá xanh đậm
+-Mép lá bị rách và gợn sóng, dọc theo gân lá có u bướu
+-Chóp lá bị biến dạng, xoăn tít lại
+-Lúa không trổ được, bị nghẹn đòng, hạt lép. 
+c. Cách lan truyền bệnh 
+Cách lan truyền bệnh lùn xoăn lá giống như bệnh vàng lùn 
+Lưu ý: có trường hợp trên một cây lúa đồng thời xuất hiện cả hai triệu chứng bệnh vàng lùn và lùn xoắn lá 
+. Phòng trừ bệnh vàng lùn và lùn xoắn lá
+Bệnh vàng lùn và lùn xoắn lá (cũng như bệnh lúa cỏ) gây hại cây lúa cho đến nay là chưa có thuốc đặc trị; vì vậy biện pháp đầu tiên là phòng bệnh, bao gồm: 
+- Thực hiện triệt để các biện pháp phòng trừ rầy nâu.
+
+- Áp dụng các biện pháp canh tác đồng bộ để tạo cây lúa khỏe nhất là giai đoạn trước trỗ để gia tăng sức đề kháng của cây.  
+
+Tiêu hủy nguồn bệnh trên đồng ruộng, cụ thể như sau: 
+- Giai đọan lúa còn non: nếu ruộng lúa bị nhiễm bệnh nặng (trên 10% số khóm bị bệnh) thì phải tiêu hủy ngay bằng cách cày, bừa cả ruộng để diệt mầm bệnh; trước khi cày vùi phải phun thuốc trừ rầy nâu để tránh phát tán truyền bệnh sang ruộng khác; nếu bị nhiễm nhẹ (rải rác, dưới 10% số khóm bị bệnh) thì phải nhổ bỏ cây bệnh và vùi xuống ruộng, không bỏ tràn lan trên bờ. 
+- Giai đọan lúa sau cấy 40 ngày trở đi: thường xuyên thăm đồng và nhổ, vùi bỏ bụi lúa bệnh; đồng thời nếu phát hiện rầy cám có mật số trên 3 con/dảnh thì phải phun thuốc trừ rầy nâu . Nếu ruộng lúa bị nhiễm bệnh quá nặng thì tiêu hủy bằng cách cày, bừa cả ruộng; trước khi cày, bừa phải phun thuốc trừ rầy nâu nếu có rầy trên lúa để tránh phát tán truyền bệnh sang ruộng khác.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#BenhLunXoanLa"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Bệnh lùn xoắn lá</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#triSauBenhHai"/>
+        <NamedIndividual IRI="#BenhLunXoanLa"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Biện pháp trừ bệnh hữu hiệu nhất đối với bệnh này là thực hiện việc tiêu huỷ nguồn bệnh trên đồng ruộng.
+● Giai đoạn lúa còn non (dưới 40 ngày tuổi) nếu ruộng lúa bị nhiễm bệnh nặng, không còn khả năng phục hồi, cho năng suất thì phải tiêu huỷ bằng cách cày trục cả ruộng để diệt mầm bệnh, trước khi cày vùi phải phun thuốc trừ rầy nâu để tránh phát tán truyền bệnh sang ruộng lúa khác. Phát hiện thấy bệnh nhiễm nhẹ thì ngay lập tức phải nhổ bỏ, vùi các bụi lúa bị bệnh đồng thời phun thuốc trừ rầy.● Giai đoạn lúa sau gieo sạ, cấy 40 ngày, phải thường xuyên thăm đồng thấy ruộng bi bbệnh thì phải nhổ bỏ, vùi bỏ bụi lúa bệnh, nếu thấy mật độ dầy cám ³ 3 con/dảnh (tép) thì phải phun thuốc trừ rầy. Nếu ruộng bị nhiễm quá nặng thì phải tiêu huỷ bằng cách như phần trên.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
@@ -2258,6 +2701,31 @@ Thuộc Họ: Acrididae Bộ: Orthoptera</Literal>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#DeNhanhKem"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Đẻ nhánh kém</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dacDiem"/>
+        <NamedIndividual IRI="#Ditacin_8L"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Khối lượng/Thể tích: 12ml
+Quy cách: gói
+Hoạt chất: Ningnamycin 8%
+Hãng SX: Nông Sinh</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#luongThuoc"/>
+        <NamedIndividual IRI="#Ditacin_8L"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">– Phun thuốc khi cây chớm bệnh, nếu nặng, phun 2 lần cách nhau 5 ngày
+– Pha 10-12ml cho bình 10-16L</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#Ditacin_8L"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DITACIN 8L – THUỐC DIỆT VI KHUẨN CHO CÂY TRỒNG</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#triSauBenhHai"/>
+        <NamedIndividual IRI="#Ditacin_8L"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">– Có tác dụng nội hấp, lưu dẫn, có hiệu lực phòng trừ các bệnh do virus, vi khuẩn và nấm gây ra.
+– Tăng khả năng kháng bệnh, tăng năng suất, chất lượng nông sản.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
@@ -2885,6 +3353,20 @@ Hai sản phẩm phân bón Calcium Nitrate, Poly-feed 19-19-19 được SX i Cy
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#HienTuongThieuDam"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Hiện tượng thiếu đạm</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dacDiem"/>
+        <NamedIndividual IRI="#Hoả_Tiễn_50WP"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tên thương phẩm :	Hoả tiễn 50WP
+Tên hoạt chất :	Chlorobromo isocyanuric acid (min 85%)
+Loại thuốc :	Thuốc trừ bệnh
+Nhóm thuốc :	Trừ bệnh khác
+Dạng thuốc :	50SP: Bột tan trong nước</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#Hoả_Tiễn_50WP"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Hoả tiễn 50WP</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
@@ -4241,6 +4723,31 @@ Một năm rầy phát sinh 8 lứa, trong đó cần chú ý lứa 3: từ đ�
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Ruộng sâu</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#dacDiem"/>
+        <NamedIndividual IRI="#Sasa_20WP"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Mã sản phẩm: sasa
+Khối lượng/Thể tích: 20gr
+Trọng lượng: 0kg
+Quy cách: gói
+Hoạt chất: Đang cập nhật
+Hãng SX: Việt Thắng Bắc Giang (Vithaco)
+Hoạt chất :Saikuzuo 25%
+Qui cách :20gr</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#luongThuoc"/>
+        <NamedIndividual IRI="#Sasa_20WP"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">- Pha 1 gói 20gr cho bình 10-12L nước. Phun 2 gói cho 360m², phun 3 gói cho 500m², 5 gói cho 1000m². Phun khi bệnh mới xuất hiện.
+- Pha 1-1,2kg/ha, pha 500-600L nước/ha.  Phun khi bệnh mới xuất hiện, có thể pha chung với các loại thuốc BVTV khác. Pha xong phải phun ngày. Phun nhắc lại sau 7-10 ngày.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#triSauBenhHai"/>
+        <NamedIndividual IRI="#Sasa_20WP"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">- Dùng trừ bệnh đốm lá hại ớt, đặc trị bệnh bạc lá (cháy bìa lá) hại lúa, gây đen hạt và lem lép hạt lúa; phòng trừ tốt bệnh bạc lá trên cây mạ khi có 3-4 lá trước khi nhổ mạ từ 3-5 ngày
+
+- Chống chín sớm, tăng sức đề kháng, tăng năng suất cây trồng.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#moTa"/>
         <NamedIndividual IRI="#SauCanGie"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Đặc điểm hình thái:
@@ -4608,6 +5115,45 @@ Thuộc Họ: Cecidomyiidae Bộ: Diptera</Literal>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Sâu phao</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#dacDiem"/>
+        <NamedIndividual IRI="#Staner_20WP"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Mã sản phẩm: starner
+Khối lượng/Thể tích: 10gr
+Trọng lượng: 0kg
+Quy cách: gói
+Hoạt chất: Đang cập nhật
+Hãng SX: Cty Bảo Vệ Thực Vật 1 Trung Ương
+Hoạt chất
+
+Oxolinic acid 20%
+
+Qui cách
+
+10gr x 10 gói</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#luongThuoc"/>
+        <NamedIndividual IRI="#Staner_20WP"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Lúa
+-Pha 10gr với 8-10L nước. phun ướt đều thân, lá
+-Thời điểm phun: khi mép ngọn lá lúa có vết bệnh xuất hiện, đặc biệt khi lúa làm đòng trổ bông, nên phun thêm lần 2 khi trổ xong, nếu nặng có thể tăng liều 1,5-1,7 lần
+Bắp cải
+Nồng độ như trên, phun khi bệnh mới xuất hiện
+Ngưng phun thuốc 14 ngày trước khi thu hoạch lúa, 7 ngày trước khi thu hoạch rau.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#Staner_20WP"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">STARNER 20WP</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#triSauBenhHai"/>
+        <NamedIndividual IRI="#Staner_20WP"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">- Là thuốc đặc trị bệnh vi khuẩn, có tác dụng nội hấp,tiếp xúc mạnh; có tác dụng phòng và trừ bệnh nên hiệu quả trừ bệnh cao, nhanh, kéo dài
+
+- Là thuốc đặc trị chuyên dùng trừ bệnh vi khuẩn hại cây trồng: cháy bìa lá (bạc lá), đen lép hạt hại lúa.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#ThanKho"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Thân khô</Literal>
@@ -4686,6 +5232,49 @@ Thuộc Họ: Cecidomyiidae Bộ: Diptera</Literal>
         <DataProperty IRI="#tuNgayCachLy"/>
         <NamedIndividual IRI="#ThuocArmada"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">7 -14 ngày</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dacDiem"/>
+        <NamedIndividual IRI="#Tilt_Super_300_EC"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">TILT SUPER 300 EC 100ml
+Mã sản phẩm: tilt super
+Khối lượng/Thể tích: 100ml
+Trọng lượng: 0kg
+Quy cách: chai
+Hoạt chất: Propiconazole 150 g/l, Difenoconazole 150 g/l
+Hãng SX: Syngenta
+
+Qui cách	10 ml, 100 ml, 250 ml
+Độ độc	Nhóm 3
+Cơ chế tác động	 :Thuốc trừ bệnh nội hấp mạnh, phổ rộng, không cần pha trộn</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#luongThuoc"/>
+        <NamedIndividual IRI="#Tilt_Super_300_EC"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">-Lúa  Pha 4 - 5 ml / bình 8 lit, phun 6 bình /1.000 m².
+- Đối với đậu phộng pha 5 – 10 ml / bình 8 lit, phun 4 – 6 bình /1.000 m².
+- Đối với cà phê, chè (trà) phun với lượng nước 500 – 600 lit/ha.
+
+- Thấm sâu nhanh vào mô cây ngay sau khi phun, nên ít bị rửa trôi do nước mưa.
+- Đối với lúa phun vào giai đoạn làm đòng để trừ bệnh đốm vằn đồng thời có tác dụng ngừa bệnh vàng lá rất tốt. Ngoài ra, phun trước và sau trổ để trừ bệnh lem lép hạt và ngừa bệnh vàng lá.
+- Phun khi vết bệnh chớm xuất hiện.
+- Thời gian cách ly : 14 ngày.
+- Không độc với ong mật, chim và trùn đất, độc nhẹ với cá.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#Tilt_Super_300_EC"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">TILT SUPER 300 EC 100ml</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#triSauBenhHai"/>
+        <NamedIndividual IRI="#Tilt_Super_300_EC"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Lúa	Lem lép hạt, vàng lá, đốm vằn
+Đậu tương	Rỉ sắt
+Cà phê	Rỉ sắt
+Nhãn	Đốm đen quả
+Trà	Đốm lá
+Đậu phộng	Đốm lá</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#moTa"/>
@@ -4832,6 +5421,10 @@ Thuộc Họ: Cecidomyiidae Bộ: Diptera</Literal>
         <ObjectProperty IRI="#coTacNhanGayBenh"/>
         <Class IRI="#GiaiDoan"/>
     </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#xuatHienOGiaiDoan"/>
+        <Class IRI="#TacNhanGayBenh"/>
+    </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#CoThuoc"/>
         <Class IRI="#Thuoc"/>
@@ -4844,9 +5437,17 @@ Thuộc Họ: Cecidomyiidae Bộ: Diptera</Literal>
         <ObjectProperty IRI="#coTacNhanGayBenh"/>
         <Class IRI="#TacNhanGayBenh"/>
     </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#xuatHienOGiaiDoan"/>
+        <Class IRI="#GiaiDoan"/>
+    </ObjectPropertyRange>
     <DataPropertyDomain>
         <DataProperty IRI="#bienPhapKhacPhuc"/>
         <Class IRI="#HienTuong"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#bienPhapKhacPhuc"/>
+        <Class IRI="#TacNhanGayBenh"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#cachCheBien"/>
@@ -4858,14 +5459,7 @@ Thuộc Họ: Cecidomyiidae Bộ: Diptera</Literal>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#dacDiem"/>
-        <ObjectUnionOf>
-            <Class IRI="#GiaiDoan"/>
-            <Class IRI="#GiongLua"/>
-            <Class IRI="#HienTuong"/>
-            <Class IRI="#PhanVoCo"/>
-            <Class IRI="#QuyTrinhBonPhan"/>
-            <Class IRI="#VuMua"/>
-        </ObjectUnionOf>
+        <Class abbreviatedIRI="owl:Thing"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#dacTinhCuaThuoc"/>
@@ -4934,6 +5528,14 @@ Thuộc Họ: Cecidomyiidae Bộ: Diptera</Literal>
     <DataPropertyDomain>
         <DataProperty IRI="#tinhThichNghi"/>
         <Class IRI="#GiongLua"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#triSauBenhHai"/>
+        <Class IRI="#TacNhanGayBenh"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#triSauBenhHai"/>
+        <Class IRI="#Thuoc"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#tuNgay"/>
