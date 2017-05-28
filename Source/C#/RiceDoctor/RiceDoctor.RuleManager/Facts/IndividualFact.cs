@@ -1,5 +1,6 @@
 ﻿using System;
 using JetBrains.Annotations;
+using Newtonsoft.Json;
 using RiceDoctor.Shared;
 
 namespace RiceDoctor.RuleManager
@@ -15,9 +16,11 @@ namespace RiceDoctor.RuleManager
             Individual = individualName;
         }
 
+        [JsonProperty(PropertyName = "className")]
         public override string Name { get; }
 
         [NotNull]
+        [JsonProperty(PropertyName = "individualName")]
         public string Individual { get; }
 
         public bool Equals(IndividualFact other)

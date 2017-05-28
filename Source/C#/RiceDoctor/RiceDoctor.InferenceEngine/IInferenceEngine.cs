@@ -26,6 +26,12 @@ namespace RiceDoctor.InferenceEngine
         [NotNull]
         IReadOnlyCollection<LogicRule> LowPriorityLogicRules { get; }
 
+        [NotNull]
+        IReadOnlyCollection<LogicRule> InferredLogicRules { get; }
+
+        [NotNull]
+        IReadOnlyCollection<KeyValuePair<IndividualFact, Relation>> InferredRelationRules { get; }
+
         int AddFactsToKnown([NotNull] params Fact[] facts);
 
         void HandleGuessableFact([NotNull] Tuple<Fact, bool?> guessableFact);
@@ -33,8 +39,7 @@ namespace RiceDoctor.InferenceEngine
         [NotNull]
         Response Infer();
 
-        [CanBeNull]
-        IReadOnlyCollection<ValueTuple<double, IReadOnlyCollection<Fact>, IReadOnlyCollection<Fact>>>
-            GetIncompleteFacts();
+        [NotNull]
+        IReadOnlyCollection<Tuple<double, LogicRule, IReadOnlyList<Fact>>> GetIncompleteRules();
     }
 }

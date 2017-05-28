@@ -2,14 +2,31 @@
 using System.Collections.Generic;
 using System.Linq;
 using JetBrains.Annotations;
+using Newtonsoft.Json;
 using RiceDoctor.OntologyManager;
 using RiceDoctor.Shared;
+using JsonConvert = RiceDoctor.Shared.JsonConvert;
 
 namespace RiceDoctor.RuleManager
 {
     public class Manager : IRuleManager
     {
         private readonly IOntologyManager _ontologyManager = OntologyManager.Manager.Instance;
+
+        [JsonConstructor]
+        public Manager(
+            [NotNull] IReadOnlyList<Problem> problems,
+            [NotNull] IReadOnlyCollection<LogicRule> logicRules,
+            [NotNull] IReadOnlyCollection<Relation> relationRules)
+        {
+            Check.NotNull(problems, nameof(problems));
+            Check.NotNull(logicRules, nameof(logicRules));
+            Check.NotNull(relationRules, nameof(relationRules));
+
+            Problems = problems;
+            LogicRules = logicRules;
+            RelationRules = relationRules;
+        }
 
         public Manager([NotNull] string problemData, [NotNull] string logicData, [NotNull] string relationData)
         {

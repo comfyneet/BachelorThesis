@@ -20,9 +20,11 @@ namespace RiceDoctor.WebApp.Controllers
 {
     public class AdvisoryController : Controller
     {
-        private readonly JsonSerializerSettings jsonSettings = new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.All };
         private readonly IOntologyManager _ontologyManager;
         private readonly IRuleManager _ruleManager;
+
+        private readonly JsonSerializerSettings jsonSettings =
+            new JsonSerializerSettings {TypeNameHandling = TypeNameHandling.All};
 
         public AdvisoryController(
             [FromServices] [NotNull] IRuleManager ruleManager,
@@ -48,9 +50,9 @@ namespace RiceDoctor.WebApp.Controllers
         }
 
         [HttpPost]
-        public IActionResult SelectProblem(string guid, int problemId, string outputs, string inputs, int totalGoals)
+        public IActionResult SelectProblem(string guid, int problemId, string outputs, string inputs, int? totalGoals)
         {
-            var inputList = inputs.Contains(',') ? inputs.Split(',') : new[] {inputs};
+            var inputList = inputs.Replace("\r\n", "\n").Contains('\n') ? inputs.Split('\n') : new[] {inputs};
             var facts = new Fact[inputList.Length];
             for (var i = 0; i < inputList.Length; ++i)
                 facts[i] = new IndividualFact(inputList[i].Split('=')[0], inputList[i].Split('=')[1]);
@@ -58,7 +60,7 @@ namespace RiceDoctor.WebApp.Controllers
             Problem problem;
             if (problemId == -1)
             {
-                var outputList = outputs.Contains(',') ? outputs.Split(',') : new[] {outputs};
+                var outputList = outputs.Replace("\r\n", "\n").Contains('\n') ? outputs.Split('\n') : new[] {outputs};
 
                 var allTypes = new Dictionary<string, Class>();
 
@@ -94,8 +96,7 @@ namespace RiceDoctor.WebApp.Controllers
             }
 
             var advisory = JsonConvert.DeserializeObject<Advisory>(HttpContext.Session.GetString(guid), jsonSettings);
-            advisory.Request = new Request(problem, RequestType.IndividualFact,
-                totalGoals == 0 ? (int?) null : totalGoals);
+            advisory.Request = new Request(problem, RequestType.IndividualFact, totalGoals);
             advisory.Engine = new Engine(_ruleManager, _ontologyManager, advisory.Request);
             advisory.Engine.AddFactsToKnown(facts);
             HttpContext.Session.SetString(guid, JsonConvert.SerializeObject(advisory, jsonSettings));
@@ -117,6 +118,8 @@ namespace RiceDoctor.WebApp.Controllers
         public IActionResult GuessableFact(string guid, string className, string individualName, int isGuessable)
         {
             var advisory = JsonConvert.DeserializeObject<Advisory>(HttpContext.Session.GetString(guid), jsonSettings);
+            ((Engine) advisory.Engine)._ontologyManager = _ontologyManager;
+            ((Engine) advisory.Engine)._ruleManager = _ruleManager;
 
             bool? exist = null;
             if (isGuessable == 1) exist = true;
@@ -129,7 +132,7 @@ namespace RiceDoctor.WebApp.Controllers
             return RedirectToAction("Infer", new {guid});
         }
 
-        [HttpPost]
+        [AcceptVerbs("Get", "Post")]
         public IActionResult Infer(string guid)
         {
             var advisory = JsonConvert.DeserializeObject<Advisory>(HttpContext.Session.GetString(guid), jsonSettings);
@@ -145,14 +148,10 @@ namespace RiceDoctor.WebApp.Controllers
                     individualName = ((IndividualFact) response.GuessableFact).Individual
                 });
 
-            if (response.Type == NoResults)
+            if (response.Type == InferredResults)
             {
-                ViewData["Result"] = false;
-            }
-            else
-            {
-                ViewData["Result"] = true;
                 advisory.Results = response.Results;
+                HttpContext.Session.SetString(guid, JsonConvert.SerializeObject(advisory, jsonSettings));
             }
 
             return View(advisory);

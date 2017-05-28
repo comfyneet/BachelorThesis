@@ -6,36 +6,53 @@
 }
 
 <div class="row">
-    <div class="col-md-4"></div>
-    <div class="col-md-8">
+    <div class="col-md-12">
         <h2>Tư vấn/Chuẩn đoán</h2>
 
         <h4>Bài toán</h4>
         <form asp-controller="Advisory" asp-action="SelectProblem" method="post">
             <input type="hidden" name="guid" value="@Model.Guid"/>
-            @if (problems != null)
-            {
-                for (var i = 0; i < problems.Count; ++i)
-                {
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Bài toán</label>
+                <div class="col-sm-9">
+                    @if (problems != null)
+                    {
+                        for (var i = 0; i < problems.Count; ++i)
+                        {
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="problemId" value="@i">@problems[i].Type
+                                </label>
+                            </div>
+                        }
+                    }
                     <div class="radio">
                         <label>
-                            <input type="radio" name="problemId" value="@i">@problems[i].Type
+                            <input type="radio" name="problemId" value="-1">Tổng quát
                         </label>
                     </div>
-                }
-            }
-            <div class="radio">
-                <label>
-                    <input type="radio" name="problemId" value="-1">Tổng quát
-                </label>
+                    <p>Nếu chọn tổng quát, nêu ra loại sự kiện mục tiêu:</p>
+                    <textarea class="form-control" rows="2" name="outputs" placeholder="Benh&#10;SauBenh"></textarea>
+
+                </div>
             </div>
-            Nếu chọn tổng quát, nêu ra loại sự kiện mục tiêu <input type="text" name="outputs" placeholder="Benh,SauBenh"/>
-            <br/>
-            Sự kiện đầu vào <input type="text" name="inputs" placeholder="Benh=BenhVangLa,MauLa=LaVang"/>
-            <br/>
-            Số sự kiện mục tiêu cần tìm <input type="number" name="totalGoals" placeholder="-1 để tìm tất cả"/>
-            <br/>
-            <input type="submit" class="btn btn-default" value="Chọn"/>
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Sự kiện đầu vào</label>
+                <div class="col-sm-9">
+                    <textarea class="form-control" rows="4" name="inputs" placeholder="Benh=BenhVangLa&#10;MauLa=LaVang"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Số sự kiện mục tiêu cần tìm</label>
+                <div class="col-sm-9">
+                    <input type="number" name="totalGoals" placeholder="tìm tất cả thì để trống"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <input type="submit" class="btn btn-default" value="Xử lý"/>
+                </div>
+            </div>
         </form>
     </div>
 </div>

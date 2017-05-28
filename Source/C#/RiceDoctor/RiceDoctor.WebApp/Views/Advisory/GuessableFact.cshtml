@@ -1,5 +1,4 @@
-﻿@using RiceDoctor.WebApp.Models
-@model Advisory
+﻿@model RiceDoctor.WebApp.Models.Advisory
 @{
     var className = (string) ViewData["ClassName"];
     var individualName = (string) ViewData["IndividualName"];
@@ -7,8 +6,7 @@
 }
 
 <div class="row">
-    <div class="col-md-4"></div>
-    <div class="col-md-8">
+    <div class="col-md-12">
         <h2>Sự kiện @className=@individualName có tồn tại hay không?</h2>
 
         <form asp-controller="Advisory" asp-action="GuessableFact" method="post">

@@ -10,7 +10,7 @@ namespace RiceDoctor.WebApp.Models
 
         public Request Request { get; set; }
 
-        public Engine Engine { get; set; }
+        public IInferenceEngine Engine { get; set; }
 
         public IReadOnlyCollection<Fact> Results { get; set; }
     }

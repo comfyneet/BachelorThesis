@@ -1,10 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using JetBrains.Annotations;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using RiceDoctor.Shared;
 using static RiceDoctor.OntologyManager.GetType;
 using static RiceDoctor.OntologyManager.ResponseType;
+using JsonConvert = RiceDoctor.Shared.JsonConvert;
 
 namespace RiceDoctor.OntologyManager
 {
@@ -14,10 +16,15 @@ namespace RiceDoctor.OntologyManager
 
         static Manager()
         {
-            Instance = new Manager();
+            Instance = new Manager("127.0.0.1", 2002);
         }
 
-        private Manager([NotNull] string ip = "127.0.0.1", int port = 2002)
+        [JsonConstructor]
+        private Manager()
+        {
+        }
+
+        private Manager([NotNull] string ip, int port)
         {
             Check.NotEmpty(ip, nameof(ip));
 

@@ -1,15 +1,12 @@
 ﻿@using RiceDoctor.RuleManager
-@using RiceDoctor.WebApp.Models
-@model Advisory
+@model RiceDoctor.WebApp.Models.Advisory
 @{
-    var result = (bool) ViewData["Result"];
     ViewData["Title"] = "Tư vấn/Chuẩn đoán";
 }
 
 <div class="row">
-    <div class="col-md-4"></div>
-    <div class="col-md-8">
-        @if (result)
+    <div class="col-md-12">
+        @if (Model.Results != null)
         {
             <h2>Suy diễn thành công</h2>
             foreach (var resultFact in Model.Results)
@@ -17,10 +14,51 @@
                 var individual = (IndividualFact) resultFact;
                 <p>@individual.Name=@individual.Individual</p>
             }
+
+            <h2>Luật tường minh được áp dụng</h2>
+            foreach (var rule in Model.Engine.InferredLogicRules)
+            {
+                <p>@rule</p>
+            }
+
+            <h2>Luật quan hệ được áp dụng</h2>
+            foreach (var rule in Model.Engine.InferredRelationRules)
+            {
+                <p>@rule.Key - @rule.Value</p>
+            }
         }
         else
         {
             <h2>Suy diễn không thành công</h2>
+
+            <h2>Xếp hạng luật thiếu</h2>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Priority</th>
+                    <th>Rule</th>
+                    <th>Goal facts</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var rule in Model.Engine.GetIncompleteRules())
+                {
+                    <tr>
+                        <th>@rule.Item1</th>
+                        <th>@rule.Item2</th>
+                        <th>
+                            @for (var i = 0; i < rule.Item3.Count; ++i)
+                            {
+                                if (i > 0)
+                                {
+                                    @:, 
+                                }
+                                @rule.Item3[i]
+                            }</th>
+                    </tr>
+                }
+                </tbody>
+            </table>
         }
     </div>
 </div>
