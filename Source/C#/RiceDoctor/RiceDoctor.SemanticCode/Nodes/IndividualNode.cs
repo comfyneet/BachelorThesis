@@ -12,7 +12,7 @@ namespace RiceDoctor.SemanticCode
 
             Class = className;
             Individual = individualName;
-            AddAttribute("href", $"{SemanticParser.OntologyLink}{Class}/{Individual}");
+            AddAttribute("href", $"{SemanticParser.IndividualLink}{Individual}");
         }
 
         [NotNull]

@@ -9,7 +9,7 @@
     <div class="col-md-12">
         <h2>Sự kiện @className=@individualName có tồn tại hay không?</h2>
 
-        <form asp-controller="Advisory" asp-action="GuessableFact" method="post">
+        <form asp-controller="Advisory" asp-action="Infer" method="post">
             <input type="hidden" name="guid" value="@Model.Guid"/>
             <input type="hidden" name="className" value="@className"/>
             <input type="hidden" name="individualName" value="@individualName"/>

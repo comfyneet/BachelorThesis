@@ -4,15 +4,24 @@ using RiceDoctor.Shared;
 
 namespace RiceDoctor.SemanticCode
 {
+    public enum ImageType
+    {
+        Online,
+        Static
+    }
+
     public class ImageNode : TextContainerNode
     {
-        public ImageNode([NotNull] string url) : base("img")
+        public ImageNode([NotNull] string url, ImageType type) : base("img")
         {
             Check.NotEmpty(url, nameof(url));
 
+            Type = type;
             AddAttribute("src", url);
             AddAttribute("alt", GetInnerText());
         }
+
+        public ImageType Type { get; }
 
         [NotNull]
         public string Src => Attributes["src"];
@@ -24,7 +33,9 @@ namespace RiceDoctor.SemanticCode
         {
             var builder = new StringBuilder();
             foreach (var attribute in Attributes)
-                builder.Append($" {attribute.Key}=\"{attribute.Value}\"");
+                if (attribute.Key == "src" && Type == ImageType.Static)
+                    builder.Append($" {attribute.Key}=\"{SemanticParser.StaticImageLink}{attribute.Value}\"");
+                else builder.Append($" {attribute.Key}=\"{attribute.Value}\"");
 
             return $"<img {builder} />";
         }

@@ -28,18 +28,21 @@ namespace RiceDoctor.SemanticCode
                 "purple"
             };
 
-            TextContainerTags = new List<string>
+            TextContainerTags = new Dictionary<string, string>
             {
-                "u",
-                "sub",
-                "sup",
-                "quote",
-                "code",
-                "h1",
-                "h2",
-                "h3",
-                "h4",
-                "h5"
+                {"b", "strong"},
+                {"i", "em"},
+                {"u", "u"},
+                {"sub", "sub"},
+                {"sup", "sup"},
+                {"quote", "blockquote"},
+                {"code", "code"},
+                {"h1", "h1"},
+                {"h2", "h2"},
+                {"h3", "h3"},
+                {"h4", "h4"},
+                {"h5", "h5"},
+                {"center", "center"}
             };
 
             SingularTags = new List<string>
@@ -76,13 +79,17 @@ namespace RiceDoctor.SemanticCode
         {
         }
 
-        public static string OntologyLink { get; [param: NotNull] set; } = "/ontology/";
+        public static string ClassLink { get; [param: NotNull] set; } = "/Ontology/Class?className=";
+
+        public static string IndividualLink { get; [param: NotNull] set; } = "/Ontology/Individual?individualName=";
+
+        public static string StaticImageLink { get; [param: NotNull] set; } = "/images/";
 
         [NotNull]
         private static IReadOnlyCollection<string> ColorTags { get; }
 
         [NotNull]
-        private static IReadOnlyCollection<string> TextContainerTags { get; }
+        private static IReadOnlyDictionary<string, string> TextContainerTags { get; }
 
         [NotNull]
         private static IReadOnlyCollection<string> SingularTags { get; }
@@ -99,7 +106,7 @@ namespace RiceDoctor.SemanticCode
         [NotNull]
         public static string Parse([NotNull] string text)
         {
-            Check.NotEmpty(text, nameof(text));
+            if (string.IsNullOrWhiteSpace(text)) return "";
 
             var lexer = new SemanticLexer(text);
             var parser = new SemanticParser(lexer);
@@ -139,24 +146,16 @@ namespace RiceDoctor.SemanticCode
             {
                 node = new ColorNode(ident);
             }
-            else if (TextContainerTags.Contains(ident))
+            else if (TextContainerTags.TryGetValue(ident, out var code))
             {
-                node = new TextContainerNode(ident);
+                node = new TextContainerNode(code);
             }
             else if (SingularTags.Contains(ident))
             {
                 singularNode = true;
                 node = new SingularNode(ident);
             }
-            else if (ident == "b")
-            {
-                node = new TextContainerNode("strong");
-            }
-            else if (ident == "i")
-            {
-                node = new TextContainerNode("em");
-            }
-            else if (ident == "url")
+            else if (ident == "img" || ident == "simg" || ident == "url")
             {
                 Eat(Equal);
 
@@ -164,7 +163,9 @@ namespace RiceDoctor.SemanticCode
 
                 Eat(UnquotedString);
 
-                node = new LinkNode((string) url);
+                if (ident == "img") node = new ImageNode((string) url, ImageType.Online);
+                else if (ident == "simg") node = new ImageNode((string) url, ImageType.Static);
+                else node = new LinkNode((string) url);
             }
             else // Parse ontology nodes
             {

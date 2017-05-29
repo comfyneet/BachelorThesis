@@ -299,9 +299,6 @@
         <NamedIndividual IRI="#MILAX_100GB"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#TacNhanGayBenh"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#PhanTrungLuong"/>
     </Declaration>
     <Declaration>
@@ -360,9 +357,6 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#dacTinhNongHoc"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#coTacNhanGayBenh"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#BoXit"/>
@@ -506,9 +500,6 @@
         <NamedIndividual IRI="#dana-win_12.5_WP"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#CoThuoc"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#dibavil_50FL_50_WP"/>
     </Declaration>
     <Declaration>
@@ -551,6 +542,9 @@
         <NamedIndividual IRI="#ThoiTietMatMe"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#TacNhanGayHai"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Antracol_70WP"/>
     </Declaration>
     <Declaration>
@@ -591,6 +585,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#MoiTruong"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#coThuoc"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#SauGai"/>
@@ -782,6 +779,9 @@
         <NamedIndividual IRI="#PhanDon"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#coTacNhanGayHai"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#nguonGoc"/>
     </Declaration>
     <Declaration>
@@ -798,7 +798,7 @@
     </Declaration>
     <SubClassOf>
         <Class IRI="#Benh"/>
-        <Class IRI="#TacNhanGayBenh"/>
+        <Class IRI="#TacNhanGayHai"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ChieuCao"/>
@@ -806,7 +806,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Co"/>
-        <Class IRI="#TacNhanGayBenh"/>
+        <Class IRI="#TacNhanGayHai"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Dat"/>
@@ -862,7 +862,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Oc"/>
-        <Class IRI="#TacNhanGayBenh"/>
+        <Class IRI="#TacNhanGayHai"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#PhanHuuCo"/>
@@ -886,7 +886,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Sau"/>
-        <Class IRI="#TacNhanGayBenh"/>
+        <Class IRI="#TacNhanGayHai"/>
     </SubClassOf>
     <ClassAssertion>
         <Class IRI="#Thuoc"/>
@@ -1673,62 +1673,62 @@
         <NamedIndividual IRI="#dibavil_50FL_50_WP"/>
     </ClassAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <ObjectProperty IRI="#coTacNhanGayHai"/>
         <NamedIndividual IRI="#A1VAN_6.4SL"/>
         <NamedIndividual IRI="#BenhBacLa"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <ObjectProperty IRI="#coTacNhanGayHai"/>
         <NamedIndividual IRI="#A1VAN_6.4SL"/>
         <NamedIndividual IRI="#BenhDaoOn"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <ObjectProperty IRI="#coTacNhanGayHai"/>
         <NamedIndividual IRI="#Actara_25WWG"/>
         <NamedIndividual IRI="#BoTri"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <ObjectProperty IRI="#coTacNhanGayHai"/>
         <NamedIndividual IRI="#Actara_25WWG"/>
         <NamedIndividual IRI="#RayNau"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <ObjectProperty IRI="#coTacNhanGayHai"/>
         <NamedIndividual IRI="#Antracol_70WP"/>
         <NamedIndividual IRI="#BenhVangLa"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <ObjectProperty IRI="#coTacNhanGayHai"/>
         <NamedIndividual IRI="#Bassa_50EC"/>
         <NamedIndividual IRI="#BoXit"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <ObjectProperty IRI="#coTacNhanGayHai"/>
         <NamedIndividual IRI="#Bassa_50EC"/>
         <NamedIndividual IRI="#RayNau"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <ObjectProperty IRI="#coTacNhanGayHai"/>
         <NamedIndividual IRI="#Bassa_50EC"/>
         <NamedIndividual IRI="#SauKeo"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#CoThuoc"/>
+        <ObjectProperty IRI="#coThuoc"/>
         <NamedIndividual IRI="#BenhBacLa"/>
         <NamedIndividual IRI="#Ditacin_8L"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#CoThuoc"/>
+        <ObjectProperty IRI="#coThuoc"/>
         <NamedIndividual IRI="#BenhBacLa"/>
         <NamedIndividual IRI="#Hoả_Tiễn_50WP"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#CoThuoc"/>
+        <ObjectProperty IRI="#coThuoc"/>
         <NamedIndividual IRI="#BenhBacLa"/>
         <NamedIndividual IRI="#Sasa_20WP"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#CoThuoc"/>
+        <ObjectProperty IRI="#coThuoc"/>
         <NamedIndividual IRI="#BenhBacLa"/>
         <NamedIndividual IRI="#Staner_20WP"/>
     </ObjectPropertyAssertion>
@@ -1743,12 +1743,12 @@
         <NamedIndividual IRI="#GiaiDoanLamDong"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#CoThuoc"/>
+        <ObjectProperty IRI="#coThuoc"/>
         <NamedIndividual IRI="#BenhBuuRe"/>
         <NamedIndividual IRI="#Furadan_3_H"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#CoThuoc"/>
+        <ObjectProperty IRI="#coThuoc"/>
         <NamedIndividual IRI="#BenhDomNau"/>
         <NamedIndividual IRI="#Tilt_Super_300_EC"/>
     </ObjectPropertyAssertion>
@@ -1783,62 +1783,62 @@
         <NamedIndividual IRI="#GiaiDoanTro"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#CoThuoc"/>
+        <ObjectProperty IRI="#coThuoc"/>
         <NamedIndividual IRI="#BenhVangLa"/>
         <NamedIndividual IRI="#Antracol_70WP"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#CoThuoc"/>
+        <ObjectProperty IRI="#coThuoc"/>
         <NamedIndividual IRI="#BenhVangLun"/>
         <NamedIndividual IRI="#Actara_25WWG"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#CoThuoc"/>
+        <ObjectProperty IRI="#coThuoc"/>
         <NamedIndividual IRI="#BenhVangLun"/>
         <NamedIndividual IRI="#Admire_50EC"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#CoThuoc"/>
+        <ObjectProperty IRI="#coThuoc"/>
         <NamedIndividual IRI="#BenhVangLun"/>
         <NamedIndividual IRI="#Bassa_50EC"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#CoThuoc"/>
+        <ObjectProperty IRI="#coThuoc"/>
         <NamedIndividual IRI="#BenhVangLun"/>
         <NamedIndividual IRI="#Trebon_20ND"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <ObjectProperty IRI="#coTacNhanGayHai"/>
         <NamedIndividual IRI="#Binhtin_75_WP"/>
         <NamedIndividual IRI="#BenhDaoOn"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <ObjectProperty IRI="#coTacNhanGayHai"/>
         <NamedIndividual IRI="#Bisomin_6WP_2SL"/>
         <NamedIndividual IRI="#BenhBacLa"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <ObjectProperty IRI="#coTacNhanGayHai"/>
         <NamedIndividual IRI="#Bisomin_6WP_2SL"/>
         <NamedIndividual IRI="#BenhDaoOn"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#CoThuoc"/>
+        <ObjectProperty IRI="#coThuoc"/>
         <NamedIndividual IRI="#CoChi"/>
         <NamedIndividual IRI="#Sirius_10_WP"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#CoThuoc"/>
+        <ObjectProperty IRI="#coThuoc"/>
         <NamedIndividual IRI="#CoDuoiPhung"/>
         <NamedIndividual IRI="#Star_10WP"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <ObjectProperty IRI="#coTacNhanGayHai"/>
         <NamedIndividual IRI="#Damycine"/>
         <NamedIndividual IRI="#BenhKhoVan"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <ObjectProperty IRI="#coTacNhanGayHai"/>
         <NamedIndividual IRI="#Hoả_Tiễn_50WP"/>
         <NamedIndividual IRI="#BenhBacLa"/>
     </ObjectPropertyAssertion>
@@ -1923,77 +1923,77 @@
         <NamedIndividual IRI="#GiaiDoanLamDong"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#CoThuoc"/>
+        <ObjectProperty IRI="#coThuoc"/>
         <NamedIndividual IRI="#RauBo"/>
         <NamedIndividual IRI="#Ally_20_DF"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#CoThuoc"/>
+        <ObjectProperty IRI="#coThuoc"/>
         <NamedIndividual IRI="#RauBo"/>
         <NamedIndividual IRI="#Almix_20_DF"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#CoThuoc"/>
+        <ObjectProperty IRI="#coThuoc"/>
         <NamedIndividual IRI="#RauBo"/>
         <NamedIndividual IRI="#Sindax_10_WP"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#CoThuoc"/>
+        <ObjectProperty IRI="#coThuoc"/>
         <NamedIndividual IRI="#RauBo"/>
         <NamedIndividual IRI="#Sirius_10_WP"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <ObjectProperty IRI="#coTacNhanGayHai"/>
         <NamedIndividual IRI="#Sasa_20WP"/>
         <NamedIndividual IRI="#BenhBacLa"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <ObjectProperty IRI="#coTacNhanGayHai"/>
         <NamedIndividual IRI="#Sasa_20WP"/>
         <NamedIndividual IRI="#BenhChayBiaLa"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <ObjectProperty IRI="#coTacNhanGayHai"/>
         <NamedIndividual IRI="#Sasa_20WP"/>
         <NamedIndividual IRI="#BenhLemLepHat"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <ObjectProperty IRI="#coTacNhanGayHai"/>
         <NamedIndividual IRI="#Staner_20WP"/>
         <NamedIndividual IRI="#BenhChayBiaLa"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <ObjectProperty IRI="#coTacNhanGayHai"/>
         <NamedIndividual IRI="#Staner_20WP"/>
         <NamedIndividual IRI="#BenhLemLepHat"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <ObjectProperty IRI="#coTacNhanGayHai"/>
         <NamedIndividual IRI="#ThuocArmada"/>
         <NamedIndividual IRI="#BoTri"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <ObjectProperty IRI="#coTacNhanGayHai"/>
         <NamedIndividual IRI="#ThuocArmada"/>
         <NamedIndividual IRI="#RayNau"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <ObjectProperty IRI="#coTacNhanGayHai"/>
         <NamedIndividual IRI="#ThuocArmada"/>
         <NamedIndividual IRI="#RayXanhDuoiDen"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <ObjectProperty IRI="#coTacNhanGayHai"/>
         <NamedIndividual IRI="#Tilt_Super_300_EC"/>
         <NamedIndividual IRI="#BenhDomVang"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <ObjectProperty IRI="#coTacNhanGayHai"/>
         <NamedIndividual IRI="#Tilt_Super_300_EC"/>
         <NamedIndividual IRI="#BenhVangLa"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayBenh"/>
+        <ObjectProperty IRI="#coTacNhanGayHai"/>
         <NamedIndividual IRI="#dana-win_12.5_WP"/>
         <NamedIndividual IRI="#BenhLemLepHat"/>
     </ObjectPropertyAssertion>
@@ -5770,10 +5770,6 @@ Trà	Đốm lá
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">7 ngày</Literal>
     </DataPropertyAssertion>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#CoThuoc"/>
-        <Class IRI="#TacNhanGayBenh"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="#coGiaiDoan"/>
         <Class IRI="#GiaiDoan"/>
     </ObjectPropertyDomain>
@@ -5782,21 +5778,20 @@ Trà	Đốm lá
         <Class IRI="#QuyTrinh"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#coTacNhanGayBenh"/>
-        <Class IRI="#GiaiDoan"/>
+        <ObjectProperty IRI="#coTacNhanGayHai"/>
+        <ObjectUnionOf>
+            <Class IRI="#GiaiDoan"/>
+            <Class IRI="#Thuoc"/>
+        </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#coTacNhanGayBenh"/>
-        <Class IRI="#Thuoc"/>
+        <ObjectProperty IRI="#coThuoc"/>
+        <Class IRI="#TacNhanGayHai"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#xuatHienOGiaiDoan"/>
-        <Class IRI="#TacNhanGayBenh"/>
+        <Class IRI="#TacNhanGayHai"/>
     </ObjectPropertyDomain>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#CoThuoc"/>
-        <Class IRI="#Thuoc"/>
-    </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#coGiaiDoan"/>
         <Class IRI="#QuyTrinh"/>
@@ -5806,24 +5801,23 @@ Trà	Đốm lá
         <Class IRI="#GiaiDoan"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#coTacNhanGayBenh"/>
-        <Class IRI="#TacNhanGayBenh"/>
+        <ObjectProperty IRI="#coTacNhanGayHai"/>
+        <Class IRI="#TacNhanGayHai"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#coThuoc"/>
+        <Class IRI="#Thuoc"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#xuatHienOGiaiDoan"/>
         <Class IRI="#GiaiDoan"/>
     </ObjectPropertyRange>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#lieuLuong"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
     <DataPropertyDomain>
         <DataProperty IRI="#bienPhapKhacPhuc"/>
-        <Class IRI="#HienTuong"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#bienPhapKhacPhuc"/>
-        <Class IRI="#TacNhanGayBenh"/>
+        <ObjectUnionOf>
+            <Class IRI="#HienTuong"/>
+            <Class IRI="#TacNhanGayHai"/>
+        </ObjectUnionOf>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#cachCheBien"/>
@@ -5907,11 +5901,10 @@ Trà	Đốm lá
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#triSauBenhHai"/>
-        <Class IRI="#TacNhanGayBenh"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#triSauBenhHai"/>
-        <Class IRI="#Thuoc"/>
+        <ObjectUnionOf>
+            <Class IRI="#TacNhanGayHai"/>
+            <Class IRI="#Thuoc"/>
+        </ObjectUnionOf>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#tuNgay"/>
@@ -6163,13 +6156,13 @@ Trà	Đốm lá
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#TacNhanGayBenh</IRI>
-        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tác nhân gây bệnh</Literal>
+        <IRI>#TacNhanGayHai</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tác nhân gây hại</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Thuoc</IRI>
-        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">thuốc</Literal>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thuốc</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6208,8 +6201,13 @@ Trà	Đốm lá
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#coTacNhanGayBenh</IRI>
-        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">có tác nhân gây bệnh</Literal>
+        <IRI>#coTacNhanGayHai</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">có tác nhân gây hại</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#coThuoc</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">có thuốc</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6310,6 +6308,11 @@ Trà	Đốm lá
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#tuNgayCachLy</IRI>
         <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">từ ngày cách ly</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#xuatHienOGiaiDoan</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">xuất hiện ở giai đoạn</Literal>
     </AnnotationAssertion>
 </Ontology>
 

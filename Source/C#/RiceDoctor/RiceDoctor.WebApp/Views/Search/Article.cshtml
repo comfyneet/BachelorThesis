@@ -1,0 +1,15 @@
+﻿@model IReadOnlyDictionary<RiceDoctor.OntologyManager.Individual, IReadOnlyDictionary<RiceDoctor.OntologyManager.Attribute, IReadOnlyCollection<string>>>
+@{
+    var individualName = (string) ViewData["IndividualName"];
+    var description = (string) ViewData["Description"];
+    ViewData["Title"] = "Mô tả " + individualName;
+}
+
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-8">
+        <h2>Mô tả @individualName</h2>
+
+        @Html.Raw(description)
+    </div>
+</div>

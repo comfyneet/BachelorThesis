@@ -10,7 +10,7 @@ namespace RiceDoctor.SemanticCode
             Check.NotEmpty(className, nameof(className));
 
             Class = className;
-            AddAttribute("href", $"{SemanticParser.OntologyLink}{Class}");
+            AddAttribute("href", $"{SemanticParser.ClassLink}{Class}");
         }
 
         [NotNull]

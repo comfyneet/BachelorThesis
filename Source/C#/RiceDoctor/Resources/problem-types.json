@@ -1,13 +1,13 @@
 {
     "Problems": [
         {
-            "Type": "TrieuChung -> TacNhanGayBenh",
-            "GoalTypes": ["TacNhanGayBenh"],
+            "Type": "TrieuChung -> TacNhanGayHai",
+            "GoalTypes": ["TacNhanGayHai"],
             "SuggestTypes": ["TrieuChung"]
         },
         {
-            "Type": "GiaiDoan -> TacNhanGayBenh",
-            "GoalTypes": ["TacNhanGayBenh"],
+            "Type": "GiaiDoan -> TacNhanGayHai",
+            "GoalTypes": ["TacNhanGayHai"],
             "SuggestTypes": ["GiaiDoan"]
         }
     ]

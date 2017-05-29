@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using JetBrains.Annotations;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -50,17 +49,24 @@ namespace RiceDoctor.WebApp.Controllers
         }
 
         [HttpPost]
-        public IActionResult SelectProblem(string guid, int problemId, string outputs, string inputs, int? totalGoals)
+        public IActionResult SelectProblem(string guid, int problemId, string inputs, string outputs, int? totalGoals)
         {
-            var inputList = inputs.Replace("\r\n", "\n").Contains('\n') ? inputs.Split('\n') : new[] {inputs};
+            if (string.IsNullOrWhiteSpace(guid)) return NotFound($"Malformed {nameof(guid)}.");
+            guid = guid.Trim();
+
+            if (string.IsNullOrWhiteSpace(inputs)) return NotFound($"Malformed {nameof(inputs)}.");
+            var inputList = inputs.Trim().Replace("\r\n", "\n").Split('\n');
             var facts = new Fact[inputList.Length];
             for (var i = 0; i < inputList.Length; ++i)
                 facts[i] = new IndividualFact(inputList[i].Split('=')[0], inputList[i].Split('=')[1]);
 
+            if (problemId < -1 || problemId >= _ruleManager.Problems.Count)
+                return NotFound($"Malformed {nameof(problemId)}.");
             Problem problem;
             if (problemId == -1)
             {
-                var outputList = outputs.Replace("\r\n", "\n").Contains('\n') ? outputs.Split('\n') : new[] {outputs};
+                if (string.IsNullOrWhiteSpace(outputs)) return NotFound("Malformed outputs.");
+                var outputList = outputs.Trim().Replace("\r\n", "\n").Split('\n');
 
                 var allTypes = new Dictionary<string, Class>();
 
@@ -95,6 +101,8 @@ namespace RiceDoctor.WebApp.Controllers
                 problem = _ruleManager.Problems[problemId];
             }
 
+            if (totalGoals != null && totalGoals <= 0) return NotFound($"Malformed {nameof(totalGoals)}");
+
             var advisory = JsonConvert.DeserializeObject<Advisory>(HttpContext.Session.GetString(guid), jsonSettings);
             advisory.Request = new Request(problem, RequestType.IndividualFact, totalGoals);
             advisory.Engine = new Engine(_ruleManager, _ontologyManager, advisory.Request);
@@ -104,49 +112,61 @@ namespace RiceDoctor.WebApp.Controllers
             return View(advisory);
         }
 
+        [HttpPost]
         public IActionResult GuessableFact(string guid, string className, string individualName)
         {
+            if (string.IsNullOrWhiteSpace(guid)) return NotFound($"Malformed {nameof(guid)}.");
+            guid = guid.Trim();
+
+            if (string.IsNullOrWhiteSpace(className)) return NotFound($"Malformed {nameof(className)}.");
+            className = className.Trim();
+
+            if (string.IsNullOrWhiteSpace(individualName)) return NotFound($"Malformed {nameof(individualName)}.");
+            individualName = individualName.Trim();
+
             var advisory = JsonConvert.DeserializeObject<Advisory>(HttpContext.Session.GetString(guid), jsonSettings);
 
             ViewData["ClassName"] = className;
             ViewData["IndividualName"] = individualName;
 
-            return View(advisory);
+            return View("GuessableFact", advisory);
         }
 
         [HttpPost]
-        public IActionResult GuessableFact(string guid, string className, string individualName, int isGuessable)
+        public IActionResult Infer(string guid, string className = null, string individualName = null,
+            int? isGuessable = null)
         {
+            if (string.IsNullOrWhiteSpace(guid)) return NotFound($"Malformed {nameof(guid)}.");
+            guid = guid.Trim();
+
             var advisory = JsonConvert.DeserializeObject<Advisory>(HttpContext.Session.GetString(guid), jsonSettings);
             ((Engine) advisory.Engine)._ontologyManager = _ontologyManager;
             ((Engine) advisory.Engine)._ruleManager = _ruleManager;
 
-            bool? exist = null;
-            if (isGuessable == 1) exist = true;
-            else if (isGuessable == 0) exist = false;
+            if (!string.IsNullOrWhiteSpace(className))
+            {
+                if (string.IsNullOrWhiteSpace(className)) return NotFound($"Malformed {nameof(className)}.");
+                className = className.Trim();
 
-            advisory.Engine.HandleGuessableFact(
-                new Tuple<Fact, bool?>(new IndividualFact(className, individualName), exist));
-            HttpContext.Session.SetString(guid, JsonConvert.SerializeObject(advisory, jsonSettings));
+                if (string.IsNullOrWhiteSpace(individualName)) return NotFound($"Malformed {nameof(individualName)}.");
+                individualName = individualName.Trim();
 
-            return RedirectToAction("Infer", new {guid});
-        }
+                bool? exist = null;
+                if (isGuessable == 1) exist = true;
+                else if (isGuessable == 0) exist = false;
+                else if (isGuessable != -1) return NotFound($"Malformed {nameof(isGuessable)}.");
+                ;
 
-        [AcceptVerbs("Get", "Post")]
-        public IActionResult Infer(string guid)
-        {
-            var advisory = JsonConvert.DeserializeObject<Advisory>(HttpContext.Session.GetString(guid), jsonSettings);
+                advisory.Engine.HandleGuessableFact(
+                    new Tuple<Fact, bool?>(new IndividualFact(className, individualName), exist));
+            }
 
             var response = advisory.Engine.Infer();
             HttpContext.Session.SetString(guid, JsonConvert.SerializeObject(advisory, jsonSettings));
 
             if (response.Type == ResponseType.GuessableFact)
-                return RedirectToAction("GuessableFact", new
-                {
-                    guid,
-                    className = response.GuessableFact.Name,
-                    individualName = ((IndividualFact) response.GuessableFact).Individual
-                });
+                return GuessableFact(guid, response.GuessableFact.Name,
+                    ((IndividualFact) response.GuessableFact).Individual);
 
             if (response.Type == InferredResults)
             {
@@ -154,7 +174,7 @@ namespace RiceDoctor.WebApp.Controllers
                 HttpContext.Session.SetString(guid, JsonConvert.SerializeObject(advisory, jsonSettings));
             }
 
-            return View(advisory);
+            return View("Infer", advisory);
         }
     }
 }

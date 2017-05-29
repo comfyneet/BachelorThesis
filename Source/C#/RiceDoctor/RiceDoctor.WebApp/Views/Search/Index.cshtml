@@ -23,7 +23,7 @@
                 @foreach (var searchIndividual in Model)
                 {
                     <li>
-                        <a asp-controller="Ontology" asp-action="Class" asp-route-className="@searchIndividual.Key.Id">@searchIndividual.Key</a>
+                        <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@searchIndividual.Key.Id">@searchIndividual.Key</a>
                         @if (searchIndividual.Value != null)
                         {
                             foreach (var attributeValues in searchIndividual.Value)
