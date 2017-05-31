@@ -134,6 +134,9 @@
         <NamedIndividual IRI="#LaKho"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#NguyenNhan"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#bienPhapKhacPhuc"/>
     </Declaration>
     <Declaration>
@@ -353,10 +356,16 @@
         <NamedIndividual IRI="#SauKeo"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#TrieuChung"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#QuyTrinh"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#dacTinhNongHoc"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Image"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#BoXit"/>
@@ -2197,7 +2206,7 @@ Ngoài ra có thể sử dụng các loại [Thuoc]thuốc[/Thuoc] thành phẩm
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#BenhBacLa"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">[Benh=BenhBacLa]bệnh bạc lá[/Benh]</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">bệnh bạc lá</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#moTa"/>
@@ -2300,17 +2309,72 @@ Khi ruộng lúa nhiễm nặng, năng suất có thể thất thu 20-30%, có k
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#BenhChayBiaLa"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">[Benh=BenhChayBiaLa]Bệnh cháy bìa lá[/Benh]</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Bệnh cháy bìa lá</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Image"/>
+        <NamedIndividual IRI="#BenhDaoOn"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hình ảnh 
+[simg=&quot;DaoOn.jpg&quot;]bệnh đạo ôn [/simg]</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#TrieuChung"/>
+        <NamedIndividual IRI="#BenhDaoOn"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Đốm bệnh điển hình trên lá có hình thoi, những đốm to thì hai đầu nhọn, tâm màu xám trắng. Trên giống nhiễm, các vết bệnh rất to có thể dài đến 1,5 cm thường liên kết với nhau tạo thành mãng cháy khô trên lá. Trên giống kháng, các vết bệnh thường rất nhỏ, bằng đầu kim màu nâu, rất dễ nhầm lần với vết bệnh đốm nâu mới phát triển.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#bienPhapKhacPhuc"/>
+        <NamedIndividual IRI="#BenhDaoOn"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cần áp dụng biện pháp phòng trừ dịch hại tổng hợp IPM: 
+- Nên chọn mua giống lúa xác nhận ở nhà cung cấp giống tin tưởng, phải có tính “”kháng bệnh” hoặc “kháng vừa” kết hợp với khả năng kháng được rầy nâu. Các giống này phải phù hợp với chân đất tại địa phương cũng như năng suất cao và chất lượng tốt. Tùy theo mục đích để đạt chất lượng gạo ngon, dễ tiêu dùng trong nước và xuất khẩu, bà con có thể chọn một số giống như sau: IR64, VNĐ 95-20, VNĐ 99-3, OMCS 2000, OM 1490, MTL 250, OM 3536, VĐ 20, Jasmine 85…
+
+- Nên chọn hạt giống sạch bệnh, khử lẫn tạp hạt cỏ, xử lý một số lọai bệnh trên vỏ hạt bằng cách pha 20 cc thuốc CRUISER Plus với 2 lít nước phun lên 100 kg hạt giống trong giai đọan ủ từ 6-12 giờ trước khi đem đi gieo sạ.
+
+- Nên dùng biện pháp sạ hàng với lượng giống trung bình: 80-120 kg/ha 
+- Bón phân cân đối N-P-K, không bón thừa phân đạm: 80-100kg N/ha là đủ. Nên bón phân đạm theo theo nhu cầu cây lúa, áp dụng bảng so màu lá lúa LCC.
+
+- Sau mùa thu hoạch nên cày vùi rơm rạ để trả lại nguồn hữu cơ cho đất đồng thời diệt được mầm bệnh; hạn chế đốt rơm vì biện pháp này chỉ trả lại một số chất khoáng có trong tro; đất dần dần kém mẫu mỡ mau suy kiệt
+
+- Vệ sinh đồng ruộng bằng cách thu gom, tiêu diệt lúa rày-lúa chét, cỏ dại mọc ven bờ là nơi lưu tồn và lây lan mầm bệnh sau này
+
+- Giữ mực nước đầy đủ thường xuyên trên mặt ruộng tùy theo nhu cầu nước theo từng giai đọan của cây lúa, tránh để ruộng khô nước khi bệnh cháy lá xãy ra
+
+- Cần thăm đồng thường xuyên, phát hiện kịp thời khi bệnh chớm xuất hiện. Nếu được, nên làm lô ruộng dự tính dự báo, dành riêng khoảng vài mét vuông trên cùng ruộng lúa, sạ dầy hơn bình thường, bón dư phân đạm.
+
+- Biện pháp hóa học: điều chỉnh bét phun cho hạt thuốc thật mịn, đủ lượng nước 400-500 lít/ha với nồng độ theo khuyến cáo. Các lọai thuốc thông dụng hiện nay: Filia 52.5 SE, Beam 75 WP, Flash 75 WP, Fuan 40 EC, Fuji One 40 EC, Rabcide 20 SC hoặc 30 WP, Kian 50 EC, Kitazin 50 EC, Kitatigi 50 ND hoặc 10 H, Vikita 50 ND hoặc 10 H.
+
+- Áp dụng chất kích kháng SAR3-ĐHCT do Bộ Môn BVTV, Trường Đại học Cần Thơ nghiên cứu thử nghiệm khá hiệu quả với liều phun 10cc chế phẩm/ bình phun 8 lít nước vào 3-4 tuần đầu sau khi sạ.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#moTa"/>
         <NamedIndividual IRI="#BenhDaoOn"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"></Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Bệnh cháy lá lúa là bệnh gây hại quan trọng nhất trên cây lúa, còn được gọi là bệnh đạo ôn. Khi dịch cháy lá xảy ra trên diện rộng thì sự thiệt hại đến năng xuất và sản lượng sẽ thấy rất rõ nét và có ý nghĩa quan trọng đến kinh tế. Tác nhân gây bệnh có thể tấn công mọi giai đọan của cây lúa; bắt đầu từ giai đoạn mạ hoặc sau khi gieo sạ cho đến trước trổ thì gọi là bệnh cháy lá. Bệnh có thể gây hại trên cổ lá nên gọi là thối cổ lá, hoặc gây hại trên cổ bông nên được gọi là thối cổ bông làm lép hạt; đôi khi bệnh có thể gây lem vỏ hạt lúa. Bệnh nặng sẽ làm mất trắng năng suất nếu bà con nông dân không phát hiện sớm và phòng trị kịp thời.
+
+- Điều kiện khí hậu thời tiết: 
+Bệnh này thường phát triển mạnh trong điều kiện khí hậu mát mẽ, ấm độ cao, mưa nhỏ kéo dài, đêm sương mù nhiều. Đặc biệt trong vụ lúa Đông Xuân tại vùng Đồng Bằng Sông Cửu Long vào tháng giêng-tháng hai dương lịch, bệnh này sẽ gây hại trên diện rộng trùng vào lúc lúa đứng cái đến trổ. Bà con trồng lúa tại các vùng thường xuyên bị bệnh cháy lá hằng năm như Tiền Giang, An Giang, Đồng Tháp và Sóc Trăng cần lưu ý có biện pháp phòng ngừa.
+
+- Điều kiện khô hạn: 
+Điều kiện khô hạn làm cây lúa thiếu nước, quá trình trao đổi chất kém, khả năng 
+hấp thu dinh dưỡng yếu, cây lúa không chống chọi được bệnh. Ở những vùng cao nguyên; điều kiện khô hạn thiếu nước kết hợp với đêm sương mù nhiều, biên độ nhiệt lớn sẽ làm cho bệnh này càng dễ phát sinh mạnh.
+
+- Mật độ gieo trồng: 
+Mật độ gieo sạ cũng có liên quan đến khả năng phát triển của bệnh cháy lá. Gieo sạ càng dày, tán lá lúa càng nhiều, khả năng che khuất càng lớn, ẫm độ dưới tán lá càng cao, điều kiện vi khí hậu càng thuận lợi cho nấm cháy lá phát triển.
+
+- Phân bón: 
+Ba lọai phân N-P-K đều có ảnh hưởng rất lớn đến việc phát sinh bệnh nếu bón không cân đối. Thông thường bón dư thừa phân đạm sẽ làm tăng bệnh; dư phân lân không thấy rõ ảnh hưởng lên bệnh. Tuy nhiên nếu bón thêm phân lân trên vùng đất phèn sẽ hạn chế bệnh cháy lá rất rõ ràng. Phân kali có ảnh hưởng rất phức tạp trên sự phát triển của bệnh cháy lá; bón dư thừa đạm và kali đều làm tăng bệnh; bón đạm vừa phải kết hợp đủ lượng kali thì sẽ giãm bệnh rất rõ. Do đó, trong giai đọan sau trổ nếu ruộng bị nhiễm bệnh cháy lá họặc thối cổ bông thì không đuợc bón thêm phân bón lá có nitrat kali.
+Các yếu tố giúp phát sinh bệnh
+- Giống lúa: 
+Thông thường các giống lúa cao sản ngắn ngày khi được phóng thích đưa vào sản xuất đại trà thì đã được các nhà khoa học lai tạo, tuyển chọn để cây lúa có khả năng ít nhiều mang gen có thể kháng hay chống chịu lại bệnh cháy lá. Trồng các giống lúa nhiễm bệnh; khi gặp điều kiện thời tiết thuận lợi cho nầm bệnh, áp lực nguồn bệnh trong khu vực cao thì cây lúa dễ bị “xụp mặt” cháy rụi nhanh rồi chết. Ngược lại, nếu trồng giống lúa kháng bệnh kết hợp với việc áp dụng IPM thì cây lúa sẽ đứng vững và tiếp tục cho năng suất. Khả năng kháng lại bệnh của giống lúa chỉ có thể tồn tại trong một thời gian nhất định do con nấm gây bệnh cháy lá thường xuyên thay đổi “tính chất gây bệnh” để phù hợp với “con bệnh”. Do đó, bà con nên thay đổi giống mới sau một thời gian canh tác. Ngòai ra, “tính chất gây bệnh” của các con nấm cũng thay đổi theo khu vực; thường được các nhà khoa học gọi là “nòi hay dòng nấm địa phương”. Tại Sóc Trăng có 4 nòi, Tiền Giang 3 nòi, Vĩnh Long có có 2 nòi (Teraoka và Phạm Văn Kim, 2002). Như vậy bà con nông dân không nên chủ quan, không nên tin tưởng tuyệt đối là giống lúa kháng bệnh cháy lá được mua từ Sóc Trăng về; khi trồng tại khu vực Tiền Giang sẽ kháng được với bệnh này.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nguonGoc"/>
+        <NamedIndividual IRI="#BenhDaoOn"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tác nhân gây hại là nấm Pyricularia oryzae Cav. hay P. grisea (Cook )Sacc. . Bào tử của nấm rất nhỏ, có thể phát tán và bay cao đến 24 m, thậm chí đến 10.000 m để lây lan cho các ruộng lân cận trong khu vực. Nấm phát triển tốt trong điều kiện mát từ 24-280C, ẫm độ cao &gt;80%, biên độ nhiệt giữa ngày và đêm cao sẽ dễ phát sinh thành dịch. Bào tử nấm nảy mầm khi gặp lớp nước tự do trên lá hay không khí bảo hòa nước; ở 240C bào tử cần 6 giờ, ở 280C mất 8 giờ; vượt quá 280C bào tử phát triển kém. Bào tử xâm nhập vào tế bào lá bằng cách mọc thành đĩa áp, chọc thủng vách tế bào lá lúa. Ngoài ra, bào tử còn tiết ra độc tố pyricularin gây độc cho cây (Ou, 1983). Cây lúa là ký chủ chính, bệnh có thể lưu tồn trên các cây ký chủ phụ mọc quanh ruộng như các loài cỏ lồng vực, đuôi phụng, cỏ chỉ, lúa ma, lúa rày-lúa chét…</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#BenhDaoOn"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Bệnh [Benh=BenhDaoOn]đạo ôn[/Benh]</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">đạo ôn</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#bienPhapKhacPhuc"/>
@@ -2337,7 +2401,7 @@ Khi nhiều vết [Benh=BenhDomNau]bệnh đốm nâu[/Benh] xuất hiện trên
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#BenhDomNau"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">[Benh=BenhDomNau]bệnh đốm nâu[/Benh](Bipolaris oryzae)</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">bệnh đốm nâu</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
@@ -2347,7 +2411,7 @@ Khi nhiều vết [Benh=BenhDomNau]bệnh đốm nâu[/Benh] xuất hiện trên
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#BenhKhoVan"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">[Benh=BenhKhoVan]bệnh khô vằn[/Benh]</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">bệnh khô vằn</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#moTa"/>
@@ -2403,7 +2467,7 @@ Những điều cần lưu ý để sử dụng [Thuoc]thuốc[/Thuoc] hóa họ
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#BenhLemLepHat"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">[Benh=BenhLemLepHat]bệnh lem lép hạt[/Benh]</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">bệnh lem lép hạt</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#bienPhapKhacPhuc"/>
@@ -2443,6 +2507,11 @@ Vi rút gây bệnh tồn tại trong cơ thể của [Sau=RayLungTrang]rầy l�
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#BenhLunSocDen"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">[Benh=BenhLunSocDen]bệnh lùn sọc đen[/Benh]</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#BenhLunSocDen"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">bệnh lùn sọc đen</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#triSauBenhHai"/>
@@ -2502,6 +2571,11 @@ Tiêu hủy nguồn bệnh trên đồng ruộng, cụ thể như sau:
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">[Benh=BenhLunXoanLa]bệnh lùn xoắn lá[/Benh]</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#BenhLunXoanLa"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">bênh lùn xoắn lá</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#triSauBenhHai"/>
         <NamedIndividual IRI="#BenhLunXoanLa"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Biện pháp trừ bệnh hữu hiệu nhất đối với bệnh này là thực hiện việc tiêu huỷ nguồn bệnh trên đồng ruộng.
@@ -2535,7 +2609,7 @@ Tác nhân chính là nấm Gonatophragmium sp, bắt đầu giữa lá lúa xu�
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#BenhVangLa"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">[Benh=BenhVangLa]bệnh vàng lá[/Benh]</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">bệnh vàng lá</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#moTa"/>
@@ -2564,7 +2638,7 @@ b) Trừ bệnh:Biện pháp trừ bệnh hữu hiệu nhất đối với bện
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#BenhVangLun"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">[Benh=BenhVangLun]bệnh vàng lùn[/Benh]</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">bệnh vàng lùn</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
@@ -2741,6 +2815,12 @@ BỘ: HEMIPTERA</Literal>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Cấy dày</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#Image"/>
+        <NamedIndividual IRI="#ChauChau"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Hình ảnh 
+[simg=&quot;ChauChau.jpg&quot;] châu chấu [/simg]</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#moTa"/>
         <NamedIndividual IRI="#ChauChau"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Đặc điểm hình thái:
@@ -2812,6 +2892,11 @@ Tên khoa học Cynodon dactylon Pers.
 Thuộc họ Lúa Poaceae (Gramìneae).</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#Image"/>
+        <NamedIndividual IRI="#CoDuoiPhung"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">[simg=&quot;CoDuoiPhung.jpg&quot;]cỏ đuôi phụng [/simg]</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#moTa"/>
         <NamedIndividual IRI="#CoDuoiPhung"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cỏ đuôi phụng là cỏ dại hằng năm , sống bám dưới nước , mọc thành từng khóm cao 30-100 cm , Ở VN , phổ biến ở ao hồ , ruộng lúa . Thân mọc đứng , phân nhánh từ gốc . Lá hoặc bông đôi khi có màu tím hoặc đỏ . Phiến lá dẹp , nhỏ ,nhọn , dài 10-30 cm , rộng 0.3 - 1cm , lá thì dài 1 -2 cm . Hoa tàn có màu xanh hoặc đỏ , trục chính thẳng , dài 10-40 cm , nhiều nhánh đơn mọc xòe 5 - 15 cm . Bông hoa dài 2.5 - 3 cm 
@@ -2822,6 +2907,12 @@ Cỏ lồng vực cạn là loại cỏ dại hằng năm , mọc thành khóm ,
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#CoDuoiPhung"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">cỏ đuôi phụng</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Image"/>
+        <NamedIndividual IRI="#CoLongVuc"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hình ảnh 
+[simg=&quot;CoLongVuc.png&quot;]cỏ lồng vực[/simg]</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#dacDiem"/>
@@ -3802,6 +3893,12 @@ phan-huy-goc-rom-ra– Sau khi thu họach lúa nên cày ải, để rơm rạ 
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Nước ít</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#Image"/>
+        <NamedIndividual IRI="#OcBuuVang"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hình ảnh
+[simg=&quot;OcBuuVang.jpg&quot;]ốc bưu vàng [/simg]</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#bienPhapKhacPhuc"/>
         <NamedIndividual IRI="#OcBuuVang"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BIỆN PHÁP PHÒNG TRỪ
@@ -3893,6 +3990,12 @@ Khi ốc bươu vàng phát triển ở mật độ cao có thể làm ruộng m
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Ốc sênh</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#Image"/>
+        <NamedIndividual IRI="#PhanChuong"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hình ảnh
+[simg=&quot;PhanChuong.jpg&quot;] phân chuồng [/simg]</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#cachCheBien"/>
         <NamedIndividual IRI="#PhanChuong"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">[h4]Có 3 phương pháp:[/h4]
@@ -3978,6 +4081,12 @@ Tuỳ theo thời gian có nhu cầu sử dụng phân mà áp dụng phương p
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#PhanChuong"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Phân chuồng</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Image"/>
+        <NamedIndividual IRI="#PhanDam"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hình ảnh 
+[simg=&quot;PhanDam.jpg&quot;] phân đạm [/simg]</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#dacDiem"/>
@@ -4353,6 +4462,12 @@ Phân lỏng thường có (15-15-15; 12-24-12; 10-30-10; 9-27-18.. .).
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Phân phức hợp</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#Image"/>
+        <NamedIndividual IRI="#PhanRac"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hình ảnh 
+[simg=&quot;PhanRac.jpg&quot;] phân rác [/simg]</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#cachCheBien"/>
         <NamedIndividual IRI="#PhanRac"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Nguyên liệu chính là phân rác 70%, cung cấp thêm đạm và Kali 2%, còn lại phân men(phân chuồng, lân, vôi). Nguyên liệu được chặt ra thành đoạn ngắn 20-30cm xếp thành lớp cứ 30cm rắc một lớp vôi;trét bùn;ủ khoảng 20 ngày đảo lại rắc thêm phân men, xếp đủ cao trét bùn lại, để hở lỗ tưới nước thường xuyên;ủ khoãng 60 ngày dùng bón lót, để lâu hơn khi phân hoai có thể dùng để bón thúc.</Literal>
@@ -4366,6 +4481,12 @@ Phân lỏng thường có (15-15-15; 12-24-12; 10-30-10; 9-27-18.. .).
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#PhanRac"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Phân rác</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Image"/>
+        <NamedIndividual IRI="#PhanSinhHocHuuCo"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hình ảnh 
+[simg=&quot;PhanSinhHocHuuCo.jpg&quot;] phân sinh học hữu cơ [/simg]</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#cachCheBien"/>
@@ -4493,6 +4614,12 @@ Molipdat natri (NaMoO4. 2H20) chứa 39% Mo, Molipdat Amôn (NH4)2.Mo7O3.4H2O) c
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Phân vi lượng</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#Image"/>
+        <NamedIndividual IRI="#PhanViSinh"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hình ảnh 
+[simg=&quot;PhanViSinh.jpg&quot;] phân vi sinh  [/simg]</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#cachCheBien"/>
         <NamedIndividual IRI="#PhanViSinh"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">[ul]
@@ -4542,6 +4669,12 @@ Phân vi sinh vật thường chỉ phát huy tác dụng trong những điều 
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#PhanViSinh"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Phân vi sinh</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Image"/>
+        <NamedIndividual IRI="#PhanXanh"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hình ảnh
+[simg=&quot;Phan xanh.JPG&quot;] phân xanh [/simg]</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#moTa"/>
@@ -4878,6 +5011,17 @@ Lúc này ruộng bị khô sẽ tổn thương đến rễ lúa, nên không th
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#QuyTrinhTuoiNuocTrongDeNhanh"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Quy trình tưới nước trong giai đoạn đẻ nhánh</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Image"/>
+        <NamedIndividual IRI="#RauBo"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">[simg=&quot;RauBo.png&quot;] rau bợ [/simg]</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Image"/>
+        <NamedIndividual IRI="#RauBo"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hình ảnh
+[simg=&quot;RauBo.png&quot;] rau bợ [/simg]</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#bienPhapKhacPhuc"/>
@@ -5812,6 +5956,18 @@ Trà	Đốm lá
         <ObjectProperty IRI="#xuatHienOGiaiDoan"/>
         <Class IRI="#GiaiDoan"/>
     </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Image"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#NguyenNhan"/>
+        <Class IRI="#TacNhanGayHai"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#TrieuChung"/>
+        <Class IRI="#TacNhanGayHai"/>
+    </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#bienPhapKhacPhuc"/>
         <ObjectUnionOf>
