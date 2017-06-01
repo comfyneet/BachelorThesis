@@ -26,7 +26,7 @@ namespace RiceDoctor.SemanticCode
         public void AddAttribute([NotNull] string key, [NotNull] string value)
         {
             Check.NotEmpty(key, nameof(key));
-            Check.NotEmpty(value, nameof(value));
+            Check.NotNull(value, nameof(value));
 
             _attributes.Add(key, value);
         }

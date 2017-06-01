@@ -64,6 +64,12 @@
                 </p>
             }
         }
+        else
+        {
+            @:<p>Không tìm thấy</p>
+        }
+
+        <hr/>
 
         <h4>Lớp con của @Model</h4>
         @if (Model.GetAllSubClasses() != null)
@@ -79,6 +85,12 @@
                 </p>
             }
         }
+        else
+        {
+            @:<p>Không tìm thấy</p>
+        }
+
+        <hr/>
 
         <h4>Thuộc tính của @Model</h4>
         @if (Model.GetAttributes() != null)
@@ -89,6 +101,12 @@
                     <a asp-controller="Ontology" asp-action="Attribute" asp-route-attributeName="@attribute.Id">@attribute</a> @attribute.Range</p>
             }
         }
+        else
+        {
+            @:<p>Không tìm thấy</p>
+        }
+
+        <hr/>
 
         <h4>Quan hệ của @Model với @Model là chủ thể</h4>
         @if (Model.GetDomainRelations() != null)
@@ -100,6 +118,12 @@
                 </p>
             }
         }
+        else
+        {
+            @:<p>Không tìm thấy</p>
+        }
+
+        <hr/>
 
         <h4>Quan hệ của @Model với @Model là khách thể</h4>
         @if (Model.GetRangeRelations() != null)
@@ -111,6 +135,12 @@
                 </p>
             }
         }
+        else
+        {
+            @:<p>Không tìm thấy</p>
+        }
+
+        <hr/>
 
         <h4>Thể hiện của @Model</h4>
         @if (Model.GetAllIndividuals() != null)
@@ -125,6 +155,10 @@
                     }
                 </p>
             }
+        }
+        else
+        {
+            @:<p>Không tìm thấy</p>
         }
     </div>
 </div>

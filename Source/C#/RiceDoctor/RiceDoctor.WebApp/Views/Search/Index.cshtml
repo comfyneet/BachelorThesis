@@ -23,17 +23,20 @@
                 @foreach (var searchIndividual in Model)
                 {
                     <li>
-                        <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@searchIndividual.Key.Id">@searchIndividual.Key</a>
+                        <a asp-controller="Ontology" asp-action="Article" asp-route-individualName="@searchIndividual.Key.Id">@searchIndividual.Key</a>
                         @if (searchIndividual.Value != null)
                         {
                             foreach (var attributeValues in searchIndividual.Value)
                             {
-                                foreach (var value in attributeValues.Value)
+                                if (attributeValues.Key.Id != "ten" && attributeValues.Key.Id != "moTa")
                                 {
-                                    <p>
-                                        <a asp-controller="Ontology" asp-action="Attribute" asp-route-attrubuteName="@attributeValues.Key.Id">@attributeValues.Key</a>:
-                                        @Html.Raw(value)
-                                    </p>
+                                    foreach (var value in attributeValues.Value)
+                                    {
+                                        <p>
+                                            <a asp-controller="Ontology" asp-action="Attribute" asp-route-attributeName="@attributeValues.Key.Id">@attributeValues.Key</a>:
+                                            @Html.Raw(value)
+                                        </p>
+                                    }
                                 }
                             }
                         }

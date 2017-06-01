@@ -51,10 +51,10 @@ namespace RiceDoctor.WebApp.Controllers
         [HttpPost]
         public IActionResult SelectProblem(string guid, int problemId, string inputs, string outputs, int? totalGoals)
         {
-            if (string.IsNullOrWhiteSpace(guid)) return NotFound($"Malformed {nameof(guid)}.");
+            if (string.IsNullOrWhiteSpace(guid)) return NotFound($"Malformed {nameof(guid)}");
             guid = guid.Trim();
 
-            if (string.IsNullOrWhiteSpace(inputs)) return NotFound($"Malformed {nameof(inputs)}.");
+            if (string.IsNullOrWhiteSpace(inputs)) return NotFound($"Malformed {nameof(inputs)}");
             var inputList = inputs.Trim().Replace("\r\n", "\n").Split('\n');
             var facts = new Fact[inputList.Length];
             for (var i = 0; i < inputList.Length; ++i)
@@ -65,7 +65,7 @@ namespace RiceDoctor.WebApp.Controllers
             Problem problem;
             if (problemId == -1)
             {
-                if (string.IsNullOrWhiteSpace(outputs)) return NotFound("Malformed outputs.");
+                if (string.IsNullOrWhiteSpace(outputs)) return NotFound("Malformed outputs");
                 var outputList = outputs.Trim().Replace("\r\n", "\n").Split('\n');
 
                 var allTypes = new Dictionary<string, Class>();
@@ -76,7 +76,7 @@ namespace RiceDoctor.WebApp.Controllers
                     if (!allTypes.TryGetValue(output, out Class goalType))
                     {
                         goalType = _ontologyManager.GetClass(output);
-                        if (goalType == null) return NotFound($"Type '{output}' doesn't exist.");
+                        if (goalType == null) return NotFound($"Type '{output}' doesn't exist");
                         allTypes.Add(output, goalType);
                     }
                     goalTypes.Add(goalType);
@@ -88,7 +88,7 @@ namespace RiceDoctor.WebApp.Controllers
                     if (!allTypes.TryGetValue(fact.Name, out Class suggestType))
                     {
                         suggestType = _ontologyManager.GetClass(fact.Name);
-                        if (suggestType == null) return NotFound($"Type '{fact.Name}' doesn't exist.");
+                        if (suggestType == null) return NotFound($"Type '{fact.Name}' doesn't exist");
                         allTypes.Add(fact.Name, suggestType);
                     }
                     suggestTypes.Add(suggestType);
@@ -115,13 +115,13 @@ namespace RiceDoctor.WebApp.Controllers
         [HttpPost]
         public IActionResult GuessableFact(string guid, string className, string individualName)
         {
-            if (string.IsNullOrWhiteSpace(guid)) return NotFound($"Malformed {nameof(guid)}.");
+            if (string.IsNullOrWhiteSpace(guid)) return NotFound($"Malformed {nameof(guid)}");
             guid = guid.Trim();
 
-            if (string.IsNullOrWhiteSpace(className)) return NotFound($"Malformed {nameof(className)}.");
+            if (string.IsNullOrWhiteSpace(className)) return NotFound($"Malformed {nameof(className)}");
             className = className.Trim();
 
-            if (string.IsNullOrWhiteSpace(individualName)) return NotFound($"Malformed {nameof(individualName)}.");
+            if (string.IsNullOrWhiteSpace(individualName)) return NotFound($"Malformed {nameof(individualName)}");
             individualName = individualName.Trim();
 
             var advisory = JsonConvert.DeserializeObject<Advisory>(HttpContext.Session.GetString(guid), jsonSettings);
@@ -136,7 +136,7 @@ namespace RiceDoctor.WebApp.Controllers
         public IActionResult Infer(string guid, string className = null, string individualName = null,
             int? isGuessable = null)
         {
-            if (string.IsNullOrWhiteSpace(guid)) return NotFound($"Malformed {nameof(guid)}.");
+            if (string.IsNullOrWhiteSpace(guid)) return NotFound($"Malformed {nameof(guid)}");
             guid = guid.Trim();
 
             var advisory = JsonConvert.DeserializeObject<Advisory>(HttpContext.Session.GetString(guid), jsonSettings);
@@ -145,16 +145,16 @@ namespace RiceDoctor.WebApp.Controllers
 
             if (!string.IsNullOrWhiteSpace(className))
             {
-                if (string.IsNullOrWhiteSpace(className)) return NotFound($"Malformed {nameof(className)}.");
+                if (string.IsNullOrWhiteSpace(className)) return NotFound($"Malformed {nameof(className)}");
                 className = className.Trim();
 
-                if (string.IsNullOrWhiteSpace(individualName)) return NotFound($"Malformed {nameof(individualName)}.");
+                if (string.IsNullOrWhiteSpace(individualName)) return NotFound($"Malformed {nameof(individualName)}");
                 individualName = individualName.Trim();
 
                 bool? exist = null;
                 if (isGuessable == 1) exist = true;
                 else if (isGuessable == 0) exist = false;
-                else if (isGuessable != -1) return NotFound($"Malformed {nameof(isGuessable)}.");
+                else if (isGuessable != -1) return NotFound($"Malformed {nameof(isGuessable)}");
                 ;
 
                 advisory.Engine.HandleGuessableFact(

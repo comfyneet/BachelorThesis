@@ -1,0 +1,17 @@
+﻿@using RiceDoctor.OntologyManager
+@model RiceDoctor.OntologyManager.Individual
+@{
+    var description = (string) ViewData["Description"];
+    ViewData["Title"] = "Bài viết " + Model;
+}
+
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-8">
+        <h2>
+            Bài viết <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@Model.Id">@Model</a>
+        </h2>
+
+        @Html.Raw(description)
+    </div>
+</div>

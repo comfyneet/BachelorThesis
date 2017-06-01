@@ -25,6 +25,10 @@
                 }
             </ul>
         }
+        else
+        {
+            @:<p>Không tìm thấy</p>
+        }
     </div>
     <div class="col-md-8">
         <h2>@Model</h2>
@@ -37,7 +41,13 @@
                 {
                     @:là @Model.Range
                 }
+                else
+                {
+                    @:không tìm thấy
+                }
             </h4>
+
+            <hr/>
 
             <h4>Chủ thể của @Model</h4>
             if (Model.GetAllDomains() != null)
@@ -52,6 +62,10 @@
                         }
                     </p>
                 }
+            }
+            else
+            {
+                @:<p>Không tìm thấy</p>
             }
         }
     </div>

@@ -26,6 +26,10 @@
                 }
             </ul>
         }
+        else
+        {
+            @:<p>Không tìm thấy</p>
+        }
     </div>
     <div class="col-md-8">
         <h2>@Model</h2>
@@ -46,6 +50,12 @@
                     </p>
                 }
             }
+            else
+            {
+                @:<p>Không tìm thấy</p>
+            }
+
+            <hr/>
 
             <h4>Giá trị khách thể của quan hệ với @Model là chủ thể</h4>
             if (Model.GetRelationValues() != null)
@@ -61,20 +71,39 @@
                     }
                 }
             }
+            else
+            {
+                @:<p>Không tìm thấy</p>
+            }
+
+            <hr/>
 
             <h4>Giá trị thuộc tính của @Model</h4>
             if (attributeValues != null)
             {
-                foreach (var attributeValuesPair in attributeValues)
+                foreach (var pair in attributeValues)
                 {
-                    foreach (var value in attributeValuesPair.Value)
+                    if (pair.Key.Id == "moTa")
                     {
                         <p>
-                            <a asp-controller="Ontology" asp-action="Attribute" asp-route-attributeName="@attributeValuesPair.Key.Id">@attributeValuesPair.Key</a>
-                            @Html.Raw(value)
+                            <a asp-controller="Ontology" asp-action="Article" asp-route-individualName="@Model.Id">Bài viết về @Model</a>
                         </p>
                     }
+                    else
+                    {
+                        foreach (var value in pair.Value)
+                        {
+                            <p>
+                                <a asp-controller="Ontology" asp-action="Attribute" asp-route-attributeName="@pair.Key.Id">@pair.Key</a>
+                                @Html.Raw(value)
+                            </p>
+                        }
+                    }
                 }
+            }
+            else
+            {
+                @:<p>Không tìm thấy</p>
             }
         }
     </div>

@@ -193,7 +193,7 @@ public class OntologyManager {
 
                 if (key != null) {
                     if (attributeValues == null) attributeValues = new HashSet<>();
-                    if (!key.getId().equals("ten")) attributeValues.add(new Pair<>(key, values));
+                    attributeValues.add(new Pair<>(key, values));
                 }
             }
 

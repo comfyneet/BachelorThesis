@@ -36,14 +36,7 @@ namespace RiceDoctor.WebApp.Controllers
             if (tmpSearchIndividuals.Count == 1)
             {
                 var searchIndividual = tmpSearchIndividuals.First();
-                if (searchIndividual.Value != null)
-                    foreach (var pair in searchIndividual.Value)
-                    {
-                        if (pair.Key.Id != "moTa") continue;
-                        ViewData["IndividualName"] = searchIndividual.Key.Label;
-                        ViewData["Description"] = SemanticParser.Parse(pair.Value.First());
-                        return View("Article");
-                    }
+                if (searchIndividual.Value == null) return RedirectToAction("Article", "Ontology", new {individualName = searchIndividual.Key.Id});
             }
 
             foreach (var searchIndividual in tmpSearchIndividuals)

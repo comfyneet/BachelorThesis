@@ -31,7 +31,7 @@ namespace RiceDoctor.WebApp.Controllers
             className = string.IsNullOrWhiteSpace(className) ? "Thing" : className.Trim();
 
             var @class = _ontologyManager.GetClass(className);
-            if (@class == null) return NotFound($"Class \"{className}\" not found.");
+            if (@class == null) return NotFound($"Class \"{className}\" not found");
 
             var directSuperClassesTree = new List<IList<Class>>();
             GetDirectSuperClassesTree(@class.GetDirectSuperClasses()?.ToList(), directSuperClassesTree, 0);
@@ -48,7 +48,7 @@ namespace RiceDoctor.WebApp.Controllers
             {
                 relationName = relationName.Trim();
                 relation = _ontologyManager.GetRelation(relationName);
-                if (relation == null) return NotFound($"Relation \"{relationName}\" not found.");
+                if (relation == null) return NotFound($"Relation \"{relationName}\" not found");
             }
 
             ViewData["Relations"] = _ontologyManager.GetRelations();
@@ -90,6 +90,25 @@ namespace RiceDoctor.WebApp.Controllers
             ViewData["Individuals"] = _ontologyManager.GetIndividuals();
 
             return View(individual);
+        }
+
+        public IActionResult Article(string individualName)
+        {
+            if (!string.IsNullOrWhiteSpace(individualName))
+            {
+                individualName = individualName.Trim();
+                var individual = _ontologyManager.GetIndividual(individualName);
+                var attributeValues = individual?.GetAttributeValues();
+                if (attributeValues != null)
+                    foreach (var pair in attributeValues)
+                    {
+                        if (pair.Key.Id != "moTa") continue;
+                        ViewData["Description"] = SemanticParser.Parse(pair.Value.First());
+                        return View(individual);
+                    }
+            }
+
+            return RedirectToAction("Individual", new {individualName});
         }
 
         private void GetDirectSuperClassesTree(
