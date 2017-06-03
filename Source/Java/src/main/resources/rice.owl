@@ -1762,32 +1762,32 @@
         <NamedIndividual IRI="#Tilt_Super_300_EC"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coGiaiDoan"/>
+        <ObjectProperty IRI="#xuatHienOGiaiDoan"/>
         <NamedIndividual IRI="#BenhLemLepHat"/>
         <NamedIndividual IRI="#GiaiDoanLamDong"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coGiaiDoan"/>
+        <ObjectProperty IRI="#xuatHienOGiaiDoan"/>
         <NamedIndividual IRI="#BenhLemLepHat"/>
         <NamedIndividual IRI="#GiaiDoanTro"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coGiaiDoan"/>
+        <ObjectProperty IRI="#xuatHienOGiaiDoan"/>
         <NamedIndividual IRI="#BenhLunSocDen"/>
         <NamedIndividual IRI="#GiaiDoanDeNhanh"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coGiaiDoan"/>
+        <ObjectProperty IRI="#xuatHienOGiaiDoan"/>
         <NamedIndividual IRI="#BenhLunSocDen"/>
         <NamedIndividual IRI="#GiaiDoanLamDong"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coGiaiDoan"/>
+        <ObjectProperty IRI="#xuatHienOGiaiDoan"/>
         <NamedIndividual IRI="#BenhLunSocDen"/>
         <NamedIndividual IRI="#GiaiDoanMa"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coGiaiDoan"/>
+        <ObjectProperty IRI="#xuatHienOGiaiDoan"/>
         <NamedIndividual IRI="#BenhLunSocDen"/>
         <NamedIndividual IRI="#GiaiDoanTro"/>
     </ObjectPropertyAssertion>
@@ -2027,6 +2027,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">pha 8 - 10 ml/ bình 8 lít</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#A1VAN_6.4SL"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thuốc A1VAN 6.4SL</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#thanhPhan"/>
         <NamedIndividual IRI="#A1VAN_6.4SL"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Coppercitrate</Literal>
@@ -2092,7 +2097,7 @@ Rầy nâu
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#Actara_25WWG"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ACTARA 25 WG</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thuốc ACTARA 25 WG</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#triSauBenhHai"/>
@@ -2119,12 +2124,13 @@ Khả năng hỗn hợp :	có thể hỗn hợp với [Thuoc]thuốc[/Thuoc] kh�
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#Admire_50EC"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ADMIRE 50EC – [Thuoc]thuốc[/Thuoc] ĐẶC TRỊ RẦY</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thuốc ADMIRE 50EC</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#triSauBenhHai"/>
         <NamedIndividual IRI="#Admire_50EC"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Đối tượng phòng trừ :	050EC: [Sau=BoTri]bọ trĩ[/Sau]/lúa. Rầy xanh/lúa. Rầy nâu/lúa. Rầy xanh/bông vải. Rệp/bông vải.
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">[Thuoc]thuốc[/Thuoc] ĐẶC TRỊ RẦY
+Đối tượng phòng trừ :	050EC: [Sau=BoTri]bọ trĩ[/Sau]/lúa. Rầy xanh/lúa. Rầy nâu/lúa. Rầy xanh/bông vải. Rệp/bông vải.
 200OD: [Sau=BoTri]bọ trĩ[/Sau]/lúa. [Sau=RayNau]Rầy nâu[/Sau]/lúa. Rệp sáp/cà phê. Rệp vảy/cà phê. [Sau=BoTri]bọ trĩ[/Sau]/điều. Rầy xanh/bông vải. Rệp muội/bông vải</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
@@ -2146,7 +2152,7 @@ Xuất xứ: Bayer S.A.S - Pháp</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#Antracol_70WP"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ANTRACOL 70WP</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thuốc ANTRACOL 70WP</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#triSauBenhHai"/>
@@ -2173,7 +2179,7 @@ Hoạt chất Fenobucarb có tác động tiếp xúc, vị độc và hiệu l�
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#Bassa_50EC"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">[Thuoc]thuốc[/Thuoc] trừ sâu Bassa 50EC</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thuốc Bassa 50EC</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#tuNgayCachLy"/>
@@ -2238,12 +2244,16 @@ Các biện pháp phòng trị chủ yếu:
 Khi bệnh nặng có thể rải [Thuoc]thuốc[/Thuoc] [Thuoc=Furadan_3_H]Furadan 3 H[/Thuoc] hay [Thuoc]thuốc[/Thuoc] Mocap.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#ten"/>
+        <DataProperty IRI="#nguonGoc"/>
         <NamedIndividual IRI="#BenhBuuRe"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Bệnh bướu rể do tuyến trùng hại lúa
-Tên khoa học: Meloidogyne graminicola.
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tên khoa học: Meloidogyne graminicola.
 
 -Tên tiếng Anh: Root Knot Nematode.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#BenhBuuRe"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Bệnh bướu rể do tuyến trùng hại lúa</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#moTa"/>
@@ -2410,6 +2420,11 @@ Khi nhiều vết [Benh=BenhDomNau]bệnh đốm nâu[/Benh] xuất hiện trên
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#BenhKhamVang"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Bệnh Khảm Vàng</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#BenhKhoVan"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">bệnh khô vằn</Literal>
     </DataPropertyAssertion>
@@ -2502,11 +2517,6 @@ Bệnh không truyền qua hạt giống lúa, không truyền qua đất và ti
 4. Tồn tại của bệnh trên đồng ruộng
 Ngoài cây lúa, [Benh=BenhLunSocDen]bệnh lùn sọc đen[/Benh] còn gây hại trên ngô, lúa mì, cỏ lồng vực, cỏ chát, cỏ đuôi phụng, vì các cây này cũng là ký chủ của [Sau=RayLungTrang]rầy lưng trắng[/Sau] và cũng là nguồn chứa vi rút để [Sau=RayLungTrang]rầy lưng trắng[/Sau] truyền sang cây lúa. Bệnh cũng có thể lưu tồn trên lúa chét của cây lúa bị bệnh trước đó.
 Vi rút gây bệnh tồn tại trong cơ thể của [Sau=RayLungTrang]rầy lưng trắng[/Sau] sống qua đông hoặc di chuyển rất xa theo gió và bão để gây bệnh cho lúa và một số loài cây khác ở các vùng khác hoặc vụ tiếp theo.</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#ten"/>
-        <NamedIndividual IRI="#BenhLunSocDen"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">[Benh=BenhLunSocDen]bệnh lùn sọc đen[/Benh]</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
@@ -2676,6 +2686,11 @@ b) Trừ bệnh:Biện pháp trừ bệnh hữu hiệu nhất đối với bện
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">pha 5-6 g / bình 8 lít  Phun 4-5 bình / công</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#Binhtin_75_WP"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thuốc Binhtin_75_WP</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#thanhPhan"/>
         <NamedIndividual IRI="#Binhtin_75_WP"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Tricyclazole 75 %</Literal>
@@ -2714,6 +2729,11 @@ b) Trừ bệnh:Biện pháp trừ bệnh hữu hiệu nhất đối với bện
         <DataProperty IRI="#luongThuoc"/>
         <NamedIndividual IRI="#Bisomin_6WP_2SL"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">PHA 50 ML/ BÌNH 8 lít  pha 4 bình 8 lít / 1000 m^2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#Bisomin_6WP_2SL"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thuốc Bisomin_6WP_2SL</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#thanhPhan"/>
@@ -2766,7 +2786,7 @@ Phun Plastimula 1SL liều lượng 20 ml/bình 16 lít nước phối trộn v�
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#BoTri"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">[Sau=BoTri]bọ trĩ[/Sau]</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">bọ trĩ</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#moTa"/>
@@ -2792,12 +2812,16 @@ Bọ trưởng thành và bọ non sống tụ tập ở gốc lúa ngay phía t
 - Dùng [Thuoc]thuốc[/Thuoc] trừ sâu phun trực tiếp vào gốc lúa nơi có nhiều [Sau=BoXit]bọ xít[/Sau] tập trung. Các loại [Thuoc]thuốc[/Thuoc] trừ sâu thông thường đều có thể diệt được [Sau=BoXit]bọ xít[/Sau].</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#ten"/>
+        <DataProperty IRI="#nguonGoc"/>
         <NamedIndividual IRI="#BoXit"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">[Sau=BoXit]bọ xít[/Sau] đen
-TÊN KHOA HỌC: SCOTINOPHARA SPP.
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">TÊN KHOA HỌC: SCOTINOPHARA SPP.
 HỌ: PENTATOMIDAE
 BỘ: HEMIPTERA</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#BoXit"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Bọ xít</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
@@ -2856,12 +2880,16 @@ Phòng trừ:
 Khi [Sau=ChauChau]châu chấu[/Sau] trưởng thành phát sinh với mật độ cao trên diện rộng thì việc phun [Thuoc]thuốc[/Thuoc] diệt trừ đòi hỏi phải làm đồng loạt, rất tốn công sức và chi phí. Tốt nhất nên theo dõi phát hiện [Sau=ChauChau]châu chấu[/Sau] non xuất hiện vào đầu mùa mưa rồi dùng [Thuoc]thuốc[/Thuoc] trừ ngay thì hiệu quả sẽ cao hơn nhiều. Ngoài việc phun [Thuoc]thuốc[/Thuoc], nhiều nơi bà con có kinh nghiệm dùng hạt bắp xâu thành chuỗi nhúng vào dung dịch [Thuoc]thuốc[/Thuoc] pha lẫn rỉ đường treo rải rác trong vườn để làm bả diệt [Sau=ChauChau]châu chấu[/Sau], hiệu quả cũng khá tốt.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#ten"/>
+        <DataProperty IRI="#nguonGoc"/>
         <NamedIndividual IRI="#ChauChau"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">[Sau=ChauChau]châu chấu[/Sau]
-(Tên khoa học: Oxya chinensis Thunberg Oxya velox Fabr)
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">(Tên khoa học: Oxya chinensis Thunberg Oxya velox Fabr)
 
 Thuộc Họ: Acrididae Bộ: Orthoptera</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#ChauChau"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">châu chấu</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
@@ -2884,12 +2912,16 @@ Thuộc Họ: Acrididae Bộ: Orthoptera</Literal>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Đây là một loại cỏ sống dai, thân có nhiều cành, cứng, bò, thỉnh thoảng lại phát ra những thân đứng, bất thụ. Lá phẳng, ngắn, hẹp, nhọn, dài 3-4cm. Cụm hoa gồm 2-5 bông hình ngón tay, gầy, dài 2,5-5cm màu xanh hay tím, tỏa trên đỉnh một cuống gầy. Quả dĩnh, hình thoi thường dẹt, không có rãnh, tự do trong các mày nhỏ.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#ten"/>
+        <DataProperty IRI="#nguonGoc"/>
         <NamedIndividual IRI="#CoChi"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">cỏ chỉ
-Tên khoa học Cynodon dactylon Pers.
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tên khoa học Cynodon dactylon Pers.
 
 Thuộc họ Lúa Poaceae (Gramìneae).</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#CoChi"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">cỏ chỉ</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#Image"/>
@@ -2951,6 +2983,11 @@ Cỏ lồng vực trông rất giống cây lúa khi chưa trổ bông. Có sứ
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">là [Thuoc]thuốc[/Thuoc] trừ bệnh có tác dụng nội hấp , phổ tác dụng rộng , có tác dụng phòng trừ bệnh hại</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#DIBAZOLE_5SC"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thuốc DIBAZOLE 5SC</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#thanhPhan"/>
         <NamedIndividual IRI="#DIBAZOLE_5SC"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Hexaconazole 5 % - 10 % dung môi và phụ gia vừa đủ</Literal>
@@ -2999,6 +3036,11 @@ Cỏ lồng vực trông rất giống cây lúa khi chưa trổ bông. Có sứ
         <DataProperty IRI="#luongThuoc"/>
         <NamedIndividual IRI="#Damycine"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">1.5-2 lít / ha</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#Damycine"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thuốc Damycine</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#thanhPhan"/>
@@ -3057,12 +3099,13 @@ Hãng SX: Nông Sinh</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#Ditacin_8L"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DITACIN 8L – [Thuoc]thuốc[/Thuoc] DIỆT VI KHUẨN CHO CÂY TRỒNG</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thuốc DITACIN 8L</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#triSauBenhHai"/>
         <NamedIndividual IRI="#Ditacin_8L"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">– Có tác dụng nội hấp, lưu dẫn, có hiệu lực phòng trừ các bệnh do virus, vi khuẩn và nấm gây ra.
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">-– [Thuoc]thuốc[/Thuoc] DIỆT VI KHUẨN CHO CÂY TRỒNG
+– Có tác dụng nội hấp, lưu dẫn, có hiệu lực phòng trừ các bệnh do virus, vi khuẩn và nấm gây ra.
 – Tăng khả năng kháng bệnh, tăng năng suất, chất lượng nông sản.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
@@ -3704,7 +3747,7 @@ Dạng [Thuoc]thuốc[/Thuoc] :	50SP: Bột tan trong nước</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#Hoả_Tiễn_50WP"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Hoả tiễn 50WP</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thuốc Hoả tiễn 50WP</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
@@ -5219,6 +5262,11 @@ Qui cách :20gr</Literal>
 - Pha 1-1,2kg/ha, pha 500-600L nước/ha.  Phun khi bệnh mới xuất hiện, có thể pha chung với các loại [Thuoc]thuốc[/Thuoc] BVTV khác. Pha xong phải phun ngày. Phun nhắc lại sau 7-10 ngày.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#Sasa_20WP"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thuốc SaSa 20WP</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#triSauBenhHai"/>
         <NamedIndividual IRI="#Sasa_20WP"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">- Dùng trừ bệnh đốm lá hại ớt, đặc trị [Benh=BenhBacLa]bệnh bạc lá[/Benh] (cháy bìa lá) hại lúa, gây đen hạt và lem lép hạt lúa; phòng trừ tốt [Benh=BenhBacLa]bệnh bạc lá[/Benh] trên cây mạ khi có 3-4 lá trước khi nhổ mạ từ 3-5 ngày
@@ -5622,7 +5670,7 @@ Ngưng phun [Thuoc]thuốc[/Thuoc] 14 ngày trước khi thu hoạch lúa, 7 ng�
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#Staner_20WP"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">STARNER 20WP</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thuốc STARNER 20WP</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#triSauBenhHai"/>
@@ -5653,7 +5701,7 @@ Hãng SX: Cty Bảo vệ Thực vật Sài Gòn</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#Star_10WP"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Star 10WP</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thuốc Star 10WP</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#thanhPhan"/>
@@ -5726,6 +5774,11 @@ Hãng SX: Cty Bảo vệ Thực vật Sài Gòn</Literal>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Armada</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#ThuocArmada"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thuốc Armada</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#thanhPhan"/>
         <NamedIndividual IRI="#ThuocArmada"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Imidacloprid</Literal>
@@ -5776,7 +5829,7 @@ Cơ chế tác động	 :[Thuoc]thuốc[/Thuoc] trừ bệnh nội hấp mạnh,
     <DataPropertyAssertion>
         <DataProperty IRI="#ten"/>
         <NamedIndividual IRI="#Tilt_Super_300_EC"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">TILT SUPER 300 EC 100ml</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thuốc TILT SUPER 300 EC 100ml</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#triSauBenhHai"/>
@@ -5829,6 +5882,11 @@ Trà	Đốm lá
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">2,5-5,0 g/ bình 8 lít</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#dana-win_12.5_WP"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">thuốc dana-win_12.5_WP</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#thanhPhan"/>
         <NamedIndividual IRI="#dana-win_12.5_WP"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Diniconazole 12.5 %</Literal>
@@ -5852,6 +5910,11 @@ Trà	Đốm lá
         <DataProperty IRI="#dacDiem"/>
         <NamedIndividual IRI="#dandy_15_EC"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">chuyên trị các loại nhện gây hại cho cây trồng</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#dandy_15_EC"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thuốc dandy_15_EC</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#thanhPhan"/>
@@ -5892,6 +5955,11 @@ Trà	Đốm lá
         <DataProperty IRI="#luongThuoc"/>
         <NamedIndividual IRI="#dibavil_50FL_50_WP"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">0,4-1 lít / ha pha 10 - 25 ml/ bình 8 lít</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ten"/>
+        <NamedIndividual IRI="#dibavil_50FL_50_WP"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">thuốc dibavil_50FL_50_WP</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#thanhPhan"/>
@@ -6348,22 +6416,22 @@ Trà	Đốm lá
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#coGiaiDoan</IRI>
-        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">có giai đoạn</Literal>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">xuất hiện ở giai đoạn</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#coQuyTrinh</IRI>
-        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">có quy trình</Literal>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">quy trình</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#coTacNhanGayHai</IRI>
-        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">có tác nhân gây hại</Literal>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">trị tác nhân gây hại</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#coThuoc</IRI>
-        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">có thuốc</Literal>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Được chưa bởi thuốc</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
