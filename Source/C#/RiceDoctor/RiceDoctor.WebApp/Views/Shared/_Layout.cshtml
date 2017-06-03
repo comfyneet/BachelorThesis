@@ -19,7 +19,7 @@
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
+    <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
@@ -50,11 +50,43 @@
         </div>
     </div>
 </nav>
-<div class="container">
+<div >
     @RenderBody()
-    <hr/>
     <footer>
-        <p>&copy; 2017 - Rice Doctor</p>
+        <div class="footer" id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3> Contact </h3>
+                        <ul>
+                            <li> <a href="#"> Tuyết Mai : 01689731190 </a> </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h3> Email </h3>
+                        <ul>
+                            <li> <a href="#"> 13520489@gm.uit.edu.vn </a> </li>
+                            <li> <a href="#"> 13520638@gm.uit.edu.vn </a> </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h3> Location </h3>
+                        <ul>
+                            <li> <a href="#"> Đại Học Công Nghệ Thông Tin </a> </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--/.row-->
+            </div>
+            <!--/.container-->
+        </div>
+        <!--/.footer-->
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="pull-left"> &copy; 2016 - RiceDoctor.WebApp</p>
+            </div>
+        </div>
+        <!--/.footer-bottom-->
     </footer>
 </div>
 
