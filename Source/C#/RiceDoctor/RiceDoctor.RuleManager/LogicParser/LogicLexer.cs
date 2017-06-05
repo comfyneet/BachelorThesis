@@ -14,11 +14,8 @@ namespace RiceDoctor.RuleManager
 
         protected override Token GetNextToken()
         {
-            while (char.IsWhiteSpace(CurrentChar) && CurrentChar != '\r' && CurrentChar != '\n')
+            while (char.IsWhiteSpace(CurrentChar))
                 Advance();
-
-            if (CurrentChar == '\r' || CurrentChar == '\n')
-                return GetNewLine();
 
             if (CurrentChar == '&')
             {
@@ -61,16 +58,10 @@ namespace RiceDoctor.RuleManager
                 Advance();
                 return new Token(Eq);
             }
-            if (CurrentChar == '"')
+            if (CurrentChar == ';')
             {
-                var unquotedString = GetUnquotedString();
-
-                // Simple checks if knowledge experts forget to insert '"' at the end of scalar facts
-                if (((string) unquotedString.Value).IndexOfAny(new[] {'"', '=', '\n'}) != -1)
-                    throw new InvalidOperationException(
-                        $"The lexer cannot scan the scalar fact \"{unquotedString.Value}\" correctly.");
-
-                return unquotedString;
+                Advance();
+                return new Token(Semi);
             }
             if (CurrentChar == '-' || "0123456789".IndexOf(CurrentChar) != -1)
                 return GetNumber();

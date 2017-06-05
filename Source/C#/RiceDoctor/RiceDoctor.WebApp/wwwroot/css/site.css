@@ -28,7 +28,7 @@ a {
 
 .navbar {
     border: none;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
 .nav li a {
@@ -191,7 +191,7 @@ a {
 }
 
 .bg-gray {
-    background-image: -moz-linear-gradient(center bottom, #BBBBBB 0%, #F0F0F0 100%);
+    background-image: linear-gradient(bottom, #BBBBBB 0%, #F0F0F0 100%);
     box-shadow: 0 1px 0 #B4B3B3;
 }
 
@@ -243,14 +243,12 @@ now override the 3.3 new styles for modern browsers & apply opacity
 @media all and (transform-3d), (-webkit-transform-3d) {
     .carousel-fade .carousel-inner > .item.next,
     .carousel-fade .carousel-inner > .item.active.right {
-        -webkit-transform: translate3d(0, 0, 0);
         opacity: 0;
         transform: translate3d(0, 0, 0);
     }
 
     .carousel-fade .carousel-inner > .item.prev,
     .carousel-fade .carousel-inner > .item.active.left {
-        -webkit-transform: translate3d(0, 0, 0);
         opacity: 0;
         transform: translate3d(0, 0, 0);
     }
@@ -258,7 +256,6 @@ now override the 3.3 new styles for modern browsers & apply opacity
     .carousel-fade .carousel-inner > .item.next.left,
     .carousel-fade .carousel-inner > .item.prev.right,
     .carousel-fade .carousel-inner > .item.active {
-        -webkit-transform: translate3d(0, 0, 0);
         opacity: 1;
         transform: translate3d(0, 0, 0);
     }

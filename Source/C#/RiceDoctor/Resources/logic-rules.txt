@@ -1,63 +1,64 @@
-﻿Dat=Test_DuplicateHypothesis & Dat=Test_DuplicateHypothesis -> Dat=Test_Conclusion {0}
-Dat=Test_Hypothesis -> Dat=Test_DuplicateConclusion & Dat=Test_DuplicateConclusion {0}
-Dat=Test_Duplicate & Dat=Test_Hypothesis -> Dat=Test_Duplicate & Dat=Test_Conclusion {0}
-Dat=Test_Hypothesis -> Dat=Test_Conclusion {0}
-Dat=Test_Hypothesis -> Dat=Test_Conclusion {0}
-Dat=Test_Duplicate -> Dat=Test_Duplicate {0}
-HinhDangThan=Test_ThanUn -> HinhDangThan=Test_ThanLun {0.1e-10}
-MauLa=Test_LaVang & HinhDangThan=Test_ThanLun -> Benh=Test_BenhVangLa {0.1e-10}
-MauLa=LaVang & HinhDangThan=ThanUn -> Benh=BenhVangLa {1.0e+0}
-GiaiDoan=GiaiDoanGieo | GiaiDoan=GiaiDoanMa | GiaiDoan=GiaiDoanDeNhanh -> Oc=OcBuuVang & Oc=OcBoTri
-HinhDangThan=ThanLun & (MauLa=LaVang | HinhDangLa=LaUa) -> HienTuong=HienTuongThieuDam
-TrieuChung=DeNhanhKem & ChieuCao=ChieuCaoThap -> HienTuong=HienThuongNgoDocHuuCo
-MauLa=LaVang & HinhDangLa=DauLaChay -> HienTuong=HienThuongNgoDocPhen
-NhietDo=NhietDoCao & DoAm=DoAmThap -> Benh=BenhDaoOn {0.5}
-NuocRuong=NuocCao -> Oc=OcBuuVang & Oc=OcSenh {0.0e-0}
-LuongMua=MuaNhieu & MoiTruong=GioLon -> Benh=BenhLemLepHat
-TrieuChung=NangXuatKem & MoiTruong=NangNhieu -> Benh=BenhVangLa
-GiaiDoan=GiaiDoanGieo | GiaiDoan=GiaiDoanMa | GiaiDoan=GiaiDoanDeNhanh -> Oc=BuuVang & Sau=BoTri
-GiaiDoan=GiaiDoanDeNhanh | GiaiDoan=GiaiDoanLamDong -> Sau=SauCuonLa & Sau=SauPhao & Sau=SauKeo & Sau=SauDucThan & Sau=SauDoiDucBe & Sau=Ray
-GiaiDoan=GiaiDoanDeNhanh | GiaiDoan=GiaiDoanLamDong -> Benh=BenhDaoOn & Benh=BenhKhoVan & Benh=BenhVangLa & Benh=BenhDomNau
-GiaiDoan=GiaiDoanLamDong | GiaiDoan=GiaiDoanTro -> Sau=SauCuonLa & Sau=SauDucThan & Sau=SauDoiDucBe & Sau=Ray & Benh=BenhDaoOn & Benh=BenhKhoVan & Benh=BenhVangLa
-GiaiDoan=GiaiDoanTro | GiaiDoan=GiaiDoanChin -> Benh=BenhBacLa & Benh=BenhVangLa & Benh=BenhLemLepHat & Benh=BenhDaoOn & Benh=BenhKhoVan & Sau=SauCanGie & Sau=BoXit & Sau=Ray & Sau=SauDucThan
-HinhDangThan=ThanLun & (MauLa=LaVang | HinhDangLa=LaUa | HinhDangLa=LaChet) -> HienTuong=HienTuongThieuDam
-Dat=DatKho -> HinhDangThan=ThanKho & HinhDangRe=ReKho & HinhDangHat=KhongHat
-NuocRuong=NuocCao -> HinhDangRe=ReUn
-HinhDangRe=ReUn -> HinhDangThan=ThanThoi & MauLa=LaVang & HinhDangHat=KhongHat & HinhDangBong=KhongTroBong
-TrieuChung=DoCay & HinhDangThan=ThanGay -> Benh=BenhLemLepHat
-GiaiDoan=GiaiDoanLamDong & LuongMua=MuaNhieu -> HinhDangThan=ThanGay & HinhDangBong=KhongTroBong
-GiaiDoan=GiaiDoanLamDong & MoiTruong=NangNhieu & NuocRuong=KhongNuoc -> Benh=BenhKhoVang & Benh=BenhVangLa
-LuongMua=MuaNhieu & DoAm=DoAmCao & GiaiDoan=GiaiDoanTro -> TrieuChung=BeThoi & HinhDangThan=ThanThoi
-NhietDo=NhietDoCao & GiaiDoan=GiaiDoanLamDong -> HinhDangThan=ThanKho & HinhDangBong=KhongTroBong & TrieuChung=KhongThuPhan
-HinhDangLa=LaChay & HinhDangRe=ReIt & TrieuChung=MuiHoi & HinhDangThan=ThanThoi -> Benh=BenhThoiThan
-NhietDo=NhietDoThap & DoAm=DoAmTrungBinh -> Benh=BenhDaoOn
-HinhDangLa=BiaLaChay & MauLa=LaVang -> Benh=BenhChayBiaLa
-HinhDangThan=ThanLun & MauLa=LaVangNhat -> Benh=BenhVangLun
-GiongLua=GiongBT7 -> Benh=BenhBacLa
-HinhDangLa=MepLaChay -> Benh=BenhChayBiaLa
-HinhDangThan=ThanLun & MauLa=LaXanhDam & HinhDangLa=MepLaRanh & HinhDangLa=MepLaXoan & HinhDangHat=HatLep -> Benh=BenhLunXoanLa
-HinhDangThan=ThanLun & MauLa=LaXanhDam & HinhDangLa=DauLaXoan & HinhDangLa=GanLaXung -> Benh=BenhLunSocDen
-LuongMua=MuaNhieu & GiaiDoan=GiaiDoanTro & Benh=BenhVangLa -> Benh=BenhBacLa
-Benh=BenhChayBiaLa & GiongLua=GiongBT7  & HinhDangLa=LaKho -> Benh=BenhBacLa
-GiaiDoan=GiaiDoanMa & Dat=DatAm & HinhDangThan=ThanLun & MauLa=LaHoiVang & HinhDangRe=ReNgan & HinhDangRe=ChopReBuu -> Benh=BenhTuyenTrung
-Benh=BenhVangLun -> Sau=RayNau
-HinhDangThan=ThanLun & HinhDangLa=LaCongQueo & (MauLa=LaXanh | MauLa=LaVangCam) & HinhDangBong=BongNho & HinhDangHat=HatLep -> Benh=BenhTungo 
-Benh=BenhTungo -> Sau=RayXanhDuoiDen
-Benh=BenhVangTamThoi -> Sau=RayXanhDuoiDen
-Benh=BenhKhamVang -> Sau=SauGai & Sau=BoLa
-MauLa=LaVang & MoiTruong=ThoiTietKho & HinhDangRe=ReThoi -> Benh=BenhBuuRe
-NuocRuong=NuocIt & MoiTruong=ThoiTietKho & TrieuChung=DamThieu -> Benh=BenhVangLa
-(GiaiDoan=GiaiDoanTro | GiaiDoan=GiaiDoanLamDong) & HinhDangLa=LaVechDom & MauLa=LaXanh -> Benh=BenhDomVang
-MauLa=LaNau & HinhDangHat=HatLep -> Benh=BenhDomNauHaiLua
-MoiTruong=ThoiTietBinhThuong & DoAm=DoAmCao & HinhDangBong=BongIt & MauLa=LaBac -> Sau=SauDucThanHaiCham
-NhietDo=NhietDoThap & GiaiDoan=GiaiDoanLamDong & VuMua=VuDongXuan & LuongMua=MuaIt -> Sau=SauDucThanNamVachDauNau
-GiaiDoan=GiaiDoanDeNhanh & MoiTruong=ThoiTietBinhThuong & DoAm=DoAmCao & LuongMua=MuaIt -> Sau=SauCuonLaNho
-LuongMua=MuaNhieu & GiaiDoan=GiaiDoanTro & MoiTruong=ThoiTietMatMe -> Sau=SauCuonLaLon
-NhietDo=NhietDoCao & DoAm=DoAmCao & GiaiDoan=GiaiDoanMa -> Sau=SauNan
-LuongMua=MuaIt & MoiTruong=ThoiTietMatMe & HinhDangLa=LaHinhBacThang -> Sau=SauPhao
-TrieuChung=DamNhieu & MoiTruong=ThoiTietNong & DoAm=DoAmCao & MoiTruong=NangIt -> Sau=SauGai
-GiaiDoan=GiaiDoanChin -> Sau=ChauChau
-MoiTruong=ThoiTietAmAp & DoAm=DoAmCao & MoiTruong=NangIt & LuongMua=MuaIt & GiaiDoan=GiaiDoanTro -> Sau=RayNau
-TrieuChung=DamNhieu & TrieuChung=CayDay & GiaiDoan=GiaiDoanLamDong -> Sau=RayLungTrang
-(GiaiDoan=GiaiDoanTroBong | GiaiDoan=GiaiDoanMa | GiaiDoan=GiaiDoanDeNhanh) & TrieuChung=CoNhieu & DoSauRuong=RuongSau -> Sau=BoXit
-TrieuChung=DamThieu -> HienTuong=HienTuongThieuDam
+﻿Dat=Test_DuplicateHypothesis & Dat=Test_DuplicateHypothesis -> Dat=Test_Conclusion {0};
+Dat=Test_Hypothesis -> Dat=Test_DuplicateConclusion & Dat=Test_DuplicateConclusion {0};
+Dat=Test_Duplicate & Dat=Test_Hypothesis -> Dat=Test_Duplicate & Dat=Test_Conclusion {0};
+Dat=Test_Hypothesis -> Dat=Test_Conclusion {0};
+Dat=Test_Hypothesis -> Dat=Test_Conclusion {0};
+Dat=Test_Duplicate -> Dat=Test_Duplicate {0};
+HinhDangThan=Test_ThanUn -> HinhDangThan=Test_ThanLun {0.1e-10};
+MauLa=Test_LaVang & HinhDangThan=Test_ThanLun -> Benh=Test_BenhVangLa {0.1e-10};
+MauLa=LaVang & HinhDangThan=ThanUn -> Benh=BenhVangLa {1.0e+0};
+GiaiDoan=GiaiDoanGieo | GiaiDoan=GiaiDoanMa | GiaiDoan=GiaiDoanDeNhanh -> Oc=OcBuuVang & Oc=OcBoTri;
+HinhDangThan=ThanLun & (MauLa=LaVang | HinhDangLa=LaUa) -> HienTuong=HienTuongThieuDam;
+TrieuChung=DeNhanhKem & ChieuCao=ChieuCaoThap -> HienTuong=HienThuongNgoDocHuuCo;
+MauLa=LaVang & HinhDangLa=DauLaChay -> HienTuong=HienThuongNgoDocPhen;
+NhietDo=NhietDoCao & DoAm=DoAmThap -> Benh=BenhDaoOn {0.5};
+NuocRuong=NuocCao -> Oc=OcBuuVang & Oc=OcSenh {0.0e-0};
+LuongMua=MuaNhieu & MoiTruong=GioLon -> Benh=BenhLemLepHat;
+TrieuChung=NangXuatKem & MoiTruong=NangNhieu -> Benh=BenhVangLa;
+GiaiDoan=GiaiDoanGieo | GiaiDoan=GiaiDoanMa | GiaiDoan=GiaiDoanDeNhanh -> Oc=BuuVang & Sau=BoTri;
+GiaiDoan=GiaiDoanDeNhanh | GiaiDoan=GiaiDoanLamDong -> Sau=SauCuonLa & Sau=SauPhao & Sau=SauKeo & Sau=SauDucThan & Sau=SauDoiDucBe & Sau=Ray;
+GiaiDoan=GiaiDoanDeNhanh | GiaiDoan=GiaiDoanLamDong -> Benh=BenhDaoOn & Benh=BenhKhoVan & Benh=BenhVangLa & Benh=BenhDomNau;
+GiaiDoan=GiaiDoanLamDong | GiaiDoan=GiaiDoanTro -> Sau=SauCuonLa & Sau=SauDucThan & Sau=SauDoiDucBe & Sau=Ray & Benh=BenhDaoOn & Benh=BenhKhoVan & Benh=BenhVangLa;
+GiaiDoan=GiaiDoanTro | GiaiDoan=GiaiDoanChin ->
+                Benh=BenhBacLa & Benh=BenhVangLa & Benh=BenhLemLepHat & Benh=BenhDaoOn & Benh=BenhKhoVan & Sau=SauCanGie & Sau=BoXit & Sau=Ray & Sau=SauDucThan;
+HinhDangThan=ThanLun & (MauLa=LaVang | HinhDangLa=LaUa | HinhDangLa=LaChet) -> HienTuong=HienTuongThieuDam;
+Dat=DatKho -> HinhDangThan=ThanKho & HinhDangRe=ReKho & HinhDangHat=KhongHat;
+NuocRuong=NuocCao -> HinhDangRe=ReUn;
+HinhDangRe=ReUn -> HinhDangThan=ThanThoi & MauLa=LaVang & HinhDangHat=KhongHat & HinhDangBong=KhongTroBong;
+TrieuChung=DoCay & HinhDangThan=ThanGay -> Benh=BenhLemLepHat;
+GiaiDoan=GiaiDoanLamDong & LuongMua=MuaNhieu -> HinhDangThan=ThanGay & HinhDangBong=KhongTroBong;
+GiaiDoan=GiaiDoanLamDong & MoiTruong=NangNhieu & NuocRuong=KhongNuoc -> Benh=BenhKhoVang & Benh=BenhVangLa;
+LuongMua=MuaNhieu & DoAm=DoAmCao & GiaiDoan=GiaiDoanTro -> TrieuChung=BeThoi & HinhDangThan=ThanThoi;
+NhietDo=NhietDoCao & GiaiDoan=GiaiDoanLamDong -> HinhDangThan=ThanKho & HinhDangBong=KhongTroBong & TrieuChung=KhongThuPhan;
+HinhDangLa=LaChay & HinhDangRe=ReIt & TrieuChung=MuiHoi & HinhDangThan=ThanThoi -> Benh=BenhThoiThan;
+NhietDo=NhietDoThap & DoAm=DoAmTrungBinh -> Benh=BenhDaoOn;
+HinhDangLa=BiaLaChay & MauLa=LaVang -> Benh=BenhChayBiaLa;
+HinhDangThan=ThanLun & MauLa=LaVangNhat -> Benh=BenhVangLun;
+GiongLua=GiongBT7 -> Benh=BenhBacLa;
+HinhDangLa=MepLaChay -> Benh=BenhChayBiaLa;
+HinhDangThan=ThanLun & MauLa=LaXanhDam & HinhDangLa=MepLaRanh & HinhDangLa=MepLaXoan & HinhDangHat=HatLep -> Benh=BenhLunXoanLa;
+HinhDangThan=ThanLun & MauLa=LaXanhDam & HinhDangLa=DauLaXoan & HinhDangLa=GanLaXung -> Benh=BenhLunSocDen;
+LuongMua=MuaNhieu & GiaiDoan=GiaiDoanTro & Benh=BenhVangLa -> Benh=BenhBacLa;
+Benh=BenhChayBiaLa & GiongLua=GiongBT7  & HinhDangLa=LaKho -> Benh=BenhBacLa;
+GiaiDoan=GiaiDoanMa & Dat=DatAm & HinhDangThan=ThanLun & MauLa=LaHoiVang & HinhDangRe=ReNgan & HinhDangRe=ChopReBuu -> Benh=BenhTuyenTrung;
+Benh=BenhVangLun -> Sau=RayNau;
+HinhDangThan=ThanLun & HinhDangLa=LaCongQueo & (MauLa=LaXanh | MauLa=LaVangCam) & HinhDangBong=BongNho & HinhDangHat=HatLep -> Benh=BenhTungo;
+Benh=BenhTungo -> Sau=RayXanhDuoiDen;
+Benh=BenhVangTamThoi -> Sau=RayXanhDuoiDen;
+Benh=BenhKhamVang -> Sau=SauGai & Sau=BoLa;
+MauLa=LaVang & MoiTruong=ThoiTietKho & HinhDangRe=ReThoi -> Benh=BenhBuuRe;
+NuocRuong=NuocIt & MoiTruong=ThoiTietKho & TrieuChung=DamThieu -> Benh=BenhVangLa;
+(GiaiDoan=GiaiDoanTro | GiaiDoan=GiaiDoanLamDong) & HinhDangLa=LaVechDom & MauLa=LaXanh -> Benh=BenhDomVang;
+MauLa=LaNau & HinhDangHat=HatLep -> Benh=BenhDomNauHaiLua;
+MoiTruong=ThoiTietBinhThuong & DoAm=DoAmCao & HinhDangBong=BongIt & MauLa=LaBac -> Sau=SauDucThanHaiCham;
+NhietDo=NhietDoThap & GiaiDoan=GiaiDoanLamDong & VuMua=VuDongXuan & LuongMua=MuaIt -> Sau=SauDucThanNamVachDauNau;
+GiaiDoan=GiaiDoanDeNhanh & MoiTruong=ThoiTietBinhThuong & DoAm=DoAmCao & LuongMua=MuaIt -> Sau=SauCuonLaNho;
+LuongMua=MuaNhieu & GiaiDoan=GiaiDoanTro & MoiTruong=ThoiTietMatMe -> Sau=SauCuonLaLon;
+NhietDo=NhietDoCao & DoAm=DoAmCao & GiaiDoan=GiaiDoanMa -> Sau=SauNan;
+LuongMua=MuaIt & MoiTruong=ThoiTietMatMe & HinhDangLa=LaHinhBacThang -> Sau=SauPhao;
+TrieuChung=DamNhieu & MoiTruong=ThoiTietNong & DoAm=DoAmCao & MoiTruong=NangIt -> Sau=SauGai;
+GiaiDoan=GiaiDoanChin -> Sau=ChauChau;
+MoiTruong=ThoiTietAmAp & DoAm=DoAmCao & MoiTruong=NangIt & LuongMua=MuaIt & GiaiDoan=GiaiDoanTro -> Sau=RayNau;
+TrieuChung=DamNhieu & TrieuChung=CayDay & GiaiDoan=GiaiDoanLamDong -> Sau=RayLungTrang;
+(GiaiDoan=GiaiDoanTroBong | GiaiDoan=GiaiDoanMa | GiaiDoan=GiaiDoanDeNhanh) & TrieuChung=CoNhieu & DoSauRuong=RuongSau -> Sau=BoXit;
+TrieuChung=DamThieu -> HienTuong=HienTuongThieuDam;

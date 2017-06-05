@@ -1,0 +1,44 @@
+﻿@using RiceDoctor.OntologyManager
+@model IReadOnlyCollection<RiceDoctor.OntologyManager.Class>
+@{
+    ViewData["Title"] = "Thể hiện";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>@ViewData["Title"]</h2>
+
+        @if (Model != null)
+        {
+            foreach (var cls in Model)
+            {
+                <section>
+                    <h4>Lớp @cls</h4>
+                    @if (cls.GetAllIndividuals() != null)
+                    {
+                        foreach (var allIndividual in cls.GetAllIndividuals())
+                        {
+                            <p>
+                                <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@allIndividual.Id">@allIndividual</a>
+                                @if (cls.GetDirectIndividuals()?.Contains(allIndividual) == true)
+                                {
+                                    @:(trực tiếp)
+                                }
+                            </p>
+                        }
+                    }
+                    else
+                    {
+                        @:<p>Không tìm thấy</p>
+                    }
+                </section>
+
+                <hr/>
+            }
+        }
+        else
+        {
+            <p>Không tìm thấy</p>
+        }
+    </div>
+</div>

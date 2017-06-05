@@ -14,23 +14,21 @@
         {
             if (i > 0)
             {
-                beginTree.Append(", ");
+                beginTree.Append(',');
             }
-            beginTree.Append("<a href=\"");
-            beginTree.Append(Url.Action("Class", "Ontology", new {className = tmpDirectSuperClasses[i].Id}));
-            beginTree.Append("\">" + tmpDirectSuperClasses[i] + "</a>");
+            beginTree.Append(" <a href=\"" + Url.Action("Class", "Ontology", new {className = tmpDirectSuperClasses[i].Id}) + "\">" + tmpDirectSuperClasses[i] + "</a>");
         }
         endTree.Insert(0, "</li></ul>");
     }
 
-    beginTree.Append("<ul><li><a href=\"");
-    beginTree.Append(Url.Action("Class", "Ontology", new {className = Model.Id}));
-    beginTree.Append("\">" + Model + "</a> (this)");
+    beginTree.Append("<ul><li>");
+    beginTree.Append("<a href=\"" + Url.Action("Class", "Ontology", new {className = Model.Id}) + "\">" + Model + "</a> (this)");
     endTree.Insert(0, "</li></ul>");
 }
 
 <div class="row">
     <div class="col-md-3">
+        <h4>Quan hệ phân cấp cha-con</h4>
         <nav clas="navbar navbar-inverse">
             <div class="bg-teal">
                 @Html.Raw(beginTree)
@@ -50,118 +48,130 @@
         </nav>
     </div>
     <div class="col-md-9">
-        <h2>@Model</h2>
+        <h2>@ViewData["Title"]</h2>
 
-        <h4>Lớp cha của @Model</h4>
-        @if (Model.GetAllSuperClasses() != null)
-        {
-            foreach (var allSuperClass in Model.GetAllSuperClasses())
+        <section>
+            <h4>Lớp cha của @Model</h4>
+            @if (Model.GetAllSuperClasses() != null)
             {
-                <p>
-                    <a asp-controller="Ontology" asp-action="Class" asp-route-className="@allSuperClass.Id">@allSuperClass</a>
-                    @if (Model.GetDirectSuperClasses()?.Contains(allSuperClass) == true)
-                    {
-                        @:(trực tiếp)
-                    }
-                </p>
+                foreach (var allSuperClass in Model.GetAllSuperClasses())
+                {
+                    <p>
+                        <a asp-controller="Ontology" asp-action="Class" asp-route-className="@allSuperClass.Id">@allSuperClass</a>
+                        @if (Model.GetDirectSuperClasses()?.Contains(allSuperClass) == true)
+                        {
+                            @:(trực tiếp)
+                        }
+                    </p>
+                }
             }
-        }
-        else
-        {
-            @:<p>Không tìm thấy</p>
-        }
+            else
+            {
+                @:<p>Không tìm thấy</p>
+            }
+        </section>
 
         <hr/>
 
-        <h4>Lớp con của @Model</h4>
-        @if (Model.GetAllSubClasses() != null)
-        {
-            foreach (var allSubClass in Model.GetAllSubClasses())
+        <section>
+            <h4>Lớp con của @Model</h4>
+            @if (Model.GetAllSubClasses() != null)
             {
-                <p>
-                    <a asp-controller="Ontology" asp-action="Class" asp-route-className="@allSubClass.Id">@allSubClass</a>
-                    @if (Model.GetDirectSubClasses()?.Contains(allSubClass) == true)
-                    {
-                        @:(trực tiếp)
-                    }
-                </p>
+                foreach (var allSubClass in Model.GetAllSubClasses())
+                {
+                    <p>
+                        <a asp-controller="Ontology" asp-action="Class" asp-route-className="@allSubClass.Id">@allSubClass</a>
+                        @if (Model.GetDirectSubClasses()?.Contains(allSubClass) == true)
+                        {
+                            @:(trực tiếp)
+                        }
+                    </p>
+                }
             }
-        }
-        else
-        {
-            @:<p>Không tìm thấy</p>
-        }
+            else
+            {
+                @:<p>Không tìm thấy</p>
+            }
+        </section>
 
         <hr/>
 
-        <h4>Thuộc tính của @Model</h4>
-        @if (Model.GetAttributes() != null)
-        {
-            foreach (var attribute in Model.GetAttributes())
+        <section>
+            <h4>Thuộc tính của @Model</h4>
+            @if (Model.GetAttributes() != null)
             {
-                <p>
-                    <a asp-controller="Ontology" asp-action="Attribute" asp-route-attributeName="@attribute.Id">@attribute</a> @attribute.Range
-                </p>
+                foreach (var attribute in Model.GetAttributes())
+                {
+                    <p>
+                        <a asp-controller="Ontology" asp-action="Attribute" asp-route-attributeName="@attribute.Id">@attribute</a> @attribute.Range
+                    </p>
+                }
             }
-        }
-        else
-        {
-            @:<p>Không tìm thấy</p>
-        }
+            else
+            {
+                @:<p>Không tìm thấy</p>
+            }
+        </section>
 
         <hr/>
 
-        <h4>Quan hệ của @Model với @Model là chủ thể</h4>
-        @if (Model.GetDomainRelations() != null)
-        {
-            foreach (var domainRelation in Model.GetDomainRelations())
+        <section>
+            <h4>Quan hệ của @Model với @Model là chủ thể</h4>
+            @if (Model.GetDomainRelations() != null)
             {
-                <p>
-                    <a asp-controller="Ontology" asp-action="Relation" asp-route-relationName="@domainRelation.Id">@domainRelation</a>
-                </p>
+                foreach (var domainRelation in Model.GetDomainRelations())
+                {
+                    <p>
+                        <a asp-controller="Ontology" asp-action="Relation" asp-route-relationName="@domainRelation.Id">@domainRelation</a>
+                    </p>
+                }
             }
-        }
-        else
-        {
-            @:<p>Không tìm thấy</p>
-        }
+            else
+            {
+                @:<p>Không tìm thấy</p>
+            }
+        </section>
 
         <hr/>
 
-        <h4>Quan hệ của @Model với @Model là khách thể</h4>
-        @if (Model.GetRangeRelations() != null)
-        {
-            foreach (var rangeRelation in Model.GetRangeRelations())
+        <section>
+            <h4>Quan hệ của @Model với @Model là khách thể</h4>
+            @if (Model.GetRangeRelations() != null)
             {
-                <p>
-                    <a asp-controller="Ontology" asp-action="Relation" asp-route-relationName="@rangeRelation.Id">@rangeRelation</a>
-                </p>
+                foreach (var rangeRelation in Model.GetRangeRelations())
+                {
+                    <p>
+                        <a asp-controller="Ontology" asp-action="Relation" asp-route-relationName="@rangeRelation.Id">@rangeRelation</a>
+                    </p>
+                }
             }
-        }
-        else
-        {
-            @:<p>Không tìm thấy</p>
-        }
+            else
+            {
+                @:<p>Không tìm thấy</p>
+            }
+        </section>
 
         <hr/>
 
-        <h4>Thể hiện của @Model</h4>
-        @if (Model.GetAllIndividuals() != null)
-        {
-            foreach (var allIndividual in Model.GetAllIndividuals())
+        <section>
+            <h4>Thể hiện của @Model</h4>
+            @if (Model.GetAllIndividuals() != null)
             {
-                <p>
-                    <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@allIndividual.Id">@allIndividual</a>
-                    @if (Model.GetDirectIndividuals()?.Contains(allIndividual) == true)
-                    {
-                        @:(trực tiếp)
-                    }
-                </p>
+                foreach (var allIndividual in Model.GetAllIndividuals())
+                {
+                    <p>
+                        <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@allIndividual.Id">@allIndividual</a>
+                        @if (Model.GetDirectIndividuals()?.Contains(allIndividual) == true)
+                        {
+                            @:(trực tiếp)
+                        }
+                    </p>
+                }
             }
-        }
-        else
-        {
-            @:<p>Không tìm thấy</p>
-        }
+            else
+            {
+                @:<p>Không tìm thấy</p>
+            }
+        </section>
     </div>
 </div>

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using RiceDoctor.OntologyManager;
 using RiceDoctor.SemanticCode;
 using RiceDoctor.Shared;
+using static RiceDoctor.OntologyManager.GetType;
 using Attribute = RiceDoctor.OntologyManager.Attribute;
 
 namespace RiceDoctor.WebApp.Controllers
@@ -92,6 +93,13 @@ namespace RiceDoctor.WebApp.Controllers
             return View(individual);
         }
 
+        public IActionResult Individuals()
+        {
+            var subClasses = _ontologyManager.GetSubClasses("Thing", GetDirect);
+
+            return View(subClasses);
+        }
+
         public IActionResult Article(string individualName, string keywords = null)
         {
             if (!string.IsNullOrWhiteSpace(keywords)) ViewData["Keywords"] = keywords.Trim();
@@ -125,7 +133,7 @@ namespace RiceDoctor.WebApp.Controllers
 
             if (directSuperClasses != null)
             {
-                directSuperClassesTree.Add(directSuperClasses);
+                directSuperClassesTree.Insert(0, directSuperClasses);
 
                 var newDirectSuperClasses = new List<Class>();
                 foreach (var directSuperClass in directSuperClasses)

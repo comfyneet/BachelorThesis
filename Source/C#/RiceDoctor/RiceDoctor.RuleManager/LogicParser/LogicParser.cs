@@ -39,8 +39,6 @@ namespace RiceDoctor.RuleManager
 
             while (CurrentToken.Type != Eof)
             {
-                Eat(NewLine);
-
                 logicRules = ParseLogicRules();
                 logicRuleList.AddRange(logicRules);
             }
@@ -69,6 +67,8 @@ namespace RiceDoctor.RuleManager
 
                 Eat(RBrace);
             }
+
+            Eat(Semi);
 
             var logicRules = hypotheses
                 .Select(h => new LogicRule(h, conclusions, certaintyFactor))

@@ -1,4 +1,5 @@
-﻿@using RiceDoctor.RuleManager
+﻿@using System.Text
+@using RiceDoctor.RuleManager
 @model RiceDoctor.WebApp.Models.Advisory
 @{
     var incompleteRules = (IReadOnlyCollection<Tuple<double, LogicRule, IReadOnlyList<Fact>>>) ViewData["IncompleteRules"];
@@ -13,27 +14,33 @@
         {
             <h2>Suy diễn thành công</h2>
 
-            <h4>Kết quả</h4>
-            foreach (var resultFact in Model.Results)
-            {
-                <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@(((IndividualFact) resultFact).Individual)">@resultFact</a>
-            }
+            <section>
+                <h4>Kết quả</h4>
+                @foreach (var resultFact in Model.Results)
+                {
+                    <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@(((IndividualFact) resultFact).Individual)">@resultFact</a>
+                }
+            </section>
 
             <hr/>
 
             <button id="inferredRulesBtn">Xem thông tin luật</button>
             <div id="inferredRules" style="display: none">
-                <h4>Luật tường minh được áp dụng</h4>
-                @foreach (var rule in Model.Engine.InferredLogicRules)
-                {
-                    <p>@rule</p>
-                }
+                <section>
+                    <h4>Luật tường minh được áp dụng</h4>
+                    @foreach (var rule in Model.Engine.InferredLogicRules)
+                    {
+                        <p>@rule</p>
+                    }
+                </section>
 
-                <h4>Luật quan hệ được áp dụng</h4>
-                @foreach (var rule in Model.Engine.InferredRelationRules)
-                {
-                    <p>@rule.Key - @rule.Value</p>
-                }
+                <section>
+                    <h4>Luật quan hệ được áp dụng</h4>
+                    @foreach (var rule in Model.Engine.InferredRelationRules)
+                    {
+                        <p>@rule.Key - @rule.Value</p>
+                    }
+                </section>
             </div>
         }
         else
@@ -42,23 +49,24 @@
 
             if (incompleteFacts != null)
             {
+                var incompleteFactsSb = new StringBuilder();
                 <p>
                     Hệ thống chuẩn đoán kết quả là
                     @for (var i = 0; i < incompleteFacts.Count; ++i)
                     {
                         if (incompleteFacts.Count > 1 && i == incompleteFacts.Count - 1)
                         {
-                            @:và
+                            incompleteFactsSb.Append(" và");
                         }
                         else if (i > 0)
                         {
-                            @:,
+                            incompleteFactsSb.Append(',');
                         }
-                        <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@(((IndividualFact) incompleteFacts[i]).Individual)">
-                            @incompleteFacts[i]
-                        </a>
+                        incompleteFactsSb.Append(" <a href=\""
+                                                 + Url.Action("Individual", "Ontology", new {individualName = ((IndividualFact) incompleteFacts[i]).Individual})
+                                                 + "\">" + incompleteFacts[i] + "</a>");
                     }
-                    với độ chính xác @priority%.
+                    @Html.Raw(incompleteFactsSb) với độ chính xác @priority%.
                 </p>
             }
 

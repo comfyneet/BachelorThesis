@@ -32,62 +32,69 @@
         </nav>
     </div>
     <div class="col-md-9">
-        <h2>@Model</h2>
+        <h2>@ViewData["Title"]</h2>
 
         @if (Model != null)
         {
-            <h4>
-                Quan hệ phản đối của @Model
-                @if (Model.GetInverseRelation() != null)
+            <section>
+                <h4>
+                    Quan hệ phản đối của @Model
+                    @if (Model.GetInverseRelation() != null)
+                    {
+                        @:là @Model.GetInverseRelation()
+                    }
+                    else
+                    {
+                        @:không tìm thấy
+                    }
+                </h4>
+            </section>
+
+            <hr/>
+
+            <section>
+                <h4>Chủ thể của @Model</h4>
+                @if (Model.GetAllDomains() != null)
                 {
-                    @:là @Model.GetInverseRelation()
+                    foreach (var allDomain in Model.GetAllDomains())
+                    {
+                        <p>
+                            <a asp-controller="Ontology" asp-action="Class" asp-route-className="@allDomain.Id">@allDomain</a>
+                            @if (Model.GetDirectDomains()?.Contains(allDomain) == true)
+                            {
+                                @:(trực tiếp)
+                            }
+                        </p>
+                    }
                 }
                 else
                 {
-                    @:không tìm thấy
+                    @:<p>Không tìm thấy</p>
                 }
-            </h4>
-            <hr/>
-
-            <h4>Chủ thể của @Model</h4>
-            if (Model.GetAllDomains() != null)
-            {
-                foreach (var allDomain in Model.GetAllDomains())
-                {
-                    <p>
-                        <a asp-controller="Ontology" asp-action="Class" asp-route-className="@allDomain.Id">@allDomain</a>
-                        @if (Model.GetDirectDomains()?.Contains(allDomain) == true)
-                        {
-                            @:(trực tiếp)
-                        }
-                    </p>
-                }
-            }
-            else
-            {
-                @:<p>Không tìm thấy</p>
-            }
+            </section>
 
             <hr/>
 
-            <h4>Khách thể của @Model</h4>
-            if (Model.GetAllRanges() != null)
-            {
-                foreach (var allRange in Model.GetAllRanges())
+            <section>
+                <h4>Khách thể của @Model</h4>
+                @if (Model.GetAllRanges() != null)
                 {
-                    <p>
-                        <a asp-controller="Ontology" asp-action="Class" asp-route-className="@allRange.Id">@allRange</a>
-                        @if (Model.GetDirectRanges()?.Contains(allRange) == true)
-                        {
-                            @:(trực tiếp)
-                        }
-                    </p>
+                    foreach (var allRange in Model.GetAllRanges())
+                    {
+                        <p>
+                            <a asp-controller="Ontology" asp-action="Class" asp-route-className="@allRange.Id">@allRange</a>
+                            @if (Model.GetDirectRanges()?.Contains(allRange) == true)
+                            {
+                                @:(trực tiếp)
+                            }
+                        </p>
+                    }
                 }
-            }
-            else
-            {
-                @:<p>Không tìm thấy</p>
-            }
+                else
+                {
+                    @:<p>Không tìm thấy</p>
+                }
+            </section>
         }
     </div>
 </div>

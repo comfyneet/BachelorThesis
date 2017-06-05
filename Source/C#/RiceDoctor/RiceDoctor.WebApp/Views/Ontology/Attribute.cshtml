@@ -1,4 +1,5 @@
-﻿@using RiceDoctor.OntologyManager
+﻿@using System.Text
+@using RiceDoctor.OntologyManager
 @using Attribute = RiceDoctor.OntologyManager.Attribute
 @model RiceDoctor.OntologyManager.Attribute
 @{
@@ -34,55 +35,62 @@
         </nav>
     </div>
     <div class="col-md-9">
-        <h2>@Model</h2>
+        <h2>@ViewData["Title"]</h2>
 
         @if (Model != null)
         {
-            <h4>Kiểu dữ liệu của @Model</h4>
-            if (Model.Range != null)
-            {
-                <p>
-                    @Model.Range
-                    @if (Model.Range == DataType.Enumerated)
-                    {
-                        @:(
-                        for (var i = 0; i < Model.EnumeratedValues.Count; ++i)
-                        {
-                            if (i > 0)
-                            {
-                                @:,
-                            }
-                            @Model.EnumeratedValues[i]
-                        }
-                        @:)
-                    }
-                </p>
-            }
-            else
-            {
-                @:<p>không tìm thấy</p>
-            }
-
-            <hr/>
-
-            <h4>Chủ thể của @Model</h4>
-            if (Model.GetAllDomains() != null)
-            {
-                foreach (var allDomain in Model.GetAllDomains())
+            <section>
+                <h4>Kiểu dữ liệu của @Model</h4>
+                @if (Model.Range != null)
                 {
                     <p>
-                        <a asp-controller="Ontology" asp-action="Class" asp-route-className="@allDomain.Id">@allDomain</a>
-                        @if (Model.GetDirectDomains()?.Contains(allDomain) == true)
+                        @Model.Range
+
+                        @if (Model.Range == DataType.Enumerated)
                         {
-                            @:(trực tiếp)
+                            var valuesSb = new StringBuilder();
+                            valuesSb.Append('(');
+                            for (var i = 0; i < Model.EnumeratedValues.Count; ++i)
+                            {
+                                if (i > 0)
+                                {
+                                    valuesSb.Append(',');
+                                }
+                                valuesSb.Append(" " + Model.EnumeratedValues[i]);
+                            }
+                            valuesSb.Append(')');
+                            valuesSb.ToString();
                         }
                     </p>
                 }
-            }
-            else
-            {
-                @:<p>Không tìm thấy</p>
-            }
+                else
+                {
+                    @:<p>không tìm thấy</p>
+                }
+            </section>
+
+            <hr/>
+
+            <section>
+                <h4>Chủ thể của @Model</h4>
+                @if (Model.GetAllDomains() != null)
+                {
+                    foreach (var allDomain in Model.GetAllDomains())
+                    {
+                        <p>
+                            <a asp-controller="Ontology" asp-action="Class" asp-route-className="@allDomain.Id">@allDomain</a>
+                            @if (Model.GetDirectDomains()?.Contains(allDomain) == true)
+                            {
+                                @:(trực tiếp)
+                            }
+                        </p>
+                    }
+                }
+                else
+                {
+                    @:<p>Không tìm thấy</p>
+                }
+            </section>
         }
     </div>
 </div>

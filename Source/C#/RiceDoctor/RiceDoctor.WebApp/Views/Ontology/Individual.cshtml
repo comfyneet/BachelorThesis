@@ -1,4 +1,5 @@
-﻿@using Attribute = RiceDoctor.OntologyManager.Attribute
+﻿@using System.Text
+@using Attribute = RiceDoctor.OntologyManager.Attribute
 @model RiceDoctor.OntologyManager.Individual
 @{
     var keywords = (string) ViewData["Keywords"];
@@ -18,7 +19,7 @@
             </div>
         }
 
-        <h2>@Model</h2>
+        <h2>@ViewData["Title"]</h2>
 
         @if (Model != null)
         {
@@ -71,25 +72,26 @@
                         @if (Model.GetAllClasses() != null)
                         {
                             var allClasses = Model.GetAllClasses().ToList();
+                            var allClassesSb = new StringBuilder();
                             <p>
                                 @Model là thể hiện của lớp
                                 @for (var i = 0; i < allClasses.Count; ++i)
                                 {
                                     if (allClasses.Count > 1 && i == allClasses.Count - 1)
                                     {
-                                        @:và
+                                        allClassesSb.Append(" và");
                                     }
                                     else if (i > 0)
                                     {
-                                        @:,
+                                        allClassesSb.Append(',');
                                     }
-                                    <a asp-controller="Ontology" asp-action="Class" asp-route-className="@allClasses[i].Id">@allClasses[i]</a>
+                                    allClassesSb.Append(" <a href=\"" + Url.Action("Class", "Ontology", new {className = allClasses[i].Id}) + "\">" + allClasses[i] + "</a>");
                                     if (Model.GetDirectClass() == allClasses[i])
                                     {
-                                        @:(trực tiếp)
+                                        allClassesSb.Append(" (trực tiếp)");
                                     }
                                 }
-                                .
+                                @Html.Raw(allClassesSb).
                             </p>
                         }
 
@@ -99,6 +101,7 @@
                             {
                                 var comment = pair.Key.GetComment() ?? pair.Key.ToString();
                                 var values = pair.Value.ToList();
+                                var valuesSb = new StringBuilder();
                                 <p>
                                     @Model <a asp-controller="Ontology" asp-action="Relation" asp-route-relationName="@pair.Key.Id">@comment</a>
 
@@ -106,15 +109,15 @@
                                     {
                                         if (values.Count > 1 && i == values.Count - 1)
                                         {
-                                            @:và
+                                            valuesSb.Append(" và");
                                         }
                                         else if (i > 0)
                                         {
-                                            @:,
+                                            valuesSb.Append(',');
                                         }
-                                        <a asp-controller="Ontology" asp-action="Class" asp-route-className="@values[i].Id">@values[i]</a>
+                                        valuesSb.Append(" <a href=\"" + Url.Action("Class", "Ontology", new {className = values[i].Id}) + "\">" + values[i] + "</a>");
                                     }
-                                    .
+                                    @Html.Raw(valuesSb).
                                 </p>
                             }
                         }
