@@ -8,7 +8,7 @@ namespace RiceDoctor.InferenceEngine
 {
     public enum ResponseType
     {
-        GuessableFact,
+        GuessableFacts,
         InferredResults,
         NoResults
     }
@@ -20,27 +20,16 @@ namespace RiceDoctor.InferenceEngine
             Type = NoResults;
         }
 
-        public Response([NotNull] IReadOnlyCollection<Fact> results)
+        public Response([NotNull] IReadOnlyCollection<Fact> facts, ResponseType type)
         {
-            Check.NotNull(results, nameof(results));
+            Check.NotNull(facts, nameof(facts));
 
-            Type = InferredResults;
-            Results = results;
-        }
-
-        public Response([NotNull] Fact guessableFact)
-        {
-            Check.NotNull(guessableFact, nameof(guessableFact));
-
-            Type = ResponseType.GuessableFact;
-            GuessableFact = guessableFact;
+            Facts = facts;
+            Type = type;
         }
 
         [CanBeNull]
-        public IReadOnlyCollection<Fact> Results { get; }
-
-        [CanBeNull]
-        public Fact GuessableFact { get; }
+        public IReadOnlyCollection<Fact> Facts { get; }
 
         public ResponseType Type { get; }
     }

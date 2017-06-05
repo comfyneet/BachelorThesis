@@ -34,8 +34,7 @@ namespace RiceDoctor.OntologyManager
         [NotNull]
         public static Manager Instance { get; }
 
-        public IReadOnlyDictionary<Individual, IReadOnlyDictionary<Attribute, IReadOnlyCollection<string>>>
-            SearchIndividuals(string keywords)
+        public IReadOnlyCollection<Individual> SearchIndividuals(string keywords)
         {
             Check.NotEmpty(keywords, nameof(keywords));
 
@@ -47,24 +46,26 @@ namespace RiceDoctor.OntologyManager
 
             var jsonSearchIndividuals = (JArray) response.Data["SearchIndividuals"];
             var searchIndividuals = jsonSearchIndividuals
-                .Select(jsonSi => JsonConvert.Deserialize<JsonTemplates.JsonSearchIndividual>(jsonSi.ToString()))
-                .Select(jsonSi => new KeyValuePair<Individual,
-                    IReadOnlyDictionary<Attribute, IReadOnlyCollection<string>>>(
-                    jsonSi.Left,
-                    jsonSi.Right.Select(jsonAv => new JsonTemplates.JsonAttributeValue
-                        {
-                            Left = jsonAv.Left,
-                            Right = jsonAv.Right.OrderBy(v => v).ToList()
-                        })
-                        .ToDictionary(jsonAv => jsonAv.Left, jsonAv => jsonAv.Right.Count == 0 ? null : jsonAv.Right)
-                        .OrderBy(av => av.Key.Id)
-                        .ToDictionary(av => av.Key, av => av.Value)
-                ))
-                .ToDictionary(si => si.Key, si => si.Value.Count == 0 ? null : si.Value)
-                .OrderBy(si => si.Key.Id)
-                .ToDictionary(si => si.Key, si => si.Value);
+                .Select(i => JsonTemplates.JsonIndividual.Deserialize(i.ToString()))
+                .OrderBy(i => i.Id)
+                .ToList();
 
             return searchIndividuals;
+        }
+
+        public string GetComment(string objectName)
+        {
+            Check.NotEmpty(objectName, nameof(objectName));
+
+            var data = new Dictionary<string, object> {{"Object", objectName}};
+            var request = new Request(RequestType.GetComment, data);
+
+            var response = Send(request);
+            if (response.Status != Success) return null;
+
+            var comment = (string) response.Data["Comment"];
+
+            return comment;
         }
 
         public Class GetClass(string className)

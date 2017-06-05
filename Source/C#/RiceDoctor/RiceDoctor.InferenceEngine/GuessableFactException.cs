@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using JetBrains.Annotations;
 using RiceDoctor.RuleManager;
 using RiceDoctor.Shared;
@@ -7,14 +8,14 @@ namespace RiceDoctor.InferenceEngine
 {
     public class GuessableFactException : Exception
     {
-        public GuessableFactException([NotNull] Fact fact)
+        public GuessableFactException([NotNull] IReadOnlyCollection<Fact> facts)
         {
-            Check.NotNull(fact, nameof(fact));
+            Check.NotNull(facts, nameof(facts));
 
-            Fact = fact;
+            Facts = facts;
         }
 
         [NotNull]
-        public Fact Fact { get; }
+        public IReadOnlyCollection<Fact> Facts { get; }
     }
 }

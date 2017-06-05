@@ -52,16 +52,22 @@ namespace RiceDoctor.ConsoleApp
             engine.AddFactsToKnown(facts);
 
             var response = engine.Infer();
-            while (response.Type == GuessableFact)
+            while (response.Type == GuessableFacts)
             {
-                Console.Write($"Su kien {response.GuessableFact} co ton tai khong (Co:0, Khong:1, Khong biet:2)? ");
-                var existInt = int.Parse(Console.ReadLine());
+                var guessableFacts = new List<Tuple<Fact, bool?>>();
+                foreach (var guessableFact in response.Facts)
+                {
+                    Console.Write($"Su kien {guessableFact} co ton tai khong (Co:0, Khong:1, Khong biet:2)? ");
+                    var existInt = int.Parse(Console.ReadLine());
 
-                bool? exist = null;
-                if (existInt == 0) exist = true;
-                else if (existInt == 1) exist = false;
+                    bool? exist = null;
+                    if (existInt == 0) exist = true;
+                    else if (existInt == 1) exist = false;
 
-                engine.HandleGuessableFact(new Tuple<Fact, bool?>(response.GuessableFact, exist));
+                    guessableFacts.Add(new Tuple<Fact, bool?>(guessableFact, exist));
+                }
+
+                engine.HandleGuessableFacts(guessableFacts);
                 response = engine.Infer();
             }
 
@@ -74,11 +80,8 @@ namespace RiceDoctor.ConsoleApp
             else
             {
                 Console.WriteLine("Suy dien thanh cong");
-                foreach (var resultFact in response.Results)
-                {
-                    var individual = (IndividualFact) resultFact;
-                    Console.WriteLine($"{individual.Name}={individual.Individual}");
-                }
+                foreach (var resultFact in response.Facts)
+                    Console.WriteLine(resultFact);
             }
 
             Console.ReadKey();

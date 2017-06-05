@@ -22,8 +22,8 @@ namespace RiceDoctor.Shared
 
             lock (LogWriteLock)
             {
-                var length = new FileInfo(_filePath).Length;
-                if (length > 1024 * 1024) File.WriteAllText(_filePath, "");
+                var fileInfo = new FileInfo(_filePath);
+                if (fileInfo.Exists && fileInfo.Length > 1024 * 1024) File.WriteAllText(_filePath, "");
 
                 using (var writer = File.AppendText(_filePath))
                 {

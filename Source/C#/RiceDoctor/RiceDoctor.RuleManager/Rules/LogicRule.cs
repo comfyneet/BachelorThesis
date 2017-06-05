@@ -35,7 +35,7 @@ namespace RiceDoctor.RuleManager
             if (ReferenceEquals(this, other)) return true;
             return Hypotheses.ScrambledEqual(other.Hypotheses)
                    && Conclusions.ScrambledEqual(other.Conclusions)
-                   && Math.Abs(CertaintyFactor - other.CertaintyFactor) < double.Epsilon;
+                   && CertaintyFactor.Equals3DigitPrecision(other.CertaintyFactor);
         }
 
         public static bool operator ==(LogicRule rule1, LogicRule rule2)
@@ -65,7 +65,6 @@ namespace RiceDoctor.RuleManager
             {
                 var hashCode = Hypotheses.GetOrderIndependentHashCode();
                 hashCode = (hashCode * 397) ^ Conclusions.GetOrderIndependentHashCode();
-                hashCode = (hashCode * 397) ^ CertaintyFactor.GetHashCode();
                 return hashCode;
             }
         }

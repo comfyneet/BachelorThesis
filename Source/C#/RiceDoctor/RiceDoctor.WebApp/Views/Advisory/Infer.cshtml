@@ -1,6 +1,9 @@
 ﻿@using RiceDoctor.RuleManager
 @model RiceDoctor.WebApp.Models.Advisory
 @{
+    var incompleteRules = (IReadOnlyCollection<Tuple<double, LogicRule, IReadOnlyList<Fact>>>) ViewData["IncompleteRules"];
+    var incompleteFacts = (IReadOnlyList<Fact>) ViewData["IncompleteFacts"];
+    var priority = ViewData["Priority"];
     ViewData["Title"] = "Tư vấn/Chuẩn đoán";
 }
 
@@ -9,56 +12,110 @@
         @if (Model.Results != null)
         {
             <h2>Suy diễn thành công</h2>
+
+            <h4>Kết quả</h4>
             foreach (var resultFact in Model.Results)
             {
-                var individual = (IndividualFact) resultFact;
-                <p>@individual.Name=@individual.Individual</p>
+                <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@(((IndividualFact) resultFact).Individual)">@resultFact</a>
             }
 
-            <h2>Luật tường minh được áp dụng</h2>
-            foreach (var rule in Model.Engine.InferredLogicRules)
-            {
-                <p>@rule</p>
-            }
+            <hr/>
 
-            <h2>Luật quan hệ được áp dụng</h2>
-            foreach (var rule in Model.Engine.InferredRelationRules)
-            {
-                <p>@rule.Key - @rule.Value</p>
-            }
+            <button id="inferredRulesBtn">Xem thông tin luật</button>
+            <div id="inferredRules" style="display: none">
+                <h4>Luật tường minh được áp dụng</h4>
+                @foreach (var rule in Model.Engine.InferredLogicRules)
+                {
+                    <p>@rule</p>
+                }
+
+                <h4>Luật quan hệ được áp dụng</h4>
+                @foreach (var rule in Model.Engine.InferredRelationRules)
+                {
+                    <p>@rule.Key - @rule.Value</p>
+                }
+            </div>
         }
         else
         {
             <h2>Suy diễn không thành công</h2>
 
-            <h2>Xếp hạng luật thiếu</h2>
-            <table class="table">
-                <thead>
-                <tr>
-                    <th>Priority</th>
-                    <th>Rule</th>
-                    <th>Goal facts</th>
-                </tr>
-                </thead>
-                <tbody>
-                @foreach (var rule in Model.Engine.GetIncompleteRules())
-                {
+            if (incompleteFacts != null)
+            {
+                <p>
+                    Hệ thống chuẩn đoán kết quả là
+                    @for (var i = 0; i < incompleteFacts.Count; ++i)
+                    {
+                        if (incompleteFacts.Count > 1 && i == incompleteFacts.Count - 1)
+                        {
+                            @:và
+                        }
+                        else if (i > 0)
+                        {
+                            @:,
+                        }
+                        <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@(((IndividualFact) incompleteFacts[i]).Individual)">
+                            @incompleteFacts[i]
+                        </a>
+                    }
+                    với độ chính xác @priority%.
+                </p>
+            }
+
+            <hr/>
+
+            <button id="incompleteRulesBtn">Xem danh sách luật thiếu</button>
+            <div id="incompleteRules" style="display: none">
+                <table class="table">
+                    <thead>
                     <tr>
-                        <th>@rule.Item1</th>
-                        <th>@rule.Item2</th>
-                        <th>
-                            @for (var i = 0; i < rule.Item3.Count; ++i)
-                            {
-                                if (i > 0)
-                                {
-                                    @:, 
-                                }
-                                @rule.Item3[i]
-                            }</th>
+                        <th>%</th>
+                        <th>Luật</th>
+                        <th>Sự kiện mục tiêu</th>
                     </tr>
-                }
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                    @foreach (var rule in incompleteRules)
+                    {
+                        <tr>
+                            <th>@(rule.Item1 * 100)</th>
+                            <th>@rule.Item2</th>
+                            <th>
+                                @for (var i = 0; i < rule.Item3.Count; ++i)
+                                {
+                                    if (i > 0)
+                                    {
+                                        @:, 
+                                    }
+                                    <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@(((IndividualFact) rule.Item3[i]).Individual)">
+                                        @rule.Item3[i]
+                                    </a>
+                                }</th>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
         }
     </div>
 </div>
+
+@section Scripts {
+    <script>
+        $("#inferredRulesBtn").click(function() {
+            if ($("#inferredRules").css('display') === 'none') {
+                $("#inferredRules").fadeIn();
+            } else {
+                $("#inferredRules").fadeOut();
+            }
+        });
+
+        $("#incompleteRulesBtn").click(function() {
+            if ($("#incompleteRules").css('display') === 'none') {
+                $("#incompleteRules").fadeIn();
+            } else {
+                $("#incompleteRules").fadeOut();
+            }
+        });
+    </script>
+}

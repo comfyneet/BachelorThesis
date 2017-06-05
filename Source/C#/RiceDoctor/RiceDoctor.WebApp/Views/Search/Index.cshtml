@@ -1,45 +1,30 @@
-﻿@model IReadOnlyDictionary<RiceDoctor.OntologyManager.Individual, IReadOnlyDictionary<RiceDoctor.OntologyManager.Attribute, IReadOnlyCollection<string>>>
+﻿@model IReadOnlyCollection<RiceDoctor.OntologyManager.Individual>
 @{
     var keywords = (string) ViewData["Keywords"];
     ViewData["Title"] = "Tra cứu " + keywords;
 }
 
 <div class="row">
-    <div class="col-md-4"></div>
-    <div class="col-md-8">
+    <div class="col-md-12">
         <h2>Tra cứu "@keywords"</h2>
 
         @if (Model == null)
         {
-            <h4>Không tìm thấy từ khóa</h4>
+            <h4>Không tìm thấy thể hiện có chứa từ khóa</h4>
+
+            <p>
+                Tìm kiếm trên internet với <a href="http://lmgtfy.com/?q=@keywords">Google</a>.
+            </p>
         }
         else
         {
-            <h4>
-                Tìm thấy từ khóa
-            </h4>
+            <h4>Tìm thấy @Model.Count thể hiện có chứa từ khóa</h4>
 
             <ol>
                 @foreach (var searchIndividual in Model)
                 {
                     <li>
-                        <a asp-controller="Ontology" asp-action="Article" asp-route-individualName="@searchIndividual.Key.Id">@searchIndividual.Key</a>
-                        @if (searchIndividual.Value != null)
-                        {
-                            foreach (var attributeValues in searchIndividual.Value)
-                            {
-                                if (attributeValues.Key.Id != "ten" && attributeValues.Key.Id != "moTa")
-                                {
-                                    foreach (var value in attributeValues.Value)
-                                    {
-                                        <p>
-                                            <a asp-controller="Ontology" asp-action="Attribute" asp-route-attributeName="@attributeValues.Key.Id">@attributeValues.Key</a>:
-                                            @Html.Raw(value)
-                                        </p>
-                                    }
-                                }
-                            }
-                        }
+                        <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@searchIndividual.Id">@searchIndividual</a>
                     </li>
                 }
             </ol>

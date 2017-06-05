@@ -34,7 +34,7 @@ namespace RiceDoctor.InferenceEngine
 
         int AddFactsToKnown([NotNull] params Fact[] facts);
 
-        void HandleGuessableFact([NotNull] Tuple<Fact, bool?> guessableFact);
+        void HandleGuessableFacts([NotNull] IReadOnlyCollection<Tuple<Fact, bool?>> guessableFacts);
 
         [NotNull]
         Response Infer();

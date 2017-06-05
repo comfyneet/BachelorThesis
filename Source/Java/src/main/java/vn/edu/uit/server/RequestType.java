@@ -6,6 +6,9 @@ public enum RequestType {
     @SerializedName("SearchIndividuals")
     SEARCH_INDIVIDUALS,
 
+    @SerializedName("GetComment")
+    GET_COMMENT,
+
     @SerializedName("GetClass")
     GET_CLASS,
 

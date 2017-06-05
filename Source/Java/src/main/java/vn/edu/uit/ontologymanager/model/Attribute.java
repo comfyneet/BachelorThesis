@@ -14,6 +14,10 @@ import static vn.edu.uit.ontologymanager.model.EntityType.ATTRIBUTE;
 public class Attribute extends Entity {
 
     @Nullable
+    @SerializedName("Comment")
+    private final String comment;
+
+    @Nullable
     @SerializedName("DirectDomains")
     private final Set<Class> directDomains;
 
@@ -31,6 +35,7 @@ public class Attribute extends Entity {
 
     Attribute(@NotNull final Builder builder) {
         super(ATTRIBUTE, builder.id, builder.label);
+        comment = builder.comment;
         directDomains = builder.directDomains;
         allDomains = builder.allDomains;
         range = builder.range;
@@ -44,6 +49,9 @@ public class Attribute extends Entity {
 
         @Nullable
         private final String label;
+
+        @Nullable
+        private String comment;
 
         @Nullable
         private Set<Class> directDomains;
@@ -60,6 +68,12 @@ public class Attribute extends Entity {
         public Builder(@NotNull final String id, @Nullable final String label) {
             this.id = id;
             this.label = label;
+        }
+
+        @NotNull
+        public Builder comment(@Nullable final String comment) {
+            this.comment = comment;
+            return this;
         }
 
         @NotNull

@@ -10,16 +10,25 @@ namespace RiceDoctor.OntologyManager
     {
         [CanBeNull] private IReadOnlyCollection<Class> _allDomains;
         private bool _canGetAllDomains;
+        private bool _canGetComment;
         private bool _canGetDirectDomains;
+        [CanBeNull] private string _comment;
         [CanBeNull] private IReadOnlyCollection<Class> _directDomains;
 
         public Attribute(
             [NotNull] string id,
             [CanBeNull] string label = null,
+            [CanBeNull] string comment = null,
             [CanBeNull] DataType? range = null,
-            [CanBeNull] IReadOnlyCollection<string> enumeratedValues = null)
+            [CanBeNull] IReadOnlyList<string> enumeratedValues = null)
             : base(id, label)
         {
+            if (comment != null)
+            {
+                _comment = comment;
+                _canGetComment = false;
+            }
+
             Range = range;
             if (Range == DataType.Enumerated)
             {
@@ -31,9 +40,20 @@ namespace RiceDoctor.OntologyManager
         public DataType? Range { get; }
 
         [CanBeNull]
-        public IReadOnlyCollection<string> EnumeratedValues { get; }
+        public IReadOnlyList<string> EnumeratedValues { get; }
 
         public override EntityType Type => EntityType.Attribute;
+
+        [CanBeNull]
+        public string GetComment()
+        {
+            if (_canGetComment) return _comment;
+
+            _comment = Manager.Instance.GetComment(Id);
+            _canGetComment = true;
+
+            return _comment;
+        }
 
         [CanBeNull]
         public IReadOnlyCollection<Class> GetDirectDomains()

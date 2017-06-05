@@ -16,11 +16,10 @@
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true"/>
     </environment>
     @Html.Raw(JavaScriptSnippet.FullScript)
-
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
+    <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
@@ -45,46 +44,57 @@
                     <a asp-controller="Home" asp-action="Contact">Liên hệ</a>
                 </li>
             </ul>
-            <form asp-controller="Search" asp-action="Index" method="post" class="navbar-form navbar-right">
+            <form asp-controller="Search" asp-action="Index" method="get" class="navbar-form navbar-right">
                 <input name="keywords" type="text" class="form-control" placeholder="Tra cứu...">
             </form>
         </div>
     </div>
 </nav>
-<div >
+<div class="container">
     @RenderBody()
     <footer>
         <div class="footer" id="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <h3> Contact </h3>
-                        <ul>
-                            <li> <a href="#"> Tuyết Mai : 01689731190 </a> </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4">
-                        <h3> Email </h3>
-                        <ul>
-                            <li> <a href="#"> 13520489@gm.uit.edu.vn </a> </li>
-                            <li> <a href="#"> 13520638@gm.uit.edu.vn </a> </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4">
-                        <h3> Location </h3>
-                        <ul>
-                            <li> <a href="#"> Đại Học Công Nghệ Thông Tin </a> </li>
-                        </ul>
-                    </div>
+            <div class="row" style="padding-left: 20px">
+                <div class="col-md-4">
+                    <h3>Sinh viên</h3>
+                    <ul>
+                        <li>
+                            <a href="mailto:13520638@gm.uit.edu.vn">Nguyễn Minh Phúc 13520489@gm.uit.edu.vn</a>
+                        </li>
+                        <li>
+                            <a href="mailto:13520489@gm.uit.edu.vn">Lê Thị Tuyết Mai 13520489@gm.uit.edu.vn</a>
+                        </li>
+                    </ul>
                 </div>
-                <!--/.row-->
+                <div class="col-md-4">
+                    <h3>Giảng viên hướng dẫn</h3>
+                    <ul>
+                        <li>
+                            <a href="mailto:mailto:thuonghtt@uit.edu.vn">Th.s Huỳnh Thị Thanh Thương thuonghtt@uit.edu.vn</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3>Trường</h3>
+                    <ul>
+                        <li>
+                            <a href="https://www.uit.edu.vn/">Đại Học Công Nghệ Thông Tin</a>
+                        </li>
+                        <li>
+                            <address>
+                                Khu phố 6, P. Linh Trung
+                                Quận Thủ Đức, Tp. Hồ Chí Minh
+                            </address>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <!--/.container-->
+            <!--/.row-->
         </div>
         <!--/.footer-->
         <div class="footer-bottom">
             <div class="container">
-                <p class="pull-left"> &copy; 2016 - RiceDoctor.WebApp</p>
+                <p class="pull-left"> &copy; 2017 - Rice Doctor</p>
             </div>
         </div>
         <!--/.footer-bottom-->

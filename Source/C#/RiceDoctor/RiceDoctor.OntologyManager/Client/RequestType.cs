@@ -8,6 +8,7 @@ namespace RiceDoctor.OntologyManager
     {
         SearchIndividuals,
 
+        GetComment,
         GetClass,
         GetSubClasses,
         GetSuperClasses,

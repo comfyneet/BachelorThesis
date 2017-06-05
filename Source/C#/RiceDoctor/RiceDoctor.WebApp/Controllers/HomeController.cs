@@ -16,13 +16,6 @@ namespace RiceDoctor.WebApp.Controllers
             return View();
         }
 
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Trang liên hệ";
-
-            return View();
-        }
-
         public IActionResult Error()
         {
             return View();

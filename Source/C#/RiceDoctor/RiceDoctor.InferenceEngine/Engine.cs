@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using JetBrains.Annotations;
 using Newtonsoft.Json;
 using RiceDoctor.OntologyManager;
 using RiceDoctor.RuleManager;
 using RiceDoctor.Shared;
+using static RiceDoctor.InferenceEngine.ResponseType;
 
 namespace RiceDoctor.InferenceEngine
 {
@@ -26,6 +26,7 @@ namespace RiceDoctor.InferenceEngine
         [NotNull] private List<Relation> _midPriorityRelationRules;
         [NotNull] public IOntologyManager _ontologyManager;
         [NotNull] public IRuleManager _ruleManager;
+        [CanBeNull] [JsonProperty] private int? _totalRemainingGuessableFacts;
 
         [JsonConstructor]
         public Engine(
@@ -33,6 +34,7 @@ namespace RiceDoctor.InferenceEngine
             [NotNull] Request _request,
             [NotNull] IList<Fact> _unknownFacts,
             [CanBeNull] List<Fact> _goalFacts,
+            [CanBeNull] int? _totalRemainingGuessableFacts,
             [NotNull] List<LogicRule> highPriorityLogicRules,
             [NotNull] List<Relation> highPriorityRelationRules,
             [NotNull] List<LogicRule> lowPriorityLogicRules,
@@ -40,8 +42,7 @@ namespace RiceDoctor.InferenceEngine
             [NotNull] List<LogicRule> midPriorityLogicRules,
             [NotNull] List<Relation> midPriorityRelationRules,
             [NotNull] List<LogicRule> inferredLogicRules,
-            [NotNull] List<KeyValuePair<IndividualFact, Relation>> inferredRelationRules
-        )
+            [NotNull] List<KeyValuePair<IndividualFact, Relation>> inferredRelationRules)
         {
             Check.NotNull(_knownFacts, nameof(_knownFacts));
             Check.NotNull(_request, nameof(_request));
@@ -59,6 +60,7 @@ namespace RiceDoctor.InferenceEngine
             this._request = _request;
             this._unknownFacts = _unknownFacts;
             this._goalFacts = _goalFacts;
+            this._totalRemainingGuessableFacts = _totalRemainingGuessableFacts;
             _highPriorityLogicRules = highPriorityLogicRules;
             _highPriorityRelationRules = highPriorityRelationRules;
             _lowPriorityLogicRules = lowPriorityLogicRules;
@@ -90,55 +92,56 @@ namespace RiceDoctor.InferenceEngine
             _knownFacts = new List<Fact>();
         }
 
-        public void HandleGuessableFact(Tuple<Fact, bool?> guessableFact)
+        public void HandleGuessableFacts(IReadOnlyCollection<Tuple<Fact, bool?>> guessableFacts)
         {
-            Check.NotNull(guessableFact, nameof(guessableFact));
+            Check.NotNull(guessableFacts, nameof(guessableFacts));
 
-            if (guessableFact.Item2 == true)
-            {
-                AddFactsToKnown(guessableFact.Item1);
-            }
-            else if (guessableFact.Item2 == false)
-            {
-                for (var i = 0; i < _highPriorityLogicRules.Count;)
-                    if (_highPriorityLogicRules[i].Hypotheses.Contains(guessableFact.Item1) ||
-                        _highPriorityLogicRules[i].Conclusions.Contains(guessableFact.Item1))
-                        _highPriorityLogicRules.RemoveAt(i);
-                    else ++i;
+            foreach (var guessableFact in guessableFacts)
+                if (guessableFact.Item2 == true)
+                {
+                    AddFactsToKnown(guessableFact.Item1);
+                }
+                else if (guessableFact.Item2 == false)
+                {
+                    for (var i = 0; i < _highPriorityLogicRules.Count;)
+                        if (_highPriorityLogicRules[i].Hypotheses.Contains(guessableFact.Item1) ||
+                            _highPriorityLogicRules[i].Conclusions.Contains(guessableFact.Item1))
+                            _highPriorityLogicRules.RemoveAt(i);
+                        else ++i;
 
-                for (var i = 0; i < _midPriorityLogicRules.Count;)
-                    if (_midPriorityLogicRules[i].Hypotheses.Contains(guessableFact.Item1) ||
-                        _midPriorityLogicRules[i].Conclusions.Contains(guessableFact.Item1))
-                        _midPriorityLogicRules.RemoveAt(i);
-                    else ++i;
+                    for (var i = 0; i < _midPriorityLogicRules.Count;)
+                        if (_midPriorityLogicRules[i].Hypotheses.Contains(guessableFact.Item1) ||
+                            _midPriorityLogicRules[i].Conclusions.Contains(guessableFact.Item1))
+                            _midPriorityLogicRules.RemoveAt(i);
+                        else ++i;
 
-                for (var i = 0; i < _lowPriorityLogicRules.Count;)
-                    if (_lowPriorityLogicRules[i].Hypotheses.Contains(guessableFact.Item1) ||
-                        _lowPriorityLogicRules[i].Conclusions.Contains(guessableFact.Item1))
-                        _lowPriorityLogicRules.RemoveAt(i);
-                    else ++i;
-            }
-            else
-            {
-                _unknownFacts.Add(guessableFact.Item1);
-            }
+                    for (var i = 0; i < _lowPriorityLogicRules.Count;)
+                        if (_lowPriorityLogicRules[i].Hypotheses.Contains(guessableFact.Item1) ||
+                            _lowPriorityLogicRules[i].Conclusions.Contains(guessableFact.Item1))
+                            _lowPriorityLogicRules.RemoveAt(i);
+                        else ++i;
+                }
+                else
+                {
+                    _unknownFacts.Add(guessableFact.Item1);
+                }
         }
 
         public Response Infer()
         {
             var forwardResults = InferForwardChaining();
             if (forwardResults != null)
-                return new Response(forwardResults);
+                return new Response(forwardResults, InferredResults);
 
             try
             {
                 var backwardResults = InferBackwardChaining();
                 if (backwardResults != null)
-                    return new Response(backwardResults);
+                    return new Response(backwardResults, InferredResults);
             }
             catch (GuessableFactException e)
             {
-                return new Response(e.Fact);
+                return new Response(e.Facts, GuessableFacts);
             }
 
             return new Response();
@@ -151,6 +154,8 @@ namespace RiceDoctor.InferenceEngine
             inferableRules.AddRange(_midPriorityLogicRules);
             foreach (var rule in inferableRules)
             {
+                if (!rule.Hypotheses.Any(IsFactInKnown)) continue;
+
                 var goalFacts = rule.Conclusions
                     .Where(c => _request.Problem.GoalTypes.Any(g => _ruleManager.CanClassCaptureFact(g, c)))
                     .ToList();
@@ -158,12 +163,14 @@ namespace RiceDoctor.InferenceEngine
                 if (goalFacts.Count == 0) continue;
 
                 var missingFacts = rule.Hypotheses
-                    .Where(h => _request.Problem.SuggestTypes.Any(s => _ruleManager.CanClassCaptureFact(s, h)))
+                    .Where(h => !IsFactInKnown(h) &&
+                                _request.Problem.SuggestTypes.Any(s => _ruleManager.CanClassCaptureFact(s, h)))
                     .ToList();
 
                 var priority = rule.CertaintyFactor * (1 - (double) missingFacts.Count / rule.Hypotheses.Count);
 
-                incompleteRules.Add(new Tuple<double, LogicRule, IReadOnlyList<Fact>>(priority, rule, goalFacts));
+                if (priority > 0)
+                    incompleteRules.Add(new Tuple<double, LogicRule, IReadOnlyList<Fact>>(priority, rule, goalFacts));
             }
 
             return incompleteRules
@@ -334,55 +341,43 @@ namespace RiceDoctor.InferenceEngine
         }
 
         [CanBeNull]
-        private IReadOnlyCollection<Fact> InferBackwardChaining()
+        private IReadOnlyCollection<Fact> InferBackwardChaining(int totalEstimatedGuessableFacts = 4)
         {
+            if (_totalRemainingGuessableFacts == null) _totalRemainingGuessableFacts = 25;
+            else if (_totalRemainingGuessableFacts <= 0) return _goalFacts;
+
             var inferableRules = _highPriorityLogicRules.ToList();
             inferableRules.AddRange(_midPriorityLogicRules);
+
+            var lowInferableRules = new List<LogicRule>();
+            foreach (var unknownFact in _unknownFacts)
+            {
+                var tmpLowInferableRules = _lowPriorityLogicRules
+                    .Where(rule => rule.Conclusions.Any(c => c.Equals(unknownFact)))
+                    .ToList();
+                lowInferableRules.AddRange(tmpLowInferableRules);
+            }
+            lowInferableRules = lowInferableRules.Distinct()
+                .OrderBy(rule => rule.CertaintyFactor)
+                .ToList();
+            inferableRules.AddRange(lowInferableRules);
+
+            var guessableFacts = new List<Fact>();
             foreach (var rule in inferableRules)
             {
-                var allHypothesesInKnown = rule.Hypotheses.All(hypothesis => Backtrack(hypothesis, 0));
-                if (!allHypothesesInKnown) continue;
+                var hasNewFacts = InferLogicRule(rule);
+                if (hasNewFacts) break;
 
-                Debug.Assert(InferLogicRule(rule));
-                break;
+                guessableFacts.AddRange(rule.Hypotheses.Where(f => !IsFactInKnown(f) && !_unknownFacts.Contains(f)));
+                guessableFacts = guessableFacts.Distinct().ToList();
+
+                _totalRemainingGuessableFacts -= guessableFacts.Count;
+                if (guessableFacts.Count >= totalEstimatedGuessableFacts) break;
             }
+
+            if (guessableFacts.Count != 0) throw new GuessableFactException(guessableFacts);
 
             return _goalFacts;
-        }
-
-        private bool Backtrack([NotNull] Fact goal, int level)
-        {
-            if (IsFactInKnown(goal)) return true;
-
-            if (!_unknownFacts.Contains(goal))
-                throw new GuessableFactException(goal);
-
-            var allLogicRules = _highPriorityLogicRules.ToList();
-            allLogicRules.AddRange(_midPriorityLogicRules);
-            allLogicRules.AddRange(_lowPriorityLogicRules);
-            var inferableRules = allLogicRules
-                .Where(rule => rule.Conclusions.Any(c => c.Equals(goal)))
-                .OrderBy(r => CountFactsInKnown(r.Hypotheses))
-                .ToList();
-
-            foreach (var rule in inferableRules)
-            {
-                var allHypothesesInKnown = true;
-                foreach (var hypothesis in rule.Hypotheses)
-                    if (!Backtrack(hypothesis, level + 1))
-                    {
-                        allHypothesesInKnown = false;
-                        break;
-                    }
-
-                if (allHypothesesInKnown)
-                {
-                    AddFactsToKnown(goal);
-                    return true;
-                }
-            }
-
-            return false;
         }
 
         private void SortRulesByRequest()

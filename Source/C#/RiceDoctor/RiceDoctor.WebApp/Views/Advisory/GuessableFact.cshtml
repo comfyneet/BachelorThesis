@@ -1,33 +1,35 @@
-﻿@model RiceDoctor.WebApp.Models.Advisory
+﻿@using RiceDoctor.RuleManager
+@model RiceDoctor.WebApp.Models.Advisory
 @{
-    var className = (string) ViewData["ClassName"];
-    var individualName = (string) ViewData["IndividualName"];
+    var guessableFacts = (List<Fact>) ViewData["GuessableFacts"];
     ViewData["Title"] = "Tư vấn/Chuẩn đoán";
 }
 
 <div class="row">
     <div class="col-md-12">
-        <h2>Sự kiện @className=@individualName có tồn tại hay không?</h2>
+        <h2>Vui lòng cung cấp thêm thông tin</h2>
 
         <form asp-controller="Advisory" asp-action="Infer" method="post">
             <input type="hidden" name="guid" value="@Model.Guid"/>
-            <input type="hidden" name="className" value="@className"/>
-            <input type="hidden" name="individualName" value="@individualName"/>
-            <div class="radio">
-                <label>
-                    <input type="radio" name="isGuessable" value="1">Có
-                </label>
-            </div>
-            <div class="radio">
-                <label>
-                    <input type="radio" name="isGuessable" value="0">Không
-                </label>
-            </div>
-            <div class="radio">
-                <label>
-                    <input type="radio" name="isGuessable" value="-1">Không biết
-                </label>
-            </div>
+            @for (var i = 0; i < guessableFacts.Count; ++i)
+            {
+                <div class="form-group">
+                    <label>
+                        Sự kiện <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@(((IndividualFact) guessableFacts[i]).Individual)">@guessableFacts[i]</a> có tồn tại không?
+                    </label>
+                    <input type="hidden" name="guessableFacts[@i].ClassName" value="@guessableFacts[i].Name"/>
+                    <input type="hidden" name="guessableFacts[@i].IndividualName" value="@(((IndividualFact) guessableFacts[i]).Individual)"/>
+                    <div class="radio">
+                        <label><input type="radio" name="guessableFacts[@i].IsGuessable" value="1">Có</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" name="guessableFacts[@i].IsGuessable" value="0">Không</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" name="guessableFacts[@i].IsGuessable" value="-1">Không biết</label>
+                    </div>
+                </div>
+            }
             <input class="btn btn-default" type="submit" value="Trả lời">
         </form>
     </div>

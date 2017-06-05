@@ -1,115 +1,176 @@
-﻿@using RiceDoctor.OntologyManager
-@using Attribute = RiceDoctor.OntologyManager.Attribute
+﻿@using Attribute = RiceDoctor.OntologyManager.Attribute
 @model RiceDoctor.OntologyManager.Individual
-
 @{
-    var attributeValues = (IReadOnlyDictionary<Attribute, IReadOnlyCollection<string>>)ViewData["AttributeValues"];
-    var individuals = (IReadOnlyCollection<Individual>)ViewData["Individuals"];
+    var keywords = (string) ViewData["Keywords"];
+    var attributeValues = (IReadOnlyDictionary<Attribute, IReadOnlyCollection<string>>) ViewData["AttributeValues"];
     ViewData["Title"] = "Thể hiện " + Model;
 }
-<link href="~/css/site.css" rel="stylesheet" />
-<div >
-    <div class="row">
-        <div class="col-lg-3">
-                    <nav clas="navbar navbar-inverse">
-                        <div class=" bg-teal">
-                            @if (individuals != null)
-                            {
-                                <ul class="nav nav-pills nav-stacked">
-                                    @foreach (var tmpIndividual in individuals)
-                                    {
-                                        <li class="nav-item">
-                                            @Html.ActionLink(tmpIndividual.ToString(), "Individual", "Ontology", new { individualName = tmpIndividual.Id })
-                                            @if (tmpIndividual == Model)
-                                            {
-                                                @: (this)
-                                    }
-                                        </li>
-                                    }
-                                </ul>
-                            }
-                            else
-                            {
-                                @:<p>Không tìm thấy</p>
-                    }
-                        </div>
-                    </nav>
-        </div>
-            <div class="col-lg-9">
-                <h2>@Model</h2>
 
-                @if (Model != null)
-                {
-                    <h4>Lớp của @Model</h4>
-                    if (Model.GetAllClasses() != null)
-                    {
-                        foreach (var cls in Model.GetAllClasses())
+<div class="row">
+    <div class="col-md-12">
+        @if (keywords != null)
+        {
+            <div class="alert alert-success alert-dismissible fade in" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                Kết quả tra cứu <strong>"@keywords"</strong>
+            </div>
+        }
+
+        <h2>@Model</h2>
+
+        @if (Model != null)
+        {
+            <div class="row">
+                <div class="col-md-2">
+                    <section style="border-radius: 10px; border-style: dotted">
+                        <h4>Nội dung</h4>
+                        @if (attributeValues != null)
                         {
-                            <p>
-                                <a asp-controller="Ontology" asp-action="Class" asp-route-className="@cls.Id">@cls</a>
-                                @if (Model.GetDirectClass() == cls)
+                            <ol>
+                                @foreach (var pair in attributeValues)
                                 {
-                                    @:(trực tiếp)
+                                    <li>
+                                        <a href="#@pair.Key.Id">@pair.Key</a>
+                                    </li>
                                 }
+                            </ol>
+                        }
+                        else
+                        {
+                            @:<p>Không tìm thấy</p>
+                        }
+                    </section>
+                </div>
+                <div class="col-md-9 col-md-offset-1">
+                    <section>
+                        <h4>Giới thiệu</h4>
+                        @if (Model.GetAllClasses() == null && Model.GetRelationValues() == null)
+                        {
+                            <p>Không tìm thấy</p>
+                        }
+                        else
+                        {
+                            if (attributeValues != null)
+                            {
+                                foreach (var pair in attributeValues)
+                                {
+                                    if (pair.Key.Id == "definition")
+                                    {
+                                        foreach (var definition in pair.Value)
+                                        {
+                                            <p>@Html.Raw(definition)</p>
+                                        }
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+
+                        @if (Model.GetAllClasses() != null)
+                        {
+                            var allClasses = Model.GetAllClasses().ToList();
+                            <p>
+                                @Model là thể hiện của lớp
+                                @for (var i = 0; i < allClasses.Count; ++i)
+                                {
+                                    if (allClasses.Count > 1 && i == allClasses.Count - 1)
+                                    {
+                                        @:và
+                                    }
+                                    else if (i > 0)
+                                    {
+                                        @:,
+                                    }
+                                    <a asp-controller="Ontology" asp-action="Class" asp-route-className="@allClasses[i].Id">@allClasses[i]</a>
+                                    if (Model.GetDirectClass() == allClasses[i])
+                                    {
+                                        @:(trực tiếp)
+                                    }
+                                }
+                                .
                             </p>
                         }
-                    }
-                    else
-                    {
-                        @:<p>Không tìm thấy</p>
-                    }
 
-                    <hr />
-
-                    <h4>Giá trị khách thể của quan hệ với @Model là chủ thể</h4>
-                    if (Model.GetRelationValues() != null)
-                    {
-                        foreach (var relationValuesPair in Model.GetRelationValues())
+                        @if (Model.GetRelationValues() != null)
                         {
-                            foreach (var value in relationValuesPair.Value)
+                            foreach (var pair in Model.GetRelationValues())
                             {
+                                var comment = pair.Key.GetComment() ?? pair.Key.ToString();
+                                var values = pair.Value.ToList();
                                 <p>
-                                    <a asp-controller="Ontology" asp-action="Relation" asp-route-relationName="@relationValuesPair.Key.Id">@relationValuesPair.Key</a>:
-                                    <a asp-controller="Ontology" asp-action="Class" asp-route-className="@value.Id">@value</a>
+                                    @Model <a asp-controller="Ontology" asp-action="Relation" asp-route-relationName="@pair.Key.Id">@comment</a>
+
+                                    @for (var i = 0; i < values.Count; ++i)
+                                    {
+                                        if (values.Count > 1 && i == values.Count - 1)
+                                        {
+                                            @:và
+                                        }
+                                        else if (i > 0)
+                                        {
+                                            @:,
+                                        }
+                                        <a asp-controller="Ontology" asp-action="Class" asp-route-className="@values[i].Id">@values[i]</a>
+                                    }
+                                    .
                                 </p>
                             }
                         }
-                    }
-                    else
-                    {
-                        @:<p>Không tìm thấy</p>
-                    }
-
-                    <hr />
-
-                    <h4>Giá trị thuộc tính của @Model</h4>
-                    if (attributeValues != null)
-                    {
-                        foreach (var pair in attributeValues)
-                        {
-                            if (pair.Key.Id == "moTa")
-                            {
-                                <p>
-                                    <a asp-controller="Ontology" asp-action="Article" asp-route-individualName="@Model.Id">Bài viết về @Model</a>
-                                </p>
-                            }
-                            else
-                            {
-                                foreach (var value in pair.Value)
-                                {
-                                    <p>
-                                        <a asp-controller="Ontology" asp-action="Attribute" asp-route-attributeName="@pair.Key.Id">@pair.Key</a>
-                                        @Html.Raw(value)
-                                    </p>
-                                }
-                            }
-                        }
-                    }
-                    else
-                    {
-                        @:<p>Không tìm thấy</p>
-                    }
-                }
+                    </section>
+                </div>
             </div>
-        </div>
+
+            <hr/>
+
+            if (attributeValues != null)
+            {
+                foreach (var pair in attributeValues)
+                {
+                    var comment = pair.Key.GetComment() ?? pair.Key.ToString();
+
+                    <section>
+                        <h4 id="@pair.Key.Id">
+                            <a asp-controller="Ontology" asp-action="Attribute" asp-route-attributeName="@pair.Key.Id">@pair.Key</a>
+                        </h4>
+                        @if (pair.Key.Id == "article")
+                        {
+                            <p>
+                                @pair.Key.GetComment() <a asp-controller="Ontology" asp-action="Article" asp-route-individualName="@Model.Id">@Model</a>.
+                            </p>
+                        }
+                        else if (pair.Key.Id == "image")
+                        {
+                            <p>
+                                @comment @Model:
+                            </p>
+                            <div>
+                                @foreach (var value in pair.Value)
+                                {
+                                    var source = value.Substring(0, value.Length - "</div>".Length).Substring("<div style=\"white-space: pre-wrap;\">".Length);
+                                    <img src="~/images/@source" class="img-responsive" alt="@Model"/>
+                                }
+                            </div>
+                        }
+                        else
+                        {
+                            if (pair.Key.GetComment() != null)
+                            {
+                                <p>pair.Key.GetComment() @Model:</p>
+                            }
+                            <div>
+                                @foreach (var value in pair.Value)
+                                {
+                                    <p>@Html.Raw(value)</p>
+                                }
+                            </div>
+                        }
+                    </section>
+
+                    <hr/>
+                }
+            }
+        }
     </div>
+</div>

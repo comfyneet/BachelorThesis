@@ -1,4 +1,5 @@
-﻿@using Attribute = RiceDoctor.OntologyManager.Attribute
+﻿@using RiceDoctor.OntologyManager
+@using Attribute = RiceDoctor.OntologyManager.Attribute
 @model RiceDoctor.OntologyManager.Attribute
 @{
 
@@ -7,68 +8,81 @@
 }
 
 <div class="row">
-    <div class="col-lg-3">
-    <nav clas="navbar navbar-inverse">
-        <div class=" bg-teal">
-            @if (attributes != null)
+    <div class="col-md-3">
+        <nav clas="navbar navbar-inverse">
+            <div class=" bg-teal">
+                @if (attributes != null)
+                {
+                    <ul class="nav nav-pills nav-stacked">
+                        @foreach (var attribute in attributes)
+                        {
+                            <li class="nav-item">
+                                @Html.ActionLink(attribute.ToString(), "Attribute", "Ontology", new {attributeName = attribute.Id})
+                                @if (attribute == Model)
+                                {
+                                    @: (this)
+                                }
+                            </li>
+                        }
+                    </ul>
+                }
+                else
+                {
+                    @:<p>Không tìm thấy</p>
+                }
+            </div>
+        </nav>
+    </div>
+    <div class="col-md-9">
+        <h2>@Model</h2>
+
+        @if (Model != null)
+        {
+            <h4>Kiểu dữ liệu của @Model</h4>
+            if (Model.Range != null)
             {
-                <ul class="nav nav-pills nav-stacked">
-                    @foreach (var tmpAttribute in attributes)
+                <p>
+                    @Model.Range
+                    @if (Model.Range == DataType.Enumerated)
                     {
-                        <li class="nav-item">
-                            @Html.ActionLink(tmpAttribute.ToString(), "Attribute", "Ontology", new { attributeName = tmpAttribute.Id })
-                            @if (tmpAttribute == Model)
+                        @:(
+                        for (var i = 0; i < Model.EnumeratedValues.Count; ++i)
+                        {
+                            if (i > 0)
                             {
-                                @: (this)
+                                @:,
                             }
-                        </li>
+                            @Model.EnumeratedValues[i]
+                        }
+                        @:)
                     }
-                </ul>
+                </p>
+            }
+            else
+            {
+                @:<p>không tìm thấy</p>
+            }
+
+            <hr/>
+
+            <h4>Chủ thể của @Model</h4>
+            if (Model.GetAllDomains() != null)
+            {
+                foreach (var allDomain in Model.GetAllDomains())
+                {
+                    <p>
+                        <a asp-controller="Ontology" asp-action="Class" asp-route-className="@allDomain.Id">@allDomain</a>
+                        @if (Model.GetDirectDomains()?.Contains(allDomain) == true)
+                        {
+                            @:(trực tiếp)
+                        }
+                    </p>
+                }
             }
             else
             {
                 @:<p>Không tìm thấy</p>
             }
-        </div>
-    </nav>
-</div>
-<div class="col-md-8">
-    <h2>@Model</h2>
-
-    @if (Model != null)
-    {
-        <h4>
-            Kiểu dữ liệu của @Model
-            @if (Model.Range != null)
-            {
-                @:là @Model.Range
-            }
-            else
-            {
-                @:không tìm thấy
-            }
-        </h4>
-
-        <hr />
-
-        <h4>Chủ thể của @Model</h4>
-        if (Model.GetAllDomains() != null)
-        {
-            foreach (var allDomain in Model.GetAllDomains())
-            {
-                <p>
-                    <a asp-controller="Ontology" asp-action="Class" asp-route-className="@allDomain.Id">@allDomain</a>
-                    @if (Model.GetDirectDomains()?.Contains(allDomain) == true)
-                    {
-                        @:(trực tiếp)
-                    }
-                </p>
-            }
         }
-        else
-        {
-            @:<p>Không tìm thấy</p>
-        }
-    }
     </div>
 </div>

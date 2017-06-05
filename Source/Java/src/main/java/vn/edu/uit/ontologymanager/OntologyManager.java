@@ -36,6 +36,8 @@ public class OntologyManager {
     @NotNull
     private static final String DEFAULT_LANG = "vi";
     @NotNull
+    private static final String NAME_ATTRIBUTE = "name";
+    @NotNull
     private final Gson gson;
     @NotNull
     private final OWLDataFactory factory;
@@ -81,6 +83,9 @@ public class OntologyManager {
             switch (type) {
                 case SEARCH_INDIVIDUALS:
                     response = parseSearchIndividuals(data);
+                    break;
+                case GET_COMMENT:
+                    response = parseComment(data);
                     break;
                 case GET_CLASS:
                     response = parseClass(data);
@@ -164,66 +169,60 @@ public class OntologyManager {
         final String keywords = (String) data.get("Keywords");
         final String unaccentKeywords = StringUtils.removeAccent(keywords);
 
-        Set<Pair<Individual, Set<Pair<Attribute, List<String>>>>> searchIndividuals = null;
+        final Set<Individual> searchIndividuals = new HashSet<>();
+        final OWLDataProperty owlAttribute = factory.getOWLDataProperty(IRI.create(prefix, NAME_ATTRIBUTE));
+
         for (final OWLNamedIndividual owlIndividual : ontology.getIndividualsInSignature()) {
             final String individualName = owlIndividual.getIRI().getShortForm();
 
             if (StringUtils.removeAccent(individualName).toLowerCase().contains(unaccentKeywords.toLowerCase())) {
-                if (searchIndividuals == null) searchIndividuals = new HashSet<>();
-
                 final Individual individual = getIndividual(owlIndividual);
-                searchIndividuals.add(new Pair<>(individual, new HashSet<>()));
-            }
-
-            Set<Pair<Attribute, List<String>>> attributeValues = null;
-            for (final OWLDataProperty owlAttribute : ontology.getDataPropertiesInSignature()) {
+                searchIndividuals.add(individual);
+            } else {
                 final Set<OWLLiteral> owlLiterals = reasoner.getDataPropertyValues(owlIndividual, owlAttribute);
-                if (owlLiterals.size() == 0) continue;
+                for (final OWLLiteral owlLiteral : owlLiterals)
+                    if (StringUtils.removeAccent(owlLiteral.getLiteral()).toLowerCase().contains(unaccentKeywords.toLowerCase())) {
+                        final Individual individual = getIndividual(owlIndividual);
 
-                Attribute key = null;
-                List<String> values = null;
-                for (final OWLLiteral owlLiteral : owlLiterals) {
-                    final String literal = owlLiteral.getLiteral();
-                    if (StringUtils.removeAccent(literal).toLowerCase().contains(unaccentKeywords.toLowerCase())) {
-                        if (values == null) values = new ArrayList<>();
-                        if (key == null) key = getAttribute(owlAttribute);
-                        values.add(literal);
-                    }
-                }
-
-                if (key != null) {
-                    if (attributeValues == null) attributeValues = new HashSet<>();
-                    attributeValues.add(new Pair<>(key, values));
-                }
-            }
-
-            if (attributeValues != null) {
-                if (searchIndividuals == null) searchIndividuals = new HashSet<>();
-
-                boolean addedIndividual = false;
-                for (final Pair<Individual, Set<Pair<Attribute, List<String>>>> searchIndividual : searchIndividuals) {
-                    if (searchIndividual.getLeft().getId().equals(individualName)) {
-                        searchIndividuals.remove(searchIndividual);
-                        searchIndividuals.add(new Pair<>(searchIndividual.getLeft(), attributeValues));
-
-                        addedIndividual = true;
+                        searchIndividuals.add(individual);
                         break;
                     }
-                }
-                if (!addedIndividual) {
-                    final Individual individual = getIndividual(owlIndividual);
-                    searchIndividuals.add(new Pair<>(individual, attributeValues));
-                }
             }
         }
 
         final Response.Builder builder;
-        if (searchIndividuals == null) {
+        if (searchIndividuals.isEmpty()) {
             builder = new Response.Builder(FAIL);
             builder.message("Search individuals \"" + keywords + "\" not found.");
         } else {
             builder = new Response.Builder(SUCCESS);
             builder.data("SearchIndividuals", searchIndividuals);
+        }
+
+        return builder.build();
+    }
+
+    @NotNull
+    private Response parseComment(@NotNull final Map<String, Object> data) {
+        final String objectName = (String) data.get("Object");
+
+        OWLNamedObject owlObject = getOWLRelation(objectName);
+        if (owlObject == null) owlObject = getOWLAttribute(objectName);
+
+        final Response.Builder builder;
+        if (owlObject == null) {
+            builder = new Response.Builder(FAIL);
+            builder.message("Object \"" + owlObject + "\" not found.");
+        } else {
+            final String comment = getComment(owlObject);
+
+            if (comment == null) {
+                builder = new Response.Builder(FAIL);
+                builder.message("Comment of \"" + objectName + "\" not found.");
+            } else {
+                builder = new Response.Builder(SUCCESS);
+                builder.data("Comment", comment);
+            }
         }
 
         return builder.build();
@@ -312,7 +311,7 @@ public class OntologyManager {
             builder = new Response.Builder(FAIL);
             builder.message("Class \"" + className + "\" not found.");
         } else {
-            Set<Relation> relations = null;
+            final Set<Relation> relations = new HashSet<>();
 
             for (final OWLObjectProperty owlRelation : ontology.getObjectPropertiesInSignature()) {
                 if (owlRelation.isOWLTopDataProperty()) continue;
@@ -323,13 +322,12 @@ public class OntologyManager {
                         if (domain.getId().equals(className)) {
                             final Relation relation = getRelation(owlRelation);
 
-                            if (relations == null) relations = new HashSet<>();
                             relations.add(relation);
                             break;
                         }
             }
 
-            if (relations == null) {
+            if (relations.isEmpty()) {
                 builder = new Response.Builder(FAIL);
                 builder.message("Relations of domain \"" + className + "\" not found.");
             } else {
@@ -352,7 +350,7 @@ public class OntologyManager {
             builder = new Response.Builder(FAIL);
             builder.message("Class \"" + className + "\" not found.");
         } else {
-            Set<Relation> relations = null;
+            final Set<Relation> relations = new HashSet<>();
 
             for (final OWLObjectProperty owlRelation : ontology.getObjectPropertiesInSignature()) {
                 if (owlRelation.isOWLTopDataProperty()) continue;
@@ -363,13 +361,12 @@ public class OntologyManager {
                         if (range.getId().equals(className)) {
                             final Relation relation = getRelation(owlRelation);
 
-                            if (relations == null) relations = new HashSet<>();
                             relations.add(relation);
                             break;
                         }
             }
 
-            if (relations == null) {
+            if (relations.isEmpty()) {
                 builder = new Response.Builder(FAIL);
                 builder.message("Relations of range \"" + className + "\" not found.");
             } else {
@@ -454,19 +451,17 @@ public class OntologyManager {
 
     @NotNull
     private Response parseRelations() {
-        Set<Relation> relations = null;
+        final Set<Relation> relations = new HashSet<>();
 
         for (final OWLObjectProperty owlRelation : ontology.getObjectPropertiesInSignature()) {
             if (owlRelation.isOWLTopDataProperty()) continue;
 
             final Relation relation = getRelation(owlRelation);
-
-            if (relations == null) relations = new HashSet<>();
             relations.add(relation);
         }
 
         final Response.Builder builder;
-        if (relations == null) {
+        if (relations.isEmpty()) {
             builder = new Response.Builder(FAIL);
             builder.message("Relations not found.");
         } else {
@@ -578,19 +573,17 @@ public class OntologyManager {
 
     @NotNull
     private Response parseAttributes() {
-        Set<Attribute> attributes = null;
+        final Set<Attribute> attributes = new HashSet<>();
 
         for (final OWLDataProperty owlAttribute : ontology.getDataPropertiesInSignature()) {
             if (owlAttribute.isOWLTopDataProperty()) continue;
 
             final Attribute attribute = getAttribute(owlAttribute);
-
-            if (attributes == null) attributes = new HashSet<>();
             attributes.add(attribute);
         }
 
         final Response.Builder builder;
-        if (attributes == null) {
+        if (attributes.isEmpty()) {
             builder = new Response.Builder(FAIL);
             builder.message("Attributes not found.");
         } else {
@@ -649,17 +642,15 @@ public class OntologyManager {
 
     @NotNull
     private Response parseIndividuals() {
-        Set<Individual> individuals = null;
+        final Set<Individual> individuals = new HashSet<>();
 
         for (final OWLNamedIndividual owlIndividual : ontology.getIndividualsInSignature()) {
             final Individual individual = getIndividual(owlIndividual);
-
-            if (individuals == null) individuals = new HashSet<>();
             individuals.add(individual);
         }
 
         final Response.Builder builder;
-        if (individuals == null) {
+        if (individuals.isEmpty()) {
             builder = new Response.Builder(FAIL);
             builder.message("Individuals not found.");
         } else {
@@ -788,7 +779,7 @@ public class OntologyManager {
 
     @Nullable
     private Set<Class> getSuperClasses(@NotNull final OWLClass owlClass, @NotNull final GetType getSuperClassType) {
-        Set<Class> superClasses = null;
+        final Set<Class> superClasses = new HashSet<>();
 
         final Set<OWLClass> owlSuperClasses = reasoner.getSuperClasses(owlClass, getSuperClassType == GET_DIRECT).getFlattened();
         for (final OWLClass owlSuperClass : owlSuperClasses) {
@@ -797,16 +788,15 @@ public class OntologyManager {
             final String superClassLabel = getLabel(owlSuperClass);
             final Class superClass = new Class.Builder(superClassName, superClassLabel).build();
 
-            if (superClasses == null) superClasses = new HashSet<>();
             superClasses.add(superClass);
         }
 
-        return superClasses;
+        return superClasses.isEmpty() ? null : superClasses;
     }
 
     @Nullable
     private Set<Class> getSubClasses(@NotNull final OWLClass owlClass, @NotNull final GetType getSubClassType) {
-        Set<Class> superClasses = null;
+        final Set<Class> subClasses = new HashSet<>();
 
         final Set<OWLClass> owlSubClasses = reasoner.getSubClasses(owlClass, getSubClassType == GET_DIRECT).getFlattened();
         for (final OWLClass owlSubClass : owlSubClasses) {
@@ -816,16 +806,15 @@ public class OntologyManager {
             final String subClassLabel = getLabel(owlSubClass);
             final Class subClass = new Class.Builder(subClassName, subClassLabel).build();
 
-            if (superClasses == null) superClasses = new HashSet<>();
-            superClasses.add(subClass);
+            subClasses.add(subClass);
         }
 
-        return superClasses;
+        return subClasses.isEmpty() ? null : subClasses;
     }
 
     @Nullable
     private Set<Attribute> getClassAttributes(@NotNull final OWLClass owlClass) {
-        Set<Attribute> attributes = null;
+        final Set<Attribute> attributes = new HashSet<>();
 
         for (final OWLDataProperty owlAttribute : ontology.getDataPropertiesInSignature()) {
             if (owlAttribute.isOWLTopDataProperty()) continue;
@@ -837,8 +826,6 @@ public class OntologyManager {
                 if (domain.getId().equals(owlClass.getIRI().getShortForm())) {
 
                     final Attribute attribute = getAttribute(owlAttribute);
-
-                    if (attributes == null) attributes = new HashSet<>();
                     attributes.add(attribute);
 
                     break;
@@ -846,22 +833,20 @@ public class OntologyManager {
             }
         }
 
-        return attributes;
+        return attributes.isEmpty() ? null : attributes;
     }
 
     @Nullable
     private Set<Individual> getClassIndividuals(@NotNull final OWLClass owlClass, @NotNull final GetType getIndividualType) {
-        Set<Individual> individuals = null;
+        final Set<Individual> individuals = new HashSet<>();
 
         final Set<OWLNamedIndividual> owlIndividuals = reasoner.getInstances(owlClass, getIndividualType == GET_DIRECT).getFlattened();
         for (final OWLNamedIndividual owlIndividual : owlIndividuals) {
             final Individual individual = getIndividual(owlIndividual);
-
-            if (individuals == null) individuals = new HashSet<>();
             individuals.add(individual);
         }
 
-        return individuals;
+        return individuals.isEmpty() ? null : individuals;
     }
 
     @NotNull
@@ -880,13 +865,11 @@ public class OntologyManager {
         final OWLClassExpression owlDomainExpression = owlAxioms.iterator().next().getDomain();
         Set<OWLClass> owlDomains = owlDomainExpression.getClassesInSignature();
 
-        Set<Class> domains = null;
+        final Set<Class> domains = new HashSet<>();
         if (owlDomains.size() == 1) {
             if (getDomainType == GET_ALL) {
                 final OWLClass owlSuperDomain = owlDomains.iterator().next();
                 final Class domain = getClass(owlSuperDomain);
-
-                domains = new HashSet<>();
                 domains.add(domain);
 
                 owlDomains = reasoner.getSubClasses(owlSuperDomain, false).getFlattened();
@@ -897,12 +880,10 @@ public class OntologyManager {
             if (owlDomain.isOWLNothing()) continue;
 
             final Class domain = getClass(owlDomain);
-
-            if (domains == null) domains = new HashSet<>();
             domains.add(domain);
         }
 
-        return domains;
+        return domains.isEmpty() ? null : domains;
     }
 
     @Nullable
@@ -913,13 +894,11 @@ public class OntologyManager {
         final OWLClassExpression owlRangeExpression = owlAxioms.iterator().next().getRange();
         Set<OWLClass> owlRanges = owlRangeExpression.getClassesInSignature();
 
-        Set<Class> ranges = null;
+        final Set<Class> ranges = new HashSet<>();
         if (owlRanges.size() == 1) {
             if (getRangeType == GET_ALL) {
                 final OWLClass owlSuperRange = owlRanges.iterator().next();
                 final Class range = getClass(owlSuperRange);
-
-                ranges = new HashSet<>();
                 ranges.add(range);
 
                 owlRanges = reasoner.getSubClasses(owlSuperRange, false).getFlattened();
@@ -930,12 +909,10 @@ public class OntologyManager {
             if (owlRange.isOWLNothing()) continue;
 
             final Class range = getClass(owlRange);
-
-            if (ranges == null) ranges = new HashSet<>();
             ranges.add(range);
         }
 
-        return ranges;
+        return ranges.isEmpty() ? null : ranges;
     }
 
     @NotNull
@@ -960,13 +937,11 @@ public class OntologyManager {
         final OWLClassExpression owlDomainExpression = owlAxioms.iterator().next().getDomain();
         Set<OWLClass> owlDomains = owlDomainExpression.getClassesInSignature();
 
-        Set<Class> domains = null;
+        final Set<Class> domains = new HashSet<>();
         if (owlDomains.size() == 1) {
             if (getDomainType == GET_ALL) {
                 final OWLClass owlSuperDomain = owlDomains.iterator().next();
                 final Class domain = getClass(owlSuperDomain);
-
-                domains = new HashSet<>();
                 domains.add(domain);
 
                 owlDomains = reasoner.getSubClasses(owlSuperDomain, false).getFlattened();
@@ -977,12 +952,10 @@ public class OntologyManager {
             if (owlDomain.isOWLNothing()) continue;
 
             final Class domain = getClass(owlDomain);
-
-            if (domains == null) domains = new HashSet<>();
             domains.add(domain);
         }
 
-        return domains;
+        return domains.isEmpty() ? null : domains;
     }
 
     @Nullable
@@ -1005,6 +978,12 @@ public class OntologyManager {
             }
 
             return new Pair<>(range, null);
+        } else if (owlDataRange instanceof OWLDataOneOf) {
+            final List<String> ranges = new ArrayList<>();
+            for (final OWLLiteral owlLiteral : ((OWLDataOneOf) owlDataRange).getValues())
+                ranges.add(owlLiteral.getLiteral());
+
+            return new Pair<>(ENUMERATED, ranges);
         } else return new Pair<>(UNKNOWN, null);
     }
 
@@ -1012,11 +991,9 @@ public class OntologyManager {
     private Individual getIndividual(@NotNull final OWLNamedIndividual owlIndividual) {
         String individualLabel = null;
 
-        final OWLDataProperty owlAttribute = factory.getOWLDataProperty(IRI.create(prefix, "ten"));
-        if (ontology.containsDataPropertyInSignature(owlAttribute.getIRI())) {
-            final Set<OWLLiteral> owlLiterals = reasoner.getDataPropertyValues(owlIndividual, owlAttribute);
-            if (owlLiterals.size() != 0) individualLabel = owlLiterals.iterator().next().getLiteral();
-        }
+        final OWLDataProperty owlAttribute = factory.getOWLDataProperty(IRI.create(prefix, NAME_ATTRIBUTE));
+        final Set<OWLLiteral> owlLiterals = reasoner.getDataPropertyValues(owlIndividual, owlAttribute);
+        if (owlLiterals.size() != 0) individualLabel = owlLiterals.iterator().next().getLiteral();
 
         final Individual.Builder builder = new Individual.Builder(owlIndividual.getIRI().getShortForm(), individualLabel);
 
@@ -1051,7 +1028,7 @@ public class OntologyManager {
 
     @Nullable
     private Set<Pair<Relation, List<Individual>>> getRelationValues(@NotNull final OWLNamedIndividual owlIndividual) {
-        Set<Pair<Relation, List<Individual>>> relationValues = null;
+        final Set<Pair<Relation, List<Individual>>> relationValues = new HashSet<>();
 
         for (final OWLObjectProperty owlRelation : ontology.getObjectPropertiesInSignature()) {
             final Set<OWLNamedIndividual> owlIndividualValues = reasoner.getObjectPropertyValues(owlIndividual, owlRelation).getFlattened();
@@ -1066,11 +1043,10 @@ public class OntologyManager {
                 values.add(individual);
             }
 
-            if (relationValues == null) relationValues = new HashSet<>();
             relationValues.add(new Pair<>(key, values));
         }
 
-        return relationValues;
+        return relationValues.isEmpty() ? null : relationValues;
     }
 
     @Nullable
@@ -1091,7 +1067,7 @@ public class OntologyManager {
 
     @Nullable
     private Set<Pair<Attribute, List<String>>> getAttributeValues(@NotNull final OWLNamedIndividual owlIndividual) {
-        Set<Pair<Attribute, List<String>>> attributeValues = null;
+        final Set<Pair<Attribute, List<String>>> attributeValues = new HashSet<>();
 
         for (final OWLDataProperty owlAttribute : ontology.getDataPropertiesInSignature()) {
             final Set<OWLLiteral> owlLiterals = reasoner.getDataPropertyValues(owlIndividual, owlAttribute);
@@ -1104,11 +1080,10 @@ public class OntologyManager {
                 values.add(owlLiteral.getLiteral());
             }
 
-            if (attributeValues == null) attributeValues = new HashSet<>();
             attributeValues.add(new Pair<>(key, values));
         }
 
-        return attributeValues;
+        return attributeValues.isEmpty() ? null : attributeValues;
     }
 
     @Nullable
@@ -1117,6 +1092,22 @@ public class OntologyManager {
 
         String label = null;
         for (final OWLAnnotation annotation : Searcher.annotationObjects(ontology.getAnnotationAssertionAxioms(owlObject.getIRI()), rdfsLabel)) {
+            if (annotation.getValue() instanceof OWLLiteral) {
+                final OWLLiteral value = (OWLLiteral) annotation.getValue();
+                label = value.getLiteral();
+                if (value.hasLang(DEFAULT_LANG)) break;
+            }
+        }
+
+        return label;
+    }
+
+    @Nullable
+    private String getComment(@NotNull final OWLNamedObject owlObject) {
+        final OWLAnnotationProperty rdfsComment = factory.getOWLAnnotationProperty(OWLRDFVocabulary.RDFS_COMMENT.getIRI());
+
+        String label = null;
+        for (final OWLAnnotation annotation : Searcher.annotationObjects(ontology.getAnnotationAssertionAxioms(owlObject.getIRI()), rdfsComment)) {
             if (annotation.getValue() instanceof OWLLiteral) {
                 final OWLLiteral value = (OWLLiteral) annotation.getValue();
                 label = value.getLiteral();

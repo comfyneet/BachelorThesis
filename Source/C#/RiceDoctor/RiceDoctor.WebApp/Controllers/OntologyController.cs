@@ -71,7 +71,7 @@ namespace RiceDoctor.WebApp.Controllers
             return View(attribute);
         }
 
-        public IActionResult Individual(string individualName)
+        public IActionResult Individual(string individualName, string keywords = null)
         {
             Individual individual = null;
             if (!string.IsNullOrWhiteSpace(individualName))
@@ -87,13 +87,15 @@ namespace RiceDoctor.WebApp.Controllers
                     .ToDictionary(av => av.Key, av => av.Value);
             }
 
-            ViewData["Individuals"] = _ontologyManager.GetIndividuals();
+            if (!string.IsNullOrWhiteSpace(keywords)) ViewData["Keywords"] = keywords.Trim();
 
             return View(individual);
         }
 
-        public IActionResult Article(string individualName)
+        public IActionResult Article(string individualName, string keywords = null)
         {
+            if (!string.IsNullOrWhiteSpace(keywords)) ViewData["Keywords"] = keywords.Trim();
+
             if (!string.IsNullOrWhiteSpace(individualName))
             {
                 individualName = individualName.Trim();
@@ -102,8 +104,8 @@ namespace RiceDoctor.WebApp.Controllers
                 if (attributeValues != null)
                     foreach (var pair in attributeValues)
                     {
-                        if (pair.Key.Id != "moTa") continue;
-                        ViewData["Description"] = SemanticParser.Parse(pair.Value.First());
+                        if (pair.Key.Id != "article") continue;
+                        ViewData["Article"] = SemanticParser.Parse(pair.Value.First());
                         return View(individual);
                     }
             }

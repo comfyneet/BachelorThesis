@@ -13,46 +13,65 @@
         <form asp-controller="Advisory" asp-action="SelectProblem" method="post">
             <input type="hidden" name="guid" value="@Model.Guid"/>
             <div class="form-group">
-                <label class="col-sm-3 control-label">Bài toán</label>
-                <div class="col-sm-9">
+                <label class="col-md-3 control-label">Bài toán</label>
+                <div class="col-md-9">
                     @if (problems != null)
                     {
                         for (var i = 0; i < problems.Count; ++i)
                         {
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="problemId" value="@i">@problems[i].Type
+                                    <input type="radio" name="problemId" value="@i" onclick="showGeneralProblem()">@problems[i].Type
                                 </label>
                             </div>
                         }
                     }
                     <div class="radio">
                         <label>
-                            <input type="radio" name="problemId" value="-1">Tổng quát
+                            <input type="radio" name="problemId" value="-1" onclick="showGeneralProblem()">Tổng quát
                         </label>
                     </div>
-                    <p>Nếu chọn tổng quát, nêu dạng kết quả muốn tìm kiếm VD : Bênh, Sâu Bệnh:</p>
-                    <textarea class="form-control" rows="2" name="outputs" placeholder="Benh&#10;SauBenh"></textarea>
-
+                </div>
+            </div>
+            <div id="generalProblem" class="form-group" style="display: none">
+                <label class="col-md-3 control-label">Nêu dạng kết quả muốn tìm kiếm (bệnh, sâu,...)</label>
+                <div class="col-md-9">
+                    <textarea class="form-control" rows="2" name="outputs" placeholder="Benh&#10;Sau"></textarea>
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-3 control-label">Nhập vào các biểu hiện của cây lúa </label>
-                <div class="col-sm-9">
-                    <textarea class="form-control" rows="4" name="inputs" placeholder="Benh=BenhVangLa&#10;MauLa=LaVang"></textarea>
+                <label class="col-md-3 control-label">Nhập vào các biểu hiện của cây lúa (bệnh đạo ôn, lá vàng,...)</label>
+                <div class="col-md-9">
+                    <textarea class="form-control" rows="4" name="inputs" placeholder="Benh=BenhDaoOn&#10;MauLa=LaVang"></textarea>
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-3 control-label">Số kết quả cần tìm chọn -1 nếu muốn tìm tất cả kết quả</label>
-                <div class="col-sm-9">
+                <label class="col-md-3 control-label">Số kết quả cần tìm</label>
+                <div class="col-md-9">
                     <input type="number" name="totalGoals" placeholder="tìm tất cả thì để trống"/>
                 </div>
             </div>
             <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
+                <div class="col-md-offset-2 col-md-10">
                     <input type="submit" class="btn btn-default" value="Xử lý"/>
                 </div>
             </div>
         </form>
     </div>
 </div>
+
+@section Scripts {
+    <script>
+        function showGeneralProblem() {
+            if ($("input[name='problemId']:checked").val() === "-1") {
+                if ($("#generalProblem").css('display') === 'none') {
+                    $("#generalProblem").fadeIn();
+                }
+            } else {
+                if ($("#generalProblem").css('display') !== 'none') {
+                    $("#generalProblem").fadeOut();
+                }
+            }
+        }
+    </script>
+}

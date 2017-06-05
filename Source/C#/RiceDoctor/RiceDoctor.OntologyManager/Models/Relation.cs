@@ -12,15 +12,26 @@ namespace RiceDoctor.OntologyManager
         [CanBeNull] private IReadOnlyCollection<Class> _allRanges;
         private bool _canGetAllDomains;
         private bool _canGetAllRanges;
+        private bool _canGetComment;
         private bool _canGetDirectDomains;
         private bool _canGetDirectRanges;
         private bool _canGetInverseRelation;
+        [CanBeNull] private string _comment;
         [CanBeNull] private IReadOnlyCollection<Class> _directDomains;
         [CanBeNull] private IReadOnlyCollection<Class> _directRanges;
         [CanBeNull] private Relation _inverseRelation;
 
-        public Relation([NotNull] string id, [CanBeNull] string label = null) : base(id, label)
+        public Relation(
+            [NotNull] string id,
+            [CanBeNull] string label = null,
+            [CanBeNull] string comment = null)
+            : base(id, label)
         {
+            if (comment != null)
+            {
+                _comment = comment;
+                _canGetComment = false;
+            }
         }
 
         public override EntityType Type => EntityType.Relation;
@@ -30,6 +41,17 @@ namespace RiceDoctor.OntologyManager
             if (ReferenceEquals(null, other)) return false;
             if (ReferenceEquals(this, other)) return true;
             return base.Equals(other);
+        }
+
+        [CanBeNull]
+        public string GetComment()
+        {
+            if (_canGetComment) return _comment;
+
+            _comment = Manager.Instance.GetComment(Id);
+            _canGetComment = true;
+
+            return _comment;
         }
 
         [CanBeNull]

@@ -1,17 +1,26 @@
-﻿@using RiceDoctor.OntologyManager
-@model RiceDoctor.OntologyManager.Individual
+﻿@model RiceDoctor.OntologyManager.Individual
 @{
-    var description = (string) ViewData["Description"];
+    var keywords = (string) ViewData["Keywords"];
+    var article = (string) ViewData["Article"];
     ViewData["Title"] = "Bài viết " + Model;
 }
 
 <div class="row">
-    <div class="col-md-4"></div>
-    <div class="col-md-8">
+    <div class="col-md-12">
+        @if (keywords != null)
+        {
+            <div class="alert alert-success alert-dismissible fade in" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                Kết quả tra cứu <strong>"@keywords"</strong>
+            </div>
+        }
+
         <h2>
-            Bài viết <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@Model.Id">@Model</a>
+            Bài viết về <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@Model.Id">@Model</a>
         </h2>
 
-        @Html.Raw(description)
+        @Html.Raw(article)
     </div>
 </div>

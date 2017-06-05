@@ -1,22 +1,22 @@
 ﻿@using RiceDoctor.OntologyManager
 @model RiceDoctor.OntologyManager.Relation
 @{
-    var relations = (IReadOnlyCollection<Relation>)ViewData["Relations"];
+    var relations = (IReadOnlyCollection<Relation>) ViewData["Relations"];
     ViewData["Title"] = "Quan hệ " + Model;
 }
 
 <div class="row">
-    <div class="col-lg-3">        
+    <div class="col-md-3">
         <nav clas="navbar navbar-inverse">
             <div class=" bg-teal">
                 @if (relations != null)
                 {
                     <ul class="nav nav-pills nav-stacked">
-                        @foreach (var tmpRelation in relations)
+                        @foreach (var relation in relations)
                         {
                             <li class="nav-item">
-                                @Html.ActionLink(tmpRelation.ToString(), "Relation", "Ontology", new {relationName = tmpRelation.Id})
-                                @if (tmpRelation == Model)
+                                @Html.ActionLink(relation.ToString(), "Relation", "Ontology", new {relationName = relation.Id})
+                                @if (relation == Model)
                                 {
                                     @: (this)
                                 }
@@ -30,8 +30,8 @@
                 }
             </div>
         </nav>
-            </div>
-    <div class="col-md-8">
+    </div>
+    <div class="col-md-9">
         <h2>@Model</h2>
 
         @if (Model != null)
@@ -47,9 +47,9 @@
                     @:không tìm thấy
                 }
             </h4>
-                    <hr />
+            <hr/>
 
-                    <h4>Chủ thể của @Model</h4>
+            <h4>Chủ thể của @Model</h4>
             if (Model.GetAllDomains() != null)
             {
                 foreach (var allDomain in Model.GetAllDomains())
@@ -68,9 +68,9 @@
                 @:<p>Không tìm thấy</p>
             }
 
-            <hr />
+            <hr/>
 
-                    <h4>Khách thể của @Model</h4>
+            <h4>Khách thể của @Model</h4>
             if (Model.GetAllRanges() != null)
             {
                 foreach (var allRange in Model.GetAllRanges())
@@ -91,4 +91,3 @@
         }
     </div>
 </div>
-

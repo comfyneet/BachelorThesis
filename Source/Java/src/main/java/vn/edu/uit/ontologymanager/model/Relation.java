@@ -12,6 +12,10 @@ import static vn.edu.uit.ontologymanager.model.EntityType.RELATION;
 public class Relation extends Entity {
 
     @Nullable
+    @SerializedName("Comment")
+    private final String comment;
+
+    @Nullable
     @SerializedName("DirectDomains")
     private final Set<Class> directDomains;
 
@@ -29,6 +33,7 @@ public class Relation extends Entity {
 
     Relation(@NotNull final Builder builder) {
         super(RELATION, builder.id, builder.label);
+        comment = builder.comment;
         directDomains = builder.directDomains;
         allDomains = builder.allDomains;
         directRanges = builder.directRanges;
@@ -42,6 +47,9 @@ public class Relation extends Entity {
 
         @Nullable
         private final String label;
+
+        @Nullable
+        private String comment;
 
         @Nullable
         private Set<Class> directDomains;
@@ -58,6 +66,12 @@ public class Relation extends Entity {
         public Builder(@NotNull final String id, @Nullable final String label) {
             this.id = id;
             this.label = label;
+        }
+
+        @NotNull
+        public Builder comment(@Nullable final String comment) {
+            this.comment = comment;
+            return this;
         }
 
         @NotNull

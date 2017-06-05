@@ -19,6 +19,7 @@ namespace RiceDoctor.SemanticCode
             Type = type;
             AddAttribute("src", url);
             AddAttribute("alt", GetInnerText());
+            AddAttribute("class", "img-responsive");
         }
 
         public ImageType Type { get; }
@@ -34,8 +35,8 @@ namespace RiceDoctor.SemanticCode
             var builder = new StringBuilder();
             foreach (var attribute in Attributes)
                 if (attribute.Key == "src" && Type == ImageType.Static)
-                    builder.Append($" {attribute.Key}=\"{SemanticParser.StaticImageLink}{attribute.Value}\"");
-                else builder.Append($" {attribute.Key}=\"{attribute.Value}\"");
+                    builder.Append($" src=\"{SemanticParser.StaticImageLink}{attribute.Value}\"");
+                else builder.Append($" src=\"{attribute.Value}\"");
 
             return $"<img {builder} />";
         }
