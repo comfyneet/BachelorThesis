@@ -2001,6 +2001,16 @@
         <NamedIndividual IRI="#BenhLemLepHat"/>
     </ObjectPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Ally_20_DF"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thuốc Ally_20_DF</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Almix_20_DF"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thuốc Almix_20_DF</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#dacDiem"/>
         <NamedIndividual IRI="#Antracol_70WP"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Propineb: 700 g/kg
@@ -2691,6 +2701,11 @@ BỘ: HEMIPTERA</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#CBA"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thuốc CBA</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#CayDay"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Cấy dày</Literal>
     </DataPropertyAssertion>
@@ -2984,6 +2999,11 @@ Hãng SX: Nông Sinh</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Furadan_3_H"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thuốc Furadan_3_H</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#GanLaXung"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Gân lá xưng</Literal>
     </DataPropertyAssertion>
@@ -3194,19 +3214,7 @@ Thời kỳ mạ có ý nghĩa quan trọng, chăm sóc cho mạ tốt, mạ kho
     <DataPropertyAssertion>
         <DataProperty IRI="#nhuCauNuocOGiaiDoan"/>
         <NamedIndividual IRI="#GiaiDoanMa"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Sau sạ từ 5-7 ngày: Cây
-lúa cần lớp nước mỏng săm
-sắp mặt ruộng . - Lúc này ruộng bị khô sẽ
-tổn thương đến rễ lúa, nên
-không thể để ruộng khô nứt nẻ
-.Để bộ rễ lúa không tổn
-thương, phải luôn duy trì lớp
-nước trên mặt ruộng đồng thời có tác dụng
-cho cây lúa hấp thụ phân bón
-dễ dàng và ém không cho hạt
-cỏ dại mọc.  Duy trì lớp nước ở mặt
-ruộng cho đến khi cây lúa
-được 20 ngày sau gieo.</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Sau sạ từ 5-7 ngày: Câylúa cần lớp nước mỏng săm sắp mặt ruộng . - Lúc này ruộng bị khô sẽ tổn thương đến rễ lúa, nên không thể để ruộng khô nứt nẻ .Để bộ rễ lúa không tổn thương, phải luôn duy trì lớpnước trên mặt ruộng đồng thời có tác dụng cho cây lúa hấp thụ phân bón dễ dàng và ém không cho hạt cỏ dại mọc.  Duy trì lớp nước ở mặt ruộng cho đến khi cây lúa được 20 ngày sau gieo.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#tuNgay"/>
@@ -3700,6 +3708,11 @@ Dạng [Thuoc]thuốc[/Thuoc] :	50SP: Bột tan trong nước</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#MILAX_100GB"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">thuốc MILAX_100GB</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#MepLaChay"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Mép lá cháy</Literal>
     </DataPropertyAssertion>
@@ -3884,6 +3897,11 @@ Tuyệt đối không được sử dụng  [Thuoc=PISANA_700WP]PISANA 700WP[/Th
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#OcSenh"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Ốc sênh</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#PISANA_700WP"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">thuốc PISANA_700WP</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
@@ -4788,7 +4806,7 @@ cloruakali.</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#QuyTrinhKichThichMa"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Quy trình [Thuoc]thuốc[/Thuoc] kích thích giai đoạn mạ</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Quy trình thuốc kích thích giai đoạn mạ</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#tuNgay"/>
@@ -4808,7 +4826,7 @@ cloruakali.</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#QuyTrinhKichThichTro"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Quy trình [Thuoc]thuốc[/Thuoc] kích thích giai đoạn trổ</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Quy trình thuốc  kích thích giai đoạn trổ</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#tuNgay"/>
@@ -4937,7 +4955,7 @@ Cỏ bợ hầu như ít khi phủ kín toàn bộ mặt ruộng lúa mà chỉ 
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#RauBo"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cỏ bợ có tên khoa học là Marsilea quadrifolia, thuộc họ Marsileaeae.</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cỏ bợ</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -4949,7 +4967,7 @@ Cỏ bợ hầu như ít khi phủ kín toàn bộ mặt ruộng lúa mà chỉ 
         <NamedIndividual IRI="#RayLungTrang"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Đặc điểm hình thái:
  
-- Trứng [Sau=RayLungTrang]rầy lưng trắng[/Sau] có dạng ”quả chuối tiêu” như trứng rầy nâu nhưng nhỏ, dài và nhọn hơn. Trứng được đẻ thành từng ổ theo chiều dọc, chìm trong bẹ hoặc gân chính của lá, mỗi ổ từ 2-7 quả. Trứng mới đẻ trong suốt, sau chuyển màu vàng, sắp nở có hai điểm mắt đỏ.
+- Trứng [Sau=RayLungTrang]rầy lưng trắng[/Sau] Thuộc Họ: Delphacidae Bộ: Homoptera (Tên khoa học: Sogatella furcifera Horvath)có dạng ”quả chuối tiêu” như trứng rầy nâu nhưng nhỏ, dài và nhọn hơn. Trứng được đẻ thành từng ổ theo chiều dọc, chìm trong bẹ hoặc gân chính của lá, mỗi ổ từ 2-7 quả. Trứng mới đẻ trong suốt, sau chuyển màu vàng, sắp nở có hai điểm mắt đỏ.
  
 - Rầy non mới nở có màu trắng đục, đến tuổi 3 xuất hiện các vệt vằn trên lưng.
  
@@ -4979,14 +4997,15 @@ Phòng trừ:
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#RayLungTrang"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">[Sau=RayLungTrang]rầy lưng trắng[/Sau]
-Thuộc Họ: Delphacidae Bộ: Homoptera
-(Tên khoa học: Sogatella furcifera Horvath)</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">rầy lưng trắng</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
         <NamedIndividual IRI="#RayNau"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">a. Triệu chứng gây hại:
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tên khoa học: Nilaparvata lugens Stal.
+ Họ: Delphacidae
+ Bộ: Homoptera.
+a. Triệu chứng gây hại:
 - Rầy trưởng thành và rầy non dùng miệng chích vào thân cây lúa để hút dịch cây. Bị hại nhẹ, các lá dưới có thể bị héo, bị hại nặng gây hiện tượng ‘cháy rầy’, cả ruộng bị khô héo. Hiện tượng cháy rầy đầu tiên mang tính cục bộ một vài mét vuông, nhưng nếu gặp điều kiện thuận lợi ‘cháy rầy’ lan tỏa rất nhanh ra một đến vài ha hoặc cả khu đồng trong 1 - 2 tuần.
 
 b.  Đặc điểm hình thái:
@@ -5019,10 +5038,7 @@ d.  Biện pháp phòng trừ:
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#RayNau"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Rầy nâu
- Tên khoa học: Nilaparvata lugens Stal.
- Họ: Delphacidae
- Bộ: Homoptera.</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Rầy nâu</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
@@ -5047,7 +5063,7 @@ Một năm rầy phát sinh 8 lứa, trong đó cần chú ý lứa 3: từ đ�
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#RayXanhDuoiDen"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">[Sau=RayXanhDuoiDen]rầy xanh đuôi đen[/Sau] (Nephotetix bipunctatus)</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">rầy xanh đuôi đen (Nephotetix bipunctatus)</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -5117,8 +5133,9 @@ Qui cách :20gr</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
         <NamedIndividual IRI="#SauCanGie"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Đặc điểm hình thái:
- 
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tên khoa học: Mythimna separata Walker)
+Thuộc họ: Noctuidae Bộ: Lepidoptera
+Đặc điểm hình thái:
 - Trứng sâu cắn gié hơi tròn, không có lông tơ phủ bên ngoài, bề mặt trứng có những vân khía hình mạng lưới, mắt vân có hình đa giác không đầu. Trứng xếp thành hàng hoặc chồng lên nhau thành ổ. Trứng mới đẻ có màu vàng sáng sau chuyển màu vàng đậm, khi sắp nở có màu tím than.
  
 - Sâu non (ấu trùng) có màu nâu vàng nhạt, phía lưng có 4 vệt màu đen xám chạy dọc, đầu có màu nâu đậm.
@@ -5155,15 +5172,14 @@ Phòng trừ:
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#SauCanGie"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Sâu cắn gié
-Tên khoa học: Mythimna separata Walker)
- 
-Thuộc họ: Noctuidae Bộ: Lepidoptera</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Sâu cắn gié</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
         <NamedIndividual IRI="#SauCuonLaLon"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Đặc điểm hình thái:
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tên khoa học: Parnara guttata Bremer et Grey)
+Họ: Hesperiidae Bộ: Lepidoptera
+Đặc điểm hình thái:
 - Trứng hình bán cầu, đỉnh bằng, giữa hơi lõm, mới đẻ có màu tro sau có màu nâu vàng, bề mặt có vân, khi sắp nở có màu đen tím.
 - Sâu non mới nở màu xanh lục, đầu lớn hơn thân. Khi sâu nở ra ăn vỏ trứng rồi bò ra đầu, mép lá nhả tơ dệt thành bao nấp ở đó. Sâu tuổi lớn hơn tiếp tục dệt các lá kế cận thành một bao lớn nằm ở trong gặm lá.
 - Nhộng hình đầu đạn, đầu bằng, đít nhọn màu vàng nhạt. Khi sắp vũ hóa thì nhộng có màu đen, vòi kéo dài ra khỏi mút cánh tới đốt bụng thứ 2. Sâu khi hóa nhộng nhả tơ dệt kén ở phía dưới khóm giữa các thân cây lúa.
@@ -5185,14 +5201,15 @@ Phòng trừ:
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#SauCuonLaLon"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">[Sau=SauCuonLaLon]sâu cuốn lá lớn[/Sau]
-Tên khoa học: Parnara guttata Bremer et Grey)
-Họ: Hesperiidae Bộ: Lepidoptera</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">sâu cuốn lá lớn</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
         <NamedIndividual IRI="#SauCuonLaNho"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">1. Triệu chứng gây hại:
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tên tiếng anh: Rice leaf folder
+Tên khoa học: Cnaphalocrosis medinalis G
+Bộ: Lepidoptera
+1. Triệu chứng gây hại:
 - Lá lúa bị cuốn, sâu non ăn biểu bì mặt trên và diệp lục của lá dọc theo gân lá tạo thành những vệt trắng dài, các vệt này có thể nối liền với nhau thành từng mảng làm giảm diện tích quang hợp và đặc biệt là trên lá đòng hoặc lá công năng sẽ làm giảm năng suất rõ rệt.
 2.  Đặc điểm hình thái:
 
@@ -5223,10 +5240,7 @@ Sâu non: Sâu non có 5 tuổi, mới mở màu trắng trong, đầu có màu 
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#SauCuonLaNho"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">[Sau=SauCuonLaNho]sâu cuốn lá nhỏ[/Sau] 
-Tên tiếng anh: Rice leaf folder
-Tên khoa học: Cnaphalocrosis medinalis G
-Bộ: Lepidoptera</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">sâu cuốn lá nhỏ</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
@@ -5294,7 +5308,10 @@ Khi mật độ trứng sâu đục thân lúa hai chấm khoảng 0,5 ổ/m2 �
     <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
         <NamedIndividual IRI="#SauDucThanHaiCham"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">1. Triệu chứng gây hại:
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tên khoa học: Scirpophaga incertulas Walker              
+Họ: Pyralidae
+ Bộ: Lepidoptera
+1. Triệu chứng gây hại:
  - Thời kỳ mạ hoặc đẻ nhánh, sâu đục qua bẹ phía ngoài vào đến nõn giữa phá hại làm cho dảnh lúa bị héo.
  - Thời kỳ sắp trỗ hoặc mới trỗ, sâu  đục qua lá bao của  đòng chui vào giữa rồi bò xuống đục ăn điểm sinh trưởng, cắt đứt các mạch dẫn dinh dưỡng làm cho bông lép trắng.
 2.  Đặc điểm hình thái:
@@ -5330,10 +5347,7 @@ Khi mật độ trứng sâu đục thân lúa hai chấm khoảng 0,5 ổ/m2 �
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#SauDucThanHaiCham"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Sâu đục thân hai chấm
-  Tên khoa học: Scirpophaga incertulas Walker              
-Họ: Pyralidae
- Bộ: Lepidoptera</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Sâu đục thân hai chấm</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
@@ -5427,8 +5441,10 @@ Hàng năm, cần chú ý các đợt sâu: Đợt 1 từ hạ tuần tháng 6 -
     <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
         <NamedIndividual IRI="#SauNan"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Đặc điểm hình thái:
- 
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tên khoa học: Pachydiplosis oryzae Wood- Mason
+hoăc tên khác: Orseolia oryzae Wood-Mason)
+Thuộc Họ: Cecidomyiidae Bộ: Diptera
+Đặc điểm hình thái:
 - Trứng hình bầu dục dài, bề mặt trơn bóng, mới đẻ màu trắng sữa, sau chuyển sang màu đỏ tím.
  
 - Sâu non có 3 tuổi, đẫy sức màu trắng sữa, dịch cơ thể màu hồng nhạt. Mặt bụng ngực trước có một mẩu cứng chẻ đôi. Điểm sinh trưởng bị hại biến dị thành ống hành. Khi ống hành đã vươn ra ngoài cũng là lúc sâu non đã hoá nhộng.
@@ -5469,17 +5485,22 @@ Phòng trừ:
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#SauNan"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Sâu năn
-Tên khoa học: Pachydiplosis oryzae Wood- Mason
- 
-hoăc tên khác: Orseolia oryzae Wood-Mason)
- 
-Thuộc Họ: Cecidomyiidae Bộ: Diptera</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Sâu năn</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#SauPhao"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Sâu phao</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Sindax_10_WP"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">thuốc Sindax_10_WP</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Sirius_10_WP"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">thuốc Sirius_10_WP</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#dacDiem"/>
@@ -5815,6 +5836,11 @@ Trà	Đốm lá
 Đậu phộng	Đốm lá</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Trebon_20ND"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thuốc Trebon_20ND</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
         <NamedIndividual IRI="#VuDongXuan"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Vụ [VuMua=VuDongXuan]đông xuân[/VuMua] ở miền trung bắt đầu từ tháng 12 âm lịch đến tháng 4 âm lịch. Vụ [VuMua=VuDongXuan]đông xuân[/VuMua] là vụ cho năng xuất tốt nhất vì lúc này là thời điểm thuận lợi nhất để cây trồng phát triển tốt nhất có thể.</Literal>
@@ -5822,7 +5848,7 @@ Trà	Đốm lá
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#VuDongXuan"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Vụ [VuMua=VuDongXuan]đông xuân[/VuMua]</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Vụ đông xuân</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
@@ -5832,7 +5858,7 @@ Trà	Đốm lá
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#VuHeThu"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">[VuMua=VuHeThu]vụ hè thu[/VuMua]</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">vụ hè thu</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#dacTinhCuaThuoc"/>
