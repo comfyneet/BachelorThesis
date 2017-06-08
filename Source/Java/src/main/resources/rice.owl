@@ -440,6 +440,9 @@
         <Class IRI="#NuocRuong"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#trieuchung"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#PhanVoCo"/>
     </Declaration>
     <Declaration>
@@ -486,6 +489,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#DauLaChay"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TREBON_10EC"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#LaCongQueo"/>
@@ -600,6 +606,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#coThuoc"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hangSX"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#SauGai"/>
@@ -799,10 +808,6 @@
     <Declaration>
         <DataProperty IRI="#luongThuoc"/>
     </Declaration>
-    <SubClassOf>
-        <Class IRI="#Benh"/>
-        <Class IRI="#TacNhanGayHai"/>
-    </SubClassOf>
     <SubClassOf>
         <Class IRI="#ChieuCao"/>
         <Class IRI="#TrieuChung"/>
@@ -1588,6 +1593,10 @@
         <NamedIndividual IRI="#Star_10WP"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Thuoc"/>
+        <NamedIndividual IRI="#TREBON_10EC"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#HinhDangThan"/>
         <NamedIndividual IRI="#ThanKho"/>
     </ClassAssertion>
@@ -1952,6 +1961,21 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#coTacNhanGayHai"/>
+        <NamedIndividual IRI="#TREBON_10EC"/>
+        <NamedIndividual IRI="#RayNau"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coTacNhanGayHai"/>
+        <NamedIndividual IRI="#TREBON_10EC"/>
+        <NamedIndividual IRI="#SauCuonLaLon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coTacNhanGayHai"/>
+        <NamedIndividual IRI="#TREBON_10EC"/>
+        <NamedIndividual IRI="#SauCuonLaNho"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coTacNhanGayHai"/>
         <NamedIndividual IRI="#ThuocA1VAN_6.4SL"/>
         <NamedIndividual IRI="#BenhBacLa"/>
     </ObjectPropertyAssertion>
@@ -1962,6 +1986,16 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#coTacNhanGayHai"/>
+        <NamedIndividual IRI="#ThuocADORE_25SC"/>
+        <NamedIndividual IRI="#CoChi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coTacNhanGayHai"/>
+        <NamedIndividual IRI="#ThuocADORE_25SC"/>
+        <NamedIndividual IRI="#CoLongVuc"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coTacNhanGayHai"/>
         <NamedIndividual IRI="#ThuocActara_25WWG"/>
         <NamedIndividual IRI="#BoTri"/>
     </ObjectPropertyAssertion>
@@ -1969,6 +2003,21 @@
         <ObjectProperty IRI="#coTacNhanGayHai"/>
         <NamedIndividual IRI="#ThuocActara_25WWG"/>
         <NamedIndividual IRI="#RayNau"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coTacNhanGayHai"/>
+        <NamedIndividual IRI="#ThuocAdmire_50EC"/>
+        <NamedIndividual IRI="#BoTri"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coTacNhanGayHai"/>
+        <NamedIndividual IRI="#ThuocAdmire_50EC"/>
+        <NamedIndividual IRI="#RayNau"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coTacNhanGayHai"/>
+        <NamedIndividual IRI="#ThuocAdmire_50EC"/>
+        <NamedIndividual IRI="#RayXanhDuoiDen"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#coTacNhanGayHai"/>
@@ -2066,12 +2115,25 @@ Hoạt chất Fenobucarb có tác động tiếp xúc, vị độc và hiệu l�
     <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
         <NamedIndividual IRI="#BenhBacLa"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">[Benh=BenhBacLa]bệnh bạc lá[/Benh] lúa xuất hiện trên phiến lá, đầu tiên là ở ngọn lá. Khi mới xuất hiện vết bệnh có màu xanh tái, gặp nắng vết bệnh héo đi, tế bào chết dần tạo thành vết dài màu trắng xám. Bìa vết bệnh có hình gợn sóng, thời tiết ẩm, hay sáng sớm trên vết bệnh có giọt dịch màu trắng đục, lúc khô có màu vàng hoặc nâu chứa đầy vi khuẩn. Bệnh nặng có thể làm cho khô trắng cả phiến lá, làm tỷ lệ hạt lửng lép 50-70%.
-
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BỆNH BẠC LÁ
+                     Tên khoa học : Xanthomonas campestris pv. Oryzae
+1. Triệu chứng :
+[Benh=BenhBacLa]bệnh bạc lá[/Benh] lúa xuất hiện trên phiến lá, đầu tiên là ở ngọn lá. Khi mới xuất hiện vết bệnh có màu xanh tái, gặp nắng vết bệnh héo đi, tế bào chết dần tạo thành vết dài màu trắng xám. Bìa vết bệnh có hình gợn sóng, thời tiết ẩm, hay sáng sớm trên vết bệnh có giọt dịch màu trắng đục, lúc khô có màu vàng hoặc nâu chứa đầy vi khuẩn. Bệnh nặng có thể làm cho khô trắng cả phiến lá, làm tỷ lệ hạt lửng lép 50-70%.
 [Benh=BenhBacLa]bệnh bạc lá[/Benh] lúa năm nay có thể hại nặng lúa giai đoạn trổ bông đến thu hoạch, nhất là những ruộng lúa cấy giống nhiễm bệnh, bón thừa đạm vào giai đoạn cuối làm cho bộ lá đòng (gồm lá đòng và 3 lá dưới lá đòng) có màu xanh thẫm, xanh đen.
-
+2 - Tác nhân :
+      Bệnh bạc lá do vi khuẩn Xanthomonas campestris gây ra. Nhiệt độ thích hợp cho vi khuẩn phát triển là 26-300C, pH thích hợp là 6,8 - 7.
+3. Đặc điểm phát sinh, phát triển bệnh :
+   - Điều kiện thời tiết: Bệnh phát triển mạnh trong điều kiện ấm nóng và thường gây hại nặng trong vụ lúa mùa. Những năm thời tiết ẩm ướt, nhiều mưa gió, bão,  là điều kiện thuận lợi cho bệnh phát sinh, phát triển.
+  - Ảnh hưởng bởi phân bón: Những ruộng bón quá nhiều đạm, cây lúa xanh tốt, thân lá mềm yếu, hàm lượng đạm tự do trong cây tích luỹ cao thì cây dễ nhiễm bệnh nặng. Những ruộng lúa chua, trũng, đặc biệt là những vùng đất hẩu, hàng lúa bị bóng cây che phủ thì bệnh phát triển mạnh hơn. 
+  - Ảnh hưởng của giống: Các giống lúa khác nhau thì mức độ mẫn cảm với bệnh cũng khác nhau. Giai đoạn lúa làm đòng-trỗ đến chín sữa là giai đoạn lúa mẫn cảm với bệnh hơn cả. 
+   - Vi khuẩn có thể tồn tại trong hạt thóc hoặc tàn dư cây bệnh là chủ yếu. Ngoài ra nó còn tồn tại ở dạng viên keo vi khuẩn, ở cỏ dại (cỏ lồng vực, cỏ môi, cỏ lá tre, cỏ tranh, cỏ gừng bò, cỏ gà nước, cỏ xương cá lông cứng).
+4. Biện pháp phòng chống 
+- Chọn giống sạch bệnh. Xử lý hạt giống trước khi trồng ;
+- Thực hiện chăm sóc lúa theo kỹ thuật canh tác lúa cải tiến SRI, bón phân cân đối NPK, bón tập trung ‘nặng đầu, nhẹ cuối’, không bón thừa, bón muộn phân đạm;
+- Thường xuyên kiểm tra đồng ruộng, nhất là sau những đợt mưa giông, bão. Khi thấy bệnh xuất hiện, dừng ngay viêc bón phân đạm, không phun các chất kích thích sinh trưởng, các loại phân bón lá và luôn giữ đủ nước trong ruộng;
+- Khi bệnh đã phát triển trên đồng ruộng thì việc phun thuốc hoá học thường không có hiệu quả. Tuy nhiên, có thể sử dụng một số loại thuốc để phun phòng bệnh như : thuốc có hoạt chất Streptomicin sulfate, Kasugamicin, Gentamicin sulfate, Quaternary Ammonium Salst, Salicylic acid, Fosetyl Aluminium...nhưng phải phun sớm, nhất là trước hoặc ngay sau đợt mưa giông, kết hợp chăm sóc lúa cân đối, hợp lý để phòng ngừa và hạn chế bệnh.  
+5. Lưu ý
 Chọn [Thuoc]thuốc[/Thuoc] trừ [Benh=BenhBacLa]bệnh bạc lá[/Benh] lúa: Hiện nay chưa có loại [Thuoc]thuốc[/Thuoc] đặc hiệu trừ [Benh=BenhBacLa]bệnh bạc lá[/Benh] lúa. Chỉ có loại [Thuoc]thuốc[/Thuoc] mới, khả năng phòng bệnh tốt, trừ được bệnh khi mới phát sinh, cấp bệnh nhẹ (cấp bệnh C1-2) và một số loại [Thuoc]thuốc[/Thuoc] thành phẩm thông dụng có nhiều trên thị trường có tác dụng phòng trị [Benh=BenhBacLa]bệnh bạc lá[/Benh] lúa.
-
 Ditacin 8L với hoạt chất Ningnamycin là một loại kháng sinh có nguồn gốc sinh học mạnh, phổ rộng với nhiều loại nấm và vi khuẩn gây bệnh cho cây trồng, sản phẩm đã được đăng ký trong danh mục các loại [Thuoc]thuốc[/Thuoc] BVTV mới an toàn với môi trường sống và người sử dụng. [Thuoc=Ditacin_8L]Ditacin 8L[/Thuoc] do Công ty BVTV Lâm Sinh độc quyền sản xuất, phân phối được xem là loại [Thuoc]thuốc[/Thuoc] có hiệu quả nhất với vi khuẩn gây [Benh=BenhBacLa]bệnh bạc lá[/Benh] lúa hiện nay. Liều lượng sử dụng: Phòng bệnh với những ruộng lúa khi trổ bông xanh tốt, biểu hiện thừa đạm, giống lúa nhiễm bệnh, 2gói/2bình 8-10lít/sào Bắc bộ. Trị bệnh, khi bệnh mới xuất hiện (cấp bệnh C1-2), 3gói/2bình/sào; phun nhắc lại lần 2 sau lần 1 từ 5-7ngày.
 
 Ngoài ra có thể sử dụng các loại [Thuoc]thuốc[/Thuoc] thành phẩm sau:[Thuoc]Ditacin_8LStaner_20WP[/Thuoc] ;[Thuoc=Hoả_Tiễn_50WP]Hoả Tiễn 50WP[/Thuoc]; CBA; [Thuoc=Bactocide_12WP]Bactocide 12WP[/Thuoc]; [Thuoc=Sasa_20WP]Sasa 20WP[/Thuoc] cũng cho kết quả phòng, trị bệnh tương đối tốt, cần phun 2 lần, mỗi lần cách nhau 5-7 ngày.</Literal>
@@ -2210,6 +2272,7 @@ Mật độ gieo sạ cũng có liên quan đến khả năng phát triển củ
 
 - Phân bón: 
 Ba lọai phân N-P-K đều có ảnh hưởng rất lớn đến việc phát sinh bệnh nếu bón không cân đối. Thông thường bón dư thừa phân đạm sẽ làm tăng bệnh; dư phân lân không thấy rõ ảnh hưởng lên bệnh. Tuy nhiên nếu bón thêm phân lân trên vùng đất phèn sẽ hạn chế bệnh cháy lá rất rõ ràng. Phân kali có ảnh hưởng rất phức tạp trên sự phát triển của bệnh cháy lá; bón dư thừa đạm và kali đều làm tăng bệnh; bón đạm vừa phải kết hợp đủ lượng kali thì sẽ giãm bệnh rất rõ. Do đó, trong giai đọan sau trổ nếu ruộng bị nhiễm bệnh cháy lá họặc thối cổ bông thì không đuợc bón thêm phân bón lá có nitrat kali.
+
 Các yếu tố giúp phát sinh bệnh
 - Giống lúa: 
 Thông thường các giống lúa cao sản ngắn ngày khi được phóng thích đưa vào sản xuất đại trà thì đã được các nhà khoa học lai tạo, tuyển chọn để cây lúa có khả năng ít nhiều mang gen có thể kháng hay chống chịu lại bệnh cháy lá. Trồng các giống lúa nhiễm bệnh; khi gặp điều kiện thời tiết thuận lợi cho nầm bệnh, áp lực nguồn bệnh trong khu vực cao thì cây lúa dễ bị “xụp mặt” cháy rụi nhanh rồi chết. Ngược lại, nếu trồng giống lúa kháng bệnh kết hợp với việc áp dụng IPM thì cây lúa sẽ đứng vững và tiếp tục cho năng suất. Khả năng kháng lại bệnh của giống lúa chỉ có thể tồn tại trong một thời gian nhất định do con nấm gây bệnh cháy lá thường xuyên thay đổi “tính chất gây bệnh” để phù hợp với “con bệnh”. Do đó, bà con nên thay đổi giống mới sau một thời gian canh tác. Ngòai ra, “tính chất gây bệnh” của các con nấm cũng thay đổi theo khu vực; thường được các nhà khoa học gọi là “nòi hay dòng nấm địa phương”. Tại Sóc Trăng có 4 nòi, Tiền Giang 3 nòi, Vĩnh Long có có 2 nòi (Teraoka và Phạm Văn Kim, 2002). Như vậy bà con nông dân không nên chủ quan, không nên tin tưởng tuyệt đối là giống lúa kháng bệnh cháy lá được mua từ Sóc Trăng về; khi trồng tại khu vực Tiền Giang sẽ kháng được với bệnh này.</Literal>
@@ -2512,9 +2575,28 @@ b) Trừ bệnh:Biện pháp trừ bệnh hữu hiệu nhất đối với bện
 ● Giai đoạn lúa còn non (dưới 40 ngày tuổi) nếu ruộng lúa bị nhiễm bệnh nặng, không còn khả năng phục hồi, cho năng suất thì phải tiêu huỷ bằng cách cày trục cả ruộng để diệt mầm bệnh, trước khi cày vùi phải phun [Thuoc]thuốc[/Thuoc] trừ rầy nâu để tránh phát tán truyền bệnh sang ruộng lúa khác. Phát hiện thấy bệnh nhiễm nhẹ thì ngay lập tức phải nhổ bỏ, vùi các bụi lúa bị bệnh đồng thời phun [Thuoc]thuốc[/Thuoc] trừ rầy.● Giai đoạn lúa sau gieo sạ, cấy 40 ngày, phải thường xuyên thăm đồng thấy ruộng bi bbệnh thì phải nhổ bỏ, vùi bỏ bụi lúa bệnh, nếu thấy mật độ dầy cám ³ 3 con/dảnh (tép) thì phải phun [Thuoc]thuốc[/Thuoc] trừ rầy. Nếu ruộng bị nhiễm quá nặng thì phải tiêu huỷ bằng cách như phần trên.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#bienPhapKhacPhuc"/>
+        <NamedIndividual IRI="#BenhVangLun"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Phòng bệnh: Quản lý rầy nâu vì rầy nâu chính là nguồn lây lan bệnh vàng lùn và lùn xoắn lá: 
++ Thăm đồng thường xuyên để phát hiện rầy thật sớm.
++ Khi phát hiện có rầy nâu cánh dài ở giai đoạn mạ với mật độ từ 7 - 10con/tép thì cần phun thuốc trừ rầy ngay vì đây là rầy mới di chuyển đến và khả năng rầy mang mầm bệnh là rất cao.
+
++ Các loại thuốc hiện nay phun trừ rầy có hiệu quả: Bassa 50EC, Trebon 20ND, Admire 50EC, Actara 25WWG...
+
+- Trừ bệnh:
++ Khi cây lúa còn ở giai đoạn mạ đến đẻ nhánh, nếu phát hiện cây bị bệnh thì phải nhổ bỏ ngay hay cày vùi huỷ bỏ toàn bộ ruộng lúa để tránh lây lan vì cây lúa không thể phục hồi cho dù tiếp tục được đầu tư thêm phân bón, thuốc trừ sâu bệnh, hay bơm nước vào. Trước khi cày vùi phải phun thuốc trừ rầy nâu để tránh phát tán truyền bệnh sang ruộng lúa khác.
+
+- Ở những vùng vừa có dịch bệnh virus xảy ra: cày lật gốc rạ ngay sau khi thu hoạch.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#BenhVangLun"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">bệnh vàng lùn</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#trieuchung"/>
+        <NamedIndividual IRI="#BenhVangLun"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Lá lúa từ màu xanh nhạt chuyển dần sang màu vàng nhạt, vàng da cam rồi vàng khô. Vị trí các lá bị vàng lan dần từ các lá bên dưới lên các lá phía trên. Vết vàng trên lá xuất hiện từ chóp lá, lan dần vào phía bẹ lá. Tất cả các lá bị bệnh có xu hướng xoè ngang. Các chồi lúa bị bệnh giảm chiều cao và bệnh cũng làm giảm số chồi trên bụi lúa mắc bệnh. Quần thể ruộng lúa bị bệnh ngả màu vàng, chiều cao cây lúa không đồng đều.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -5542,6 +5624,27 @@ Ngưng phun [Thuoc]thuốc[/Thuoc] 14 ngày trước khi thu hoạch lúa, 7 ng�
 - Là [Thuoc]thuốc[/Thuoc] đặc trị chuyên dùng trừ bệnh vi khuẩn hại cây trồng: cháy bìa lá (bạc lá), đen lép hạt hại lúa.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#article"/>
+        <NamedIndividual IRI="#Star_10WP"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">STAR 10WP
+Khối lượng/Thể tích: 5gr
+Trọng lượng: 0kg
+Quy cách: gói
+Hoạt chất: Pyrazosulfuron Ethyl 10%
+Hãng SX: Cty Bảo vệ Thực vật Sài Gòn
+Product Description
+Tên thương mại	STAR 10WP
+Thuốc trừ cỏ chuyên dùng trừ cỏ cho lúa
+Hoạt chất	Pyrazosulfuron Ethyl 10%
+Qui cách	5gr x 10 gói
+Công dụng	Là thuốc trừ cỏ nội hấp, chọn lọc có hiệu lực diệt trừ cao với hầu hết các loại cỏ phổ biến trong ruộng như cỏ lồng vực, cỏ đuôi phụng, cỏ cháo, cỏ chác, cỏ năn, rau mác,rau bợ…; an toàn với lúa
+Hướng dẫn sử dụng	
+Liều lượng
+ – Nếu pha với nước để phun: 5gr/bình 8L. Phun 2 bình cho 500m², 4 bình cho 1000m²
+– Nếu trộn với cát để rải: 10gr trộn với 1kg cát rải đều cho 500m², 20gr trộn với 2kg cát rải đều cho 1000m²
+– Thời gian sử dụng thuốc: 3-7 ngày sau khi sạ hoặc cấy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#dacDiem"/>
         <NamedIndividual IRI="#Star_10WP"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Mã sản phẩm: star
@@ -5550,6 +5653,11 @@ Trọng lượng: 0kg
 Quy cách: gói
 Hoạt chất: Pyrazosulfuron Ethyl 10%
 Hãng SX: Cty Bảo vệ Thực vật Sài Gòn</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hangSX"/>
+        <NamedIndividual IRI="#Star_10WP"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cty Bảo vệ Thực vật Sài Gòn</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#luongThuoc"/>
@@ -5574,6 +5682,48 @@ Hãng SX: Cty Bảo vệ Thực vật Sài Gòn</Literal>
         <DataProperty IRI="#triSauBenhHai"/>
         <NamedIndividual IRI="#Star_10WP"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Là thuốc trừ cỏ nội hấp, chọn lọc có hiệu lực diệt trừ cao với hầu hết các loại cỏ phổ biến trong ruộng như cỏ lồng vực, cỏ đuôi phụng, cỏ cháo, cỏ chác, cỏ năn, rau mác,rau bợ…; an toàn với lúa</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#article"/>
+        <NamedIndividual IRI="#TREBON_10EC"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">TREBON 10EC
+Mã sản phẩm: trebon
+Khối lượng/Thể tích: 100ml
+Trọng lượng: 0kg
+Quy cách: chai
+[b]Hoạt chất[/b] : Etofenprox 
+[b]Hãng SX[/b]: Cty Bảo Vệ Thực Vật 1 Trung Ương 
+[b]Tên thương mại[/b] : TREBON 10EC 
+[b]Hoạt chất[/b]: Etofenprox 10% 
+[b]Công dụng [/b]: 
+Là thuốc trừ sâu trên lúa, chè, vải, ngô bông, dùng cho các loại sâu như: Sâu cuốn lá, sâu vẽ bùa, sâu xanh, sâu khoang, rầy xanh, rầy nâu, bọ trĩ, bọ cánh tơ, bọ xít muỗi và rệp
+[b]Hướng dẫn sử dụng[/b]
+Lúa: Rầy nâu, sâu cuốn lá, bọ trĩ ; Chè: Rầy xanh, bọ cánh tơ, bọ xít muỗi. Pha 12-15ml thuốc với bình 10 lít. Phun khi s6u rầy mới xuất hiện, tuổi nhỏ. Lượng dùng 0,7 lít thuốc cho 1ha.
+Vải: Sâu vẽ bùa, rệp ; Ngô bông: Sâu xanh, sâu khoang. Pha 18-24ml thuốc với bình 10 lít nước. Phun ướt đẫm đều tán lá, lượng dung:1-1,5 lít thuốc cho 1ha</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dacTinhNongHoc"/>
+        <NamedIndividual IRI="#TREBON_10EC"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Mã sản phẩm: trebon
+Khối lượng/Thể tích: 100ml
+Trọng lượng: 0kg
+Quy cách: chai
+Hoạt chất: Etofenprox</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hangSX"/>
+        <NamedIndividual IRI="#TREBON_10EC"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Hãng SX: Cty Bảo Vệ Thực Vật 1 Trung Ương</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#luongThuoc"/>
+        <NamedIndividual IRI="#TREBON_10EC"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Pha 12-15ml thuốc với bình 10 lít</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#TREBON_10EC"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">TREBON 10EC</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -5673,13 +5823,29 @@ Hãng SX: Cty Bảo vệ Thực vật Sài Gòn</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
         <NamedIndividual IRI="#ThuocADORE_25SC"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Adore 25SC là thuốc trừ cỏ chọn lọc trên lúa thuộc nhóm hóa học Quinoline carboxylic acid, có tác động nội hấp, hậu nảy mầm, hấp thụ vào cây cỏ qua lá và rễ. Trừ được các loại cỏ như: [Co=CoLongVuc]cỏ lồng vực [/Co] , cỏ chỉ, cỏ điên điển, cỏ loa kèn, rau muống dại, bìm bìm…v.v. đặc biệt đặc trị [Co=CoLongVuc]cỏ lồng vực [/Co], rất an toàn cho lúa.</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">THUỐC TRỪ CỎ ADORE 25SC
+Adore 25SC là thuốc trừ cỏ chọn lọc trên lúa thuộc nhóm hóa học Quinoline carboxylic acid, có tác động nội hấp, hậu nảy mầm, hấp thụ vào cây cỏ qua lá và rễ. Trừ được các loại cỏ như: cỏ lồng vực, cỏ chỉ, cỏ điên điển, cỏ loa kèn, rau muống dại, bìm bìm…v.v. đặc biệt đặc trị cỏ lồng vực, rất an toàn cho lúa.
+Thành phần: Quinclorac  250 g/l
+
+Cách tác động: Chọn lọc, nội hấp, trừ cỏ tiền và hậu nẩy mầm
+Cơ chế tác động: Ngăn cản sự tổng hợp cellulose vách tế bào. Thuốc được hấp thu qua mầm hạt, rễ và lá, vận chuyển trong mạch gỗ và libe theo 2 chiều lên và xuống
+Quy cách:
+- Chai 100 ml, thùng 96 chai 
+- Chai 250 ml, thùng 48 chai
+
+Nhà sản xuất: Fertiagro Pte Ltd
+Đăng ký và phân phối tại Việt Nam:    Công Ty  Cổ Phần Nông Dược HAI.28 Mạc Đỉnh Chi, Quận 1, TP. HCM</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#dacDiem"/>
         <NamedIndividual IRI="#ThuocADORE_25SC"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">[li]Cách tác động: Chọn lọc, nội hấp, trừ cỏ tiền và hậu nẩy mầm[/li]
 [li]Cơ chế tác động: Ngăn cản sự tổng hợp cellulose vách tế bào. Thuốc được hấp thu qua mầm hạt, rễ và lá, vận chuyển trong mạch gỗ và libe theo 2 chiều lên và xuống[/li]</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hangSX"/>
+        <NamedIndividual IRI="#ThuocADORE_25SC"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Nhà sản xuất: Fertiagro Pte Ltd</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -5690,6 +5856,27 @@ Hãng SX: Cty Bảo vệ Thực vật Sài Gòn</Literal>
         <DataProperty IRI="#thanhPhan"/>
         <NamedIndividual IRI="#ThuocADORE_25SC"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Quinclorac  250 g/l</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#article"/>
+        <NamedIndividual IRI="#ThuocActara_25WWG"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ACTARA 25 WG
+Tiêu diệt rất hiệu quả hơn 70 loại côn trùng chích hút khó trừ.
+Tên thương mại	ACTARA 25 WG – Sự bảo vệ khôn ngoan
+Hoạt chất	Thiamethoxam
+Qui cách	1 g, 2 g
+Độ độc	Nhóm 3
+Cơ chế tác động	Tiếp xúc, vị độc, bảo vệ tức thì cây trồng ngay sau khi xử lý thuốc
+Công dụng	Tiêu diệt rất hiệu quả hơn 70 loại côn trùng chích hút khó trừ
+Hướng dẫn sử dụng đối với bọ trĩ 
+– Pha 25-30 g/ha
+– Pha 1 g/bình 8 lit
+– Lượng nước phun: 320-500 lít/ha
+– Phun đều
+Hướng dẫn sử dụng đối với rầy nâu
+– Pha 40-80 g/ha
+– Pha 1 g/bình 8 lit
+– Phun đều 4-6 bình 8 lít/1.000m2</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#dacDiem"/>
@@ -5724,6 +5911,32 @@ Rầy nâu
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Công dụng	Tiêu diệt rất hiệu quả hơn 70 loại côn trùng chích hút khó trừ</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#article"/>
+        <NamedIndividual IRI="#ThuocAdmire_50EC"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ADMIRE 50EC – THUỐC ĐẶC TRỊ RẦY
+Khối lượng/Thể tích: 100 ml
+Quy cách: chai
+Hoạt chất: Imidacloprid
+Hãng SX: Bayer
+Product Description
+Tên thương phẩm :	Admire 050EC, 200OD
+Tên hoạt chất :	Imidacloprid (min 96 %)
+Loại thuốc :	Thuốc trừ sâu
+Nhóm thuốc :	Neonicotinoit
+Danh mục thuốc :	Được phép sử dụng
+Dạng thuốc :	050EC: Nhũ dầu. 200OD: Dung dịch
+Đối tượng phòng trừ :	050EC: Bọ trĩ/lúa. Rầy xanh/lúa. Rầy nâu/lúa. Rầy xanh/bông vải. Rệp/bông vải.
+200OD: Bọ trĩ/lúa. Rầy nâu/lúa. Rệp sáp/cà phê. Rệp vảy/cà phê. Bọ trĩ/điều. Rầy xanh/bông vải. Rệp muội/bông vải
+Tác động của thuốc :	tác động tiếp xúc, vị độc; nội hấp mạnh, dịch chuyển hướng ngọn.
+Nhóm độc :	Nhóm 3
+Mức độ độc :	với cá: không độc, với ong: ít độc
+Liều lượng sử dụng :	0.3 – 0.4 lít/ha
+Cách dùng :	pha 10 – 14 ml/bình 16 lít
+Thời gian cách ly :	7 ngày
+Khả năng hỗn hợp :	có thể hỗn hợp với thuốc khác
+Đặc điểm chung :	Tác động đến hệ thần kinh côn trùng</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#dacDiem"/>
         <NamedIndividual IRI="#ThuocAdmire_50EC"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tên thương phẩm :	Admire 050EC, 200OD
@@ -5732,6 +5945,11 @@ Loại [Thuoc]thuốc[/Thuoc] :	[Thuoc]thuốc[/Thuoc] trừ sâu
 Nhóm [Thuoc]thuốc[/Thuoc] :	Neonicotinoit
 Danh mục [Thuoc]thuốc[/Thuoc] :	Được phép sử dụng
 Dạng [Thuoc]thuốc[/Thuoc] :	050EC: Nhũ dầu. 200OD: Dung dịch</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hangSX"/>
+        <NamedIndividual IRI="#ThuocAdmire_50EC"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Hãng SX: Bayer</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#luongThuoc"/>
@@ -5758,9 +5976,28 @@ Khả năng hỗn hợp :	có thể hỗn hợp với [Thuoc]thuốc[/Thuoc] kh�
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">7 ngày</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#article"/>
+        <NamedIndividual IRI="#ThuocArmada"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thành phần: Imidacloprid
+Công dụng: Armada là thuốc trừ rầy có tác dụng tiếp xúc, vị độc, và nội hấp mạnh, đặc trị rầy nâu hại lúa Ngoài ra, Armada 50EC còn có hiệu lực cao đối với nhiều loại côn trùng chích hút như: bọ trĩ hại lúa; rầy xanh, rệp hại ngô, rầy xanh, rệp muội hại rau màu, đậu đỗ; sâu vẽ bùa, ruồi đục quả, rệp hại cây ăn quả, rệp sáp, rệp muội, rầy xanh, nhện đỏ hạầic phê, tiêu, bông, thuốc lá... ; rầy xanh, bọ trĩ hại chè (trà).
+Thời gian cách li: 7 - 14 ngày
+Hướng dẫn sử dụng:
+ 
+Lượng thuốc:    0,3 - 0,4 lít/ha  (Armada 50 EC);
+                        0.2 - 0.3 lit/ha  (Armada 100SL 100EC), 
+                        0.2 - 0.3 kg/ha (Armada 100WG)
+Lượng nước:    320 - 400 lít/ha
+Phun khi sâu rầy vừa chớm xuất hiện</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#dacTinhCuaThuoc"/>
         <NamedIndividual IRI="#ThuocArmada"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">là [Thuoc]thuốc[/Thuoc] trừ rầy có tác dụng tiếp xúc, vị độc, và nội hấp mạnh, đặc trị rầy nâu hại lúa.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hangSX"/>
+        <NamedIndividual IRI="#ThuocArmada"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Công Ty TNHH Thương Mại Và Dịch Vụ Nông Nghiệp An Đô</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -5793,6 +6030,41 @@ Khả năng hỗn hợp :	có thể hỗn hợp với [Thuoc]thuốc[/Thuoc] kh�
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">7 -14 ngày</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#article"/>
+        <NamedIndividual IRI="#Tilt_Super_300_EC"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">TILT SUPER 300 EC 10ml
+Mã sản phẩm: tilt super
+Khối lượng/Thể tích: 100ml
+Trọng lượng: 0kg
+Quy cách: chai
+Hoạt chất: Propiconazole 150 g/l, Difenoconazole 150 g/l
+Hãng SX: Syngenta
+Tên thương mại: TILT SUPER 300 EC 10ml
+Hoạt chất	Propiconazole 150 g/l + Difenoconazole 150 g/l
+Qui cách	10 ml, 100 ml, 250 ml
+Độ độc	Nhóm 3
+Cơ chế tác động	Thuốc trừ bệnh nội hấp mạnh, phổ rộng, không cần pha trộn
+Công dụng	T
+huốc trừ bệnh phổ rộng cho nhiều loại cây trồng, có tác dụng phòng trị nhanh, hiệu lực kéo dài (2 – 3 tuần), dưỡng cây, dưỡng hạt
+Cây trồng	Đối tượng phòng trị
+Lúa	Lem lép hạt, vàng lá, đốm vằn
+Đậu tương	Rỉ sắt
+Cà phê	Rỉ sắt
+Nhãn	Đốm đen quả
+Trà	Đốm lá
+Đậu phộng	Đốm lá
+Hướng dẫn sử dụng	
+- Pha 4 - 5 ml / bình 8 lit, phun 6 bình /1.000 m².
+- Đối với đậu phộng pha 5 – 10 ml / bình 8 lit, phun 4 – 6 bình /1.000 m².
+- Đối với cà phê, chè (trà) phun với lượng nước 500 – 600 lit/ha.
+lưu ý : 
+- Thấm sâu nhanh vào mô cây ngay sau khi phun, nên ít bị rửa trôi do nước mưa.
+- Đối với lúa phun vào giai đoạn làm đòng để trừ bệnh đốm vằn đồng thời có tác dụng ngừa [Benh=BenhVangLa]bệnh vàng lá[/Benh] rất tốt. Ngoài ra, phun trước và sau trổ để trừ [Benh=BenhLemLepHat]bệnh lem lép hạt[/Benh] và ngừa [Benh=BenhVangLa]bệnh vàng lá[/Benh].
+- Phun khi vết bệnh chớm xuất hiện.
+- Thời gian cách ly : 14 ngày.
+- Không độc với ong mật, chim và trùn đất, độc nhẹ với cá.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#dacDiem"/>
         <NamedIndividual IRI="#Tilt_Super_300_EC"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">TILT SUPER 300 EC 100ml
@@ -5808,17 +6080,16 @@ Qui cách	10 ml, 100 ml, 250 ml
 Cơ chế tác động	 :[Thuoc]thuốc[/Thuoc] trừ bệnh nội hấp mạnh, phổ rộng, không cần pha trộn</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hangSX"/>
+        <NamedIndividual IRI="#Tilt_Super_300_EC"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Hãng SX: Syngenta</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#luongThuoc"/>
         <NamedIndividual IRI="#Tilt_Super_300_EC"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">-Lúa  Pha 4 - 5 ml / bình 8 lit, phun 6 bình /1.000 m².
 - Đối với đậu phộng pha 5 – 10 ml / bình 8 lit, phun 4 – 6 bình /1.000 m².
-- Đối với cà phê, chè (trà) phun với lượng nước 500 – 600 lit/ha.
-
-- Thấm sâu nhanh vào mô cây ngay sau khi phun, nên ít bị rửa trôi do nước mưa.
-- Đối với lúa phun vào giai đoạn làm đòng để trừ bệnh đốm vằn đồng thời có tác dụng ngừa [Benh=BenhVangLa]bệnh vàng lá[/Benh] rất tốt. Ngoài ra, phun trước và sau trổ để trừ [Benh=BenhLemLepHat]bệnh lem lép hạt[/Benh] và ngừa [Benh=BenhVangLa]bệnh vàng lá[/Benh].
-- Phun khi vết bệnh chớm xuất hiện.
-- Thời gian cách ly : 14 ngày.
-- Không độc với ong mật, chim và trùn đất, độc nhẹ với cá.</Literal>
+- Đối với cà phê, chè (trà) phun với lượng nước 500 – 600 lit/ha.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -5997,11 +6268,17 @@ Trà	Đốm lá
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#coThuoc"/>
-        <Class IRI="#TacNhanGayHai"/>
+        <ObjectUnionOf>
+            <Class IRI="#Benh"/>
+            <Class IRI="#TacNhanGayHai"/>
+        </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#xuatHienOGiaiDoan"/>
-        <Class IRI="#TacNhanGayHai"/>
+        <ObjectUnionOf>
+            <Class IRI="#Benh"/>
+            <Class IRI="#TacNhanGayHai"/>
+        </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#coGiaiDoan"/>
@@ -6013,7 +6290,10 @@ Trà	Đốm lá
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#coTacNhanGayHai"/>
-        <Class IRI="#TacNhanGayHai"/>
+        <ObjectUnionOf>
+            <Class IRI="#Benh"/>
+            <Class IRI="#TacNhanGayHai"/>
+        </ObjectUnionOf>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#coThuoc"/>
@@ -6065,6 +6345,10 @@ Trà	Đốm lá
             <Class IRI="#QuyTrinhBonPhan"/>
             <Class IRI="#QuyTrinhKichThich"/>
         </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hangSX"/>
+        <Class IRI="#Thuoc"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#image"/>
@@ -6168,6 +6452,10 @@ Trà	Đốm lá
     <DataPropertyRange>
         <DataProperty IRI="#denNgay"/>
         <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hangSX"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#image"/>
@@ -6476,6 +6764,11 @@ Trà	Đốm lá
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#denNgay</IRI>
         <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">đến ngày</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hangSX</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hãng sản xuất</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
