@@ -125,7 +125,7 @@ namespace RiceDoctor.RuleManager
                             {
                                 goalType = ontologyManager.GetClass(templateGoalType);
                                 if (goalType == null)
-                                    throw new ArgumentException($"Type '{templateGoalType}' doesn't exist.");
+                                    throw new ArgumentException(CoreStrings.NonexistentType(templateGoalType));
                                 allTypes.Add(templateGoalType, goalType);
                             }
                             goalTypes.Add(goalType);
@@ -138,7 +138,7 @@ namespace RiceDoctor.RuleManager
                             {
                                 suggestType = ontologyManager.GetClass(templateSuggestType);
                                 if (suggestType == null)
-                                    throw new ArgumentException($"Type '{templateSuggestType}' doesn't exist.");
+                                    throw new ArgumentException(CoreStrings.NonexistentType(templateSuggestType));
                                 allTypes.Add(templateSuggestType, suggestType);
                             }
                             suggestTypes.Add(suggestType);

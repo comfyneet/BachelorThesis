@@ -1,2 +1,0 @@
-relation-rules = relation-rule { NEWLINE relation-rule }
-relation-rule  = IDENT

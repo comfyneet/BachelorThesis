@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <title>EBNF definition of Fuzzy Model</title>
+   <style>
+   code {
+     color: red;
+	 font-weight: bold;
+   }
+   </style>
+</head>
+
+<body>
+   <h3>EBNF definition of Fuzzy Model</h3>
+   
+   <p>fuzzy-model = membership-functions linguistic-variables</p>
+   <p>membership-functions = membership-function { membership-function }</p>
+   <p>membership-function = <code>function</code> function-name <code>(</code> parameters <code>)</code> function-statement <code>;</code></p>
+   <p>parameter = parameter-name { <code>,</code> parameter-name }</p>
+   <p>function-statement = <code>begin</code> if-statement { <code>;</code> if-statement } <code>;</code> <code>end</code></p>
+   <p>if-statement = <code>if</code> expression <code>then</code> assignment-statement</p>
+   <p>assignment-statement = <code>output</code> <code>:=</code> expression</p>
+   <p>expression = simple-expression | simple-expression relational-operator simple-expression</p>
+   <p>simple-expression = [ sign ] term { adding-operator term }</p>
+   <p>term = factor { multiplying-operator factor }</p>
+   <p>factor = <code>input</code> | parameter-name | literal | <code>(</code> expression <code>)</code> | <code>not</code> factor</p>
+   <p>relational-operator = <code>=</code> | <code>&lt;&gt;</code> | <code>&lt;</code> | <code>&lt;=</code> | <code>&gt;</code> | <code>&gt;=</code></p>
+   <p>sign = <code>+</code> | <code>-</code></p>
+   <p>adding-operator = <code>+</code> | <code>-</code> | <code>or</code></p>
+   <p>multiplying-operator = <code>*</code> | <code>/</code> | <code>%</code> | <code>and</code></p>
+   <p>linguistic-variables = linguistic-variable { linguistic-variable }</p>
+   <p>linguistic-variable = <code>var</code> variable-name variable-statement <code>;</code></p>
+   <p>variable-statement = <code>begin</code> term-statement { <code>;</code> term-statement } <code>;</code> <code>end</code></p>
+   <p>term-statement = <code>term</code> term-name <code>:</code> function-name <code>(</code> arguments <code>)</code></p>
+   <p>arguments = literal { <code>,</code> literal }</p>
+   <p>function-name = <code>IDENT</code></p>
+   <p>parameter-name = <code>IDENT</code></p>
+   <p>variable-name = <code>IDENT</code></p>
+   <p>term-name = <code>IDENT</code></p>
+   <p>literal = <code>NUMBER</code></p>
+</body>
+
+</html>

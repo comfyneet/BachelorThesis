@@ -1,11 +1,11 @@
-﻿@using System.Text
-@using RiceDoctor.OntologyManager
+﻿@using RiceDoctor.OntologyManager
 @using Attribute = RiceDoctor.OntologyManager.Attribute
 @model RiceDoctor.OntologyManager.Attribute
 @{
 
     var attributes = (IReadOnlyCollection<Attribute>) ViewData["Attributes"];
     ViewData["Title"] = "Thuộc tính " + Model;
+    ViewData["OntologyPage"] = true;
 }
 
 <div class="row">
@@ -17,12 +17,14 @@
                     <ul class="nav nav-pills nav-stacked">
                         @foreach (var attribute in attributes)
                         {
-                            <li class="nav-item">
-                                @Html.ActionLink(attribute.ToString(), "Attribute", "Ontology", new {attributeName = attribute.Id})
-                                @if (attribute == Model)
-                                {
-                                    @: (this)
-                                }
+                            var cls = "";
+                            if (attribute == Model)
+                            {
+                                cls = "active";
+                            }
+
+                            <li class="nav-item @cls">
+                                <a asp-controller="Ontology" asp-action="Attribute" asp-route-attributeName="@attribute.Id">@attribute</a>
                             </li>
                         }
                     </ul>
@@ -35,6 +37,12 @@
         </nav>
     </div>
     <div class="col-md-9">
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="active">
+                <a href="#">Thông tin cho chuyên gia</a>
+            </li>
+        </ul>
+
         <h2>@ViewData["Title"]</h2>
 
         @if (Model != null)
@@ -43,25 +51,17 @@
                 <h4>Kiểu dữ liệu của @Model</h4>
                 @if (Model.Range != null)
                 {
-                    <p>
-                        @Model.Range
+                    <p>@Model.Range</p>
 
-                        @if (Model.Range == DataType.Enumerated)
-                        {
-                            var valuesSb = new StringBuilder();
-                            valuesSb.Append('(');
-                            for (var i = 0; i < Model.EnumeratedValues.Count; ++i)
+                    if (Model.Range == DataType.Enumerated)
+                    {
+                        <ul>
+                            @foreach (var value in Model.EnumeratedValues)
                             {
-                                if (i > 0)
-                                {
-                                    valuesSb.Append(',');
-                                }
-                                valuesSb.Append(" " + Model.EnumeratedValues[i]);
+                                <li>@value</li>
                             }
-                            valuesSb.Append(')');
-                            valuesSb.ToString();
-                        }
-                    </p>
+                        </ul>
+                    }
                 }
                 else
                 {

@@ -7,27 +7,29 @@ namespace RiceDoctor.RuleManager
 {
     public class IndividualFact : Fact, IEquatable<IndividualFact>
     {
+        private bool _canGetLabel;
+        [CanBeNull] private string _label;
+
         public IndividualFact([NotNull] string className, [NotNull] string individualName)
         {
             Check.NotEmpty(className, nameof(className));
             Check.NotEmpty(individualName, nameof(individualName));
 
             Name = className;
-            Individual = individualName;
+            Value = individualName;
         }
 
         [JsonProperty(PropertyName = "className")]
         public override string Name { get; }
 
-        [NotNull]
         [JsonProperty(PropertyName = "individualName")]
-        public string Individual { get; }
+        public override string Value { get; }
 
         public bool Equals(IndividualFact other)
         {
             if (ReferenceEquals(null, other)) return false;
             if (ReferenceEquals(this, other)) return true;
-            return string.Equals(Name, other.Name) && string.Equals(Individual, other.Individual);
+            return string.Equals(Name, other.Name) && string.Equals(Value, other.Value);
         }
 
         public static bool operator ==(IndividualFact individualFact1, IndividualFact individualFact2)
@@ -55,13 +57,25 @@ namespace RiceDoctor.RuleManager
         {
             unchecked
             {
-                return (Name.GetHashCode() * 397) ^ Individual.GetHashCode();
+                return (Name.GetHashCode() * 397) ^ Value.GetHashCode();
             }
         }
 
         public override string ToString()
         {
-            return $"{Name}={Individual}";
+            return $"{Name}={Value}";
+        }
+
+        public override string GetLabel()
+        {
+            if (!_canGetLabel)
+            {
+                var individual = OntologyManager.Manager.Instance.GetIndividual(Value);
+                if (individual != null) _label = individual.ToString();
+                _canGetLabel = true;
+            }
+
+            return _label ?? ToString();
         }
     }
 }

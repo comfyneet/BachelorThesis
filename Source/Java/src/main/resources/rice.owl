@@ -374,6 +374,9 @@
         <Class IRI="#QuyTrinh"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#nhaSanXuat"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#dacTinhNongHoc"/>
     </Declaration>
     <Declaration>
@@ -438,9 +441,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="#NuocRuong"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#trieuchung"/>
     </Declaration>
     <Declaration>
         <Class IRI="#PhanVoCo"/>
@@ -608,9 +608,6 @@
         <ObjectProperty IRI="#coThuoc"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#hangSX"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#SauGai"/>
     </Declaration>
     <Declaration>
@@ -761,10 +758,13 @@
         <NamedIndividual IRI="#OcLac"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#BenhLunXoanLa"/>
+        <DataProperty IRI="#trieuChung"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#LaHinhBacThang"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BenhLunXoanLa"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Staner_20WP"/>
@@ -846,6 +846,10 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#HinhDangThan"/>
+        <Class IRI="#TrieuChung"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LinguisticVariable"/>
         <Class IRI="#TrieuChung"/>
     </SubClassOf>
     <SubClassOf>
@@ -2594,7 +2598,7 @@ b) Trừ bệnh:Biện pháp trừ bệnh hữu hiệu nhất đối với bện
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">bệnh vàng lùn</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#trieuchung"/>
+        <DataProperty IRI="#trieuChung"/>
         <NamedIndividual IRI="#BenhVangLun"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Lá lúa từ màu xanh nhạt chuyển dần sang màu vàng nhạt, vàng da cam rồi vàng khô. Vị trí các lá bị vàng lan dần từ các lá bên dưới lên các lá phía trên. Vết vàng trên lá xuất hiện từ chóp lá, lan dần vào phía bẹ lá. Tất cả các lá bị bệnh có xu hướng xoè ngang. Các chồi lúa bị bệnh giảm chiều cao và bệnh cũng làm giảm số chồi trên bụi lúa mắc bệnh. Quần thể ruộng lúa bị bệnh ngả màu vàng, chiều cao cây lúa không đồng đều.</Literal>
     </DataPropertyAssertion>
@@ -5655,11 +5659,6 @@ Hoạt chất: Pyrazosulfuron Ethyl 10%
 Hãng SX: Cty Bảo vệ Thực vật Sài Gòn</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#hangSX"/>
-        <NamedIndividual IRI="#Star_10WP"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cty Bảo vệ Thực vật Sài Gòn</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="#luongThuoc"/>
         <NamedIndividual IRI="#Star_10WP"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Nếu pha với nước để phun: 5gr/bình 8L. Phun 2 bình cho 500m², 4 bình cho 1000m²
@@ -5672,6 +5671,11 @@ Hãng SX: Cty Bảo vệ Thực vật Sài Gòn</Literal>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#Star_10WP"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thuốc Star 10WP</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nhaSanXuat"/>
+        <NamedIndividual IRI="#Star_10WP"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cty Bảo vệ Thực vật Sài Gòn</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#thanhPhan"/>
@@ -5711,11 +5715,6 @@ Quy cách: chai
 Hoạt chất: Etofenprox</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#hangSX"/>
-        <NamedIndividual IRI="#TREBON_10EC"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Hãng SX: Cty Bảo Vệ Thực Vật 1 Trung Ương</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="#luongThuoc"/>
         <NamedIndividual IRI="#TREBON_10EC"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Pha 12-15ml thuốc với bình 10 lít</Literal>
@@ -5724,6 +5723,11 @@ Hoạt chất: Etofenprox</Literal>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#TREBON_10EC"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">TREBON 10EC</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nhaSanXuat"/>
+        <NamedIndividual IRI="#TREBON_10EC"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Hãng SX: Cty Bảo Vệ Thực Vật 1 Trung Ương</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -5843,14 +5847,14 @@ Nhà sản xuất: Fertiagro Pte Ltd
 [li]Cơ chế tác động: Ngăn cản sự tổng hợp cellulose vách tế bào. Thuốc được hấp thu qua mầm hạt, rễ và lá, vận chuyển trong mạch gỗ và libe theo 2 chiều lên và xuống[/li]</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#hangSX"/>
-        <NamedIndividual IRI="#ThuocADORE_25SC"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Nhà sản xuất: Fertiagro Pte Ltd</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#ThuocADORE_25SC"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">THUỐC TRỪ CỎ ADORE 25SC</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nhaSanXuat"/>
+        <NamedIndividual IRI="#ThuocADORE_25SC"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Nhà sản xuất: Fertiagro Pte Ltd</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#thanhPhan"/>
@@ -5947,11 +5951,6 @@ Danh mục [Thuoc]thuốc[/Thuoc] :	Được phép sử dụng
 Dạng [Thuoc]thuốc[/Thuoc] :	050EC: Nhũ dầu. 200OD: Dung dịch</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#hangSX"/>
-        <NamedIndividual IRI="#ThuocAdmire_50EC"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Hãng SX: Bayer</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="#luongThuoc"/>
         <NamedIndividual IRI="#ThuocAdmire_50EC"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Liều lượng sử dụng :	0.3 – 0.4 lít/ha
@@ -5962,6 +5961,11 @@ Khả năng hỗn hợp :	có thể hỗn hợp với [Thuoc]thuốc[/Thuoc] kh�
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#ThuocAdmire_50EC"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thuốc ADMIRE 50EC</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nhaSanXuat"/>
+        <NamedIndividual IRI="#ThuocAdmire_50EC"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Hãng SX: Bayer</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#triSauBenhHai"/>
@@ -5995,11 +5999,6 @@ Phun khi sâu rầy vừa chớm xuất hiện</Literal>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">là [Thuoc]thuốc[/Thuoc] trừ rầy có tác dụng tiếp xúc, vị độc, và nội hấp mạnh, đặc trị rầy nâu hại lúa.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#hangSX"/>
-        <NamedIndividual IRI="#ThuocArmada"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Công Ty TNHH Thương Mại Và Dịch Vụ Nông Nghiệp An Đô</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#ThuocArmada"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Armada</Literal>
@@ -6008,6 +6007,11 @@ Phun khi sâu rầy vừa chớm xuất hiện</Literal>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#ThuocArmada"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thuốc Armada</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nhaSanXuat"/>
+        <NamedIndividual IRI="#ThuocArmada"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Công Ty TNHH Thương Mại Và Dịch Vụ Nông Nghiệp An Đô</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#thanhPhan"/>
@@ -6080,11 +6084,6 @@ Qui cách	10 ml, 100 ml, 250 ml
 Cơ chế tác động	 :[Thuoc]thuốc[/Thuoc] trừ bệnh nội hấp mạnh, phổ rộng, không cần pha trộn</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#hangSX"/>
-        <NamedIndividual IRI="#Tilt_Super_300_EC"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Hãng SX: Syngenta</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="#luongThuoc"/>
         <NamedIndividual IRI="#Tilt_Super_300_EC"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">-Lúa  Pha 4 - 5 ml / bình 8 lit, phun 6 bình /1.000 m².
@@ -6095,6 +6094,11 @@ Cơ chế tác động	 :[Thuoc]thuốc[/Thuoc] trừ bệnh nội hấp mạnh,
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#Tilt_Super_300_EC"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thuốc TILT SUPER 300 EC 100ml</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nhaSanXuat"/>
+        <NamedIndividual IRI="#Tilt_Super_300_EC"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Hãng SX: Syngenta</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#triSauBenhHai"/>
@@ -6347,10 +6351,6 @@ Trà	Đốm lá
         </ObjectUnionOf>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="#hangSX"/>
-        <Class IRI="#Thuoc"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
         <DataProperty IRI="#image"/>
         <Class abbreviatedIRI="owl:Thing"/>
     </DataPropertyDomain>
@@ -6383,6 +6383,10 @@ Trà	Đốm lá
         <Class IRI="#GiongLua"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#nhaSanXuat"/>
+        <Class IRI="#Thuoc"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#nhuCauNuocOGiaiDoan"/>
         <Class IRI="#GiaiDoan"/>
     </DataPropertyDomain>
@@ -6404,6 +6408,10 @@ Trà	Đốm lá
             <Class IRI="#TacNhanGayHai"/>
             <Class IRI="#Thuoc"/>
         </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#trieuChung"/>
+        <Class IRI="#Benh"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#tuNgay"/>
@@ -6454,10 +6462,6 @@ Trà	Đốm lá
         <Datatype abbreviatedIRI="xsd:int"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="#hangSX"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
         <DataProperty IRI="#image"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
@@ -6493,6 +6497,10 @@ Trà	Đốm lá
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="#nhaSanXuat"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#nhuCauNuocOGiaiDoan"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
@@ -6510,6 +6518,10 @@ Trà	Đốm lá
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#triSauBenhHai"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#trieuChung"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -6677,13 +6689,13 @@ Trà	Đốm lá
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#VuMua</IRI>
-        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Vụ mùa</Literal>
+        <IRI>#TrieuChung</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Triệu chứng</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#article</IRI>
-        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Xem bài viết về</Literal>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#VuMua</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Vụ mùa</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6766,14 +6778,9 @@ Trà	Đốm lá
         <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">đến ngày</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hangSX</IRI>
-        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hãng sản xuất</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#image</IRI>
-        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Một số hình ảnh liên quan đến</Literal>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Hình ảnh liên quan đến</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6817,6 +6824,11 @@ Trà	Đốm lá
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#nhaSanXuat</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">nhà sản xuất</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#nhuCauNuocOGiaiDoan</IRI>
         <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">nhu cầu nước ở giai đoạn</Literal>
     </AnnotationAssertion>
@@ -6839,6 +6851,11 @@ Trà	Đốm lá
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#triSauBenhHai</IRI>
         <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">trị sâu bệnh hại</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#trieuChung</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">triệu chứng</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

@@ -3,6 +3,7 @@
 @{
     var relations = (IReadOnlyCollection<Relation>) ViewData["Relations"];
     ViewData["Title"] = "Quan hệ " + Model;
+    ViewData["OntologyPage"] = true;
 }
 
 <div class="row">
@@ -14,12 +15,14 @@
                     <ul class="nav nav-pills nav-stacked">
                         @foreach (var relation in relations)
                         {
-                            <li class="nav-item">
-                                @Html.ActionLink(relation.ToString(), "Relation", "Ontology", new {relationName = relation.Id})
-                                @if (relation == Model)
-                                {
-                                    @: (this)
-                                }
+                            var cls = "";
+                            if (relation == Model)
+                            {
+                                cls = "active";
+                            }
+
+                            <li class="nav-item @cls">
+                                <a asp-controller="Ontology" asp-action="Relation" asp-route-relationName="@relation.Id">@relation</a>
                             </li>
                         }
                     </ul>
@@ -32,6 +35,12 @@
         </nav>
     </div>
     <div class="col-md-9">
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="active">
+                <a href="#">Thông tin cho chuyên gia</a>
+            </li>
+        </ul>
+
         <h2>@ViewData["Title"]</h2>
 
         @if (Model != null)

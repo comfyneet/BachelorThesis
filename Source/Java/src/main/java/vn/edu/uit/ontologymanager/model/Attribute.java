@@ -90,7 +90,7 @@ public class Attribute extends Entity {
 
         @NotNull
         public Builder range(@Nullable final DataType range) {
-            if (range != ENUMERATED) this.range = range;
+            this.range = range;
             return this;
         }
 

@@ -1,5 +1,10 @@
 ﻿@using Microsoft.ApplicationInsights.AspNetCore
 @inject JavaScriptSnippet JavaScriptSnippet
+@{
+    var showOntologyPage = ViewData["OntologyPage"] != null && (bool) ViewData["OntologyPage"];
+    var showAdvisoryPage = ViewData["AdvisoryPage"] != null && (bool) ViewData["AdvisoryPage"];
+    var showAboutPage = ViewData["AboutPage"] != null && (bool) ViewData["AboutPage"];
+}
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,22 +36,42 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li>
+                <li
+                    @if (showOntologyPage)
+                    {
+                        @:class="navbar-nav-active"
+                    }>
                     <a asp-controller="Ontology" asp-action="Index">Ontology</a>
                 </li>
-                <li>
+                <li
+                    @if (showAdvisoryPage)
+                    {
+                        @:class="navbar-nav-active"
+                    }>
                     <a asp-controller="Advisory" asp-action="Index">Tư vấn</a>
                 </li>
-                <li>
+                <li
+                    @if (showAboutPage)
+                    {
+                        @:class="navbar-nav-active"
+                    }>
                     <a asp-controller="Home" asp-action="About">Giới thiệu</a>
+
                 </li>
             </ul>
-            <form asp-controller="Search" asp-action="Index" method="get" class="navbar-form navbar-right">
-                <input name="keywords" type="text" class="form-control" placeholder="Tra cứu...">
-            </form>
+
+            <div class="input-group navbar-form navbar-right">
+                <form asp-controller="Search" asp-action="Index" method="get">
+                    <input type="text" class="form-control" name="keywords" placeholder="Câu truy vấn...">
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-default">Tra cứu</button>
+                    </span>
+                </form>
+            </div>
         </div>
     </div>
 </nav>
+
 <div class="container">
     @RenderBody()
     <footer>

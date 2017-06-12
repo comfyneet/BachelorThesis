@@ -51,21 +51,26 @@ namespace RiceDoctor.WebApp.Controllers
         [HttpPost]
         public IActionResult SelectProblem(string guid, int problemId, string inputs, string outputs, int? totalGoals)
         {
-            if (string.IsNullOrWhiteSpace(guid)) return NotFound($"Malformed {nameof(guid)}");
+            if (string.IsNullOrWhiteSpace(guid))
+                return RedirectToAction("Error", "Home", new {error = CoreStrings.MalformedArgument(nameof(guid))});
             guid = guid.Trim();
 
-            if (string.IsNullOrWhiteSpace(inputs)) return NotFound($"Malformed {nameof(inputs)}");
+            if (string.IsNullOrWhiteSpace(inputs))
+                return RedirectToAction("Error", "Home", new {error = CoreStrings.MalformedArgument(nameof(inputs))});
             var inputList = inputs.Trim().Replace("\r\n", "\n").Split('\n');
             var facts = new Fact[inputList.Length];
             for (var i = 0; i < inputList.Length; ++i)
                 facts[i] = new IndividualFact(inputList[i].Split('=')[0], inputList[i].Split('=')[1]);
 
             if (problemId < -1 || problemId >= _ruleManager.Problems.Count)
-                return NotFound($"Malformed {nameof(problemId)}.");
+                return RedirectToAction("Error", "Home",
+                    new {error = CoreStrings.MalformedArgument(nameof(problemId))});
             Problem problem;
             if (problemId == -1)
             {
-                if (string.IsNullOrWhiteSpace(outputs)) return NotFound("Malformed outputs");
+                if (string.IsNullOrWhiteSpace(outputs))
+                    return RedirectToAction("Error", "Home",
+                        new {error = CoreStrings.MalformedArgument(nameof(outputs))});
                 var outputList = outputs.Trim().Replace("\r\n", "\n").Split('\n');
 
                 var allTypes = new Dictionary<string, Class>();
@@ -76,7 +81,8 @@ namespace RiceDoctor.WebApp.Controllers
                     if (!allTypes.TryGetValue(output, out Class goalType))
                     {
                         goalType = _ontologyManager.GetClass(output);
-                        if (goalType == null) return NotFound($"Type '{output}' doesn't exist");
+                        if (goalType == null)
+                            return RedirectToAction("Error", "Home", new {error = CoreStrings.NonexistentType(output)});
                         allTypes.Add(output, goalType);
                     }
                     goalTypes.Add(goalType);
@@ -88,7 +94,9 @@ namespace RiceDoctor.WebApp.Controllers
                     if (!allTypes.TryGetValue(fact.Name, out Class suggestType))
                     {
                         suggestType = _ontologyManager.GetClass(fact.Name);
-                        if (suggestType == null) return NotFound($"Type '{fact.Name}' doesn't exist");
+                        if (suggestType == null)
+                            return RedirectToAction("Error", "Home",
+                                new {error = CoreStrings.NonexistentType(fact.Name)});
                         allTypes.Add(fact.Name, suggestType);
                     }
                     suggestTypes.Add(suggestType);
@@ -101,7 +109,9 @@ namespace RiceDoctor.WebApp.Controllers
                 problem = _ruleManager.Problems[problemId];
             }
 
-            if (totalGoals != null && totalGoals <= 0) return NotFound($"Malformed {nameof(totalGoals)}");
+            if (totalGoals != null && totalGoals <= 0)
+                return RedirectToAction("Error", "Home",
+                    new {error = CoreStrings.MalformedArgument(nameof(totalGoals))});
 
             var advisory = JsonConvert.DeserializeObject<Advisory>(HttpContext.Session.GetString(guid), jsonSettings);
             advisory.Request = new Request(problem, RequestType.IndividualFact, totalGoals);
@@ -116,10 +126,13 @@ namespace RiceDoctor.WebApp.Controllers
         [HttpPost]
         public IActionResult GuessableFact(string guid, IReadOnlyCollection<Fact> guessableFacts)
         {
-            if (string.IsNullOrWhiteSpace(guid)) return NotFound($"Malformed {nameof(guid)}");
+            if (string.IsNullOrWhiteSpace(guid))
+                return RedirectToAction("Error", "Home", new {error = CoreStrings.MalformedArgument(nameof(guid))});
             guid = guid.Trim();
 
-            if (guessableFacts == null) return NotFound($"Malformed {nameof(guessableFacts)}");
+            if (guessableFacts == null)
+                return RedirectToAction("Error", "Home",
+                    new {error = CoreStrings.MalformedArgument(nameof(guessableFacts))});
 
             var advisory = JsonConvert.DeserializeObject<Advisory>(HttpContext.Session.GetString(guid), jsonSettings);
 
@@ -131,7 +144,8 @@ namespace RiceDoctor.WebApp.Controllers
         [HttpPost]
         public IActionResult Infer(string guid, IReadOnlyCollection<GuessableFact> guessableFacts = null)
         {
-            if (string.IsNullOrWhiteSpace(guid)) return NotFound($"Malformed {nameof(guid)}");
+            if (string.IsNullOrWhiteSpace(guid))
+                return RedirectToAction("Error", "Home", new {error = CoreStrings.MalformedArgument(nameof(guid))});
             guid = guid.Trim();
 
             var advisory = JsonConvert.DeserializeObject<Advisory>(HttpContext.Session.GetString(guid), jsonSettings);
@@ -144,17 +158,21 @@ namespace RiceDoctor.WebApp.Controllers
                 foreach (var fact in guessableFacts)
                 {
                     if (string.IsNullOrWhiteSpace(fact.ClassName))
-                        return NotFound($"Malformed {nameof(fact.ClassName)}");
+                        return RedirectToAction("Error", "Home",
+                            new {error = CoreStrings.MalformedArgument(nameof(fact.ClassName))});
                     fact.ClassName = fact.ClassName.Trim();
 
                     if (string.IsNullOrWhiteSpace(fact.IndividualName))
-                        return NotFound($"Malformed {nameof(fact.IndividualName)}");
+                        return RedirectToAction("Error", "Home",
+                            new {error = CoreStrings.MalformedArgument(nameof(fact.IndividualName))});
                     fact.IndividualName = fact.IndividualName.Trim();
 
                     bool? exist = null;
                     if (fact.IsGuessable == 1) exist = true;
                     else if (fact.IsGuessable == 0) exist = false;
-                    else if (fact.IsGuessable != -1) return NotFound($"Malformed {nameof(fact.IsGuessable)}");
+                    else if (fact.IsGuessable != -1)
+                        return RedirectToAction("Error", "Home",
+                            new {error = CoreStrings.MalformedArgument(nameof(fact.IsGuessable))});
 
                     facts.Add(new Tuple<Fact, bool?>(new IndividualFact(fact.ClassName, fact.IndividualName), exist));
                 }

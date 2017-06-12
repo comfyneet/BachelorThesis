@@ -6,6 +6,7 @@
     var incompleteFacts = (IReadOnlyList<Fact>) ViewData["IncompleteFacts"];
     var priority = ViewData["Priority"];
     ViewData["Title"] = "Tư vấn/Chuẩn đoán";
+    ViewData["AdvisoryPage"] = true;
 }
 
 <div class="row">
@@ -18,16 +19,16 @@
                 <h4>Kết quả</h4>
                 @foreach (var resultFact in Model.Results)
                 {
-                    <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@(((IndividualFact) resultFact).Individual)">@resultFact</a>
+                    <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@resultFact.Value">@resultFact.GetLabel()</a>
                 }
             </section>
 
             <hr/>
 
-            <button id="inferredRulesBtn">Xem thông tin luật</button>
+            <button id="inferredRulesBtn">Xem danh sách luật được áp dụng</button>
             <div id="inferredRules" style="display: none">
                 <section>
-                    <h4>Luật tường minh được áp dụng</h4>
+                    <h4>Luật tường minh</h4>
                     @foreach (var rule in Model.Engine.InferredLogicRules)
                     {
                         <p>@rule</p>
@@ -35,10 +36,10 @@
                 </section>
 
                 <section>
-                    <h4>Luật quan hệ được áp dụng</h4>
+                    <h4>Luật quan hệ</h4>
                     @foreach (var rule in Model.Engine.InferredRelationRules)
                     {
-                        <p>@rule.Key - @rule.Value</p>
+                        <p>@rule.Key.GetLabel() - @rule.Value</p>
                     }
                 </section>
             </div>
@@ -62,9 +63,7 @@
                         {
                             incompleteFactsSb.Append(',');
                         }
-                        incompleteFactsSb.Append(" <a href=\""
-                                                 + Url.Action("Individual", "Ontology", new {individualName = ((IndividualFact) incompleteFacts[i]).Individual})
-                                                 + "\">" + incompleteFacts[i] + "</a>");
+                        incompleteFactsSb.Append($" <a href=\"{Url.Action("Individual", "Ontology", new {individualName = incompleteFacts[i].Value})}\">{incompleteFacts[i].GetLabel()}</a>");
                     }
                     @Html.Raw(incompleteFactsSb) với độ chính xác @priority%.
                 </p>
@@ -95,8 +94,8 @@
                                     {
                                         @:, 
                                     }
-                                    <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@(((IndividualFact) rule.Item3[i]).Individual)">
-                                        @rule.Item3[i]
+                                    <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@rule.Item3[i].Value">
+                                        @rule.Item3[i].GetLabel()
                                     </a>
                                 }</th>
                         </tr>

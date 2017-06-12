@@ -66,7 +66,7 @@ namespace RiceDoctor.Shared
         {
             var peekPos = _pos + length;
 
-            if (peekPos >= _text.Length - 1) return null;
+            if (peekPos >= _text.Length - 1) return None;
             return _text[peekPos];
         }
 

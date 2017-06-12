@@ -1,9 +1,9 @@
 ﻿using JetBrains.Annotations;
 using RiceDoctor.Shared;
 
-namespace RiceDoctor.ConversationalAgent
+namespace RiceDoctor.QueryManager
 {
-    public class TextNode : ChatNode
+    public class TextNode : QueryNode
     {
         [NotNull] private readonly string _words;
 

@@ -922,8 +922,8 @@ public class OntologyManager {
 
         final Pair<DataType, List<String>> pair = getAttributeRange(owlAttribute);
         if (pair != null) {
+            builder.range(pair.getLeft());
             if (pair.getLeft() == ENUMERATED) builder.enumeratedValues(pair.getRight());
-            else builder.range(pair.getLeft());
         }
 
         return builder.build();

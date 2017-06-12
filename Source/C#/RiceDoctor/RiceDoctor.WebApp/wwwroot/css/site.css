@@ -2,125 +2,13 @@
 
 /* CSS Document */
 
-p { color: #005F9B; }
-
-p, small { color: #005F9B; }
-
-
-
-a {
-    color: #0000FF;
-    text-decoration: none;
-}
-
-
-/* Navbar Header */
-
 .navbar-inverse { background-color: #003057; }
 
-.bg-deepblue { background-color: #003057; }
+.navbar .nav li:hover { background-color: #009E8C; }
 
-.bg-teal { background-color: #D3D3D3; }
+.navbar-nav-active { background-color: #009E8C; }
 
-.bg-lightgrey { background-color: #D3D3D3; }
-
-.bg-info { background-color: #0077BB; }
-
-.navbar {
-    border: none;
-    margin-bottom: 0;
-}
-
-.nav li a {
-    /*height: 78px;*/
-    /*text-align: center;*/
-    /*	line-height: 50px;*/
-    color: #0000FF;
-}
-
-/*.nav-tabs .show.nav-item .nav-link, .nav-tabs .active.nav-link {
-   text-decoration:;
-    background-color: #808285;
-        border-bottom:7px solid #0077BB ;
-}*/
-
-.nav li:hover { background-color: #009E8C; }
-
-.nav-tabs {
-    background-color: #D3D3D3;
-    border-bottom: hidden;
-}
-
-.nav-pills {
-    background-color: #D3D3D3;
-    border-bottom: hidden;
-}
-
-.tab-content {
-    background-color: #808285;
-    border-bottom: 1px solid #0077BB;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 5px;
-    /*padding-right: 25px;*/
-    /*min-height: 440px*/
-}
-
-.tab-pane { font-size: large; }
-
-.nav-tabs > li > a { border: medium none; }
-
-.nav-tabs > li > a:hover {
-    background-color: #009E8C;
-    border: medium none;
-    border-radius: 0;
-    color: #005F9B;
-    font-weight: bold;
-}
-
-
-.nav-pills > li > a:hover {
-    background-color: #009E8C;
-    border: medium none;
-    border-radius: 0;
-    color: #005F9B;
-    font-weight: normal;
-}
-
-
-.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
-    background-color: #808285;
-    border-bottom: 5px solid #0077BB;
-    color: #FFFFFF;
-    font-weight: bold;
-}
-
-.navbar-inverse > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
-    background-color: #808285;
-    border-bottom: 5px solid #0077BB;
-    color: #FFFFFF;
-    font-weight: bold;
-}
-
-.nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
-    background-color: #808285;
-    border-bottom: 5px solid #0077BB;
-    color: #FFFFFF;
-    font-weight: bold;
-}
-
-/* End Navbar Header */
-
-
-
-.btn-default {
-    display: block;
-    margin: auto;
-    width: 120px;
-}
-
-
-
+.navbar-nav-active a { color: white !important; }
 
 #rcorners1 {
     background: #D3D3D3;

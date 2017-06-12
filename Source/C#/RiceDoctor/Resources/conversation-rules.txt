@@ -1,2 +1,5 @@
-﻿+ [*]
-- Tôi không hiểu bạn nói gì
+﻿+ * về lúa
+0: Class -> Individual
+
++ * {1}
+0: Class -> Individual

@@ -137,7 +137,7 @@ namespace RiceDoctor.ConsoleApp
                 if (!allTypes.TryGetValue(tmpGoalType, out Class goalType))
                 {
                     goalType = ontologyManager.GetClass(tmpGoalType);
-                    if (goalType == null) throw new ArgumentException($"Type '{tmpGoalType}' doesn't exist.");
+                    if (goalType == null) throw new ArgumentException(CoreStrings.NonexistentType(tmpGoalType));
                     allTypes.Add(tmpGoalType, goalType);
                 }
                 goalTypes.Add(goalType);
@@ -149,7 +149,7 @@ namespace RiceDoctor.ConsoleApp
                 if (!allTypes.TryGetValue(input.Name, out Class suggestType))
                 {
                     suggestType = ontologyManager.GetClass(input.Name);
-                    if (suggestType == null) throw new ArgumentException($"Type '{input.Name}' doesn't exist.");
+                    if (suggestType == null) throw new ArgumentException(CoreStrings.NonexistentType(input.Name));
                     allTypes.Add(input.Name, suggestType);
                 }
                 suggestTypes.Add(suggestType);

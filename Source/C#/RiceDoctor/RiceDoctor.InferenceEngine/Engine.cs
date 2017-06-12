@@ -474,7 +474,7 @@ namespace RiceDoctor.InferenceEngine
             _inferredRelationRules.Add(new KeyValuePair<IndividualFact, Relation>(individualFact, relation));
 
             var hasNewFacts = false;
-            var relationValue = _ontologyManager.GetRelationValue(individualFact.Individual, relation.Id);
+            var relationValue = _ontologyManager.GetRelationValue(individualFact.Value, relation.Id);
             if (relationValue != null)
                 foreach (var individual in relationValue)
                 {

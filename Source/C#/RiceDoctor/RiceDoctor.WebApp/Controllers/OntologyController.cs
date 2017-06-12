@@ -27,17 +27,19 @@ namespace RiceDoctor.WebApp.Controllers
             return View();
         }
 
-        public IActionResult Class(string className)
+        public IActionResult Class(string className, bool showAdvance = false)
         {
             className = string.IsNullOrWhiteSpace(className) ? "Thing" : className.Trim();
 
             var @class = _ontologyManager.GetClass(className);
-            if (@class == null) return NotFound($"Class \"{className}\" not found");
+            if (@class == null)
+                return RedirectToAction("Error", "Home", new {error = $"Class \"{className}\" not found."});
 
             var directSuperClassesTree = new List<IList<Class>>();
             GetDirectSuperClassesTree(@class.GetDirectSuperClasses()?.ToList(), directSuperClassesTree, 0);
 
             ViewData["DirectSuperClassesTree"] = directSuperClassesTree;
+            ViewData["ShowAdvance"] = showAdvance;
 
             return View(@class);
         }
@@ -49,7 +51,8 @@ namespace RiceDoctor.WebApp.Controllers
             {
                 relationName = relationName.Trim();
                 relation = _ontologyManager.GetRelation(relationName);
-                if (relation == null) return NotFound($"Relation \"{relationName}\" not found");
+                if (relation == null)
+                    return RedirectToAction("Error", "Home", new {error = $"Relation \"{relationName}\" not found."});
             }
 
             ViewData["Relations"] = _ontologyManager.GetRelations();
@@ -64,7 +67,8 @@ namespace RiceDoctor.WebApp.Controllers
             {
                 attributeName = attributeName.Trim();
                 attribute = _ontologyManager.GetAttribute(attributeName);
-                if (attribute == null) return NotFound($"Attribute \"{attributeName}\" not found");
+                if (attribute == null)
+                    return RedirectToAction("Error", "Home", new {error = $"Attribute \"{attributeName}\" not found."});
             }
 
             ViewData["Attributes"] = _ontologyManager.GetAttributes();
@@ -79,12 +83,18 @@ namespace RiceDoctor.WebApp.Controllers
             {
                 individualName = individualName.Trim();
                 individual = _ontologyManager.GetIndividual(individualName);
-                if (individual == null) return NotFound($"Individual \"{individualName}\" not found");
+                if (individual == null)
+                    return RedirectToAction("Error", "Home",
+                        new {error = $"Individual \"{individualName}\" not found."});
 
                 ViewData["AttributeValues"] = individual.GetAttributeValues()?
                     .Select(av => new KeyValuePair<Attribute, IReadOnlyCollection<string>>(
                         av.Key,
-                        av.Value.Select(SemanticParser.Parse).ToList()))
+                        av.Value.Select(v =>
+                        {
+                            if (av.Key.Id == "image" || av.Key.Id == "name") return v;
+                            return SemanticParser.Parse(v);
+                        }).ToList()))
                     .ToDictionary(av => av.Key, av => av.Value);
             }
 
@@ -100,10 +110,8 @@ namespace RiceDoctor.WebApp.Controllers
             return View(subClasses);
         }
 
-        public IActionResult Article(string individualName, string keywords = null)
+        public IActionResult Article(string individualName)
         {
-            if (!string.IsNullOrWhiteSpace(keywords)) ViewData["Keywords"] = keywords.Trim();
-
             if (!string.IsNullOrWhiteSpace(individualName))
             {
                 individualName = individualName.Trim();

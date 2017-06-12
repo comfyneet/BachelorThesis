@@ -10,7 +10,7 @@
 
         @if (Model == null)
         {
-            <h4>Không tìm thấy thể hiện có chứa từ khóa</h4>
+            <h4>Không tìm thấy thể hiện có chứa câu truy vấn</h4>
 
             <p>
                 Tìm kiếm trên internet với <a href="http://lmgtfy.com/?q=@keywords">Google</a>.
@@ -18,7 +18,7 @@
         }
         else
         {
-            <h4>Tìm thấy @Model.Count thể hiện có chứa từ khóa</h4>
+            <h4>Tìm thấy @Model.Count thể hiện có chứa câu truy vấn</h4>
 
             <ol>
                 @foreach (var searchIndividual in Model)

@@ -1,8 +1,11 @@
-﻿@using RiceDoctor.RuleManager
+﻿@using System.Text
+@using RiceDoctor.OntologyManager
+@using RiceDoctor.RuleManager
 @model RiceDoctor.WebApp.Models.Advisory
 @{
     var problems = (IReadOnlyList<Problem>) ViewData["Problems"];
     ViewData["Title"] = "Tư vấn/Chuẩn đoán";
+    ViewData["AdvisoryPage"] = true;
 }
 
 <div class="row">
@@ -20,19 +23,56 @@
                         {
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="problemId" value="@i" onclick="showGeneralProblem()">@problems[i].Type
+                                    <input type="radio" name="problemId" value="@i" onclick="handleProblem()">@problems[i].Type
                                 </label>
                             </div>
+
+                            var suggestTypes = new List<Class>();
+                            foreach (var suggestType in problems[i].SuggestTypes)
+                            {
+                                if (!suggestTypes.Contains(suggestType))
+                                {
+                                    suggestTypes.Add(suggestType);
+                                }
+                                if (suggestType.GetAllSubClasses() != null)
+                                {
+                                    foreach (var domain in suggestType.GetAllSubClasses())
+                                    {
+                                        if (!suggestTypes.Contains(domain))
+                                        {
+                                            suggestTypes.Add(domain);
+                                        }
+                                    }
+                                }
+                            }
+                            var suggestTypesSb = new StringBuilder();
+                            <p id="problemDescription@(i)" style="display: none">
+                                <span style="text-decoration: underline;">Gợi ý</span>:
+
+                                @for (var j = 0; j < suggestTypes.Count; ++j)
+                                {
+                                    if (suggestTypes.Count > 1 && j == suggestTypes.Count - 1)
+                                    {
+                                        suggestTypesSb.Append(" và");
+                                    }
+                                    else if (j > 0)
+                                    {
+                                        suggestTypesSb.Append(',');
+                                    }
+                                    suggestTypesSb.Append($" <a href=\"{Url.Action("Class", "Ontology", new {className = suggestTypes[j].Id})}\">{suggestTypes[j]}</a>");
+                                }
+                                @Html.Raw(suggestTypesSb).
+                            </p>
                         }
                     }
                     <div class="radio">
                         <label>
-                            <input type="radio" name="problemId" value="-1" onclick="showGeneralProblem()">Dạng tổng quát
+                            <input type="radio" name="problemId" value="-1" onclick="handleProblem()">Dạng tổng quát
                         </label>
                     </div>
                 </div>
             </div>
-            <div id="generalProblem" class="form-group" style="display: none">
+            <div id="generalProblemForm" class="form-group" style="display: none">
                 <label class="col-md-3 control-label">Nhập loại kết quả cần tìm<br/>(bệnh, sâu,...)</label>
                 <div class="col-md-9">
                     <textarea class="form-control" rows="2" name="outputs" placeholder="Benh&#10;Sau"></textarea>
@@ -61,14 +101,30 @@
 
 @section Scripts {
     <script>
-        function showGeneralProblem() {
+        function handleProblem() {
+            @if (problems != null)
+            {
+                <text>
+                    for (var i = 0; i < @problems.Count; ++i) {
+                        var id = "#problemDescription" + i.toString();
+                        if ($("input[name='problemId']:checked").val() === i.toString()) {
+                            if ($(id).css('display') === 'none') {
+                                $(id).fadeIn();
+                            }
+                        } else if ($(id).css('display') !== 'none') {
+                            $(id).hide();
+                        }
+                    }
+                </text>
+            }
+
             if ($("input[name='problemId']:checked").val() === "-1") {
-                if ($("#generalProblem").css('display') === 'none') {
-                    $("#generalProblem").fadeIn();
+                if ($("#generalProblemForm").css('display') === 'none') {
+                    $("#generalProblemForm").fadeIn();
                 }
             } else {
-                if ($("#generalProblem").css('display') !== 'none') {
-                    $("#generalProblem").fadeOut();
+                if ($("#generalProblemForm").css('display') !== 'none') {
+                    $("#generalProblemForm").hide();
                 }
             }
         }

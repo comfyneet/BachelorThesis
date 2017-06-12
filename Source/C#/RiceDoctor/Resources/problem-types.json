@@ -1,12 +1,12 @@
-{
+﻿{
     "Problems": [
         {
-            "Type": "TrieuChung -> TacNhanGayHai",
+            "Type": "Biết Triệu chứng, tìm Tác nhân gây hại",
             "GoalTypes": ["TacNhanGayHai"],
             "SuggestTypes": ["TrieuChung"]
         },
         {
-            "Type": "GiaiDoan -> TacNhanGayHai",
+            "Type": "Biết Giai đoạn, tìm Tác nhân gây hại",
             "GoalTypes": ["TacNhanGayHai"],
             "SuggestTypes": ["GiaiDoan"]
         }

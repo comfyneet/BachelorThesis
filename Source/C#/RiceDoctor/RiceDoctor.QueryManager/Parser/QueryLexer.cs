@@ -1,14 +1,14 @@
 ﻿using System.Text;
 using JetBrains.Annotations;
 using RiceDoctor.Shared;
-using static RiceDoctor.ConversationalAgent.ChatTokenType;
+using static RiceDoctor.QueryManager.QueryTokenType;
 using static RiceDoctor.Shared.TokenType;
 
-namespace RiceDoctor.ConversationalAgent
+namespace RiceDoctor.QueryManager
 {
-    public class ChatLexer : Lexer
+    public class QueryLexer : Lexer
     {
-        public ChatLexer([NotNull] string text) : base(text)
+        public QueryLexer([NotNull] string text) : base(text)
         {
         }
 
@@ -25,10 +25,10 @@ namespace RiceDoctor.ConversationalAgent
                 Advance();
                 return new Token(Plus);
             }
-            if (CurrentChar == '-')
+            if (CurrentChar == ':')
             {
                 Advance();
-                return new Token(Hyphen);
+                return new Token(Colon);
             }
             if (CurrentChar == '(')
             {
@@ -70,14 +70,21 @@ namespace RiceDoctor.ConversationalAgent
                 Advance();
                 return new Token(Star);
             }
+            if (CurrentChar == ',')
+            {
+                Advance();
+                return new Token(Comma);
+            }
+            if (CurrentChar == '-' && Peek() == '>')
+            {
+                Advance(2);
+                return new Token(Arrow);
+            }
 
             while (!char.IsLetterOrDigit(CurrentChar) && CurrentChar != None)
                 Advance();
 
-            if (CurrentChar == None)
-                return new Token(Eof);
-
-            return GetWord();
+            return CurrentChar == None ? new Token(Eof) : GetWord();
         }
 
         private Token GetWord()
@@ -89,7 +96,7 @@ namespace RiceDoctor.ConversationalAgent
                 Advance();
             }
 
-            return new Token(Word, builder.ToString());
+            return new Token(Word, builder.ToString().RemoveAccent());
         }
     }
 }

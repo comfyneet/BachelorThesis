@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <title>EBNF definition of Semantic Code</title>
+   <style>
+   code {
+     color: red;
+	 font-weight: bold;
+   }
+   </style>
+</head>
+
+<body>
+   <h3>EBNF definition of Semantic Code</h3>
+   
+   <p>nodes = { node }</p>
+   <p>node = singular | text-container | list-container | text</p>
+   <p>singular = <code>[</code> singular-type <code>]</code></p>
+   <p>text-container = color-container | link-container | image-container | simple-text-container | ontology-container</p>
+   <p>color-container = <code>[</code> color-type <code>]</code> nodes <code>[</code> <code>/</code> color-type <code>]</code></p>
+   <p>link-container = <code>[</code> <code>url</code> <code>=</code> <code>&quot;</code> online-link <code>&quot;</code> <code>]</code> nodes <code>[</code> <code>/</code> <code>url</code> <code>]</code></p>
+   <p>image-container = online-image-container | static-image-container</p>
+   <p>online-image-container = <code>[</code> <code>img</code> <code>=</code> <code>&quot;</code> online-link <code>&quot;</code> <code>]</code> nodes <code>[</code> <code>/</code> <code>img</code> <code>]</code></p>
+   <p>static-image-container = <code>[</code> <code>simg</code> <code>=</code> <code>&quot;</code> file-name <code>&quot;</code> <code>]</code> nodes <code>[</code> <code>/</code> <code>simg</code> <code>]</code></p>
+   <p>simple-text-container = <code>[</code> text-type <code>]</code> nodes <code>[</code> <code>/</code> text-type <code>]</code></p>
+   <p>ontology-container = class-container | individual-container</p>
+   <p>class-container = <code>[</code> class-name <code>]</code> nodes <code>[</code> <code>/</code> class-name <code>]</code></p>
+   <p>individual-container = <code>[</code> class-name <code>=</code> individual-name <code>]</code> nodes <code>[</code> <code>/</code> class-name <code>]</code></p>   
+   <p>list-container = ordered-list-container | unodered-list-container</p>
+   <p>ordered-list-container = <code>[</code> <code>ol</code> [ <code>=</code> ordered-type ] <code>]</code> { list-item-container } <code>[</code> <code>/</code> <code>ol</code> <code>]</code></p>
+   <p>unordered-list-container = <code>[</code> <code>ul</code> [ <code>=</code> unordered-type ] <code>]</code> { list-item-container } <code>[</code> <code>/</code> <code>ul</code> <code>]</code></p>
+   <p>color-type = <code>red</code> | <code>green</code> | <code>blue</code> | <code>navy</code> | <code>fuchsia</code> | <code>orange</code> | <code>yellow</code> | <code>gray</code> | <code>purple</code></p>
+   <p>text-type = <code>b</code> | <code>i</code> | <code>u</code> | <code>sub</code> | <code>sup</code> | <code>quote</code> | <code>code</code> | <code>center</code> | <code>h1</code> | <code>h2</code> | <code>h3</code> | <code>h4</code> | <code>h5</code></p>
+   <p>singular-type = <code>hr</code> | <code>br</code></p>
+   <p>ordered-type = <code>1</code> | <code>A</code> | <code>a</code> | <code>I</code> | <code>i</code></p>
+   <p>unordered-type = <code>disc</code> | <code>circle</code> | <code>square</code> | <code>none</code></p>
+   <p>list-item-container = <code>[</code> <code>*</code> <code>]</code> nodes</p>
+   <p>text = <code>STRING</code></p>
+   <p>online-link = <code>STRING</code></p>
+   <p>file-name = <code>STRING</code></p>
+   <p>class-name = <code>IDENT</code></p>
+   <p>individual-name = <code>IDENT</code><p>
+</body>
+
+</html>

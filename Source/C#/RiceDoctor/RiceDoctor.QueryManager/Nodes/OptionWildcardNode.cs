@@ -1,6 +1,6 @@
-﻿namespace RiceDoctor.ConversationalAgent
+﻿namespace RiceDoctor.QueryManager
 {
-    public class OptionWildcardNode : ChatNode
+    public class OptionWildcardNode : QueryNode
     {
         public override string ToString()
         {

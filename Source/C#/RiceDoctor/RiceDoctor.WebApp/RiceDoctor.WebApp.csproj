@@ -25,7 +25,6 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="1.1.1" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RiceDoctor.ConversationalAgent\RiceDoctor.ConversationalAgent.csproj" />
     <ProjectReference Include="..\RiceDoctor.InferenceEngine\RiceDoctor.InferenceEngine.csproj" />
     <ProjectReference Include="..\RiceDoctor.OntologyManager\RiceDoctor.OntologyManager.csproj" />
     <ProjectReference Include="..\RiceDoctor.RuleManager\RiceDoctor.RuleManager.csproj" />

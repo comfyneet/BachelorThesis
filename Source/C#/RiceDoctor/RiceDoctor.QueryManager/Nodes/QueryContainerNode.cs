@@ -1,8 +1,9 @@
 ﻿using System.Text;
+using RiceDoctor.Shared;
 
-namespace RiceDoctor.ConversationalAgent
+namespace RiceDoctor.QueryManager
 {
-    public class MessageNode : ChatContainerNode
+    public class QueryContainerNode : ContainerNode<QueryNode>
     {
         public override string ToString()
         {

@@ -16,9 +16,9 @@ namespace RiceDoctor.WebApp.Controllers
             return View();
         }
 
-        public IActionResult Error()
+        public IActionResult Error(string error)
         {
-            return View();
+            return View(error);
         }
     }
 }

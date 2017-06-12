@@ -1,11 +1,11 @@
 ﻿using System.Text;
 using RiceDoctor.Shared;
 
-namespace RiceDoctor.ConversationalAgent
+namespace RiceDoctor.QueryManager
 {
-    public class OptionNode : ChatContainerNode
+    public class AlternativeNode : QueryContainerNode
     {
-        public override Node<ChatNode> Append(Node<ChatNode> node)
+        public override Node<QueryNode> Append(Node<QueryNode> node)
         {
             var textNode = Check.IsType<TextNode>(node, nameof(node));
 
@@ -25,7 +25,7 @@ namespace RiceDoctor.ConversationalAgent
                 builder.Append((TextNode) ChildNodes[i]);
             }
 
-            builder.Append(")?");
+            builder.Append(')');
 
             return builder.ToString();
         }
