@@ -62,3 +62,5 @@ MoiTruong=ThoiTietAmAp & DoAm=DoAmCao & MoiTruong=NangIt & LuongMua=MuaIt & Giai
 TrieuChung=DamNhieu & TrieuChung=CayDay & GiaiDoan=GiaiDoanLamDong -> Sau=RayLungTrang;
 (GiaiDoan=GiaiDoanTroBong | GiaiDoan=GiaiDoanMa | GiaiDoan=GiaiDoanDeNhanh) & TrieuChung=CoNhieu & DoSauRuong=RuongSau -> Sau=BoXit;
 TrieuChung=DamThieu -> HienTuong=HienTuongThieuDam;
+GiaiDoan=GiaiDoanChin & TrieuChung=MuaNhieu -> Benh=BenhLemLepHat;
+
