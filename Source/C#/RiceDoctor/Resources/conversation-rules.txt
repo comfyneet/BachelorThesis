@@ -1,5 +1,0 @@
-﻿+ * về lúa
-0: Class -> Individual
-
-+ * {1}
-0: Class -> Individual

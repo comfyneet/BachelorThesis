@@ -96,7 +96,7 @@ namespace RiceDoctor.QueryManager
                 Advance();
             }
 
-            return new Token(Word, builder.ToString().RemoveAccent());
+            return new Token(Word, builder.ToString().RemoveAccents());
         }
     }
 }

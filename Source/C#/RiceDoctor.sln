@@ -9,10 +9,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RiceDoctor.Shared", "RiceDo
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{391B7CE6-7A14-48B8-BD46-9ED3D927C529}"
 	ProjectSection(SolutionItems) = preProject
-		RiceDoctor\Resources\conversation-rules.txt = RiceDoctor\Resources\conversation-rules.txt
 		RiceDoctor\Resources\fuzzy-model.txt = RiceDoctor\Resources\fuzzy-model.txt
 		RiceDoctor\Resources\logic-rules.txt = RiceDoctor\Resources\logic-rules.txt
 		RiceDoctor\Resources\problem-types.json = RiceDoctor\Resources\problem-types.json
+		RiceDoctor\Resources\query-rules.txt = RiceDoctor\Resources\query-rules.txt
 		RiceDoctor\Resources\relation-rules.txt = RiceDoctor\Resources\relation-rules.txt
 	EndProjectSection
 EndProject

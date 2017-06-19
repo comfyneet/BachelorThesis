@@ -1,4 +1,7 @@
-﻿@model IReadOnlyCollection<RiceDoctor.OntologyManager.Individual>
+﻿@using RiceDoctor.OntologyManager
+@using RiceDoctor.QueryManager
+@using Attribute = RiceDoctor.OntologyManager.Attribute
+@model IReadOnlyCollection<Tuple<string, RiceDoctor.QueryManager.QueryType, IReadOnlyCollection<object>>>
 @{
     var keywords = (string) ViewData["Keywords"];
     ViewData["Title"] = "Tra cứu " + keywords;
@@ -10,24 +13,70 @@
 
         @if (Model == null)
         {
-            <h4>Không tìm thấy thể hiện có chứa câu truy vấn</h4>
+            <h4>Không tìm thấy dữ liệu từ câu truy vấn</h4>
 
             <p>
                 Tìm kiếm trên internet với <a href="http://lmgtfy.com/?q=@keywords">Google</a>.
             </p>
+
+            <hr/>
         }
         else
         {
-            <h4>Tìm thấy @Model.Count thể hiện có chứa câu truy vấn</h4>
-
-            <ol>
-                @foreach (var searchIndividual in Model)
+            foreach (var result in Model)
+            {
+                string type = null;
+                switch (result.Item2)
                 {
-                    <li>
-                        <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@searchIndividual.Id">@searchIndividual</a>
-                    </li>
+                    case QueryType.Class:
+                        type = "lớp";
+                        break;
+                    case QueryType.Individual:
+                        type = "thể hiện";
+                        break;
+                    case QueryType.Relation:
+                        type = "quan hệ";
+                        break;
+                    case QueryType.Attribute:
+                        type = "thuộc tính";
+                        break;
                 }
-            </ol>
+
+                <section>
+                    <h4>Tìm thấy @result.Item3.Count @type với từ khóa "@result.Item1"</h4>
+
+                    <ol>
+                        @foreach (var item in result.Item3)
+                        {
+                            switch (result.Item2)
+                            {
+                                case QueryType.Class:
+                                    <li>
+                                        <a asp-controller="Ontology" asp-action="Class" asp-route-className="@(((Class) item).Id)">@item</a>
+                                    </li>
+                                    break;
+                                case QueryType.Individual:
+                                    <li>
+                                        <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@(((Individual) item).Id)">@item</a>
+                                    </li>
+                                    break;
+                                case QueryType.Relation:
+                                    <li>
+                                        <a asp-controller="Ontology" asp-action="Relation" asp-route-relationName="@(((Relation) item).Id)">@item</a>
+                                    </li>
+                                    break;
+                                case QueryType.Attribute:
+                                    <li>
+                                        <a asp-controller="Ontology" asp-action="Attribute" asp-route-attributeName="@(((Attribute) item).Id)">@item</a>
+                                    </li>
+                                    break;
+                            }
+                        }
+                    </ol>
+                </section>
+
+                <hr/>
+            }
         }
     </div>
 </div>

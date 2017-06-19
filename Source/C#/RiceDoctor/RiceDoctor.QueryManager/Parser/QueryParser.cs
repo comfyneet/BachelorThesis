@@ -18,6 +18,7 @@ namespace RiceDoctor.QueryManager
         {
         }
 
+        [NotNull]
         public override IReadOnlyCollection<Query> Parse()
         {
             if (_queries != null) return _queries;
@@ -43,7 +44,7 @@ namespace RiceDoctor.QueryManager
                 queryList.Add(ParseQuery());
             }
 
-            return queryList.OrderBy(q => q.Weight).ToList();
+            return queryList.OrderByDescending(q => q.Weight).ToList();
         }
 
         [NotNull]
@@ -61,7 +62,8 @@ namespace RiceDoctor.QueryManager
                 }
                 else if (CurrentToken.Type == Comma)
                 {
-                    var text = new TextNode(", ");
+                    Eat(Comma);
+                    var text = new TextNode(",");
                     queryContainer.Append(text);
                 }
                 else if (CurrentToken.Type == Word)
@@ -83,8 +85,8 @@ namespace RiceDoctor.QueryManager
                     }
                     else
                     {
-                        var optionWildcard = ParseOptionWildcard();
-                        queryContainer.Append(optionWildcard);
+                        var discard = ParseDiscard();
+                        queryContainer.Append(discard);
                     }
                 }
                 else
@@ -96,7 +98,7 @@ namespace RiceDoctor.QueryManager
 
             Eat(NewLine);
 
-            var results = new Dictionary<int, IReadOnlyCollection<QueryType>>();
+            var resultTypeList = new Dictionary<int, IReadOnlyCollection<QueryType>>();
             while (CurrentToken.Type == Word)
             {
                 var starPos = int.Parse((string) CurrentToken.Value);
@@ -113,12 +115,12 @@ namespace RiceDoctor.QueryManager
                     resultTypes.Add(ParseQueryType());
                 }
 
-                Eat(NewLine);
+                if (CurrentToken.Type != Eof) Eat(NewLine);
 
-                results.Add(starPos, resultTypes);
+                resultTypeList.Add(starPos, resultTypes);
             }
 
-            return new Query(weight, queryContainer, results);
+            return new Query(weight, queryContainer, resultTypeList);
         }
 
         private QueryType ParseQueryType()
@@ -128,11 +130,17 @@ namespace RiceDoctor.QueryManager
             var typeStr = (string) CurrentToken.Value;
             switch (typeStr)
             {
-                case "Class":
+                case "class":
                     queryType = Class;
                     break;
-                case "Individual":
+                case "individual":
                     queryType = Individual;
+                    break;
+                case "relation":
+                    queryType = Relation;
+                    break;
+                case "attribute":
+                    queryType = QueryType.Attribute;
                     break;
                 default:
                     throw new InvalidOperationException(CoreStrings.SyntaxError(nameof(QueryType), typeStr));
@@ -167,7 +175,7 @@ namespace RiceDoctor.QueryManager
         }
 
         [NotNull]
-        private OptionWildcardNode ParseOptionWildcard()
+        private DiscardNode ParseDiscard()
         {
             Eat(LSquare);
 
@@ -175,7 +183,7 @@ namespace RiceDoctor.QueryManager
 
             Eat(RSquare);
 
-            var optionWildcard = new OptionWildcardNode();
+            var optionWildcard = new DiscardNode();
 
             return optionWildcard;
         }

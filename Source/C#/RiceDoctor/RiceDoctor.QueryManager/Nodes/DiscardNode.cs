@@ -1,10 +1,10 @@
 ﻿namespace RiceDoctor.QueryManager
 {
-    public class OptionWildcardNode : QueryNode
+    public class DiscardNode : QueryNode
     {
         public override string ToString()
         {
-            return "(.*)";
+            return ".*";
         }
     }
 }

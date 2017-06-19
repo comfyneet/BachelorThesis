@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
+using System.Text.RegularExpressions;
 using RiceDoctor.InferenceEngine;
 using RiceDoctor.OntologyManager;
 using RiceDoctor.RuleManager;
 using RiceDoctor.Shared;
 using static RiceDoctor.InferenceEngine.ResponseType;
-using Manager = RiceDoctor.RuleManager.Manager;
+using Manager = RiceDoctor.QueryManager.Manager;
 using Request = RiceDoctor.InferenceEngine.Request;
 using RequestType = RiceDoctor.InferenceEngine.RequestType;
 
@@ -18,6 +20,13 @@ namespace RiceDoctor.ConsoleApp
         {
             var logger = new ConsoleLogger();
             Logger.OnLog += logger.Log;
+
+            var problemPath = Path.Combine(AppContext.BaseDirectory, @"..\..\..\..\Resources\query-rules.txt");
+            var problemData = File.ReadAllText(problemPath);
+            var x = new Manager(problemData).Queries;
+            var x1 = x.First();
+            var regex = new Regex(x1.Node.ToString());
+            var match = regex.Match("");
 
             var (ruleManager, ontologyManager) = CreateEngine();
 
@@ -98,7 +107,7 @@ namespace RiceDoctor.ConsoleApp
             var relationPath = Path.Combine(AppContext.BaseDirectory, @"..\..\..\..\Resources\relation-rules.txt");
             var relationData = File.ReadAllText(relationPath);
 
-            IRuleManager ruleManager = new Manager(problemData, logicData, relationData);
+            IRuleManager ruleManager = new RuleManager.Manager(problemData, logicData, relationData);
             IOntologyManager ontologyManager = OntologyManager.Manager.Instance;
 
             return (ruleManager, ontologyManager);

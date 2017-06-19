@@ -2,7 +2,7 @@
 {
     public static class StringExtensions
     {
-        public static string RemoveAccent(this string s)
+        public static string RemoveAccents(this string s)
         {
             Check.NotNull(s, nameof(s));
 

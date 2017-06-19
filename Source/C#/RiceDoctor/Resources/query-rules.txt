@@ -1,0 +1,13 @@
+﻿+ [Hãy cho biết] * (về|của) lúa [*]
+0: individual -> class
+
++ *, *
+0: individual
+1: individual
+
++ * và *
+0: individual
+1: individual
+
++ * {1}
+0: class -> individual -> relation -> attribute

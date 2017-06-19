@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 public class StringUtils {
 
     @NotNull
-    public static String removeAccent(@NotNull final String s) {
+    public static String removeAccents(@NotNull final String s) {
 
         final String temp = Normalizer.normalize(s, Normalizer.Form.NFD);
         final Pattern pattern = Pattern.compile("\\p{InCombiningDiacriticalMarks}+");

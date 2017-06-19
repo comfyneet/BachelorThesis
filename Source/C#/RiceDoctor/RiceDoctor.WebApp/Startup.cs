@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using RiceDoctor.OntologyManager;
+using RiceDoctor.QueryManager;
 using RiceDoctor.RuleManager;
 using Manager = RiceDoctor.OntologyManager.Manager;
 
@@ -39,9 +40,13 @@ namespace RiceDoctor.WebApp
                 @"..\..\..\..\Resources\problem-types.json"));
             var logicData = File.ReadAllText(Path.Combine(AppContext.BaseDirectory,
                 @"..\..\..\..\Resources\logic-rules.txt"));
-            var relationData =
-                File.ReadAllText(Path.Combine(AppContext.BaseDirectory, @"..\..\..\..\Resources\relation-rules.txt"));
+            var relationData = File.ReadAllText(Path.Combine(AppContext.BaseDirectory,
+                @"..\..\..\..\Resources\relation-rules.txt"));
             services.AddSingleton<IRuleManager>(new RuleManager.Manager(problemData, logicData, relationData));
+
+            var queryData = File.ReadAllText(Path.Combine(AppContext.BaseDirectory,
+                @"..\..\..\..\Resources\query-rules.txt"));
+            services.AddSingleton<IQueryManager>(new QueryManager.Manager(queryData));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

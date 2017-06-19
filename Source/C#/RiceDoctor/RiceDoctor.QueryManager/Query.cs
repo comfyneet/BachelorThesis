@@ -4,25 +4,19 @@ using RiceDoctor.Shared;
 
 namespace RiceDoctor.QueryManager
 {
-    public enum QueryType
-    {
-        Class,
-        Individual
-    }
-
     public class Query
     {
         public Query(
             int weight,
             [NotNull] QueryContainerNode node,
-            [NotNull] IReadOnlyDictionary<int, IReadOnlyCollection<QueryType>> results)
+            [NotNull] IReadOnlyDictionary<int, IReadOnlyCollection<QueryType>> resultTypes)
         {
             Check.NotNull(node, nameof(node));
-            Check.NotEmpty(results, nameof(results));
+            Check.NotEmpty(resultTypes, nameof(resultTypes));
 
             Weight = weight;
             Node = node;
-            Results = results;
+            ResultTypes = resultTypes;
         }
 
         public int Weight { get; }
@@ -31,6 +25,6 @@ namespace RiceDoctor.QueryManager
         public QueryContainerNode Node { get; }
 
         [NotNull]
-        public IReadOnlyDictionary<int, IReadOnlyCollection<QueryType>> Results { get; }
+        public IReadOnlyDictionary<int, IReadOnlyCollection<QueryType>> ResultTypes { get; }
     }
 }

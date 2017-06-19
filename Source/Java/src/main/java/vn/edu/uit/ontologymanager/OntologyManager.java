@@ -167,7 +167,6 @@ public class OntologyManager {
     @NotNull
     private Response parseSearchIndividuals(@NotNull final Map<String, Object> data) {
         final String keywords = (String) data.get("Keywords");
-        final String unaccentKeywords = StringUtils.removeAccent(keywords);
 
         final Set<Individual> searchIndividuals = new HashSet<>();
         final OWLDataProperty owlAttribute = factory.getOWLDataProperty(IRI.create(prefix, NAME_ATTRIBUTE));
@@ -175,13 +174,13 @@ public class OntologyManager {
         for (final OWLNamedIndividual owlIndividual : ontology.getIndividualsInSignature()) {
             final String individualName = owlIndividual.getIRI().getShortForm();
 
-            if (StringUtils.removeAccent(individualName).toLowerCase().contains(unaccentKeywords.toLowerCase())) {
+            if (StringUtils.removeAccents(individualName).toLowerCase().contains(keywords)) {
                 final Individual individual = getIndividual(owlIndividual);
                 searchIndividuals.add(individual);
             } else {
                 final Set<OWLLiteral> owlLiterals = reasoner.getDataPropertyValues(owlIndividual, owlAttribute);
                 for (final OWLLiteral owlLiteral : owlLiterals)
-                    if (StringUtils.removeAccent(owlLiteral.getLiteral()).toLowerCase().contains(unaccentKeywords.toLowerCase())) {
+                    if (StringUtils.removeAccents(owlLiteral.getLiteral()).toLowerCase().contains(keywords)) {
                         final Individual individual = getIndividual(owlIndividual);
 
                         searchIndividuals.add(individual);
