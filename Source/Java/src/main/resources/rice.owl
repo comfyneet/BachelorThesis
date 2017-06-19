@@ -17,10 +17,10 @@
         <Class IRI="#LuongMua"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#QuyTrinhBonPhan"/>
+        <NamedIndividual IRI="#ThuocADORE_25SC"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#ThuocADORE_25SC"/>
+        <Class IRI="#QuyTrinhBonPhan"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#BenhLemLepHat"/>
@@ -44,10 +44,10 @@
         <DataProperty IRI="#image"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <NamedIndividual IRI="#KhongNuoc"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#KhongNuoc"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#BenhDomVang"/>
@@ -74,16 +74,19 @@
         <NamedIndividual IRI="#QuyTrinhKichThichChin"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#CoLongVuc"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#ChopReBuu"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#ThoiTietNong"/>
+        <NamedIndividual IRI="#CoLongVuc"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#coGiaiDoan"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DEKAMON"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ThoiTietNong"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#BeThoi"/>
@@ -92,13 +95,16 @@
         <NamedIndividual IRI="#OcChery"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#dacDiemKichThich"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Star_10WP"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#ThuocAdmire_50EC"/>
+        <NamedIndividual IRI="#DeNhanhKem"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#DeNhanhKem"/>
+        <NamedIndividual IRI="#ThuocAdmire_50EC"/>
     </Declaration>
     <Declaration>
         <Class IRI="#DoSauRuong"/>
@@ -111,6 +117,12 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#lieuLuong"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#CoHienTuong"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#khaiNiem"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ThanThoi"/>
@@ -126,6 +138,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#luongNuoc"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PHÂN_HỦY_GỐC_RẠ"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#DoAmTrungBinh"/>
@@ -194,10 +209,10 @@
         <Class IRI="#DoAm"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#QuyTrinhTuoiNuocSauSa5-20Ngay"/>
+        <NamedIndividual IRI="#Ditacin_8L"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Ditacin_8L"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocSauSa5-20Ngay"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Sirius_10_WP"/>
@@ -245,13 +260,13 @@
         <NamedIndividual IRI="#PhanRac"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#HinhDangLa"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#ChieuCaoThap"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#cachCheBien"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#HinhDangLa"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ThuocActara_25WWG"/>
@@ -278,10 +293,10 @@
         <Class IRI="#Sau"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#QuyTrinhBonThucDot1"/>
+        <DataProperty IRI="#dacTinhCuaThuoc"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#dacTinhCuaThuoc"/>
+        <NamedIndividual IRI="#QuyTrinhBonThucDot1"/>
     </Declaration>
     <Declaration>
         <Class IRI="#QuyTrinhKichThich"/>
@@ -314,10 +329,10 @@
         <NamedIndividual IRI="#QuyTrinhTuoiNuocTrongDeNhanh"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#MILAX_100GB"/>
+        <NamedIndividual IRI="#PhanTrungLuong"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#PhanTrungLuong"/>
+        <NamedIndividual IRI="#MILAX_100GB"/>
     </Declaration>
     <Declaration>
         <Class IRI="#ChieuCao"/>
@@ -327,6 +342,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#tuNgay"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TAIYOU_20SC"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#NangXuatKem"/>
@@ -356,16 +374,19 @@
         <NamedIndividual IRI="#Ray"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#tuNgayCachLy"/>
+        <DataProperty IRI="#nguyenNhan"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#LaChay"/>
+        <NamedIndividual IRI="#BenhChayBiaLa"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#CoDuoiPhung"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#BenhChayBiaLa"/>
+        <NamedIndividual IRI="#LaChay"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#tuNgayCachLy"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#SauKeo"/>
@@ -434,10 +455,10 @@
         <NamedIndividual IRI="#BenhBuuRe"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#PhanXanh"/>
+        <Class IRI="#MauLa"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#MauLa"/>
+        <NamedIndividual IRI="#PhanXanh"/>
     </Declaration>
     <Declaration>
         <Class IRI="#NuocRuong"/>
@@ -446,10 +467,10 @@
         <Class IRI="#PhanVoCo"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#LaXanhDam"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
     </Declaration>
     <Declaration>
-        <Datatype abbreviatedIRI="xsd:string"/>
+        <NamedIndividual IRI="#LaXanhDam"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#dacDiem"/>
@@ -494,22 +515,25 @@
         <NamedIndividual IRI="#TREBON_10EC"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#LaCongQueo"/>
+        <NamedIndividual IRI="#LaChet"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#LaChet"/>
+        <NamedIndividual IRI="#LaCongQueo"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#HienTuongNgoDocHuuCo"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#RayXanhDuoiDen"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#NuocCao"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#RayXanhDuoiDen"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#tinhThichNghi"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#thoiGianBatDauVuMua"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ReUn"/>
@@ -524,6 +548,9 @@
         <NamedIndividual IRI="#dibavil_50FL_50_WP"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#VuThuDong"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#CoChi"/>
     </Declaration>
     <Declaration>
@@ -536,13 +563,13 @@
         <NamedIndividual IRI="#SauDucThanHaiCham"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#BenhTungo"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#DatKho"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Dat"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#BenhTungo"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ReNgan"/>
@@ -602,13 +629,16 @@
         <NamedIndividual IRI="#PhanLan"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#MoiTruong"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#coThuoc"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#MoiTruong"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#SauGai"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GOLIATH"/>
     </Declaration>
     <Declaration>
         <Datatype abbreviatedIRI="xsd:int"/>
@@ -639,6 +669,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#HinhDangRe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Luc_Diep_To"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#BenhVangLa"/>
@@ -677,10 +710,10 @@
         <NamedIndividual IRI="#ReThoi"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#PISANA_700WP"/>
+        <NamedIndividual IRI="#LaXanh"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#LaXanh"/>
+        <NamedIndividual IRI="#PISANA_700WP"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#DIBAZOLE_5SC"/>
@@ -713,13 +746,13 @@
         <NamedIndividual IRI="#Tilt_Super_300_EC"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#GiaiDoanDeNhanh"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#QuyTrinhTuoiNuocChinHoanToan"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#LaVangCam"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#GiaiDoanDeNhanh"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#BenhVangLun"/>
@@ -740,13 +773,13 @@
         <NamedIndividual IRI="#HatLep"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#GiongDH815-6"/>
+        <Class IRI="#HienTuong"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#PhanPhucHop"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#HienTuong"/>
+        <NamedIndividual IRI="#GiongDH815-6"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#GioLon"/>
@@ -755,31 +788,31 @@
         <NamedIndividual IRI="#GiaiDoanTro"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#OcLac"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="#trieuChung"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#LaHinhBacThang"/>
+        <NamedIndividual IRI="#OcLac"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#BenhLunXoanLa"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Staner_20WP"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#CBA"/>
+        <NamedIndividual IRI="#LaHinhBacThang"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#BoTri"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#HinhDangBong"/>
+        <NamedIndividual IRI="#CBA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Staner_20WP"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Benh"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HinhDangBong"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#GiongSV46"/>
@@ -1058,6 +1091,10 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Thuoc"/>
+        <NamedIndividual IRI="#DEKAMON"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Thuoc"/>
         <NamedIndividual IRI="#DIBAZOLE_5SC"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1111,6 +1148,10 @@
     <ClassAssertion>
         <Class IRI="#Thuoc"/>
         <NamedIndividual IRI="#Furadan_3_H"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Thuoc"/>
+        <NamedIndividual IRI="#GOLIATH"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#HinhDangLa"/>
@@ -1286,6 +1327,10 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Thuoc"/>
+        <NamedIndividual IRI="#Luc_Diep_To"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Thuoc"/>
         <NamedIndividual IRI="#MILAX_100GB"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1367,6 +1412,10 @@
     <ClassAssertion>
         <Class IRI="#Oc"/>
         <NamedIndividual IRI="#OcSenh"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Thuoc"/>
+        <NamedIndividual IRI="#PHÂN_HỦY_GỐC_RẠ"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Thuoc"/>
@@ -1598,6 +1647,10 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Thuoc"/>
+        <NamedIndividual IRI="#TAIYOU_20SC"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Thuoc"/>
         <NamedIndividual IRI="#TREBON_10EC"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1677,6 +1730,10 @@
         <NamedIndividual IRI="#VuHeThu"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#VuMua"/>
+        <NamedIndividual IRI="#VuThuDong"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Thuoc"/>
         <NamedIndividual IRI="#dana-win_12.5_WP"/>
     </ClassAssertion>
@@ -1742,6 +1799,11 @@
         <ObjectProperty IRI="#coThuoc"/>
         <NamedIndividual IRI="#BenhBuuRe"/>
         <NamedIndividual IRI="#Furadan_3_H"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coThuoc"/>
+        <NamedIndividual IRI="#BenhDaoOn"/>
+        <NamedIndividual IRI="#TAIYOU_20SC"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#coThuoc"/>
@@ -1834,9 +1896,24 @@
         <NamedIndividual IRI="#BenhKhoVan"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#xuatHienOGiaiDoan"/>
+        <NamedIndividual IRI="#HienTuongNgoDocHuuCo"/>
+        <NamedIndividual IRI="#GiaiDoanMa"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#coTacNhanGayHai"/>
         <NamedIndividual IRI="#Hoả_Tiễn_50WP"/>
         <NamedIndividual IRI="#BenhBacLa"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coThuoc"/>
+        <NamedIndividual IRI="#NgoDocPhen"/>
+        <NamedIndividual IRI="#PHÂN_HỦY_GỐC_RẠ"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#CoHienTuong"/>
+        <NamedIndividual IRI="#PHÂN_HỦY_GỐC_RẠ"/>
+        <NamedIndividual IRI="#NgoDocPhen"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#coGiaiDoan"/>
@@ -1864,14 +1941,34 @@
         <NamedIndividual IRI="#GiaiDoanChin"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coThuoc"/>
+        <NamedIndividual IRI="#QuyTrinhKichThichChin"/>
+        <NamedIndividual IRI="#Luc_Diep_To"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#coGiaiDoan"/>
         <NamedIndividual IRI="#QuyTrinhKichThichMa"/>
         <NamedIndividual IRI="#GiaiDoanMa"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coThuoc"/>
+        <NamedIndividual IRI="#QuyTrinhKichThichMa"/>
+        <NamedIndividual IRI="#GOLIATH"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#coGiaiDoan"/>
         <NamedIndividual IRI="#QuyTrinhKichThichTro"/>
         <NamedIndividual IRI="#GiaiDoanTro"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coThuoc"/>
+        <NamedIndividual IRI="#QuyTrinhKichThichTro"/>
+        <NamedIndividual IRI="#DEKAMON"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coThuoc"/>
+        <NamedIndividual IRI="#QuyTrinhKichThichTro"/>
+        <NamedIndividual IRI="#Luc_Diep_To"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#coGiaiDoan"/>
@@ -2119,8 +2216,9 @@ Hoạt chất Fenobucarb có tác động tiếp xúc, vị độc và hiệu l�
     <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
         <NamedIndividual IRI="#BenhBacLa"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BỆNH BẠC LÁ
-                     Tên khoa học : Xanthomonas campestris pv. Oryzae
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">[b]BỆNH BẠC LÁ [/b]
+
+Tên khoa học : Xanthomonas campestris pv. Oryzae
 1. Triệu chứng :
 [Benh=BenhBacLa]bệnh bạc lá[/Benh] lúa xuất hiện trên phiến lá, đầu tiên là ở ngọn lá. Khi mới xuất hiện vết bệnh có màu xanh tái, gặp nắng vết bệnh héo đi, tế bào chết dần tạo thành vết dài màu trắng xám. Bìa vết bệnh có hình gợn sóng, thời tiết ẩm, hay sáng sớm trên vết bệnh có giọt dịch màu trắng đục, lúc khô có màu vàng hoặc nâu chứa đầy vi khuẩn. Bệnh nặng có thể làm cho khô trắng cả phiến lá, làm tỷ lệ hạt lửng lép 50-70%.
 [Benh=BenhBacLa]bệnh bạc lá[/Benh] lúa năm nay có thể hại nặng lúa giai đoạn trổ bông đến thu hoạch, nhất là những ruộng lúa cấy giống nhiễm bệnh, bón thừa đạm vào giai đoạn cuối làm cho bộ lá đòng (gồm lá đòng và 3 lá dưới lá đòng) có màu xanh thẫm, xanh đen.
@@ -2143,6 +2241,30 @@ Ditacin 8L với hoạt chất Ningnamycin là một loại kháng sinh có ngu�
 Ngoài ra có thể sử dụng các loại [Thuoc]thuốc[/Thuoc] thành phẩm sau:[Thuoc]Ditacin_8LStaner_20WP[/Thuoc] ;[Thuoc=Hoả_Tiễn_50WP]Hoả Tiễn 50WP[/Thuoc]; CBA; [Thuoc=Bactocide_12WP]Bactocide 12WP[/Thuoc]; [Thuoc=Sasa_20WP]Sasa 20WP[/Thuoc] cũng cho kết quả phòng, trị bệnh tương đối tốt, cần phun 2 lần, mỗi lần cách nhau 5-7 ngày.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#bienPhapKhacPhuc"/>
+        <NamedIndividual IRI="#BenhBacLa"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Để khắc phục tình trạng trên, phòng tránh bệnh bạc lá ở lúa mùa, ngoài các biện pháp canh tác đại trà, cần tập trung vào một số điểm sau:
+1. Chọn giống chống chịu tốt với bệnh bạc lá để đưa vào gieo cấy ở vụ mùa.
+2. Tuân thủ về kỹ thuật trong biện pháp thâm canh như:
+- Để đất nhanh mục nên bón vôi từ 15- 20 kg/sào, làm đất phải đủ ngấu để tránh ngộ độc rễ nhiễm bệnh vàng lá khi lúa đang đẻ sau tiết lập thu.
+- Chỉ cấy mạ đủ tuổi, chăm bón sớm và cân đối tập trung vào giai đoạn đầu vụ. Nên bón phân NPK chuyên dùng, phân có hàm lượng kaly cao, chú ý bón nặng đầu, nhẹ cuối. Ưu tiên bón kaly cao cho các giống hay bị nhiễm bạc lá. Những chân ruộng hẩu hay dồn đạm cuối vụ: cần giảm bón đạm, bón tăng lân và kaly cho cây cứng, lá dầy đỡ bị bệnh bạc lá cuối vụ. Đặc biệt giống chất lượng, nên cấy lùi thời vụ cuối tháng 7 (25-30/7) để lúa trỗ sau 25/9 đến trước 5/10, sát tiết hàn lộ nhiệt độ giảm, thời tiết mát, sẽ đỡ bạc lá hơn. Sử dụng bón phân cho lúa chất lượng, lúa lai là bón lót sâu, bón thúc sớm ngay sau cấy 7-10 ngày: hết cả đạm và kaly .Không bón kaly giai đoạn lúa đứng cái vì cây lại huy động đạm lên dễ bạc lá.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dacDiem"/>
+        <NamedIndividual IRI="#BenhBacLa"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Bệnh xuất hiện ở mép lá, cháy dọc mép lá từ đầu chóp lá cháy xuống (còn gọi là bệnh cháy bìa lá)
+- Bệnh lan theo chiều gió.
+- Buổi chiều những giọt keo vi khuẩn bạc lá khô đọng lại ở mép lá màu vàng, nhỏ như &quot;trứng tôm&quot;.
+- Đêm sương: giọt keo vi khuẩn này tan ra, chảy chạy dài theo mép lá, và gió làm xây xát lan sang những lá khác.
+- Bệnh nặng: lá lúa cháy đặc biệt lá đòng cháy làm lúa lép lửng cao, giảm năng suất nghiêm trọng.
+- Giống bị bệnh nặng: BT7, Tạp giao</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#BenhBacLa"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BacLa.jpg</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#BenhBacLa"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">bệnh bạc lá</Literal>
@@ -2151,6 +2273,14 @@ Ngoài ra có thể sử dụng các loại [Thuoc]thuốc[/Thuoc] thành phẩm
         <DataProperty IRI="#nguonGoc"/>
         <NamedIndividual IRI="#BenhBacLa"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">[Benh=BenhBacLa]bệnh bạc lá[/Benh] do vi khuẩn [url=&quot;https://www.google.com.vn/search?q=vi+khu%E1%BA%A9n+Xanthomonas+Oryzae&quot;] Xanthomonas Oryzae[/url] gây lên. Bệnh thường phát sinh đầu tiên ở rìa lá, mút lá sau đó lan dần vào trong phiến lá tạo thành các vết dài màu xanh nhạt sau chuyển thành màu trắng xám. Giữa phần lá bệnh và không bệnh thường có đường gợn sóng, vào sáng sớm có thể quan sát các giọt dịch vi khuẩn tròn nhỏ màu vàng nâu trên mép lá.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nguyenNhan"/>
+        <NamedIndividual IRI="#BenhBacLa"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Một số giống mẫn cảm với bệnh bạc lá như một số giống tạp giao và một số giống chất lượng.
+- Do thời tiết nóng ẩm, mưa to gió lớn xảy ra trong thời kỳ lúa cần quang hợp cao.
+- Do biện pháp canh tác làm đất không ngấu, cây lúa nhiễm bệnh vàng lá sau lập thu, bón thêm phân cấp cứu vàng lá, cây lúa ra lớp rễ mới phát triển lá non nên gặp mưa dông dễ nhiễm bệnh bạc lá.
+- Bệnh thường mẫn cảm với lượng đạm dư trong lá, những ruộng bón đạm nhiều, bón muộn, bón lai rai, bón không cân đối giữ đạm, lân và kaly, những ruộng trũng hẩu dồn đạm cuối vụ, do biện pháp thâm canh gieo cấy, chăm bón không đúng kỹ thuật.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
@@ -2179,7 +2309,32 @@ Các biện pháp phòng trị chủ yếu:
 
 -Nông dân chưa có thói quen dùng [Thuoc]thuốc[/Thuoc] hóa học vì chưa hiểu rõ bệnh.
 
-Khi bệnh nặng có thể rải [Thuoc]thuốc[/Thuoc] [Thuoc=Furadan_3_H]Furadan 3 H[/Thuoc] hay [Thuoc]thuốc[/Thuoc] Mocap.</Literal>
+Khi bệnh nặng có thể rải [Furadan_3_H]thuốc[/Furadan_3_H] [Thuoc=Furadan_3_H]Furadan 3 H[/Thuoc] hay [Thuoc]thuốc[/Thuoc] Mocap.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#bienPhapKhacPhuc"/>
+        <NamedIndividual IRI="#BenhBuuRe"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Không để ruộng mất nước bệnh sẽ phát triển mạnh.
+
+-Khi cây lúa bị bướu rể bơm nước và giữ nước ngập liên tục 5-7 ngày.
+
+-Nông dân chưa có thói quen dùng thuốc hóa học vì chưa hiểu rõ bệnh.
+
+Khi bệnh nặng có thể rải thuốc[Thuoc=Furadan_3_H]Furadan 3 H[/Thuoc] hay thuốc [Thuoc] Mocap [/Thuoc] .</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dacDiem"/>
+        <NamedIndividual IRI="#BenhBuuRe"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Trên đồng ruộng, cây lúa khoảng một tháng tuổi thường thấy có triệu chứng bệnh. Bệnh phát triển mạnh trên đất cạn và ẩm, đây là loài tuyến trùng háo khí, chúng ngừng phát triển trong đất ngập nước.
+
+Cây bị lùn, lá hơi vàng, tăng trưởng chậm. Nhổ rễ lên, thấy rễ vẫn trắng tốt nhưng bị ngắn lại, bướu xuất hiện ở nhiều đoạn của rể hoặc ở chóp  rể. Nơi có ổ tuyến trùng bị phù to tạo bướu 1-2 mm.
+
+Khi bị tuyến trùng ký sinh, cây lúa bị bệnh bướu rể nên tốn nhiều phân bón và cây lúa phát triển kém</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#BenhBuuRe"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BuuReDoTuyenTrungHaiLua.JPG</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -2196,21 +2351,22 @@ Khi bệnh nặng có thể rải [Thuoc]thuốc[/Thuoc] [Thuoc=Furadan_3_H]Fura
     <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
         <NamedIndividual IRI="#BenhChayBiaLa"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">[li]1.Lịch sử phát hiện và phân bố của bệnh[/li]
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">[b] 1.Lịch sử phát hiện và phân bố của bệnh [/b]
+[br]
+  [Benh=BenhChayBiaLa] Bệnh cháy bìa lá [/Benh] lúa hay còn gọi là [Benh=BenhBacLa] bệnh bạc lá [/Benh] do loài vi khuẩn Xanthomonas oryzae gây ra. Bệnh được phát hiện đầu tiên ở Nhật Bản vào năm 1884, đến năm 1908 mới xác định tác nhân là do vi khuẩn. Hiện nay bệnh này phổ biến ở ruộng lúa khắp các Châu lục. Ở Việt Nam [Benh=BenhChayBiaLa] Bệnh cháy bìa lá[/Benh] xuất hiện trên phạm vi cả nước. Bệnh này ngày càng phổ biến ở vùng Đồng Tháp Mười, đặc biệt trong vụ lúa [VuMua=VuHeThu]vụ hè thu[/VuMua].
+[br]
+[b]2-Đặc điểm tác nhân gây bệnh[/b]
+[br]
+Vi khuẩn [Benh=BenhChayBiaLa] Bệnh cháy bìa lá [/Benh] có hình que ngắn, 2 đầu tròn, có một chiên mao ở một cực. Có vỏ bao bọc (capsule) và tập hợp thành khối khá bền vững, ngay cả khi ở trong nước. Capsule có vai trò bảo vệ vi khuẩn chống khô hạn và những yếu tố bất lợi khác.
 
-[Benh=BenhChayBiaLa]Bệnh cháy bìa lá[/Benh] lúa hay còn gọi là [Benh=BenhBacLa]bệnh bạc lá[/Benh] do loài vi khuẩn Xanthomonas oryzae gây ra. Bệnh được phát hiện đầu tiên ở Nhật Bản vào năm 1884, đến năm 1908 mới xác định tác nhân là do vi khuẩn. Hiện nay bệnh này phổ biến ở ruộng lúa khắp các Châu lục. Ở Việt Nam [Benh=BenhChayBiaLa]Bệnh cháy bìa lá[/Benh] xuất hiện trên phạm vi cả nước. Bệnh này ngày càng phổ biến ở vùng Đồng Tháp Mười, đặc biệt trong vụ lúa Hè thu.
-
-[li]2-Đặc điểm tác nhân gây bệnh[/li
-
-Vi khuẩn [Benh=BenhChayBiaLa]Bệnh cháy bìa lá[/Benh] có hình que ngắn, 2 đầu tròn, có một chiên mao ở một cực. Có vỏ bao bọc (capsule) và tập hợp thành khối khá bền vững, ngay cả khi ở trong nước. Capsule có vai trò bảo vệ vi khuẩn chống khô hạn và những yếu tố bất lợi khác.
-
-Nhiệt độ thích nghi của vi khuẩn  từ 26-30°C. Ở các nước nhiệt đới [Benh=BenhChayBiaLa]Bệnh cháy bìa lá[/Benh] phát triển quanh năm, vi khuẩn lưu tồn từ vụ này qua vụ khác.
+Nhiệt độ thích nghi của vi khuẩn  từ 26-30°C. Ở các nước nhiệt đới [Benh=BenhChayBiaLa]Bệnh cháy bìa lá [/Benh] phát triển quanh năm, vi khuẩn lưu tồn từ vụ này qua vụ khác.
 
 Trong nước kinh rạch, nước ruộng, vi khuẩn có thể sống được vài tuần đến hai tháng .Trong đất vi khuẩn có thể sống  từ 1-3 tháng, tùy ẩm độ đất và tính acid của đất.
 
 Vi khuẩn có thể lưu tồn trong hạt sau thu hoạch cho đến 3 tháng sau. Chúng có bên trong vỏ trấu và có cả trong phôi nhũ. Tuy nhiên, nếu hạt được phơi nắng khô thì vi khuẩn sống không quá 40 ngày. Gốc rạ và rễ lúa cũng là nguồn lây nhiểm quan trọng, khối vi khuẩn khô trong  rơm rạ có thể sống đến 8 tháng.
-[li][b]3-Xâm nhiễm và phát triển của vi khuẩn Xanthomonas Oryzae[/b][/li]
-
+[br]
+[b] 3-Xâm nhiễm và phát triển của vi khuẩn Xanthomonas Oryzae[/b]
+[br]
 Vi khuẩn xâm nhiễm vào mô cây lúa qua các cửa ngỏ tự nhiên như khí khổng, thủy khổng và các vết nứt do rễ mới phát triển ở chân mạ hay các vết thương cơ giới do sâu, rầy gây ra. Trên lá, vết thương càng mới thì càng dễ bị nhiễm bệnh. Bệnh có phát triển được hay không còn tùy thuộc vào mật số vi khuẩn, tối thiểu phải 10 3 tế bào/ml.
 
 Sau 1-2 ngày xâm nhiễm, vi khuẩn sẽ phát triển tích cực trên các giống nhiễm và lan vào các mạch dẫn nhựa, từ đó lan đi trong cây.
@@ -2221,38 +2377,45 @@ Bệnh thường xuất hiện vào giai đoạn làm đòng trở về sau, tuy
 
 Vi khuẩn lây lan chủ yếu do mưa, bão. Mưa bão còn tạo vết thương trên lá, giúp vi khuẩn dễ xâm nhiễm. Vi khuẩn cũng lây lan theo nước ruộng vì các giọt vi khuẩn ứa trên lá sẽ rơi vào nước, rồi tràn lan từ ruộng này sang ruộng khác.
 
-[li][b]-Triệu chứng gây bệnh của vi khuẩn Xanthomonas oryzae[/b][/li]
+[br]
+[b] 4.Triệu chứng gây bệnh của vi khuẩn Xanthomonas oryzae[/b]
+[br]
 
 Bệnh có thể bao gồm 3 dạng triệu chứng: cháy bìa lá, héo xanh và vàng lá.
 
-[b]+Cháy bìa lá[/b]
++Cháy bìa lá 
 
 Trên phiến lá, vết bệnh thường bắt đầu ở cách chóp lá một khoảng, tạo các sọc dài úng nước ở một hay hai bên bìa lá, vài ngày sau, vùng bệnh biến sang màu vàng, bìa gợn sóng. Vùng bệnh phát triển dần ra, vùng mô tiếp giáp giữa mô bệnh và mô khỏe  bị úng nước.Vùng mô bệnh sẽ trở thành màu xám trắng do sự phát triển của nhiều nấm hoại sinh. Vết bệnh có thể là những sọc ở vị trí bất kỳ trên phiến lá, nơi có vết thương.
 
 Trên các vết bệnh mới, vào sáng sớm có thể thấy các giọt vi khuẩn đục hay vàng, ứa ra trên mặt lá và bị gió làm rơi vào lá khác và vào nước ruộng. Hạt cũng có thể bị nhiễm bệnh, vỏ hạt có đốm bị biến màu, viền úng nước nếu hạt còn non; ở hạt già, đốm có màu xám trắng hay trắng vàng.
-[b]+Héo xanh[b]
++Héo xanh 
 
 Bệnh do vi khuẩn nhiễm vào vết cắt ở lá (cắt lá mạ trước khi cấy) hay nhiễm qua vết thương ở rễ bị đứt khi nhổ mạ.Bệnh thường xuất hiện ở 1-2 tuần sau khi cấy, lá bệnh có màu xanh xám, cuốn tròn dọc theo gân lá. Ở lúa cấy có cắt lá, bên dưới mặt cắt có đốm úng nước, sau đó đổi sang màu xanh xám, toàn lá kể cả bẹ sẽ bị cuốn, héo. Vi khuẩn lan theo bó mộc đến những vùng tăng trưởng làm hư các lá khác, nên toàn cây sẽ bị chết.
 
-[b][ul=&quot;/Ontology/Individual?individualName=BenhVangLa&quot;]+Vàng lá[/ul][/b]
+[Benh=BenhVangLa] Vàng lá [/Benh]
 
 Bệnh thường thấy trên các cây lúa đã lớn, trong khi các lá già bên dưới có màu xanh bình thường, các lá non bị vàng nhạt hay có các sọc to màu vàng hay xanh vàng trên phiến lá. Lý do mật số vi khuẩn tích tụ nhiều trong lóng bên dưới lá. Triệu chứng có thể xuất hiện sau khi vi khuẩn xâm nhiễm 20-30 ngày.
-
-5-Thiệt hại
-
-Khi ruộng lúa nhiễm nặng, năng suất có thể thất thu 20-30%, có khi lên đến 50%. Khi [Benh=BenhChayBiaLa]Bệnh cháy bìa lá[/Benh] xuất hiện, các bệnh vi khuẩn gây đen lép hạt cũng gia tăng tạo sự cộng hưởng gây giảm năng suất lúa trầm trọng.
-
-6- Các biện pháp phòng , trị
-
-[Benh=BenhChayBiaLa]Bệnh cháy bìa lá[/Benh] nói riêng và bệnh do vi khuẩn hại lúa nói chung rất khó trị.
+[br]
+[b] 5-Thiệt hại [/b]
+[br]
+Khi ruộng lúa nhiễm nặng, năng suất có thể thất thu 20-30%, có khi lên đến 50%. Khi [Benh=BenhChayBiaLa]  Bệnh cháy bìa lá [/Benh] xuất hiện, các bệnh vi khuẩn gây đen lép hạt cũng gia tăng tạo sự cộng hưởng gây giảm năng suất lúa trầm trọng.
+[br]
+[b] 6- Các biện pháp phòng , trịi[/b]
+[br]
+[Benh=BenhChayBiaLa] Bệnh cháy bìa lá [/Benh] nói riêng và bệnh do vi khuẩn hại lúa nói chung rất khó trị.
 
 -Phòng bệnh là biện pháp chủ yếu, trong đó lưu ý chọn giống kháng bệnh cao. Bón phân cân đối, không bón thừa đạm vào giai đoạn cuối của cây lúa.
 
--Trong mùa mưa bão nên phun các loại [Thuoc]thuốc[/Thuoc] trừ bệnh có gốc đồng như hổn hợp Bordeaux, Coper zinc, Kasuran ở nồng độ 0,2-0,3 % để phòng.
+-Trong mùa mưa bão nên phun các loại [Thuoc] thuốc [/Thuoc] trừ bệnh có gốc đồng như hổn hợp Bordeaux, Coper zinc, Kasuran ở nồng độ 0,2-0,3 % để phòng.
 
--Có thể phun  ngừa bằng các loại [Thuoc]thuốc[/Thuoc] có thành phần là chất kích kháng như Axit Oxalic, axit salicylic hoặc [Thuoc]thuốc[/Thuoc] tạo ra chất kích kháng như  Starner, Alliet...
+-Có thể phun  ngừa bằng các loại [Thuoc] thuốc [/Thuoc] có thành phần là chất kích kháng như Axit Oxalic, axit salicylic hoặc [Thuoc]thuốc[/Thuoc] tạo ra chất kích kháng như  Starner, Alliet...
 
--Khi phát hiện 4-5 % số lá bệnh thì dùng các loại [Thuoc]thuốc[/Thuoc] có chất kháng sinh diệt vi khuẩn Streptomycine sulfat, Chloramphenicol..như các loại [Thuoc]thuốc[/Thuoc] Bactocide 12WP, Sasa 20WP, Xanthomix 20WP. Phun vào lúc sáng sớm hay chiều mát.</Literal>
+-Khi phát hiện 4-5 % số lá bệnh thì dùng các loại [Thuoc]thuốc[/Thuoc] có chất kháng sinh diệt vi khuẩn Streptomycine sulfat, Chloramphenicol..như các loại [Thuoc]thuốc[/Thuoc] [Thuoc=Bactocide_12WP]Bactocide 12WP[/Thuoc], [Thuoc=Bactocide_12WP]Bactocide 12WP[/Thuoc]; [Thuoc=Sasa_20WP]Sasa 20WP[/Thuoc], Xanthomix 20WP. Phun vào lúc sáng sớm hay chiều mát.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#BenhChayBiaLa"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ChayBiaLa.jpg</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -2265,7 +2428,7 @@ Khi ruộng lúa nhiễm nặng, năng suất có thể thất thu 20-30%, có k
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Bệnh cháy lá lúa là bệnh gây hại quan trọng nhất trên cây lúa, còn được gọi là bệnh đạo ôn. Khi dịch cháy lá xảy ra trên diện rộng thì sự thiệt hại đến năng xuất và sản lượng sẽ thấy rất rõ nét và có ý nghĩa quan trọng đến kinh tế. Tác nhân gây bệnh có thể tấn công mọi giai đọan của cây lúa; bắt đầu từ giai đoạn mạ hoặc sau khi gieo sạ cho đến trước trổ thì gọi là bệnh cháy lá. Bệnh có thể gây hại trên cổ lá nên gọi là thối cổ lá, hoặc gây hại trên cổ bông nên được gọi là thối cổ bông làm lép hạt; đôi khi bệnh có thể gây lem vỏ hạt lúa. Bệnh nặng sẽ làm mất trắng năng suất nếu bà con nông dân không phát hiện sớm và phòng trị kịp thời.
 
 - Điều kiện khí hậu thời tiết: 
-Bệnh này thường phát triển mạnh trong điều kiện khí hậu mát mẽ, ấm độ cao, mưa nhỏ kéo dài, đêm sương mù nhiều. Đặc biệt trong vụ lúa Đông Xuân tại vùng Đồng Bằng Sông Cửu Long vào tháng giêng-tháng hai dương lịch, bệnh này sẽ gây hại trên diện rộng trùng vào lúc lúa đứng cái đến trổ. Bà con trồng lúa tại các vùng thường xuyên bị bệnh cháy lá hằng năm như Tiền Giang, An Giang, Đồng Tháp và Sóc Trăng cần lưu ý có biện pháp phòng ngừa.
+Bệnh này thường phát triển mạnh trong điều kiện khí hậu mát mẽ, ấm độ cao, mưa nhỏ kéo dài, đêm sương mù nhiều. Đặc biệt trong vụ lúa [VuMua=VuDongXuan]đông xuân[/VuMua] tại vùng Đồng Bằng Sông Cửu Long vào tháng giêng-tháng hai dương lịch, bệnh này sẽ gây hại trên diện rộng trùng vào lúc lúa đứng cái đến trổ. Bà con trồng lúa tại các vùng thường xuyên bị bệnh cháy lá hằng năm như Tiền Giang, An Giang, Đồng Tháp và Sóc Trăng cần lưu ý có biện pháp phòng ngừa.
 
 - Điều kiện khô hạn: 
 Điều kiện khô hạn làm cây lúa thiếu nước, quá trình trao đổi chất kém, khả năng 
@@ -2320,6 +2483,11 @@ Thông thường các giống lúa cao sản ngắn ngày khi được phóng th
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tác nhân gây hại là nấm Pyricularia oryzae Cav. hay P. grisea (Cook )Sacc. . Bào tử của nấm rất nhỏ, có thể phát tán và bay cao đến 24 m, thậm chí đến 10.000 m để lây lan cho các ruộng lân cận trong khu vực. Nấm phát triển tốt trong điều kiện mát từ 24-280C, ẫm độ cao &gt;80%, biên độ nhiệt giữa ngày và đêm cao sẽ dễ phát sinh thành dịch. Bào tử nấm nảy mầm khi gặp lớp nước tự do trên lá hay không khí bảo hòa nước; ở 240C bào tử cần 6 giờ, ở 280C mất 8 giờ; vượt quá 280C bào tử phát triển kém. Bào tử xâm nhập vào tế bào lá bằng cách mọc thành đĩa áp, chọc thủng vách tế bào lá lúa. Ngoài ra, bào tử còn tiết ra độc tố pyricularin gây độc cho cây (Ou, 1983). Cây lúa là ký chủ chính, bệnh có thể lưu tồn trên các cây ký chủ phụ mọc quanh ruộng như các loài cỏ lồng vực, đuôi phụng, cỏ chỉ, lúa ma, lúa rày-lúa chét…</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#trieuChung"/>
+        <NamedIndividual IRI="#BenhDaoOn"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Đốm bệnh điển hình trên lá có hình thoi, những đốm to thì hai đầu nhọn, tâm màu xám trắng. Trên giống nhiễm, các vết bệnh rất to có thể dài đến 1,5 cm thường liên kết với nhau tạo thành mãng cháy khô trên lá. Trên giống kháng, các vết bệnh thường rất nhỏ, bằng đầu kim màu nâu, rất dễ nhầm lần với vết bệnh đốm nâu mới phát triển.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
         <NamedIndividual IRI="#BenhDomNau"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">[Benh=BenhDomNau]bệnh đốm nâu[/Benh] do nấm gây nên. Có thể quan sát dễ dàng thấy những vết bệnh màu nâu tròn hay bầu dục trên lá, trên bẹ, cuống gié lúa và vỏ hạt lúa. Trong thời kỳ ngâm ủ, bệnh làm cho rễ mầm bị thối đen, lá mầm bị biến dạng, nếu bị nặng cây mầm bị chết hoặc phát triển không bình thường.
@@ -2342,9 +2510,29 @@ Khi nhiều vết [Benh=BenhDomNau]bệnh đốm nâu[/Benh] xuất hiện trên
 ● Trừ bệnh bằng cách phun Tilt Super 300 EC hay Bonanza 100SL trước khi lúa trỗ.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#BenhDomNau"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">domnau.jpg</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#BenhDomNau"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">bệnh đốm nâu</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nguonGoc"/>
+        <NamedIndividual IRI="#BenhDomNau"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Bệnh do nấm Bipolaris Oryzae, tồn tại chủ yếu từ hạt giống. Phát sinh gây hại</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nguyenNhan"/>
+        <NamedIndividual IRI="#BenhDomNau"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Nguyên nhân do thời tiết có nhiều nắng nóng nhiệt cao, độ ẩm không khí cao thấp thất thường, cây lúa thường xuyên bị đói hoặc không được đáp ứng kịp thời các yếu tố dinh dưỡng và nước vì đặc điểm chân ruộng.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#trieuChung"/>
+        <NamedIndividual IRI="#BenhDomNau"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Vết bệnh trên lá ban đầu là những chấm nhỏ màu nâu nhạt, sau đó phát triển thành các vết bệnh màu nâu đậm hơn. Ở giống lúa kháng bệnh, đốm bệnh hẹp, ngắn, màu nâu đậm có kích thước từ 2-10 x 1 mm; với những giống nhiễm bệnh, đốm bệnh dài và rộng hơn, có màu nâu nhạt hơn và ở giữa có màu sáng. Tổng thể đốm bệnh thường có màu nâu đỏ, ở mép lá màu nhạt hơn nên ruộng bị nhiễm nặng có màu đỏ rực. Vết bệnh gây hại trên hạt có màu nâu, sau biến màu đen. Nấm bệnh tồn tại trên hạt và là nguồn bệnh cho vụ sau.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -2413,9 +2601,35 @@ Những điều cần lưu ý để sử dụng [Thuoc]thuốc[/Thuoc] hóa họ
 Ước mong những hiểu biết trên đây sẽ giúp bà con nông dân phòng trừ tốt [Benh=BenhLemLepHat]bệnh lem lép hạt[/Benh] lúa để có những vụ mùa bội thu.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#bienPhapKhacPhuc"/>
+        <NamedIndividual IRI="#BenhLemLepHat"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Chọn giống sạch bệnh, tuyệt đối không dùng giống ở những ruộng có biểu hiện bệnh lem lép hạt.
+● Trước khi ngâm ủ, sạ lúa phải phơi khô, rê sạch để loại bỏ những hạt lép lửng, biến màu và sau đó xử lý hạt giống. Sử dụng thuốc Carban 50SC; hoạt chất Benomyl (Viben 50BTN), Carbendazim (Vicarben 50HP) nồng độ 3&amp;permil; cho hạt lúa giống đã phơi khô rê sạch vào ngâm trong 24 &amp;ndash; 36 giờ, sau đó vớt ra rửa sạch, sau đó ủ bình thường. 
+● Chọn mùa vụ thích hợp sao cho khi trỗ không trùng với thời kỳ mưa gió nhiều và khi lúa làm đòng, trỗ bông không nên để ruộng lúa bị khô hạn.
+● Bón phân đầy đủ, cân đối sao cho khi trỗ không trùng với thời kỳ mưa gió nhiều và khi lúa làm đòng, trỗ bông không nên để ruộng lúa bị khô hạn.giúp cây lúa khỏe, không đổ ngã và tăng khả năng chống chịu đối với sự tấn công của nấm bệnh. 
+● Biện pháp xử lý bằng thuốc hóa học vẫn được xem là biện pháp hiệu quả nhất trong việc phòng trị bệnh lem lép hạt. Trong việc dùng thuốc phải chú phun thuốc phòng bệnh là tốt nhất, để khi bệnh đã xâm nhập vào hạt lúa rồi thì việc phun thuốc trị bệnh sẽ cho hiệu quả thấp, phải phun đi phun lại nhiều lần rất tốn kém. Việc chọn lựa đúng loại thuốc và thời điểm phun thuốc cũng rất quan trọng. Hiện nay thuốc Tilt Super 300EC vẫn là loại thuốc có hiệu quả nhất cho việc phòng trị bệnh này cũng như bảo vệ cho hạt lúa chắc, sáng. Ngoài ra có rất nhiều loại thuốc hoá học phòng trị các loại nấm gây bệnh như: Vicarben 50HP (hoạt chất Carbendazim), Vivil 5SC (hoạt chất Hexaconazole), Vixazol 275SC (hoạt chất Carbendazim + Hexaconazole), Vitin-New 250EC (hoạt chất Propiconazole), Viroval 50BTN (hoạt chất Iprodione), Workup 9SL (hoạt chất Metconazole).</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#definition"/>
+        <NamedIndividual IRI="#BenhLemLepHat"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Lem lép hạt lúa là tên gọi để chỉ chung hiện tượng hạt lúa có vỏ trấu sậm màu biến đổi từ màu nâu đến đen; từ đen lốm đốm đến đen toàn bộ vỏ trấu bao gồm cả trên hạt lúa có gạo và hạt lúa lép không có gạo ở giai đoạn cây lúa còn trên đồng ruộng trước khi thu hoạch</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#BenhLemLepHat"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">lemlephat.jpg</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#BenhLemLepHat"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">bệnh lem lép hạt</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">bệnh lem lép hạt</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nguyenNhan"/>
+        <NamedIndividual IRI="#BenhLemLepHat"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">- Do nhện gié: nhện gié thường sống trong các bẹ lá lúa. Khi mật độ cao chúng có thể bò lên trên bông lúa chích hút các gié lúa đang phát triển. Các bông lúa bị hại thường mọc thẳng đứng và phần lớn số hạt đều bị lép. 
+- Do vi khuẩn Pseudomonas glumae (hay Bukhoderia glumae), vi khuẩn này làm thối đen hạt hoặc gây vết bệnh trên vỏ hạt. 
+- Do các loại nấm: Alternaria padwickii, Bipolaris oryzae, Fusarium sp, Curvularia lunata, Microdochium oryzae, Phoma sp, Pyricularia oryzae, Sarocladium oryzae, Septoria sp, Tilletia barclayana, Ustilagonoides virens...</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
@@ -2450,6 +2664,11 @@ c) Các biện pháp canh tác
  Hạn chế sử dụng những giống lúa đã xác định nhiễm bệnh nặng, sử dụng các giống kháng (chống chịu) rầy hoặc ít nhiễm rầy.
 Bón phân cân đối, đặc biệt không bón thừa phân đạm, áp dụng kỹ thuật “3 giảm 3 tăng” hoặc SRI ở nơi có điều kiện để tăng tính chống chịu của lúa đối với dịch hại.
 Bố trí cơ cấu mùa vụ lúa hợp lý theo hướng giảm tỷ lệ trà lúa Xuân sớm, Xuân trung. Bố trí có thời gian cách ly giữa vụ Xuân và [VuMua=VuHeThu]vụ hè thu[/VuMua] - Mùa tiếp theo trong điều kiện không làm ảnh hưởng đến thời vụ của vụ Đông để cắt cầu nối truyền bệnh và có đủ thời gian để vệ sinh đồng ruộng.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#BenhLunSocDen"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">lunsocden.jpg</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -2509,6 +2728,11 @@ Tiêu hủy nguồn bệnh trên đồng ruộng, cụ thể như sau:
 ● Gieo cấy tập trung, đồng loạt cùng một cánh đồng, từng vùng để né rầy theo khuyến cáo của cán bộ chuyên ngành của địa phương.● Sử dụng các giống lúa kháng bệnh, giống lúa cứng cây có khả năng chống chịu bệnh. Chăm sóc hợp lý, tạo điều kiện cho cây lúa khoẻ (nhất là giai đoạn lúa non) để tăng cường sức đề kháng, chống chịu bệnh.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#BenhLunXoanLa"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">LunXoanLa.jpg</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#BenhLunXoanLa"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">[Benh=BenhLunXoanLa]bệnh lùn xoắn lá[/Benh]</Literal>
@@ -2548,6 +2772,11 @@ Trường hợp lá lúa dày quá, không thể bón vôi thì nên rút nướ
 Vàng lá do nấm
 
 Tác nhân chính là nấm Gonatophragmium sp, bắt đầu giữa lá lúa xuất hiện một chấm vàng nhỏ. Sau đó chấm vàng to dần lên, lan ngược đỉnh lá lúa, sọc vàng nhỏ dần khi hướng lên chóp lá. Bệnh nặng nửa trên có thể bị vàng hết. Để phòng trừ đối tượng này, chúng ta có thể sử dụng các [Thuoc]thuốc[/Thuoc] như Ridomil Gold 68WG, Nevo 330EC, Tilt Super 300EC, Amistar Top 325SC, Score 250SC.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#BenhVangLa"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">VangLa.jpg</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -2591,6 +2820,11 @@ b) Trừ bệnh:Biện pháp trừ bệnh hữu hiệu nhất đối với bện
 + Khi cây lúa còn ở giai đoạn mạ đến đẻ nhánh, nếu phát hiện cây bị bệnh thì phải nhổ bỏ ngay hay cày vùi huỷ bỏ toàn bộ ruộng lúa để tránh lây lan vì cây lúa không thể phục hồi cho dù tiếp tục được đầu tư thêm phân bón, thuốc trừ sâu bệnh, hay bơm nước vào. Trước khi cày vùi phải phun thuốc trừ rầy nâu để tránh phát tán truyền bệnh sang ruộng lúa khác.
 
 - Ở những vùng vừa có dịch bệnh virus xảy ra: cày lật gốc rạ ngay sau khi thu hoạch.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#BenhVangLun"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">VangLun.jpg</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -2934,6 +3168,60 @@ Cỏ dại làm giảm năng suất cây trồng, giảm chất lượng và gi�
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#dacTinhCuaThuoc"/>
+        <NamedIndividual IRI="#DEKAMON"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">-Gói 10ml, thùng chứa 1.000 gói (10 lít)
+-Chai 100ml; thùng chứa 96 chai
+- Chất lỏng, màu nâu nước trà, tan hoàn toàn trong nước.
+Nhóm độc:  Ít độc với con người, gia súc, môi trường; tương đối an toàn với cá, ong, côn trùng có ích, ch</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dacTinhNongHoc"/>
+        <NamedIndividual IRI="#DEKAMON"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">- Dakamon 22,43L kích thích cây trồng nảy mầm nhanh, ra rễ nhiều, đặc biệt giúp rễ lúa phát triển mạnh trên đất nhiễm phèn.
+- Dakamon 22,43L kích thích cây trồng phát triển thân, chồi, lá...
+- Dakamon 22,43L kích cây trồng ra hoa, ra hoa  đồng loạt, tăng đậu trái, hạn chế rụng trái non,
+- Dakamon 22,43L làm chắc hạt chắc lúa, bắp, đậu; cây ăn quả tích lũy nhiều đường; rau quả tích lũy nhiều vitamin C.
+- Dakamon 22,43L giúp cây sinh trưởng tốt, tăng khả năng chống chịu với điều kiện bất lợi
+- Dakamon 22,43L giúp làm tăng năng suất và chất lượng nông sản.
+- Sử dụng xử lý hạt giống, cành giâm, cành chiết giúp ra mầm, ra rễ nhanh, mạnh.
+- Sử dụng phun trên lúa; rau ăn lá; rau ăn quả, củ; cây ăn quả;  cây công nghiệp...</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#DEKAMON"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">dekamon.gif</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#luongThuoc"/>
+        <NamedIndividual IRI="#DEKAMON"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Lúa Pha 5ml/16 lít nước  Giai đoạn đẻ nhánh (15-20 ngày sau sạ), làm đòng (38-45 ngày sau sạ) và giai đoạn trước trỗ hoặc sau khi trỗ đều. Phun ướt đều tán cây.
+
+Cây có múi: cam, quýt, bưởi... Pha 2,5ml /16 lít nước Giai đoạn phát triển chồi, lá; trước khi ra hoa, và sau khi đậu trái. Phun vào sáng sớm hoặc chiều mát. Có thể pha chung với các loại thuốc trừ sâu, trừ bệnh trừ phân thuốc có tính kiềm cao.
+
+-Phối hợp với phân bón lá cho hiệu quả cao hơn (King, Hoàng Hổ-si, Tekka...); Dekamon 2,5-5ml (tùy loại cây trồng, lúa: 5ml, cây trồng khác 2,5ml) + King 20ml/ 16 lít nước; hoặc Hoàng Hổ-Si 50ml/ 16 lít nước; hoặc Tekka 10g/ 16 lít nước; phun ướt đều tán cây.
+
+-Dekamon 22.43L là kích thích sinh trưởng, khi sử dụng cần bón đầy đủ phân bón rễ, bón lá như canh tác bình thường.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#DEKAMON"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">THUỐC KÍCH THÍCH SINH TRƯỞNG DEKAMON 22,43L</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nhaSanXuat"/>
+        <NamedIndividual IRI="#DEKAMON"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">P.T. Harina Chem Industry (Indonesia)</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#thanhPhan"/>
+        <NamedIndividual IRI="#DEKAMON"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">-Sodium-Para-Nitrophenolate:......        10,35g/lít.
+- Sodium-Ortho-Nitrophenolate:.....                6,90g/lít.
+- Sodium-5-Nitrophenolate:......        3,45g/lít.
+- Sodium-2,4-Nitrophenolate:.....        1,73g/lít.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dacTinhCuaThuoc"/>
         <NamedIndividual IRI="#DIBAZOLE_5SC"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">là [Thuoc]thuốc[/Thuoc] trừ bệnh có tác dụng nội hấp , phổ tác dụng rộng , có tác dụng phòng trừ bệnh hại</Literal>
     </DataPropertyAssertion>
@@ -3089,6 +3377,47 @@ Hãng SX: Nông Sinh</Literal>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thuốc Furadan_3_H</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#dacTinhNongHoc"/>
+        <NamedIndividual IRI="#GOLIATH"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">GOLIATH là thuốc kích thích tăng trưởng cây trồng có tác dụng kích thích sự nẩy mầm, ra rễ; kích thích ra hoa, đậu quả; tăng năng suất cây trồng.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#GOLIATH"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Goliath1SL.jpg</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#luongThuoc"/>
+        <NamedIndividual IRI="#GOLIATH"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Goliath 1SL:  80 - 200ml/ha
+Goliath 4SL:     20 - 25ml/ha
+Goliat 10SP:    10 - 20g/ha
+Goliath 16TB:   6 - 12g/ha
+Goliath 20SP:   5 - 10g/ha
+Goliath 20 WP: 5 - 10g/ha
+Goliath 20TB:   5 - 10g/ha</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#GOLIATH"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">thuốc kích thích GOLIATH</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nhaSanXuat"/>
+        <NamedIndividual IRI="#GOLIATH"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Công ty cổ phần Tập đoàn Điện Bàn</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#thanhPhan"/>
+        <NamedIndividual IRI="#GOLIATH"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thành phần: Gibberelic acid</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tuNgayCachLy"/>
+        <NamedIndividual IRI="#GOLIATH"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thời gian cách li: Ngưng xử lý thuốc trước khi thu hoạch 1 ngày</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#GanLaXung"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Gân lá xưng</Literal>
@@ -3097,7 +3426,8 @@ Hãng SX: Nông Sinh</Literal>
         <DataProperty IRI="#article"/>
         <NamedIndividual IRI="#GiaiDoanChin"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ba giai đoạn cuối cùng trong vòng đời của cây lúa:
-[b] Giai đoạn hạt chín sữa[b]
+[b] Giai đoạn hạt chín sữa [/b]
+[b]hình ảnh thời kì chính sữa [/b]
  Giai đoạn hạt chín hoàn toàn nằm trong thời kỳ chín của cây lúa. Cũng như thời kỳ sinh trưởng sinh thực của cây lúa, thời gian của thời kỳ chín biến đổi không nhiều trước những tác động của các yếu tố ngoại cảnh. Thời gian này kéo dài khoảng 30 ngày.
 Giai đoạn chín sữa bắt đầu sau khi phơi màu từ 5-7 ngày, chất dự trữ trong hạt lúa ở dạng lỏng và trắng như sữa; hình dạng hạt đã hoàn thành, lưng hạt có màu xanh; trọng lượng hạt trong thời kỳ này tăng rất nhanh, có thể đạt 75-80% trọng lượng cuối cùng của hạt thóc.
 Giai đoạn chín sáp là giai đoạn mà chất dịch trong hạt thóc dần dần đặc lại, khiến cho hạt lúa cứng; màu xanh ở lưng hạt thóc dần chuyển màu vàng và trong giai đoạn này trọng lượng hạt thóc tiếp tục tăng lên.
@@ -3107,6 +3437,11 @@ Giai đoạn chín hoàn toàn khi ta nhận thấy vỏ trấu từ màu vàng 
         <DataProperty IRI="#denNgay"/>
         <NamedIndividual IRI="#GiaiDoanChin"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">105</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#GiaiDoanChin"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">giaidoanchin.jpg</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -3146,6 +3481,11 @@ Theo Nguyễn Ngọc Đệ (2008), thông thường số chồi hình thành bô
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">20</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#GiaiDoanDeNhanh"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">giaidoandenhanh.jpg</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#GiaiDoanDeNhanh"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Giai đoạn đẻ nhánh</Literal>
@@ -3171,6 +3511,11 @@ Gieo cấy, trồng lúa
         <DataProperty IRI="#denNgay"/>
         <NamedIndividual IRI="#GiaiDoanGieo"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#GiaiDoanGieo"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">giaidoangieo.jpg</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -3208,6 +3553,11 @@ Hiện nay do thời tiết ngày nắng, đêm lạnh nhiều nên các loại 
         <DataProperty IRI="#denNgay"/>
         <NamedIndividual IRI="#GiaiDoanLamDong"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">45</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#GiaiDoanLamDong"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">giaidoanlamdong.jpg</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -3293,6 +3643,11 @@ Thời kỳ mạ có ý nghĩa quan trọng, chăm sóc cho mạ tốt, mạ kho
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">10</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#GiaiDoanMa"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">giaidoanma.jpg</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#GiaiDoanMa"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Giai đoạn mạ</Literal>
@@ -3322,6 +3677,11 @@ Phải mất khoảng một tuần các hoa trên cùng một bông lúa mới n
         <DataProperty IRI="#denNgay"/>
         <NamedIndividual IRI="#GiaiDoanTro"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">65</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#GiaiDoanTro"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">giaidoantrobong.jpg</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -3402,6 +3762,44 @@ dàng cho thu hoạch.</Literal>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Giống DH815-6</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#article"/>
+        <NamedIndividual IRI="#GiongDV108"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ĐV 108 là giống lúa thuần, có thời gian sinh trưởng ngắn, thích hợp với chân đất 2- 3 vụ lúa/năm tại Bình Định.
+
+*  Thời gian sinh trưởng:       [VuMua=VuDongXuan]đông xuân[/VuMua] 100-105 ngày,
+
+                                               Vụ Hè : 90-95 ngày.
+
+I/ Đặc điểm giống:
+
+– Hạt giống thon dài màu vàng sáng, Chiều Cây cao trung bình 90-95 cm,  cứng cây, khả năng đẻ nhánh trung bình, gạo chất lượng tốt, mềm cơm, khả năng thích ứng rộng, chiêu thâm canh.
+
+– Năng suất trung bình 60-65 tạ/ha, thâm canh có thể đạt 70-80 tạ/ha
+
+II/ Kỹ thuật canh tác:
+
+Thích hợp với chân đất thịt nhẹ, cát pha và chân vàn
+Làm đất: cày bừa kỹ, bằng phảng, sạch cỏ dại, kéo đường rãnh để thoát nước tốt.
+Gieo sạ: Gieo sạ từ 4-6 kg/sào (500m2) tuỳ theo phương thức sạ lan hay sạ hàng
+Bón phân: cần bón phân cân đối, bón tập trung , nên bón phân sớm để đạt hiệu quả
+Lượng phân bón trung bình 1 sào ( 500m2)
+
++ Phần chuồng  400-500 kg ( hoặc 20-25 kg lân vi sinh)
+
++ Vôi : 20-25 kg
+
++ DAP : 6 kg
+
++ URE: 8 kg
+
++ NPK: 10 kg
+
++ KALI: 8-9 kg
+
+Chế độ nước: cần điều tiết nước trong ruộng hợp lý, đảm bảo nước đầy đủ nhất là giai đoạn lúa trổ.
+Phòng trừ sâu bệnh: không lạm dụng thuốc bảo vệ thực vật, chỉ phun thuốc khi cần thiết, phun thuốc theo nguyên tắc 4 đúng ( đúng thuốc, đúng liều lượng, đúng lúc và đúng cách)</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#chatLuongGao"/>
         <NamedIndividual IRI="#GiongDV108"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Gạo trong, chất lượng trung bình.
@@ -3424,6 +3822,11 @@ Tỷ lệ chiều dài/ chiều rộng hạt là: 2,85.
 Trọng lượng 1000 hạt: 22 – 23 gram.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#GiongDV108"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ĐV108.jpg</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#GiongDV108"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Giống ĐV 108</Literal>
@@ -3442,6 +3845,40 @@ Trọng lượng 1000 hạt: 22 – 23 gram.</Literal>
 Là giống nhiễm nhẹ với bệnh [Benh=BenhDaoOn]đạo ôn[/Benh] và bệnh</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#article"/>
+        <NamedIndividual IRI="#GiongGL105"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">1. Nguồn gốc
+Giống lúa Gia Lộc 105 (GL105) được lai tạo từ tổ hợp P6/Xi23//IRBB7/Q5 và chọn lọc theo phương pháp phả hệ. Giống đã được công nhận giống cây trồng mới theo Quyết định số 398/QĐ-TT-CLT ngày 26/9/2019 của Cục Trồng trọt, Bộ Nông nghiệp và PTNT.
+Cơ quan tác giả: Viện Cây lương thực và Cây thực phẩm
+Tác giả: Nguyễn Trọng Khanh, Nguyễn Thị Miền, Vũ Thị Nhường, Đoàn Văn Thành, Phạm Văn Tính, Bùi Kim Vật, Phạm Văn Nghĩa.
+2. Đặc điểm
+- Thời gian sinh trưởng: Vụ mùa: 105 - 110 ngày; Vụ xuân: 130 - 140 ngày.
+- Chiều cao cây: 100 cm, sinh trưởng nhanh, mạnh, đẻ nhánh khỏe và đều, bộ lá màu xanh đậm, bông to, hạt thon dài, xếp hạt trung bình và có màu vàng sáng, chắc rất cao, hạt mẩy. Khối lượng 1000 hạt từ 22 - 23 gam.
+- Giống GL105 có khả năng chống đổ tốt, ít nhiễm đạo ôn, rầy nâu và bạc lá.
+- Năng suất thực thu trung bình:
++ Vụ xuân: 70 - 75 tạ/ha, thâm canh tốt có thể đạt 80 – 85 tạ /ha.
+ + Vụ mùa: 60 - 65 tạ/ha, thâm canh tốt có thể đạt 75 tạ/ha.
+- Hạt gạo thon dài, trong, phẩm chất gạo ngon, cơm mềm, đậm, giòn.
+3. Kỹ thuật canh tác
+- Thời vụ và phương pháp gieo cấy (đối với đồng bằng bắc bộ):
++ Vụ xuân: mạ dược gieo mạ từ 20/12 đến 10/01, cấy khi mạ có 5 - 6 lá. Nếu gieo mạ sân thì tiến hành gieo trước tiết lập xuân khoảng 3 - 5 ngày, cấy trong tháng 2. Nếu gieo vãi, nên gieo xung quanh tiết lập xuân vì giống có khả năng chịu rét rất tốt trong giai đoạn mạ.
++ Vụ mùa: Tuỳ theo từng vùng làm cây vụ đông khác nhau mà bố trí thời vụ cho phù hợp. Thời vụ cho phép gieo từ 10 - 30/6, cấy ở tuổi mạ 18 - 22 ngày.
+- Lượng giống gieo, mật độ : + Cấy: 2,0 - 2,5 kg hạt giống/01 sào bắc bộ; cấy 3 - 4 dảnh / 01 khóm và 50 - 55 khóm /m2.
+                                              + Gieo vãi: 1,8 - 2,2 kg hạt giống /01 sào bắc bộ.
+- Phương pháp ngâm ủ: giống rất dễ nảy mầm và đạt tỷ lệ nảy mầm cao trên 90 %. Chú ý vì vỏ trấu mỏng nên thời gian ngâm giống khi xuống nước nên ngâm từ 12 - 36 giờ, không nên ngâm quá lâu thóc dễ bị chua ảnh hưởng đến sức nẩy mầm của hạt.Những ngày tiếp theo chỉ đêm nhúng nước rồi ủ tiếp. (Chú ý: không dùng giống để cách vụ  để ngâm ủ vì tỷ lệ nảy mầm của giống giảm nhanh). 
+-  Lượng phân và cách bón.
+* Lượng phân vụ xuân: Phân hữu cơ vi sinh 400 - 600 kg; 8,0 - 10,0 kg urê + 20 - 22 kg lân  + 6 - 8 kg kali/sào Bắc bộ.
+* Cách bón: Yêu cầu bón sớm, bón tập trung, có thể dùng NPK tổng hợp hoặc phân đơn          
++ Bón lót toàn bộ phân hữu cơ vi sinh + 100% lân + 30% ure + 30% kali
+          + Bón thúc lần 1: 50% ure + 30% kali
+          + Bón đóan đòng: 20% ure + 40% kali
+          + Chú ý: bón bón đón đòng sớm và kịp thời, tuyệt đối không bón nuôi hạt vì dễ gây hiện tượng lúa bị nứt hạt do tích lũy dinh dưỡng quá mức đặc biệt là khi thời tiết sau trỗ mưa nhiều. Vụ mùa lượng phân bón bằng 80 - 90% so với vụ xuân.
+- Điều tiết nước trong ruộng lúa: chú ý rút nước giai đoạn sau đẻ nhánh tối đa và sau khi lúa trỗ hoàn toàn 5 - 7 ngày để lúa tăng độ cứng cây, giảm hiện tượng nứt hạt do dư thùa dinh dưỡng hoặc thừa nước.
+- Phòng trừ sâu bệnh: Theo dõi và phong trừ sâu bệnh theo dự tính dự báo của trạm BVTV địa phương  như các giống lúa khác, kết hợp phòng trừ sâu bệnh theo phương pháp tổng hợp ICM.
+4. Đối tượng và phạm vi áp dụng:
+Giống lúa Gia Lộc 105 thích hợp gieo trồng trong cơ cấu luân canh 2 lúa + 1 màu hoặc 1 lúa + 2 - 3 màu. Giống thích hợp gieo trồng cả  2 vụ/năm trên các chân đất vàn, vàn cao, vàn thấp</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#chatLuongGao"/>
         <NamedIndividual IRI="#GiongGL105"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Hạt gạo thon dài, trong, phẩm chất gạo ngon, cơm mềm, đậm, giòn.</Literal>
@@ -3455,6 +3892,11 @@ Là giống nhiễm nhẹ với bệnh [Benh=BenhDaoOn]đạo ôn[/Benh] và b�
 - Năng suất thực thu trung bình:
 + Vụ xuân: 70 - 75 tạ/ha, thâm canh tốt có thể đạt 80 – 85 tạ /ha.
  + Vụ mùa: 60 - 65 tạ/ha, thâm canh tốt có thể đạt 75 tạ/ha.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#GiongGL105"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">GL105.jpg</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -3584,6 +4026,11 @@ TBR45 là giống cảm ôn, ngắn ngày, canh tác được các vụ trong n�
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">TBR225 là giống cảm ôn, ngắn ngày, gieo cấy được cả 2 vụ trong năm; thích ứng rộng; chịu thâm canh, có khả năng làm lúa tái sinh tốt, đẻ nhánh khỏe; phù hợp gieo cấy theo công nghệ hàng rộng, hàng hẹp; thời gian sinh trưởng: Vụ Xuân 120 - 132 ngày, vụ Mùa 105 - 110 ngày; chiều cao cây 110 - 115 cm, cứng cây, trỗ bông tập trung; bông to, dài, nhiều hạt, hạt thon dài, khối lượng 1000 hạt 24 - 25 gam; nhiễm nhẹ bệnh [Benh=BenhDaoOn]đạo ôn[/Benh], bạc lá; năng suất trung bình 70 - 75 tạ/ha, thâm canh tốt đạt 85 - 90 tạ/ha; tỷ lệ gạo xay xát cao (68 - 72%); chất lượng gạo ngon, gạo trắng, trong, cơm mềm, vị đậm, có mùi thơm đặc trưng.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#GiongTBR255"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">TBR255.jpg</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#GiongTBR255"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Giống TBR255</Literal>
@@ -3594,6 +4041,25 @@ TBR45 là giống cảm ôn, ngắn ngày, canh tác được các vụ trong n�
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">TBR225 là giống lúa thuần do Công ty CP Tổng Công ty Giống cây trồng Thái Bình lai tạo, được công nhận giống Quốc gia năm 2015.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#article"/>
+        <NamedIndividual IRI="#GiongTBR36"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">1. Nguồn gốc: TBR36 là giống lúa thuần do Công ty CP Tổng Công ty Giống cây trồng Thái Bình chọn tạo, được công nhận giống Quốc gia năm 2011.
+2. Đặc tính giống: TBR36 là giống cảm ôn, ngắn ngày, gieo cấy được cả 2 vụ trong năm; thích ứng rộng; thời gian sinh trưởng: vụ Xuân 120 - 130 ngày, vụ Mùa 100 - 105 ngày; chiều cao cây 115 - 120 cm, cứng cây, chống đổ tốt, đẻ nhánh khá, dạng hình đẹp, lá đòng thẳng, trỗ bông tập trung; hạt thon dài, xếp sít, khối lượng 1000 hạt 22 - 23 gam; chịu hạn và chua phèn tốt; chống chịu tốt với các loại bệnh đạo ôn, khô vằn, bạc lá; năng suất trung bình 70 - 75 tạ/ha, thâm canh tốt đạt 80 - 85 tạ/ha. Chất lượng gạo trung bình.
+3. Hướng dẫn sử dụng:
+3.1. Chân đất thích hợp: Vàn, vàn cao.
+3.2. Lượng giống sử dụng: Lúa cấy 40 - 45 kg/ha, lúa gieo thẳng 50 - 55 kg/ha.
+3.3. Ngâm ủ: (Theo hướng dẫn gửi kèm trong bao 40 kg) 
+3.4. Thời vụ và mật độ gieo cấy:
+- Thời vụ gieo mạ: Vụ Xuân từ 05 - 15/02, vụ Mùa từ 05/6 - 05/7. (Bắc Trung bộ: [VuMua=VuDongXuan]đông xuân[/VuMua] từ 15/01 - 05/02, [VuMua=VuHeThu]vụ hè thu[/VuMua] từ 15/5 - 15/6).
+- Tuổi mạ khi cấy: [VuMua=VuDongXuan]đông xuân[/VuMua] : mạ nền 2,5 - 3,0 lá, mạ dược 4 - 4,5 lá;
+vụ [VuMua=VuHeThu]vụ hè thu[/VuMua] : mạ nền 8 - 10 ngày, mạ dược 15 - 18 ngày.
+- Mật độ cấy: 40 - 45 khóm/m2, cấy 2 - 3 dảnh/khóm.
+* Thời vụ gieo thẳng ở vụ Xuân từ 15 - 25/02.
+(Tham khảo lịch thời vụ của ngành nông nghiệp địa phương). 
+3.5. Phân bón: Lượng phân bón cho 1 ha: 8 - 10 tấn phân chuồng (hoặc 400 - 500 kg phân hữu cơ vi sinh) + 90 - 100 kg N + 60 - 90 kg P2O5 + 70 - 80 kg K2O (tương đương 195 - 220 kg đạm Urê + 335 - 500 kg lân supe + 120 - 135 kg Kali Clorua). Tùy theo chân đất và thời vụ để xác định loại phân và lượng phân bón cho phù hợp. Bón cân đối, bón lót sâu, bón thúc sớm, bón tập trung. Khuyến cáo sử dụng phân bón NPK tổng hợp chuyên dùng cho lúa theo hướng dẫn của nhà sản xuất.
+3.6. Chăm sóc và phòng trừ sâu bệnh: theo hướng dẫn của ngành nông nghiệp địa phương.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#chatLuongGao"/>
         <NamedIndividual IRI="#GiongTBR36"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Tỷ lệ gạo lật 79,8 - 81,0%, tỷ lệ gạo xát 67,8 - 71,6%, tỷ lệ gạo nguyên/gạo xát 70,5 - 78,3%, chiều dài hạt gạo 6,6 - 6,7 mm, tỷ lệ D/R 3,2 - 3,3, hàm lượng Amylose rất cao 29,0 - 30,1%; chất lượng gạo trung bình, thích hợp cho chế biến thức ăn.</Literal>
@@ -3602,6 +4068,11 @@ TBR45 là giống cảm ôn, ngắn ngày, canh tác được các vụ trong n�
         <DataProperty IRI="#dacTinhNongHoc"/>
         <NamedIndividual IRI="#GiongTBR36"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Thời gian sinh trưởng ở Miền Bắc: vụ Xuân 120 - 130 ngày, vụ Mùa 100 - 105 ngày; chiều cao cây 115 - 120 cm, cứng cây, đẻ nhánh khá, dạng hình đẹp, lá đòng thẳng; trỗ bông tập trung; bông dài 25 - 27 cm, rất nhiều gié, hạt thon dài, khối lượng 1000 hạt 22 - 23 gam; năng suất trung bình 70 - 75 tạ/ha, thâm canh tốt đạt 80 - 85 tạ/ha.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#GiongTBR36"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">TBR36.JPG</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -3656,17 +4127,44 @@ Hai sản phẩm phân bón Calcium Nitrate, Poly-feed 19-19-19 được SX i Cy
     <DataPropertyAssertion>
         <DataProperty IRI="#bienPhapKhacPhuc"/>
         <NamedIndividual IRI="#HienTuongNgoDocHuuCo"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tranh thủ cắt gốc rạ, thu gom rơm, rạ ra khỏi ruộng sau thu hoạch.
+
+Tranh thủ cày, hoặc xới đất sớm ngay sau thu hoạch để vùi gốc rạ còn lại vào đất.
+
+Bón phân lân nung chảy Ninh Bình với lượng từ 300 - 400kg/ha vào thời điểm cày, xới đất hoặc trước gieo sạ để thúc đẩy nhanh quá trình phân hủy chất hữu cơ và giảm lượng a-xít hữu cơ có trong đất.
+
+Phun chế phẩm ĐHC (nấm Tricoderma), hoặc rải chế phẩm Sumitri (gồm 3 loại nấm Tricoderma) sẽ rất tốt vì nhóm nấm này trực tiếp phân hủy nhanh các chất hữu cơ có trong đất.
+
+Sau sạ 7 - 10 ngày kết hợp phun phân bón lá HYDROPHOS.
+
+Trường hợp có dấu hiệu ngộ độc hữu cơ sẽ tiếp tục thực hiện các giải pháp sau: Tháo nước cũ ra và bơm nước mới vào ruộng, bón bổ sung lân nung chảy Ninh Bình với lượng 50kg/1.000m2 ngộ độc, phun bổ sung phân bón lá HYDROPHOS. Không bón urê vào thời điểm này.
+
+Kết hợp tạo mặt ruộng khô xen kẽ cũng là giải pháp để giảm ngộ độc hữu cơ.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#bienPhapKhacPhuc"/>
+        <NamedIndividual IRI="#HienTuongNgoDocHuuCo"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">sử dụng viên giải độc GENO-Sica để bón cho cây giúp giải độc các hiện tượng ngộ độc hữu cơ, ngộ độc phèn.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#dacDiem"/>
+        <DataProperty IRI="#image"/>
         <NamedIndividual IRI="#HienTuongNgoDocHuuCo"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">cây không phát triển chiều cao, đẻ nhánh kém, lá lúa vàng nhợt nhạc , trên lá lúa có nhiều vết đốm nâu nhỏ, khi nặng lá</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ngodochuuco.jpg</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#khaiNiem"/>
+        <NamedIndividual IRI="#HienTuongNgoDocHuuCo"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ngộ độc hữu cơ là hiện tượng cây lúa bị “ngộ độc” do các a-xít hữu cơ được hình thành trong quá trình phân hủy chất hữu cơ trong đất.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#HienTuongNgoDocHuuCo"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Hiện tượng ngộ độc hữu cơ</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#trieuChung"/>
+        <NamedIndividual IRI="#HienTuongNgoDocHuuCo"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">cây không phát triển chiều cao, đẻ nhánh kém, lá lúa vàng nhợt nhạc , trên lá lúa có nhiều vết đốm nâu nhỏ, khi nặng lá</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#bienPhapKhacPhuc"/>
@@ -3677,6 +4175,11 @@ Hai sản phẩm phân bón Calcium Nitrate, Poly-feed 19-19-19 được SX i Cy
         <DataProperty IRI="#dacDiem"/>
         <NamedIndividual IRI="#HienTuongThieuDam"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">khi bị thiếu đạm cây lúa bị còi cọc , thân cây lùn , lá vàng, các lá già và có khi tất cả các lá có màu xanh sáng va úa vàng .</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#HienTuongThieuDam"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">thieudam.jpg</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -3793,6 +4296,44 @@ Dạng [Thuoc]thuốc[/Thuoc] :	50SP: Bột tan trong nước</Literal>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Lá xanh đậm</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#dacTinhNongHoc"/>
+        <NamedIndividual IRI="#Luc_Diep_To"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Lục diệp tố 1 lỏng là thuốc kích thích tăng trưởng cây trồng có tác dụng kích thích sự nẩy mầm, ra rễ; kích thích ra hoa, đậu quả; tăng năng suất cây trồng. Dùng cho các loại cây trồng có khả năng kích thích sinh trưởng nhanh, làm tăng khả năng đậu, hoa, đậu quả, chống nghẹt rễ và bệnh vàng lá lúa, tăng trưởng năng suất cây trồng như: LÚA, ĐẬU ĐỖ, CHÈ</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#Luc_Diep_To"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">lucdiepto.jpg</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#luongNuoc"/>
+        <NamedIndividual IRI="#Luc_Diep_To"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">* Mỗi gói 10ml pha 20 - 25 lít nước phun cho 500m2.(1 sào Trung Bộ) Chai 100ml pha 200 - 250 lít nước phun cho 5000m2 (5 công Nam Bộ).</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#luongThuoc"/>
+        <NamedIndividual IRI="#Luc_Diep_To"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cây trồng             Liều lượng          Thời gian và biến pháp xử lý
+LÚA	0.1 - 0.2	Ngâm hạt giống hoặc phun lên lá mạ Sau khi phun thuốc trừ sâu, trừ cỏ dại Trước và sau khi làm đòng
+RAU ĂN LÁ	0.2 - 0.4	Phun sau khi gieo trồng và trước khi thu hoạch
+BẦU BÍ DƯA CÁC LOẠi  0.1 - 0.2	Phun sau khi đậu quả
+CÂY HỌ ĐẬU	0.1 - 0.2	Phun khi cây đang trổ hoa
+CHÈ	0.1 - 0.2	Phun sau mỗi đợt hái
+CÀ PHÊ TIÊU	0.1 - 0.2	Phun cho cây ở vườn ươm Phun vào lúc mới ra hoa
+CÂY ĂN QUẢ	0.2 - 0.4	Ngâm hạt giống Phun trước khi ra hoa và sau khi đậu trái
+CÂY CẢNH	0.1 - 0.2	Phun khi ra nụ</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Luc_Diep_To"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thuốc kích thích lục diệp tố</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#thanhPhan"/>
+        <NamedIndividual IRI="#Luc_Diep_To"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thành phần: Gibberelic acid</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#MILAX_100GB"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">thuốc MILAX_100GB</Literal>
@@ -3854,7 +4395,7 @@ Ngộ độc nhôm trên lúa thường xuất hiện các biểu hiện ở nh�
 Cây lúa còi cọc.
 Rễ phát triển chậm và biến dạng dẫn đến khả năng hút nước và dinh dưỡng kém.
 Nhôm là ion gây độc bậc nhất trong đất phèn.
-3. ĐẶC TRỊ BỆNH : CHẾ PHẨM SINH HỌC “PHÂN HỦY GỐC RẠ”
+3. ĐẶC TRỊ BỆNH : CHẾ PHẨM SINH HỌC PHÂN HỦY GỐC RẠ” .
 phan-huy-goc-rom-ra– Sau khi thu họach lúa nên cày ải, để rơm rạ được phân hủy ít nhất 1 tháng, và chỉ sạ lúa sau khi cho đất ngập từ 2 đến 3 tuần.
 – Trong trường hợp không cày ải được vì phải gieo sạ lại ngay sau khi thu hoạch, chúng ta cần sử dụng chế phẩm “PHÂN HỦY GỐC RẠ” để phân hủy gốc rạ ngay tại ruộng. Chỉ sau 5 – 7 ngày sử dụng chế phẩm, gốc rạ trở thành phân hữu cơ giúp bà con giảm được 30 – 50% lượng phân bón hóa học.</Literal>
     </DataPropertyAssertion>
@@ -3864,9 +4405,20 @@ phan-huy-goc-rom-ra– Sau khi thu họach lúa nên cày ải, để rơm rạ 
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">sử dụng viên giải độc GENO-Sica để bón cho cây giúp giải độc các hiện tượng ngộ độc hữu cơ, ngộ độc phèn. Ngoài ra</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#bienPhapKhacPhuc"/>
+        <NamedIndividual IRI="#NgoDocPhen"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">– Sau khi thu họach lúa nên cày ải, để rơm rạ được phân hủy ít nhất 1 tháng, và chỉ sạ lúa sau khi cho đất ngập từ 2 đến 3 tuần.
+– Trong trường hợp không cày ải được vì phải gieo sạ lại ngay sau khi thu hoạch, chúng ta cần sử dụng chế phẩm  PHÂN HỦY GỐC RẠ    để phân hủy gốc rạ ngay tại ruộng. Chỉ sau 5 – 7 ngày sử dụng chế phẩm, gốc rạ trở thành phân hữu cơ giúp bà con giảm được 30 – 50% lượng phân bón hóa học.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#dacDiem"/>
         <NamedIndividual IRI="#NgoDocPhen"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">chóp lá ngã màu vàng và cháy khô đầu lá, rễ lúa ngã nâu nhạt, vuốt rễ thấy nhám tay</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#NgoDocPhen"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">NgoDocPhen.jpg</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -3985,6 +4537,35 @@ Tuyệt đối không được sử dụng  [Thuoc=PISANA_700WP]PISANA 700WP[/Th
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Ốc sênh</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#dacTinhNongHoc"/>
+        <NamedIndividual IRI="#PHÂN_HỦY_GỐC_RẠ"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Phân hủy gốc rơm rạ nhanh tại ruộng
+– Ra rễ mạnh, cứng cây.
+– Bổ sung các vi sinh vật có lợi giúp phòng các bệnh như lở cỗ rễ, thối rễ, héo xanh, chết dây…
+– Tăng năng suất, giảm phân bón hóa học.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#PHÂN_HỦY_GỐC_RẠ"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">PhanHuyGocRa.jpg</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#luongThuoc"/>
+        <NamedIndividual IRI="#PHÂN_HỦY_GỐC_RẠ"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">-Xử lý rơm rạ tại ruộng : Sử dụng 250g sản phẩm trộn đều với 1 – 2 kg lân, rải đều ruộng trước hoặc sau khi lồng(Sử dụng cho 1000m²)
+– Trộn chung với các loại phân bón để bón vào các thời kỳ bón lót – bón thúc.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#PHÂN_HỦY_GỐC_RẠ"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thuốc Phân Hủy Gốc Rạ</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nhaSanXuat"/>
+        <NamedIndividual IRI="#PHÂN_HỦY_GỐC_RẠ"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Công ty CP Ứng Dụng Công Nghệ Xanh VN</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#PISANA_700WP"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">thuốc PISANA_700WP</Literal>
@@ -4070,6 +4651,11 @@ Tuỳ theo thời gian có nhu cầu sử dụng phân mà áp dụng phương p
 (2%) lân, nén chặt. Đống phân ủ rộng khoảng 2-3m, cao 1, 5-2m, trét bùn bên ngoài tránh mưa. Thời gian ủ lâu, 5-6 tháng mới xong.
 [*]Ủ nóng trước nguội sau: Ủ nóng 5-6 ngày, khi nhiệt độ 50-60°c nén chặt ủ tiếp lớp khác lên trên, trét bùn kín, có thể cho thêm vào đống phân ủ các loại phân khác như: phân thỏ, gà, vịt làm phân men để tăng chất lượng phân.
 [/ul]</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#definition"/>
+        <NamedIndividual IRI="#PhanChuong"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Phân chuồng là loại phân do gia súc thải ra. Chất lượng và giá trị của phân chuồng phụ thuộc rất nhiều vào cách chăm sóc, nuôi dưỡng, chất liệu độn chuồng và cách ủ phân.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#image"/>
@@ -4462,12 +5048,37 @@ Phân lỏng thường có (15-15-15; 12-24-12; 10-30-10; 9-27-18.. .).</Literal
     <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
         <NamedIndividual IRI="#PhanRac"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Được chế biến từ: cỏ dại, rác, thân lá cây xanh, rơm rạ…ủ với một số phân men như phân chuồng, lân, vôi…đến khi mục thành phân(thành phần dinh dưỡng thấp hơn phân chuồng).</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Phân rác còn được gọi là phân campốt. Đó là loại phan bon huu co được chế biến từ rác, cỏ dại, thân lá cây xanh, bèo tây, rơm rạ, chất thải rắn thành phố v.v.. được ủ với một số phân men như phân chuồng, nước giải, lân, vôi… cho đến khi hoai mục.
+Phân rác có thành phần dinh dưỡng thấp hơn phân chuồng (phan bon huu co) và thay đổi trong những giới hạn rất lớn tuỳ thuộc vào bản chất và thành phần của rác.
+
+Nguyên liệu để làm phân rác có các loại sau đây:
+
+ - Rác các loại (các chất phế thải đã loại bỏ các tạp chất không phải là hữu cơ, các chất không hoai mục được).
+
+ - Tàn dư thực vật sau khi thu hoạch như rơm rạ, thân lá cây.
+
+- Các chất gây men và phụ trợ (phân chuồng hoai mục, vôi, nước tiểu, bùn, phân lân, tro bếp).
+
+Ủ phân rác : Có 2 cách: ủ dưới hố và ủ trên mặt đất.
+
+            * Ủ dưới hố thường được thực hiện ở nơi đất cao ráo, không bị ngập nước. Người ta đào hố với kích thước sâu 1.0 – 1.5 m, rộng 1.5 – 3.0 m; dài tuỳ theo địa thế. Đất ở đáy và ở các thành hố được nén chặt. Các chất thải được cho vào  hố thành từng lớp. Mỗi lớp có chiều dày 30 – 50 cm. Sau một lớp rác lại rắc một lớp các chất phụ trợ. Cùng với chất phụ trợ có thể rắc thêm men vi sinh vật phân giải các chất hữu cơ để thúc đẩy quá trình hoai mục của các loại rác. Sau khi rắc chất phù trợ, tiến hành tưới nước cho đủ ẩm lớp rác đã xếp rồi tiếp tục xếp lớp khác lên trên. Cứ xếp lần lượt như vậy cho đến khi đống rác cao hơn mặt đất 0.5 – 1.0 m thì trát bùn phủ kín. Chú ý cắm một vài cái cọc vào giữa đống phân để thỉnh thoảng kiểm tra nhiệt độ ở giữa đống phân và khi cần thiết tưới nước cho phân nếu thấy đống phân quá khô.
+
+            Nếu nhiệt độ trong đống phân lên đến 50oC thì tiến hành đảo phân. Sau khi đảo, đống phân cần được nén chặt và trát bùn thật kín để hạn chế nhiệt độ trong đống phân tăng cao và làm mất đạm của phân.
+
+            * Ủ phân trên mặt đất được tiến hành ở những nơi thấp trũng, hay bị ngập nước khi trời mưa. Người ta đắp một nền đất, lấy đầm đầm đất thật chặt, có điều kiện có thể láng một lớp xi măng để hạn chế nước phân ngấm vào đất. Rác được xếp thành từng lớp như ở cách ủ phân trong hố. Khi đống phân cao 1.5 – 2 m người ta nén chặt và lấy bùn trát phủ kín. Nếu đống phân bị khô thì tưới nước cho phân khi nhiệt độ trong đống phân cao hơn 50oC thì đảo phân, sau đó nén chặt lại. Những nông dân có điều kiện nên xây nhà ủ phân rác để đảm bảo chất lượng phân và dùng được nhiều lần. Nếu xây nhà ủ phân thì nên đắp nền nghiêng về phía hố trữ nước phân. Chung quanh nền cần có rãnh để thu nước phân chảy ra và gom vào hố. Khi đống phân bị khô dùng nước phân này để tưới. Nhà ủ phân rác nên xây tường bao quanh 3 mặt. Tường cao 2 m. Nhà phân được ngăn thành từng ô, mỗi ô 5 – 6 m2.
+
+            Sau một thời gian ủ, khi đống phân xẹp đi chỉ còn lại khoảng ½ khối lượng ban đầu thì đem dùng. Mỗi hộ nông dân nên có 2 ô ủ phân luân phiên nhau để thường xuyên có phân dùng.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#cachCheBien"/>
         <NamedIndividual IRI="#PhanRac"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Nguyên liệu chính là phân rác 70%, cung cấp thêm đạm và Kali 2%, còn lại phân men(phân chuồng, lân, vôi). Nguyên liệu được chặt ra thành đoạn ngắn 20-30cm xếp thành lớp cứ 30cm rắc một lớp vôi;trét bùn;ủ khoảng 20 ngày đảo lại rắc thêm phân men, xếp đủ cao trét bùn lại, để hở lỗ tưới nước thường xuyên;ủ khoãng 60 ngày dùng bón lót, để lâu hơn khi phân hoai có thể dùng để bón thúc.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#definition"/>
+        <NamedIndividual IRI="#PhanRac"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">phân rác còn được gọi  là phân campốt. Đó là loại phan bon huu co được chế biến từ rác, cỏ dại, thân lá cây xanh, bèo tây, rơm rạ, chất thải rắn thành phố v.v.. được ủ với một số phân men như phân chuồng, nước giải, lân, vôi… cho đến khi hoai mục.
+Phân rác có thành phần dinh dưỡng thấp hơn phân chuồng (phan bon huu co) và thay đổi trong những giới hạn rất lớn tuỳ thuộc vào bản chất và thành phần của rác.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#image"/>
@@ -4656,6 +5267,13 @@ Phân vi sinh vật thường chỉ phát huy tác dụng trong những điều 
 Ngoài ra trên thị trường còn có những loại phân khác với tên thương phẩm khác nhau nhưng tính năng tác dụng thì cũng giống như các loại phân kể trên.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#definition"/>
+        <NamedIndividual IRI="#PhanViSinh"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Phân vi sinh hay phân bón vi sinh là loại phân dùng trong công nghiệp trồng rau sạch của nhiều nước phát triển trên thế giới hiện nay. Bản chất phân vi sinh là các tập đoàn vi sinh vật bên trong nó , ở  đây là những chủng vi sinh vật cố định đạm, phân giải lân và phân giải mùn , chất hữu cơ, chất thải trong đất .
+
+Phân bón vi sinh vật chứa một hay nhiều chủng vi sinh vật sống, đã được tuyển chọn có mật độ đạt theo tiêu chuẩn hiện hành. Thông qua các hoạt động của chúng sau quá trình bón vào đất tạo nên các chất dinh dưỡng mà cây trồng sử dụng được ( N, P ,K, . . .) hay các hoạt chất sinh độc, góp phần nâng cao năng xuất và ( hoặc) chất lượng nông sản. Phân vi sinh bảo đảm không gấy ảnh hưởng xấu đến người, động thực vật, môi trường sinh thái và chất lượng nông sản.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#image"/>
         <NamedIndividual IRI="#PhanViSinh"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">PhanViSinh.jpg</Literal>
@@ -4668,20 +5286,27 @@ Ngoài ra trên thị trường còn có những loại phân khác với tên t
     <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
         <NamedIndividual IRI="#PhanXanh"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Phân xanh là loại&lt;li&gt; phân hữu cơ&lt;/li&gt;, dùng cây xanh phân hủy để bón lót cho cây trồng và thường được sử dụng tươi, không qua quá trình ủ.
-
-Tạo phân xanh là trồng những cây cụ thể để cải tạo đất trong nông nghiệp, khi chuẩn bị đất để trồng cây ăn quả, trồng nho và rau quả. Không giống như các loại cây trồng, các cây phân xanh thường không được thu hoạch mà để chết khô, để lại nguồn phân đạm tự nhiên. Thường là cây được trồng luân canh, cứ một vụ trồng cây trồng chính lại một vụ trồng cây phân xanh, khi cây phân xanh ra hoa được cầy vùi chung vào trong đất để tăng cường độ màu mỡ cho đất và loại trừ các loài sâu bệnh hại cây trồng chính.
-
-Nguyên liệu để làm phân xanh thường là các cây cỏ dại, cây thảo mộc, lá xoan, cây họ đậu…, trong đó cây họ đậu cho hiệu quả cao nhất.
-
-Tại châu Âu, thường dùng những rau họ cải như mù tạc, cải dầu, cây họ đậu như đậu cánh chim, đậu tằm, đậu răng ngựa hoặc cỏ ba lá, cỏ như họ Hòa thảo và các loài khác như hướng dương,...
-
-Tại Việt Nam thường dùng những cây xanh như bèo hoa dâu, bớp bớp, keo dậu, lục lạc sợi, điên điển, lục bình, dã quỳ, đậu triều...</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Phân xanh là gì? Đó là loại phân hữu cơ thường được sử dụng tươi, không qua quá trình ủ, nó phát huy hiệu quả cao khi đã được phân hủy. Trong nông nghiệp người ta thường sử dụng phân xanh để bón lót cho cây hàng năm hoặc tủ gốc cho cây lâu năm.
+ 
+Nguyên liệu để làm phân xanh thường là các cây cỏ dại, cây thảo mộc, lá xoan, cây họ đậu… Nhiều vùng nông dân thường lấy về băm thành từng đoạn nhỏ rồi đem rắc ruộng. Trong các loại nguyên liệu làm phân xanh thì có cây họ đậu cho hiệu quả cao nhất. Bởi vì các loại cây họ đậu thường có các vi sinh vật cộng sinh sống trên rễ và giúp cây tổng hợp đạm từ khí trời. Lượng đạm đó về sau có thể cung cấp một phần cho cây trồng. Cây đậu còn có khả năng hút lân dễ tiêu và phân kali.
+ 
+Nước ta có khí hậu nhiệt đới, đây là điều kiện thuận lợi để cây phân xanh sinh trưởng và phát triển mạnh. Gần như vùng nào cũng có cây phân xanh, do vậy người nông dân cần tận dụng các ưu thế đó để đưa cây phân xanh vào trong sản xuất nông nghiệp để tăng độ phì nhiêu cho đất, giảm bớt chi phí về phân bón.
+ 
+Ngoài các loài cây phân xanh tự nhiên, nhiều nơi còn trồng các loài cây phân xanh như: muồng, điền thanh, đậu nho nhe, keo dậu, trinh nữ không gai… Nhưng cần căn cứ vào điều kiện của từng vùng để có kế hoạch trồng sao cho phù hợp, dưới đây là một số cách thức sử dụng cây phân xanh bón cho cây trồng:
+ 
++ Khi làm đất dùng cây phân xanh bón lót cho cây trồng.
++ Giai đoạn cây phân xanh ra hoa, cần cầy vùi chung vào trong đất vì lúc này cây phân xanh có năng suất sinh khối cao. Không nên để cây có hạt rồi mới vùi vào đất, vì lúc này hạt cây phân xanh có thể mọc gây cản trở quá trình sinh trưởng và phát triển của cây trồng chính.
++ Thực hiện luân canh cây trồng chính với cây phân xanh. Cứ một vụ trồng cây trồng chính một vụ trồng cây phân xanh, làm như vậy để tăng cường độ màu mỡ cho đất và loại trừ các loài sâu bệnh hại cây trồng chính.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#article"/>
+        <DataProperty IRI="#cachCheBien"/>
         <NamedIndividual IRI="#PhanXanh"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Sử dụng các loại cây lá tươi bón ngay vào đất không qua quá trình ủ do đó chỉ dùng để bón lót. Cây phân xanh thường được dùng là cây họ đậu: điền thanh, muồng, keo dậu, cỏ Stylo, điên điển…</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Sử dụng các loại cây lá tươi bón ngay vào đất không qua quá trình ủ do đó chỉ dùng để bón lót. Cây phân xanh thường được dùng là cây họ đậu: điền thanh, muồng, keo dậu, cỏ Stylo, điên điển…</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#definition"/>
+        <NamedIndividual IRI="#PhanXanh"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Phân xanh là loại [PhanHuuCo] phân hữu cơ [/PhanHuuCo], dùng cây xanh phân hủy để bón lót cho cây trồng và thường được sử dụng tươi, không qua quá trình ủ.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#image"/>
@@ -4860,9 +5485,9 @@ cloruakali.</Literal>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">20</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#article"/>
+        <DataProperty IRI="#dacDiemKichThich"/>
         <NamedIndividual IRI="#QuyTrinhKichThichChin"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Hạt không bạc bụng, mấy hạt dưỡng cây tăng năng xuất</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Hạt không bạc bụng, mấy hạt dưỡng cây tăng năng xuất</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#denNgay"/>
@@ -4880,9 +5505,9 @@ cloruakali.</Literal>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">70</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#article"/>
+        <DataProperty IRI="#dacDiemKichThich"/>
         <NamedIndividual IRI="#QuyTrinhKichThichMa"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Kích thích đẻ nhánh, phát triển thân lá</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">kích thích đẻ nhánh, phát triển thân lá</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#denNgay"/>
@@ -4922,89 +5547,303 @@ cloruakali.</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
         <NamedIndividual IRI="#QuyTrinhTuoiNuocChinHoanToan"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Lúa không cần nước, chỉ cần độ ẩm đất của ruộng lúa từ 60-
-70%  đến khi thu hoạch được, ruộng khô sẽ dễ dàng cho thu hoạch.</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Trong suốt thời gian sinh trưởng, cây lúa cần phải được cung cấp đầy đủ các yếu tố như: nước, ánh sáng, dinh dưỡng, không khí,… để cây lúa có thể sinh trưởng và phát triển tốt. Trong đó, nước là yếu tố cây lúa sử dụng nhiều nhất trong suốt thời kỳ sinh trưởng. Tuy nhiên, không phải lúc nào cây lúa cũng cần nước ngập trên ruộng mà có lúc cây lúa chỉ cần đủ ẩm sẽ tốt hơn. Vì thế, chế độ cung cấp nước ngập khô xen kẽ đã tiết kiệm lượng nước đáng kể, làm tăng độ cứng của gốc lúa, chống ngã đổ tốt; hạn chế sự phát triển chồi vô hiệu, tập trung dinh dưỡng nuôi các nhánh hữu hiệu, tạo điều kiện cho cây lúa sinh trưởng tốt hơn. Tùy theo từng giai đoạn lúa mà điều tiết lượng nước cho phù hợp.
+
+- Giai đoạn lúa từ 0-7 ngày sau sạ: giai đoạn này chỉ cần đất đủ ẩm mầm lúa sẽ phát triển tốt hơn, rễ bắt đầu phát triển bám vào đất.
+
+- Giai đoạn từ 7-20 ngày sau sạ: giữ mực nước cao khoảng 1-3cm là đủ, duy trì liên tục mực nước này trên ruộng để ngăn cản sự phát triển của cỏ dại.
+
+- Giai đoạn từ 20-40 ngày sau sạ: Đây là giai đoạn lúa bắt đầu đẻ nhánh đến nhảy chồi tối đa, quyết định số bông/m2, là một trong những yếu tố quan trọng hình thành năng suất. Giai đoạn đẻ nhánh rất cần nước nhưng nếu quá nhiều nước sẽ hạn chế sự đẻ nhánh. Vì thế, trong giai đoạn này mực nước trong ruộng chỉ cần xâm xấp, đặc biệt giai đoạn 30-40 ngày sau sạ, nước trong ruộng chỉ cần đủ ẩm là được, khi mực nước thấp hơn mặt ruộng 15cm (đặt ống nhựa có đục lổ trên hàng, bên trong có chia vạch 5 cm để theo dõi) thì mới cho nước vào. Mực nước thấp trên ruộng sẽ giúp rễ lúa ăn sâu vào trong đất và hô hấp tốt hơn, giúp cây lúa chống đỗ ngã, hạn chế chồi vô hiệu. Ngoài ra, ở mực nước thấp, hạch nấm khô vằn sẽ không phát tán trong ruộng và bệnh ít lây lan.
+
+- Giai đoạn từ 40-60 ngày sau sạ: giai đoạn 40-45 ngày, nông dân bón đón đòng, bơm nước vào trong ruộng 1-3 cm, với mực nước này bón phân sẽ tốt vì độ hòa loãng của phân không cao, tránh ánh sáng tác động trực tiếp làm phân bón bị phân huỷ và bốc hơi nhất là phân đạm. Sau đó, giữ mực nước 2-3cm duy trì trên ruộng, không để ruộng bị khô, vì giai đoạn này lúa no đòng, chuẩn bị trổ rất cần nước.
+
+- Giai đoạn từ 60-70 ngày sau sạ: Giai đoạn này lúa bắt đầu trổ, cần giữ nước 3-5cm duy trì liên tục cho cây lúa trổ bông và thụ phấn, thụ tinh hoàn chỉnh và giữ nước 10 ngày sau trổ. Giai đoạn này nếu thiếu nước hạt lúa dễ bị lép.
+
+- Giai đoạn từ 70 ngày sau sạ đến khi chín: Thời kỳ này lúa giai đoạn ngậm sữa, vào chắc và chín nên chỉ cần đất đủ ẩm. Rút cạn nước 10 ngày trước khi thu hoạch để thúc đẩy quá trình chín, mặt ruộng khô ráo thuận lợi cho việc thu hoạch.
+
+Kỹ thuật điều tiết nước ngập khô xen kẽ trên ruộng lúa nhằm giúp nông dân đối phó với tình trạng thiếu nước nhưng không làm giảm năng suất lúa và quan trọng hơn hết, đây là biện pháp làm giảm phát thải khí nhà kính một cách nhanh nhất.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocChinHoanToan"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">chinhoantoan.png</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#luongNuoc"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocChinHoanToan"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ở thời kỳ chín hoàn toàn, lúa không cần nước, chỉ cần độ ẩm đất của ruộng lúa từ 60- 70%  đến khi thu hoạch được, ruộng khô sẽ dễ dàng cho thu hoạch.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#QuyTrinhTuoiNuocChinHoanToan"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Quy trình tưới nước thời kỳ chín hoàn toàn</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Nhu cầu tưới nước thời kỳ chín hoàn toàn</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
         <NamedIndividual IRI="#QuyTrinhTuoiNuocChinSap"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Sau khi trỗ khoảng 10 ngày, để nước săm sáp mặt ruộng.
-Đến cuối thời kỳ chín sáp (sau trỗ 20 ngày) bắt đầu rút cạn hết nước ở mặt ruộng</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#name"/>
-        <NamedIndividual IRI="#QuyTrinhTuoiNuocChinSap"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Quy trình tưới nước thời kỳ chín sáp</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#article"/>
-        <NamedIndividual IRI="#QuyTrinhTuoiNuocChinSua"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Mực nước trong ruộng từ 3-5cm</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#name"/>
-        <NamedIndividual IRI="#QuyTrinhTuoiNuocChinSua"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Quy trình tưới nước thời kỳ chín sữa</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#article"/>
-        <NamedIndividual IRI="#QuyTrinhTuoiNuocNayMam"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Hạt giống mới được gieo xuống ruộng cho đến 2-3 ngày sau gieo (hình
-3.20b &lt;TODO&gt;), ruộng chỉ cần độ ẩm bão hòa. Bị ngập nước ở giai đoạn này còn ảnh hưởng
-xấu đến quá trình mọc mầm của hạt, thậm chí mầm không mọc được.</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#name"/>
-        <NamedIndividual IRI="#QuyTrinhTuoiNuocNayMam"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Quy trình tưới nước giai đoạn nảy mầm</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#article"/>
-        <NamedIndividual IRI="#QuyTrinhTuoiNuocSauDeNhanh"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Từ 30-40 ngày sau sạ (hình 3.28 &lt;TODO&gt;), tức là sau giai đoạn đẻ nhánh. Lúc này
-để ruộng cạn, mặt ruộng không có nước, ruộng lúa khô ráo, thông thoáng, các lá già bên dưới khô, ít bị bệnh.</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#name"/>
-        <NamedIndividual IRI="#QuyTrinhTuoiNuocSauDeNhanh"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Quy trình tưới nước sau giai đoạn đẻ nhánh</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#article"/>
-        <NamedIndividual IRI="#QuyTrinhTuoiNuocSauSa5-20Ngay"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Sau sạ từ 5-7 ngày: Cây lúa cần lớp nước mỏng săm sắp mặt ruộng.
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Trong suốt thời gian sinh trưởng, cây lúa cần phải được cung cấp đầy đủ các yếu tố như: nước, ánh sáng, dinh dưỡng, không khí,… để cây lúa có thể sinh trưởng và phát triển tốt. Trong đó, nước là yếu tố cây lúa sử dụng nhiều nhất trong suốt thời kỳ sinh trưởng. Tuy nhiên, không phải lúc nào cây lúa cũng cần nước ngập trên ruộng mà có lúc cây lúa chỉ cần đủ ẩm sẽ tốt hơn. Vì thế, chế độ cung cấp nước ngập khô xen kẽ đã tiết kiệm lượng nước đáng kể, làm tăng độ cứng của gốc lúa, chống ngã đổ tốt; hạn chế sự phát triển chồi vô hiệu, tập trung dinh dưỡng nuôi các nhánh hữu hiệu, tạo điều kiện cho cây lúa sinh trưởng tốt hơn. Tùy theo từng giai đoạn lúa mà điều tiết lượng nước cho phù hợp.
 
-Lúc này ruộng bị khô sẽ tổn thương đến rễ lúa, nên không thể để ruộng khô nứt nẻ. Để bộ rễ lúa không tổn thương, phải luôn duy trì lớp nước trên mặt ruộng đồng thời có tác dụng cho cây lúa hấp thụ phân bón dễ dàng và ém không cho hạt cỏ dại mọc. Duy trì lớp nước ở mặt ruộng cho đến khi cây lúa được 20 ngày sau gieo.</Literal>
+- Giai đoạn lúa từ 0-7 ngày sau sạ: giai đoạn này chỉ cần đất đủ ẩm mầm lúa sẽ phát triển tốt hơn, rễ bắt đầu phát triển bám vào đất.
+
+- Giai đoạn từ 7-20 ngày sau sạ: giữ mực nước cao khoảng 1-3cm là đủ, duy trì liên tục mực nước này trên ruộng để ngăn cản sự phát triển của cỏ dại.
+
+- Giai đoạn từ 20-40 ngày sau sạ: Đây là giai đoạn lúa bắt đầu đẻ nhánh đến nhảy chồi tối đa, quyết định số bông/m2, là một trong những yếu tố quan trọng hình thành năng suất. Giai đoạn đẻ nhánh rất cần nước nhưng nếu quá nhiều nước sẽ hạn chế sự đẻ nhánh. Vì thế, trong giai đoạn này mực nước trong ruộng chỉ cần xâm xấp, đặc biệt giai đoạn 30-40 ngày sau sạ, nước trong ruộng chỉ cần đủ ẩm là được, khi mực nước thấp hơn mặt ruộng 15cm (đặt ống nhựa có đục lổ trên hàng, bên trong có chia vạch 5 cm để theo dõi) thì mới cho nước vào. Mực nước thấp trên ruộng sẽ giúp rễ lúa ăn sâu vào trong đất và hô hấp tốt hơn, giúp cây lúa chống đỗ ngã, hạn chế chồi vô hiệu. Ngoài ra, ở mực nước thấp, hạch nấm khô vằn sẽ không phát tán trong ruộng và bệnh ít lây lan.
+
+- Giai đoạn từ 40-60 ngày sau sạ: giai đoạn 40-45 ngày, nông dân bón đón đòng, bơm nước vào trong ruộng 1-3 cm, với mực nước này bón phân sẽ tốt vì độ hòa loãng của phân không cao, tránh ánh sáng tác động trực tiếp làm phân bón bị phân huỷ và bốc hơi nhất là phân đạm. Sau đó, giữ mực nước 2-3cm duy trì trên ruộng, không để ruộng bị khô, vì giai đoạn này lúa no đòng, chuẩn bị trổ rất cần nước.
+
+- Giai đoạn từ 60-70 ngày sau sạ: Giai đoạn này lúa bắt đầu trổ, cần giữ nước 3-5cm duy trì liên tục cho cây lúa trổ bông và thụ phấn, thụ tinh hoàn chỉnh và giữ nước 10 ngày sau trổ. Giai đoạn này nếu thiếu nước hạt lúa dễ bị lép.
+
+- Giai đoạn từ 70 ngày sau sạ đến khi chín: Thời kỳ này lúa giai đoạn ngậm sữa, vào chắc và chín nên chỉ cần đất đủ ẩm. Rút cạn nước 10 ngày trước khi thu hoạch để thúc đẩy quá trình chín, mặt ruộng khô ráo thuận lợi cho việc thu hoạch.
+
+Kỹ thuật điều tiết nước ngập khô xen kẽ trên ruộng lúa nhằm giúp nông dân đối phó với tình trạng thiếu nước nhưng không làm giảm năng suất lúa và quan trọng hơn hết, đây là biện pháp làm giảm phát thải khí nhà kính một cách nhanh nhất.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocChinSap"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">nuocchinsap.png</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#luongNuoc"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocChinSap"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Đầu thời kỳ chín sáp tức là sau khi trỗ khoảng 10 ngày, để nước săm sáp mặt ruộng. Đến cuối thời kỳ chín sáp (sau trỗ 20 ngày) bắt đầu rút cạn hết nước ở mặt ruộng.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocChinSap"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Nhu cầu  tưới nước thời kỳ chín sáp</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#article"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocChinSua"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Trong suốt thời gian sinh trưởng, cây lúa cần phải được cung cấp đầy đủ các yếu tố như: nước, ánh sáng, dinh dưỡng, không khí,… để cây lúa có thể sinh trưởng và phát triển tốt. Trong đó, nước là yếu tố cây lúa sử dụng nhiều nhất trong suốt thời kỳ sinh trưởng. Tuy nhiên, không phải lúc nào cây lúa cũng cần nước ngập trên ruộng mà có lúc cây lúa chỉ cần đủ ẩm sẽ tốt hơn. Vì thế, chế độ cung cấp nước ngập khô xen kẽ đã tiết kiệm lượng nước đáng kể, làm tăng độ cứng của gốc lúa, chống ngã đổ tốt; hạn chế sự phát triển chồi vô hiệu, tập trung dinh dưỡng nuôi các nhánh hữu hiệu, tạo điều kiện cho cây lúa sinh trưởng tốt hơn. Tùy theo từng giai đoạn lúa mà điều tiết lượng nước cho phù hợp.
+
+- Giai đoạn lúa từ 0-7 ngày sau sạ: giai đoạn này chỉ cần đất đủ ẩm mầm lúa sẽ phát triển tốt hơn, rễ bắt đầu phát triển bám vào đất.
+
+- Giai đoạn từ 7-20 ngày sau sạ: giữ mực nước cao khoảng 1-3cm là đủ, duy trì liên tục mực nước này trên ruộng để ngăn cản sự phát triển của cỏ dại.
+
+- Giai đoạn từ 20-40 ngày sau sạ: Đây là giai đoạn lúa bắt đầu đẻ nhánh đến nhảy chồi tối đa, quyết định số bông/m2, là một trong những yếu tố quan trọng hình thành năng suất. Giai đoạn đẻ nhánh rất cần nước nhưng nếu quá nhiều nước sẽ hạn chế sự đẻ nhánh. Vì thế, trong giai đoạn này mực nước trong ruộng chỉ cần xâm xấp, đặc biệt giai đoạn 30-40 ngày sau sạ, nước trong ruộng chỉ cần đủ ẩm là được, khi mực nước thấp hơn mặt ruộng 15cm (đặt ống nhựa có đục lổ trên hàng, bên trong có chia vạch 5 cm để theo dõi) thì mới cho nước vào. Mực nước thấp trên ruộng sẽ giúp rễ lúa ăn sâu vào trong đất và hô hấp tốt hơn, giúp cây lúa chống đỗ ngã, hạn chế chồi vô hiệu. Ngoài ra, ở mực nước thấp, hạch nấm khô vằn sẽ không phát tán trong ruộng và bệnh ít lây lan.
+
+- Giai đoạn từ 40-60 ngày sau sạ: giai đoạn 40-45 ngày, nông dân bón đón đòng, bơm nước vào trong ruộng 1-3 cm, với mực nước này bón phân sẽ tốt vì độ hòa loãng của phân không cao, tránh ánh sáng tác động trực tiếp làm phân bón bị phân huỷ và bốc hơi nhất là phân đạm. Sau đó, giữ mực nước 2-3cm duy trì trên ruộng, không để ruộng bị khô, vì giai đoạn này lúa no đòng, chuẩn bị trổ rất cần nước.
+
+- Giai đoạn từ 60-70 ngày sau sạ: Giai đoạn này lúa bắt đầu trổ, cần giữ nước 3-5cm duy trì liên tục cho cây lúa trổ bông và thụ phấn, thụ tinh hoàn chỉnh và giữ nước 10 ngày sau trổ. Giai đoạn này nếu thiếu nước hạt lúa dễ bị lép.
+
+- Giai đoạn từ 70 ngày sau sạ đến khi chín: Thời kỳ này lúa giai đoạn ngậm sữa, vào chắc và chín nên chỉ cần đất đủ ẩm. Rút cạn nước 10 ngày trước khi thu hoạch để thúc đẩy quá trình chín, mặt ruộng khô ráo thuận lợi cho việc thu hoạch.
+
+Kỹ thuật điều tiết nước ngập khô xen kẽ trên ruộng lúa nhằm giúp nông dân đối phó với tình trạng thiếu nước nhưng không làm giảm năng suất lúa và quan trọng hơn hết, đây là biện pháp làm giảm phát thải khí nhà kính một cách nhanh nhất.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocChinSua"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">nuocchinsua.png</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#luongNuoc"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocChinSua"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ở thời kỳ chín sữa, cây lúa vẫn cần nước, mực nước trong ruộng từ 3-5cm</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocChinSua"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Nhu cầu tưới nước thời kỳ chín sữa</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#article"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocNayMam"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Trong suốt thời gian sinh trưởng, cây lúa cần phải được cung cấp đầy đủ các yếu tố như: nước, ánh sáng, dinh dưỡng, không khí,… để cây lúa có thể sinh trưởng và phát triển tốt. Trong đó, nước là yếu tố cây lúa sử dụng nhiều nhất trong suốt thời kỳ sinh trưởng. Tuy nhiên, không phải lúc nào cây lúa cũng cần nước ngập trên ruộng mà có lúc cây lúa chỉ cần đủ ẩm sẽ tốt hơn. Vì thế, chế độ cung cấp nước ngập khô xen kẽ đã tiết kiệm lượng nước đáng kể, làm tăng độ cứng của gốc lúa, chống ngã đổ tốt; hạn chế sự phát triển chồi vô hiệu, tập trung dinh dưỡng nuôi các nhánh hữu hiệu, tạo điều kiện cho cây lúa sinh trưởng tốt hơn. Tùy theo từng giai đoạn lúa mà điều tiết lượng nước cho phù hợp.
+
+- Giai đoạn lúa từ 0-7 ngày sau sạ: giai đoạn này chỉ cần đất đủ ẩm mầm lúa sẽ phát triển tốt hơn, rễ bắt đầu phát triển bám vào đất.
+
+- Giai đoạn từ 7-20 ngày sau sạ: giữ mực nước cao khoảng 1-3cm là đủ, duy trì liên tục mực nước này trên ruộng để ngăn cản sự phát triển của cỏ dại.
+
+- Giai đoạn từ 20-40 ngày sau sạ: Đây là giai đoạn lúa bắt đầu đẻ nhánh đến nhảy chồi tối đa, quyết định số bông/m2, là một trong những yếu tố quan trọng hình thành năng suất. Giai đoạn đẻ nhánh rất cần nước nhưng nếu quá nhiều nước sẽ hạn chế sự đẻ nhánh. Vì thế, trong giai đoạn này mực nước trong ruộng chỉ cần xâm xấp, đặc biệt giai đoạn 30-40 ngày sau sạ, nước trong ruộng chỉ cần đủ ẩm là được, khi mực nước thấp hơn mặt ruộng 15cm (đặt ống nhựa có đục lổ trên hàng, bên trong có chia vạch 5 cm để theo dõi) thì mới cho nước vào. Mực nước thấp trên ruộng sẽ giúp rễ lúa ăn sâu vào trong đất và hô hấp tốt hơn, giúp cây lúa chống đỗ ngã, hạn chế chồi vô hiệu. Ngoài ra, ở mực nước thấp, hạch nấm khô vằn sẽ không phát tán trong ruộng và bệnh ít lây lan.
+
+- Giai đoạn từ 40-60 ngày sau sạ: giai đoạn 40-45 ngày, nông dân bón đón đòng, bơm nước vào trong ruộng 1-3 cm, với mực nước này bón phân sẽ tốt vì độ hòa loãng của phân không cao, tránh ánh sáng tác động trực tiếp làm phân bón bị phân huỷ và bốc hơi nhất là phân đạm. Sau đó, giữ mực nước 2-3cm duy trì trên ruộng, không để ruộng bị khô, vì giai đoạn này lúa no đòng, chuẩn bị trổ rất cần nước.
+
+- Giai đoạn từ 60-70 ngày sau sạ: Giai đoạn này lúa bắt đầu trổ, cần giữ nước 3-5cm duy trì liên tục cho cây lúa trổ bông và thụ phấn, thụ tinh hoàn chỉnh và giữ nước 10 ngày sau trổ. Giai đoạn này nếu thiếu nước hạt lúa dễ bị lép.
+
+- Giai đoạn từ 70 ngày sau sạ đến khi chín: Thời kỳ này lúa giai đoạn ngậm sữa, vào chắc và chín nên chỉ cần đất đủ ẩm. Rút cạn nước 10 ngày trước khi thu hoạch để thúc đẩy quá trình chín, mặt ruộng khô ráo thuận lợi cho việc thu hoạch.
+
+Kỹ thuật điều tiết nước ngập khô xen kẽ trên ruộng lúa nhằm giúp nông dân đối phó với tình trạng thiếu nước nhưng không làm giảm năng suất lúa và quan trọng hơn hết, đây là biện pháp làm giảm phát thải khí nhà kính một cách nhanh nhất.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#luongNuoc"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocNayMam"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Hạt giống mới được gieo xuống ruộng cho đến 2-3 ngày sau gieo, ruộng chỉ cần độ ẩm bão hòa. Bị ngập nước ở giai đoạn này còn ảnh hưởng xấu đến quá trình mọc mầm của hạt, thậm chí mầm không mọc được.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocNayMam"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Nhu cầu nước tưới giai đoạn nảy mầm</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#article"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocSauDeNhanh"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Trong suốt thời gian sinh trưởng, cây lúa cần phải được cung cấp đầy đủ các yếu tố như: nước, ánh sáng, dinh dưỡng, không khí,… để cây lúa có thể sinh trưởng và phát triển tốt. Trong đó, nước là yếu tố cây lúa sử dụng nhiều nhất trong suốt thời kỳ sinh trưởng. Tuy nhiên, không phải lúc nào cây lúa cũng cần nước ngập trên ruộng mà có lúc cây lúa chỉ cần đủ ẩm sẽ tốt hơn. Vì thế, chế độ cung cấp nước ngập khô xen kẽ đã tiết kiệm lượng nước đáng kể, làm tăng độ cứng của gốc lúa, chống ngã đổ tốt; hạn chế sự phát triển chồi vô hiệu, tập trung dinh dưỡng nuôi các nhánh hữu hiệu, tạo điều kiện cho cây lúa sinh trưởng tốt hơn. Tùy theo từng giai đoạn lúa mà điều tiết lượng nước cho phù hợp.
+
+- Giai đoạn lúa từ 0-7 ngày sau sạ: giai đoạn này chỉ cần đất đủ ẩm mầm lúa sẽ phát triển tốt hơn, rễ bắt đầu phát triển bám vào đất.
+
+- Giai đoạn từ 7-20 ngày sau sạ: giữ mực nước cao khoảng 1-3cm là đủ, duy trì liên tục mực nước này trên ruộng để ngăn cản sự phát triển của cỏ dại.
+
+- Giai đoạn từ 20-40 ngày sau sạ: Đây là giai đoạn lúa bắt đầu đẻ nhánh đến nhảy chồi tối đa, quyết định số bông/m2, là một trong những yếu tố quan trọng hình thành năng suất. Giai đoạn đẻ nhánh rất cần nước nhưng nếu quá nhiều nước sẽ hạn chế sự đẻ nhánh. Vì thế, trong giai đoạn này mực nước trong ruộng chỉ cần xâm xấp, đặc biệt giai đoạn 30-40 ngày sau sạ, nước trong ruộng chỉ cần đủ ẩm là được, khi mực nước thấp hơn mặt ruộng 15cm (đặt ống nhựa có đục lổ trên hàng, bên trong có chia vạch 5 cm để theo dõi) thì mới cho nước vào. Mực nước thấp trên ruộng sẽ giúp rễ lúa ăn sâu vào trong đất và hô hấp tốt hơn, giúp cây lúa chống đỗ ngã, hạn chế chồi vô hiệu. Ngoài ra, ở mực nước thấp, hạch nấm khô vằn sẽ không phát tán trong ruộng và bệnh ít lây lan.
+
+- Giai đoạn từ 40-60 ngày sau sạ: giai đoạn 40-45 ngày, nông dân bón đón đòng, bơm nước vào trong ruộng 1-3 cm, với mực nước này bón phân sẽ tốt vì độ hòa loãng của phân không cao, tránh ánh sáng tác động trực tiếp làm phân bón bị phân huỷ và bốc hơi nhất là phân đạm. Sau đó, giữ mực nước 2-3cm duy trì trên ruộng, không để ruộng bị khô, vì giai đoạn này lúa no đòng, chuẩn bị trổ rất cần nước.
+
+- Giai đoạn từ 60-70 ngày sau sạ: Giai đoạn này lúa bắt đầu trổ, cần giữ nước 3-5cm duy trì liên tục cho cây lúa trổ bông và thụ phấn, thụ tinh hoàn chỉnh và giữ nước 10 ngày sau trổ. Giai đoạn này nếu thiếu nước hạt lúa dễ bị lép.
+
+- Giai đoạn từ 70 ngày sau sạ đến khi chín: Thời kỳ này lúa giai đoạn ngậm sữa, vào chắc và chín nên chỉ cần đất đủ ẩm. Rút cạn nước 10 ngày trước khi thu hoạch để thúc đẩy quá trình chín, mặt ruộng khô ráo thuận lợi cho việc thu hoạch.
+
+Kỹ thuật điều tiết nước ngập khô xen kẽ trên ruộng lúa nhằm giúp nông dân đối phó với tình trạng thiếu nước nhưng không làm giảm năng suất lúa và quan trọng hơn hết, đây là biện pháp làm giảm phát thải khí nhà kính một cách nhanh nhất.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocSauDeNhanh"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">saudenhanh.png</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#luongNuoc"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocSauDeNhanh"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Từ 30-40 ngày sau sạ  tức là sau giai đoạn đẻ nhánh. Lúc này để ruộng cạn, mặt ruộng không có nước, ruộng lúa khô ráo, thông thoáng, các lá già bên dưới khô, ít bị bệnh</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocSauDeNhanh"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Nhu cầu nước tưới sau giai đoạn đẻ nhánh</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#article"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocSauSa20-25Ngay"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Trong suốt thời gian sinh trưởng, cây lúa cần phải được cung cấp đầy đủ các yếu tố như: nước, ánh sáng, dinh dưỡng, không khí,… để cây lúa có thể sinh trưởng và phát triển tốt. Trong đó, nước là yếu tố cây lúa sử dụng nhiều nhất trong suốt thời kỳ sinh trưởng. Tuy nhiên, không phải lúc nào cây lúa cũng cần nước ngập trên ruộng mà có lúc cây lúa chỉ cần đủ ẩm sẽ tốt hơn. Vì thế, chế độ cung cấp nước ngập khô xen kẽ đã tiết kiệm lượng nước đáng kể, làm tăng độ cứng của gốc lúa, chống ngã đổ tốt; hạn chế sự phát triển chồi vô hiệu, tập trung dinh dưỡng nuôi các nhánh hữu hiệu, tạo điều kiện cho cây lúa sinh trưởng tốt hơn. Tùy theo từng giai đoạn lúa mà điều tiết lượng nước cho phù hợp.
+
+- Giai đoạn lúa từ 0-7 ngày sau sạ: giai đoạn này chỉ cần đất đủ ẩm mầm lúa sẽ phát triển tốt hơn, rễ bắt đầu phát triển bám vào đất.
+
+- Giai đoạn từ 7-20 ngày sau sạ: giữ mực nước cao khoảng 1-3cm là đủ, duy trì liên tục mực nước này trên ruộng để ngăn cản sự phát triển của cỏ dại.
+
+- Giai đoạn từ 20-40 ngày sau sạ: Đây là giai đoạn lúa bắt đầu đẻ nhánh đến nhảy chồi tối đa, quyết định số bông/m2, là một trong những yếu tố quan trọng hình thành năng suất. Giai đoạn đẻ nhánh rất cần nước nhưng nếu quá nhiều nước sẽ hạn chế sự đẻ nhánh. Vì thế, trong giai đoạn này mực nước trong ruộng chỉ cần xâm xấp, đặc biệt giai đoạn 30-40 ngày sau sạ, nước trong ruộng chỉ cần đủ ẩm là được, khi mực nước thấp hơn mặt ruộng 15cm (đặt ống nhựa có đục lổ trên hàng, bên trong có chia vạch 5 cm để theo dõi) thì mới cho nước vào. Mực nước thấp trên ruộng sẽ giúp rễ lúa ăn sâu vào trong đất và hô hấp tốt hơn, giúp cây lúa chống đỗ ngã, hạn chế chồi vô hiệu. Ngoài ra, ở mực nước thấp, hạch nấm khô vằn sẽ không phát tán trong ruộng và bệnh ít lây lan.
+
+- Giai đoạn từ 40-60 ngày sau sạ: giai đoạn 40-45 ngày, nông dân bón đón đòng, bơm nước vào trong ruộng 1-3 cm, với mực nước này bón phân sẽ tốt vì độ hòa loãng của phân không cao, tránh ánh sáng tác động trực tiếp làm phân bón bị phân huỷ và bốc hơi nhất là phân đạm. Sau đó, giữ mực nước 2-3cm duy trì trên ruộng, không để ruộng bị khô, vì giai đoạn này lúa no đòng, chuẩn bị trổ rất cần nước.
+
+- Giai đoạn từ 60-70 ngày sau sạ: Giai đoạn này lúa bắt đầu trổ, cần giữ nước 3-5cm duy trì liên tục cho cây lúa trổ bông và thụ phấn, thụ tinh hoàn chỉnh và giữ nước 10 ngày sau trổ. Giai đoạn này nếu thiếu nước hạt lúa dễ bị lép.
+
+- Giai đoạn từ 70 ngày sau sạ đến khi chín: Thời kỳ này lúa giai đoạn ngậm sữa, vào chắc và chín nên chỉ cần đất đủ ẩm. Rút cạn nước 10 ngày trước khi thu hoạch để thúc đẩy quá trình chín, mặt ruộng khô ráo thuận lợi cho việc thu hoạch.
+
+Kỹ thuật điều tiết nước ngập khô xen kẽ trên ruộng lúa nhằm giúp nông dân đối phó với tình trạng thiếu nước nhưng không làm giảm năng suất lúa và quan trọng hơn hết, đây là biện pháp làm giảm phát thải khí nhà kính một cách nhanh nhất.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocSauSa20-25Ngay"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">nuoc20-25ngay.png</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#luongNuoc"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocSauSa20-25Ngay"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Lúc này cây lúa bắt đầu bước vào thời kỳ đẻ nhánh. Chỉ cần mực nước săm sắp mặt ruộng .Nước ngập sâu cây lúa đẻ nhánh yếu.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocSauSa20-25Ngay"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Nhu cầu nước tưới sau xạ 20 - 25 ngày</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#article"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocSauSa5-20Ngay"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Trong suốt thời gian sinh trưởng, cây lúa cần phải được cung cấp đầy đủ các yếu tố như: nước, ánh sáng, dinh dưỡng, không khí,… để cây lúa có thể sinh trưởng và phát triển tốt. Trong đó, nước là yếu tố cây lúa sử dụng nhiều nhất trong suốt thời kỳ sinh trưởng. Tuy nhiên, không phải lúc nào cây lúa cũng cần nước ngập trên ruộng mà có lúc cây lúa chỉ cần đủ ẩm sẽ tốt hơn. Vì thế, chế độ cung cấp nước ngập khô xen kẽ đã tiết kiệm lượng nước đáng kể, làm tăng độ cứng của gốc lúa, chống ngã đổ tốt; hạn chế sự phát triển chồi vô hiệu, tập trung dinh dưỡng nuôi các nhánh hữu hiệu, tạo điều kiện cho cây lúa sinh trưởng tốt hơn. Tùy theo từng giai đoạn lúa mà điều tiết lượng nước cho phù hợp.
+
+- Giai đoạn lúa từ 0-7 ngày sau sạ: giai đoạn này chỉ cần đất đủ ẩm mầm lúa sẽ phát triển tốt hơn, rễ bắt đầu phát triển bám vào đất.
+
+- Giai đoạn từ 7-20 ngày sau sạ: giữ mực nước cao khoảng 1-3cm là đủ, duy trì liên tục mực nước này trên ruộng để ngăn cản sự phát triển của cỏ dại.
+
+- Giai đoạn từ 20-40 ngày sau sạ: Đây là giai đoạn lúa bắt đầu đẻ nhánh đến nhảy chồi tối đa, quyết định số bông/m2, là một trong những yếu tố quan trọng hình thành năng suất. Giai đoạn đẻ nhánh rất cần nước nhưng nếu quá nhiều nước sẽ hạn chế sự đẻ nhánh. Vì thế, trong giai đoạn này mực nước trong ruộng chỉ cần xâm xấp, đặc biệt giai đoạn 30-40 ngày sau sạ, nước trong ruộng chỉ cần đủ ẩm là được, khi mực nước thấp hơn mặt ruộng 15cm (đặt ống nhựa có đục lổ trên hàng, bên trong có chia vạch 5 cm để theo dõi) thì mới cho nước vào. Mực nước thấp trên ruộng sẽ giúp rễ lúa ăn sâu vào trong đất và hô hấp tốt hơn, giúp cây lúa chống đỗ ngã, hạn chế chồi vô hiệu. Ngoài ra, ở mực nước thấp, hạch nấm khô vằn sẽ không phát tán trong ruộng và bệnh ít lây lan.
+
+- Giai đoạn từ 40-60 ngày sau sạ: giai đoạn 40-45 ngày, nông dân bón đón đòng, bơm nước vào trong ruộng 1-3 cm, với mực nước này bón phân sẽ tốt vì độ hòa loãng của phân không cao, tránh ánh sáng tác động trực tiếp làm phân bón bị phân huỷ và bốc hơi nhất là phân đạm. Sau đó, giữ mực nước 2-3cm duy trì trên ruộng, không để ruộng bị khô, vì giai đoạn này lúa no đòng, chuẩn bị trổ rất cần nước.
+
+- Giai đoạn từ 60-70 ngày sau sạ: Giai đoạn này lúa bắt đầu trổ, cần giữ nước 3-5cm duy trì liên tục cho cây lúa trổ bông và thụ phấn, thụ tinh hoàn chỉnh và giữ nước 10 ngày sau trổ. Giai đoạn này nếu thiếu nước hạt lúa dễ bị lép.
+
+- Giai đoạn từ 70 ngày sau sạ đến khi chín: Thời kỳ này lúa giai đoạn ngậm sữa, vào chắc và chín nên chỉ cần đất đủ ẩm. Rút cạn nước 10 ngày trước khi thu hoạch để thúc đẩy quá trình chín, mặt ruộng khô ráo thuận lợi cho việc thu hoạch.
+
+Kỹ thuật điều tiết nước ngập khô xen kẽ trên ruộng lúa nhằm giúp nông dân đối phó với tình trạng thiếu nước nhưng không làm giảm năng suất lúa và quan trọng hơn hết, đây là biện pháp làm giảm phát thải khí nhà kính một cách nhanh nhất.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocSauSa5-20Ngay"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">nuoc5-20ngay.png</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#luongNuoc"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocSauSa5-20Ngay"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Sau sạ từ 5-7 ngày: Cây lúa cần lớp nước mỏng săm sắp mặt ruộng . Lúc này ruộng bị khô sẽ tổn thương đến rễ lúa, nên không thể để ruộng khô nứt nẻ. Để bộ rễ lúa không tổn thương, phải luôn duy trì lớp nước trên mặt ruộng đồng thời có tác dụng cho cây lúa hấp thụ phân bón dễ dàng và ém không cho hạt cỏ dại mọc. Duy trì lớp nước ở mặt ruộng cho đến khi cây lúa được 20 ngày sau gieo.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#QuyTrinhTuoiNuocSauSa5-20Ngay"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Quy trình tưới nước sau sạ 5-20 ngày</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Nhu cầu  nước tưới  sau sạ 5-20 ngày</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
         <NamedIndividual IRI="#QuyTrinhTuoiNuocTro"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Mực nước trong ruộng từ 5-10cm là vừa. Ruộng khô lúa sẽ bị lép nhiều, ruộng ngập nước sâu (trên 20 cm), ảnh hưởng đến trỗ bông, thậm chí bị thối đòng.</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Trong suốt thời gian sinh trưởng, cây lúa cần phải được cung cấp đầy đủ các yếu tố như: nước, ánh sáng, dinh dưỡng, không khí,… để cây lúa có thể sinh trưởng và phát triển tốt. Trong đó, nước là yếu tố cây lúa sử dụng nhiều nhất trong suốt thời kỳ sinh trưởng. Tuy nhiên, không phải lúc nào cây lúa cũng cần nước ngập trên ruộng mà có lúc cây lúa chỉ cần đủ ẩm sẽ tốt hơn. Vì thế, chế độ cung cấp nước ngập khô xen kẽ đã tiết kiệm lượng nước đáng kể, làm tăng độ cứng của gốc lúa, chống ngã đổ tốt; hạn chế sự phát triển chồi vô hiệu, tập trung dinh dưỡng nuôi các nhánh hữu hiệu, tạo điều kiện cho cây lúa sinh trưởng tốt hơn. Tùy theo từng giai đoạn lúa mà điều tiết lượng nước cho phù hợp.
+
+- Giai đoạn lúa từ 0-7 ngày sau sạ: giai đoạn này chỉ cần đất đủ ẩm mầm lúa sẽ phát triển tốt hơn, rễ bắt đầu phát triển bám vào đất.
+
+- Giai đoạn từ 7-20 ngày sau sạ: giữ mực nước cao khoảng 1-3cm là đủ, duy trì liên tục mực nước này trên ruộng để ngăn cản sự phát triển của cỏ dại.
+
+- Giai đoạn từ 20-40 ngày sau sạ: Đây là giai đoạn lúa bắt đầu đẻ nhánh đến nhảy chồi tối đa, quyết định số bông/m2, là một trong những yếu tố quan trọng hình thành năng suất. Giai đoạn đẻ nhánh rất cần nước nhưng nếu quá nhiều nước sẽ hạn chế sự đẻ nhánh. Vì thế, trong giai đoạn này mực nước trong ruộng chỉ cần xâm xấp, đặc biệt giai đoạn 30-40 ngày sau sạ, nước trong ruộng chỉ cần đủ ẩm là được, khi mực nước thấp hơn mặt ruộng 15cm (đặt ống nhựa có đục lổ trên hàng, bên trong có chia vạch 5 cm để theo dõi) thì mới cho nước vào. Mực nước thấp trên ruộng sẽ giúp rễ lúa ăn sâu vào trong đất và hô hấp tốt hơn, giúp cây lúa chống đỗ ngã, hạn chế chồi vô hiệu. Ngoài ra, ở mực nước thấp, hạch nấm khô vằn sẽ không phát tán trong ruộng và bệnh ít lây lan.
+
+- Giai đoạn từ 40-60 ngày sau sạ: giai đoạn 40-45 ngày, nông dân bón đón đòng, bơm nước vào trong ruộng 1-3 cm, với mực nước này bón phân sẽ tốt vì độ hòa loãng của phân không cao, tránh ánh sáng tác động trực tiếp làm phân bón bị phân huỷ và bốc hơi nhất là phân đạm. Sau đó, giữ mực nước 2-3cm duy trì trên ruộng, không để ruộng bị khô, vì giai đoạn này lúa no đòng, chuẩn bị trổ rất cần nước.
+
+- Giai đoạn từ 60-70 ngày sau sạ: Giai đoạn này lúa bắt đầu trổ, cần giữ nước 3-5cm duy trì liên tục cho cây lúa trổ bông và thụ phấn, thụ tinh hoàn chỉnh và giữ nước 10 ngày sau trổ. Giai đoạn này nếu thiếu nước hạt lúa dễ bị lép.
+
+- Giai đoạn từ 70 ngày sau sạ đến khi chín: Thời kỳ này lúa giai đoạn ngậm sữa, vào chắc và chín nên chỉ cần đất đủ ẩm. Rút cạn nước 10 ngày trước khi thu hoạch để thúc đẩy quá trình chín, mặt ruộng khô ráo thuận lợi cho việc thu hoạch.
+
+Kỹ thuật điều tiết nước ngập khô xen kẽ trên ruộng lúa nhằm giúp nông dân đối phó với tình trạng thiếu nước nhưng không làm giảm năng suất lúa và quan trọng hơn hết, đây là biện pháp làm giảm phát thải khí nhà kính một cách nhanh nhất.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocTro"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">giaidoantro.png</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#luongNuoc"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocTro"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ở giai đoạn lúa trỗ, mực nước trong ruộng từ 5-10cm là vừa. Ruộng khô lúa sẽ bị lép nhiều, ruộng ngập nước sâu (trên 20 cm), ảnh hưởng đến trỗ bông, thậm chí bị thối đòng.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#QuyTrinhTuoiNuocTro"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Quy trình tưới nước giai đoạn trỗ</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Nhu cầu nước tưới giai đoạn trỗ</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
         <NamedIndividual IRI="#QuyTrinhTuoiNuocTrongDeNhanh"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Mực nước trong ruộng từ 3-5cm</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Trong suốt thời gian sinh trưởng, cây lúa cần phải được cung cấp đầy đủ các yếu tố như: nước, ánh sáng, dinh dưỡng, không khí,… để cây lúa có thể sinh trưởng và phát triển tốt. Trong đó, nước là yếu tố cây lúa sử dụng nhiều nhất trong suốt thời kỳ sinh trưởng. Tuy nhiên, không phải lúc nào cây lúa cũng cần nước ngập trên ruộng mà có lúc cây lúa chỉ cần đủ ẩm sẽ tốt hơn. Vì thế, chế độ cung cấp nước ngập khô xen kẽ đã tiết kiệm lượng nước đáng kể, làm tăng độ cứng của gốc lúa, chống ngã đổ tốt; hạn chế sự phát triển chồi vô hiệu, tập trung dinh dưỡng nuôi các nhánh hữu hiệu, tạo điều kiện cho cây lúa sinh trưởng tốt hơn. Tùy theo từng giai đoạn lúa mà điều tiết lượng nước cho phù hợp.
+
+- Giai đoạn lúa từ 0-7 ngày sau sạ: giai đoạn này chỉ cần đất đủ ẩm mầm lúa sẽ phát triển tốt hơn, rễ bắt đầu phát triển bám vào đất.
+
+- Giai đoạn từ 7-20 ngày sau sạ: giữ mực nước cao khoảng 1-3cm là đủ, duy trì liên tục mực nước này trên ruộng để ngăn cản sự phát triển của cỏ dại.
+
+- Giai đoạn từ 20-40 ngày sau sạ: Đây là giai đoạn lúa bắt đầu đẻ nhánh đến nhảy chồi tối đa, quyết định số bông/m2, là một trong những yếu tố quan trọng hình thành năng suất. Giai đoạn đẻ nhánh rất cần nước nhưng nếu quá nhiều nước sẽ hạn chế sự đẻ nhánh. Vì thế, trong giai đoạn này mực nước trong ruộng chỉ cần xâm xấp, đặc biệt giai đoạn 30-40 ngày sau sạ, nước trong ruộng chỉ cần đủ ẩm là được, khi mực nước thấp hơn mặt ruộng 15cm (đặt ống nhựa có đục lổ trên hàng, bên trong có chia vạch 5 cm để theo dõi) thì mới cho nước vào. Mực nước thấp trên ruộng sẽ giúp rễ lúa ăn sâu vào trong đất và hô hấp tốt hơn, giúp cây lúa chống đỗ ngã, hạn chế chồi vô hiệu. Ngoài ra, ở mực nước thấp, hạch nấm khô vằn sẽ không phát tán trong ruộng và bệnh ít lây lan.
+
+- Giai đoạn từ 40-60 ngày sau sạ: giai đoạn 40-45 ngày, nông dân bón đón đòng, bơm nước vào trong ruộng 1-3 cm, với mực nước này bón phân sẽ tốt vì độ hòa loãng của phân không cao, tránh ánh sáng tác động trực tiếp làm phân bón bị phân huỷ và bốc hơi nhất là phân đạm. Sau đó, giữ mực nước 2-3cm duy trì trên ruộng, không để ruộng bị khô, vì giai đoạn này lúa no đòng, chuẩn bị trổ rất cần nước.
+
+- Giai đoạn từ 60-70 ngày sau sạ: Giai đoạn này lúa bắt đầu trổ, cần giữ nước 3-5cm duy trì liên tục cho cây lúa trổ bông và thụ phấn, thụ tinh hoàn chỉnh và giữ nước 10 ngày sau trổ. Giai đoạn này nếu thiếu nước hạt lúa dễ bị lép.
+
+- Giai đoạn từ 70 ngày sau sạ đến khi chín: Thời kỳ này lúa giai đoạn ngậm sữa, vào chắc và chín nên chỉ cần đất đủ ẩm. Rút cạn nước 10 ngày trước khi thu hoạch để thúc đẩy quá trình chín, mặt ruộng khô ráo thuận lợi cho việc thu hoạch.
+
+Kỹ thuật điều tiết nước ngập khô xen kẽ trên ruộng lúa nhằm giúp nông dân đối phó với tình trạng thiếu nước nhưng không làm giảm năng suất lúa và quan trọng hơn hết, đây là biện pháp làm giảm phát thải khí nhà kính một cách nhanh nhất.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocTrongDeNhanh"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">giaidoandenhanh.png</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#luongNuoc"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocTrongDeNhanh"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Mực nước trong ruộng từ 3-5cm</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#QuyTrinhTuoiNuocTrongDeNhanh"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Quy trình tưới nước trong giai đoạn đẻ nhánh</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Nhu cầu nước tưới  trong giai đoạn đẻ nhánh</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
@@ -5606,6 +6445,11 @@ Qui cách
 10gr x 10 gói</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#Staner_20WP"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Staner_20WP.jpg</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#luongThuoc"/>
         <NamedIndividual IRI="#Staner_20WP"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Lúa
@@ -5659,6 +6503,11 @@ Hoạt chất: Pyrazosulfuron Ethyl 10%
 Hãng SX: Cty Bảo vệ Thực vật Sài Gòn</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#Star_10WP"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Star_10WP.png</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#luongThuoc"/>
         <NamedIndividual IRI="#Star_10WP"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Nếu pha với nước để phun: 5gr/bình 8L. Phun 2 bình cho 500m², 4 bình cho 1000m²
@@ -5686,6 +6535,58 @@ Hãng SX: Cty Bảo vệ Thực vật Sài Gòn</Literal>
         <DataProperty IRI="#triSauBenhHai"/>
         <NamedIndividual IRI="#Star_10WP"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Là thuốc trừ cỏ nội hấp, chọn lọc có hiệu lực diệt trừ cao với hầu hết các loại cỏ phổ biến trong ruộng như cỏ lồng vực, cỏ đuôi phụng, cỏ cháo, cỏ chác, cỏ năn, rau mác,rau bợ…; an toàn với lúa</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#article"/>
+        <NamedIndividual IRI="#TAIYOU_20SC"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">QUY CÁCH
+
+Gói 25 ml, chai 250 ml, chai 500 ml
+
+THÀNH PHẦN
+
+Fenoxanil..... 200 g/lít
+
+Phụ gia...vừa đủ 1 lít
+
+TÍNH NĂNG TÁC DỤNG
+
+TAIYOU 20SC với hoạt chất thế hệ mới Fenoxanil thuộc nhóm Phenoxamide là thuốc đặc trị bệnh đạo ôn lúa do nấm Pyricularia oryzae gây ra.
+TAIYOU 20SC ức chế lây nhiễm và chống phát sinh bào tử nấm nên có hiệu lực rất mạnh để đặc trị đạo ôn lá (cháy lá) và đạo ôn cổ bong (thối cổ gié) gây hại lúa.
+TAIYOU 20SC có tác dụng nội hấp mạnh, có thể di chuyển đến khắp các bộ phận của cây, chặn đứng nguồn bệnh và bảo vệ lá non nên có tác dụng phòng và trừ bệnh đạo ôn với hiệu quả rất cao ở tất cả các giai đoạn sinh trường, phát triển của cây lá lúa khi gieo sạ đến thu hoạch.
+TAIYOU 20SC thành phẩm có dạng huyền phù đậm đặc với ưu điểm nổi trội là bám dính tốt, không sợ bị mưa rửa trôi
+TAIYOU 20SC giúp cây tăng cường sản sinh Phytoalexin, tăng đề khánh bệnh, tránh bệnh tái phát.
+TAIYOU 20SC có tác dụng dưỡng cây, xanh to lá đòng. An toàn với môi trường và thiên địch.
+HƯỚNG DẪN SỬ DỤNG
+
+Có thể phun hỗn hợp
+
+TAIYOU 20SC + HỢP TRÍ CASI (20ml + 20 ml/bình 16 lít), để giúp cây lúa chắc khỏe, lá cứng thẳng, tăng để kháng bệnh, phòng trị dứt bệnh, tránh bệnh tái phát, không phải phun xịt nhiều lần.
+TAIYOU 20SC + TEPRO SUPER 300EC hay KEVIAR 325SC ( 20 ml + 15 ml/ bình 16 lít) để vừa phòng trị đạo ôn cổ bông và phòng trừ lem lém hạt do nấm.
+TAIYOU 20SC + AGRILIFE 100SL (20 ml + 20 ml/bình 16 lít), phun trong trường hợp trên ruộng bi bệnh đạo ôn và bệnh do vi khuẩn gây hại (bạc lá vi khuẩn, thối bẹ vi khuẩn hay lem lét hạt do vi khuẩn).</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#TAIYOU_20SC"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">TAIYOU_20SC.jpg</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#luongThuoc"/>
+        <NamedIndividual IRI="#TAIYOU_20SC"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">TAIYOU 20SC + HỢP TRÍ CASI (20ml + 20 ml/bình 16 lít), để giúp cây lúa chắc khỏe, lá cứng thẳng, tăng để kháng bệnh, phòng trị dứt bệnh, tránh bệnh tái phát, không phải phun xịt nhiều lần.
+TAIYOU 20SC + TEPRO SUPER 300EC hay KEVIAR 325SC ( 20 ml + 15 ml/ bình 16 lít) để vừa phòng trị đạo ôn cổ bông và phòng trừ lem lém hạt do nấm.
+TAIYOU 20SC + AGRILIFE 100SL (20 ml + 20 ml/bình 16 lít), phun trong trường hợp trên ruộng bi bệnh đạo ôn và bệnh do vi khuẩn gây hại (bạc lá vi khuẩn, thối bẹ vi khuẩn hay lem lét hạt do vi khuẩn).</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#TAIYOU_20SC"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thuốc TAIYOU 20SC</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#thanhPhan"/>
+        <NamedIndividual IRI="#TAIYOU_20SC"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Fenoxanil..... 200 g/lít
+Phụ gia...vừa đủ 1 lít</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
@@ -5847,6 +6748,11 @@ Nhà sản xuất: Fertiagro Pte Ltd
 [li]Cơ chế tác động: Ngăn cản sự tổng hợp cellulose vách tế bào. Thuốc được hấp thu qua mầm hạt, rễ và lá, vận chuyển trong mạch gỗ và libe theo 2 chiều lên và xuống[/li]</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#ThuocADORE_25SC"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">adore.gif</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#ThuocADORE_25SC"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">THUỐC TRỪ CỎ ADORE 25SC</Literal>
@@ -5890,6 +6796,11 @@ Hoạt chất	Thiamethoxam
 Qui cách	1 g, 2 g
 Độ độc	Nhóm 3
 Cơ chế tác động	Tiếp xúc, vị độc, bảo vệ tức thì cây trồng ngay sau khi xử lý [Thuoc]thuốc[/Thuoc]</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#ThuocActara_25WWG"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Actara 25 WG.png</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#luongThuoc"/>
@@ -5949,6 +6860,11 @@ Loại [Thuoc]thuốc[/Thuoc] :	[Thuoc]thuốc[/Thuoc] trừ sâu
 Nhóm [Thuoc]thuốc[/Thuoc] :	Neonicotinoit
 Danh mục [Thuoc]thuốc[/Thuoc] :	Được phép sử dụng
 Dạng [Thuoc]thuốc[/Thuoc] :	050EC: Nhũ dầu. 200OD: Dung dịch</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#ThuocAdmire_50EC"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ADMIRE_50EC.png</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#luongThuoc"/>
@@ -6136,6 +7052,35 @@ Trà	Đốm lá
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">vụ hè thu</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#article"/>
+        <NamedIndividual IRI="#VuThuDong"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Theo kinh nghiệm của nhiều bà con nông dân,[VuMua=VuThuDong] vụ thu đông [/VuMua] (vụ 3) là vụ lúa dễ làm và thường có chi phí đầu tư thấp hơn nên nếu trúng mùa sẽ có lãi cao hơn so với vụ đông xuân và[VuMua=VuHeThu]vụ hè thu[/VuMua]. Tuy nhiên trong thực tế vụ 3 cũng thường gặp tình trạng lúa bị ngộ độc hữu cơ và nguy cơ bị rầy nâu, vàng lùn, lùn xoắn lá và sâu bệnh gây hại. Theo tập quán, khi thu hoạch lúa [VuMua=VuHeThu]vụ hè thu[/VuMua], nông dân thường giữ đất ngập nước để đất mềm nhằm thu hoạch xong sẽ dùng máy trục nhẹ một lần rồi sạ luôn. Cách làm này dễ dẫn đến tình trạng lúa bị ngộ độc hữu cơ, cây kém phát triển, năng suất thấp, thậm chí cây lụi đi và không cho thu hoạch nếu bị nặng và không được khắc phục đúng cách và kịp thời. Triệu chứng lúa bị ngộ độc hữu cơ cũng tương tự lúa bị vàng lùn nhưng có thêm biểu hiện rễ lúa bị thâm đen, rất mềm và bị thối, đất có mùi hôi khó chịu và khi lội xuống có nhiều bọt khí nổi lên. Các triệu chứng này biểu hiện rõ nhất ở thời kỳ 18-25 ngày sau khi sạ. Nguyên nhân là do thân và gốc lúa còn tươi bị vùi lấp ngay sau thu hoạch sẽ bị phân hủy trong điều kiện yếm khí sinh ra các axit hữu cơ và các khí độc. Chính axit hữu cơ làm đất chua, các khí độc trong đất nhiều và không đủ oxi làm lúa bị nghẹt rễ, thối rễ, rễ không hút được dinh dưỡng nên cây lúa vàng dần, lụi đi và chết. Nếu lúa bị ngộ độc hữu cơ như vậy cần bón 0,5-1 tấn vôi/ha hoặc bón 150-200kg lân thiên nhiên Indo Guano (có hàm lượng lân, canxi và silic hoạt hóa cao). Canxi và silic giúp trung hòa axit trong đất, giảm chua. Lân sẽ làm giảm độc tố sắt, nhôm gây hại rễ lúa, đồng thời kích thích lúa đâm rễ mới. Ngay sau đó tiến hành rút nước và phun hoạt chất chống ngộ độc hữu cơ Penac P của Đức cùng với phân bón lá Đầu Trâu 005 định kỳ 7 ngày/lần nhằm giải độc hữu cơ và cung cấp dinh dưỡng cấp thời cho lúa. Khi đất se mặt cũng đồng thời rễ mới đã phát triển, lá xanh trở lại, tiến hành bơm nước và bón bổ sung 150-200kg phân Đầu Trâu TE-01/ha. Sau sạ 40-45 ngày (lúa có đòng 1-2cm), bón thúc đòng 100kg phân Đầu Trâu TE-02/ha. Phun phân bón lá Đầu Trâu 007. Sau khi trỗ hoàn toàn, phun phân bón lá Đầu Trâu 009 định kỳ 7-10 ngày/lần.
+Để sản xuất lúa vụ 3 thắng lợi cần áp dụng các biện pháp thâm canh tổng hợp theo các bước sau: Rút nước phơi ruộng ngay từ lúc sắp thu hoạch [VuMua=VuHeThu]vụ hè thu[/VuMua] nhằm làm đất thoáng khí. Khi thu hoạch cần cắt gần sát gốc lúa để thu bớt thân lá ra khỏi ruộng. Có thể cày lật đất và để ải 2-3 tuần, sau đó mới bơm nước và bừa trục. Nếu có điều kiện nên bón lót vôi hoặc 150-200kg lân thiên nhiên Indo Guano/ha. Áp dụng sạ đồng loạt theo lịch thời vụ của ngành nông nghiệp để né rầy và sạ hàng để tiết kiệm chi phí giống. Sau sạ 5-7 ngày khi mặt ruộng đã se lại, cần bơm nước vào vừa đủ. Sau sạ 7-10 ngày, bón thúc lần 1 từ 100-150kg phân Đầu Trâu TE-01/ha. Sau sạ 15-20 ngày, tiến hành bón thúc đợt 2 bằng phân Đầu Trâu TE-01 với lượng 100-150kg/ha. Có thể bổ sung 0,5-1kg Penac P của Đức bằng cách trộn chung với phân bón gốc hay phun qua lá nhằm chống ngộ độc hữu cơ. Phun phân bón lá Đầu Trâu 005 định kỳ 7-10 ngày/lần nhằm giúp lúa đẻ nhánh khỏe, đẻ tập trung. Sau sạ 30-35 ngày cần rút nước trong ruộng để hạn chế lúa nảy thêm chồi vô hiệu, đồng thời giúp rễ lúa ăn sâu, cây cứng, khỏe. Sau sạ 40-45 ngày, lúa bắt đầu có đòng (đòng 1-2cm) tiến hành bón thúc đón đòng với lượng 100kg phân Đầu Trâu TE-02. Phun phân bón lá Đầu Trâu 007. Sau khi lúa trỗ thoát cần phun phân bón lá Đầu Trâu 009 định kỳ 7-10 ngày/lần nhằm dưỡng hạt, giúp sáng hạt. Khi lúa chín sáp, tiến hành rút nước nhằm kích thích rễ lúa ăn sâu, cây cứng, chống đổ tốt và để khi lúa chín mặt ruộng vừa đủ cứng giúp thu hoạch bằng máy được dễ dàng. Thăm đồng thường xuyên để phát hiện sâu bệnh và phòng trừ kịp thời. Áp dụng các biện pháp tổng hợp trên, chắc chắn sẽ tránh được ngộ độc hữu cơ và lúa vụ 3 sẽ trúng, giá thành sản xuất lúa thấp, nông dân có nhiều lợi nhuận.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dacDiem"/>
+        <NamedIndividual IRI="#VuThuDong"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Vụ lúa [VuMua=VuThuDong] thu đông [/VuMua] mưa nhiều, khó rút nước và do tranh thủ mùa vụ nên việc phòng trị ngộ độc hữu cơ cho lúa gặp nhiều khó khăn như sau:
+
+-          Khó “ngăn chận” độc chất hữu cơ sản sinh ra trong đất. Để ngăn cản việc sản sinh độc chất hữu cơ thì phải đốt rơm rạ trước khi làm đất hoặc cày vùi rơm rạ khi đất khô ráo. Nhưng trong vụ [VuMua=VuThuDong] vụ thu đông [/VuMua] mưa nhiều không đốt rơm rạ được, hầu hết các ruộng đều được trục vùi rơm rạ trong điều kiện đất ngập nước. Quá trình phân hủy rơm rạ trong điều kiện thiếu không khí như vậy sẽ không tránh khỏi độc chất hữu cơ được tạo ra trong đất.
+
+-          Khó “né tránh” cho cây lúa ít tiếp xúc với độc chất hữu cơ. Trong trường hợp không thể ngăn cản việc sản sinh độc chất cơ, thì việc phải làm tiếp theo là sau khi trục vùi rơm rạ phải để cho rơm rạ phân hủy ít nhất 3 đến tuần mới bắt đầu làm đất xuống giống. Tuy nhiên, do sợ lũ, hạn, mặn cuối vụ nên ở [VuMua=VuThuDong] vụ thu đông [/VuMua] thường phải tranh thủ xuống giống ngay sau khi làm đất. Việc làm nầy chắc chắn cây lúa phải đối mặt với độc chất hữu cơ mà không thể nào né tránh được.
+
+ 
+
+-          Khó “hóa giải” độc chất hữu cơ trong đất. Trong trường hợp cây lúa phải đối mặt với độc chất hữu cơ thì phải hóa giải nhanh chóng các độc chất nầy bằng cách chủ động rút nước 2 lần: khi cây lúa được 15 ngày và 30 ngày sau khi sạ để loại bỏ độc chất. Để rút nước được nhanh nên làm nhiều rãnh thoát nước trong ruộng lúa ngay sau khi làm đất. Khi rút nước, cần phải để cho đất nứt mặt cho độc chất hữu cơ bay ra khỏi đất (độc chất hữu cơ hầu hết ở thể khí như khí H2S, C2H4, CH4, …). Tuy nhiên, việc làm nầy khó thực hiện do trong [VuMua=VuThuDong] vụ thu đông [/VuMua] mưa nhiều và khó rút nước cho ráo mặt đất.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#VuThuDong"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">vụ thu đông</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#thoiGianBatDauVuMua"/>
+        <NamedIndividual IRI="#VuThuDong"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thời gian gieo trồng từ ngày 1 -&gt; 15/9 hàng năm</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#dacTinhCuaThuoc"/>
         <NamedIndividual IRI="#dana-win_12.5_WP"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">là [Thuoc]thuốc[/Thuoc] trừ nấm có tính nội hấp ,ức chế cao , phổ tác dụng rộng</Literal>
@@ -6256,6 +7201,10 @@ Trà	Đốm lá
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">7 ngày</Literal>
     </DataPropertyAssertion>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#CoHienTuong"/>
+        <Class IRI="#Thuoc"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#coGiaiDoan"/>
         <Class IRI="#GiaiDoan"/>
     </ObjectPropertyDomain>
@@ -6274,6 +7223,7 @@ Trà	Đốm lá
         <ObjectProperty IRI="#coThuoc"/>
         <ObjectUnionOf>
             <Class IRI="#Benh"/>
+            <Class IRI="#QuyTrinh"/>
             <Class IRI="#TacNhanGayHai"/>
         </ObjectUnionOf>
     </ObjectPropertyDomain>
@@ -6281,9 +7231,14 @@ Trà	Đốm lá
         <ObjectProperty IRI="#xuatHienOGiaiDoan"/>
         <ObjectUnionOf>
             <Class IRI="#Benh"/>
+            <Class IRI="#HienTuong"/>
             <Class IRI="#TacNhanGayHai"/>
         </ObjectUnionOf>
     </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#CoHienTuong"/>
+        <Class IRI="#HienTuong"/>
+    </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#coGiaiDoan"/>
         <Class IRI="#QuyTrinh"/>
@@ -6336,7 +7291,10 @@ Trà	Đốm lá
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#dacTinhNongHoc"/>
-        <Class IRI="#GiongLua"/>
+        <ObjectUnionOf>
+            <Class IRI="#GiongLua"/>
+            <Class IRI="#Thuoc"/>
+        </ObjectUnionOf>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#definition"/>
@@ -6346,6 +7304,7 @@ Trà	Đốm lá
         <DataProperty IRI="#denNgay"/>
         <ObjectUnionOf>
             <Class IRI="#GiaiDoan"/>
+            <Class IRI="#QuyTrinh"/>
             <Class IRI="#QuyTrinhBonPhan"/>
             <Class IRI="#QuyTrinhKichThich"/>
         </ObjectUnionOf>
@@ -6355,12 +7314,20 @@ Trà	Đốm lá
         <Class abbreviatedIRI="owl:Thing"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#khaiNiem"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#lieuLuong"/>
         <Class IRI="#Thuoc"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#luongNuoc"/>
-        <Class IRI="#Thuoc"/>
+        <ObjectUnionOf>
+            <Class IRI="#GiaiDoan"/>
+            <Class IRI="#QuyTrinh"/>
+            <Class IRI="#Thuoc"/>
+        </ObjectUnionOf>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#luongPhanBon"/>
@@ -6368,7 +7335,10 @@ Trà	Đốm lá
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#luongThuoc"/>
-        <Class IRI="#Thuoc"/>
+        <ObjectUnionOf>
+            <Class IRI="#TacNhanGayHai"/>
+            <Class IRI="#Thuoc"/>
+        </ObjectUnionOf>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#membershipFunction"/>
@@ -6380,7 +7350,15 @@ Trà	Đốm lá
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#nguonGoc"/>
-        <Class IRI="#GiongLua"/>
+        <ObjectUnionOf>
+            <Class IRI="#Benh"/>
+            <Class IRI="#GiongLua"/>
+            <Class IRI="#TacNhanGayHai"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nguyenNhan"/>
+        <Class IRI="#Benh"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#nhaSanXuat"/>
@@ -6393,6 +7371,10 @@ Trà	Đốm lá
     <DataPropertyDomain>
         <DataProperty IRI="#thanhPhan"/>
         <Class IRI="#Thuoc"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#thoiGianBatDauVuMua"/>
+        <Class IRI="#VuMua"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#thoiGianPhunThuoc"/>
@@ -6417,13 +7399,15 @@ Trà	Đốm lá
         <DataProperty IRI="#tuNgay"/>
         <ObjectUnionOf>
             <Class IRI="#GiaiDoan"/>
+            <Class IRI="#QuyTrinh"/>
             <Class IRI="#QuyTrinhBonPhan"/>
             <Class IRI="#QuyTrinhKichThich"/>
+            <Class IRI="#VuMua"/>
         </ObjectUnionOf>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#tuNgayCachLy"/>
-        <Class IRI="#Thuoc"/>
+        <Class abbreviatedIRI="owl:Thing"/>
     </DataPropertyDomain>
     <DataPropertyRange>
         <DataProperty IRI="#article"/>
@@ -6466,6 +7450,10 @@ Trà	Đốm lá
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="#khaiNiem"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#lieuLuong"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
@@ -6497,6 +7485,10 @@ Trà	Đốm lá
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="#nguyenNhan"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#nhaSanXuat"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
@@ -6506,6 +7498,10 @@ Trà	Đốm lá
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#thanhPhan"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#thoiGianBatDauVuMua"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -6546,6 +7542,11 @@ Trà	Đốm lá
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Co</IRI>
         <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cỏ</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CoHienTuong</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">chữa hiện tượng bệnh</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6670,7 +7671,12 @@ Trà	Đốm lá
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#QuyTrinhTuoiNuoc</IRI>
-        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Quy trình tưới nước</Literal>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Nhu cầu nước tưới</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#QuyTrinhTuoiNuocChinHoanToan</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Nhu cầu nước tưới</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6759,6 +7765,11 @@ Trà	Đốm lá
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#dacDiemKichThich</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Đặc điểm kích thích</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#dacTinhCuaThuoc</IRI>
         <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">đặc tính của thuốc</Literal>
     </AnnotationAssertion>
@@ -6805,7 +7816,7 @@ Trà	Đốm lá
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#luongThuoc</IRI>
-        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">lượng thuốc</Literal>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">lượng thuốc được sử dụng</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6824,6 +7835,11 @@ Trà	Đốm lá
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#nguyenNhan</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Nguyên Nhân Gây Bệnh</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#nhaSanXuat</IRI>
         <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">nhà sản xuất</Literal>
     </AnnotationAssertion>
@@ -6836,6 +7852,11 @@ Trà	Đốm lá
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#thanhPhan</IRI>
         <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">thành phần</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#thoiGianBatDauVuMua</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">thời gian bắt đầu vụ mùa</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
