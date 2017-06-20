@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.RegularExpressions;
 using JetBrains.Annotations;
 using Microsoft.AspNetCore.Mvc;
 using RiceDoctor.OntologyManager;
@@ -34,48 +33,44 @@ namespace RiceDoctor.WebApp.Controllers
 
             ViewData["Keywords"] = keywords;
 
-            var unaccentKeywords = keywords.ToLower().RemoveAccents();
             var results = new List<Tuple<string, QueryType, IReadOnlyCollection<object>>>();
 
             foreach (var query in _queryManager.Queries)
             {
-                var pattern = query.Node.ToString();
-                var regex = new Regex(pattern);
-                var match = regex.Match(unaccentKeywords);
-                if (match.Success)
+                var matchResults = query.Match(keywords);
+                if (matchResults != null)
                 {
-                    for (var i = 1; i < match.Groups.Count; ++i)
+                    for (var i = 0; i < matchResults.Count; ++i)
                     {
-                        var value = match.Groups[i].Value;
-                        var resultTypes = query.ResultTypes[i - 1];
+                        var resultTypes = query.ResultTypes[i];
                         foreach (var resultType in resultTypes)
                             switch (resultType)
                             {
                                 case QueryType.Class:
                                     var classes = _ontologyManager.GetSubClasses("Thing", GetAll);
                                     var resultClasses = classes
-                                        .Where(cls => cls.Label?.ToLower().RemoveAccents().Contains(value)
+                                        .Where(cls => cls.Label?.ToLower().RemoveAccents().Contains(matchResults[i])
                                                       == true ||
-                                                      cls.Id.ToLower().RemoveAccents().Contains(value))
+                                                      cls.Id.ToLower().RemoveAccents().Contains(matchResults[i]))
                                         .ToList();
-                                    if (resultClasses.Count == 1 && match.Groups.Count == 2)
+                                    if (resultClasses.Count == 1 && matchResults.Count == 1)
                                         return RedirectToAction("Class", "Ontology",
                                             new {className = resultClasses.First().Id, keywords});
                                     else if (resultClasses.Count > 1)
                                         results.Add(
-                                            new Tuple<string, QueryType, IReadOnlyCollection<object>>(value,
+                                            new Tuple<string, QueryType, IReadOnlyCollection<object>>(matchResults[i],
                                                 QueryType.Class, resultClasses));
                                     break;
 
                                 case QueryType.Individual:
-                                    var searchIndividuals = _ontologyManager.SearchIndividuals(value);
+                                    var searchIndividuals = _ontologyManager.SearchIndividuals(matchResults[i]);
                                     if (searchIndividuals != null)
                                     {
-                                        if (searchIndividuals.Count == 1 && match.Groups.Count == 2)
+                                        if (searchIndividuals.Count == 1 && matchResults.Count == 1)
                                             return RedirectToAction("Individual", "Ontology",
                                                 new {individualName = searchIndividuals.First().Id, keywords});
                                         results.Add(
-                                            new Tuple<string, QueryType, IReadOnlyCollection<object>>(value,
+                                            new Tuple<string, QueryType, IReadOnlyCollection<object>>(matchResults[i],
                                                 QueryType.Individual, searchIndividuals));
                                     }
                                     break;
@@ -83,32 +78,32 @@ namespace RiceDoctor.WebApp.Controllers
                                 case QueryType.Relation:
                                     var relations = _ontologyManager.GetRelations();
                                     var resultRelations = relations
-                                        .Where(r => r.Label?.ToLower().RemoveAccents().Contains(value)
+                                        .Where(r => r.Label?.ToLower().RemoveAccents().Contains(matchResults[i])
                                                     == true ||
-                                                    r.Id.ToLower().RemoveAccents().Contains(value))
+                                                    r.Id.ToLower().RemoveAccents().Contains(matchResults[i]))
                                         .ToList();
-                                    if (resultRelations.Count == 1 && match.Groups.Count == 2)
+                                    if (resultRelations.Count == 1 && matchResults.Count == 1)
                                         return RedirectToAction("Relation", "Ontology",
                                             new {relationName = resultRelations.First().Id, keywords});
                                     else if (resultRelations.Count > 1)
                                         results.Add(
-                                            new Tuple<string, QueryType, IReadOnlyCollection<object>>(value,
+                                            new Tuple<string, QueryType, IReadOnlyCollection<object>>(matchResults[i],
                                                 QueryType.Relation, resultRelations));
                                     break;
 
                                 case QueryType.Attribute:
                                     var attributes = _ontologyManager.GetAttributes();
                                     var resultAttributes = attributes
-                                        .Where(a => a.Label?.ToLower().RemoveAccents().Contains(value)
+                                        .Where(a => a.Label?.ToLower().RemoveAccents().Contains(matchResults[i])
                                                     == true ||
-                                                    a.Id.ToLower().RemoveAccents().Contains(value))
+                                                    a.Id.ToLower().RemoveAccents().Contains(matchResults[i]))
                                         .ToList();
-                                    if (resultAttributes.Count == 1 && match.Groups.Count == 2)
+                                    if (resultAttributes.Count == 1 && matchResults.Count == 1)
                                         return RedirectToAction("Attribute", "Ontology",
                                             new {attributeName = resultAttributes.First().Id, keywords});
                                     else if (resultAttributes.Count > 1)
                                         results.Add(
-                                            new Tuple<string, QueryType, IReadOnlyCollection<object>>(value,
+                                            new Tuple<string, QueryType, IReadOnlyCollection<object>>(matchResults[i],
                                                 QueryType.Attribute, resultAttributes));
                                     break;
                             }

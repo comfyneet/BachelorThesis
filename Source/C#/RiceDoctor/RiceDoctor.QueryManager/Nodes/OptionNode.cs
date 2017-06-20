@@ -23,6 +23,9 @@ namespace RiceDoctor.QueryManager
                 if (i != 0) builder.Append('|');
 
                 builder.Append((TextNode) ChildNodes[i]);
+
+                if (NextNode != null && !(NextNode is DiscardNode))
+                    builder.Append(" +");
             }
 
             builder.Append(")?");

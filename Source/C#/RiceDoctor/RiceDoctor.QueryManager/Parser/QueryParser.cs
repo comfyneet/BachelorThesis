@@ -62,9 +62,8 @@ namespace RiceDoctor.QueryManager
                 }
                 else if (CurrentToken.Type == Comma)
                 {
-                    Eat(Comma);
-                    var text = new TextNode(",");
-                    queryContainer.Append(text);
+                    var comma = ParseComma();
+                    queryContainer.Append(comma);
                 }
                 else if (CurrentToken.Type == Word)
                 {
@@ -247,6 +246,14 @@ namespace RiceDoctor.QueryManager
             Eat(Word);
 
             return (string) word;
+        }
+
+        [NotNull]
+        private CommaNode ParseComma()
+        {
+            Eat(Comma);
+
+            return new CommaNode();
         }
 
         private TextNode ParseText()

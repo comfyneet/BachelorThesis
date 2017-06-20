@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text.RegularExpressions;
 using RiceDoctor.InferenceEngine;
 using RiceDoctor.OntologyManager;
+using RiceDoctor.QueryManager;
 using RiceDoctor.RuleManager;
 using RiceDoctor.Shared;
 using static RiceDoctor.InferenceEngine.ResponseType;
@@ -21,14 +20,7 @@ namespace RiceDoctor.ConsoleApp
             var logger = new ConsoleLogger();
             Logger.OnLog += logger.Log;
 
-            var problemPath = Path.Combine(AppContext.BaseDirectory, @"..\..\..\..\Resources\query-rules.txt");
-            var problemData = File.ReadAllText(problemPath);
-            var x = new Manager(problemData).Queries;
-            var x1 = x.First();
-            var regex = new Regex(x1.Node.ToString());
-            var match = regex.Match("");
-
-            var (ruleManager, ontologyManager) = CreateEngine();
+            var (queryManager, ruleManager, ontologyManager) = CreateEngine();
 
             Console.WriteLine("Cac dang bai toan:");
             for (var i = 0; i < ruleManager.Problems.Count; ++i)
@@ -96,8 +88,11 @@ namespace RiceDoctor.ConsoleApp
             Console.ReadKey();
         }
 
-        private static (IRuleManager, IOntologyManager) CreateEngine()
+        private static (IQueryManager, IRuleManager, IOntologyManager) CreateEngine()
         {
+            var queryPath = Path.Combine(AppContext.BaseDirectory, @"..\..\..\..\Resources\query-rules.txt");
+            var queryData = File.ReadAllText(queryPath);
+
             var problemPath = Path.Combine(AppContext.BaseDirectory, @"..\..\..\..\Resources\problem-types.json");
             var problemData = File.ReadAllText(problemPath);
 
@@ -107,10 +102,11 @@ namespace RiceDoctor.ConsoleApp
             var relationPath = Path.Combine(AppContext.BaseDirectory, @"..\..\..\..\Resources\relation-rules.txt");
             var relationData = File.ReadAllText(relationPath);
 
+            IQueryManager queryManager = new Manager(queryData);
             IRuleManager ruleManager = new RuleManager.Manager(problemData, logicData, relationData);
             IOntologyManager ontologyManager = OntologyManager.Manager.Instance;
 
-            return (ruleManager, ontologyManager);
+            return (queryManager, ruleManager, ontologyManager);
         }
 
         private static Fact[] GetInputs()

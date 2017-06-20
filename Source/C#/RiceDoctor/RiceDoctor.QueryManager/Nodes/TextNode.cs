@@ -16,7 +16,9 @@ namespace RiceDoctor.QueryManager
 
         public override string ToString()
         {
-            return _words;
+            var words = _words.Split(' ');
+
+            return string.Join(" +", words);
         }
     }
 }
