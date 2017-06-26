@@ -44,6 +44,22 @@ namespace RiceDoctor.Shared
         }
 
         [NotNull]
+        public static string NonexistentDeclare([NotNull] string symbolName)
+        {
+            Check.NotEmpty(symbolName, nameof(symbolName));
+
+            return $"Symbol '{symbolName}' has not been declared.";
+        }
+
+        [NotNull]
+        public static string CannotDeclareAgain([NotNull] string symbolName)
+        {
+            Check.NotEmpty(symbolName, nameof(symbolName));
+
+            return $"Symbol '{symbolName}' has already been declared.";
+        }
+
+        [NotNull]
         public static string CannotSetAgain([NotNull] string valueName)
         {
             Check.NotEmpty(valueName, nameof(valueName));

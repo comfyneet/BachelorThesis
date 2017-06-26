@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\RiceDoctor.FuzzyManager\RiceDoctor.FuzzyManager.csproj" />
     <ProjectReference Include="..\RiceDoctor.InferenceEngine\RiceDoctor.InferenceEngine.csproj" />
     <ProjectReference Include="..\RiceDoctor.OntologyManager\RiceDoctor.OntologyManager.csproj" />
     <ProjectReference Include="..\RiceDoctor.QueryManager\RiceDoctor.QueryManager.csproj" />

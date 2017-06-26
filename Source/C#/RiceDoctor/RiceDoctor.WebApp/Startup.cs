@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using RiceDoctor.FuzzyManager;
 using RiceDoctor.OntologyManager;
 using RiceDoctor.QueryManager;
 using RiceDoctor.RuleManager;
@@ -47,6 +48,10 @@ namespace RiceDoctor.WebApp
             var queryData = File.ReadAllText(Path.Combine(AppContext.BaseDirectory,
                 @"..\..\..\..\Resources\query-rules.txt"));
             services.AddSingleton<IQueryManager>(new QueryManager.Manager(queryData));
+
+            var fuzzyData = File.ReadAllText(Path.Combine(AppContext.BaseDirectory,
+                @"..\..\..\..\Resources\fuzzy-model.txt"));
+            services.AddSingleton<IFuzzyManager>(new FuzzyManager.Manager(fuzzyData));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

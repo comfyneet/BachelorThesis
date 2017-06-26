@@ -19,7 +19,6 @@ namespace RiceDoctor.QueryManager
             Star = new QueryTokenType('*');
             Comma = new QueryTokenType(',');
             Word = new QueryTokenType("word");
-            Arrow = new QueryTokenType("->");
         }
 
         public QueryTokenType([NotNull] string name) : base(name)
@@ -62,9 +61,6 @@ namespace RiceDoctor.QueryManager
 
         [NotNull]
         public static QueryTokenType Comma { get; }
-
-        [NotNull]
-        public static QueryTokenType Arrow { get; }
 
         [NotNull]
         public static QueryTokenType Word { get; }

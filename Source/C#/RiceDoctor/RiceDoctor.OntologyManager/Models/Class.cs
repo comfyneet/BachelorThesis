@@ -22,7 +22,7 @@ namespace RiceDoctor.OntologyManager
         private bool _canGetDomainRelations;
         private bool _canGetRangeRelations;
         [CanBeNull] private IReadOnlyCollection<Individual> _directIndividuals;
-        [CanBeNull] private IReadOnlyCollection<Class> _directSubClasses;
+        [CanBeNull] private IReadOnlyList<Class> _directSubClasses;
         [CanBeNull] private IReadOnlyCollection<Class> _directSuperClasses;
         [CanBeNull] private IReadOnlyCollection<Relation> _domainRelations;
         [CanBeNull] private IReadOnlyCollection<Relation> _rangeRelations;
@@ -81,7 +81,7 @@ namespace RiceDoctor.OntologyManager
         }
 
         [CanBeNull]
-        public IReadOnlyCollection<Class> GetDirectSubClasses()
+        public IReadOnlyList<Class> GetDirectSubClasses()
         {
             if (_canGetDirectSubClasses) return _directSubClasses;
 
@@ -91,7 +91,7 @@ namespace RiceDoctor.OntologyManager
             return _directSubClasses;
         }
 
-        public void SetDirectSubClasses([CanBeNull] IReadOnlyCollection<Class> directSubClasses)
+        public void SetDirectSubClasses([CanBeNull] IReadOnlyList<Class> directSubClasses)
         {
             if (_canGetDirectSubClasses)
                 throw new InvalidOperationException(CoreStrings.CannotSetAgain(nameof(SetDirectSubClasses)));

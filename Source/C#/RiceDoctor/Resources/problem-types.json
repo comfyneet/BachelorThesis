@@ -1,14 +1,14 @@
 ﻿{
     "Problems": [
         {
-            "Type": "Biết Triệu chứng, tìm Tác nhân gây hại",
-            "GoalTypes": ["TacNhanGayHai"],
+            "Type": "Biết Triệu chứng, tìm Bệnh",
+            "GoalTypes": ["Benh"],
             "SuggestTypes": ["TrieuChung"]
         },
         {
-            "Type": "Biết Giai đoạn, tìm Tác nhân gây hại",
-            "GoalTypes": ["TacNhanGayHai"],
-            "SuggestTypes": ["GiaiDoan"]
+            "Type": "Biết Giai đoạn và Tác nhân gây hại, tìm Bệnh",
+            "GoalTypes": ["Benh"],
+            "SuggestTypes": ["GiaiDoan", "TacNhanGayHai"]
         }
     ]
 }

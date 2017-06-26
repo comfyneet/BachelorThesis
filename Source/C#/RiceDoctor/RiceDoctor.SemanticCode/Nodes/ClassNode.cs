@@ -11,6 +11,11 @@ namespace RiceDoctor.SemanticCode
 
             Class = className;
             AddAttribute("href", $"{SemanticParser.ClassLink}{Class}");
+
+            var icon = new TextContainerNode("span");
+            icon.AddAttribute("class", "glyphicon glyphicon-copyright-mark");
+            Prepend(new TextNode("&nbsp;"));
+            Prepend(icon);
         }
 
         [NotNull]

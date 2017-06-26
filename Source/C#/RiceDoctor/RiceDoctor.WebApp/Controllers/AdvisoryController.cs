@@ -5,6 +5,7 @@ using JetBrains.Annotations;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using RiceDoctor.FuzzyManager;
 using RiceDoctor.InferenceEngine;
 using RiceDoctor.OntologyManager;
 using RiceDoctor.RuleManager;
@@ -19,6 +20,7 @@ namespace RiceDoctor.WebApp.Controllers
 {
     public class AdvisoryController : Controller
     {
+        private readonly IFuzzyManager _fuzzyManager;
         private readonly IOntologyManager _ontologyManager;
         private readonly IRuleManager _ruleManager;
 
@@ -27,13 +29,16 @@ namespace RiceDoctor.WebApp.Controllers
 
         public AdvisoryController(
             [FromServices] [NotNull] IRuleManager ruleManager,
-            [FromServices] [NotNull] IOntologyManager ontologyManager)
+            [FromServices] [NotNull] IOntologyManager ontologyManager,
+            [FromServices] [NotNull] IFuzzyManager fuzzyManager)
         {
             Check.NotNull(ruleManager, nameof(ruleManager));
             Check.NotNull(ontologyManager, nameof(ontologyManager));
+            Check.NotNull(fuzzyManager, nameof(fuzzyManager));
 
             _ruleManager = ruleManager;
             _ontologyManager = ontologyManager;
+            _fuzzyManager = fuzzyManager;
         }
 
         public IActionResult Index()
@@ -58,9 +63,26 @@ namespace RiceDoctor.WebApp.Controllers
             if (string.IsNullOrWhiteSpace(inputs))
                 return RedirectToAction("Error", "Home", new {error = CoreStrings.MalformedArgument(nameof(inputs))});
             var inputList = inputs.Trim().Replace("\r\n", "\n").Split('\n');
-            var facts = new Fact[inputList.Length];
+            var facts = new List<Fact>();
             for (var i = 0; i < inputList.Length; ++i)
-                facts[i] = new IndividualFact(inputList[i].Split('=')[0], inputList[i].Split('=')[1]);
+            {
+                var name = inputList[i].Split('=')[0];
+                var value = inputList[i].Split('=')[1];
+                if (double.TryParse(value, out var number))
+                {
+                    var varSymbol = _fuzzyManager.Variables.FirstOrDefault(v => v.Id == name);
+                    if (varSymbol == null)
+                        return RedirectToAction("Error", "Home", new {error = CoreStrings.MalformedArgument(name)});
+
+                    var newTerms = varSymbol.Stmt.Execute(number);
+                    foreach (var newTerm in newTerms)
+                        if (newTerm.Value > 0) facts.Add(new IndividualFact(name, newTerm.Key));
+                }
+                else
+                {
+                    facts.Add(new IndividualFact(name, value));
+                }
+            }
 
             if (problemId < -1 || problemId >= _ruleManager.Problems.Count)
                 return RedirectToAction("Error", "Home",
@@ -116,7 +138,7 @@ namespace RiceDoctor.WebApp.Controllers
             var advisory = JsonConvert.DeserializeObject<Advisory>(HttpContext.Session.GetString(guid), jsonSettings);
             advisory.Request = new Request(problem, RequestType.IndividualFact, totalGoals);
             advisory.Engine = new Engine(_ruleManager, _ontologyManager, advisory.Request);
-            advisory.Engine.AddFactsToKnown(facts);
+            advisory.Engine.AddFactsToKnown(facts.ToArray());
             HttpContext.Session.SetString(guid, JsonConvert.SerializeObject(advisory, jsonSettings));
 
             //return View(advisory);

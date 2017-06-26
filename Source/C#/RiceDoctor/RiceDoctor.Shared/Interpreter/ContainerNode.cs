@@ -33,5 +33,23 @@ namespace RiceDoctor.Shared
 
             return node;
         }
+
+        [NotNull]
+        public Node<T> Prepend([NotNull] Node<T> node)
+        {
+            Check.NotNull(node, nameof(node));
+
+            node.Parent = this;
+            if (_childNodes.Count > 0)
+            {
+                var nextNode = _childNodes.First();
+                node.NextNode = nextNode;
+                nextNode.PrevNode = node;
+            }
+
+            _childNodes.Insert(0, node);
+
+            return node;
+        }
     }
 }

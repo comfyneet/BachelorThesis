@@ -18,7 +18,7 @@ namespace RiceDoctor.WebApp.Controllers
 
         public IActionResult Error(string error)
         {
-            return View(error);
+            return View("Error", error);
         }
     }
 }

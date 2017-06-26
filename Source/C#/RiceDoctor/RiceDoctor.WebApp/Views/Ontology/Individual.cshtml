@@ -1,4 +1,5 @@
 ﻿@using System.Text
+@using RiceDoctor.Shared
 @using Attribute = RiceDoctor.OntologyManager.Attribute
 @model RiceDoctor.OntologyManager.Individual
 @{
@@ -11,203 +12,223 @@
 }
 
 <div class="row">
-    <div class="col-md-12">
-        @if (keywords != null)
-        {
-            <div class="alert alert-success alert-dismissible fade in" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                </button>
-                Kết quả tra cứu <strong>"@keywords"</strong>
-            </div>
-        }
+<div class="col-md-12">
+@if (keywords != null)
+{
+    <div class="alert alert-success alert-dismissible fade in" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+        Kết quả tra cứu <strong>"@keywords"</strong>
+    </div>
+}
 
-        <ul class="nav nav-tabs">
-            <li role="presentation" class="active">
-                <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@Model.Id">Thông tin dạng tóm tắt</a>
-            </li>
+<ul class="nav nav-tabs">
+    <li role="presentation" class="active">
+        <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@Model.Id">Thông tin dạng tóm tắt</a>
+    </li>
+
+    @if (attributeValues != null)
+    {
+        foreach (var pair in attributeValues)
+        {
+            if (pair.Key.Id == "article")
+            {
+                <li role="presentation">
+                    <a asp-controller="Ontology" asp-action="Article" asp-route-individualName="@Model.Id">
+                        Thông tin dạng bài viết
+                    </a>
+                </li>
+
+                break;
+            }
+        }
+    }
+</ul>
+
+<h2>
+    <span class="glyphicon glyphicon-info-sign"></span>
+    @ViewData["Title"]
+</h2>
+
+<div class="row">
+    <div class="col-md-3">
+        <section style="border-radius: 10px; border-style: dotted">
+            <h4>Mục lục</h4>
+            <ol>
+                <li>
+                    <a href="#GioiThieu">Giới thiệu</a>
+                </li>
+                @if (visibleValues != null)
+                {
+                    foreach (var pair in visibleValues)
+                    {
+                        <li>
+                            <a href="#@pair.Key.Id">
+                                <span class="glyphicon glyphicon-font"></span>
+                                @(pair.Key.Label == null ? pair.Key.Id : pair.Key.Label.ToUpperFirstLetter())
+                            </a>
+                        </li>
+                    }
+                }
+            </ol>
+        </section>
+    </div>
+
+    <div class="col-md-8 col-md-offset-1">
+        <section>
+            <h4 id="GioiThieu">Giới thiệu</h4>
+            @if (Model.GetAllClasses() == null && Model.GetRelationValues() == null)
+            {
+                <p>Không tìm thấy</p>
+            }
 
             @if (attributeValues != null)
             {
                 foreach (var pair in attributeValues)
                 {
-                    if (pair.Key.Id == "article")
+                    if (pair.Key.Id == "definition")
                     {
-                        <li role="presentation">
-                            <a asp-controller="Ontology" asp-action="Article" asp-route-individualName="@Model.Id">Thông tin dạng bài viết</a>
-                        </li>
-
-                        break;
-                    }
-                }
-            }
-        </ul>
-
-        <h2>@ViewData["Title"]</h2>
-
-        <div class="row">
-            <div class="col-md-3">
-                <section style="border-radius: 10px; border-style: dotted">
-                    <h4>Mục lục</h4>
-                    <ol>
-                        <li>
-                            <a href="#GioiThieu">Giới thiệu</a>
-                        </li>
-                        @if (visibleValues != null)
+                        foreach (var definition in pair.Value)
                         {
-                            foreach (var pair in visibleValues)
-                            {
-                                <li>
-                                    <a href="#@pair.Key.Id">@pair.Key</a>
-                                </li>
-                            }
-                        }
-                    </ol>
-                </section>
-            </div>
-
-            <div class="col-md-8 col-md-offset-1">
-                <section>
-                    <h4 id="GioiThieu">Giới thiệu</h4>
-                    @if (Model.GetAllClasses() == null && Model.GetRelationValues() == null)
-                    {
-                        <p>Không tìm thấy</p>
-                    }
-
-                    @if (attributeValues != null)
-                    {
-                        foreach (var pair in attributeValues)
-                        {
-                            if (pair.Key.Id == "definition")
-                            {
-                                foreach (var definition in pair.Value)
-                                {
-                                    <p>@Html.Raw(definition)</p>
-                                }
-                            }
-                            else if (pair.Key.Id == "name")
-                            {
-                                var names = pair.Value.Where(n => n != Model.ToString()).ToList();
-                                if (names.Count > 0)
-                                {
-                                    var namesSb = new StringBuilder();
-                                    <p>
-                                        @Model còn có tên gọi khác là
-                                        @for (var i = 0; i < names.Count; ++i)
-                                        {
-                                            if (names.Count > 1 && i == names.Count - 1)
-                                            {
-                                                namesSb.Append(" và");
-                                            }
-                                            else if (i > 0)
-                                            {
-                                                namesSb.Append(',');
-                                            }
-                                            namesSb.Append($" {names[i]}");
-                                        }
-                                        @namesSb.
-                                    </p>
-                                }
-                            }
+                            <p>@Html.Raw(definition)</p>
                         }
                     }
-
-                    @if (Model.GetAllClasses() != null)
+                    else if (pair.Key.Id == "name")
                     {
-                        var allClasses = Model.GetAllClasses().ToList();
-                        var allClassesSb = new StringBuilder();
-                        <p>
-                            @Model là thể hiện của lớp
-                            @for (var i = 0; i < allClasses.Count; ++i)
-                            {
-                                if (allClasses.Count > 1 && i == allClasses.Count - 1)
-                                {
-                                    allClassesSb.Append(" và");
-                                }
-                                else if (i > 0)
-                                {
-                                    allClassesSb.Append(',');
-                                }
-                                allClassesSb.Append($" <a href=\"{Url.Action("Class", "Ontology", new {className = allClasses[i].Id})}\">{allClasses[i]}</a>");
-                                if (Model.GetDirectClass() == allClasses[i])
-                                {
-                                    allClassesSb.Append(" (trực tiếp)");
-                                }
-                            }
-                            @Html.Raw(allClassesSb).
-                        </p>
-                    }
-
-                    @if (Model.GetRelationValues() != null)
-                    {
-                        foreach (var pair in Model.GetRelationValues())
+                        var names = pair.Value.Where(n => n != Model.ToString()).ToList();
+                        if (names.Count > 0)
                         {
-                            var relation = pair.Key.GetComment() ?? pair.Key.ToString();
-                            var values = pair.Value.ToList();
-                            var valuesSb = new StringBuilder();
+                            var namesSb = new StringBuilder();
                             <p>
-                                @Model <a asp-controller="Ontology" asp-action="Relation" asp-route-relationName="@pair.Key.Id">@relation</a>
-
-                                @for (var i = 0; i < values.Count; ++i)
+                                @Model còn có tên gọi khác là
+                                @for (var i = 0; i < names.Count; ++i)
                                 {
-                                    if (values.Count > 1 && i == values.Count - 1)
+                                    if (names.Count > 1 && i == names.Count - 1)
                                     {
-                                        valuesSb.Append(" và");
+                                        namesSb.Append(" và");
                                     }
                                     else if (i > 0)
                                     {
-                                        valuesSb.Append(',');
+                                        namesSb.Append(',');
                                     }
-                                    valuesSb.Append($" <a href=\"{Url.Action("Class", "Ontology", new {className = values[i].Id})}\">{values[i]}</a>");
+                                    namesSb.Append($" {names[i]}");
                                 }
-                                @Html.Raw(valuesSb).
+                                @namesSb.
                             </p>
                         }
                     }
-                </section>
-            </div>
-        </div>
+                }
+            }
+
+            @if (Model.GetAllClasses() != null)
+            {
+                var allClasses = Model.GetAllClasses().ToList();
+                var directClass = Model.GetDirectClass();
+                allClasses.Remove(directClass);
+                allClasses.Insert(0, directClass);
+                var allClassesSb = new StringBuilder();
+                <p>
+                    @Model là thể hiện của lớp
+                    @for (var i = 0; i < allClasses.Count; ++i)
+                    {
+                        if (allClasses.Count > 1 && i == allClasses.Count - 1)
+                        {
+                            allClassesSb.Append(" và");
+                        }
+                        else if (i > 0)
+                        {
+                            allClassesSb.Append(',');
+                        }
+                        allClassesSb.Append($" <a href=\"{Url.Action("Class", "Ontology", new {className = allClasses[i].Id})}\"> ");
+                        if (i == 0)
+                        {
+                            allClassesSb.Append($"<strong>{allClasses[i]}</strong>");
+                        }
+                        else
+                        {
+                            allClassesSb.Append(allClasses[i]);
+                        }
+                        allClassesSb.Append("</a>");
+                    }
+                    @Html.Raw(allClassesSb).
+                </p>
+            }
+
+            @if (Model.GetRelationValues() != null)
+            {
+                foreach (var pair in Model.GetRelationValues())
+                {
+                    var relation = pair.Key.GetComment() ?? pair.Key.ToString();
+                    var values = pair.Value.ToList();
+                    var valuesSb = new StringBuilder();
+                    <p>
+                        @Model <a asp-controller="Ontology" asp-action="Relation" asp-route-relationName="@pair.Key.Id">
+                            @relation
+                        </a>
+
+                        @for (var i = 0; i < values.Count; ++i)
+                        {
+                            if (values.Count > 1 && i == values.Count - 1)
+                            {
+                                valuesSb.Append(" và");
+                            }
+                            else if (i > 0)
+                            {
+                                valuesSb.Append(',');
+                            }
+                            valuesSb.Append($" <a href=\"{Url.Action("Class", "Ontology", new {className = values[i].Id})}\"> {values[i]}</a>");
+                        }
+                        @Html.Raw(valuesSb).
+                    </p>
+                }
+            }
+        </section>
+    </div>
+</div>
+
+<hr/>
+
+@if (visibleValues != null)
+{
+    foreach (var pair in visibleValues)
+    {
+        <section>
+            <h4 id="@pair.Key.Id">
+                <a asp-controller="Ontology" asp-action="Attribute" asp-route-attributeName="@pair.Key.Id">
+                    @(pair.Key.Label == null ? pair.Key.Id : pair.Key.Label.ToUpperFirstLetter())
+                </a>
+            </h4>
+
+            @if (pair.Key.GetComment() != null)
+            {
+                <p>@pair.Key.GetComment() @Model.</p>
+            }
+
+            @if (pair.Key.Id == "image")
+            {
+                <div>
+                    @foreach (var value in pair.Value)
+                    {
+                        <div>
+                            <img src="~/images/@value" class="img-responsive" alt="@Model"/>
+                        </div>
+                    }
+                </div>
+            }
+            else
+            {
+                <div>
+                    @foreach (var value in pair.Value)
+                    {
+                        <p>@Html.Raw(value)</p>
+                    }
+                </div>
+            }
+        </section>
 
         <hr/>
-
-        @if (visibleValues != null)
-        {
-            foreach (var pair in visibleValues)
-            {
-                <section>
-                    <h4 id="@pair.Key.Id">
-                        <a asp-controller="Ontology" asp-action="Attribute" asp-route-attributeName="@pair.Key.Id">@pair.Key</a>
-                    </h4>
-
-                    @if (pair.Key.GetComment() != null)
-                    {
-                        <p>@pair.Key.GetComment() @Model.</p>
-                    }
-
-                    @if (pair.Key.Id == "image")
-                    {
-                        <div>
-                            @foreach (var value in pair.Value)
-                            {
-                                <div>
-                                    <img src="~/images/@value" class="img-responsive" alt="@Model"/>
-                                </div>
-                            }
-                        </div>
-                    }
-                    else
-                    {
-                        <div>
-                            @foreach (var value in pair.Value)
-                            {
-                                <p>@Html.Raw(value)</p>
-                            }
-                        </div>
-                    }
-                </section>
-
-                <hr/>
-            }
-        }
-    </div>
+    }
+}
+</div>
 </div>

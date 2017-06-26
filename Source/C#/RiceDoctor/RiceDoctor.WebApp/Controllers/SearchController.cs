@@ -7,6 +7,7 @@ using RiceDoctor.OntologyManager;
 using RiceDoctor.QueryManager;
 using RiceDoctor.Shared;
 using static RiceDoctor.OntologyManager.GetType;
+using Attribute = RiceDoctor.OntologyManager.Attribute;
 
 namespace RiceDoctor.WebApp.Controllers
 {
@@ -33,84 +34,101 @@ namespace RiceDoctor.WebApp.Controllers
 
             ViewData["Keywords"] = keywords;
 
-            var results = new List<Tuple<string, QueryType, IReadOnlyCollection<object>>>();
+            var results = new Dictionary<string, List<KeyValuePair<QueryType, IReadOnlyCollection<object>>>>();
 
             foreach (var query in _queryManager.Queries)
             {
-                var matchResults = query.Match(keywords);
-                if (matchResults != null)
+                var terms = query.Match(keywords);
+                if (terms == null) continue;
+
+                for (var i = 0; i < terms.Count; ++i)
                 {
-                    for (var i = 0; i < matchResults.Count; ++i)
+                    if (!results.ContainsKey(terms[i]))
+                        results.Add(terms[i], new List<KeyValuePair<QueryType, IReadOnlyCollection<object>>>());
+
+                    var resultTypes = query.ResultTypes[i];
+                    foreach (var resultType in resultTypes)
+                        switch (resultType)
+                        {
+                            case QueryType.Class:
+                                var classes = _ontologyManager.GetSubClasses("Thing", GetAll);
+                                var resultClasses = classes
+                                    .Where(cls => cls.Label?.ToLower().RemoveAccents().Contains(terms[i]) == true
+                                                  || cls.Id.ToLower().RemoveAccents().Contains(terms[i]))
+                                    .ToList();
+                                results[terms[i]].Add(
+                                    new KeyValuePair<QueryType, IReadOnlyCollection<object>>(QueryType.Class,
+                                        resultClasses.Count == 0 ? null : resultClasses));
+                                break;
+
+                            case QueryType.Individual:
+                                var searchIndividuals = _ontologyManager.SearchIndividuals(terms[i]);
+                                results[terms[i]].Add(
+                                    new KeyValuePair<QueryType, IReadOnlyCollection<object>>(QueryType.Individual,
+                                        searchIndividuals));
+                                break;
+
+                            case QueryType.Relation:
+                                var relations = _ontologyManager.GetRelations();
+                                var resultRelations = relations
+                                    .Where(r => r.Label?.ToLower().RemoveAccents().Contains(terms[i]) == true
+                                                || r.Id.ToLower().RemoveAccents().Contains(terms[i]))
+                                    .ToList();
+                                results[terms[i]].Add(
+                                    new KeyValuePair<QueryType, IReadOnlyCollection<object>>(QueryType.Relation,
+                                        resultRelations.Count == 0 ? null : resultRelations));
+                                break;
+
+                            case QueryType.Attribute:
+                                var attributes = _ontologyManager.GetAttributes();
+                                var resultAttributes = attributes
+                                    .Where(a => a.Label?.ToLower().RemoveAccents().Contains(terms[i]) == true
+                                                || a.Id.ToLower().RemoveAccents().Contains(terms[i]))
+                                    .ToList();
+                                results[terms[i]].Add(
+                                    new KeyValuePair<QueryType, IReadOnlyCollection<object>>(QueryType.Attribute,
+                                        resultAttributes.Count == 0 ? null : resultAttributes));
+                                break;
+                        }
+                }
+
+                break;
+            }
+
+            if (results.Count == 1)
+            {
+                var result = results.First();
+                var hasOnlyOneResult = false;
+                Tuple<string, QueryType, object> oneResult = null;
+                foreach (var values in result.Value)
+                    if (values.Value != null)
                     {
-                        var resultTypes = query.ResultTypes[i];
-                        foreach (var resultType in resultTypes)
-                            switch (resultType)
-                            {
-                                case QueryType.Class:
-                                    var classes = _ontologyManager.GetSubClasses("Thing", GetAll);
-                                    var resultClasses = classes
-                                        .Where(cls => cls.Label?.ToLower().RemoveAccents().Contains(matchResults[i])
-                                                      == true ||
-                                                      cls.Id.ToLower().RemoveAccents().Contains(matchResults[i]))
-                                        .ToList();
-                                    if (resultClasses.Count == 1 && matchResults.Count == 1)
-                                        return RedirectToAction("Class", "Ontology",
-                                            new {className = resultClasses.First().Id, keywords});
-                                    else if (resultClasses.Count > 1)
-                                        results.Add(
-                                            new Tuple<string, QueryType, IReadOnlyCollection<object>>(matchResults[i],
-                                                QueryType.Class, resultClasses));
-                                    break;
+                        if (values.Value.Count > 1 || hasOnlyOneResult)
+                        {
+                            hasOnlyOneResult = false;
+                            break;
+                        }
 
-                                case QueryType.Individual:
-                                    var searchIndividuals = _ontologyManager.SearchIndividuals(matchResults[i]);
-                                    if (searchIndividuals != null)
-                                    {
-                                        if (searchIndividuals.Count == 1 && matchResults.Count == 1)
-                                            return RedirectToAction("Individual", "Ontology",
-                                                new {individualName = searchIndividuals.First().Id, keywords});
-                                        results.Add(
-                                            new Tuple<string, QueryType, IReadOnlyCollection<object>>(matchResults[i],
-                                                QueryType.Individual, searchIndividuals));
-                                    }
-                                    break;
-
-                                case QueryType.Relation:
-                                    var relations = _ontologyManager.GetRelations();
-                                    var resultRelations = relations
-                                        .Where(r => r.Label?.ToLower().RemoveAccents().Contains(matchResults[i])
-                                                    == true ||
-                                                    r.Id.ToLower().RemoveAccents().Contains(matchResults[i]))
-                                        .ToList();
-                                    if (resultRelations.Count == 1 && matchResults.Count == 1)
-                                        return RedirectToAction("Relation", "Ontology",
-                                            new {relationName = resultRelations.First().Id, keywords});
-                                    else if (resultRelations.Count > 1)
-                                        results.Add(
-                                            new Tuple<string, QueryType, IReadOnlyCollection<object>>(matchResults[i],
-                                                QueryType.Relation, resultRelations));
-                                    break;
-
-                                case QueryType.Attribute:
-                                    var attributes = _ontologyManager.GetAttributes();
-                                    var resultAttributes = attributes
-                                        .Where(a => a.Label?.ToLower().RemoveAccents().Contains(matchResults[i])
-                                                    == true ||
-                                                    a.Id.ToLower().RemoveAccents().Contains(matchResults[i]))
-                                        .ToList();
-                                    if (resultAttributes.Count == 1 && matchResults.Count == 1)
-                                        return RedirectToAction("Attribute", "Ontology",
-                                            new {attributeName = resultAttributes.First().Id, keywords});
-                                    else if (resultAttributes.Count > 1)
-                                        results.Add(
-                                            new Tuple<string, QueryType, IReadOnlyCollection<object>>(matchResults[i],
-                                                QueryType.Attribute, resultAttributes));
-                                    break;
-                            }
+                        hasOnlyOneResult = true;
+                        oneResult = new Tuple<string, QueryType, object>(result.Key, values.Key, values.Value.First());
                     }
 
-                    break;
-                }
+                if (hasOnlyOneResult)
+                    switch (oneResult.Item2)
+                    {
+                        case QueryType.Class:
+                            return RedirectToAction("Class", "Ontology",
+                                new {className = ((Class) oneResult.Item3).Id, keywords = oneResult.Item1});
+                        case QueryType.Individual:
+                            return RedirectToAction("Individual", "Ontology",
+                                new {individualName = ((Individual) oneResult.Item3).Id, keywords = oneResult.Item1});
+                        case QueryType.Relation:
+                            return RedirectToAction("Relation", "Ontology",
+                                new {relationName = ((Relation) oneResult.Item3).Id, keywords = oneResult.Item1});
+                        case QueryType.Attribute:
+                            return RedirectToAction("Attribute", "Ontology",
+                                new {attributeName = ((Attribute) oneResult.Item3).Id, keywords = oneResult.Item1});
+                    }
             }
 
             return results.Count == 0 ? View(null) : View(results);

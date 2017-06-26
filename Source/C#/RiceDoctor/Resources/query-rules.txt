@@ -1,5 +1,5 @@
 ﻿+ [tìm|tra cứu] * (về|của) lúa [*]
-0: individual -> class
+0: individual, class
 
 + *, * {60}
 0: individual
@@ -15,4 +15,4 @@
 2: individual
 
 + * {1}
-0: individual -> class -> relation -> attribute
+0: individual, class, relation, attribute

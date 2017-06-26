@@ -27,5 +27,10 @@ namespace RiceDoctor.Shared
 
         [NotNull]
         public object Value { get; }
+
+        public override string ToString()
+        {
+            return $"{Type.Name}=\"{Value}\"";
+        }
     }
 }

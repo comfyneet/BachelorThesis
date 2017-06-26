@@ -75,11 +75,6 @@ namespace RiceDoctor.QueryManager
                 Advance();
                 return new Token(Comma);
             }
-            if (CurrentChar == '-' && Peek() == '>')
-            {
-                Advance(2);
-                return new Token(Arrow);
-            }
 
             while (!char.IsLetterOrDigit(CurrentChar) && CurrentChar != None)
                 Advance();

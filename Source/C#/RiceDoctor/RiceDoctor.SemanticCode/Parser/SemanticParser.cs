@@ -81,7 +81,7 @@ namespace RiceDoctor.SemanticCode
 
         public static string ClassLink { get; [param: NotNull] set; } = "/Ontology/Class?className=";
 
-        public static string IndividualLink { get; [param: NotNull] set; } = "/Ontology/Article?individualName=";
+        public static string IndividualLink { get; [param: NotNull] set; } = "/Ontology/Individual?individualName=";
 
         public static string StaticImageLink { get; [param: NotNull] set; } = "/images/";
 

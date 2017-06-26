@@ -1,38 +1,14 @@
 ﻿@using RiceDoctor.OntologyManager
 @model RiceDoctor.OntologyManager.Relation
 @{
-    var relations = (IReadOnlyCollection<Relation>) ViewData["Relations"];
+    var relations = (IReadOnlyList<Relation>) ViewData["Relations"];
     ViewData["Title"] = "Quan hệ " + Model;
     ViewData["OntologyPage"] = true;
 }
 
 <div class="row">
     <div class="col-md-3">
-        <nav clas="navbar navbar-inverse">
-            <div class=" bg-teal">
-                @if (relations != null)
-                {
-                    <ul class="nav nav-pills nav-stacked">
-                        @foreach (var relation in relations)
-                        {
-                            var cls = "";
-                            if (relation == Model)
-                            {
-                                cls = "active";
-                            }
-
-                            <li class="nav-item @cls">
-                                <a asp-controller="Ontology" asp-action="Relation" asp-route-relationName="@relation.Id">@relation</a>
-                            </li>
-                        }
-                    </ul>
-                }
-                else
-                {
-                    @:<p>Không tìm thấy</p>
-                }
-            </div>
-        </nav>
+        <div id="tree"></div>
     </div>
     <div class="col-md-9">
         <ul class="nav nav-tabs">
@@ -41,16 +17,23 @@
             </li>
         </ul>
 
-        <h2>@ViewData["Title"]</h2>
+        <h2>
+            <span class="glyphicon glyphicon-registration-mark"></span>
+            @ViewData["Title"]
+        </h2>
 
         @if (Model != null)
         {
             <section>
                 <h4>
-                    Quan hệ phản đối của @Model
-                    @if (Model.GetInverseRelation() != null)
+                    Quan hệ inverse của @Model
+                    @{ var inverseRelation = Model.GetInverseRelation(); }
+                    @if (inverseRelation != null)
                     {
-                        @:là @Model.GetInverseRelation()
+                        @:là 
+                        <a asp-controller="Ontology" asp-action="Relation" asp-route-relationName="@inverseRelation.Id">
+                            @inverseRelation
+                        </a>
                     }
                     else
                     {
@@ -62,48 +45,117 @@
             <hr/>
 
             <section>
-                <h4>Chủ thể của @Model</h4>
-                @if (Model.GetAllDomains() != null)
+                <h4>Domain của @Model</h4>
+                @{
+                    var directDomains = Model.GetDirectDomains();
+                    var allDomains = Model.GetAllDomains();
+                }
+                @if (allDomains == null)
                 {
-                    foreach (var allDomain in Model.GetAllDomains())
-                    {
-                        <p>
-                            <a asp-controller="Ontology" asp-action="Class" asp-route-className="@allDomain.Id">@allDomain</a>
-                            @if (Model.GetDirectDomains()?.Contains(allDomain) == true)
-                            {
-                                @:(trực tiếp)
-                            }
-                        </p>
-                    }
+                    <p>Không tìm thấy</p>
                 }
                 else
                 {
-                    @:<p>Không tìm thấy</p>
+                    if (directDomains != null)
+                    {
+                        allDomains = allDomains.Where(d => !directDomains.Contains(d)).ToList();
+
+                        foreach (var directDomain in directDomains)
+                        {
+                            <p>
+                                <a asp-controller="Ontology" asp-action="Class" asp-route-className="@directDomain.Id" asp-route-showAdvance="True">
+                                    <span class="glyphicon glyphicon-copyright-mark"></span>
+                                    <strong>@directDomain</strong>
+                                </a>
+                            </p>
+                        }
+                    }
+                    foreach (var allDomain in allDomains)
+                    {
+                        <p>
+                            <a asp-controller="Ontology" asp-action="Class" asp-route-className="@allDomain.Id" asp-route-showAdvance="True">
+                                <span class="glyphicon glyphicon-copyright-mark"></span>
+                                @allDomain
+                            </a>
+                        </p>
+                    }
                 }
             </section>
 
             <hr/>
 
             <section>
-                <h4>Khách thể của @Model</h4>
-                @if (Model.GetAllRanges() != null)
+                <h4>Range của @Model</h4>
+                @{
+                    var directRanges = Model.GetDirectRanges();
+                    var allRanges = Model.GetAllRanges();
+                }
+                @if (allRanges == null)
                 {
-                    foreach (var allRange in Model.GetAllRanges())
-                    {
-                        <p>
-                            <a asp-controller="Ontology" asp-action="Class" asp-route-className="@allRange.Id">@allRange</a>
-                            @if (Model.GetDirectRanges()?.Contains(allRange) == true)
-                            {
-                                @:(trực tiếp)
-                            }
-                        </p>
-                    }
+                    <p>Không tìm thấy</p>
                 }
                 else
                 {
-                    @:<p>Không tìm thấy</p>
+                    if (directRanges != null)
+                    {
+                        allRanges = allRanges.Where(r => !directRanges.Contains(r)).ToList();
+
+                        foreach (var directRange in directRanges)
+                        {
+                            <p>
+                                <a asp-controller="Ontology" asp-action="Class" asp-route-className="@directRange.Id" asp-route-showAdvance="True">
+                                    <span class="glyphicon glyphicon-copyright-mark"></span>
+                                    <strong>@directRange</strong>
+                                </a>
+                            </p>
+                        }
+                    }
+                    foreach (var allRange in allRanges)
+                    {
+                        <p>
+                            <a asp-controller="Ontology" asp-action="Class" asp-route-className="@allRange.Id" asp-route-showAdvance="True">
+                                <span class="glyphicon glyphicon-copyright-mark"></span>
+                                @allRange
+                            </a>
+                        </p>
+                    }
                 }
             </section>
         }
     </div>
 </div>
+
+@section Scripts {
+    <script>
+        var data = [
+            @if (relations != null)
+            {
+                for (var i = 0; i < relations.Count; ++i)
+                {
+                    if (i > 0)
+                    {
+                        @:,
+                    }
+
+                    @:{
+                    <text>text: '@relations[i]',</text>
+                    <text>icon: 'glyphicon glyphicon-registration-mark',</text>
+                    <text>href: '@Url.Action("Relation", "Ontology", new {relationName = relations[i].Id})',</text>
+                    if (relations[i] == Model)
+                    {
+                        @:state: { selected: true }
+                    }
+                    @:}
+                }
+            }
+        ];
+
+        $('#tree').treeview({
+            color: '#428bca',
+            showBorder: false,
+            selectable: false,
+            enableLinks: true,
+            data: data
+        });
+    </script>
+}

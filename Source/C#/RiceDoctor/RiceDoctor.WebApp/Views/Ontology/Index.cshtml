@@ -5,30 +5,54 @@
 
 <div class="row">
     <div class="col-md-3">
-        <nav clas="navbar navbar-inverse">
-            <div class=" bg-teal">
-                <ul class="nav nav-pills nav-stacked">
-                    <li class="nav-item">
-                        <a asp-controller="Ontology" asp-action="Class">Lớp</a>
-                    </li>
-                    <li class="nav-item">
-                        <a asp-controller="Ontology" asp-action="Relation">Quan hệ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a asp-controller="Ontology" asp-action="Attribute">Thuộc tính</a>
-                    </li>
-                    <li class="nav-item">
-                        <a asp-controller="Ontology" asp-action="Individuals">Thể hiện</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        <div id="tree"></div>
     </div>
     <div class="col-md-9">
         <h2>Ontology</h2>
 
         <section>
             <p class="lead">Tri thức về lĩnh vực lúa nước miền Trung</p>
+            <p>
+                Biểu tượng <span class="glyphicon glyphicon-copyright-mark"></span> tượng trưng cho lớp.
+            </p>
+            <p>
+                Biểu tượng <span class="glyphicon glyphicon-registration-mark"></span> tượng trưng cho quan hệ.
+            </p>
+            <p>
+                Biểu tượng <span class="glyphicon glyphicon-font"></span> tượng trưng cho thuộc tính.
+            </p>
+            <p>
+                Biểu tượng <span class="glyphicon glyphicon-info-sign"></span> tượng trưng cho thể hiện.
+            </p>
         </section>
     </div>
 </div>
+
+@section Scripts {
+    <script>
+        var data = [
+            {
+                text: 'Lớp và <span class="glyphicon glyphicon-info-sign"></span> Thể hiện',
+                icon: 'glyphicon glyphicon-copyright-mark',
+                href: '@Url.Action("Class", "Ontology")'
+            },
+            {
+                text: 'Quan hệ',
+                icon: 'glyphicon glyphicon-registration-mark',
+                href: '@Url.Action("Relation", "Ontology")'
+            },
+            {
+                text: 'Thuộc tính',
+                icon: 'glyphicon glyphicon-font',
+                href: '@Url.Action("Attribute", "Ontology")'
+            }
+        ];
+
+        $('#tree').treeview({
+            color: '#428bca',
+            showBorder: false,
+            enableLinks: true,
+            data: data
+        });
+    </script>
+}

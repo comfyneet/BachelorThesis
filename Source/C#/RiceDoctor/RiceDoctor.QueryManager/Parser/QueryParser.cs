@@ -14,7 +14,7 @@ namespace RiceDoctor.QueryManager
     {
         [CanBeNull] private IReadOnlyCollection<Query> _queries;
 
-        public QueryParser([NotNull] Lexer lexer) : base(lexer)
+        public QueryParser([NotNull] QueryLexer lexer) : base(lexer)
         {
         }
 
@@ -108,9 +108,9 @@ namespace RiceDoctor.QueryManager
 
                 var resultTypes = new List<QueryType> {ParseQueryType()};
 
-                while (CurrentToken.Type == Arrow)
+                while (CurrentToken.Type == Comma)
                 {
-                    Eat(Arrow);
+                    Eat(Comma);
                     resultTypes.Add(ParseQueryType());
                 }
 

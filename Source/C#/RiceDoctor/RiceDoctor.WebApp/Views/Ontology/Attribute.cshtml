@@ -3,38 +3,14 @@
 @model RiceDoctor.OntologyManager.Attribute
 @{
 
-    var attributes = (IReadOnlyCollection<Attribute>) ViewData["Attributes"];
+    var attributes = (IReadOnlyList<Attribute>) ViewData["Attributes"];
     ViewData["Title"] = "Thuộc tính " + Model;
     ViewData["OntologyPage"] = true;
 }
 
 <div class="row">
     <div class="col-md-3">
-        <nav clas="navbar navbar-inverse">
-            <div class=" bg-teal">
-                @if (attributes != null)
-                {
-                    <ul class="nav nav-pills nav-stacked">
-                        @foreach (var attribute in attributes)
-                        {
-                            var cls = "";
-                            if (attribute == Model)
-                            {
-                                cls = "active";
-                            }
-
-                            <li class="nav-item @cls">
-                                <a asp-controller="Ontology" asp-action="Attribute" asp-route-attributeName="@attribute.Id">@attribute</a>
-                            </li>
-                        }
-                    </ul>
-                }
-                else
-                {
-                    @:<p>Không tìm thấy</p>
-                }
-            </div>
-        </nav>
+        <div id="tree"></div>
     </div>
     <div class="col-md-9">
         <ul class="nav nav-tabs">
@@ -43,7 +19,10 @@
             </li>
         </ul>
 
-        <h2>@ViewData["Title"]</h2>
+        <h2>
+            <span class="glyphicon glyphicon-font"></span>
+            @ViewData["Title"]
+        </h2>
 
         @if (Model != null)
         {
@@ -65,32 +44,84 @@
                 }
                 else
                 {
-                    @:<p>không tìm thấy</p>
+                    <p>Không tìm thấy</p>
                 }
             </section>
 
             <hr/>
 
             <section>
-                <h4>Chủ thể của @Model</h4>
-                @if (Model.GetAllDomains() != null)
+                <h4>Domain của @Model</h4>
+                @{
+                    var directDomains = Model.GetDirectDomains();
+                    var allDomains = Model.GetAllDomains();
+                }
+                @if (allDomains == null)
                 {
-                    foreach (var allDomain in Model.GetAllDomains())
-                    {
-                        <p>
-                            <a asp-controller="Ontology" asp-action="Class" asp-route-className="@allDomain.Id">@allDomain</a>
-                            @if (Model.GetDirectDomains()?.Contains(allDomain) == true)
-                            {
-                                @:(trực tiếp)
-                            }
-                        </p>
-                    }
+                    <p>Không tìm thấy</p>
                 }
                 else
                 {
-                    @:<p>Không tìm thấy</p>
+                    if (directDomains != null)
+                    {
+                        allDomains = allDomains.Where(d => !directDomains.Contains(d)).ToList();
+
+                        foreach (var directDomain in directDomains)
+                        {
+                            <p>
+                                <a asp-controller="Ontology" asp-action="Class" asp-route-className="@directDomain.Id" asp-route-showAdvance="True">
+                                    <span class="glyphicon glyphicon-copyright-mark"></span>
+                                    <strong>@directDomain</strong>
+                                </a>
+                            </p>
+                        }
+                    }
+                    foreach (var allDomain in allDomains)
+                    {
+                        <p>
+                            <a asp-controller="Ontology" asp-action="Class" asp-route-className="@allDomain.Id" asp-route-showAdvance="True">
+                                <span class="glyphicon glyphicon-copyright-mark"></span>
+                                @allDomain
+                            </a>
+                        </p>
+                    }
                 }
             </section>
         }
     </div>
 </div>
+
+@section Scripts {
+    <script>
+        var data = [
+            @if (attributes != null)
+            {
+                for (var i = 0; i < attributes.Count; ++i)
+                {
+                    if (i > 0)
+                    {
+                        @:,
+                    }
+
+                    @:{
+                    <text>text: '@attributes[i]',</text>
+                    <text>icon: 'glyphicon glyphicon-font',</text>
+                    <text>href: '@Url.Action("Attribute", "Ontology", new {attributeName = attributes[i].Id})',</text>
+                    if (attributes[i] == Model)
+                    {
+                        @:state: { selected: true }
+                    }
+                    @:}
+                }
+            }
+        ];
+
+        $('#tree').treeview({
+            color: '#428bca',
+            showBorder: false,
+            selectable: false,
+            enableLinks: true,
+            data: data
+        });
+    </script>
+}

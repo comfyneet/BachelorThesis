@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using JetBrains.Annotations;
 using Microsoft.AspNetCore.Mvc;
 using RiceDoctor.OntologyManager;
 using RiceDoctor.SemanticCode;
 using RiceDoctor.Shared;
-using static RiceDoctor.OntologyManager.GetType;
 using Attribute = RiceDoctor.OntologyManager.Attribute;
 
 namespace RiceDoctor.WebApp.Controllers
@@ -40,6 +40,10 @@ namespace RiceDoctor.WebApp.Controllers
 
             ViewData["DirectSuperClassesTree"] = directSuperClassesTree;
             ViewData["ShowAdvance"] = showAdvance;
+
+            var builder = new StringBuilder();
+            GetClassTree(@class, directSuperClassesTree, builder);
+            ViewData["ClassTree"] = "[" + builder + "]";
 
             return View(@class);
         }
@@ -103,13 +107,6 @@ namespace RiceDoctor.WebApp.Controllers
             return View(individual);
         }
 
-        public IActionResult Individuals()
-        {
-            var subClasses = _ontologyManager.GetSubClasses("Thing", GetDirect);
-
-            return View(subClasses);
-        }
-
         public IActionResult Article(string individualName)
         {
             if (!string.IsNullOrWhiteSpace(individualName))
@@ -136,8 +133,7 @@ namespace RiceDoctor.WebApp.Controllers
         {
             Check.NotNull(directSuperClassesTree, nameof(directSuperClassesTree));
 
-            if (count > 10)
-                throw new InvalidOperationException(nameof(GetDirectSuperClassesTree));
+            if (count > 10) throw new InvalidOperationException(nameof(GetDirectSuperClassesTree));
 
             if (directSuperClasses != null)
             {
@@ -156,6 +152,127 @@ namespace RiceDoctor.WebApp.Controllers
                 if (newDirectSuperClasses.Count > 0)
                     GetDirectSuperClassesTree(newDirectSuperClasses, directSuperClassesTree, count + 1);
             }
+        }
+
+        private void GetClassTree(
+            [NotNull] Class @class,
+            [NotNull] IList<IList<Class>> superClassesTree,
+            [NotNull] StringBuilder builder)
+        {
+            Check.NotNull(@class, nameof(@class));
+            Check.NotNull(superClassesTree, nameof(superClassesTree));
+            Check.NotNull(builder, nameof(builder));
+
+            if (@class.Id == "Thing") GetCurrentClassTree(@class, builder);
+            if (superClassesTree.Count == 0) return;
+
+            var superClass = superClassesTree[0].First();
+            superClassesTree.RemoveAt(0);
+
+            builder.AppendLine("{");
+            builder.AppendLine($"text: '{superClass}',");
+            builder.AppendLine("icon: 'glyphicon glyphicon-copyright-mark',");
+            builder.AppendLine(
+                $"href: '{Url.Action("Class", "Ontology", new {className = superClass.Id})}',");
+            builder.AppendLine("state: { expanded: true },");
+            builder.AppendLine("tags: [");
+            var directIndividuals = superClass.GetDirectIndividuals() == null
+                ? 0
+                : superClass.GetDirectIndividuals().Count;
+            var allIndividuals = superClass.GetAllIndividuals() == null
+                ? 0
+                : superClass.GetAllIndividuals().Count;
+            builder.AppendLine($"'direct: {directIndividuals}',");
+            builder.AppendLine($"'all: {allIndividuals}' ],");
+            builder.AppendLine("nodes: [");
+
+            var directSubClasses = superClass.GetDirectSubClasses();
+            foreach (var directSubClass in directSubClasses)
+            {
+                var nextSuberClass = superClassesTree.Count > 0 ? superClassesTree[0].First() : null;
+                if (nextSuberClass != null && directSubClass == nextSuberClass)
+                {
+                    GetClassTree(@class, superClassesTree, builder);
+                }
+                else if (directSubClass == @class)
+                {
+                    GetCurrentClassTree(@class, builder);
+                }
+                else
+                {
+                    builder.AppendLine("{");
+                    builder.AppendLine($"text: '{directSubClass}',");
+                    builder.AppendLine("icon: 'glyphicon glyphicon-copyright-mark',");
+                    builder.AppendLine(
+                        $"href: '{Url.Action("Class", "Ontology", new {className = directSubClass.Id})}',");
+                    builder.AppendLine("tags: [");
+                    var directIndividualCount = directSubClass.GetDirectIndividuals() == null
+                        ? 0
+                        : directSubClass.GetDirectIndividuals().Count;
+                    var allIndividualCount = directSubClass.GetAllIndividuals() == null
+                        ? 0
+                        : directSubClass.GetAllIndividuals().Count;
+                    builder.AppendLine($"'direct: {directIndividualCount}',");
+                    builder.AppendLine($"'all: {allIndividualCount}' ],");
+                    if (directSubClass.GetDirectSubClasses() != null)
+                        builder.AppendLine("nodes: []");
+                    builder.AppendLine("},");
+                }
+            }
+            builder.Append("]},");
+        }
+
+        private void GetCurrentClassTree([NotNull] Class @class, [NotNull] StringBuilder builder)
+        {
+            Check.NotNull(@class, nameof(@class));
+            Check.NotNull(builder, nameof(builder));
+
+            builder.AppendLine("{");
+            builder.AppendLine($"text: '{@class}',");
+            builder.AppendLine("icon: 'glyphicon glyphicon-copyright-mark',");
+            builder.AppendLine(
+                $"href: '{Url.Action("Class", "Ontology", new {className = @class.Id})}',");
+            builder.AppendLine("state: { selected: true, expanded: true },");
+            builder.AppendLine("tags: [");
+            var directIndividuals = @class.GetDirectIndividuals() == null
+                ? 0
+                : @class.GetDirectIndividuals().Count;
+            var allIndividuals = @class.GetAllIndividuals() == null
+                ? 0
+                : @class.GetAllIndividuals().Count;
+            builder.AppendLine($"'direct: {directIndividuals}',");
+            builder.AppendLine($"'all: {allIndividuals}' ],");
+
+            var directSubClasses = @class.GetDirectSubClasses();
+            if (directSubClasses != null)
+            {
+                builder.AppendLine("nodes: [");
+
+                for (var i = 0; i < directSubClasses.Count; ++i)
+                {
+                    if (i > 0) builder.Append(',');
+                    builder.AppendLine("{");
+                    builder.AppendLine($"text: '{directSubClasses[i]}',");
+                    builder.AppendLine("icon: 'glyphicon glyphicon-copyright-mark',");
+                    builder.AppendLine(
+                        $"href: '{Url.Action("Class", "Ontology", new {className = directSubClasses[i].Id})}',");
+                    builder.AppendLine("tags: [");
+                    var directIndividualCount = directSubClasses[i].GetDirectIndividuals() == null
+                        ? 0
+                        : directSubClasses[i].GetDirectIndividuals().Count;
+                    var allIndividualCount = directSubClasses[i].GetAllIndividuals() == null
+                        ? 0
+                        : directSubClasses[i].GetAllIndividuals().Count;
+                    builder.AppendLine($"'direct: {directIndividualCount}',");
+                    builder.AppendLine($"'all: {allIndividualCount}' ],");
+                    if (directSubClasses[i].GetDirectSubClasses() != null)
+                        builder.AppendLine("nodes: [],");
+                    builder.AppendLine("}");
+                }
+
+                builder.AppendLine("]");
+            }
+            builder.AppendLine("},");
         }
     }
 }

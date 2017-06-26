@@ -18,7 +18,7 @@ namespace RiceDoctor.OntologyManager
         IReadOnlyCollection<Class> GetSuperClasses([NotNull] string className, GetType getSuperClassType);
 
         [CanBeNull]
-        IReadOnlyCollection<Class> GetSubClasses([NotNull] string className, GetType getSubClassType);
+        IReadOnlyList<Class> GetSubClasses([NotNull] string className, GetType getSubClassType);
 
         [CanBeNull]
         IReadOnlyCollection<Relation> GetDomainRelations([NotNull] string className);
@@ -36,7 +36,7 @@ namespace RiceDoctor.OntologyManager
         Relation GetRelation([NotNull] string relationName);
 
         [CanBeNull]
-        IReadOnlyCollection<Relation> GetRelations();
+        IReadOnlyList<Relation> GetRelations();
 
         [CanBeNull]
         Relation GetInverseRelation([NotNull] string relationName);
@@ -51,7 +51,7 @@ namespace RiceDoctor.OntologyManager
         Attribute GetAttribute([NotNull] string attributeName);
 
         [CanBeNull]
-        IReadOnlyCollection<Attribute> GetAttributes();
+        IReadOnlyList<Attribute> GetAttributes();
 
         [CanBeNull]
         IReadOnlyCollection<Class> GetAttributeDomains([NotNull] string attributeName, GetType getDomainType);

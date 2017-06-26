@@ -26,18 +26,18 @@ namespace RiceDoctor.Shared
         [CanBeNull]
         public abstract T Parse();
 
-        protected void Eat([NotNull] TokenType type)
+        protected void Eat([NotNull] TokenType expectedType)
         {
-            Check.NotNull(type, nameof(type));
+            Check.NotNull(expectedType, nameof(expectedType));
 
-            if (CurrentToken.Type == type)
+            if (CurrentToken.Type == expectedType)
             {
                 _pos += 1;
                 CurrentToken = _pos > Tokens.Count - 1 ? new Token(Illegal, Lexer.None) : Tokens[_pos];
             }
             else
             {
-                throw new ArgumentException($"Token '{CurrentToken}' has a different type from '{type}'.");
+                throw new ArgumentException($"Token '{CurrentToken}' has a different type from '{expectedType}'.");
             }
         }
 

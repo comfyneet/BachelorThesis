@@ -1,198 +1,253 @@
-﻿@using System.Text
-@using RiceDoctor.OntologyManager
+﻿@using RiceDoctor.OntologyManager
 @model RiceDoctor.OntologyManager.Class
 @{
     var directSuperClassesTree = (List<IList<Class>>) ViewData["DirectSuperClassesTree"];
+    var classTree = (string) ViewData["ClassTree"];
     var showAdvance = (bool) ViewData["ShowAdvance"];
     ViewData["Title"] = "Lớp " + Model;
     ViewData["OntologyPage"] = true;
-
-    var paddingSb = new StringBuilder();
 }
 
 <div class="row">
-    <div class="col-md-3">
-        <h4>Quan hệ phân cấp cha-con</h4>
-        <nav clas="navbar navbar-inverse">
-            <div class="bg-teal">
-                <ul class="nav nav-pills nav-stacked">
-                    @foreach (var tmpDirectSuperClasses in directSuperClassesTree)
-                    {
-                        var directSuperClassesSb = new StringBuilder();
-                        for (var i = 0; i < tmpDirectSuperClasses.Count; ++i)
-                        {
-                            if (i > 0)
-                            {
-                                directSuperClassesSb.Append(", ");
-                            }
-                            directSuperClassesSb.Append($"<a href=\"{Url.Action("Class", "Ontology", new {className = tmpDirectSuperClasses[i].Id})}\">{paddingSb}{tmpDirectSuperClasses[i]}</a>");
-                        }
-
-                        <li class="nav-item">@Html.Raw(directSuperClassesSb.ToString())</li>
-
-                        paddingSb.Append(string.Concat(Enumerable.Repeat("&nbsp;", 5)));
-                    }
-
-                    <li class="nav-item active">@Html.Raw($"<a href=\"{Url.Action("Class", "Ontology", new {className = Model.Id})}\">{paddingSb}{Model}</a>")</li>
-
-                    @if (Model.GetDirectSubClasses() != null)
-                    {
-                        paddingSb.Append(string.Concat(Enumerable.Repeat("&nbsp;", 5)));
-
-                        foreach (var directSubClass in Model.GetDirectSubClasses())
-                        {
-                            <li class="nav-item">@Html.Raw($"<a href=\"{Url.Action("Class", "Ontology", new {className = directSubClass.Id})}\">{paddingSb}{directSubClass}</a>")</li>
-                        }
-                    }
-                </ul>
-            </div>
-        </nav>
-    </div>
-    <div class="col-md-9">
-        <ul class="nav nav-tabs">
-            <li role="presentation"
-                @if (!showAdvance)
-                {
-                    @:class="active"
-                }>
-                <a asp-controller="Ontology" asp-action="Class" asp-route-className="@Model.Id">Thông tin cho người dùng</a>
-            </li>
-            <li role="presentation"
-                @if (showAdvance)
-                {
-                    @:class="active"
-                }>
-                <a asp-controller="Ontology" asp-action="Class" asp-route-className="@Model.Id" asp-route-showAdvance="True">Thông tin cho chuyên gia</a>
-            </li>
-        </ul>
-
-        <h2>@ViewData["Title"]</h2>
-
+<div class="col-md-4">
+    <div id="tree"></div>
+</div>
+<div class="col-md-8">
+<ul class="nav nav-tabs">
+    <li role="presentation"
+        @if (!showAdvance)
+        {
+            @: class="active"
+        }>
+        <a asp-controller="Ontology" asp-action="Class" asp-route-className="@Model.Id">Thông tin cho người dùng</a>
+    </li>
+    <li role="presentation"
         @if (showAdvance)
         {
-            <section>
-                <h4>Lớp cha của @Model</h4>
-                @if (Model.GetAllSuperClasses() != null)
-                {
-                    foreach (var allSuperClass in Model.GetAllSuperClasses())
-                    {
-                        <p>
-                            <a asp-controller="Ontology" asp-action="Class" asp-route-className="@allSuperClass.Id">@allSuperClass</a>
-                            @if (Model.GetDirectSuperClasses()?.Contains(allSuperClass) == true)
-                            {
-                                @:(trực tiếp)
-                            }
-                        </p>
-                    }
-                }
-                else
-                {
-                    @:<p>Không tìm thấy</p>
-                }
-            </section>
+            @: class="active"
+        }>
+        <a asp-controller="Ontology" asp-action="Class" asp-route-className="@Model.Id" asp-route-showAdvance="True">Thông tin cho chuyên gia</a>
+    </li>
+</ul>
 
-            <hr/>
+<h2>
+    <span class="glyphicon glyphicon-copyright-mark"></span>
+    @ViewData["Title"]
+</h2>
 
-            <section>
-                <h4>Lớp con của @Model</h4>
-                @if (Model.GetAllSubClasses() != null)
-                {
-                    foreach (var allSubClass in Model.GetAllSubClasses())
-                    {
-                        <p>
-                            <a asp-controller="Ontology" asp-action="Class" asp-route-className="@allSubClass.Id">@allSubClass</a>
-                            @if (Model.GetDirectSubClasses()?.Contains(allSubClass) == true)
-                            {
-                                @:(trực tiếp)
-                            }
-                        </p>
-                    }
-                }
-                else
-                {
-                    @:<p>Không tìm thấy</p>
-                }
-            </section>
-
-            <hr/>
-
-            <section>
-                <h4>Thuộc tính của @Model</h4>
-                @if (Model.GetAttributes() != null)
-                {
-                    foreach (var attribute in Model.GetAttributes())
-                    {
-                        <p>
-                            <a asp-controller="Ontology" asp-action="Attribute" asp-route-attributeName="@attribute.Id">@attribute</a> @attribute.Range
-                        </p>
-                    }
-                }
-                else
-                {
-                    @:<p>Không tìm thấy</p>
-                }
-            </section>
-
-            <hr/>
-
-            <section>
-                <h4>Quan hệ của @Model với @Model là chủ thể</h4>
-                @if (Model.GetDomainRelations() != null)
-                {
-                    foreach (var domainRelation in Model.GetDomainRelations())
-                    {
-                        <p>
-                            <a asp-controller="Ontology" asp-action="Relation" asp-route-relationName="@domainRelation.Id">@domainRelation</a>
-                        </p>
-                    }
-                }
-                else
-                {
-                    @:<p>Không tìm thấy</p>
-                }
-            </section>
-
-            <hr/>
-
-            <section>
-                <h4>Quan hệ của @Model với @Model là khách thể</h4>
-                @if (Model.GetRangeRelations() != null)
-                {
-                    foreach (var rangeRelation in Model.GetRangeRelations())
-                    {
-                        <p>
-                            <a asp-controller="Ontology" asp-action="Relation" asp-route-relationName="@rangeRelation.Id">@rangeRelation</a>
-                        </p>
-                    }
-                }
-                else
-                {
-                    @:<p>Không tìm thấy</p>
-                }
-            </section>
-
-            <hr/>
+@if (showAdvance)
+{
+    <section>
+        <h4>Lớp cha của @Model</h4>
+        @{
+            var directSuperClasses = Model.GetDirectSuperClasses();
+            var allSuperClasses = Model.GetAllSuperClasses();
         }
-
-        <section>
-            <h4>Thể hiện của @Model</h4>
-            @if (Model.GetAllIndividuals() != null)
+        @if (allSuperClasses == null)
+        {
+            <p>Không tìm thấy</p>
+        }
+        else
+        {
+            if (directSuperClasses != null)
             {
-                foreach (var allIndividual in Model.GetAllIndividuals())
+                allSuperClasses = allSuperClasses.Where(c => !directSuperClasses.Contains(c)).ToList();
+
+                foreach (var directSuperClass in directSuperClasses)
                 {
                     <p>
-                        <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@allIndividual.Id">@allIndividual</a>
-                        @if (Model.GetDirectIndividuals()?.Contains(allIndividual) == true)
-                        {
-                            @:(trực tiếp)
-                        }
+                        <a asp-controller="Ontology" asp-action="Class" asp-route-className="@directSuperClass.Id" asp-route-showAdvance="True">
+                            <span class="glyphicon glyphicon-copyright-mark"></span>
+                            <strong>@directSuperClass</strong>
+                        </a>
                     </p>
                 }
             }
-            else
+            foreach (var allSuperClass in allSuperClasses)
             {
-                @:<p>Không tìm thấy</p>
+                <p>
+                    <a asp-controller="Ontology" asp-action="Class" asp-route-className="@allSuperClass.Id" asp-route-showAdvance="True">
+                        <span class="glyphicon glyphicon-copyright-mark"></span>
+                        @allSuperClass
+                    </a>
+                </p>
             }
-        </section>
-    </div>
+        }
+    </section>
+
+    <hr/>
+
+    <section>
+        <h4>Lớp con của @Model</h4>
+        @{
+            var directSubClasses = Model.GetDirectSubClasses();
+            var allSubClasses = Model.GetAllSubClasses();
+        }
+        @if (allSubClasses == null)
+        {
+            <p>Không tìm thấy</p>
+        }
+        else
+        {
+            if (directSubClasses != null)
+            {
+                allSubClasses = allSubClasses.Where(c => !directSubClasses.Contains(c)).ToList();
+
+                foreach (var directSubClass in directSubClasses)
+                {
+                    <p>
+                        <a asp-controller="Ontology" asp-action="Class" asp-route-className="@directSubClass.Id" asp-route-showAdvance="True">
+                            <span class="glyphicon glyphicon-copyright-mark"></span>
+                            <strong>@directSubClass</strong>
+                        </a>
+                    </p>
+                }
+            }
+            foreach (var allSubClass in allSubClasses)
+            {
+                <p>
+                    <a asp-controller="Ontology" asp-action="Class" asp-route-className="@allSubClass.Id" asp-route-showAdvance="True">
+                        <span class="glyphicon glyphicon-copyright-mark"></span>
+                        @allSubClass
+                    </a>
+                </p>
+            }
+        }
+    </section>
+
+    <hr/>
+
+    <section>
+        <h4>Thuộc tính của @Model</h4>
+        @if (Model.GetAttributes() != null)
+        {
+            foreach (var attribute in Model.GetAttributes())
+            {
+                <p>
+                    <a asp-controller="Ontology" asp-action="Attribute" asp-route-attributeName="@attribute.Id">
+                        <span class="glyphicon glyphicon-font"></span>
+                        @attribute
+                    </a> @attribute.Range
+                </p>
+            }
+        }
+        else
+        {
+            <p>Không tìm thấy</p>
+        }
+    </section>
+
+    <hr/>
+
+    <section>
+        <h4>Quan hệ của @Model với @Model là domain</h4>
+        @if (Model.GetDomainRelations() != null)
+        {
+            foreach (var domainRelation in Model.GetDomainRelations())
+            {
+                <p>
+                    <a asp-controller="Ontology" asp-action="Relation" asp-route-relationName="@domainRelation.Id">
+                        <span class="glyphicon glyphicon-registration-mark'"></span>
+                        @if (domainRelation.GetDirectDomains() != null && domainRelation.GetDirectDomains().Contains(Model))
+                        {
+                            <strong>@domainRelation</strong>
+                        }
+                        else
+                        {
+                            @domainRelation
+                        }
+                    </a>
+                </p>
+            }
+        }
+        else
+        {
+            <p>Không tìm thấy</p>
+        }
+    </section>
+
+    <hr/>
+
+    <section>
+        <h4>Quan hệ của @Model với @Model là range</h4>
+        @if (Model.GetRangeRelations() != null)
+        {
+            foreach (var rangeRelation in Model.GetRangeRelations())
+            {
+                <p>
+                    <a asp-controller="Ontology" asp-action="Relation" asp-route-relationName="@rangeRelation.Id">
+                        <span class="glyphicon glyphicon-registration-mark'"></span>
+                        @if (rangeRelation.GetDirectRanges() != null && rangeRelation.GetDirectRanges().Contains(Model))
+                        {
+                            <strong>@rangeRelation</strong>
+                        }
+                        else
+                        {
+                            @rangeRelation
+                        }
+                    </a>
+                </p>
+            }
+        }
+        else
+        {
+            <p>Không tìm thấy</p>
+        }
+    </section>
+
+    <hr/>
+}
+
+<section>
+    <h4>Thể hiện của @Model</h4>
+    @{
+        var directIndividuals = Model.GetDirectIndividuals();
+        var allIndividuals = Model.GetAllIndividuals();
+    }
+    @if (allIndividuals == null)
+    {
+        <p>Không tìm thấy</p>
+    }
+    else
+    {
+        if (directIndividuals != null)
+        {
+            allIndividuals = allIndividuals.Where(i => !directIndividuals.Contains(i)).ToList();
+
+            foreach (var directIndividual in directIndividuals)
+            {
+                <p>
+                    <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@directIndividual.Id">
+                        <span class="glyphicon glyphicon-info-sign"></span>
+                        <strong>@directIndividual</strong>
+                    </a>
+                </p>
+            }
+        }
+        foreach (var allIndividual in allIndividuals)
+        {
+            <p>
+                <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@allIndividual.Id">
+                    <span class="glyphicon glyphicon-info-sign"></span>
+                    @allIndividual
+                </a>
+            </p>
+        }
+    }
+</section>
 </div>
+</div>
+
+@section Scripts {
+    <script>
+        var data = @Html.Raw(classTree);
+
+        $('#tree').treeview({
+            color: '#428bca',
+            showBorder: false,
+            showTags: true,
+            enableLinks: true,
+            data: data
+        });
+    </script>
+}

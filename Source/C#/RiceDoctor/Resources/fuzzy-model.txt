@@ -1,41 +1,41 @@
-﻿FUNCTION trapmf(a, b, c, d)
-BEGIN
-    IF INPUT <= a THEN OUTPUT <- 0;
-    IF (a <= INPUT) & (INPUT <= b) THEN OUTPUT <- (INPUT - a) / (b - a);
-    IF b <= INPUT & INPUT <= c THEN OUTPUT <- 1;
-    IF (c <= INPUT) & INPUT <= d THEN OUTPUT <- (d - INPUT) / (d - c);
-    IF (d <= INPUT) THEN INPUT <- 0;
-END;
+﻿function trapmf(a, b, c, d)
+begin
+    if INPUT <= a then OUTPUT := 0;
+    if (a <= INPUT) and (INPUT <= b) then OUTPUT := (INPUT - a) / (b - a);
+    if (b <= INPUT) and (INPUT <= c) then OUTPUT := 1;
+    if (c <= INPUT) and (INPUT <= d) then OUTPUT := (d - INPUT) / (d - c);
+    if d <= INPUT then OUTPUT := 0;
+end;
 
-FUNCTION trimf(a, b, c)
-BEGIN
-    IF INPUT <= a THEN OUTPUT <- 0;
-    IF a <= INPUT & INPUT <= b THEN OUTPUT <- (INPUT - a) / (b - a);
-    IF b <= INPUT & INPUT <= c THEN OUTPUT <- (c - INPUT) / (c - b);
-    IF c <= INPUT THEN INPUT <- 0;   
-END;
+function trimf(a, b, c)
+begin
+    if INPUT <= a then OUTPUT := 0;
+    if (a <= INPUT) and (INPUT <= b) then OUTPUT := (INPUT - a) / (b - a);
+    if (b <= INPUT) and (INPUT <= c) then OUTPUT := (c - INPUT) / (c - b);
+    if c <= INPUT then OUTPUT := 0;
+end;
 
-VARIABLE DoAm
-BEGIN
-    TERM DoAmThap      : trimf(0, 10, 20);
-    TERM DoAmTrungBinh : trimf(10, 20, 30);
-    TERM DoAmCao       : trimf(20, 30, 40);
-END;
+variable DoAm
+begin
+    term DoAmThap      : trimf(0, 10, 20);
+    term DoAmTrungBinh : trimf(10, 20, 30);
+    term DoAmCao       : trimf(20, 30, 40);
+end;
 
-VARIABLE DoSauRuong
-BEGIN
-    TERM RuongSau : trimf(0, 10, 20);
-END;
+variable DoSauRuong
+begin
+    term RuongSau : trimf(0, 10, 20);
+end;
 
 
-VARIABLE LuongMua
-BEGIN
-    TERM MuaIt    : trimf(0, 10, 20);
-    TERM MuaNhieu : trimf(10, 20, 30);
-END;
+variable LuongMua
+begin
+    term MuaIt    : trimf(0, 10, 20);
+    term MuaNhieu : trimf(10, 20, 30);
+end;
 
-VARIABLE NhietDo
-BEGIN
-    TERM NhietDoCao  : trimf(0, 10, 20);
-    TERM NhietDoThap : trimf(10, 20, 30);
-END;
+variable NhietDo
+begin
+    term NhietDoCao  : trimf(0, 10, 20);
+    term NhietDoThap : trimf(10, 20, 30);
+end;

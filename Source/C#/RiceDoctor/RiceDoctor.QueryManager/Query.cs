@@ -39,16 +39,17 @@ namespace RiceDoctor.QueryManager
             var match = _regex.Match(unaccentKeywords);
             if (!match.Success || match.Groups.Count < 2) return null;
 
-            var results = new List<string>();
+            var terms = new List<string>();
             for (var i = 1; i < match.Groups.Count; ++i)
             {
-                var value = match.Groups[i].Value.Trim();
-                var result = Regex.Replace(value, @"\s+", " ");
+                var value = match.Groups[i].Value;
+                if (string.IsNullOrWhiteSpace(value)) continue;
 
-                results.Add(result);
+                var term = Regex.Replace(value.Trim(), @"\s+", " ");
+                terms.Add(term);
             }
 
-            return results;
+            return terms.Count == 0 ? null : terms;
         }
     }
 }

@@ -131,9 +131,6 @@
         <ObjectProperty IRI="#CoHienTuong"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#khaiNiem"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#ThanThoi"/>
     </Declaration>
     <Declaration>
@@ -767,10 +764,10 @@
         <NamedIndividual IRI="#QuyTrinhTuoiNuocChinSap"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#GiaiDoanGieo"/>
+        <NamedIndividual IRI="#BiaLaChay"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#BiaLaChay"/>
+        <NamedIndividual IRI="#GiaiDoanGieo"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#thanhPhan"/>
@@ -2953,14 +2950,14 @@ Những điều cần lưu ý để sử dụng [Thuoc]thuốc[/Thuoc] hóa họ
 ● Biện pháp xử lý bằng thuốc hóa học vẫn được xem là biện pháp hiệu quả nhất trong việc phòng trị bệnh lem lép hạt. Trong việc dùng thuốc phải chú phun thuốc phòng bệnh là tốt nhất, để khi bệnh đã xâm nhập vào hạt lúa rồi thì việc phun thuốc trị bệnh sẽ cho hiệu quả thấp, phải phun đi phun lại nhiều lần rất tốn kém. Việc chọn lựa đúng loại thuốc và thời điểm phun thuốc cũng rất quan trọng. Hiện nay thuốc Tilt Super 300EC vẫn là loại thuốc có hiệu quả nhất cho việc phòng trị bệnh này cũng như bảo vệ cho hạt lúa chắc, sáng. Ngoài ra có rất nhiều loại thuốc hoá học phòng trị các loại nấm gây bệnh như: Vicarben 50HP (hoạt chất Carbendazim), Vivil 5SC (hoạt chất Hexaconazole), Vixazol 275SC (hoạt chất Carbendazim + Hexaconazole), Vitin-New 250EC (hoạt chất Propiconazole), Viroval 50BTN (hoạt chất Iprodione), Workup 9SL (hoạt chất Metconazole).</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#definition"/>
+        <NamedIndividual IRI="#BenhLemLepHat"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Lem lép hạt lúa là tên gọi để chỉ chung hiện tượng hạt lúa có vỏ trấu sậm màu biến đổi từ màu nâu đến đen; từ đen lốm đốm đến đen toàn bộ vỏ trấu bao gồm cả trên hạt lúa có gạo và hạt lúa lép không có gạo ở giai đoạn cây lúa còn trên đồng ruộng trước khi thu hoạch</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#image"/>
         <NamedIndividual IRI="#BenhLemLepHat"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">lemlephat.jpg</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#khaiNiem"/>
-        <NamedIndividual IRI="#BenhLemLepHat"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Lem lép hạt lúa là tên gọi để chỉ chung hiện tượng hạt lúa có vỏ trấu sậm màu biến đổi từ màu nâu đến đen; từ đen lốm đốm đến đen toàn bộ vỏ trấu bao gồm cả trên hạt lúa có gạo và hạt lúa lép không có gạo ở giai đoạn cây lúa còn trên đồng ruộng trước khi thu hoạch</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -3475,16 +3472,16 @@ Phun Plastimula 1SL liều lượng 20 ml/bình 16 lít nước phối trộn v�
 - Dùng các loại thuốc Regent 800WG, Hopsan 75ND, Selecron 500EC hoặc Actara 25WP phun khi bọ trĩ phát sinh rộ.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#image"/>
-        <NamedIndividual IRI="#BoTri"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">botri.jpg</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#khaiNiem"/>
+        <DataProperty IRI="#definition"/>
         <NamedIndividual IRI="#BoTri"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Stenchaetothrips biformis Bagnall
 Bọ xít thường gây hại khi lúa còn non ở giai đoạn mạ, lúa lúa hồi xanh và đang đẻ nhánh.
 Lúa xuân muộn (tháng 3,4) thường bị hại nặng hơn cả. Lúa gieo thẳng bị hại nặng hơn lúa cấy. Những năm khô hạn thích hợp cho bọ trĩ phát sinh rộ. Ruộng lúa càng khô hạn thì thiệt hại do bọ trĩ gây ra càng lớn.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#BoTri"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">botri.jpg</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -3523,17 +3520,17 @@ Bọ trưởng thành và bọ non sống tụ tập ở gốc lúa ngay phía t
 - Dùng các loại thuốc Ofatox 400EC, Fastac 5EC, Dimenat 40EC hoặc [Thuoc=Actara_25WG] Actara 25WG [/Thuoc]. phun khi bọ xít phát sinh rộ.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#image"/>
-        <NamedIndividual IRI="#BoXit"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">boxit.jpg</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#khaiNiem"/>
+        <DataProperty IRI="#definition"/>
         <NamedIndividual IRI="#BoXit"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BỌ XÍT DÀI - Leptocorisa acuta Thunberg
 BỌ XÍT XANH - Nezara viridula Linnaeus
 BỌ XÍT ĐEN - Scotinophara spp
 Bọ xít thường gây hại nặng ở tất cả các giai đoạn sinh trưởng của cây lúa, quan trọng nhất là thời kỳ trỗ, bông lúa bị hại lửng lép hoặc bạc trắng, giảm năng suất. Ruộng lúa gần bìa rừng, gần ruộng rau màu và có nhiều cỏ dại thường bị hại nặng.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#BoXit"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">boxit.jpg</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -4723,14 +4720,14 @@ Kết hợp tạo mặt ruộng khô xen kẽ cũng là giải pháp để giả
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">sử dụng viên giải độc GENO-Sica để bón cho cây giúp giải độc các hiện tượng ngộ độc hữu cơ, ngộ độc phèn.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#definition"/>
+        <NamedIndividual IRI="#HienTuongNgoDocHuuCo"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ngộ độc hữu cơ là hiện tượng cây lúa bị “ngộ độc” do các a-xít hữu cơ được hình thành trong quá trình phân hủy chất hữu cơ trong đất.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#image"/>
         <NamedIndividual IRI="#HienTuongNgoDocHuuCo"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ngodochuuco.jpg</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#khaiNiem"/>
-        <NamedIndividual IRI="#HienTuongNgoDocHuuCo"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ngộ độc hữu cơ là hiện tượng cây lúa bị “ngộ độc” do các a-xít hữu cơ được hình thành trong quá trình phân hủy chất hữu cơ trong đất.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -6520,15 +6517,15 @@ Phòng trừ:
 - Khi phun rạch hàng lúa để phun. Nếu dùng [Thuoc=Actara_25WG] Actara 25WG [/Thuoc] thì không cần rạch hàng lúa.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#image"/>
-        <NamedIndividual IRI="#RayLungTrang"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">raylungtrang.jpg</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#khaiNiem"/>
+        <DataProperty IRI="#definition"/>
         <NamedIndividual IRI="#RayLungTrang"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Sogatella furcifera Horvath
 Gây hại cùng với [Sau=RayNau]rầy nâu [/Sau] nhưng trong cùng lứa thì rầy lưng trắng phát sinh rộ sớm hơn. Rầy non có màu trắng hoặc nền trắng cùng các vết xám đậm. Thường hại nặng trên các giống lúa nhiễm rầy, lúa lai, thâm canh cao, bón nhiều đạm, ruộng lúa cấy dày, rậm rạp. Rầy lưng trắng thường có mật độ cao, gây hại nặng vào giai đoạn giai đoạn lúa làm đòng. ở vùng lúa đồng bằng sông Hồng một năm có 6-7 lứa. Quan trọng là lứa tháng 4 và cuối tháng 8 đầu tháng 9 trùng với các giai đoạn trên.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#RayLungTrang"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">raylungtrang.jpg</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -6590,15 +6587,15 @@ d.  Biện pháp phòng trừ:
 - Dùng các loại thuốc [Thuoc=Bassa_50EC] Bassa 50EC [/Thuoc], Regent 800WP, Trebon 20ND,  Mipcin 20WP, rạch hàng lúa để phun. Nếu dùng [Thuoc=Actara_25WG] Actara 25WG [/Thuoc] thì không cần rạch  hàng  nhưng vẫn  phải phun tập trung vào gốc lúa.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#image"/>
-        <NamedIndividual IRI="#RayNau"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">raynau.jpg</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#khaiNiem"/>
+        <DataProperty IRI="#definition"/>
         <NamedIndividual IRI="#RayNau"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Nilaparvata lugens Stal
 [Sau=RayNau]rầy nâu [/Sau] thích hợp với điều kiện khí hậu ấm nóng, ẩm độ cao, mưa nắng xen kẽ và cấy nhiều giống nhiễm rầy thường phát sinh gây hại nặng. Rầy xâm nhập vào ruộng lúa ngay từ khi mới cấy và hại cả trên mạ. cao điểm rầy phát sinh mật độ cao và gây hại năng vào giai đoạn lúa trỗ xong, ngậm sữa và bắt đầu chín. ở miền Bắc mùa đông lạnh nên có 2 đỉnh cao và gây cháy rầy vào các tháng 5 (vụ xuân) và cuối tháng 9 đầu tháng 10 (vụ mùa) trùng với giai đoạn lúa trỗ – ngậm sữa. [Sau=RayNau]rầy nâu [/Sau] còn là vectơ truyền bệnh vàng lùn, lùn xoắn lá hại lúa.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#RayNau"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">raynau.jpg</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -6934,15 +6931,15 @@ Padan 95SP, Regent 800WP sau khi bướm độ 5-7 ngày.
 Dùng thuốc Basudin 10G, Diaphos 10G trộn với đất bột, rắc khi có dảnh héo hoặc lúa sắp trỗ. Khi rắc thuốc chú ý ruộng phải có nước</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#image"/>
-        <NamedIndividual IRI="#SauDucThanHaiCham"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">sauducthan2cham.jpg</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#khaiNiem"/>
+        <DataProperty IRI="#definition"/>
         <NamedIndividual IRI="#SauDucThanHaiCham"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Scirpophaga incertulas Walker
 Gây hại trong suốt tời kỳ sinh trưởng của lúa ( kể cả giai mạ). thích hợp trong điều kiện ấm, nóng và ẩm độ cao nên ở miền Nam và miền Trung sâu có thể gây hại trong tất cả các vụ lúa. Tại các tỉnh phía Bắc, những năm mùa đông rét đậm kéo dài, vụ mùa khô hạn thường phát sịnh nặng. Một năm có 6 -7 lứa, quan trọng nhất là lứa 2 (tháng 5) và lứa 5 (tháng 9) gây bông bạc. Lúa xuân muộn và mùa chính vụ bị hại nặng hơn cả.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#SauDucThanHaiCham"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">sauducthan2cham.jpg</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -6979,15 +6976,15 @@ Gây hại trong suốt tời kỳ sinh trưởng của lúa ( kể cả giai m�
 - Phun phòng trừ bằng các loại [Thuoc]thuốc[/Thuoc] Padan 95SP, Regent 800WP. Dùng [Thuoc]thuốc[/Thuoc] Basudin 10G trộn với đất bột, rắc khi bướm rộ. Khi rắc [Thuoc]thuốc[/Thuoc] chú ý ruộng phải có nước.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#image"/>
-        <NamedIndividual IRI="#SauDucThanNamVachDauNau"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">sauducthannamvach.jpg</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#khaiNiem"/>
+        <DataProperty IRI="#definition"/>
         <NamedIndividual IRI="#SauDucThanNamVachDauNau"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Chilo suppressalis Walker
 Sâu đục thân 5 vạch Phát sinh nhiều ở vùng ôn độ thấp, ít lụt bão. Hại nặng ở giai đoạn lúa con gái- làm đòng; vụ xuân hại nặng hơn vụ mùa.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#SauDucThanNamVachDauNau"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">sauducthannamvach.jpg</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -8041,10 +8038,6 @@ Trà	Đốm lá
         <Class abbreviatedIRI="owl:Thing"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="#khaiNiem"/>
-        <Class abbreviatedIRI="owl:Thing"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
         <DataProperty IRI="#lieuLuong"/>
         <Class IRI="#Thuoc"/>
     </DataPropertyDomain>
@@ -8184,10 +8177,6 @@ Trà	Đốm lá
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#image"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#khaiNiem"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -8593,11 +8582,6 @@ Trà	Đốm lá
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#image</IRI>
         <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hình ảnh</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#khaiNiem</IRI>
-        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Khái niệm</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
