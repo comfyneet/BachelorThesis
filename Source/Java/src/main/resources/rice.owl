@@ -50,10 +50,10 @@
         <Class IRI="#ThuHoachBaoQuan"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#KhongNuoc"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <NamedIndividual IRI="#KhongNuoc"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#BenhDomVang"/>
@@ -143,16 +143,19 @@
         <NamedIndividual IRI="#DamNhieu"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#BenhLuaVon"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Damycine"/>
     </Declaration>
     <Declaration>
         <Class IRI="#XuatHienOc"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#luongNuoc"/>
+        <NamedIndividual IRI="#PHÂN_HỦY_GỐC_RẠ"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#PHÂN_HỦY_GỐC_RẠ"/>
+        <DataProperty IRI="#luongNuoc"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#DoAmTrungBinh"/>
@@ -251,10 +254,13 @@
         <DataProperty IRI="#luongPhanBon"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#ThuHoachLua"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#DatAm"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#ThuHoachLua"/>
+        <NamedIndividual IRI="#BenhHoaCuc"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#LaUa"/>
@@ -281,6 +287,9 @@
         <NamedIndividual IRI="#PhanKali"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#BenhThoiBe"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#PhanRac"/>
     </Declaration>
     <Declaration>
@@ -293,9 +302,6 @@
         <Class IRI="#HinhDangLa"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#ThuocActara_25WWG"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#OcNhot"/>
     </Declaration>
     <Declaration>
@@ -306,9 +312,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#KhongCoSau"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#BenhTuyenTrung"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Co"/>
@@ -341,10 +344,10 @@
         <NamedIndividual IRI="#NhietDoCao"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#BenhKhamVang"/>
+        <DataProperty IRI="#denNgay"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#denNgay"/>
+        <NamedIndividual IRI="#BenhViRutLuaCo"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#BoLa"/>
@@ -383,10 +386,10 @@
         <NamedIndividual IRI="#ThanUn"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#GiaiDoan"/>
+        <NamedIndividual IRI="#GanLaXung"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#GanLaXung"/>
+        <Class IRI="#GiaiDoan"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#nhuCauNuocOGiaiDoan"/>
@@ -398,10 +401,10 @@
         <Class IRI="#Phan"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Ray"/>
+        <DataProperty IRI="#nguyenNhan"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#nguyenNhan"/>
+        <NamedIndividual IRI="#Actara_25WG"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#BenhChayBiaLa"/>
@@ -812,10 +815,10 @@
         <NamedIndividual IRI="#HatLep"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#PhanPhucHop"/>
+        <Class IRI="#HienTuong"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#HienTuong"/>
+        <NamedIndividual IRI="#PhanPhucHop"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#GioLon"/>
@@ -866,16 +869,19 @@
         <NamedIndividual IRI="#SauPhao"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#OcBuuVang"/>
+        <NamedIndividual IRI="#BenhChayLa"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#luongThuoc"/>
+        <NamedIndividual IRI="#OcBuuVang"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#BongNhieu"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#MepLaRach"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#luongThuoc"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="#ChieuCao"/>
@@ -1018,6 +1024,10 @@
         <Class IRI="#TrieuChungCayLua"/>
     </SubClassOf>
     <ClassAssertion>
+        <Class IRI="#ThuocSauHai"/>
+        <NamedIndividual IRI="#Actara_25WG"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#ThuocBenhHai"/>
         <NamedIndividual IRI="#Antracol_70WP"/>
     </ClassAssertion>
@@ -1047,6 +1057,10 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Benh"/>
+        <NamedIndividual IRI="#BenhChayLa"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Benh"/>
         <NamedIndividual IRI="#BenhDaoOn"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1059,7 +1073,7 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Benh"/>
-        <NamedIndividual IRI="#BenhKhamVang"/>
+        <NamedIndividual IRI="#BenhHoaCuc"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Benh"/>
@@ -1071,11 +1085,19 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Benh"/>
+        <NamedIndividual IRI="#BenhLuaVon"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Benh"/>
         <NamedIndividual IRI="#BenhLunSocDen"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Benh"/>
         <NamedIndividual IRI="#BenhLunXoanLa"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Benh"/>
+        <NamedIndividual IRI="#BenhThoiBe"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Benh"/>
@@ -1087,15 +1109,15 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Benh"/>
-        <NamedIndividual IRI="#BenhTuyenTrung"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Benh"/>
         <NamedIndividual IRI="#BenhVangLa"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Benh"/>
         <NamedIndividual IRI="#BenhVangLun"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Benh"/>
+        <NamedIndividual IRI="#BenhViRutLuaCo"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#HinhDangLa"/>
@@ -1627,10 +1649,6 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Sau"/>
-        <NamedIndividual IRI="#Ray"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Sau"/>
         <NamedIndividual IRI="#RayLungTrang"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1783,10 +1801,6 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#ThuocSauHai"/>
-        <NamedIndividual IRI="#ThuocActara_25WWG"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#ThuocSauHai"/>
         <NamedIndividual IRI="#ThuocAdmire_50EC"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1821,6 +1835,16 @@
         <Class IRI="#ThuocBenhHai"/>
         <NamedIndividual IRI="#dibavil_50FL_50_WP"/>
     </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coTacNhanGayHai"/>
+        <NamedIndividual IRI="#Actara_25WG"/>
+        <NamedIndividual IRI="#BoTri"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coTacNhanGayHai"/>
+        <NamedIndividual IRI="#Actara_25WG"/>
+        <NamedIndividual IRI="#RayNau"/>
+    </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#coTacNhanGayHai"/>
         <NamedIndividual IRI="#Antracol_70WP"/>
@@ -1870,6 +1894,16 @@
         <ObjectProperty IRI="#xuatHienOGiaiDoan"/>
         <NamedIndividual IRI="#BenhBacLa"/>
         <NamedIndividual IRI="#GiaiDoanLamDong"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coThuoc"/>
+        <NamedIndividual IRI="#BenhChayBiaLa"/>
+        <NamedIndividual IRI="#Sasa_20WP"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coThuoc"/>
+        <NamedIndividual IRI="#BenhChayBiaLa"/>
+        <NamedIndividual IRI="#Staner_20WP"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#coThuoc"/>
@@ -1924,12 +1958,12 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#coThuoc"/>
         <NamedIndividual IRI="#BenhVangLun"/>
-        <NamedIndividual IRI="#Bassa_50EC"/>
+        <NamedIndividual IRI="#Actara_25WG"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#coThuoc"/>
         <NamedIndividual IRI="#BenhVangLun"/>
-        <NamedIndividual IRI="#ThuocActara_25WWG"/>
+        <NamedIndividual IRI="#Bassa_50EC"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#coThuoc"/>
@@ -2148,16 +2182,6 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#coTacNhanGayHai"/>
-        <NamedIndividual IRI="#ThuocActara_25WWG"/>
-        <NamedIndividual IRI="#BoTri"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayHai"/>
-        <NamedIndividual IRI="#ThuocActara_25WWG"/>
-        <NamedIndividual IRI="#RayNau"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayHai"/>
         <NamedIndividual IRI="#ThuocAdmire_50EC"/>
         <NamedIndividual IRI="#BoTri"/>
     </ObjectPropertyAssertion>
@@ -2201,6 +2225,68 @@
         <NamedIndividual IRI="#dana-win_12.5_WP"/>
         <NamedIndividual IRI="#BenhLemLepHat"/>
     </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#article"/>
+        <NamedIndividual IRI="#Actara_25WG"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">[Thuoc=Actara_25WG] Actara 25WG [/Thuoc]
+Tiêu diệt rất hiệu quả hơn 70 loại côn trùng chích hút khó trừ.
+[br]
+[b]Tên thương mại [/b] [Thuoc=Actara_25WG] Actara 25WG [/Thuoc] – Sự bảo vệ khôn ngoan
+Hoạt chất	Thiamethoxam
+Qui cách	1 g, 2 g
+Độ độc	Nhóm 3
+[br]
+Cơ chế tác động	Tiếp xúc, vị độc, bảo vệ tức thì cây trồng ngay sau khi xử lý thuốc
+Công dụng	Tiêu diệt rất hiệu quả hơn 70 loại côn trùng chích hút khó trừ
+[br]
+[b]Hướng dẫn sử dụng đối với bọ trĩ [/b]
+– Pha 25-30 g/ha
+– Pha 1 g/bình 8 lit
+– Lượng nước phun: 320-500 lít/ha
+– Phun đều
+[br]
+[b]Hướng dẫn sử dụng đối với [Sau=RayNau]rầy nâu [/Sau] [/b]
+– Pha 40-80 g/ha
+– Pha 1 g/bình 8 lit
+– Phun đều 4-6 bình 8 lít/1.000m2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dacDiem"/>
+        <NamedIndividual IRI="#Actara_25WG"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tên thương mại	[Thuoc=Actara_25WG] Actara 25WG [/Thuoc] – Sự bảo vệ khôn ngoan
+Hoạt chất	Thiamethoxam
+Qui cách	1 g, 2 g
+Độ độc	Nhóm 3
+Cơ chế tác động	Tiếp xúc, vị độc, bảo vệ tức thì cây trồng ngay sau khi xử lý [Thuoc]thuốc[/Thuoc]</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#Actara_25WG"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Actara 25 WG.png</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#luongThuoc"/>
+        <NamedIndividual IRI="#Actara_25WG"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">[Sau=BoTri]bọ trĩ[/Sau]	
+– Pha 25-30 g/ha
+– Pha 1 g/bình 8 lit
+– Lượng nước phun: 320-500 lít/ha
+– Phun đều
+[Sau=RayNau]rầy nâu [/Sau]	
+– Pha 40-80 g/ha
+– Pha 1 g/bình 8 lit
+– Phun đều 4-6 bình 8 lít/1.000m2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Actara_25WG"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thuốc Actara 25WG</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#triSauBenhHai"/>
+        <NamedIndividual IRI="#Actara_25WG"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Công dụng	Tiêu diệt rất hiệu quả hơn 70 loại côn trùng chích hút khó trừ</Literal>
+    </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#dacDiem"/>
         <NamedIndividual IRI="#Antracol_70WP"/>
@@ -2276,14 +2362,14 @@ Nếu bảo quản trong thời gian dưới 3 tháng, độ ẩm hạt lúa c�
         <NamedIndividual IRI="#Bassa_50EC"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Hoạt chất: Fenobucarb 50%
 Hoạt chất Fenobucarb có tác động tiếp xúc, vị độc và hiệu lực trừ sâu cao, nhanh và kéo dài. Trong danh mục [Thuoc]thuốc[/Thuoc] Bảo vệ thực vật Fenobucarb được đăng ký trừ:
-  - Rầy nâu, [Sau=BoXit]bọ xít[/Sau] và sâu keo hại lúa; [Sau=BoTri]bọ trĩ[/Sau], rệp và rầy hại cây có múi; [Sau=BoXit]bọ xít[/Sau] hại hồ tiêu; Rệp hại bông, vải,; Rệp hại đậu tương, [Thuoc]thuốc[/Thuoc] lá; Rệp sáp hại cà phê và rệp hại cây ăn quả.</Literal>
+  - [Sau=RayNau]rầy nâu [/Sau], [Sau=BoXit]bọ xít[/Sau] và [Sau=SauKeo] sâu keo [/Sau] hại lúa; [Sau=BoTri]bọ trĩ[/Sau], rệp và rầy hại cây có múi; [Sau=BoXit]bọ xít[/Sau] hại hồ tiêu; Rệp hại bông, vải,; Rệp hại đậu tương, [Thuoc]thuốc[/Thuoc] lá; Rệp sáp hại cà phê và rệp hại cây ăn quả.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#luongThuoc"/>
         <NamedIndividual IRI="#Bassa_50EC"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">dụng dùng [Thuoc]thuốc[/Thuoc] Bassa 50EC trừ rầy nâu hại lúa, Rệp sáp hại bông.
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">dụng dùng [Thuoc]thuốc[/Thuoc] [Thuoc=Bassa_50EC] Bassa 50EC [/Thuoc] trừ [Sau=RayNau]rầy nâu [/Sau] hại lúa, Rệp sáp hại bông.
    - Lượng dùng và cách pha: Lượng dùng 1 - 1,5 lít/ha, pha 20 - 25 ml [Thuoc]thuốc[/Thuoc] với 8-10 lít nước, và phun khoảng 600 lít nước [Thuoc]thuốc[/Thuoc] đã pha cho 1 ha.
-   - Thời điểm phun: Phun [Thuoc]thuốc[/Thuoc] Bassa 50EC khi rầy mới xuất hiện (Rầy cám).</Literal>
+   - Thời điểm phun: Phun [Thuoc]thuốc[/Thuoc] [Thuoc=Bassa_50EC] Bassa 50EC [/Thuoc] khi rầy mới xuất hiện (Rầy cám).</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -2314,13 +2400,13 @@ Tên khoa học : Xanthomonas campestris pv. Oryzae
 [br]
 [br]
 [b]2 - Tác nhân :[/b]
-      Bệnh bạc lá do vi khuẩn Xanthomonas campestris gây ra. Nhiệt độ thích hợp cho vi khuẩn phát triển là 26-300C, pH thích hợp là 6,8 - 7.
+      [Benh=BenhBacLa] bệnh bạc lá [/Benh] do vi khuẩn Xanthomonas campestris gây ra. Nhiệt độ thích hợp cho vi khuẩn phát triển là 26-300C, pH thích hợp là 6,8 - 7.
 [br]
 [b]3. Đặc điểm phát sinh, phát triển bệnh :[/b]
    - Điều kiện thời tiết: Bệnh phát triển mạnh trong điều kiện ấm nóng và thường gây hại nặng trong vụ lúa mùa. Những năm thời tiết ẩm ướt, nhiều mưa gió, bão,  là điều kiện thuận lợi cho bệnh phát sinh, phát triển.
   - Ảnh hưởng bởi phân bón: Những ruộng bón quá nhiều đạm, cây lúa xanh tốt, thân lá mềm yếu, hàm lượng đạm tự do trong cây tích luỹ cao thì cây dễ nhiễm bệnh nặng. Những ruộng lúa chua, trũng, đặc biệt là những vùng đất hẩu, hàng lúa bị bóng cây che phủ thì bệnh phát triển mạnh hơn. 
   - Ảnh hưởng của giống: Các giống lúa khác nhau thì mức độ mẫn cảm với bệnh cũng khác nhau. Giai đoạn lúa làm đòng-trỗ đến chín sữa là giai đoạn lúa mẫn cảm với bệnh hơn cả. 
-   - Vi khuẩn có thể tồn tại trong hạt thóc hoặc tàn dư cây bệnh là chủ yếu. Ngoài ra nó còn tồn tại ở dạng viên keo vi khuẩn, ở cỏ dại (cỏ lồng vực, cỏ môi, cỏ lá tre, cỏ tranh, cỏ gừng bò, cỏ gà nước, cỏ xương cá lông cứng).
+   - Vi khuẩn có thể tồn tại trong hạt thóc hoặc tàn dư cây bệnh là chủ yếu. Ngoài ra nó còn tồn tại ở dạng viên keo vi khuẩn, ở cỏ dại ([Co=CoLongVuc] cỏ lồng vực [/Co], cỏ môi, cỏ lá tre, cỏ tranh, cỏ gừng bò, cỏ gà nước, cỏ xương cá lông cứng).
 [br]
 [b]4. Biện pháp phòng chống [/b]
 - Chọn giống sạch bệnh. Xử lý hạt giống trước khi trồng ;
@@ -2337,11 +2423,11 @@ Ngoài ra có thể sử dụng các loại [Thuoc]thuốc[/Thuoc] thành phẩm
     <DataPropertyAssertion>
         <DataProperty IRI="#bienPhapKhacPhuc"/>
         <NamedIndividual IRI="#BenhBacLa"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Để khắc phục tình trạng trên, phòng tránh bệnh bạc lá ở lúa mùa, ngoài các biện pháp canh tác đại trà, cần tập trung vào một số điểm sau:
-1. Chọn giống chống chịu tốt với bệnh bạc lá để đưa vào gieo cấy ở vụ mùa.
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Để khắc phục tình trạng trên, phòng tránh [Benh=BenhBacLa] bệnh bạc lá [/Benh] ở lúa mùa, ngoài các biện pháp canh tác đại trà, cần tập trung vào một số điểm sau:
+1. Chọn giống chống chịu tốt với [Benh=BenhBacLa] bệnh bạc lá [/Benh]để đưa vào gieo cấy ở vụ mùa.
 2. Tuân thủ về kỹ thuật trong biện pháp thâm canh như:
 - Để đất nhanh mục nên bón vôi từ 15- 20 kg/sào, làm đất phải đủ ngấu để tránh ngộ độc rễ nhiễm bệnh vàng lá khi lúa đang đẻ sau tiết lập thu.
-- Chỉ cấy mạ đủ tuổi, chăm bón sớm và cân đối tập trung vào giai đoạn đầu vụ. Nên bón phân NPK chuyên dùng, phân có hàm lượng kaly cao, chú ý bón nặng đầu, nhẹ cuối. Ưu tiên bón kaly cao cho các giống hay bị nhiễm bạc lá. Những chân ruộng hẩu hay dồn đạm cuối vụ: cần giảm bón đạm, bón tăng lân và kaly cho cây cứng, lá dầy đỡ bị bệnh bạc lá cuối vụ. Đặc biệt giống chất lượng, nên cấy lùi thời vụ cuối tháng 7 (25-30/7) để lúa trỗ sau 25/9 đến trước 5/10, sát tiết hàn lộ nhiệt độ giảm, thời tiết mát, sẽ đỡ bạc lá hơn. Sử dụng bón phân cho lúa chất lượng, lúa lai là bón lót sâu, bón thúc sớm ngay sau cấy 7-10 ngày: hết cả đạm và kaly .Không bón kaly giai đoạn lúa đứng cái vì cây lại huy động đạm lên dễ bạc lá.</Literal>
+- Chỉ cấy mạ đủ tuổi, chăm bón sớm và cân đối tập trung vào giai đoạn đầu vụ. Nên bón phân NPK chuyên dùng, phân có hàm lượng kaly cao, chú ý bón nặng đầu, nhẹ cuối. Ưu tiên bón kaly cao cho các giống hay bị nhiễm bạc lá. Những chân ruộng hẩu hay dồn đạm cuối vụ: cần giảm bón đạm, bón tăng lân và kaly cho cây cứng, lá dầy đỡ bị [Benh=BenhBacLa] bệnh bạc lá [/Benh] cuối vụ. Đặc biệt giống chất lượng, nên cấy lùi thời vụ cuối tháng 7 (25-30/7) để lúa trỗ sau 25/9 đến trước 5/10, sát tiết hàn lộ nhiệt độ giảm, thời tiết mát, sẽ đỡ bạc lá hơn. Sử dụng bón phân cho lúa chất lượng, lúa lai là bón lót sâu, bón thúc sớm ngay sau cấy 7-10 ngày: hết cả đạm và kaly .Không bón kaly giai đoạn lúa đứng cái vì cây lại huy động đạm lên dễ bạc lá.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#dacDiem"/>
@@ -2371,9 +2457,9 @@ Ngoài ra có thể sử dụng các loại [Thuoc]thuốc[/Thuoc] thành phẩm
     <DataPropertyAssertion>
         <DataProperty IRI="#nguyenNhan"/>
         <NamedIndividual IRI="#BenhBacLa"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Một số giống mẫn cảm với bệnh bạc lá như một số giống tạp giao và một số giống chất lượng.
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Một số giống mẫn cảm với [Benh=BenhBacLa] bệnh bạc lá [/Benh] như một số giống tạp giao và một số giống chất lượng.
 - Do thời tiết nóng ẩm, mưa to gió lớn xảy ra trong thời kỳ lúa cần quang hợp cao.
-- Do biện pháp canh tác làm đất không ngấu, cây lúa nhiễm bệnh vàng lá sau lập thu, bón thêm phân cấp cứu vàng lá, cây lúa ra lớp rễ mới phát triển lá non nên gặp mưa dông dễ nhiễm bệnh bạc lá.
+- Do biện pháp canh tác làm đất không ngấu, cây lúa nhiễm bệnh vàng lá sau lập thu, bón thêm phân cấp cứu vàng lá, cây lúa ra lớp rễ mới phát triển lá non nên gặp mưa dông dễ nhiễm [Benh=BenhBacLa] bệnh bạc lá [/Benh].
 - Bệnh thường mẫn cảm với lượng đạm dư trong lá, những ruộng bón đạm nhiều, bón muộn, bón lai rai, bón không cân đối giữ đạm, lân và kaly, những ruộng trũng hẩu dồn đạm cuối vụ, do biện pháp thâm canh gieo cấy, chăm bón không đúng kỹ thuật.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
@@ -2504,7 +2590,7 @@ Khi ruộng lúa nhiễm nặng, năng suất có thể thất thu 20-30%, có k
 
 -Có thể phun  ngừa bằng các loại [Thuoc] thuốc [/Thuoc] có thành phần là chất kích kháng như Axit Oxalic, axit salicylic hoặc [Thuoc]thuốc[/Thuoc] tạo ra chất kích kháng như  Starner, Alliet...
 
--Khi phát hiện 4-5 % số lá bệnh thì dùng các loại [Thuoc]thuốc[/Thuoc] có chất kháng sinh diệt vi khuẩn Streptomycine sulfat, Chloramphenicol..như các loại [Thuoc]thuốc[/Thuoc] [Thuoc=Bactocide_12WP]Bactocide 12WP[/Thuoc], [Thuoc=Bactocide_12WP]Bactocide 12WP[/Thuoc]; [Thuoc=Sasa_20WP]Sasa 20WP[/Thuoc], Xanthomix 20WP. Phun vào lúc sáng sớm hay chiều mát.</Literal>
+-Khi phát hiện 4-5 % số lá bệnh thì dùng các loại [Thuoc]thuốc[/Thuoc] có chất kháng sinh diệt vi khuẩn Streptomycine sulfat, Chloramphenicol..như các loại [Thuoc]thuốc[/Thuoc]  Bactocide 12WP; [Thuoc=Sasa_20WP]Sasa 20WP[/Thuoc], Xanthomix 20WP. Phun vào lúc sáng sớm hay chiều mát.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#image"/>
@@ -2517,9 +2603,29 @@ Khi ruộng lúa nhiễm nặng, năng suất có thể thất thu 20-30%, có k
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Bệnh cháy bìa lá</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#BenhChayLa"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">benhchayla.jpg</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#BenhChayLa"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">bệnh cháy lá</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#trieuChung"/>
+        <NamedIndividual IRI="#BenhChayLa"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Triệu chứng biểu hiện giống như là bệnh bỏng lá và biến đổi phụ thuộc vào tuổi, giai đoạn của cây trồng, phương pháp canh tác và mật độ cây trồng. Triệu chứng ban đầu phát triển trên đỉnh hoặc ở gờ của phiến lá, diện tích vết bệnh ước tính khoảng 1-2 cm2.
+
+[br]
+[simg=&quot;chaylas.jpg&quot;] cháy lá [/simg]
+[br]
+ Vết bệnh có màu xanh xám, xuất hiện khi ngâm trong nước. Triệu chứng vết bệnh biến đổi giữa màu vàng nhạt và nâu tối. Vùng bị nhiễm khô đi giống như là đã chín, đây chính là sự chuyển biến từ dạng khoanh màu đến dạng bỏng.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
         <NamedIndividual IRI="#BenhDaoOn"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Bệnh cháy lá lúa là bệnh gây hại quan trọng nhất trên cây lúa, còn được gọi là bệnh đạo ôn. Khi dịch cháy lá xảy ra trên diện rộng thì sự thiệt hại đến năng xuất và sản lượng sẽ thấy rất rõ nét và có ý nghĩa quan trọng đến kinh tế. Tác nhân gây bệnh có thể tấn công mọi giai đọan của cây lúa; bắt đầu từ giai đoạn mạ hoặc sau khi gieo sạ cho đến trước trổ thì gọi là bệnh cháy lá. Bệnh có thể gây hại trên cổ lá nên gọi là thối cổ lá, hoặc gây hại trên cổ bông nên được gọi là thối cổ bông làm lép hạt; đôi khi bệnh có thể gây lem vỏ hạt lúa. Bệnh nặng sẽ làm mất trắng năng suất nếu bà con nông dân không phát hiện sớm và phòng trị kịp thời.
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Bệnh cháy lá lúa là bệnh gây hại quan trọng nhất trên cây lúa, còn được gọi là [Benh=BenhDaoOn]đạo ôn[/Benh]. Khi dịch cháy lá xảy ra trên diện rộng thì sự thiệt hại đến năng xuất và sản lượng sẽ thấy rất rõ nét và có ý nghĩa quan trọng đến kinh tế. Tác nhân gây bệnh có thể tấn công mọi giai đọan của cây lúa; bắt đầu từ giai đoạn mạ hoặc sau khi gieo sạ cho đến trước trổ thì gọi là bệnh cháy lá. Bệnh có thể gây hại trên cổ lá nên gọi là thối cổ lá, hoặc gây hại trên cổ bông nên được gọi là thối cổ bông làm lép hạt; đôi khi bệnh có thể gây lem vỏ hạt lúa. Bệnh nặng sẽ làm mất trắng năng suất nếu bà con nông dân không phát hiện sớm và phòng trị kịp thời.
 
 - Điều kiện khí hậu thời tiết: 
 Bệnh này thường phát triển mạnh trong điều kiện khí hậu mát mẽ, ấm độ cao, mưa nhỏ kéo dài, đêm sương mù nhiều. Đặc biệt trong vụ lúa [VuMua=VuDongXuan]đông xuân[/VuMua] tại vùng Đồng Bằng Sông Cửu Long vào tháng giêng-tháng hai dương lịch, bệnh này sẽ gây hại trên diện rộng trùng vào lúc lúa đứng cái đến trổ. Bà con trồng lúa tại các vùng thường xuyên bị bệnh cháy lá hằng năm như Tiền Giang, An Giang, Đồng Tháp và Sóc Trăng cần lưu ý có biện pháp phòng ngừa.
@@ -2542,7 +2648,7 @@ Thông thường các giống lúa cao sản ngắn ngày khi được phóng th
         <DataProperty IRI="#bienPhapKhacPhuc"/>
         <NamedIndividual IRI="#BenhDaoOn"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cần áp dụng biện pháp phòng trừ dịch hại tổng hợp IPM: 
-- Nên chọn mua giống lúa xác nhận ở nhà cung cấp giống tin tưởng, phải có tính “”kháng bệnh” hoặc “kháng vừa” kết hợp với khả năng kháng được rầy nâu. Các giống này phải phù hợp với chân đất tại địa phương cũng như năng suất cao và chất lượng tốt. Tùy theo mục đích để đạt chất lượng gạo ngon, dễ tiêu dùng trong nước và xuất khẩu, bà con có thể chọn một số giống như sau: IR64, VNĐ 95-20, VNĐ 99-3, OMCS 2000, OM 1490, MTL 250, OM 3536, VĐ 20, Jasmine 85…
+- Nên chọn mua giống lúa xác nhận ở nhà cung cấp giống tin tưởng, phải có tính “”kháng bệnh” hoặc “kháng vừa” kết hợp với khả năng kháng được [Sau=RayNau]rầy nâu [/Sau]. Các giống này phải phù hợp với chân đất tại địa phương cũng như năng suất cao và chất lượng tốt. Tùy theo mục đích để đạt chất lượng gạo ngon, dễ tiêu dùng trong nước và xuất khẩu, bà con có thể chọn một số giống như sau: IR64, VNĐ 95-20, VNĐ 99-3, OMCS 2000, OM 1490, MTL 250, OM 3536, VĐ 20, Jasmine 85…
 
 - Nên chọn hạt giống sạch bệnh, khử lẫn tạp hạt cỏ, xử lý một số lọai bệnh trên vỏ hạt bằng cách pha 20 cc thuốc CRUISER Plus với 2 lít nước phun lên 100 kg hạt giống trong giai đọan ủ từ 6-12 giờ trước khi đem đi gieo sạ.
 
@@ -2574,7 +2680,7 @@ Thông thường các giống lúa cao sản ngắn ngày khi được phóng th
     <DataPropertyAssertion>
         <DataProperty IRI="#nguonGoc"/>
         <NamedIndividual IRI="#BenhDaoOn"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tác nhân gây hại là nấm Pyricularia oryzae Cav. hay P. grisea (Cook )Sacc. . Bào tử của nấm rất nhỏ, có thể phát tán và bay cao đến 24 m, thậm chí đến 10.000 m để lây lan cho các ruộng lân cận trong khu vực. Nấm phát triển tốt trong điều kiện mát từ 24-280C, ẫm độ cao &gt;80%, biên độ nhiệt giữa ngày và đêm cao sẽ dễ phát sinh thành dịch. Bào tử nấm nảy mầm khi gặp lớp nước tự do trên lá hay không khí bảo hòa nước; ở 240C bào tử cần 6 giờ, ở 280C mất 8 giờ; vượt quá 280C bào tử phát triển kém. Bào tử xâm nhập vào tế bào lá bằng cách mọc thành đĩa áp, chọc thủng vách tế bào lá lúa. Ngoài ra, bào tử còn tiết ra độc tố pyricularin gây độc cho cây (Ou, 1983). Cây lúa là ký chủ chính, bệnh có thể lưu tồn trên các cây ký chủ phụ mọc quanh ruộng như các loài cỏ lồng vực, đuôi phụng, cỏ chỉ, lúa ma, lúa rày-lúa chét…</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tác nhân gây hại là nấm Pyricularia oryzae Cav. hay P. grisea (Cook )Sacc. . Bào tử của nấm rất nhỏ, có thể phát tán và bay cao đến 24 m, thậm chí đến 10.000 m để lây lan cho các ruộng lân cận trong khu vực. Nấm phát triển tốt trong điều kiện mát từ 24-280C, ẫm độ cao &gt;80%, biên độ nhiệt giữa ngày và đêm cao sẽ dễ phát sinh thành dịch. Bào tử nấm nảy mầm khi gặp lớp nước tự do trên lá hay không khí bảo hòa nước; ở 240C bào tử cần 6 giờ, ở 280C mất 8 giờ; vượt quá 280C bào tử phát triển kém. Bào tử xâm nhập vào tế bào lá bằng cách mọc thành đĩa áp, chọc thủng vách tế bào lá lúa. Ngoài ra, bào tử còn tiết ra độc tố pyricularin gây độc cho cây (Ou, 1983). Cây lúa là ký chủ chính, bệnh có thể lưu tồn trên các cây ký chủ phụ mọc quanh ruộng như các loài [Co=CoLongVuc][Co=CoLongVuc] cỏ lồng vực [/Co][/Co], đuôi phụng, [Co=CoChi] cỏ chỉ  [/Co], lúa ma, lúa rày-lúa chét…</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#trieuChung"/>
@@ -2631,16 +2737,24 @@ Khi nhiều vết [Benh=BenhDomNau]bệnh đốm nâu[/Benh] xuất hiện trên
     <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
         <NamedIndividual IRI="#BenhDomVang"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">1. Giới thiệu: - Bệnh đốm vằn trên lúa hay còn gọi là bệnh ung thư, được phát hiện và mô tả đầu tiên vào 1910 ở Nhật Bản, sau đó bệnh này cũng được ghi nhận ở nhiều nước trên thế giới. Bệnh đốm vằn là một trong những bệnh gây hại quan trọng trên ruộng lúa nước ở nước ta và các nước trồng lúa trên thế giới.
-2. Triệu chứng bệnh
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">[h1]1. Giới thiệu: [/h1]
+[br]
+- Bệnh đốm vằn trên lúa hay còn gọi là bệnh ung thư, được phát hiện và mô tả đầu tiên vào 1910 ở Nhật Bản, sau đó bệnh này cũng được ghi nhận ở nhiều nước trên thế giới. Bệnh đốm vằn là một trong những bệnh gây hại quan trọng trên ruộng lúa nước ở nước ta và các nước trồng lúa trên thế giới.
+[br]
+[h1]2. Triệu chứng bệnh [/h1]
+[br]
 - Bệnh thường xuất hiện từ 40 ngày sau khi sạ tới khi lúa trổ. Đầu tiên là những vết bệnh xuất hiện trên bẹ lá ở gần gốc lúa, đôi khi lây trực tiếp qua lá từ những cây bị bệnh xung quanh.
 - Các vết bệnh lúc đầu có hình hơi tròn hoặc bầu dục có màu xanh xám, tâm có mày trắng xám và xung quanh màu nâu; kích thước vết bệnh thay đổi thường dài từ 1-3 cm. Khi gặp điều kiện thuận lợi các vết bệnh phát triển và liên kết lại hình thành nên những vết bệnh vằn vện không có hình dạng nhất định nên gọi là bệnh đốm vằn.
 - Ở trên ruộng lúa, bệnh thường xuất hiện gần mặt nước ruộng, sau đó bệnh phát triển lên các bẹ và lá phía trên hay lây sang những cây xung quanh. Có nhiều hạch nấm được hình thành ngay gần vết bệnh. Đầu tiên hạch nấm có màu trắng khi già chuyển sang màu nâu. Hạch nấm già sẽ  rơi xuống đất và trôi nổi trên mặt nước, đây là nguồn lây lan bệnh từ nơi này sang nơi khác hoặc từ vụ này sang vụ tiếp theo.
-3. Tác nhân gây hại:
+[br]
+[h1]3. Tác nhân gây hại: [/h1]
+[br]
 - Bệnh đốm vằn do nấm Rhizoctonia solani Kuhn gây ra, là bệnh hại quan trọng đối với lúa cao sản ngắn ngày. Bệnh có thể gây hại ở tất cả các vụ trong năm, thường gây hại nặng ở vụ Đông Xuân. Bệnh nhẹ thì làm tăng tỷ lệ lem lép hạt, gây đổ ngã, làm giảm năng suất. Bệnh nặng sẽ làm cây lúa chết và có thể gây thất thu năng suất lên đến 25%.
 - Nấm R. solani còn gây hại trên nhiều loại cây trồng khác như: gây bệnh chết cây con đối với đậu nành, đậu xanh, cà chua; gây bệnh đốm vằn, chết cây con trên cây bắp, ... Vì vậy các loại hoa màu trồng luân canh trên đất lúa thường dễ bị nhiễm bệnh do nấm R. solani gây ra.
 - Nấm R. solani có thể sống, phát triển hầu hết trên tất cả các loại cỏ dại, hạch nấm rơi xuống đất có thể tồn tại rất lâu và có khả năng gây bệnh trở lại sau một thời gian dài trong điều kiện tự nhiên. Do đó bệnh thường xuyên xuất hiện trên ruộng lúa.
-4. Biện pháp phòng trừ:
+[br]
+[h1] 4. Biện pháp phòng trừ: [/h1]
+[br]
 - Làm cỏ xung quanh ruộng, trong ruộng và kênh mương dẫn nước.
 - Gieo sạ với mật độ thích hợp (150-200 kg/ha sạ bằng tay, 80-100 kg/ha sạ bằng máy sạ hàng).
 - Sử dụng phân bón thích hợp (dùng bảng so màu là lúa, bón phân cân đối theo quy trình bón phân).
@@ -2672,9 +2786,26 @@ Khi nhiều vết [Benh=BenhDomNau]bệnh đốm nâu[/Benh] xuất hiện trên
 - Ở trên ruộng lúa, bệnh thường xuất hiện gần mặt nước ruộng, sau đó bệnh phát triển lên các bẹ và lá phía trên hay lây sang những cây xung quanh. Có nhiều hạch nấm được hình thành ngay gần vết bệnh. Đầu tiên hạch nấm có màu trắng khi già chuyển sang màu nâu. Hạch nấm già sẽ  rơi xuống đất và trôi nổi trên mặt nước, đây là nguồn lây lan bệnh từ nơi này sang nơi khác hoặc từ vụ này sang vụ tiếp theo.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#bienPhapKhacPhuc"/>
+        <NamedIndividual IRI="#BenhHoaCuc"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Không sử dụng hạt giống ở những ruộng bị bệnh. Xử lí hạt giống bằng nước nóng 54OC. Chăm sóc hợp lý làm cho cây khoẻ, tăng cường khả năng chống bệnh. Vệ sinh đồng ruộng, phơi ải, ngâm dầm để tiêu diệt bào tử và hạch nấm. Không gieo cấy những giống lúa mẫn cảm với bệnh.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#BenhHoaCuc"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">benhhoacuc.jpg</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
-        <NamedIndividual IRI="#BenhKhamVang"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Bệnh Khảm Vàng</Literal>
+        <NamedIndividual IRI="#BenhHoaCuc"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">bệnh hoa cúc</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#trieuChung"/>
+        <NamedIndividual IRI="#BenhHoaCuc"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ustilaginoidea virens (Cooke) Taka
+
+Bệnh phát sinh gây hại từ lúc lúa phơi màu cho tới khi chín. Thời tiết nắng nóng, mưa nhiều, ẩm độ cao, bón đạm nhiều nặng về cuối thuận lợi cho bệnh phát triển. Bệnh gây hại trên nhiều giống lúa và hại nặng trên các giống lúa Trung Quốc.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
@@ -2684,7 +2815,7 @@ Bệnh khô vằn được phát hiện ở Nhật Bản (Miyaka, 1910 và Sawad
 
 
 
-   Trong các bệnh nấm hại lúa hiện nay ở nước ta bệnh khô vằn được xếp vào bệnh nghiêm trọng thứ hai sau bệnh đạo ôn và là loại bệnh gây hại chủ yếu trên lúa hè thu và lúa mùa đồng thời hại phổ biến trên một số giống ngô mới.
+   Trong các bệnh nấm hại lúa hiện nay ở nước ta bệnh khô vằn được xếp vào bệnh nghiêm trọng thứ hai sau [Benh=BenhDaoOn]đạo ôn[/Benh] và là loại bệnh gây hại chủ yếu trên lúa hè thu và lúa mùa đồng thời hại phổ biến trên một số giống ngô mới.
 
 Triệu chứng
 
@@ -2844,6 +2975,29 @@ Những điều cần lưu ý để sử dụng [Thuoc]thuốc[/Thuoc] hóa họ
 - Do các loại nấm: Alternaria padwickii, Bipolaris oryzae, Fusarium sp, Curvularia lunata, Microdochium oryzae, Phoma sp, Pyricularia oryzae, Sarocladium oryzae, Septoria sp, Tilletia barclayana, Ustilagonoides virens...</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#bienPhapKhacPhuc"/>
+        <NamedIndividual IRI="#BenhLuaVon"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">nhổ sạch hết lúa von để tránh lây lan</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#BenhLuaVon"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">benhluavon1.jpg</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#BenhLuaVon"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">bệnh lúa von</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#trieuChung"/>
+        <NamedIndividual IRI="#BenhLuaVon"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Fusarium moniliforme
+
+Triệu chứng điển hình và dễ nhận biết là cây bệnh phát triển chiều cao bất bình thường, cây yếu và có màu xanh nhạt. Mức độ bị bệnh của cây được thể hiện rõ bằng sự sinh trưởng cao vọt của cây, nhưng đôi khi do ảnh hưởng của điều kiện thời tiết mà khả năng tiết ra độc tố của nấm bệnh khác nhau dẫn đến xuất hiện một vài triệu chứng khác như làm cho cây bị bệnh lùn đi, đa số chết trên nương mạ, hoặc có dạng bệnh không làm thay đổi chiều cao của cây
+Cây nhiễm bệnh nặng thường bị chết trước khi cấy hoặc sau khi cấy. Những cây nhiễm bệnh trung bình hoặc nhẹ hơn hầu như cũng chết ở giai đoạn ruộng lúa đang ôm đòng. Một số ít cây lúa bị bệnh sống sót đến giai đoạn ôm đòng- trỗ bông, lóng vươn dài, mọc rễ bất định ở các đốt phía dưới gần gốc lúa, có thể quan sát thấy lớp nấm màu trắng hoặc phớt hồng bao quanh. Trên đốt thân và vỏ hạt có nhiều chấm nhỏ li ti màu xám đen, đó là quả thể nấm.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
         <NamedIndividual IRI="#BenhLunSocDen"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">[b]1. Tác nhân gây bệnh[/b]
@@ -2861,7 +3015,7 @@ Một số triệu chứng của [Benh=BenhLunSocDen]bệnh lùn sọc đen[/Ben
 Bệnh không truyền qua hạt giống lúa, không truyền qua đất và tiếp xúc giữa cây bệnh và cây khỏe.
 [br]
 [b]4. Tồn tại của bệnh trên đồng ruộng[/b]
-Ngoài cây lúa, [Benh=BenhLunSocDen]bệnh lùn sọc đen[/Benh] còn gây hại trên ngô, lúa mì, cỏ lồng vực, cỏ chát, cỏ đuôi phụng, vì các cây này cũng là ký chủ của [Sau=RayLungTrang]rầy lưng trắng[/Sau] và cũng là nguồn chứa vi rút để [Sau=RayLungTrang]rầy lưng trắng[/Sau] truyền sang cây lúa. Bệnh cũng có thể lưu tồn trên lúa chét của cây lúa bị bệnh trước đó.
+Ngoài cây lúa, [Benh=BenhLunSocDen]bệnh lùn sọc đen[/Benh] còn gây hại trên ngô, lúa mì, [Co=CoLongVuc] cỏ lồng vực [/Co], cỏ chát, cỏ đuôi phụng, vì các cây này cũng là ký chủ của [Sau=RayLungTrang]rầy lưng trắng[/Sau] và cũng là nguồn chứa vi rút để [Sau=RayLungTrang]rầy lưng trắng[/Sau] truyền sang cây lúa. Bệnh cũng có thể lưu tồn trên lúa chét của cây lúa bị bệnh trước đó.
 Vi rút gây bệnh tồn tại trong cơ thể của [Sau=RayLungTrang]rầy lưng trắng[/Sau] sống qua đông hoặc di chuyển rất xa theo gió và bão để gây bệnh cho lúa và một số loài cây khác ở các vùng khác hoặc vụ tiếp theo.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
@@ -2929,13 +3083,13 @@ Cách lan truyền bệnh lùn xoăn lá giống như [Benh=BenhVangLun]bệnh v
 Lưu ý: có trường hợp trên một cây lúa đồng thời xuất hiện cả hai triệu chứng [Benh=BenhVangLun]bệnh vàng lùn[/Benh] và lùn xoắn lá 
 . Phòng trừ [Benh=BenhVangLun]bệnh vàng lùn[/Benh] và lùn xoắn lá
 [Benh=BenhVangLun]bệnh vàng lùn[/Benh] và lùn xoắn lá (cũng như bệnh lúa cỏ) gây hại cây lúa cho đến nay là chưa có [Thuoc]thuốc[/Thuoc] đặc trị; vì vậy biện pháp đầu tiên là phòng bệnh, bao gồm: 
-- Thực hiện triệt để các biện pháp phòng trừ rầy nâu.
+- Thực hiện triệt để các biện pháp phòng trừ [Sau=RayNau]rầy nâu [/Sau].
 
 - Áp dụng các biện pháp canh tác đồng bộ để tạo cây lúa khỏe nhất là giai đoạn trước trỗ để gia tăng sức đề kháng của cây.  
 
 Tiêu hủy nguồn bệnh trên đồng ruộng, cụ thể như sau: 
-- Giai đọan lúa còn non: nếu ruộng lúa bị nhiễm bệnh nặng (trên 10% số khóm bị bệnh) thì phải tiêu hủy ngay bằng cách cày, bừa cả ruộng để diệt mầm bệnh; trước khi cày vùi phải phun [Thuoc]thuốc[/Thuoc] trừ rầy nâu để tránh phát tán truyền bệnh sang ruộng khác; nếu bị nhiễm nhẹ (rải rác, dưới 10% số khóm bị bệnh) thì phải nhổ bỏ cây bệnh và vùi xuống ruộng, không bỏ tràn lan trên bờ. 
-- Giai đọan lúa sau cấy 40 ngày trở đi: thường xuyên thăm đồng và nhổ, vùi bỏ bụi lúa bệnh; đồng thời nếu phát hiện rầy cám có mật số trên 3 con/dảnh thì phải phun [Thuoc]thuốc[/Thuoc] trừ rầy nâu . Nếu ruộng lúa bị nhiễm bệnh quá nặng thì tiêu hủy bằng cách cày, bừa cả ruộng; trước khi cày, bừa phải phun [Thuoc]thuốc[/Thuoc] trừ rầy nâu nếu có rầy trên lúa để tránh phát tán truyền bệnh sang ruộng khác.</Literal>
+- Giai đọan lúa còn non: nếu ruộng lúa bị nhiễm bệnh nặng (trên 10% số khóm bị bệnh) thì phải tiêu hủy ngay bằng cách cày, bừa cả ruộng để diệt mầm bệnh; trước khi cày vùi phải phun [Thuoc]thuốc[/Thuoc] trừ [Sau=RayNau]rầy nâu [/Sau] để tránh phát tán truyền bệnh sang ruộng khác; nếu bị nhiễm nhẹ (rải rác, dưới 10% số khóm bị bệnh) thì phải nhổ bỏ cây bệnh và vùi xuống ruộng, không bỏ tràn lan trên bờ. 
+- Giai đọan lúa sau cấy 40 ngày trở đi: thường xuyên thăm đồng và nhổ, vùi bỏ bụi lúa bệnh; đồng thời nếu phát hiện rầy cám có mật số trên 3 con/dảnh thì phải phun [Thuoc]thuốc[/Thuoc] trừ [Sau=RayNau]rầy nâu [/Sau] . Nếu ruộng lúa bị nhiễm bệnh quá nặng thì tiêu hủy bằng cách cày, bừa cả ruộng; trước khi cày, bừa phải phun [Thuoc]thuốc[/Thuoc] trừ [Sau=RayNau]rầy nâu [/Sau] nếu có rầy trên lúa để tránh phát tán truyền bệnh sang ruộng khác.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#bienPhapKhacPhuc"/>
@@ -2951,23 +3105,131 @@ Tiêu hủy nguồn bệnh trên đồng ruộng, cụ thể như sau:
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#BenhLunXoanLa"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">[Benh=BenhLunXoanLa]bệnh lùn xoắn lá[/Benh]</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">bênh lùn xoắn lá</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#BenhLunXoanLa"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">bênh lùn xoắn lá</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">bệnh lùn xoắn lá</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#triSauBenhHai"/>
         <NamedIndividual IRI="#BenhLunXoanLa"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Biện pháp trừ bệnh hữu hiệu nhất đối với bệnh này là thực hiện việc tiêu huỷ nguồn bệnh trên đồng ruộng.
-● Giai đoạn lúa còn non (dưới 40 ngày tuổi) nếu ruộng lúa bị nhiễm bệnh nặng, không còn khả năng phục hồi, cho năng suất thì phải tiêu huỷ bằng cách cày trục cả ruộng để diệt mầm bệnh, trước khi cày vùi phải phun [Thuoc]thuốc[/Thuoc] trừ rầy nâu để tránh phát tán truyền bệnh sang ruộng lúa khác. Phát hiện thấy bệnh nhiễm nhẹ thì ngay lập tức phải nhổ bỏ, vùi các bụi lúa bị bệnh đồng thời phun [Thuoc]thuốc[/Thuoc] trừ rầy.● Giai đoạn lúa sau gieo sạ, cấy 40 ngày, phải thường xuyên thăm đồng thấy ruộng bi bbệnh thì phải nhổ bỏ, vùi bỏ bụi lúa bệnh, nếu thấy mật độ dầy cám ³ 3 con/dảnh (tép) thì phải phun [Thuoc]thuốc[/Thuoc] trừ rầy. Nếu ruộng bị nhiễm quá nặng thì phải tiêu huỷ bằng cách như phần trên.</Literal>
+● Giai đoạn lúa còn non (dưới 40 ngày tuổi) nếu ruộng lúa bị nhiễm bệnh nặng, không còn khả năng phục hồi, cho năng suất thì phải tiêu huỷ bằng cách cày trục cả ruộng để diệt mầm bệnh, trước khi cày vùi phải phun [Thuoc]thuốc[/Thuoc] trừ [Sau=RayNau]rầy nâu [/Sau] để tránh phát tán truyền bệnh sang ruộng lúa khác. Phát hiện thấy bệnh nhiễm nhẹ thì ngay lập tức phải nhổ bỏ, vùi các bụi lúa bị bệnh đồng thời phun [Thuoc]thuốc[/Thuoc] trừ rầy.● Giai đoạn lúa sau gieo sạ, cấy 40 ngày, phải thường xuyên thăm đồng thấy ruộng bi bbệnh thì phải nhổ bỏ, vùi bỏ bụi lúa bệnh, nếu thấy mật độ dầy cám ³ 3 con/dảnh (tép) thì phải phun [Thuoc]thuốc[/Thuoc] trừ rầy. Nếu ruộng bị nhiễm quá nặng thì phải tiêu huỷ bằng cách như phần trên.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#BenhThoiBe"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">thoibe.jpg</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#BenhThoiBe"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Bệnh thối bẹ</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#trieuChung"/>
+        <NamedIndividual IRI="#BenhThoiBe"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Sarocladium oryzae
+Bệnh thường xuất hiện và gây hại bẹ lá đòng, làm cho bông lúa cũng như hạt lúa bị ngắn lại, cây lúa bị bệnh sớm thì bông trỗ không thoát được, hạt lúa thường bị lép và biến màu.
+Vết bệnh mới xuất hiện là những vết có viền màu nâu nhạt, ở giữa có màu xám. Cây lúa bị bệnh nặng thường bẹ lá đòng bị thối có màu nâu đen, trên đó có thể thấy lớp nấm màu trắng mọc ra, ở những cây lúa này, hạt thường bị lép lửng và biến màu.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#article"/>
+        <NamedIndividual IRI="#BenhThoiThan"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Bệnh thối thân lúa do vi khuẩn Erwinia sp gây ra, bệnh gây hại trên lúa vụ hè thu nhiều hơn vụ đông xuân do thời tiết ẩm ướt, nhiều sương mù, độ ẩm không khí cao. Mặc dù đây là bệnh ít gặp trên lúa, nhưng vụ hè thu 2012, bệnh đã xuất hiện khá phổ biến trên các ruộng lúa ở khu vực Đồng bằng sông Cửu Long, đặc biệt là trên ruộng sản xuất các giống lúa OM4218, OM5472, … Bệnh xuất hiện vào khoảng 15 ngày sau khi sạ và gây hại chủ yếu ở giai đoạn lúa đẻ nhánh.
+Sự xâm nhập và lan truyền bệnh: Vi khuẩn lưu tồn sẵn trong đất, nước, xâm nhập qua vết thương, làm nghẽn mạch, gây héo. Bệnh lan truyền rất nhanh, trường hợp thiệt hại nhẹ thì lúa chết từng chòm, trường hợp nặng có thể cả ruộng lúa chết rụi.
+[b]Triệu chứng:[/b] đầu tiên lúa bị héo, màu lá vẫn còn xanh, bẹ mọng nước trước tiên sau đó là chết vàng từng chồi lúa, nặng hơn rụi lá từng chòm. Nhổ lên thì chồi bị đứt ngay gốc và ngửi thấy có mùi thối. Thời điểm gây chết rụi thường vào giai đoạn lúa đẻ nhánh tối đa.
+Bệnh thối thân có thể bộc phát thành dịch và gây hại nghiêm trọng nếu ruộng lúa bị ngộ độc hữu cơ, bị phèn, mặn, nhiễm [Sau=RayNau]rầy nâu [/Sau] hoặc nhiễm [Benh=BenhDaoOn]đạo ôn[/Benh]. Để phòng trừ bệnh thối thân do vi khuẩn gây ra thì bà con nông dân có thể áp dụng các biện pháp như sau:
++ Bón phân cân đối không bón dư thừa phân đạm
++ Khi thấy có vài cây mới bị bệnh (cây héo, lá còn xanh, nhổ lên thì đứt gốc và có mùi thối) phải tháo nước trong ruộng ra càng sớm càng tốt sau đó rải vôi bột (20-25kg vôi/1.000 m2). Trường hợp ruộng lúa bị bệnh thối thân nặng thì bà con có thể kết hợp phun vôi và rải vôi, cách thực hiện như sau:
+Phun vôi: pha 1,5 kg vôi/ bình 16 lít vào nước để lắng trong sau đó lấy nước trong phun trên lá. Sử dụng loại vôi nung (CaO), phun nước vào để vôi rã ra thành dạng bột sau đó cho nước vào ngâm. Chú ý: Khi pha vôi phải để lắng, lấy nước vôi trong, nếu lấy luôn cặn trắng để phun thì cặn bám trên lá làm trắng lá lúa ngăn cản sự quang hợp của cây.
+Rải vôi: Sử dụng vôi bột (CaCo3 ), liều lượng 20-25kg rải cho 1.000 m2, để dễ thực hiện bà con có thể phun nước vừa đủ để vôi hút ẩm hoặc trộn vôi bột với trấu ướt, mụn xơ dừa trước khi rải.
++ Sau khi xử lý khoảng 3 ngày, kiểm tra nếu thấy rễ lúa ra trắng và lúa phát triển trở lại thì bắt đầu bón phân và chăm sóc lúa bình thường.
++ Ngoài ra bà con cũng có thể sử dụng thuốc hóa học để phòng trừ vi khuẩn như: Anti-Xo 200WP + Kasumin 2L, Xantocin 40WP, trường hợp trên ruộng xuất hiện đồng thời[Benh=BenhDaoOn]đạo ôn[/Benh] và bệnh thối thân do vi khuẩn thì có thể sử dụng cặp thuốc Roksai Super 525 SE + Physan 20L để phòng trừ [Benh=BenhDaoOn]đạo ôn[/Benh] và bệnh thối thân do vi khuẩn.
+[b]Lưu ý:[/b] Khi lúa bị bệnh phải ngưng ngay việc bón phân đạm, tuyệt đối không kết hợp phun phân bón lá khi phun thuốc trừ bệnh. Chỉ bón phân sau khi đã xử lý tốt bệnh, quan sát thấy vết bệnh đã khô hoàn toàn và lúa ra rễ trắng.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#bienPhapKhacPhuc"/>
+        <NamedIndividual IRI="#BenhThoiThan"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Rải vôi: Sử dụng vôi bột (CaCo3 ), liều lượng 20-25kg rải cho 1.000 m2, để dễ thực hiện bà con có thể phun nước vừa đủ để vôi hút ẩm hoặc trộn vôi bột với trấu ướt, mụn xơ dừa trước khi rải.
++ Sau khi xử lý khoảng 3 ngày, kiểm tra nếu thấy rễ lúa ra trắng và lúa phát triển trở lại thì bắt đầu bón phân và chăm sóc lúa bình thường.
++ Ngoài ra bà con cũng có thể sử dụng thuốc hóa học để phòng trừ vi khuẩn như: Anti-Xo 200WP + Kasumin 2L, Xantocin 40WP, trường hợp trên ruộng xuất hiện đồng thời [Benh=BenhDaoOn] bệnh đạo ôn[/Benh] và bệnh thối thân do vi khuẩn thì có thể sử dụng cặp thuốc Roksai Super 525 SE + Physan 20L để phòng trừ [Benh=BenhDaoOn] bệnh đạo ôn[/Benh] và bệnh thối thân do vi khuẩn.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#BenhThoiThan"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">benhthoithan.jpg</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#BenhThoiThan"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Bệnh thối thân</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#trieuChung"/>
+        <NamedIndividual IRI="#BenhThoiThan"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">đầu tiên lúa bị héo, màu lá vẫn còn xanh, bẹ mọng nước trước tiên sau đó là chết vàng từng chồi lúa, nặng hơn rụi lá từng chòm. Nhổ lên thì chồi bị đứt ngay gốc và ngửi thấy có mùi thối. Thời điểm gây chết rụi thường vào giai đoạn lúa đẻ nhánh tối đa.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#article"/>
+        <NamedIndividual IRI="#BenhTungo"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">[b]Triệu chứng [/b]
+
+Cây bị bệnh lá sẽ biến đổi màu và hạt không dày. Sự biến đổi màu lá bắt đầu từ chóp rồi lan rộng ra phía mép và xuống phần thấp hơn của lá lúa.
+
+Các lá bị bệnh có các đốm hoặc các vạch và cây bị lùn. Cây giảm sự đẻ nhánh, làm chậm việc trổ bông và dẫn đến chậm trễ sự chín.
+
+Gié lúa nhỏ và không thoát hoàn toàn. Hầu hết các gié bị lép (khô) và có màu nâu tối.
+
+[b]Yếu tố phát triển bệnh[/b]
+
+Tuỳ thuộc vào tuổi cây lúa và cây lúa nhiễm (không kháng), bệnh có thể xuất hiện ở tất cả các giai đoạn của cây lúa, đặc biệt là giai đoạn sinh trưởng dinh dưỡng.
+
+Yếu tố chỉ thị rõ nhất là có sự hiện diện của quần thể rầy xanh (Nephotettix spp).
+
+Sự chuyển vàng của lá lúa rất dễ nhầm với các triệu chứng: rối loạn sinh lý như là sự thiếu đạm hoặc kẽm và rối loạn do thiếu nước; côn trùng gây hại như là sâu đục thân, các loại rầy, chuột phá hoại và các bệnh như vàng lùn lúa cỏ, bệnh vàng cam.
+
+[b]Tác nhân gây hại[/b]
+
+Bệnh Tungro được truyền bởi rầy xanh và rầy bông. Bệnh này là sự phối hợp giữa Tungro bacciliform virus (RTBV) và Tungro spherical virus (RTSV). RTBV không thể truyền bởi rầy trừ khi có sự hiện diện của RTSV. Rầy xanh và rầy bông có thể tiếp nhận virut từ tất cả các bộ phận cả cây lúa bị bệnh. Sau khi nhận được virut, vec-to (rầy) có thể lập tức truyền ngay bệnh Tungro này đến cây lúa.
+
+[b]Cơ chế gây bệnh[/b]
+
+Rầy hút virut do chích hút nhựa cây lúa trong 8 giờ, và có thể truyền bệnh ngay sau khi chích hút sang cây khoẻ.
+
+Virut không thể duy trì trong cơ thể rầy. Sau khi ăn trên cây bệnh, côn trùng có thể truyền virut trong vòng 5 ngày và lâu nhất là một tuần. Rầy chỉ có thể tái gây nhiễm sau khi tiếp nhận lại virut do ăn trên cây lúa bị bệnh. Đây là những điểm khác với bệnh lùn lúa cỏ và lùn xoắn lá.
+
+[b]Biện pháp kiểm soát bệnh[/b]
+
+Có 3 yếu tố hạn chế việc quản lý bệnh Tungro: sự không xuất hiện triệu chứng bệnh ở giai đoạn phát triển sớm của bệnh; thiếu giống kháng bệnh và sự thích nghi của vec - to trên giống kháng rầy xanh.
+
+Trồng giống kháng đối với bệnh Tungro virut là phương pháp kinh tế nhất trong quản lý bệnh.
+
+Giữa các phương pháp canh tác, việc điều chỉnh thời gian cấy sạ được khuyến cáo cùng với việc bỏ hoá ít nhất một tháng hoặc luân canh với hoa màu khác nhằm loại trừ cây ký chủ, virut và rầy xanh.
+
+Cày bừa đồng ruộng kỹ để loại trừ gốc rạ ngay sau khi thu hoạch, qua đó loại bỏ ký chủ của bệnh Tungro cũng được áp dụng.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#bienPhapKhacPhuc"/>
+        <NamedIndividual IRI="#BenhTungo"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Có 3 yếu tố hạn chế việc quản lý bệnh Tungro: sự không xuất hiện triệu chứng bệnh ở giai đoạn phát triển sớm của bệnh; thiếu giống kháng bệnh và sự thích nghi của vec - to trên giống kháng rầy xanh.
+
+Trồng giống kháng đối với bệnh Tungro virut là phương pháp kinh tế nhất trong quản lý bệnh.
+
+Giữa các phương pháp canh tác, việc điều chỉnh thời gian cấy sạ được khuyến cáo cùng với việc bỏ hoá ít nhất một tháng hoặc luân canh với hoa màu khác nhằm loại trừ cây ký chủ, virut và rầy xanh.
+
+Cày bừa đồng ruộng kỹ để loại trừ gốc rạ ngay sau khi thu hoạch, qua đó loại bỏ ký chủ của bệnh Tungro cũng được áp dụng.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#trieuChung"/>
+        <NamedIndividual IRI="#BenhTungo"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cây bị bệnh lá sẽ biến đổi màu và hạt không dày. Sự biến đổi màu lá bắt đầu từ chóp rồi lan rộng ra phía mép và xuống phần thấp hơn của lá lúa.
+
+Các lá bị bệnh có các đốm hoặc các vạch và cây bị lùn. Cây giảm sự đẻ nhánh, làm chậm việc trổ bông và dẫn đến chậm trễ sự chín.
+
+Gié lúa nhỏ và không thoát hoàn toàn. Hầu hết các gié bị lép (khô) và có màu nâu tối.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
@@ -2976,7 +3238,7 @@ Tiêu hủy nguồn bệnh trên đồng ruộng, cụ thể như sau:
 
 Vàng lá do virus
 
-Thường thì khi thấy vàng lá, cơ quan chuyên môn gửi mẫu đi test virus. Tuy nhiên ở miền Bắc có thể loại trừ khả năng [Benh=BenhVangLa]bệnh vàng lá[/Benh] do virus (vàng lùn). Do [Benh=BenhVangLun]bệnh vàng lùn[/Benh] phải có sự phối trộn của 3 loại virus lùn lúa cỏ, lùn xoăn lá do rầy nâu truyền bệnh và bênh Tungro do [Sau=RayXanhDuoiDen]rầy xanh đuôi đen[/Sau] truyền bệnh. Trong những năm gần đây việc đồng thời xuất hiện dịch rầy nâu và [Sau=RayXanhDuoiDen]rầy xanh đuôi đen[/Sau] không đáng kể.
+Thường thì khi thấy vàng lá, cơ quan chuyên môn gửi mẫu đi test virus. Tuy nhiên ở miền Bắc có thể loại trừ khả năng [Benh=BenhVangLa]bệnh vàng lá[/Benh] do virus (vàng lùn). Do [Benh=BenhVangLun]bệnh vàng lùn[/Benh] phải có sự phối trộn của 3 loại virus lùn lúa cỏ, lùn xoăn lá do [Sau=RayNau]rầy nâu [/Sau] truyền bệnh và bênh Tungro do [Sau=RayXanhDuoiDen]rầy xanh đuôi đen[/Sau] truyền bệnh. Trong những năm gần đây việc đồng thời xuất hiện dịch [Sau=RayNau]rầy nâu [/Sau] và [Sau=RayXanhDuoiDen]rầy xanh đuôi đen[/Sau] không đáng kể.
 
 Vàng lá do ngộ độc hữu cơ, ngộ độc phèn
 
@@ -3002,38 +3264,39 @@ Tác nhân chính là nấm Gonatophragmium sp, bắt đầu giữa lá lúa xu�
     <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
         <NamedIndividual IRI="#BenhVangLun"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">[Benh=BenhVangLun]bệnh vàng lùn[/Benh] do vi rút Rice Grassy Stunt Virus (RGSV) gây ra. Virut này xâm nhập vào cây lúa và gây bệnh thông qua môi giới là Rầy nâu (Nilaparvata lugens). Bệnh được phát hiện đầu tiên ở vùng Khu 4 cũ và sau này lây lan ra khắp các tỉnh trong cả nước, nhưng gây hại chủ yếu tại các tỉnh miền Trung và Đồng bằng sông Cửu long.
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">[Benh=BenhVangLun]bệnh vàng lùn[/Benh] do vi rút [i] Rice Grassy Stunt Virus (RGSV) [/i] gây ra. Virut này xâm nhập vào cây lúa và gây bệnh thông qua môi giới là [Sau=RayNau]rầy nâu [/Sau] (Nilaparvata lugens). Bệnh được phát hiện đầu tiên ở vùng Khu 4 cũ và sau này lây lan ra khắp các tỉnh trong cả nước, nhưng gây hại chủ yếu tại các tỉnh miền Trung và Đồng bằng sông Cửu long.
 
-
+[br]
 Triệu chứng của [Benh=BenhVangLun]bệnh vàng lùn[/Benh] có hai dạng điển hình là: lúa vàng lùn và lúa cỏ. Triệu chứng của các dạng này như sau:a) Triệu chứng lúa vàng lùn: lá lúa từ màu xanh nhạt chuyển dần sang màu vàng nhạt, vàng da cam rồi vàng khô. Vị trí các lá bị vàng lan dần từ các lá bên dưới lên các lá phía trên. Vết vàng trên lá xuất hiện từ chóp lá, lan dần vào phía bẹ lá. Tất cả các lá bị bệnh có xu hướng xoè ngang. Các chồi lúa bị bệnh giảm chiều cao và bệnh cũng làm giảm số chồi trên bụi lúa mắc bệnh. Quần thể ruộng lúa bị bệnh ngả màu vàng, chiều cao cây lúa không đồng đều.
 
+[br]
+[b] Triệu chứng lúa cỏ[/b]: bụi lúa lùn, cho ra nhiều chồi mọc thẳng, có dạng giống như bụi cỏ. Lá lúa ngắn, hẹp, màu xanh vàng hoặc màu vàng cam. Tại các lá non có nhiều đốm gỉ sắt hoặc màu vàng đỏ.Ruéng lóa BÖnh vi rót lóa cá
+[Co=CoLongVuc] cỏ lồng vực [/Co] bị bệnh vi rút lúa cỏ[Benh=BenhLunXoanLa]bệnh lùn xoắn lá[/Benh] do vi rút Rice Ragged Stunt Virus (RRSV) gây ra. Virut này xâm nhập vào cây lúa và gây bệnh thông qua môi giới là [Sau=RayNau]rầy nâu [/Sau] (Nilaparvata lugens). Bệnh được phát hiện đầu tiên ở Việt Nam vào năm 1977 tại Tiền Giang. Năm 2006 bệnh đã gây hại nghiêm trọng trong các trà lúa ở nhiều tỉnh thuộc khu vực Nam Trung bộ, Tây Nguyên, Đông Nam bộ và Đồng bằng sông Cửu long.
+Triệu chứng của [Benh=BenhLunXoanLa]bệnh lùn xoắn lá[/Benh] biểu hiện như sau: cây lúa bị lùn, màu lá xanh đậm. Rìa lá bị rách và gợn sóng, dọc theo gân lá có bướu. Chóp lá bị biến dạng, xoăn tít lại. Cây lúa bị nghẹn đòng không trỗ được, hạt lép. [Sau=RayNau]rầy nâu [/Sau] trích hút vào cây lúa bị bệnh và mang theo virut gây bệnh. Cá thể [Sau=RayNau]rầy nâu [/Sau] mang virut gây bệnh chích hút trên cây lúa không bị bệnh và chỉ một vài giờ sau khiến cây lúa đó bị bệnh.
 
-b) Triệu chứng lúa cỏ: bụi lúa lùn, cho ra nhiều chồi mọc thẳng, có dạng giống như bụi cỏ. Lá lúa ngắn, hẹp, màu xanh vàng hoặc màu vàng cam. Tại các lá non có nhiều đốm gỉ sắt hoặc màu vàng đỏ.Ruéng lóa BÖnh vi rót lóa cá
-Cỏ lồng vực bị bệnh vi rút lúa cỏ[Benh=BenhLunXoanLa]bệnh lùn xoắn lá[/Benh] do vi rút Rice Ragged Stunt Virus (RRSV) gây ra. Virut này xâm nhập vào cây lúa và gây bệnh thông qua môi giới là Rầy nâu (Nilaparvata lugens). Bệnh được phát hiện đầu tiên ở Việt Nam vào năm 1977 tại Tiền Giang. Năm 2006 bệnh đã gây hại nghiêm trọng trong các trà lúa ở nhiều tỉnh thuộc khu vực Nam Trung bộ, Tây Nguyên, Đông Nam bộ và Đồng bằng sông Cửu long.
-Triệu chứng của [Benh=BenhLunXoanLa]bệnh lùn xoắn lá[/Benh] biểu hiện như sau: cây lúa bị lùn, màu lá xanh đậm. Rìa lá bị rách và gợn sóng, dọc theo gân lá có bướu. Chóp lá bị biến dạng, xoăn tít lại. Cây lúa bị nghẹn đòng không trỗ được, hạt lép. Rầy nâu trích hút vào cây lúa bị bệnh và mang theo virut gây bệnh. Cá thể rầy nâu mang virut gây bệnh chích hút trên cây lúa không bị bệnh và chỉ một vài giờ sau khiến cây lúa đó bị bệnh.
-
-Cỏ lồng vực (Echinochloa Crus-galli) và cỏ đuôi phượng (Leptochloa chinnensis) là hai loại ký chủ trung gian quan trọng của bệnh. Do đó trừ các loại này cũng góp phần hạn chế nguồn [Benh=BenhLunXoanLa]bệnh lùn xoắn lá[/Benh] lúa trên đồng ruộng. Những kết quả nghiên cứu hiện đã ghi nhận virut lùn xoắn lá không truyền lan qua hạt giống, đất, tiếp xúc cơ giới dịch cây và qua trứng rầy nâu.
+[Co=CoLongVuc] cỏ lồng vực [/Co] (Echinochloa Crus-galli) và cỏ đuôi phượng (Leptochloa chinnensis) là hai loại ký chủ trung gian quan trọng của bệnh. Do đó trừ các loại này cũng góp phần hạn chế nguồn [Benh=BenhLunXoanLa]bệnh lùn xoắn lá[/Benh] lúa trên đồng ruộng. Những kết quả nghiên cứu hiện đã ghi nhận virut lùn xoắn lá không truyền lan qua hạt giống, đất, tiếp xúc cơ giới dịch cây và qua trứng [Sau=RayNau]rầy nâu [/Sau].
 Cây lúa bị [Benh=BenhLunXoanLa]bệnh lùn xoắn lá[/Benh] sinh trường cằn cọc, cây thấp lùn, chiều cao cây, chiều dài lá, rễ... đều bị giảm sút, co ngắn lại khoảng 40-60% so cây bình thường. Hầu hết số dảnh không có bông hoặc trỗ bông muộn, trỗ không thoát; bông lúa ngắn, ít hạt, lép lửng dẫn đến thất thu hoàn toàn hoặc giảm năng suất nghiêm trọng. Lưu ý có trường hợp trên một bụi lúa đồng thời xuất hiện cả hai triệu trứng [Benh=BenhVangLun]bệnh vàng lùn[/Benh] và lùn xoắn lá.
 
 Phòng trừ bằng cách:
-a) Phòng bệnh: [Benh=BenhVangLun]bệnh vàng lùn[/Benh] và lùn xoắn lá do vi rút gây ra cho đến nay chưa có [Thuoc]thuốc[/Thuoc] đặc trị, vì vậy biện pháp an toàn và hữu hiệu nhất vẫn là phòng bệnh.● Cày bừa, làm đất kỹ, vùi lấp tàn dư và nguồn bệnh; vệ sinh đồng ruộng sạch sẽ, dọn sạch các tàn dư và ký chủ trung gian của bệnh.
+[br]
+[b]a) Phòng bệnh: [/b][Benh=BenhVangLun]bệnh vàng lùn[/Benh] và lùn xoắn lá do vi rút gây ra cho đến nay chưa có [Thuoc]thuốc[/Thuoc] đặc trị, vì vậy biện pháp an toàn và hữu hiệu nhất vẫn là phòng bệnh.● Cày bừa, làm đất kỹ, vùi lấp tàn dư và nguồn bệnh; vệ sinh đồng ruộng sạch sẽ, dọn sạch các tàn dư và ký chủ trung gian của bệnh.
 ● Gieo cấy tập trung, đồng loạt cùng một cánh đồng, từng vùng để né rầy theo khuyến cáo của cán bộ chuyên ngành của địa phương.● Sử dụng các giống lúa kháng bệnh, giống lúa cứng cây có khả năng chống chịu bệnh. Chăm sóc hợp lý, tạo điều kiện cho cây lúa khoẻ (nhất là giai đoạn lúa non) để tăng cường sức đề kháng, chống chịu bệnh.
 
 
-b) Trừ bệnh:Biện pháp trừ bệnh hữu hiệu nhất đối với bệnh này là thực hiện việc tiêu huỷ nguồn bệnh trên đồng ruộng.
-● Giai đoạn lúa còn non (dưới 40 ngày tuổi) nếu ruộng lúa bị nhiễm bệnh nặng, không còn khả năng phục hồi, cho năng suất thì phải tiêu huỷ bằng cách cày trục cả ruộng để diệt mầm bệnh, trước khi cày vùi phải phun [Thuoc]thuốc[/Thuoc] trừ rầy nâu để tránh phát tán truyền bệnh sang ruộng lúa khác. Phát hiện thấy bệnh nhiễm nhẹ thì ngay lập tức phải nhổ bỏ, vùi các bụi lúa bị bệnh đồng thời phun [Thuoc]thuốc[/Thuoc] trừ rầy.● Giai đoạn lúa sau gieo sạ, cấy 40 ngày, phải thường xuyên thăm đồng thấy ruộng bi bbệnh thì phải nhổ bỏ, vùi bỏ bụi lúa bệnh, nếu thấy mật độ dầy cám ³ 3 con/dảnh (tép) thì phải phun [Thuoc]thuốc[/Thuoc] trừ rầy. Nếu ruộng bị nhiễm quá nặng thì phải tiêu huỷ bằng cách như phần trên.</Literal>
+[b]b) Trừ bệnh:[/b] Biện pháp trừ bệnh hữu hiệu nhất đối với bệnh này là thực hiện việc tiêu huỷ nguồn bệnh trên đồng ruộng.
+● Giai đoạn lúa còn non (dưới 40 ngày tuổi) nếu ruộng lúa bị nhiễm bệnh nặng, không còn khả năng phục hồi, cho năng suất thì phải tiêu huỷ bằng cách cày trục cả ruộng để diệt mầm bệnh, trước khi cày vùi phải phun [Thuoc]thuốc[/Thuoc] trừ [Sau=RayNau]rầy nâu [/Sau] để tránh phát tán truyền bệnh sang ruộng lúa khác. Phát hiện thấy bệnh nhiễm nhẹ thì ngay lập tức phải nhổ bỏ, vùi các bụi lúa bị bệnh đồng thời phun [Thuoc]thuốc[/Thuoc] trừ rầy.● Giai đoạn lúa sau gieo sạ, cấy 40 ngày, phải thường xuyên thăm đồng thấy ruộng bi bbệnh thì phải nhổ bỏ, vùi bỏ bụi lúa bệnh, nếu thấy mật độ dầy cám ³ 3 con/dảnh (tép) thì phải phun [Thuoc]thuốc[/Thuoc] trừ rầy. Nếu ruộng bị nhiễm quá nặng thì phải tiêu huỷ bằng cách như phần trên.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#bienPhapKhacPhuc"/>
         <NamedIndividual IRI="#BenhVangLun"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Phòng bệnh: Quản lý rầy nâu vì rầy nâu chính là nguồn lây lan bệnh vàng lùn và lùn xoắn lá: 
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Phòng bệnh: Quản lý [Sau=RayNau]rầy nâu [/Sau] vì [Sau=RayNau]rầy nâu [/Sau] chính là nguồn lây lan bệnh vàng lùn và lùn xoắn lá: 
 + Thăm đồng thường xuyên để phát hiện rầy thật sớm.
-+ Khi phát hiện có rầy nâu cánh dài ở giai đoạn mạ với mật độ từ 7 - 10con/tép thì cần phun thuốc trừ rầy ngay vì đây là rầy mới di chuyển đến và khả năng rầy mang mầm bệnh là rất cao.
++ Khi phát hiện có [Sau=RayNau]rầy nâu [/Sau] cánh dài ở giai đoạn mạ với mật độ từ 7 - 10con/tép thì cần phun thuốc trừ rầy ngay vì đây là rầy mới di chuyển đến và khả năng rầy mang mầm bệnh là rất cao.
 
-+ Các loại thuốc hiện nay phun trừ rầy có hiệu quả: Bassa 50EC, Trebon 20ND, Admire 50EC, Actara 25WWG...
++ Các loại thuốc hiện nay phun trừ rầy có hiệu quả: [Thuoc=Bassa_50EC] Bassa 50EC [/Thuoc], Trebon 20ND, Admire 50EC, Actara 25WWG...
 
 - Trừ bệnh:
-+ Khi cây lúa còn ở giai đoạn mạ đến đẻ nhánh, nếu phát hiện cây bị bệnh thì phải nhổ bỏ ngay hay cày vùi huỷ bỏ toàn bộ ruộng lúa để tránh lây lan vì cây lúa không thể phục hồi cho dù tiếp tục được đầu tư thêm phân bón, thuốc trừ sâu bệnh, hay bơm nước vào. Trước khi cày vùi phải phun thuốc trừ rầy nâu để tránh phát tán truyền bệnh sang ruộng lúa khác.
++ Khi cây lúa còn ở giai đoạn mạ đến đẻ nhánh, nếu phát hiện cây bị bệnh thì phải nhổ bỏ ngay hay cày vùi huỷ bỏ toàn bộ ruộng lúa để tránh lây lan vì cây lúa không thể phục hồi cho dù tiếp tục được đầu tư thêm phân bón, thuốc trừ sâu bệnh, hay bơm nước vào. Trước khi cày vùi phải phun thuốc trừ [Sau=RayNau]rầy nâu [/Sau] để tránh phát tán truyền bệnh sang ruộng lúa khác.
 
 - Ở những vùng vừa có dịch bệnh virus xảy ra: cày lật gốc rạ ngay sau khi thu hoạch.</Literal>
     </DataPropertyAssertion>
@@ -3051,6 +3314,23 @@ b) Trừ bệnh:Biện pháp trừ bệnh hữu hiệu nhất đối với bện
         <DataProperty IRI="#trieuChung"/>
         <NamedIndividual IRI="#BenhVangLun"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Lá lúa từ màu xanh nhạt chuyển dần sang màu vàng nhạt, vàng da cam rồi vàng khô. Vị trí các lá bị vàng lan dần từ các lá bên dưới lên các lá phía trên. Vết vàng trên lá xuất hiện từ chóp lá, lan dần vào phía bẹ lá. Tất cả các lá bị bệnh có xu hướng xoè ngang. Các chồi lúa bị bệnh giảm chiều cao và bệnh cũng làm giảm số chồi trên bụi lúa mắc bệnh. Quần thể ruộng lúa bị bệnh ngả màu vàng, chiều cao cây lúa không đồng đều.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#image"/>
+        <NamedIndividual IRI="#BenhViRutLuaCo"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">benhvirutluaco.jpg</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#BenhViRutLuaCo"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">bệnh virut lúa cỏ</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nguonGoc"/>
+        <NamedIndividual IRI="#BenhViRutLuaCo"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Rice grassy stunnt virus (RGSV).
+
+Bệnh được phát hiện đầu tiên ở vùng khu bốn cũ và được gọi là bệnh “lại mạ”. Sau này bệnh được ghi nhận lần lượt ở các tỉnh miền Trung và đồng bằng sông Cửu Long từ 1978 – 2000. Môi giới truyền bệnh là [Sau=RayNau]rầy nâu [/Sau].</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -3240,7 +3520,7 @@ Bọ trưởng thành và bọ non sống tụ tập ở gốc lúa ngay phía t
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Vệ sinh đồng ruộng, diệt trừ cỏ dại và ký chủ phụ.
 - Cấy gọn thời vụ. Phát hiện sớm thu gom ổ trứng để diệt, vợt bắt trưởng thành.
 - Dùng bả lá xoan tẩm nước giải một ngày, bó vào cọc cắm nhử bọ xít dài đến để tiêu diệt.
-- Dùng các loại thuốc Ofatox 400EC, Fastac 5EC, Dimenat 40EC hoặc Actara 25WG. phun khi bọ xít phát sinh rộ.</Literal>
+- Dùng các loại thuốc Ofatox 400EC, Fastac 5EC, Dimenat 40EC hoặc [Thuoc=Actara_25WG] Actara 25WG [/Thuoc]. phun khi bọ xít phát sinh rộ.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#image"/>
@@ -3380,8 +3660,8 @@ Thuộc họ Lúa Poaceae (Gramìneae).</Literal>
         <DataProperty IRI="#article"/>
         <NamedIndividual IRI="#CoDuoiPhung"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cỏ đuôi phụng là cỏ dại hằng năm , sống bám dưới nước , mọc thành từng khóm cao 30-100 cm , Ở VN , phổ biến ở ao hồ , ruộng lúa . Thân mọc đứng , phân nhánh từ gốc . Lá hoặc bông đôi khi có màu tím hoặc đỏ . Phiến lá dẹp , nhỏ ,nhọn , dài 10-30 cm , rộng 0.3 - 1cm , lá thì dài 1 -2 cm . Hoa tàn có màu xanh hoặc đỏ , trục chính thẳng , dài 10-40 cm , nhiều nhánh đơn mọc xòe 5 - 15 cm . Bông hoa dài 2.5 - 3 cm 
-Cỏ lồng vực có hai loại : cỏ lồng vực cạn và nước 
-Cỏ lồng vực cạn là loại cỏ dại hằng năm , mọc thành khóm , nhiều chồi mảnh , cao 70 - 75 cm , mọc bò lan . Thân dẹt , gốc thường đỏ tím . Bẹ lá dẹt , nhẵn , mép bẹ mở ở trên , hơi đỏ ở dưới , phiến lá nhẵn dẹt , hình lưỡi gáo hơi mềm ,dài khoảng 25 cm , rộng 3 - 7 mm .Cụm hao màu xanh lục tím tán dài . Quả và bông hình bầu dục , sinh ản bằng hạt</Literal>
+[Co=CoLongVuc] cỏ lồng vực [/Co] có hai loại : [Co=CoLongVuc] cỏ lồng vực [/Co] cạn và nước 
+[Co=CoLongVuc] cỏ lồng vực [/Co] cạn là loại cỏ dại hằng năm , mọc thành khóm , nhiều chồi mảnh , cao 70 - 75 cm , mọc bò lan . Thân dẹt , gốc thường đỏ tím . Bẹ lá dẹt , nhẵn , mép bẹ mở ở trên , hơi đỏ ở dưới , phiến lá nhẵn dẹt , hình lưỡi gáo hơi mềm ,dài khoảng 25 cm , rộng 3 - 7 mm .Cụm hao màu xanh lục tím tán dài . Quả và bông hình bầu dục , sinh ản bằng hạt</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#image"/>
@@ -3398,19 +3678,19 @@ Cỏ lồng vực cạn là loại cỏ dại hằng năm , mọc thành khóm ,
         <NamedIndividual IRI="#CoLongVuc"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cỏ lồng vực hay còn gọi là cỏ gạo là loại cỏ dại hằng năm, mọc thành khóm, nhiều chồi, mảnh, cao 70 - 75 cm, mọc bò lan. Rễ mọc từ đốt dưới. Thân dẹt, gốc thường đỏ tím. Bẹ lá dẹt, nhẵn, mép bẹ mở ở trên, hơi đỏ ở dưới, phiến lá nhẵn, dẹt, hình lưỡi giáo, hơi mềm, dài khoảng 25 cm, rộng 3 - 7 mm. Đôi khi có vạch tím ngang trên mặt lá. Cụm hoa màu xanh lục, tím, tán dài. Quả và bông hình bầu dục. Sinh sản bằng hạt. Là loài cỏ dại trên ruộng lúa, cạnh tranh một phần phân bón của lúa. Đặc biệt khi thu hoạch, hạt cỏ lẫn vào thóc, gây khó khăn cho việc tuyển chọn khi xay xát, làm giảm giá trị thương phẩm của gạo.
 [b]Có 2 nhóm cỏ lồng vực:[/b]
-[b]Cỏ lồng vực nước: [/b]
+[b][Co=CoLongVuc] cỏ lồng vực [/Co] nước: [/b]
 Tên tiếng anh -Barnyard Grass (Water)
 Tên la tinh: Echinochloa crusgalli 
-[b]Cỏ lồng vực cạn (Cỏ đỏ)[/b]
+[b][Co=CoLongVuc] cỏ lồng vực [/Co] cạn (Cỏ đỏ)[/b]
 Tên tiếng anh: Junglerice, Awnless barnyard grass
 Tên la tinh: EchinEchinochloa colonum 
-Cỏ lồng vực trông rất giống cây lúa khi chưa trổ bông. Có sức sống cao, mọc khoẻ và rất “phàm ăn” nên rễ của loài cỏ này lấn át cây lúa. Chúng mọc lẫn với mạ và lúa nhưng thường vượt cao hơn và có bông chín sớm hơn. Cỏ lồng vực có màu xanh sẫm, với bộ rễ và lá giống hệt cây lúa, thân cây mập mạp nhưng lại mềm hơn lúa.</Literal>
+[Co=CoLongVuc] cỏ lồng vực [/Co] trông rất giống cây lúa khi chưa trổ bông. Có sức sống cao, mọc khoẻ và rất “phàm ăn” nên rễ của loài cỏ này lấn át cây lúa. Chúng mọc lẫn với mạ và lúa nhưng thường vượt cao hơn và có bông chín sớm hơn. [Co=CoLongVuc] cỏ lồng vực [/Co] có màu xanh sẫm, với bộ rễ và lá giống hệt cây lúa, thân cây mập mạp nhưng lại mềm hơn lúa.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#dacDiem"/>
         <NamedIndividual IRI="#CoLongVuc"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cỏ dại cạnh tranh ánh sáng, chất dinh dưỡng và nước với cây lúa
-Cỏ dại là nơi lưu tồn và lan truyền của nhiều loại sâu, bệnh hại. Ví dụ cỏ lồng vực và cỏ đuôi phụng là nơi trú ẩn của sâu phao, sâu đục thân và rầy nâu (rầy nâu là kí chủ truyền bệnh vàng lùn, lùn xoắn lá)...
+Cỏ dại là nơi lưu tồn và lan truyền của nhiều loại sâu, bệnh hại. Ví dụ [Co=CoLongVuc] cỏ lồng vực [/Co] và cỏ đuôi phụng là nơi trú ẩn của [Sau=SauPhao] sâu phao [/Sau], sâu đục thân và [Sau=RayNau]rầy nâu [/Sau] ([Sau=RayNau]rầy nâu [/Sau] là kí chủ truyền bệnh vàng lùn, lùn xoắn lá)...
 Cỏ dại cũng là nơi trú ẩn của chuột phá hại lúa.
 Cỏ dại làm giảm năng suất cây trồng, giảm chất lượng và giá trị của lúa gạo.</Literal>
     </DataPropertyAssertion>
@@ -3422,7 +3702,7 @@ Cỏ dại làm giảm năng suất cây trồng, giảm chất lượng và gi�
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#CoLongVuc"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cỏ lồng vực (cỏ gạo)</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">cỏ lồng vực (cỏ gạo)</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -3809,7 +4089,7 @@ xấu đến quá trình mọc mầm của hạt, thậm chí mầm không mọc
 Ở giai đoạn làm đòng cây lúa cần tích lũy nhiều dinh dưỡng để nuôi đòng, do đó lúa có nhu cầu rất cao, cần cung cấp thêm dinh dưỡng cho lúa. Tuy nhiên, việc bón phân cũng cần lưu ý một số vấn đề  đó là bón phải vừa đủ, đảm bảo cung cấp đủ các loại dưỡng chất, ngoài những dưỡng chất cần thiết như N, P, K  thì cũng cần cung cấp thêm một số chất trung vi lượng như canxi, silic những chất này sẽ giúp cho lá lúa cứng, thẳng đứng, tăng cường khả năng chống chịu cho cây lúa trước sự tấn công của dịch bệnh. Điều quan trọng là xác định đúng thời điểm để việc bón phân đón đòng mang lại hiệu quả cao.
 
 Việc xác định đúng thời điểm bón phân đón đòng và bón vừa đủ sẽ giúp đảm bảo số hạt trên bông tối hảo nhất, cho bông to, cây lúa giữ được bộ lá xanh bền, số hạt chắc sẽ nhiều hơn, hạn chế được sự đổ ngã, những chồi vô hiệu sẽ không nhiều và cũng hạn chế được sự bùng phát của các loại dịch hại. Ông Lâm Văn Mương, nông dân thị xã Ngã Năm chia sẻ kinh nghiệm xác định thời điểm bón phân đón đòng: “ Rất khó để biết chính xác thời điểm bón phân đón đòng của từng giống lúa, cho nên cách dễ nhất là xé đòng ra xem thử nếu thấy có một lóng rưỡi, thì ở lóng thứ hai đã có nhú đòng đòng đất (có người gọi là tim đèn, hoặc là ngòi viết) màu trắng, khoảng 1mm thì đó là thời điểm thích hợp để bón phân đón đòng”.
-Ngay thời điểm tượng đòng, giai đoạn này cây lúa cũng rất mẫn cảm với nhiều loại bệnh hại như bệnh [Benh=BenhDaoOn]đạo ôn[/Benh], đốm vằn, vàng lá chín sớm và các loại sâu hại như là [Sau=SauCuonLaNho]sâu cuốn lá nhỏ[/Sau], rầy nâu, nhện gié đã tích lũy từ các lứa trước và tiếp tục gây hại.
+Ngay thời điểm tượng đòng, giai đoạn này cây lúa cũng rất mẫn cảm với nhiều loại bệnh hại như bệnh [Benh=BenhDaoOn]đạo ôn[/Benh], đốm vằn, vàng lá chín sớm và các loại sâu hại như là [Sau=SauCuonLaNho]sâu cuốn lá nhỏ[/Sau], [Sau=RayNau]rầy nâu [/Sau], nhện gié đã tích lũy từ các lứa trước và tiếp tục gây hại.
 
 Để gia tăng số hạt cần  cung cấp dưỡng chất lớn cho cây lúa sung mãn, tuy nhiên giai đoạn này cây lúa dễ  bị sâu bệnh tấn công, kết hợp với điều kiện thời tiết không thuận lợi trong [VuMua=VuHeThu]vụ hè thu[/VuMua] nên sau khi bón phân nuôi đòng xong phải chú ý và phòng trị kịp thời côn trùng phá hại bộ lá đòng như sâu cuốn lá, nhện gié… để lá được nguyên vẹn. Ông Ngô Tuấn Thêm, nông dân thị xã Ngã Năm chia sẻ: “Nhện ghé thường xuất hiện nhiều ở giai đoạn lúa làm đòng, nên khi thăm ruộng thấy cây lúa hơi tim tím bẹ ở khúc dưới là tiến hành phun [Thuoc]thuốc[/Thuoc] phòng trừ ngay”.
 
@@ -4117,7 +4397,7 @@ Tác giả: Nguyễn Trọng Khanh, Nguyễn Thị Miền, Vũ Thị Nhường, 
 2. Đặc điểm
 - Thời gian sinh trưởng: Vụ mùa: 105 - 110 ngày; Vụ xuân: 130 - 140 ngày.
 - Chiều cao cây: 100 cm, sinh trưởng nhanh, mạnh, đẻ nhánh khỏe và đều, bộ lá màu xanh đậm, bông to, hạt thon dài, xếp hạt trung bình và có màu vàng sáng, chắc rất cao, hạt mẩy. Khối lượng 1000 hạt từ 22 - 23 gam.
-- Giống GL105 có khả năng chống đổ tốt, ít nhiễm đạo ôn, rầy nâu và bạc lá.
+- Giống GL105 có khả năng chống đổ tốt, ít nhiễm [Benh=BenhDaoOn]đạo ôn[/Benh], [Sau=RayNau]rầy nâu [/Sau] và bạc lá.
 - Năng suất thực thu trung bình:
 + Vụ xuân: 70 - 75 tạ/ha, thâm canh tốt có thể đạt 80 – 85 tạ /ha.
  + Vụ mùa: 60 - 65 tạ/ha, thâm canh tốt có thể đạt 75 tạ/ha.
@@ -4151,7 +4431,7 @@ Giống lúa Gia Lộc 105 thích hợp gieo trồng trong cơ cấu luân canh 
         <NamedIndividual IRI="#GiongGL105"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">- Thời gian sinh trưởng: Vụ mùa: 105 - 110 ngày; Vụ xuân: 130 - 140 ngày.
 - Chiều cao cây: 100 cm, sinh trưởng nhanh, mạnh, đẻ nhánh khỏe và đều, bộ lá màu xanh đậm, bông to, hạt thon dài, xếp hạt trung bình và có màu vàng sáng, chắc rất cao, hạt mẩy. Khối lượng 1000 hạt từ 22 - 23 gam.
-- Giống GL105 có khả năng chống đổ tốt, ít nhiễm [Benh=BenhDaoOn]đạo ôn[/Benh], rầy nâu và bạc lá.
+- Giống GL105 có khả năng chống đổ tốt, ít nhiễm [Benh=BenhDaoOn]đạo ôn[/Benh], [Sau=RayNau]rầy nâu [/Sau] và bạc lá.
 - Năng suất thực thu trung bình:
 + Vụ xuân: 70 - 75 tạ/ha, thâm canh tốt có thể đạt 80 – 85 tạ /ha.
  + Vụ mùa: 60 - 65 tạ/ha, thâm canh tốt có thể đạt 75 tạ/ha.</Literal>
@@ -4199,9 +4479,9 @@ Năng suất trung bình: 50 - 55 tạ/ha. Năng suất cao có thể đạt 60-
 
 Khả năng chống đổ và chịu rét tốt, Chịu chua mặn ở mức trung bình.
 
-Là giống nhiễm Rầy nâu.
+Là giống nhiễm [Sau=RayNau]rầy nâu [/Sau].
 
-Nhiễm vừa bệnh Đạo ôn, bệnh Bạc lá, Nhiễm nhẹ bệnh Khô vằn</Literal>
+Nhiễm vừa [Benh=BenhDaoOn] bệnh đạo ôn[/Benh], bệnh Bạc lá, Nhiễm nhẹ bệnh Khô vằn</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#image"/>
@@ -4282,7 +4562,7 @@ Nhiễm vừa bệnh Đạo ôn, bệnh Bạc lá, Nhiễm nhẹ bệnh Khô v�
     <DataPropertyAssertion>
         <DataProperty IRI="#tinhThichNghi"/>
         <NamedIndividual IRI="#GiongTBR-1"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Nhiễm nhẹ bệnh [Benh=BenhDaoOn]đạo ôn[/Benh] (điểm 0 - 1), bạc lá (điểm 1 - 3), khô vằn (điểm 0 - 3), rầy nâu (điểm 0 - 1).
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Nhiễm nhẹ bệnh [Benh=BenhDaoOn]đạo ôn[/Benh] (điểm 0 - 1), bạc lá (điểm 1 - 3), khô vằn (điểm 0 - 3), [Sau=RayNau]rầy nâu [/Sau] (điểm 0 - 1).
  TBR-1 là giống lúa cảm ôn, canh tác được các vụ trong năm. Thích ứng rộng, thích hợp với chân đất vàn, vàn cao.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
@@ -4308,7 +4588,7 @@ Nhiễm vừa bệnh Đạo ôn, bệnh Bạc lá, Nhiễm nhẹ bệnh Khô v�
     <DataPropertyAssertion>
         <DataProperty IRI="#tinhThichNghi"/>
         <NamedIndividual IRI="#GiongTBR-45"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Chịu rét tốt và khả năng chịu mặn 3 - 4‰; chống đổ tốt; chống chịu tốt với bệnh [Benh=BenhDaoOn]đạo ôn[/Benh] (điểm 0 - 1), bạc lá (điểm 1 - 3), khô vằn (điểm 1 - 3), rầy nâu (điểm 0 - 3), nhiễm nhẹ [Benh=BenhDomNau]bệnh đốm nâu[/Benh] (điểm 0 - 1) và đốm sọc vi khuẩn.
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Chịu rét tốt và khả năng chịu mặn 3 - 4‰; chống đổ tốt; chống chịu tốt với bệnh [Benh=BenhDaoOn]đạo ôn[/Benh] (điểm 0 - 1), bạc lá (điểm 1 - 3), khô vằn (điểm 1 - 3), [Sau=RayNau]rầy nâu [/Sau] (điểm 0 - 3), nhiễm nhẹ [Benh=BenhDomNau]bệnh đốm nâu[/Benh] (điểm 0 - 1) và đốm sọc vi khuẩn.
 TBR45 là giống cảm ôn, ngắn ngày, canh tác được các vụ trong năm; thích hợp với chân đất vàn, vàn cao, có thể gieo cấy trên đất mặn 3 - 4‰.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
@@ -4340,7 +4620,7 @@ TBR45 là giống cảm ôn, ngắn ngày, canh tác được các vụ trong n�
         <DataProperty IRI="#article"/>
         <NamedIndividual IRI="#GiongTBR36"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">1. Nguồn gốc: TBR36 là giống lúa thuần do Công ty CP Tổng Công ty Giống cây trồng Thái Bình chọn tạo, được công nhận giống Quốc gia năm 2011.
-2. Đặc tính giống: TBR36 là giống cảm ôn, ngắn ngày, gieo cấy được cả 2 vụ trong năm; thích ứng rộng; thời gian sinh trưởng: vụ Xuân 120 - 130 ngày, vụ Mùa 100 - 105 ngày; chiều cao cây 115 - 120 cm, cứng cây, chống đổ tốt, đẻ nhánh khá, dạng hình đẹp, lá đòng thẳng, trỗ bông tập trung; hạt thon dài, xếp sít, khối lượng 1000 hạt 22 - 23 gam; chịu hạn và chua phèn tốt; chống chịu tốt với các loại bệnh đạo ôn, khô vằn, bạc lá; năng suất trung bình 70 - 75 tạ/ha, thâm canh tốt đạt 80 - 85 tạ/ha. Chất lượng gạo trung bình.
+2. Đặc tính giống: TBR36 là giống cảm ôn, ngắn ngày, gieo cấy được cả 2 vụ trong năm; thích ứng rộng; thời gian sinh trưởng: vụ Xuân 120 - 130 ngày, vụ Mùa 100 - 105 ngày; chiều cao cây 115 - 120 cm, cứng cây, chống đổ tốt, đẻ nhánh khá, dạng hình đẹp, lá đòng thẳng, trỗ bông tập trung; hạt thon dài, xếp sít, khối lượng 1000 hạt 22 - 23 gam; chịu hạn và chua phèn tốt; chống chịu tốt với các loại [Benh=BenhDaoOn] bệnh đạo ôn[/Benh], khô vằn, bạc lá; năng suất trung bình 70 - 75 tạ/ha, thâm canh tốt đạt 80 - 85 tạ/ha. Chất lượng gạo trung bình.
 3. Hướng dẫn sử dụng:
 3.1. Chân đất thích hợp: Vàn, vàn cao.
 3.2. Lượng giống sử dụng: Lúa cấy 40 - 45 kg/ha, lúa gieo thẳng 50 - 55 kg/ha.
@@ -4383,7 +4663,7 @@ vụ [VuMua=VuHeThu]vụ hè thu[/VuMua] : mạ nền 8 - 10 ngày, mạ dược
     <DataPropertyAssertion>
         <DataProperty IRI="#tinhThichNghi"/>
         <NamedIndividual IRI="#GiongTBR36"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Chịu hạn và chua phèn tốt; chống đổ tốt; chống chịu tốt với bệnh [Benh=BenhDaoOn]đạo ôn[/Benh] (điểm 0 - 1), khô vằn (điểm 1 - 3), bạc lá (0 - 3), rầy nâu (điểm 0 - 3).
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Chịu hạn và chua phèn tốt; chống đổ tốt; chống chịu tốt với bệnh [Benh=BenhDaoOn]đạo ôn[/Benh] (điểm 0 - 1), khô vằn (điểm 1 - 3), bạc lá (0 - 3), [Sau=RayNau]rầy nâu [/Sau] (điểm 0 - 3).
  TBR36 là giống cảm ôn, canh tác được các vụ trong năm. Thích ứng rộng, cấy được trên nhiều loại chân đất kể cả đất chua phèn.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
@@ -4394,10 +4674,10 @@ vụ [VuMua=VuHeThu]vụ hè thu[/VuMua] : mạ nền 8 - 10 ngày, mạ dược
     <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
         <NamedIndividual IRI="#HienTuongNgoDocHuuCo"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Nguyên nhân: Do đất thiếu oxi, gây tình trạng yếm khí ức chế sự hô hấp của rễ lúa. Thường là do nông dân SX liên tục trên một thửa ruộng, rơm rạ của vụ trước bị vùi trong đất phân hủy trong điều kiện yếm khí tiết ra các chất độc gây hại cho lúa vụ sau (các chất độc hữu cơ đó là phenolic, hydro sulfic, khí metan, các axit hữu cơ làm tăng độ chua của đất).
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">[b] Nguyên nhân [/b] : Do đất thiếu oxi, gây tình trạng yếm khí ức chế sự hô hấp của rễ lúa. Thường là do nông dân SX liên tục trên một thửa ruộng, rơm rạ của vụ trước bị vùi trong đất phân hủy trong điều kiện yếm khí tiết ra các chất độc gây hại cho lúa vụ sau (các chất độc hữu cơ đó là phenolic, hydro sulfic, khí metan, các axit hữu cơ làm tăng độ chua của đất).
 Hiện tượng này cũng thường xảy ra khi bón nhiều phân hữu cơ chưa hoai mục, đất ruộng có thành phần cơ giới nặng, đất không được phơi ải, đất ngập nước thường xuyên, đất còn lẫn rơm rạ chưa phân hủy…
 
-Triệu chứng: Khi bệnh mới phát sinh, ngọn lá lúa biến vàng đỏ, khô từ chóp lá lan dần xuống dưới, lá có khuynh hướng dựng đứng. Bệnh nặng thì nhiều lá phía trên bị vàng đỏ đến 1/3 lá, cây lúa ngừng sinh trưởng, đẻ nhánh ít, bộ rễ thối đen có mùi tanh hôi, rễ mới không phát sinh. Dù có bón phân đầy đủ lúa vẫn không xanh. Nếu không kịp chữa trị, lúa sẽ lụi dần và chết.
+[b]Triệu chứng [/b] : Khi bệnh mới phát sinh, ngọn lá lúa biến vàng đỏ, khô từ chóp lá lan dần xuống dưới, lá có khuynh hướng dựng đứng. Bệnh nặng thì nhiều lá phía trên bị vàng đỏ đến 1/3 lá, cây lúa ngừng sinh trưởng, đẻ nhánh ít, bộ rễ thối đen có mùi tanh hôi, rễ mới không phát sinh. Dù có bón phân đầy đủ lúa vẫn không xanh. Nếu không kịp chữa trị, lúa sẽ lụi dần và chết.
 
 Hiện tượng này thường xảy ra khi lúa được 15 - 30 ngày tuổi sau khi sạ cấy.
 
@@ -4687,9 +4967,12 @@ CÂY CẢNH	0.1 - 0.2	Phun khi ra nụ</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
         <NamedIndividual IRI="#NgoDocPhen"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">1. NGUYÊN NHÂN
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">[b] 1. NGUYÊN NHÂN [/b]
+[br]
 Do lượng mưa ít và phân bố không đều vào đầu [VuMua=VuHeThu]vụ hè thu[/VuMua], nắng hạn kéo dài lại không chủ động nguồn nước tưới bổ sung, làm cho các tầng đất chứa vật liệu sinh phèn dễ bị Oxy hóa dẫn đến hiện tượng xì phèn thông qua các kẻ nứt và các mạch mao quản trong đất. Vào thời điểm này đất có độ pH rất chua, đồng thời nồng độ Fe2+ và Al3+ di động trong dung dịch đất cũng rất cao là nguyên nhân chính làm cho rễ lúa và cây lúa bị ngộ độc.
-2. TRIỆU CHỨNG
+[br]
+[b] 2. TRIỆU CHỨNG [/b]
+[br]
 Triệu chứng ngộ độc phèn do sắt (Fe2+):
 Khi cây lúa bị ngộ độc phèn sắt (còn gọi là phèn nóng), triệu chứng thường thấy là cây lúa có màu hơi vàng, trên lá già xuất hiện những đốm nhỏ màu nâu, lan dần từ chóp lá trở xuống, dần dần cả lá trở màu nâu, bầm tím, vàng hoặc cam.
 
@@ -4701,7 +4984,9 @@ Ngộ độc nhôm trên lúa thường xuất hiện các biểu hiện ở nh�
 Cây lúa còi cọc.
 Rễ phát triển chậm và biến dạng dẫn đến khả năng hút nước và dinh dưỡng kém.
 Nhôm là ion gây độc bậc nhất trong đất phèn.
-3. ĐẶC TRỊ BỆNH : CHẾ PHẨM SINH HỌC PHÂN HỦY GỐC RẠ” .
+[br]
+[b] 3. ĐẶC TRỊ BỆNH : CHẾ PHẨM SINH HỌC PHÂN HỦY GỐC RẠ” . [/b]
+[br]
 phan-huy-goc-rom-ra– Sau khi thu họach lúa nên cày ải, để rơm rạ được phân hủy ít nhất 1 tháng, và chỉ sạ lúa sau khi cho đất ngập từ 2 đến 3 tuần.
 – Trong trường hợp không cày ải được vì phải gieo sạ lại ngay sau khi thu hoạch, chúng ta cần sử dụng chế phẩm “PHÂN HỦY GỐC RẠ” để phân hủy gốc rạ ngay tại ruộng. Chỉ sau 5 – 7 ngày sử dụng chế phẩm, gốc rạ trở thành phân hữu cơ giúp bà con giảm được 30 – 50% lượng phân bón hóa học.</Literal>
     </DataPropertyAssertion>
@@ -4725,6 +5010,11 @@ phan-huy-goc-rom-ra– Sau khi thu họach lúa nên cày ải, để rơm rạ 
         <DataProperty IRI="#image"/>
         <NamedIndividual IRI="#NgoDocPhen"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">NgoDocPhen.jpg</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#NgoDocPhen"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hiện tượng ngộ độc phèn</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -5587,16 +5877,21 @@ Phân bón vi sinh vật chứa một hay nhiều chủng vi sinh vật sống, 
     <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
         <NamedIndividual IRI="#PhanXanh"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Phân xanh là gì? Đó là loại phân hữu cơ thường được sử dụng tươi, không qua quá trình ủ, nó phát huy hiệu quả cao khi đã được phân hủy. Trong nông nghiệp người ta thường sử dụng phân xanh để bón lót cho cây hàng năm hoặc tủ gốc cho cây lâu năm.
- 
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">[b]Phân xanh là gì?[/b]
+[br] 
+Đó là loại phân hữu cơ thường được sử dụng tươi, không qua quá trình ủ, nó phát huy hiệu quả cao khi đã được phân hủy. Trong nông nghiệp người ta thường sử dụng phân xanh để bón lót cho cây hàng năm hoặc tủ gốc cho cây lâu năm.
+[br]
+ [green]
 Nguyên liệu để làm phân xanh thường là các cây cỏ dại, cây thảo mộc, lá xoan, cây họ đậu… Nhiều vùng nông dân thường lấy về băm thành từng đoạn nhỏ rồi đem rắc ruộng. Trong các loại nguyên liệu làm phân xanh thì có cây họ đậu cho hiệu quả cao nhất. Bởi vì các loại cây họ đậu thường có các vi sinh vật cộng sinh sống trên rễ và giúp cây tổng hợp đạm từ khí trời. Lượng đạm đó về sau có thể cung cấp một phần cho cây trồng. Cây đậu còn có khả năng hút lân dễ tiêu và phân kali.
- 
+ [/green]
+[br]
 Nước ta có khí hậu nhiệt đới, đây là điều kiện thuận lợi để cây phân xanh sinh trưởng và phát triển mạnh. Gần như vùng nào cũng có cây phân xanh, do vậy người nông dân cần tận dụng các ưu thế đó để đưa cây phân xanh vào trong sản xuất nông nghiệp để tăng độ phì nhiêu cho đất, giảm bớt chi phí về phân bón.
  
 Ngoài các loài cây phân xanh tự nhiên, nhiều nơi còn trồng các loài cây phân xanh như: muồng, điền thanh, đậu nho nhe, keo dậu, trinh nữ không gai… Nhưng cần căn cứ vào điều kiện của từng vùng để có kế hoạch trồng sao cho phù hợp, dưới đây là một số cách thức sử dụng cây phân xanh bón cho cây trồng:
- 
+
 + Khi làm đất dùng cây phân xanh bón lót cho cây trồng.
 + Giai đoạn cây phân xanh ra hoa, cần cầy vùi chung vào trong đất vì lúc này cây phân xanh có năng suất sinh khối cao. Không nên để cây có hạt rồi mới vùi vào đất, vì lúc này hạt cây phân xanh có thể mọc gây cản trở quá trình sinh trưởng và phát triển của cây trồng chính.
+
 + Thực hiện luân canh cây trồng chính với cây phân xanh. Cứ một vụ trồng cây trồng chính một vụ trồng cây phân xanh, làm như vậy để tăng cường độ màu mỡ cho đất và loại trừ các loài sâu bệnh hại cây trồng chính.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
@@ -5666,38 +5961,35 @@ Nếu sử dụng phân đơn bón đúng thời điểm với 3 điều kiện 
         <NamedIndividual IRI="#QuyTrinhBonLot"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">+ Trong bón phân cho lúa thường bón lót toàn bộ phân chuồng và phân lân, một phần phân đạm và kali. Thường bón lót phân chuồng trong quá trình làm đất; phân lân, kali, cùng phân đạm bón trước khi cày bừa lần cuối.
 
-            + Cây hút khá nhiều lân trong các giai đoạn sinh trưởng đầu, giai đoạn cây con lúa bi khủng hoảng lân do vậy phân lân cần được bón lót toàn bộ hoặc bón lót và bón thúc sớm. Phân lân nên bón rải đều trên mặt ruộng trước khi cày bừa lần cuối để gieo cấy.
+   + Cây hút khá nhiều lân trong các giai đoạn sinh trưởng đầu, giai đoạn cây con lúa bi khủng hoảng lân do vậy phân lân cần được bón lót toàn bộ hoặc bón lót và bón thúc sớm. Phân lân nên bón rải đều trên mặt ruộng trước khi cày bừa lần cuối để gieo cấy.
 
             + Nên bón lót nhiều phân kali trong các trường hợp: giống lúa đẻ nhánh nhiều, giống lúa ngắn ngày, lúa có hiện tượng bị ngộ độc sắt, mưa nhiều, ngập nước sâu, khí hậu lạnh
 
             + Thường dành 1/3-2/3 tổng lượng đạm để bón lót cho lúa. Cần bón lót nhiều đạm hơn khi cấy bằng mạ già, các giống lúa ngắn ngày
-&lt;h3&gt;Bón lót (Bón trước khi cấy hoặc gieo sạ)&lt;h3&gt;
-C1: Bón phân đơn:
-
+[h3]Bón lót (Bón trước khi cấy hoặc gieo sạ)
+[br]
+[red] C1: Bón phân đơn [/red]
+[br]
 + Supe Lân: 15 - 20kg/500m2 (300 - 400kg/ha)
 
 + Đạm Urea: 2 - 4kg/500m2 (40 - 80kg/ha)
 
 + Kali Clorua: 1 - 1,5kg/500m2 (20 - 30kg/ha)
-
-C2: Bón phân NPK
+[br]
+[red] C2: Bón phân NPK [/red]
+[br]
 
 (Chọn các sản phẩm chuyên lót cho lúa có hàm lượng lân cao, hàm lượng đạm và kali thấp)
 
 + NPK 5.10.3; NPK 6.8.4; NPK 6.9.3... : 25 - 30kg/500m2 (500 - 600kg/ha)
 
 hoặc DAP (18-46): 7 - 10kg/kg/500m2 (140 - 200kg/ha).
-
+[/h3]
 Nếu bón loại hàm lượng cao hơn có thể giảm lượng bón theo tỷ lệ thích hợp hoặc theo khuyến cáo của nhà sản xuất.
 
 Không nên chọn loại phân có hàm lượng Đạm và Kali quá cao mà Lân thấp (VD: NPK 8.2.8; 12.2.10; 20.5.15...) để bón lót làm mất cân bằng dinh dưỡng, lúa dễ bị sâu bệnh.
 
 Cách bón: Trộn đều phân và rải đều khắp mặt ruộng trước khi cấy, sạ.</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#article"/>
-        <NamedIndividual IRI="#QuyTrinhBonLot"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Là bón phân trước cho ruộng khi gieo, cấy. Có thể bón lót cùng với quá trình làm đất, sau khi bón lót xong, tiến hành bừa đất, phân bón lót trên ruộng sẽ càng đều hơn. Cũng có thể làm đất xong rồi bón lót trước khi cấy.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#denNgay"/>
@@ -6168,7 +6460,7 @@ Cỏ bợ hầu như ít khi phủ kín toàn bộ mặt ruộng lúa mà chỉ 
 
 - Trước khi cày ải hoặc làm đất dùng thuốc triệt sinh như Lyphosim, Caphosate... Loại thuốc này có tác dụng diệt hết được cỏ bợ, những loài cỏ khác và lúa mọc sẵn trên ruộng.
 
-- Dùng thuốc Sirius 10 WP (hay thuốc Star 10 WP), thuốc ở dạng bột, dễ hòa tan, có thể áp dụng bằng cách hòa nước phun hoặc trộn với phân bón để rải. Liều lượng dùng là 200-250 gr/ha. Đối với ruộng lúa có nhiều loài cỏ khác nữa như cỏ lồng vực, cỏ cháo, cỏ chác, cỏ lá rộng khác thì cần phun thuốc cho cả ruộng, còn nếu trên ruông chỉ có một loài cỏ bợ thì chỉ cần phun theo từng đám để giảm chi phí. Lúc phun hoặc rải thuốc cần rút bớt nước trong ruộng sao cho mực nước 2-3 cm là vừa.
+- Dùng thuốc Sirius 10 WP (hay thuốc Star 10 WP), thuốc ở dạng bột, dễ hòa tan, có thể áp dụng bằng cách hòa nước phun hoặc trộn với phân bón để rải. Liều lượng dùng là 200-250 gr/ha. Đối với ruộng lúa có nhiều loài cỏ khác nữa như [Co=CoLongVuc] cỏ lồng vực [/Co], cỏ cháo, cỏ chác, cỏ lá rộng khác thì cần phun thuốc cho cả ruộng, còn nếu trên ruông chỉ có một loài cỏ bợ thì chỉ cần phun theo từng đám để giảm chi phí. Lúc phun hoặc rải thuốc cần rút bớt nước trong ruộng sao cho mực nước 2-3 cm là vừa.
 - Dùng thuốc Ally 20 DF hoặc Almix 20 DF: thuốc được đóng thành gói 1,5 g, mỗi bình thuốc 16 lít cần pha 2 gói thuốc. Cách áp dụng tương tự như thuốc Sirius.
 
 - Ngoài các loại thuốc trên có thể dùng thuốc Sindax 10 WP diệt cỏ bợ cũng cho hiệu quả cao.</Literal>
@@ -6184,16 +6476,11 @@ Cỏ bợ hầu như ít khi phủ kín toàn bộ mặt ruộng lúa mà chỉ 
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cỏ bợ</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#name"/>
-        <NamedIndividual IRI="#Ray"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Rầy</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
         <NamedIndividual IRI="#RayLungTrang"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Đặc điểm hình thái:
  
-- Trứng [Sau=RayLungTrang]rầy lưng trắng[/Sau] Thuộc Họ: Delphacidae Bộ: Homoptera (Tên khoa học: Sogatella furcifera Horvath)có dạng ”quả chuối tiêu” như trứng rầy nâu nhưng nhỏ, dài và nhọn hơn. Trứng được đẻ thành từng ổ theo chiều dọc, chìm trong bẹ hoặc gân chính của lá, mỗi ổ từ 2-7 quả. Trứng mới đẻ trong suốt, sau chuyển màu vàng, sắp nở có hai điểm mắt đỏ.
+- Trứng [Sau=RayLungTrang]rầy lưng trắng[/Sau] Thuộc Họ: Delphacidae Bộ: Homoptera (Tên khoa học: Sogatella furcifera Horvath)có dạng ”quả chuối tiêu” như trứng [Sau=RayNau]rầy nâu [/Sau] nhưng nhỏ, dài và nhọn hơn. Trứng được đẻ thành từng ổ theo chiều dọc, chìm trong bẹ hoặc gân chính của lá, mỗi ổ từ 2-7 quả. Trứng mới đẻ trong suốt, sau chuyển màu vàng, sắp nở có hai điểm mắt đỏ.
  
 - Rầy non mới nở có màu trắng đục, đến tuổi 3 xuất hiện các vệt vằn trên lưng.
  
@@ -6207,18 +6494,18 @@ Vòng đời của sâu gai từ 24-28 ngày.
  
 + Thời kỳ tiền đẻ trứng: 3-8 ngày.
  
-Rầy cái trưởng thành có thể đẻ 150-350 trứng và đẻ liên tục trong 6 ngày, rầy trưởng thành có tính hướng quang mạnh. Con trưởng thành và rầy non đều hút nhựa cây từ dảnh và lá lúa. [Sau=RayLungTrang]rầy lưng trắng[/Sau] xâm nhập vào ruộng lúa khi gieo được khoảng 30 ngày và thường ít lứa trong một vụ hơn so với rầy nâu. Nếu rầy gây hại vào giai đoạn lúa trỗ bông làm cho số lượng bông và chiều dài bông giảm, hạt lúa bị lép, lửng và làm chậm quá trình chín của hạt. [Sau=RayLungTrang]rầy lưng trắng[/Sau] còn là môi giới truyền bệnh virus cho lúa.
+Rầy cái trưởng thành có thể đẻ 150-350 trứng và đẻ liên tục trong 6 ngày, rầy trưởng thành có tính hướng quang mạnh. Con trưởng thành và rầy non đều hút nhựa cây từ dảnh và lá lúa. [Sau=RayLungTrang]rầy lưng trắng[/Sau] xâm nhập vào ruộng lúa khi gieo được khoảng 30 ngày và thường ít lứa trong một vụ hơn so với [Sau=RayNau]rầy nâu [/Sau]. Nếu rầy gây hại vào giai đoạn lúa trỗ bông làm cho số lượng bông và chiều dài bông giảm, hạt lúa bị lép, lửng và làm chậm quá trình chín của hạt. [Sau=RayLungTrang]rầy lưng trắng[/Sau] còn là môi giới truyền bệnh virus cho lúa.
  
-[Sau=RayLungTrang]rầy lưng trắng[/Sau] gây hại cùng với rầy nâu, nhưng trong cùng một lứa thì [Sau=RayLungTrang]rầy lưng trắng[/Sau] phát sinh rộ sớm hơn. [Sau=RayLungTrang]rầy lưng trắng[/Sau] thường có mật độ cao, gây hại nặng vào giai đoạn lúa làm đòng.
+[Sau=RayLungTrang]rầy lưng trắng[/Sau] gây hại cùng với [Sau=RayNau]rầy nâu [/Sau], nhưng trong cùng một lứa thì [Sau=RayLungTrang]rầy lưng trắng[/Sau] phát sinh rộ sớm hơn. [Sau=RayLungTrang]rầy lưng trắng[/Sau] thường có mật độ cao, gây hại nặng vào giai đoạn lúa làm đòng.
  
-Cũng như rầy nâu, [Sau=RayLungTrang]rầy lưng trắng[/Sau] thích hợp với điều kiện khí hậu ấm nóng, ẩm độ cao, mưa nắng xen kẽ. Ở vùng Đồng bằng sông Hồng một năm có 6-7 lứa rầy, quan trọng nhất là lứa rầy vào tháng 4 (vụ xuân) và cuối tháng 8 đầu tháng 9 (vụ mùa). Vụ xuân thường gây hại nặng hơn vụ mùa. [Sau=RayLungTrang]rầy lưng trắng[/Sau] hại nặng trên các giống lúa nhiễm rầy, lúa lai; nếu thâm canh cao, bón nhiều đạm, ruộng lúa cấy dày, rậm rạp là điều kiện cho [Sau=RayLungTrang]rầy lưng trắng[/Sau] phát sinh, phát triển. [Sau=RayLungTrang]rầy lưng trắng[/Sau] phân bố rộng rãi trên khắp các vùng trồng lúa của Việt Nam và trên thế giới, nó có khả năng du nhập và di truyển rất cao.
+Cũng như [Sau=RayNau]rầy nâu [/Sau], [Sau=RayLungTrang]rầy lưng trắng[/Sau] thích hợp với điều kiện khí hậu ấm nóng, ẩm độ cao, mưa nắng xen kẽ. Ở vùng Đồng bằng sông Hồng một năm có 6-7 lứa rầy, quan trọng nhất là lứa rầy vào tháng 4 (vụ xuân) và cuối tháng 8 đầu tháng 9 (vụ mùa). Vụ xuân thường gây hại nặng hơn vụ mùa. [Sau=RayLungTrang]rầy lưng trắng[/Sau] hại nặng trên các giống lúa nhiễm rầy, lúa lai; nếu thâm canh cao, bón nhiều đạm, ruộng lúa cấy dày, rậm rạp là điều kiện cho [Sau=RayLungTrang]rầy lưng trắng[/Sau] phát sinh, phát triển. [Sau=RayLungTrang]rầy lưng trắng[/Sau] phân bố rộng rãi trên khắp các vùng trồng lúa của Việt Nam và trên thế giới, nó có khả năng du nhập và di truyển rất cao.
 Phòng trừ:
  
 ● Sử dụng các giống lúa kháng rầy.
  
 ● Cấy lúa với mật độ vừa phải, bón phân cân đối NPK. Có thể thả vịt vào ruộng lúa để diệt rầy.
  
-● Khi mật độ rầy cám 18-20 con/khóm cần phun [Thuoc]thuốc[/Thuoc] diệt rầy. Dùng các loại [Thuoc]thuốc[/Thuoc] diệt côn trùng và [Thuoc]thuốc[/Thuoc] diệt côn trùng nội hấp rất hữu hiệu. Có thể sử dụng các loại [Thuoc]thuốc[/Thuoc] sau: Bassa 50EC, Regent 800WP, Trebon 20ND, Mipcin 20WP, Actara 25WG.</Literal>
+● Khi mật độ rầy cám 18-20 con/khóm cần phun [Thuoc]thuốc[/Thuoc] diệt rầy. Dùng các loại [Thuoc]thuốc[/Thuoc] diệt côn trùng và [Thuoc]thuốc[/Thuoc] diệt côn trùng nội hấp rất hữu hiệu. Có thể sử dụng các loại [Thuoc]thuốc[/Thuoc] sau: [Thuoc=Bassa_50EC] Bassa 50EC [/Thuoc], Regent 800WP, Trebon 20ND, Mipcin 20WP, [Thuoc=Actara_25WG] Actara 25WG [/Thuoc].</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#bienPhapKhacPhuc"/>
@@ -6229,8 +6516,8 @@ Phòng trừ:
 - Thả vịt vào ruộng lúa diệt rầy
 - Thường xuyên điều tra đồng ruộng khi phát hiện mật độ rầy cám từ 18
 - 20 con/khóm lúa phải phun thuốc.
-- Dùng thuốc Bassa 50EC, Mipcin 20WP, Trebon 20ND, Regent 800WG...
-- Khi phun rạch hàng lúa để phun. Nếu dùng Actara 25WG thì không cần rạch hàng lúa.</Literal>
+- Dùng thuốc [Thuoc=Bassa_50EC] Bassa 50EC [/Thuoc], Mipcin 20WP, Trebon 20ND, Regent 800WG...
+- Khi phun rạch hàng lúa để phun. Nếu dùng [Thuoc=Actara_25WG] Actara 25WG [/Thuoc] thì không cần rạch hàng lúa.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#image"/>
@@ -6241,7 +6528,7 @@ Phòng trừ:
         <DataProperty IRI="#khaiNiem"/>
         <NamedIndividual IRI="#RayLungTrang"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Sogatella furcifera Horvath
-Gây hại cùng với rầy nâu nhưng trong cùng lứa thì rầy lưng trắng phát sinh rộ sớm hơn. Rầy non có màu trắng hoặc nền trắng cùng các vết xám đậm. Thường hại nặng trên các giống lúa nhiễm rầy, lúa lai, thâm canh cao, bón nhiều đạm, ruộng lúa cấy dày, rậm rạp. Rầy lưng trắng thường có mật độ cao, gây hại nặng vào giai đoạn giai đoạn lúa làm đòng. ở vùng lúa đồng bằng sông Hồng một năm có 6-7 lứa. Quan trọng là lứa tháng 4 và cuối tháng 8 đầu tháng 9 trùng với các giai đoạn trên.</Literal>
+Gây hại cùng với [Sau=RayNau]rầy nâu [/Sau] nhưng trong cùng lứa thì rầy lưng trắng phát sinh rộ sớm hơn. Rầy non có màu trắng hoặc nền trắng cùng các vết xám đậm. Thường hại nặng trên các giống lúa nhiễm rầy, lúa lai, thâm canh cao, bón nhiều đạm, ruộng lúa cấy dày, rậm rạp. Rầy lưng trắng thường có mật độ cao, gây hại nặng vào giai đoạn giai đoạn lúa làm đòng. ở vùng lúa đồng bằng sông Hồng một năm có 6-7 lứa. Quan trọng là lứa tháng 4 và cuối tháng 8 đầu tháng 9 trùng với các giai đoạn trên.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -6253,11 +6540,11 @@ Gây hại cùng với rầy nâu nhưng trong cùng lứa thì rầy lưng tr�
         <NamedIndividual IRI="#RayNau"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Nilaparvata lugens Stal
 
-Rầy nâu thích hợp với điều kiện khí hậu ấm nóng, ẩm độ cao, mưa nắng xen kẽ và cấy nhiều giống nhiễm rầy thường phát sinh gây hại nặng. Rầy xâm nhập vào ruộng lúa ngay từ khi mới cấy và hại cả trên mạ. cao điểm rầy phát sinh mật độ cao và gây hại năng vào giai đoạn lúa trỗ xong, ngậm sữa và bắt đầu chín. ở miền Bắc mùa đông lạnh nên có 2 đỉnh cao và gây cháy rầy vào các tháng 5 (vụ xuân) và cuối tháng 9 đầu tháng 10 (vụ mùa) trùng với giai đoạn lúa trỗ – ngậm sữa. Rầy nâu còn là vectơ truyền bệnh vàng lùn, lùn xoắn lá hại lúa.
+[Sau=RayNau]rầy nâu [/Sau] thích hợp với điều kiện khí hậu ấm nóng, ẩm độ cao, mưa nắng xen kẽ và cấy nhiều giống nhiễm rầy thường phát sinh gây hại nặng. Rầy xâm nhập vào ruộng lúa ngay từ khi mới cấy và hại cả trên mạ. cao điểm rầy phát sinh mật độ cao và gây hại năng vào giai đoạn lúa trỗ xong, ngậm sữa và bắt đầu chín. ở miền Bắc mùa đông lạnh nên có 2 đỉnh cao và gây cháy rầy vào các tháng 5 (vụ xuân) và cuối tháng 9 đầu tháng 10 (vụ mùa) trùng với giai đoạn lúa trỗ – ngậm sữa. [Sau=RayNau]rầy nâu [/Sau] còn là vectơ truyền bệnh vàng lùn, lùn xoắn lá hại lúa.
 PHÒNG TRỪ
-- Sử dụng giống kháng rầy nâu.
+- Sử dụng giống kháng [Sau=RayNau]rầy nâu [/Sau].
 - Cấy dày vừa phải, bón phân cân đối, thả vịt vào  ruộng lúa diệt rầy. Khi mật độ rầy cám từ 18- 27 con/khóm lúa cần phun thuốc diệt rầy.
-- Dùng các loại thuốc Bassa 50EC, Regent 800WP, Trebon 20ND,  Mipcin 20WP, rạch hàng lúa để phun. Nếu dùng Actara 25WG thì không cần rạch  hàng  nhưng vẫn  phải phun tập trung vào gốc lúa.</Literal>
+- Dùng các loại thuốc [Thuoc=Bassa_50EC] Bassa 50EC [/Thuoc], Regent 800WP, Trebon 20ND,  Mipcin 20WP, rạch hàng lúa để phun. Nếu dùng [Thuoc=Actara_25WG] Actara 25WG [/Thuoc] thì không cần rạch  hàng  nhưng vẫn  phải phun tập trung vào gốc lúa.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
@@ -6274,7 +6561,7 @@ b.  Đặc điểm hình thái:
 - Rầy non rất linh hoạt, mới nở có màu xám trắng, tuổi 2-3 trở lên có màu nâu vàng, trong điều kiện mật độ cao có màu nâu sẫm. Rầy non có 5 tuổi.
 c. Đặc điểm sinh học và sinh thái:
 
-- Thời gian sinh trưởng và phát dục các giai đoạn của rầy nâu biến động phụ thuộc vào các yếu tố ngoại cảnh, đặc biệt liên quan chặt chẽ với yếu tố nhiệt độ và ẩm độ. Trung bình, thời gian phát dục các giai đoạn của rầy biến động như sau:
+- Thời gian sinh trưởng và phát dục các giai đoạn của [Sau=RayNau]rầy nâu [/Sau] biến động phụ thuộc vào các yếu tố ngoại cảnh, đặc biệt liên quan chặt chẽ với yếu tố nhiệt độ và ẩm độ. Trung bình, thời gian phát dục các giai đoạn của rầy biến động như sau:
 
 + Thời gian trứng: 6 - 8 ngày
 + Rầy non: 12 - 14 ngày, mỗi tuổi 2 -3 ngày.
@@ -6283,24 +6570,24 @@ c. Đặc điểm sinh học và sinh thái:
 
 - Rầy trưởng thành thường tập trung thành từng đám trên thân cây lúa phía dưới khóm để hút nhựa cây. Khi lúa ở thời kỳ chín, phần dưới của thân cây lúa đã khô cứng thì chúng bò lên phía trên cây lúa hoặc gần chỗ non mềm của cuống bông để hút nhựa. Rầy trưởng thành có xu tính bắt ánh sáng mạnh.
 - Sự xuất hiện dạng cánh dài và cánh ngắn phụ thuộc điều kiện nhiệt độ, ẩm độ và dinh dưỡng. Nhiệt độ thấp, ẩm độ cao, thức ăn phong phú thì xuất hiện dạng cánh ngắn nhiều, vag ngược lại. Dạng cánh ngắn có thời gian sống dài,  tỷ lệ cái/ đực cao, số lượng trứng cao hơn loại cánh dài; hơn nữa, rầy cánh ngắn đẻ trứng sớm hơn do vòng đời ngắn hơn rầy cánh dài. Vì thế khi rầy cánh ngắn xuất hiện nhiều thì hiện tượng “cháy rầy” dễ xảy ra.
- Rầy trưởng thành sau khi vũ hoá 3 - 5 ngày thì đẻ trứng, thời gian đẻ trứng dài. Mỗi con cái có thể đẻ từ 50 - 600 quả trứng; chúng thường đẻ trứng thành ổ, vào buổi chiều. Mỗi ổ có từ 3 - 48 trứng, thông thường 15 - 30 quả trứng. Ngoài lúa, rầy cũng thích đẻ trứng trên cỏ lồng vực. Các quả trứng trong 1 ổ thường nở rải rác trong 1 ngày.
+ Rầy trưởng thành sau khi vũ hoá 3 - 5 ngày thì đẻ trứng, thời gian đẻ trứng dài. Mỗi con cái có thể đẻ từ 50 - 600 quả trứng; chúng thường đẻ trứng thành ổ, vào buổi chiều. Mỗi ổ có từ 3 - 48 trứng, thông thường 15 - 30 quả trứng. Ngoài lúa, rầy cũng thích đẻ trứng trên [Co=CoLongVuc] cỏ lồng vực [/Co]. Các quả trứng trong 1 ổ thường nở rải rác trong 1 ngày.
 - Hàng năm ở Hải Phòng có 7 - 8 đợt rầy, trong đó đáng lưu ý là đợt 2 - 3 hại lúa [VuMua=VuDongXuan]đông xuân[/VuMua] vào tháng 4 và tháng 5; đợt 6 hại lúa mùa vào trung tuần  tháng  9 đến đầu tháng 10.
 
 d.  Biện pháp phòng trừ:
-Áp dụng chương trình IPM một cách triệt để là biện pháp tốt nhất hiện nay đảm bảo ngăn ngừa được rầy nâu một cách lâu bền, các biện pháp cụ thể  bao gồm:
+Áp dụng chương trình IPM một cách triệt để là biện pháp tốt nhất hiện nay đảm bảo ngăn ngừa được [Sau=RayNau]rầy nâu [/Sau] một cách lâu bền, các biện pháp cụ thể  bao gồm:
 - Vệ sinh đồng ruộng sạch sẽ ;
 - Sử dụng các giống lúa kháng rầy ;
 - Cấy lúa với mật độ vừa phải, bón phân cân đối NPK. Có thể thả vịt vào ruộng lúa để diệt rầy ;
 - Tạo môi trường thuận lợi cho thiên địch của rầy phát triển ;
 - Trên ruộng lúa có nước, có thể sử dụng biện pháp rắc cát có tẩm dầu kèm theo khua động làm cho rầy “giả chết” rơi xuống nước, khi bò lên dầu vít lỗ thở của chúng làm cho chúng bị chết ;
-- Khi rầy vượt qua ngưỡng phòng trừ có thể sử dụng các loại [Thuoc]thuốc[/Thuoc] có tác động chọn lọc và áp dụng chiến lược thay [Thuoc]thuốc[/Thuoc]. Các loại [Thuoc]thuốc[/Thuoc] có thể sử dụng gồm: Chersieu 50WG, Apta 30WP, Babsax 600EC, Penalty gold 50EC, Victory 585EC, Dragon 585EC, Chatot 600WG, Oshin 20WP, Actadan 750WP,  Actara 25WG,...</Literal>
+- Khi rầy vượt qua ngưỡng phòng trừ có thể sử dụng các loại [Thuoc]thuốc[/Thuoc] có tác động chọn lọc và áp dụng chiến lược thay [Thuoc]thuốc[/Thuoc]. Các loại [Thuoc]thuốc[/Thuoc] có thể sử dụng gồm: Chersieu 50WG, Apta 30WP, Babsax 600EC, Penalty gold 50EC, Victory 585EC, Dragon 585EC, Chatot 600WG, Oshin 20WP, Actadan 750WP,  [Thuoc=Actara_25WG] Actara 25WG [/Thuoc],...</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#bienPhapKhacPhuc"/>
         <NamedIndividual IRI="#RayNau"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">- Sử dụng giống kháng rầy nâu.
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">- Sử dụng giống kháng [Sau=RayNau]rầy nâu [/Sau].
 - Cấy dày vừa phải, bón phân cân đối, thả vịt vào  ruộng lúa diệt rầy. Khi mật độ rầy cám từ 18- 27 con/khóm lúa cần phun thuốc diệt rầy.
-- Dùng các loại thuốc Bassa 50EC, Regent 800WP, Trebon 20ND,  Mipcin 20WP, rạch hàng lúa để phun. Nếu dùng Actara 25WG thì không cần rạch  hàng  nhưng vẫn  phải phun tập trung vào gốc lúa.</Literal>
+- Dùng các loại thuốc [Thuoc=Bassa_50EC] Bassa 50EC [/Thuoc], Regent 800WP, Trebon 20ND,  Mipcin 20WP, rạch hàng lúa để phun. Nếu dùng [Thuoc=Actara_25WG] Actara 25WG [/Thuoc] thì không cần rạch  hàng  nhưng vẫn  phải phun tập trung vào gốc lúa.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#image"/>
@@ -6311,12 +6598,12 @@ d.  Biện pháp phòng trừ:
         <DataProperty IRI="#khaiNiem"/>
         <NamedIndividual IRI="#RayNau"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Nilaparvata lugens Stal
-Rầy nâu thích hợp với điều kiện khí hậu ấm nóng, ẩm độ cao, mưa nắng xen kẽ và cấy nhiều giống nhiễm rầy thường phát sinh gây hại nặng. Rầy xâm nhập vào ruộng lúa ngay từ khi mới cấy và hại cả trên mạ. cao điểm rầy phát sinh mật độ cao và gây hại năng vào giai đoạn lúa trỗ xong, ngậm sữa và bắt đầu chín. ở miền Bắc mùa đông lạnh nên có 2 đỉnh cao và gây cháy rầy vào các tháng 5 (vụ xuân) và cuối tháng 9 đầu tháng 10 (vụ mùa) trùng với giai đoạn lúa trỗ – ngậm sữa. Rầy nâu còn là vectơ truyền bệnh vàng lùn, lùn xoắn lá hại lúa.</Literal>
+[Sau=RayNau]rầy nâu [/Sau] thích hợp với điều kiện khí hậu ấm nóng, ẩm độ cao, mưa nắng xen kẽ và cấy nhiều giống nhiễm rầy thường phát sinh gây hại nặng. Rầy xâm nhập vào ruộng lúa ngay từ khi mới cấy và hại cả trên mạ. cao điểm rầy phát sinh mật độ cao và gây hại năng vào giai đoạn lúa trỗ xong, ngậm sữa và bắt đầu chín. ở miền Bắc mùa đông lạnh nên có 2 đỉnh cao và gây cháy rầy vào các tháng 5 (vụ xuân) và cuối tháng 9 đầu tháng 10 (vụ mùa) trùng với giai đoạn lúa trỗ – ngậm sữa. [Sau=RayNau]rầy nâu [/Sau] còn là vectơ truyền bệnh vàng lùn, lùn xoắn lá hại lúa.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#RayNau"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Rầy nâu</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">rầy nâu</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
@@ -6334,9 +6621,9 @@ Một năm rầy phát sinh 8 lứa, trong đó cần chú ý lứa 3: từ đ�
 - Sử dụng giống kháng rầy.
 - Mật độ cấy hợp lý, bón phân cân đối, tránh bón quá nhiều đạm.
 - Trên những ruộng lúa có nước có thể sử dụng biện pháp rắc cát có tẩm dầu kèm theo khua động làm cho rầy “giả chết” rơi xuống nước, dầu vít lỗ thở của chúng làm cho chúng bị chết.
-- Tạo môi trường thuận lợi cho tập đoàn thiên địch phong phú của rầy nâu cư trú và phát triển.
+- Tạo môi trường thuận lợi cho tập đoàn thiên địch phong phú của [Sau=RayNau]rầy nâu [/Sau] cư trú và phát triển.
 - Thường xuyên thăm đồng, cần đặc biệt chú ý tới những điểm thường có các ổ rầy những vụ trước.
-- Khi mật độ rầy cám từ 2000 con/m2 giai đoạn lúa làm đòng, 3000con/m2 giai đoạn lúa trỗ cần phun [Thuoc]thuốc[/Thuoc] diệt rầy. Dùng các loại [Thuoc]thuốc[/Thuoc] Bassa 50EC, Regent 800WP, Trebon 20ND,... khi phun rẽ hàng lúa, phun vào gốc thì mới có hiệu quả. Nếu dùng [Thuoc]thuốc[/Thuoc] nội hấp Actara 25WG ở thời kỳ lúa đẻ nhánh - trỗ bôngthì không cần rạch hàng.</Literal>
+- Khi mật độ rầy cám từ 2000 con/m2 giai đoạn lúa làm đòng, 3000con/m2 giai đoạn lúa trỗ cần phun [Thuoc]thuốc[/Thuoc] diệt rầy. Dùng các loại [Thuoc]thuốc[/Thuoc] [Thuoc=Bassa_50EC] Bassa 50EC [/Thuoc], Regent 800WP, Trebon 20ND,... khi phun rẽ hàng lúa, phun vào gốc thì mới có hiệu quả. Nếu dùng [Thuoc]thuốc[/Thuoc] nội hấp [Thuoc=Actara_25WG] Actara 25WG [/Thuoc] ở thời kỳ lúa đẻ nhánh - trỗ bôngthì không cần rạch hàng.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -6741,7 +7028,7 @@ Dùng dây thừng nhúng vào dầu lửa và nước, mỗi thứ 1 phần b�
         <DataProperty IRI="#bienPhapKhacPhuc"/>
         <NamedIndividual IRI="#SauGai"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Vệ sinh đồng ruộng, diệt sạch cỏ dại. Khi mật độ trứng cao ngắt phần ngọn lá có trứng và vợt bắt trưởng thành.
-- Phun các loại thuốc Regent 800WG, Padan 95SP hoặc Actara 25WG khi sâu phát sinh rộ.</Literal>
+- Phun các loại thuốc Regent 800WG, Padan 95SP hoặc [Thuoc=Actara_25WG] Actara 25WG [/Thuoc] khi sâu phát sinh rộ.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#definition"/>
@@ -6770,7 +7057,7 @@ Trưởng thành có nhiều gai trên mình, thường qua đông trên cỏ d�
 - Nhộng dài 17-18mm, màu nâu đỏ.
 Sâu non gây hại cả lá lúa và bông lúa, tập trung thành đám.
 2. Điều kiện phát sinh gây hại
-Sâu ưa nhiệt độ cao và ẩm độ bão hoà. Hàng năm, sau những trận mưa tập trung, kéo dài gây ngập, lụt, úng thì thường tiếp theo là nạn dịch sâu keo phát sinh phá lúa mùa.
+Sâu ưa nhiệt độ cao và ẩm độ bão hoà. Hàng năm, sau những trận mưa tập trung, kéo dài gây ngập, lụt, úng thì thường tiếp theo là nạn dịch [Sau=SauKeo] sâu keo [/Sau] phát sinh phá lúa mùa.
 Hàng năm, cần chú ý các đợt sâu: Đợt 1 từ hạ tuần tháng 6 - hạ tuần tháng 7, đợt 2 từ hạ tuần tháng 7 - hạ tuần tháng 8.
 3. Biện pháp phòng, trừ
 - Làm đất kỹ, dọn sạch cỏ dại trong ruộng và bờ.
@@ -6780,7 +7067,7 @@ Hàng năm, cần chú ý các đợt sâu: Đợt 1 từ hạ tuần tháng 6 -
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#SauKeo"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Sâu keo (Spodoptera mauitia)</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">sâu keo  (Spodoptera mauitia)</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
@@ -6798,13 +7085,13 @@ Thuộc Họ: Cecidomyiidae Bộ: Diptera
  
 - Sâu non có 3 tuổi, đẫy sức màu trắng sữa, dịch cơ thể màu hồng nhạt. Mặt bụng ngực trước có một mẩu cứng chẻ đôi. Điểm sinh trưởng bị hại biến dị thành ống hành. Khi ống hành đã vươn ra ngoài cũng là lúc sâu non đã hoá nhộng.
  
-- Nhộng của sâu năn có thể di chuyển lên xuống trong ống hành. Nhộng có màu da cam, đỉnh đầu có một đôi gai, lúc nhộng sắp hoá muỗi thì chuyển lên trên ngọn chui ½ mình ra, lột vỏ nhộng để lại trên đầu ống hành.
+- Nhộng của [Sau=SauNan] sâu năn [/Sau] có thể di chuyển lên xuống trong ống hành. Nhộng có màu da cam, đỉnh đầu có một đôi gai, lúc nhộng sắp hoá muỗi thì chuyển lên trên ngọn chui ½ mình ra, lột vỏ nhộng để lại trên đầu ống hành.
  
 - Muỗi cái có thân dài hơn muỗi đực. Đầu nhỏ, hầu như bị mắt kép màu đen choán hết. Râu đầu màu vàng dạng chuỗi hạt. Chân dài, bàn chân có 5 đốt. Bụng có 10 đốt, màu đỏ da cam. Cánh trong có nhiều lông mịn, có 4 mạch cánh.
  
 Đặc điểm sinh học, sinh thái và gây hại:
  
-Vòng đời của sâu năn từ 25-35 ngày.
+Vòng đời của [Sau=SauNan] sâu năn [/Sau] từ 25-35 ngày.
  
 + Giai đoạn trứng: 3-8 ngày.
  
@@ -6814,20 +7101,20 @@ Vòng đời của sâu năn từ 25-35 ngày.
  
 + Giai đoạn trưởng thành (muỗi): 1-3 ngày.
  
-Muỗi đẻ trứng về đêm, mỗi con cái có thể đẻ từ 100-200 trứng. Muỗi hoạt động mạnh và giao phối về đêm; thời kỳ mạ muỗi đẻ rải rác trên các phiến lá ở gié, thời kỳ lúa đẻ trên bẹ lá, cách mặt nước 30 cm.Muỗi sâu năn ưa ánh sáng đèn với cường độ mạnh.
+Muỗi đẻ trứng về đêm, mỗi con cái có thể đẻ từ 100-200 trứng. Muỗi hoạt động mạnh và giao phối về đêm; thời kỳ mạ muỗi đẻ rải rác trên các phiến lá ở gié, thời kỳ lúa đẻ trên bẹ lá, cách mặt nước 30 cm.Muỗi [Sau=SauNan] sâu năn [/Sau] ưa ánh sáng đèn với cường độ mạnh.
  
-Các lứa 3, 5 và 7 của sâu lăn gây hại cho các trà lúa tương ứng với các tháng 4, 5 và 10. Nhiệt độ ấm nóng và độ ẩm cao là điều kiện thích hợp cho sâu năn phát sinh phát triển. Những năm mưa nhiều sâu năn phát sinh phát triển mạnh; miền núi bị sâu năn phá hại nặng hơn đồng bằng; ruộng lúa đủ nước bị phá hại nặng hơn ruộng hạn, ruộng có nhiều cỏ Leersia sâu năn cũng phát triển mạnh. Sâu năn gây hại trong vụ mùa nặng hơn vụ xuân và mùa sớm nặng hơn mùa muộn. Bón phân không cân đối cũng là nguyên nhân để sâu năn gây hại.
+Các lứa 3, 5 và 7 của sâu lăn gây hại cho các trà lúa tương ứng với các tháng 4, 5 và 10. Nhiệt độ ấm nóng và độ ẩm cao là điều kiện thích hợp cho [Sau=SauNan] sâu năn [/Sau] phát sinh phát triển. Những năm mưa nhiều [Sau=SauNan] sâu năn [/Sau] phát sinh phát triển mạnh; miền núi bị [Sau=SauNan] sâu năn [/Sau] phá hại nặng hơn đồng bằng; ruộng lúa đủ nước bị phá hại nặng hơn ruộng hạn, ruộng có nhiều cỏ Leersia [Sau=SauNan] sâu năn [/Sau] cũng phát triển mạnh. [Sau=SauNan] sâu năn [/Sau] gây hại trong vụ mùa nặng hơn vụ xuân và mùa sớm nặng hơn mùa muộn. Bón phân không cân đối cũng là nguyên nhân để [Sau=SauNan] sâu năn [/Sau] gây hại.
  
-Sâu năn phá hại đỉnh sinh trưởng làm lá non biến dạng “cọng hành”, cây lúa bé, sinh trưởng không bình thường. Sâu năn phá hại lúa từ giai đoạn mạ đến giai đoạn cuối đẻ nhánh. Các giai đoạn sau không còn thích hợp với sâu năn.
+[Sau=SauNan] sâu năn [/Sau] phá hại đỉnh sinh trưởng làm lá non biến dạng “cọng hành”, cây lúa bé, sinh trưởng không bình thường. [Sau=SauNan] sâu năn [/Sau] phá hại lúa từ giai đoạn mạ đến giai đoạn cuối đẻ nhánh. Các giai đoạn sau không còn thích hợp với [Sau=SauNan] sâu năn [/Sau].
 Phòng trừ:
  
-● Sử dụng các giống lúa kháng sâu năn.Cấy lúa với mật độ vừa phải, khi cấy loại bỏ mạ cọng hành. Ruộng lúa bị sâu năn hại cần kịp thời tháo nước phơi ruộng để hạn chế sự lây lan phát triển.
+● Sử dụng các giống lúa kháng [Sau=SauNan] sâu năn [/Sau].Cấy lúa với mật độ vừa phải, khi cấy loại bỏ mạ cọng hành. Ruộng lúa bị [Sau=SauNan] sâu năn [/Sau] hại cần kịp thời tháo nước phơi ruộng để hạn chế sự lây lan phát triển.
  
 ● Vệ sinh đồng ruộng, diệt trừ cỏ dại, đặc biệt là cỏ Leersia; xử lý lúa chét.
  
 ● Bón phân cân đối NPK. Đặc biệt chú ý tăng lượng phân lân.
  
-● Dùng bẫy đèn diệt muỗi, bảo vệ ong mắt đỏ là thiên địch.của sâu năn
+● Dùng bẫy đèn diệt muỗi, bảo vệ ong mắt đỏ là thiên địch.của [Sau=SauNan] sâu năn [/Sau]
  
 ● Dùng các loại [Thuoc]thuốc[/Thuoc] dạng hạt như Vibasu 10H, Furadan 3G  trộn với đất bột rắc để diệt sâu non.</Literal>
     </DataPropertyAssertion>
@@ -6839,31 +7126,31 @@ Phòng trừ:
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#SauNan"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Sâu năn</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">sâu năn</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#bienPhapKhacPhuc"/>
         <NamedIndividual IRI="#SauPhao"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">- Rút nước để ruộng cạn vài giờ sâu có thể chết vì không thể bơi đi kiếm ăn được.
-- Khi sâu có mật độ cao phun các loại thuốc Regent 800WP, Padan 95SP, Actara 25WG để diệt sâu non.</Literal>
+- Khi sâu có mật độ cao phun các loại thuốc Regent 800WP, Padan 95SP, [Thuoc=Actara_25WG] Actara 25WG [/Thuoc] để diệt sâu non.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#bienPhapKhacPhuc"/>
         <NamedIndividual IRI="#SauPhao"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Nymphula depunctatus Guenee
 Tên khác- Nymphula staynalis; Zebronia decassalis (Guenee); Hydrocaupa depunctalis (Guenee)
-- Sâu phao chỉ hại trên ruộng lúa nước, không hại trên lúa cạn. 
+- [Sau=SauPhao] sâu phao [/Sau] chỉ hại trên ruộng lúa nước, không hại trên lúa cạn. 
 - Nếu trong ruộng lúa cùng có sự xuất hiện gây hại của ruồi và sâu đục thân thì tác hại của chúng gây ra sẽ làm năng suất lúa giảm đáng kể.
 * PHÒNG TRỪ
 - Rút nước để ruộng cạn vài giờ sâu có thể chết vì không thể bơi đi kiếm ăn được.
-- Khi sâu có mật độ cao phun các loại thuốc Regent 800WP, Padan 95SP, Actara 25WG để diệt sâu non.</Literal>
+- Khi sâu có mật độ cao phun các loại thuốc Regent 800WP, Padan 95SP, [Thuoc=Actara_25WG] Actara 25WG [/Thuoc] để diệt sâu non.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#definition"/>
         <NamedIndividual IRI="#SauPhao"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Nymphula depunctatus Guenee
 Tên khác- Nymphula staynalis; Zebronia decassalis (Guenee); Hydrocaupa depunctalis (Guenee)
-- Sâu phao chỉ hại trên ruộng lúa nước, không hại trên lúa cạn. 
+- [Sau=SauPhao] sâu phao [/Sau] chỉ hại trên ruộng lúa nước, không hại trên lúa cạn. 
 - Nếu trong ruộng lúa cùng có sự xuất hiện gây hại của ruồi và sâu đục thân thì tác hại của chúng gây ra sẽ làm năng suất lúa giảm đáng kể.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
@@ -6874,7 +7161,7 @@ Tên khác- Nymphula staynalis; Zebronia decassalis (Guenee); Hydrocaupa depunct
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#SauPhao"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Sâu phao</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">sâu phao</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#dacDiem"/>
@@ -6934,7 +7221,7 @@ Tên thương mại	STAR 10WP
 Thuốc trừ cỏ chuyên dùng trừ cỏ cho lúa
 Hoạt chất	Pyrazosulfuron Ethyl 10%
 Qui cách	5gr x 10 gói
-Công dụng	Là thuốc trừ cỏ nội hấp, chọn lọc có hiệu lực diệt trừ cao với hầu hết các loại cỏ phổ biến trong ruộng như cỏ lồng vực, cỏ đuôi phụng, cỏ cháo, cỏ chác, cỏ năn, rau mác,rau bợ…; an toàn với lúa
+Công dụng	Là thuốc trừ cỏ nội hấp, chọn lọc có hiệu lực diệt trừ cao với hầu hết các loại cỏ phổ biến trong ruộng như [Co=CoLongVuc] cỏ lồng vực [/Co], cỏ đuôi phụng, cỏ cháo, cỏ chác, cỏ năn, rau mác,rau bợ…; an toàn với lúa
 Hướng dẫn sử dụng	
 Liều lượng
  – Nếu pha với nước để phun: 5gr/bình 8L. Phun 2 bình cho 500m², 4 bình cho 1000m²
@@ -6983,7 +7270,7 @@ Hãng SX: Cty Bảo vệ Thực vật Sài Gòn</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#triSauBenhHai"/>
         <NamedIndividual IRI="#Star_10WP"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Là thuốc trừ cỏ nội hấp, chọn lọc có hiệu lực diệt trừ cao với hầu hết các loại cỏ phổ biến trong ruộng như cỏ lồng vực, cỏ đuôi phụng, cỏ cháo, cỏ chác, cỏ năn, rau mác,rau bợ…; an toàn với lúa</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Là thuốc trừ cỏ nội hấp, chọn lọc có hiệu lực diệt trừ cao với hầu hết các loại cỏ phổ biến trong ruộng như [Co=CoLongVuc] cỏ lồng vực [/Co], cỏ đuôi phụng, cỏ cháo, cỏ chác, cỏ năn, rau mác,rau bợ…; an toàn với lúa</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
@@ -7000,9 +7287,9 @@ Phụ gia...vừa đủ 1 lít
 
 TÍNH NĂNG TÁC DỤNG
 
-TAIYOU 20SC với hoạt chất thế hệ mới Fenoxanil thuộc nhóm Phenoxamide là thuốc đặc trị bệnh đạo ôn lúa do nấm Pyricularia oryzae gây ra.
+TAIYOU 20SC với hoạt chất thế hệ mới Fenoxanil thuộc nhóm Phenoxamide là thuốc đặc trị [Benh=BenhDaoOn] bệnh đạo ôn[/Benh] lúa do nấm Pyricularia oryzae gây ra.
 TAIYOU 20SC ức chế lây nhiễm và chống phát sinh bào tử nấm nên có hiệu lực rất mạnh để đặc trị đạo ôn lá (cháy lá) và đạo ôn cổ bong (thối cổ gié) gây hại lúa.
-TAIYOU 20SC có tác dụng nội hấp mạnh, có thể di chuyển đến khắp các bộ phận của cây, chặn đứng nguồn bệnh và bảo vệ lá non nên có tác dụng phòng và trừ bệnh đạo ôn với hiệu quả rất cao ở tất cả các giai đoạn sinh trường, phát triển của cây lá lúa khi gieo sạ đến thu hoạch.
+TAIYOU 20SC có tác dụng nội hấp mạnh, có thể di chuyển đến khắp các bộ phận của cây, chặn đứng nguồn bệnh và bảo vệ lá non nên có tác dụng phòng và trừ [Benh=BenhDaoOn] bệnh đạo ôn[/Benh] với hiệu quả rất cao ở tất cả các giai đoạn sinh trường, phát triển của cây lá lúa khi gieo sạ đến thu hoạch.
 TAIYOU 20SC thành phẩm có dạng huyền phù đậm đặc với ưu điểm nổi trội là bám dính tốt, không sợ bị mưa rửa trôi
 TAIYOU 20SC giúp cây tăng cường sản sinh Phytoalexin, tăng đề khánh bệnh, tránh bệnh tái phát.
 TAIYOU 20SC có tác dụng dưỡng cây, xanh to lá đòng. An toàn với môi trường và thiên địch.
@@ -7012,7 +7299,7 @@ Có thể phun hỗn hợp
 
 TAIYOU 20SC + HỢP TRÍ CASI (20ml + 20 ml/bình 16 lít), để giúp cây lúa chắc khỏe, lá cứng thẳng, tăng để kháng bệnh, phòng trị dứt bệnh, tránh bệnh tái phát, không phải phun xịt nhiều lần.
 TAIYOU 20SC + TEPRO SUPER 300EC hay KEVIAR 325SC ( 20 ml + 15 ml/ bình 16 lít) để vừa phòng trị đạo ôn cổ bông và phòng trừ lem lém hạt do nấm.
-TAIYOU 20SC + AGRILIFE 100SL (20 ml + 20 ml/bình 16 lít), phun trong trường hợp trên ruộng bi bệnh đạo ôn và bệnh do vi khuẩn gây hại (bạc lá vi khuẩn, thối bẹ vi khuẩn hay lem lét hạt do vi khuẩn).</Literal>
+TAIYOU 20SC + AGRILIFE 100SL (20 ml + 20 ml/bình 16 lít), phun trong trường hợp trên ruộng bi [Benh=BenhDaoOn] bệnh đạo ôn[/Benh] và bệnh do vi khuẩn gây hại (bạc lá vi khuẩn, thối bẹ vi khuẩn hay lem lét hạt do vi khuẩn).</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#image"/>
@@ -7024,7 +7311,7 @@ TAIYOU 20SC + AGRILIFE 100SL (20 ml + 20 ml/bình 16 lít), phun trong trường
         <NamedIndividual IRI="#TAIYOU_20SC"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">TAIYOU 20SC + HỢP TRÍ CASI (20ml + 20 ml/bình 16 lít), để giúp cây lúa chắc khỏe, lá cứng thẳng, tăng để kháng bệnh, phòng trị dứt bệnh, tránh bệnh tái phát, không phải phun xịt nhiều lần.
 TAIYOU 20SC + TEPRO SUPER 300EC hay KEVIAR 325SC ( 20 ml + 15 ml/ bình 16 lít) để vừa phòng trị đạo ôn cổ bông và phòng trừ lem lém hạt do nấm.
-TAIYOU 20SC + AGRILIFE 100SL (20 ml + 20 ml/bình 16 lít), phun trong trường hợp trên ruộng bi bệnh đạo ôn và bệnh do vi khuẩn gây hại (bạc lá vi khuẩn, thối bẹ vi khuẩn hay lem lét hạt do vi khuẩn).</Literal>
+TAIYOU 20SC + AGRILIFE 100SL (20 ml + 20 ml/bình 16 lít), phun trong trường hợp trên ruộng bi[Benh=BenhDaoOn]đạo ôn[/Benh] và bệnh do vi khuẩn gây hại (bạc lá vi khuẩn, thối bẹ vi khuẩn hay lem lét hạt do vi khuẩn).</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -7050,9 +7337,9 @@ Quy cách: chai
 [b]Tên thương mại[/b] : TREBON 10EC 
 [b]Hoạt chất[/b]: Etofenprox 10% 
 [b]Công dụng [/b]: 
-Là thuốc trừ sâu trên lúa, chè, vải, ngô bông, dùng cho các loại sâu như: Sâu cuốn lá, sâu vẽ bùa, sâu xanh, sâu khoang, rầy xanh, rầy nâu, bọ trĩ, bọ cánh tơ, bọ xít muỗi và rệp
+Là thuốc trừ sâu trên lúa, chè, vải, ngô bông, dùng cho các loại sâu như: Sâu cuốn lá, sâu vẽ bùa, sâu xanh, sâu khoang, rầy xanh, [Sau=RayNau]rầy nâu [/Sau], bọ trĩ, bọ cánh tơ, bọ xít muỗi và rệp
 [b]Hướng dẫn sử dụng[/b]
-Lúa: Rầy nâu, sâu cuốn lá, bọ trĩ ; Chè: Rầy xanh, bọ cánh tơ, bọ xít muỗi. Pha 12-15ml thuốc với bình 10 lít. Phun khi s6u rầy mới xuất hiện, tuổi nhỏ. Lượng dùng 0,7 lít thuốc cho 1ha.
+Lúa: [Sau=RayNau]rầy nâu [/Sau], sâu cuốn lá, bọ trĩ ; Chè: Rầy xanh, bọ cánh tơ, bọ xít muỗi. Pha 12-15ml thuốc với bình 10 lít. Phun khi s6u rầy mới xuất hiện, tuổi nhỏ. Lượng dùng 0,7 lít thuốc cho 1ha.
 Vải: Sâu vẽ bùa, rệp ; Ngô bông: Sâu xanh, sâu khoang. Pha 18-24ml thuốc với bình 10 lít nước. Phun ướt đẫm đều tán lá, lượng dung:1-1,5 lít thuốc cho 1ha</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
@@ -7232,7 +7519,7 @@ Loại máy này cần được khuyến khích, tuy nhiên giá mua máy còn c
         <DataProperty IRI="#article"/>
         <NamedIndividual IRI="#ThuocADORE_25SC"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">THUỐC TRỪ CỎ ADORE 25SC
-Adore 25SC là thuốc trừ cỏ chọn lọc trên lúa thuộc nhóm hóa học Quinoline carboxylic acid, có tác động nội hấp, hậu nảy mầm, hấp thụ vào cây cỏ qua lá và rễ. Trừ được các loại cỏ như: cỏ lồng vực, cỏ chỉ, cỏ điên điển, cỏ loa kèn, rau muống dại, bìm bìm…v.v. đặc biệt đặc trị cỏ lồng vực, rất an toàn cho lúa.
+Adore 25SC là thuốc trừ cỏ chọn lọc trên lúa thuộc nhóm hóa học Quinoline carboxylic acid, có tác động nội hấp, hậu nảy mầm, hấp thụ vào cây cỏ qua lá và rễ. Trừ được các loại cỏ như: [Co=CoLongVuc] cỏ lồng vực [/Co], [Co=CoChi] cỏ chỉ  [/Co], cỏ điên điển, cỏ loa kèn, rau muống dại, bìm bìm…v.v. đặc biệt đặc trị [Co=CoLongVuc] cỏ lồng vực [/Co], rất an toàn cho lúa.
 Thành phần: Quinclorac  250 g/l
 
 Cách tác động: Chọn lọc, nội hấp, trừ cỏ tiền và hậu nẩy mầm
@@ -7272,64 +7559,6 @@ Nhà sản xuất: Fertiagro Pte Ltd
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
-        <NamedIndividual IRI="#ThuocActara_25WWG"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ACTARA 25 WG
-Tiêu diệt rất hiệu quả hơn 70 loại côn trùng chích hút khó trừ.
-Tên thương mại	ACTARA 25 WG – Sự bảo vệ khôn ngoan
-Hoạt chất	Thiamethoxam
-Qui cách	1 g, 2 g
-Độ độc	Nhóm 3
-Cơ chế tác động	Tiếp xúc, vị độc, bảo vệ tức thì cây trồng ngay sau khi xử lý thuốc
-Công dụng	Tiêu diệt rất hiệu quả hơn 70 loại côn trùng chích hút khó trừ
-Hướng dẫn sử dụng đối với bọ trĩ 
-– Pha 25-30 g/ha
-– Pha 1 g/bình 8 lit
-– Lượng nước phun: 320-500 lít/ha
-– Phun đều
-Hướng dẫn sử dụng đối với rầy nâu
-– Pha 40-80 g/ha
-– Pha 1 g/bình 8 lit
-– Phun đều 4-6 bình 8 lít/1.000m2</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#dacDiem"/>
-        <NamedIndividual IRI="#ThuocActara_25WWG"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tên thương mại	ACTARA 25 WG – Sự bảo vệ khôn ngoan
-Hoạt chất	Thiamethoxam
-Qui cách	1 g, 2 g
-Độ độc	Nhóm 3
-Cơ chế tác động	Tiếp xúc, vị độc, bảo vệ tức thì cây trồng ngay sau khi xử lý [Thuoc]thuốc[/Thuoc]</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#image"/>
-        <NamedIndividual IRI="#ThuocActara_25WWG"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Actara 25 WG.png</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#luongThuoc"/>
-        <NamedIndividual IRI="#ThuocActara_25WWG"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">[Sau=BoTri]bọ trĩ[/Sau]	
-– Pha 25-30 g/ha
-– Pha 1 g/bình 8 lit
-– Lượng nước phun: 320-500 lít/ha
-– Phun đều
-Rầy nâu	
-– Pha 40-80 g/ha
-– Pha 1 g/bình 8 lit
-– Phun đều 4-6 bình 8 lít/1.000m2</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#name"/>
-        <NamedIndividual IRI="#ThuocActara_25WWG"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thuốc ACTARA 25 WG</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#triSauBenhHai"/>
-        <NamedIndividual IRI="#ThuocActara_25WWG"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Công dụng	Tiêu diệt rất hiệu quả hơn 70 loại côn trùng chích hút khó trừ</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#article"/>
         <NamedIndividual IRI="#ThuocAdmire_50EC"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ADMIRE 50EC – THUỐC ĐẶC TRỊ RẦY
 Khối lượng/Thể tích: 100 ml
@@ -7343,8 +7572,8 @@ Loại thuốc :	Thuốc trừ sâu
 Nhóm thuốc :	Neonicotinoit
 Danh mục thuốc :	Được phép sử dụng
 Dạng thuốc :	050EC: Nhũ dầu. 200OD: Dung dịch
-Đối tượng phòng trừ :	050EC: Bọ trĩ/lúa. Rầy xanh/lúa. Rầy nâu/lúa. Rầy xanh/bông vải. Rệp/bông vải.
-200OD: Bọ trĩ/lúa. Rầy nâu/lúa. Rệp sáp/cà phê. Rệp vảy/cà phê. Bọ trĩ/điều. Rầy xanh/bông vải. Rệp muội/bông vải
+Đối tượng phòng trừ :	050EC: Bọ trĩ/lúa. Rầy xanh/lúa. [Sau=RayNau]rầy nâu [/Sau]/lúa. Rầy xanh/bông vải. Rệp/bông vải.
+200OD: Bọ trĩ/lúa. [Sau=RayNau]rầy nâu [/Sau]/lúa. Rệp sáp/cà phê. Rệp vảy/cà phê. Bọ trĩ/điều. Rầy xanh/bông vải. Rệp muội/bông vải
 Tác động của thuốc :	tác động tiếp xúc, vị độc; nội hấp mạnh, dịch chuyển hướng ngọn.
 Nhóm độc :	Nhóm 3
 Mức độ độc :	với cá: không độc, với ong: ít độc
@@ -7390,8 +7619,8 @@ Khả năng hỗn hợp :	có thể hỗn hợp với [Thuoc]thuốc[/Thuoc] kh�
         <DataProperty IRI="#triSauBenhHai"/>
         <NamedIndividual IRI="#ThuocAdmire_50EC"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">[Thuoc]thuốc[/Thuoc] ĐẶC TRỊ RẦY
-Đối tượng phòng trừ :	050EC: [Sau=BoTri]bọ trĩ[/Sau]/lúa. Rầy xanh/lúa. Rầy nâu/lúa. Rầy xanh/bông vải. Rệp/bông vải.
-200OD: [Sau=BoTri]bọ trĩ[/Sau]/lúa. [Sau=RayNau]Rầy nâu[/Sau]/lúa. Rệp sáp/cà phê. Rệp vảy/cà phê. [Sau=BoTri]bọ trĩ[/Sau]/điều. Rầy xanh/bông vải. Rệp muội/bông vải</Literal>
+Đối tượng phòng trừ :	050EC: [Sau=BoTri]bọ trĩ[/Sau]/lúa. Rầy xanh/lúa. [Sau=RayNau]rầy nâu [/Sau]/lúa. Rầy xanh/bông vải. Rệp/bông vải.
+200OD: [Sau=BoTri]bọ trĩ[/Sau]/lúa. [Sau=RayNau][Sau=RayNau]rầy nâu [/Sau][/Sau]/lúa. Rệp sáp/cà phê. Rệp vảy/cà phê. [Sau=BoTri]bọ trĩ[/Sau]/điều. Rầy xanh/bông vải. Rệp muội/bông vải</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#tuNgayCachLy"/>
@@ -7402,7 +7631,7 @@ Khả năng hỗn hợp :	có thể hỗn hợp với [Thuoc]thuốc[/Thuoc] kh�
         <DataProperty IRI="#article"/>
         <NamedIndividual IRI="#ThuocArmada"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thành phần: Imidacloprid
-Công dụng: Armada là thuốc trừ rầy có tác dụng tiếp xúc, vị độc, và nội hấp mạnh, đặc trị rầy nâu hại lúa Ngoài ra, Armada 50EC còn có hiệu lực cao đối với nhiều loại côn trùng chích hút như: bọ trĩ hại lúa; rầy xanh, rệp hại ngô, rầy xanh, rệp muội hại rau màu, đậu đỗ; sâu vẽ bùa, ruồi đục quả, rệp hại cây ăn quả, rệp sáp, rệp muội, rầy xanh, nhện đỏ hạầic phê, tiêu, bông, thuốc lá... ; rầy xanh, bọ trĩ hại chè (trà).
+Công dụng: Armada là thuốc trừ rầy có tác dụng tiếp xúc, vị độc, và nội hấp mạnh, đặc trị [Sau=RayNau]rầy nâu [/Sau] hại lúa Ngoài ra, Armada 50EC còn có hiệu lực cao đối với nhiều loại côn trùng chích hút như: bọ trĩ hại lúa; rầy xanh, rệp hại ngô, rầy xanh, rệp muội hại rau màu, đậu đỗ; sâu vẽ bùa, ruồi đục quả, rệp hại cây ăn quả, rệp sáp, rệp muội, rầy xanh, nhện đỏ hạầic phê, tiêu, bông, thuốc lá... ; rầy xanh, bọ trĩ hại chè (trà).
 Thời gian cách li: 7 - 14 ngày
 Hướng dẫn sử dụng:
  
@@ -7415,7 +7644,7 @@ Phun khi sâu rầy vừa chớm xuất hiện</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#dacTinhCuaThuoc"/>
         <NamedIndividual IRI="#ThuocArmada"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">là [Thuoc]thuốc[/Thuoc] trừ rầy có tác dụng tiếp xúc, vị độc, và nội hấp mạnh, đặc trị rầy nâu hại lúa.</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">là [Thuoc]thuốc[/Thuoc] trừ rầy có tác dụng tiếp xúc, vị độc, và nội hấp mạnh, đặc trị [Sau=RayNau]rầy nâu [/Sau] hại lúa.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>
@@ -7445,7 +7674,7 @@ Phun khi sâu rầy vừa chớm xuất hiện</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#triSauBenhHai"/>
         <NamedIndividual IRI="#ThuocArmada"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">rầy nâu, [Sau=BoTri]bọ trĩ[/Sau], rầy xanh, rệp,, rệp sáp, rệp muội, rầy xanh, nhện đỏ.</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">[Sau=RayNau]rầy nâu [/Sau], [Sau=BoTri]bọ trĩ[/Sau], rầy xanh, rệp,, rệp sáp, rệp muội, rầy xanh, nhện đỏ.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#tuNgayCachLy"/>
@@ -7552,7 +7781,7 @@ Trà	Đốm lá
     <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
         <NamedIndividual IRI="#VuThuDong"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Theo kinh nghiệm của nhiều bà con nông dân,[VuMua=VuThuDong] vụ thu đông [/VuMua] (vụ 3) là vụ lúa dễ làm và thường có chi phí đầu tư thấp hơn nên nếu trúng mùa sẽ có lãi cao hơn so với vụ đông xuân và[VuMua=VuHeThu]vụ hè thu[/VuMua]. Tuy nhiên trong thực tế vụ 3 cũng thường gặp tình trạng lúa bị ngộ độc hữu cơ và nguy cơ bị rầy nâu, vàng lùn, lùn xoắn lá và sâu bệnh gây hại. Theo tập quán, khi thu hoạch lúa [VuMua=VuHeThu]vụ hè thu[/VuMua], nông dân thường giữ đất ngập nước để đất mềm nhằm thu hoạch xong sẽ dùng máy trục nhẹ một lần rồi sạ luôn. Cách làm này dễ dẫn đến tình trạng lúa bị ngộ độc hữu cơ, cây kém phát triển, năng suất thấp, thậm chí cây lụi đi và không cho thu hoạch nếu bị nặng và không được khắc phục đúng cách và kịp thời. Triệu chứng lúa bị ngộ độc hữu cơ cũng tương tự lúa bị vàng lùn nhưng có thêm biểu hiện rễ lúa bị thâm đen, rất mềm và bị thối, đất có mùi hôi khó chịu và khi lội xuống có nhiều bọt khí nổi lên. Các triệu chứng này biểu hiện rõ nhất ở thời kỳ 18-25 ngày sau khi sạ. Nguyên nhân là do thân và gốc lúa còn tươi bị vùi lấp ngay sau thu hoạch sẽ bị phân hủy trong điều kiện yếm khí sinh ra các axit hữu cơ và các khí độc. Chính axit hữu cơ làm đất chua, các khí độc trong đất nhiều và không đủ oxi làm lúa bị nghẹt rễ, thối rễ, rễ không hút được dinh dưỡng nên cây lúa vàng dần, lụi đi và chết. Nếu lúa bị ngộ độc hữu cơ như vậy cần bón 0,5-1 tấn vôi/ha hoặc bón 150-200kg lân thiên nhiên Indo Guano (có hàm lượng lân, canxi và silic hoạt hóa cao). Canxi và silic giúp trung hòa axit trong đất, giảm chua. Lân sẽ làm giảm độc tố sắt, nhôm gây hại rễ lúa, đồng thời kích thích lúa đâm rễ mới. Ngay sau đó tiến hành rút nước và phun hoạt chất chống ngộ độc hữu cơ Penac P của Đức cùng với phân bón lá Đầu Trâu 005 định kỳ 7 ngày/lần nhằm giải độc hữu cơ và cung cấp dinh dưỡng cấp thời cho lúa. Khi đất se mặt cũng đồng thời rễ mới đã phát triển, lá xanh trở lại, tiến hành bơm nước và bón bổ sung 150-200kg phân Đầu Trâu TE-01/ha. Sau sạ 40-45 ngày (lúa có đòng 1-2cm), bón thúc đòng 100kg phân Đầu Trâu TE-02/ha. Phun phân bón lá Đầu Trâu 007. Sau khi trỗ hoàn toàn, phun phân bón lá Đầu Trâu 009 định kỳ 7-10 ngày/lần.
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Theo kinh nghiệm của nhiều bà con nông dân,[VuMua=VuThuDong] vụ thu đông [/VuMua] (vụ 3) là vụ lúa dễ làm và thường có chi phí đầu tư thấp hơn nên nếu trúng mùa sẽ có lãi cao hơn so với vụ đông xuân và[VuMua=VuHeThu]vụ hè thu[/VuMua]. Tuy nhiên trong thực tế vụ 3 cũng thường gặp tình trạng lúa bị ngộ độc hữu cơ và nguy cơ bị [Sau=RayNau]rầy nâu [/Sau], vàng lùn, lùn xoắn lá và sâu bệnh gây hại. Theo tập quán, khi thu hoạch lúa [VuMua=VuHeThu]vụ hè thu[/VuMua], nông dân thường giữ đất ngập nước để đất mềm nhằm thu hoạch xong sẽ dùng máy trục nhẹ một lần rồi sạ luôn. Cách làm này dễ dẫn đến tình trạng lúa bị ngộ độc hữu cơ, cây kém phát triển, năng suất thấp, thậm chí cây lụi đi và không cho thu hoạch nếu bị nặng và không được khắc phục đúng cách và kịp thời. Triệu chứng lúa bị ngộ độc hữu cơ cũng tương tự lúa bị vàng lùn nhưng có thêm biểu hiện rễ lúa bị thâm đen, rất mềm và bị thối, đất có mùi hôi khó chịu và khi lội xuống có nhiều bọt khí nổi lên. Các triệu chứng này biểu hiện rõ nhất ở thời kỳ 18-25 ngày sau khi sạ. Nguyên nhân là do thân và gốc lúa còn tươi bị vùi lấp ngay sau thu hoạch sẽ bị phân hủy trong điều kiện yếm khí sinh ra các axit hữu cơ và các khí độc. Chính axit hữu cơ làm đất chua, các khí độc trong đất nhiều và không đủ oxi làm lúa bị nghẹt rễ, thối rễ, rễ không hút được dinh dưỡng nên cây lúa vàng dần, lụi đi và chết. Nếu lúa bị ngộ độc hữu cơ như vậy cần bón 0,5-1 tấn vôi/ha hoặc bón 150-200kg lân thiên nhiên Indo Guano (có hàm lượng lân, canxi và silic hoạt hóa cao). Canxi và silic giúp trung hòa axit trong đất, giảm chua. Lân sẽ làm giảm độc tố sắt, nhôm gây hại rễ lúa, đồng thời kích thích lúa đâm rễ mới. Ngay sau đó tiến hành rút nước và phun hoạt chất chống ngộ độc hữu cơ Penac P của Đức cùng với phân bón lá Đầu Trâu 005 định kỳ 7 ngày/lần nhằm giải độc hữu cơ và cung cấp dinh dưỡng cấp thời cho lúa. Khi đất se mặt cũng đồng thời rễ mới đã phát triển, lá xanh trở lại, tiến hành bơm nước và bón bổ sung 150-200kg phân Đầu Trâu TE-01/ha. Sau sạ 40-45 ngày (lúa có đòng 1-2cm), bón thúc đòng 100kg phân Đầu Trâu TE-02/ha. Phun phân bón lá Đầu Trâu 007. Sau khi trỗ hoàn toàn, phun phân bón lá Đầu Trâu 009 định kỳ 7-10 ngày/lần.
 Để sản xuất lúa vụ 3 thắng lợi cần áp dụng các biện pháp thâm canh tổng hợp theo các bước sau: Rút nước phơi ruộng ngay từ lúc sắp thu hoạch [VuMua=VuHeThu]vụ hè thu[/VuMua] nhằm làm đất thoáng khí. Khi thu hoạch cần cắt gần sát gốc lúa để thu bớt thân lá ra khỏi ruộng. Có thể cày lật đất và để ải 2-3 tuần, sau đó mới bơm nước và bừa trục. Nếu có điều kiện nên bón lót vôi hoặc 150-200kg lân thiên nhiên Indo Guano/ha. Áp dụng sạ đồng loạt theo lịch thời vụ của ngành nông nghiệp để né rầy và sạ hàng để tiết kiệm chi phí giống. Sau sạ 5-7 ngày khi mặt ruộng đã se lại, cần bơm nước vào vừa đủ. Sau sạ 7-10 ngày, bón thúc lần 1 từ 100-150kg phân Đầu Trâu TE-01/ha. Sau sạ 15-20 ngày, tiến hành bón thúc đợt 2 bằng phân Đầu Trâu TE-01 với lượng 100-150kg/ha. Có thể bổ sung 0,5-1kg Penac P của Đức bằng cách trộn chung với phân bón gốc hay phun qua lá nhằm chống ngộ độc hữu cơ. Phun phân bón lá Đầu Trâu 005 định kỳ 7-10 ngày/lần nhằm giúp lúa đẻ nhánh khỏe, đẻ tập trung. Sau sạ 30-35 ngày cần rút nước trong ruộng để hạn chế lúa nảy thêm chồi vô hiệu, đồng thời giúp rễ lúa ăn sâu, cây cứng, khỏe. Sau sạ 40-45 ngày, lúa bắt đầu có đòng (đòng 1-2cm) tiến hành bón thúc đón đòng với lượng 100kg phân Đầu Trâu TE-02. Phun phân bón lá Đầu Trâu 007. Sau khi lúa trỗ thoát cần phun phân bón lá Đầu Trâu 009 định kỳ 7-10 ngày/lần nhằm dưỡng hạt, giúp sáng hạt. Khi lúa chín sáp, tiến hành rút nước nhằm kích thích rễ lúa ăn sâu, cây cứng, chống đổ tốt và để khi lúa chín mặt ruộng vừa đủ cứng giúp thu hoạch bằng máy được dễ dàng. Thăm đồng thường xuyên để phát hiện sâu bệnh và phòng trừ kịp thời. Áp dụng các biện pháp tổng hợp trên, chắc chắn sẽ tránh được ngộ độc hữu cơ và lúa vụ 3 sẽ trúng, giá thành sản xuất lúa thấp, nông dân có nhiều lợi nhuận.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
@@ -7880,7 +8109,10 @@ Trà	Đốm lá
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#thoigianthuhoach"/>
-        <Class IRI="#VuMua"/>
+        <ObjectUnionOf>
+            <Class IRI="#ThuHoachBaoQuan"/>
+            <Class IRI="#VuMua"/>
+        </ObjectUnionOf>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#tinhThichNghi"/>
@@ -7895,7 +8127,10 @@ Trà	Đốm lá
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#trieuChung"/>
-        <Class IRI="#Benh"/>
+        <ObjectUnionOf>
+            <Class IRI="#Benh"/>
+            <Class IRI="#HienTuong"/>
+        </ObjectUnionOf>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#tuNgay"/>
