@@ -14,10 +14,14 @@
 
     <environment names="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css"/>
+        <link rel="stylesheet" href="~/lib/select2/dist/css/select2.css"/>
+        <link rel="stylesheet" href="~/lib/select2-bootstrap-theme/dist/select2-bootstrap.css"/>
         <link rel="stylesheet" href="~/css/site.css"/>
     </environment>
     <environment names="Staging,Production">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="~/lib/select2/dist/css/select2.min.css"/>
+        <link rel="stylesheet" href="~/lib/select2-bootstrap-theme/dist/select2-bootstrap.min.css"/>
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true"/>
     </environment>
     @Html.Raw(JavaScriptSnippet.FullScript)
@@ -127,12 +131,14 @@
     <script src="~/lib/jquery/dist/jquery.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
     <script src="~/lib/bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
+    <script src="~/lib/select2/dist/js/select2.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
 </environment>
 <environment names="Staging,Production">
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="~/lib/bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
+    <script src="~/lib/select2/dist/js/select2.min.js"></script>
     <script src="~/js/site.min.js" asp-append-version="true"></script>
 </environment>
 

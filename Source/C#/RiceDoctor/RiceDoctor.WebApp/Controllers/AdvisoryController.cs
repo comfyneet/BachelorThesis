@@ -12,6 +12,7 @@ using RiceDoctor.RuleManager;
 using RiceDoctor.Shared;
 using RiceDoctor.WebApp.Models;
 using static RiceDoctor.InferenceEngine.ResponseType;
+using static RiceDoctor.OntologyManager.GetType;
 using JsonConvert = Newtonsoft.Json.JsonConvert;
 using Request = RiceDoctor.InferenceEngine.Request;
 using RequestType = RiceDoctor.InferenceEngine.RequestType;
@@ -44,6 +45,9 @@ namespace RiceDoctor.WebApp.Controllers
         public IActionResult Index()
         {
             ViewData["Problems"] = _ruleManager.Problems;
+            ViewData["Classes"] = _ontologyManager.GetSubClasses("Thing", GetAll);
+            ViewData["Individuals"] = _ontologyManager.GetIndividuals();
+            ViewData["FuzzyVariables"] = _fuzzyManager.Variables;
 
             var guid = Guid.NewGuid().ToString();
             var advisory = new Advisory {Guid = guid};
@@ -54,34 +58,32 @@ namespace RiceDoctor.WebApp.Controllers
         }
 
         [HttpPost]
-        public IActionResult SelectProblem(string guid, int problemId, string inputs, string outputs, int? totalGoals)
+        public IActionResult SelectProblem(string guid, int problemId, List<string> inputs, string fuzzyInputs, double? fuzzyValues, List<string> outputs, int? totalGoals)
         {
             if (string.IsNullOrWhiteSpace(guid))
                 return RedirectToAction("Error", "Home", new {error = CoreStrings.MalformedArgument(nameof(guid))});
             guid = guid.Trim();
 
-            if (string.IsNullOrWhiteSpace(inputs))
+            if (inputs == null || string.IsNullOrWhiteSpace(fuzzyInputs))
                 return RedirectToAction("Error", "Home", new {error = CoreStrings.MalformedArgument(nameof(inputs))});
-            var inputList = inputs.Trim().Replace("\r\n", "\n").Split('\n');
             var facts = new List<Fact>();
-            for (var i = 0; i < inputList.Length; ++i)
+            foreach (var input in inputs)
             {
-                var name = inputList[i].Split('=')[0];
-                var value = inputList[i].Split('=')[1];
-                if (double.TryParse(value, out var number))
-                {
-                    var varSymbol = _fuzzyManager.Variables.FirstOrDefault(v => v.Id == name);
-                    if (varSymbol == null)
-                        return RedirectToAction("Error", "Home", new {error = CoreStrings.MalformedArgument(name)});
+                var individual = _ontologyManager.GetIndividual(input);
+                if (individual == null) return RedirectToAction("Error", "Home", new {error = $"Individual \"{input}\" not found."});
+                facts.Add(new IndividualFact(individual.GetDirectClass().Id, individual.Id));
+            }
 
-                    var newTerms = varSymbol.Stmt.Execute(number);
-                    foreach (var newTerm in newTerms)
-                        if (newTerm.Value > 0) facts.Add(new IndividualFact(name, newTerm.Key));
-                }
-                else
-                {
-                    facts.Add(new IndividualFact(name, value));
-                }
+            if (!string.IsNullOrWhiteSpace(fuzzyInputs) && fuzzyValues != null)
+            {
+                fuzzyInputs = fuzzyInputs.Trim();
+                var varSymbol = _fuzzyManager.Variables.FirstOrDefault(v => v.Id == fuzzyInputs);
+                if (varSymbol == null)
+                    return RedirectToAction("Error", "Home", new {error = CoreStrings.MalformedArgument(fuzzyInputs)});
+
+                var newTerms = varSymbol.Stmt.Execute((double) fuzzyValues);
+                foreach (var newTerm in newTerms)
+                    if (newTerm.Value > 0) facts.Add(new IndividualFact(fuzzyInputs, newTerm.Key));
             }
 
             if (problemId < -1 || problemId >= _ruleManager.Problems.Count)
@@ -90,15 +92,13 @@ namespace RiceDoctor.WebApp.Controllers
             Problem problem;
             if (problemId == -1)
             {
-                if (string.IsNullOrWhiteSpace(outputs))
+                if (outputs == null || outputs.Count == 0)
                     return RedirectToAction("Error", "Home",
                         new {error = CoreStrings.MalformedArgument(nameof(outputs))});
-                var outputList = outputs.Trim().Replace("\r\n", "\n").Split('\n');
-
                 var allTypes = new Dictionary<string, Class>();
 
                 var goalTypes = new List<Class>();
-                foreach (var output in outputList)
+                foreach (var output in outputs)
                 {
                     if (!allTypes.TryGetValue(output, out Class goalType))
                     {

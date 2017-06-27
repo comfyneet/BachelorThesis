@@ -19,12 +19,12 @@
    <p>membership-function = <code>function</code> function-name <code>(</code> parameters <code>)</code> function-statement <code>;</code></p>
    <p>parameter = parameter-name { <code>,</code> parameter-name }</p>
    <p>function-statement = <code>begin</code> if-statement { <code>;</code> if-statement } <code>;</code> <code>end</code></p>
-   <p>if-statement = <code>if</code> expression <code>then</code> assignment-statement</p>
-   <p>assignment-statement = <code>output</code> <code>:=</code> expression</p>
+   <p>if-statement = <code>if</code> expression <code>then</code> output-statement</p>
+   <p>output-statement = <code>OUTPUT</code> <code>:=</code> expression</p>
    <p>expression = simple-expression | simple-expression relational-operator simple-expression</p>
    <p>simple-expression = [ sign ] term { adding-operator term }</p>
    <p>term = factor { multiplying-operator factor }</p>
-   <p>factor = <code>input</code> | parameter-name | literal | <code>(</code> expression <code>)</code> | <code>not</code> factor</p>
+   <p>factor = <code>INPUT</code> | parameter-name | literal | <code>(</code> expression <code>)</code> | <code>not</code> factor</p>
    <p>relational-operator = <code>=</code> | <code>&lt;&gt;</code> | <code>&lt;</code> | <code>&lt;=</code> | <code>&gt;</code> | <code>&gt;=</code></p>
    <p>sign = <code>+</code> | <code>-</code></p>
    <p>adding-operator = <code>+</code> | <code>-</code> | <code>or</code></p>

@@ -1,9 +1,13 @@
 ﻿@using System.Text
 @using RiceDoctor.OntologyManager
 @using RiceDoctor.RuleManager
+@using RiceDoctor.FuzzyManager
 @model RiceDoctor.WebApp.Models.Advisory
 @{
     var problems = (IReadOnlyList<Problem>) ViewData["Problems"];
+    var classes = (IReadOnlyList<Class>) ViewData["Classes"];
+    var individuals = (IReadOnlyCollection<Individual>) ViewData["Individuals"];
+    var fuzzyVariables = (IReadOnlyCollection<VariableSymbol>) ViewData["FuzzyVariables"];
     ViewData["Title"] = "Tư vấn/Chuẩn đoán";
     ViewData["AdvisoryPage"] = true;
 }
@@ -72,26 +76,63 @@
                     </div>
                 </div>
             </div>
-            <div id="generalProblemForm" class="form-group" style="display: none">
-                <label class="col-md-3 control-label">Nhập loại kết quả cần tìm<br/>(bệnh, sâu,...)</label>
-                <div class="col-md-9">
-                    <textarea class="form-control" rows="2" name="outputs" placeholder="Benh&#10;Sau"></textarea>
+            <div id="generalProblemForm" class="form-group row" style="display: none">
+                <div class="col-md-12">
+                    <label class="col-md-3 control-label" style="margin-bottom: 0">Nhập loại kết quả cần tìm</label>
+                    <div class="col-md-9">
+                        <select name="outputs" id="outputs" class="form-control" style="width: 100%" multiple>
+                            @foreach (var cls in classes)
+                            {
+                                <option value="@cls.Id">@cls</option>
+                            }
+                        </select>
+                    </div>
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-md-3 control-label">Nhập các biểu hiện của cây lúa<br/>(thân lùn, lá vàng,...)</label>
+                <label class="col-md-3 control-label">Nhập các biểu hiện của cây lúa</label>
                 <div class="col-md-9">
-                    <textarea class="form-control" rows="4" name="inputs" placeholder="HinhDangThan=ThanLun&#10;MauLa=LaVang"></textarea>
+                    <select name="inputs" id="inputs" class="form-control" style="width: 100%" multiple>
+                        @foreach (var individual in individuals)
+                        {
+                            <option value="@individual.Id">@individual</option>
+                        }
+                    </select>
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-md-3 control-label">Số kết quả cần tìm</label>
+                <label class="col-md-3 control-label" style="margin-top: 15px!important">Nhập các biểu hiện mờ của cây lúa</label>
                 <div class="col-md-9">
-                    <input type="number" name="totalGoals" placeholder="tìm tất cả thì để trống"/>
+                    <div class="row">
+                        <div class="col-md-12" style="margin-top: 15px!important">
+                            <div class="row form-inline">
+                                <div class="col-md-4">
+                                    <select name="fuzzyInputs" id="fuzzyInputs" style="width: 100%">
+                                        <option></option>
+                                        @foreach (var fuzzyVariable in fuzzyVariables)
+                                        {
+                                            var cls = classes.FirstOrDefault(c => c.Id == fuzzyVariable.Id);
+                                            var variableName = cls == null ? fuzzyVariable.Id : cls.ToString();
+
+                                            <option value="@fuzzyVariable.Id">@variableName</option>
+                                        }
+                                    </select>
+                                </div>
+                                <input type="number" class="col-md-4 form-control" name="fuzzyValues" placeholder="Giá trị vật lý">
+                                <div class="col-md-4">(ví dụ tạm)</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="form-group">
-                <div class="col-md-offset-2 col-md-10">
+                <label class="col-md-3 control-label" style="margin-top: 15px!important">Số kết quả cần tìm</label>
+                <div class="col-md-9">
+                    <input type="number" style="margin-top: 15px!important" class="form-control" name="totalGoals" placeholder="tìm tất cả thì để trống"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-3 col-md-9"  style="margin-top: 15px!important">
                     <input type="submit" class="btn btn-default" value="Xử lý"/>
                 </div>
             </div>
@@ -128,5 +169,23 @@
                 }
             }
         }
+
+        $("#outputs").select2({
+            placeholder: "Bệnh, Sâu,...",
+            theme: "bootstrap",
+            language: "vi"
+        });
+
+        $("#inputs").select2({
+            placeholder: "Thân lùn, Lá vàng,...",
+            theme: "bootstrap",
+            language: "vi"
+        });
+
+        $("#fuzzyInputs").select2({
+            placeholder: "Độ ẩm, Lượng mưa,...",
+            theme: "bootstrap",
+            language: "vi"
+        });
     </script>
 }
