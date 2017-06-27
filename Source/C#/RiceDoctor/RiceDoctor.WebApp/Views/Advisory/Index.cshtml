@@ -1,7 +1,7 @@
 ﻿@using System.Text
+@using RiceDoctor.FuzzyManager
 @using RiceDoctor.OntologyManager
 @using RiceDoctor.RuleManager
-@using RiceDoctor.FuzzyManager
 @model RiceDoctor.WebApp.Models.Advisory
 @{
     var problems = (IReadOnlyList<Problem>) ViewData["Problems"];
@@ -101,10 +101,10 @@
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-md-3 control-label" style="margin-top: 15px!important">Nhập các biểu hiện mờ của cây lúa</label>
+                <label class="col-md-3 control-label" style="margin-top: 15px !important">Nhập các biểu hiện mờ của cây lúa</label>
                 <div class="col-md-9">
                     <div class="row">
-                        <div class="col-md-12" style="margin-top: 15px!important">
+                        <div class="col-md-12" style="margin-top: 15px !important">
                             <div class="row form-inline">
                                 <div class="col-md-4">
                                     <select name="fuzzyInputs" id="fuzzyInputs" style="width: 100%">
@@ -126,13 +126,13 @@
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-md-3 control-label" style="margin-top: 15px!important">Số kết quả cần tìm</label>
+                <label class="col-md-3 control-label" style="margin-top: 15px !important">Số kết quả cần tìm</label>
                 <div class="col-md-9">
-                    <input type="number" style="margin-top: 15px!important" class="form-control" name="totalGoals" placeholder="tìm tất cả thì để trống"/>
+                    <input type="number" style="margin-top: 15px !important" class="form-control" name="totalGoals" placeholder="tìm tất cả thì để trống"/>
                 </div>
             </div>
             <div class="form-group">
-                <div class="col-md-offset-3 col-md-9"  style="margin-top: 15px!important">
+                <div class="col-md-offset-3 col-md-9" style="margin-top: 15px !important">
                     <input type="submit" class="btn btn-default" value="Xử lý"/>
                 </div>
             </div>

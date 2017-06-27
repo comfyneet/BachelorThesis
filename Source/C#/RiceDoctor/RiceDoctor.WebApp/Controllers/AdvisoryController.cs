@@ -58,7 +58,8 @@ namespace RiceDoctor.WebApp.Controllers
         }
 
         [HttpPost]
-        public IActionResult SelectProblem(string guid, int problemId, List<string> inputs, string fuzzyInputs, double? fuzzyValues, List<string> outputs, int? totalGoals)
+        public IActionResult SelectProblem(string guid, int problemId, List<string> inputs, string fuzzyInputs,
+            double? fuzzyValues, List<string> outputs, int? totalGoals)
         {
             if (string.IsNullOrWhiteSpace(guid))
                 return RedirectToAction("Error", "Home", new {error = CoreStrings.MalformedArgument(nameof(guid))});
@@ -70,7 +71,8 @@ namespace RiceDoctor.WebApp.Controllers
             foreach (var input in inputs)
             {
                 var individual = _ontologyManager.GetIndividual(input);
-                if (individual == null) return RedirectToAction("Error", "Home", new {error = $"Individual \"{input}\" not found."});
+                if (individual == null)
+                    return RedirectToAction("Error", "Home", new {error = $"Individual \"{input}\" not found."});
                 facts.Add(new IndividualFact(individual.GetDirectClass().Id, individual.Id));
             }
 

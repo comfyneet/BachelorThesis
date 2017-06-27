@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <title>EBNF definition of Query Rules</title>
+   <style>
+   code {
+     color: red;
+	 font-weight: bold;
+   }
+   </style>
+</head>
+
+<body>
+   <h3>EBNF definition of Query Rules</h3>
+   
+   <p>query-rules = query-rule { <code>NEWLINE</code>+ query-rule }</p>
+   <p>query-rule = query [ <code>{</code> weight <code>}</code> ] <code>NEWLINE</code> matches</p>
+   <p>query = <code>+</code> term { term} </p>
+   <p>term = <code>*</code> | <code>,</code> | alternative-term | optional-term | discard-term | text</p>
+   <p>alternative-term = <code>(</code> text { <code>|</code> text } <code>)</code></p>
+   <p>optional-term = <code>[</code> text { <code>|</code> text } <code>]</code></p>
+   <p>discard-term = <code>[</code> <code>*</code> <code>]</code>
+   <p>matches = match { <code>NEWLINE</code> match } </p>
+   <p>match = star-position <code>:</code> ontology-type { <code>,</code> ontology-type }
+   <p>ontology-type = <code>class</code> | <code>relation</code> | <code>attribute</code> | <code>individual</code></p>
+
+   <p>weight = <code>NUMBER</code></p>
+   <p>star-position = <code>NUMBER</code></p>
+   <p>text = <code>STRING</code></p>
+</body>
+
+</html>
