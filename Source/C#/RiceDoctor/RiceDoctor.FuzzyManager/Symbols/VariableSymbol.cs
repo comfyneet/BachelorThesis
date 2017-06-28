@@ -6,19 +6,24 @@ namespace RiceDoctor.FuzzyManager
 {
     public class VariableSymbol : Symbol, IEquatable<VariableSymbol>
     {
-        public VariableSymbol([NotNull] string id, [NotNull] VariableStmt stmt)
+        public VariableSymbol([NotNull] string id, [NotNull] string unitOfMeasure, [NotNull] VariableStmt stmt)
         {
             Check.NotEmpty(id, nameof(id));
+            Check.NotEmpty(unitOfMeasure, nameof(unitOfMeasure));
             Check.NotNull(stmt, nameof(stmt));
 
-            Stmt = stmt;
             Id = id;
+            UnitOfMeasure = unitOfMeasure;
+            Stmt = stmt;
         }
 
         [NotNull]
         public VariableStmt Stmt { get; }
 
         public override string Id { get; }
+
+        [NotNull]
+        public string UnitOfMeasure { get; }
 
         public bool Equals(VariableSymbol other)
         {

@@ -9,6 +9,6 @@ namespace RiceDoctor.FuzzyManager
         IReadOnlyCollection<FunctionSymbol> Functions { get; }
 
         [NotNull]
-        IReadOnlyCollection<VariableSymbol> Variables { get; }
+        IReadOnlyList<VariableSymbol> Variables { get; }
     }
 }

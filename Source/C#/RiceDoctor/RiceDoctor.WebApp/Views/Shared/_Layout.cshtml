@@ -24,6 +24,9 @@
         <link rel="stylesheet" href="~/lib/select2-bootstrap-theme/dist/select2-bootstrap.min.css"/>
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true"/>
     </environment>
+
+    @RenderSection("Styles", false)
+
     @Html.Raw(JavaScriptSnippet.FullScript)
 </head>
 <body>

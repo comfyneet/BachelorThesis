@@ -15,26 +15,26 @@ begin
     if c <= INPUT then OUTPUT := 0;
 end;
 
-variable DoAm
+variable DoAm "phần trăm"
 begin
     term DoAmThap      : trimf(0, 10, 20);
     term DoAmTrungBinh : trimf(10, 20, 30);
     term DoAmCao       : trimf(20, 30, 40);
 end;
 
-variable DoSauRuong
+variable DoSauRuong "mét"
 begin
     term RuongSau : trimf(0, 10, 20);
 end;
 
 
-variable LuongMua
+variable LuongMua "milimét"
 begin
     term MuaIt    : trimf(0, 10, 20);
     term MuaNhieu : trimf(10, 20, 30);
 end;
 
-variable NhietDo
+variable NhietDo "độ"
 begin
     term NhietDoCao  : trimf(0, 10, 20);
     term NhietDoThap : trimf(10, 20, 30);

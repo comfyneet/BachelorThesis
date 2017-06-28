@@ -10,7 +10,7 @@ using static RiceDoctor.Shared.TokenType;
 
 namespace RiceDoctor.FuzzyManager
 {
-    public class FuzzyParser : Parser<Tuple<IReadOnlyCollection<FunctionSymbol>, IReadOnlyCollection<VariableSymbol>>>
+    public class FuzzyParser : Parser<Tuple<IReadOnlyCollection<FunctionSymbol>, IReadOnlyList<VariableSymbol>>>
     {
         [NotNull] private readonly IDictionary<TokenType, BinaryOp> _addingOps = new Dictionary<TokenType, BinaryOp>
         {
@@ -44,21 +44,21 @@ namespace RiceDoctor.FuzzyManager
             {Minus, Negative}
         };
 
-        [CanBeNull] private Tuple<IReadOnlyCollection<FunctionSymbol>, IReadOnlyCollection<VariableSymbol>> _symbols;
+        [CanBeNull] private Tuple<IReadOnlyCollection<FunctionSymbol>, IReadOnlyList<VariableSymbol>> _symbols;
 
         public FuzzyParser([NotNull] FuzzyLexer lexer) : base(lexer)
         {
         }
 
         [NotNull]
-        public override Tuple<IReadOnlyCollection<FunctionSymbol>, IReadOnlyCollection<VariableSymbol>> Parse()
+        public override Tuple<IReadOnlyCollection<FunctionSymbol>, IReadOnlyList<VariableSymbol>> Parse()
         {
             if (_symbols != null) return _symbols;
 
             var functionSymbols = ParseFunctions();
             var variableSymbols = ParseVariables(functionSymbols);
             _symbols =
-                new Tuple<IReadOnlyCollection<FunctionSymbol>, IReadOnlyCollection<VariableSymbol>>(
+                new Tuple<IReadOnlyCollection<FunctionSymbol>, IReadOnlyList<VariableSymbol>>(
                     functionSymbols,
                     variableSymbols);
 
@@ -276,7 +276,7 @@ namespace RiceDoctor.FuzzyManager
         }
 
         [NotNull]
-        private IReadOnlyCollection<VariableSymbol> ParseVariables(
+        private IReadOnlyList<VariableSymbol> ParseVariables(
             [NotNull] IReadOnlyCollection<FunctionSymbol> symbolTable)
         {
             Check.NotNull(symbolTable, nameof(symbolTable));
@@ -289,11 +289,13 @@ namespace RiceDoctor.FuzzyManager
 
                 var id = ParseIdentifier();
 
+                var unitOfMeasure = ParseUnquotedString();
+
                 var variableStmt = ParseVariableStmt(symbolTable);
 
                 Eat(Semi);
 
-                var variableSymbol = new VariableSymbol(id, variableStmt);
+                var variableSymbol = new VariableSymbol(id, unitOfMeasure, variableStmt);
                 if (variableSymbols.Contains(variableSymbol)) throw new Exception(CoreStrings.CannotDeclareAgain(id));
 
                 variableSymbols.Add(variableSymbol);

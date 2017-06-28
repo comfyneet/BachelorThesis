@@ -1,10 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace RiceDoctor.Shared
 {
-    public static class EnumerableExtensions
+    public static class CollectionExtensions
     {
+        private static readonly Random _random = new Random();
+
         public static bool ScrambledEqual<TSource>(this IEnumerable<TSource> first, IEnumerable<TSource> second)
         {
             if (ReferenceEquals(first, second)) return true;
@@ -35,6 +38,12 @@ namespace RiceDoctor.Shared
                 .Aggregate(17, (current, hash) => unchecked(current * hash));
 
             return hashCode;
+        }
+
+        public static TSource RandomElement<TSource>(this IList<TSource> source)
+        {
+            if (source.Count == 0) throw new IndexOutOfRangeException(nameof(source));
+            return source[_random.Next(source.Count)];
         }
     }
 }

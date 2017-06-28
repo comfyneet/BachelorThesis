@@ -30,7 +30,7 @@
    <p>adding-operator = <code>+</code> | <code>-</code> | <code>or</code></p>
    <p>multiplying-operator = <code>*</code> | <code>/</code> | <code>%</code> | <code>and</code></p>
    <p>linguistic-variables = linguistic-variable { linguistic-variable }</p>
-   <p>linguistic-variable = <code>var</code> variable-name variable-statement <code>;</code></p>
+   <p>linguistic-variable = <code>var</code> variable-name <code>"</code> unit-of-measure <code>"</code> variable-statement <code>;</code></p>
    <p>variable-statement = <code>begin</code> term-statement { <code>;</code> term-statement } <code>;</code> <code>end</code></p>
    <p>term-statement = <code>term</code> term-name <code>:</code> function-name <code>(</code> arguments <code>)</code></p>
    <p>arguments = literal { <code>,</code> literal }</p>
@@ -38,6 +38,7 @@
    <p>parameter-name = <code>IDENT</code></p>
    <p>variable-name = <code>IDENT</code></p>
    <p>term-name = <code>IDENT</code></p>
+   <p>unit-of-measure = <code>STRING</code></p>
    <p>literal = <code>NUMBER</code></p>
 </body>
 

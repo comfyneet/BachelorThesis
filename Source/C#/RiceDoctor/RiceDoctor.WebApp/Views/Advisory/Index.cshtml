@@ -2,15 +2,26 @@
 @using RiceDoctor.FuzzyManager
 @using RiceDoctor.OntologyManager
 @using RiceDoctor.RuleManager
+@using RiceDoctor.Shared
 @model RiceDoctor.WebApp.Models.Advisory
 @{
     var problems = (IReadOnlyList<Problem>) ViewData["Problems"];
     var classes = (IReadOnlyList<Class>) ViewData["Classes"];
     var individuals = (IReadOnlyCollection<Individual>) ViewData["Individuals"];
-    var fuzzyVariables = (IReadOnlyCollection<VariableSymbol>) ViewData["FuzzyVariables"];
+    var fuzzyVariables = (IReadOnlyList<VariableSymbol>) ViewData["FuzzyVariables"];
     ViewData["Title"] = "Tư vấn/Chuẩn đoán";
     ViewData["AdvisoryPage"] = true;
 }
+
+@section Styles {
+    <style>
+        #inputForm .select2-selection__rendered { min-height: 100px; }
+    </style>
+}
+
+<script>
+    var suggestIndividuals = [];
+</script>
 
 <div class="row">
     <div class="col-md-12">
@@ -19,7 +30,7 @@
         <form asp-controller="Advisory" asp-action="SelectProblem" method="post">
             <input type="hidden" name="guid" value="@Model.Guid"/>
             <div class="form-group">
-                <label class="col-md-3 control-label">Chọn dạng bài toán</label>
+                <label class="col-md-3 control-label">Chọn loại câu hỏi cần tư vấn</label>
                 <div class="col-md-9">
                     @if (problems != null)
                     {
@@ -51,7 +62,7 @@
                             }
                             var suggestTypesSb = new StringBuilder();
                             <p id="problemDescription@(i)" style="display: none">
-                                <span style="text-decoration: underline;">Gợi ý</span>:
+                                <span style="text-decoration: underline;">Sự kiện gợi ý</span>:
 
                                 @for (var j = 0; j < suggestTypes.Count; ++j)
                                 {
@@ -67,11 +78,44 @@
                                 }
                                 @Html.Raw(suggestTypesSb).
                             </p>
+
+                            var suggestIndividuals = new List<Individual>();
+                            foreach (var suggestType in suggestTypes)
+                            {
+                                var tmpIndividuals = suggestType.GetAllIndividuals();
+                                if (tmpIndividuals != null)
+                                {
+                                    foreach (var individual in tmpIndividuals)
+                                    {
+                                        if (!suggestIndividuals.Contains(individual))
+                                        {
+                                            suggestIndividuals.Add(individual);
+                                        }
+                                    }
+                                }
+                            }
+                            <script>
+                                suggestIndividuals[@i] = [];
+                            </script>
+                            for (var j = 0; j < 4; ++j)
+                            {
+                                if (suggestIndividuals.Count == 0)
+                                {
+                                    break;
+                                }
+
+                                var randomIndividual = suggestIndividuals.RandomElement();
+                                suggestIndividuals.Remove(randomIndividual);
+
+                                <script>
+                                    suggestIndividuals[@i][@j] = "@Html.Raw(randomIndividual)";
+                                </script>
+                            }
                         }
                     }
                     <div class="radio">
                         <label>
-                            <input type="radio" name="problemId" value="-1" onclick="handleProblem()">Dạng tổng quát
+                            <input type="radio" name="problemId" value="-1" onclick="handleProblem()">Nếu không tìm được câu hỏi phù hợp, chọn tư vấn dạng tổng quát
                         </label>
                     </div>
                 </div>
@@ -89,8 +133,8 @@
                     </div>
                 </div>
             </div>
-            <div class="form-group">
-                <label class="col-md-3 control-label">Nhập các biểu hiện của cây lúa</label>
+            <div id="inputForm" class="form-group">
+                <label class="col-md-3 control-label">Nhập các sự kiện đã biết về cây lúa</label>
                 <div class="col-md-9">
                     <select name="inputs" id="inputs" class="form-control" style="width: 100%" multiple>
                         @foreach (var individual in individuals)
@@ -101,26 +145,26 @@
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-md-3 control-label" style="margin-top: 15px !important">Nhập các biểu hiện mờ của cây lúa</label>
+                <label class="col-md-3 control-label" style="margin-top: 15px !important">Nhập các giá trị môi trường (nếu có)</label>
                 <div class="col-md-9">
                     <div class="row">
                         <div class="col-md-12" style="margin-top: 15px !important">
-                            <div class="row form-inline">
-                                <div class="col-md-4">
-                                    <select name="fuzzyInputs" id="fuzzyInputs" style="width: 100%">
-                                        <option></option>
-                                        @foreach (var fuzzyVariable in fuzzyVariables)
-                                        {
-                                            var cls = classes.FirstOrDefault(c => c.Id == fuzzyVariable.Id);
-                                            var variableName = cls == null ? fuzzyVariable.Id : cls.ToString();
+                            @for (var i = 0; i < fuzzyVariables.Count; ++i)
+                            {
+                                var cls = classes.FirstOrDefault(c => c.Id == fuzzyVariables[i].Id);
+                                var variableName = cls == null ? fuzzyVariables[i].Id : cls.ToString();
 
-                                            <option value="@fuzzyVariable.Id">@variableName</option>
-                                        }
-                                    </select>
+                                <div class="row">
+                                    <input type="hidden" name="fuzzyInputs[@i]" value="@fuzzyVariables[i].Id"/>
+                                    <div class="col-md-2" style="text-align: right;">
+                                        <label class="control-label" style="margin-top: 5px">@variableName</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <input type="number" class="form-control" name="fuzzyValues[@i]" placeholder="(@fuzzyVariables[i].UnitOfMeasure)">
+                                    </div>
+                                    <div class="col-md-7"></div>
                                 </div>
-                                <input type="number" class="col-md-4 form-control" name="fuzzyValues" placeholder="Giá trị vật lý">
-                                <div class="col-md-4">(ví dụ tạm)</div>
-                            </div>
+                            }
                         </div>
                     </div>
                 </div>
@@ -128,7 +172,12 @@
             <div class="form-group">
                 <label class="col-md-3 control-label" style="margin-top: 15px !important">Số kết quả cần tìm</label>
                 <div class="col-md-9">
-                    <input type="number" style="margin-top: 15px !important" class="form-control" name="totalGoals" placeholder="tìm tất cả thì để trống"/>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <input type="number" style="margin-top: 15px !important" class="form-control" name="totalGoals" placeholder="Nếu tìm tất cả thì để trống"/>
+                        </div>
+                        <div class="col-md-8"></div>
+                    </div>
                 </div>
             </div>
             <div class="form-group">
@@ -149,6 +198,19 @@
                     for (var i = 0; i < @problems.Count; ++i) {
                         var id = "#problemDescription" + i.toString();
                         if ($("input[name='problemId']:checked").val() === i.toString()) {
+                            var placeholder = "";
+                            if (suggestIndividuals.length > 0) {
+                                placeholder += "Ví dụ: ";
+                                for (var j = 0; j < suggestIndividuals.length; ++j) {
+                                    if (j > 0) {
+                                        placeholder += ", ";
+                                    }
+                                    placeholder += suggestIndividuals[i][j];
+                                }
+                                placeholder += ",...";
+                            }
+                            $("#inputs").select2({ placeholder: placeholder });
+
                             if ($(id).css('display') === 'none') {
                                 $(id).fadeIn();
                             }
@@ -160,8 +222,11 @@
             }
 
             if ($("input[name='problemId']:checked").val() === "-1") {
+                $("#inputs").select2({ placeholder: "Nhập sự kiện bất kỳ. Ví dụ: Thân ún, Rễ thối, Mép lá cháy..." });
+
                 if ($("#generalProblemForm").css('display') === 'none') {
                     $("#generalProblemForm").fadeIn();
+                    $("#outputs").select2({ placeholder: "Ví dụ: Bệnh, Thuốc, Tác nhân gây bệnh,..." });
                 }
             } else {
                 if ($("#generalProblemForm").css('display') !== 'none') {
@@ -171,21 +236,12 @@
         }
 
         $("#outputs").select2({
-            placeholder: "Bệnh, Sâu,...",
-            theme: "bootstrap",
-            language: "vi"
+            theme: "bootstrap"
         });
 
         $("#inputs").select2({
-            placeholder: "Thân lùn, Lá vàng,...",
-            theme: "bootstrap",
-            language: "vi"
-        });
-
-        $("#fuzzyInputs").select2({
-            placeholder: "Độ ẩm, Lượng mưa,...",
-            theme: "bootstrap",
-            language: "vi"
+            placeholder: "Nhập sự kiện bất kỳ. Ví dụ: Thân ún, Rễ thối, Mép lá cháy...",
+            theme: "bootstrap"
         });
     </script>
 }

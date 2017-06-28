@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -36,14 +36,17 @@ namespace RiceDoctor.WebApp.Controllers
                 return RedirectToAction("Error", "Home", new {error = $"Class \"{className}\" not found."});
 
             var directSuperClassesTree = new List<IList<Class>>();
-            GetDirectSuperClassesTree(@class.GetDirectSuperClasses()?.ToList(), directSuperClassesTree, 0);
+            GetSuperClassesTree(@class.GetDirectSuperClasses()?.ToList(), directSuperClassesTree, 0);
 
-            ViewData["DirectSuperClassesTree"] = directSuperClassesTree;
+            var classBuilder = new StringBuilder();
+            GetClassTree(@class, directSuperClassesTree, classBuilder);
+            ViewData["ClassTree"] = "[" + classBuilder + "]";
+
+            var individualBuilder = new StringBuilder();
+            GetIndividualTree(@class, individualBuilder, 0);
+            ViewData["IndividualTree"] = "[" + individualBuilder + "]";
+
             ViewData["ShowAdvance"] = showAdvance;
-
-            var builder = new StringBuilder();
-            GetClassTree(@class, directSuperClassesTree, builder);
-            ViewData["ClassTree"] = "[" + builder + "]";
 
             return View(@class);
         }
@@ -126,31 +129,30 @@ namespace RiceDoctor.WebApp.Controllers
             return RedirectToAction("Individual", new {individualName});
         }
 
-        private void GetDirectSuperClassesTree(
-            [CanBeNull] IList<Class> directSuperClasses,
-            [NotNull] IList<IList<Class>> directSuperClassesTree,
-            int count)
+        private void GetSuperClassesTree(
+            [CanBeNull] IList<Class> superClasses,
+            [NotNull] IList<IList<Class>> superClassesTree,
+            int level)
         {
-            Check.NotNull(directSuperClassesTree, nameof(directSuperClassesTree));
+            Check.NotNull(superClassesTree, nameof(superClassesTree));
 
-            if (count > 10) throw new InvalidOperationException(nameof(GetDirectSuperClassesTree));
+            if (level > 10) throw new InvalidOperationException(nameof(GetSuperClassesTree));
 
-            if (directSuperClasses != null)
+            if (superClasses != null)
             {
-                directSuperClassesTree.Insert(0, directSuperClasses);
+                superClassesTree.Insert(0, superClasses);
 
-                var newDirectSuperClasses = new List<Class>();
-                foreach (var directSuperClass in directSuperClasses)
+                var newSuperSuperClasses = new List<Class>();
+                foreach (var superClass in superClasses)
                 {
-                    var tmpDirectSuperClasses = directSuperClass.GetDirectSuperClasses();
-                    if (tmpDirectSuperClasses != null)
-                        foreach (var tmpDirectSuperClass in tmpDirectSuperClasses)
-                            if (!newDirectSuperClasses.Contains(tmpDirectSuperClass))
-                                newDirectSuperClasses.Add(tmpDirectSuperClass);
+                    if (superClass.GetDirectSuperClasses() == null) continue;
+                    foreach (var superSuperClass in superClass.GetDirectSuperClasses())
+                        if (!newSuperSuperClasses.Contains(superSuperClass))
+                            newSuperSuperClasses.Add(superSuperClass);
                 }
 
-                if (newDirectSuperClasses.Count > 0)
-                    GetDirectSuperClassesTree(newDirectSuperClasses, directSuperClassesTree, count + 1);
+                if (newSuperSuperClasses.Count > 0)
+                    GetSuperClassesTree(newSuperSuperClasses, superClassesTree, level + 1);
             }
         }
 
@@ -172,18 +174,8 @@ namespace RiceDoctor.WebApp.Controllers
             builder.AppendLine("{");
             builder.AppendLine($"text: '{superClass}',");
             builder.AppendLine("icon: 'glyphicon glyphicon-copyright-mark',");
-            builder.AppendLine(
-                $"href: '{Url.Action("Class", "Ontology", new {className = superClass.Id})}',");
+            builder.AppendLine($"href: '{Url.Action("Class", "Ontology", new {className = superClass.Id})}',");
             builder.AppendLine("state: { expanded: true },");
-            builder.AppendLine("tags: [");
-            var directIndividuals = superClass.GetDirectIndividuals() == null
-                ? 0
-                : superClass.GetDirectIndividuals().Count;
-            var allIndividuals = superClass.GetAllIndividuals() == null
-                ? 0
-                : superClass.GetAllIndividuals().Count;
-            builder.AppendLine($"'direct: {directIndividuals}',");
-            builder.AppendLine($"'all: {allIndividuals}' ],");
             builder.AppendLine("nodes: [");
 
             var directSubClasses = superClass.GetDirectSubClasses();
@@ -205,17 +197,7 @@ namespace RiceDoctor.WebApp.Controllers
                     builder.AppendLine("icon: 'glyphicon glyphicon-copyright-mark',");
                     builder.AppendLine(
                         $"href: '{Url.Action("Class", "Ontology", new {className = directSubClass.Id})}',");
-                    builder.AppendLine("tags: [");
-                    var directIndividualCount = directSubClass.GetDirectIndividuals() == null
-                        ? 0
-                        : directSubClass.GetDirectIndividuals().Count;
-                    var allIndividualCount = directSubClass.GetAllIndividuals() == null
-                        ? 0
-                        : directSubClass.GetAllIndividuals().Count;
-                    builder.AppendLine($"'direct: {directIndividualCount}',");
-                    builder.AppendLine($"'all: {allIndividualCount}' ],");
-                    if (directSubClass.GetDirectSubClasses() != null)
-                        builder.AppendLine("nodes: []");
+                    if (directSubClass.GetDirectSubClasses() != null) builder.AppendLine("nodes: []");
                     builder.AppendLine("},");
                 }
             }
@@ -230,18 +212,8 @@ namespace RiceDoctor.WebApp.Controllers
             builder.AppendLine("{");
             builder.AppendLine($"text: '{@class}',");
             builder.AppendLine("icon: 'glyphicon glyphicon-copyright-mark',");
-            builder.AppendLine(
-                $"href: '{Url.Action("Class", "Ontology", new {className = @class.Id})}',");
+            builder.AppendLine($"href: '{Url.Action("Class", "Ontology", new {className = @class.Id})}',");
             builder.AppendLine("state: { selected: true, expanded: true },");
-            builder.AppendLine("tags: [");
-            var directIndividuals = @class.GetDirectIndividuals() == null
-                ? 0
-                : @class.GetDirectIndividuals().Count;
-            var allIndividuals = @class.GetAllIndividuals() == null
-                ? 0
-                : @class.GetAllIndividuals().Count;
-            builder.AppendLine($"'direct: {directIndividuals}',");
-            builder.AppendLine($"'all: {allIndividuals}' ],");
 
             var directSubClasses = @class.GetDirectSubClasses();
             if (directSubClasses != null)
@@ -256,23 +228,67 @@ namespace RiceDoctor.WebApp.Controllers
                     builder.AppendLine("icon: 'glyphicon glyphicon-copyright-mark',");
                     builder.AppendLine(
                         $"href: '{Url.Action("Class", "Ontology", new {className = directSubClasses[i].Id})}',");
-                    builder.AppendLine("tags: [");
-                    var directIndividualCount = directSubClasses[i].GetDirectIndividuals() == null
-                        ? 0
-                        : directSubClasses[i].GetDirectIndividuals().Count;
-                    var allIndividualCount = directSubClasses[i].GetAllIndividuals() == null
-                        ? 0
-                        : directSubClasses[i].GetAllIndividuals().Count;
-                    builder.AppendLine($"'direct: {directIndividualCount}',");
-                    builder.AppendLine($"'all: {allIndividualCount}' ],");
-                    if (directSubClasses[i].GetDirectSubClasses() != null)
-                        builder.AppendLine("nodes: [],");
+                    if (directSubClasses[i].GetDirectSubClasses() != null) builder.AppendLine("nodes: []");
                     builder.AppendLine("}");
                 }
 
                 builder.AppendLine("]");
             }
             builder.AppendLine("},");
+        }
+
+        private void GetIndividualTree([NotNull] Class @class, [NotNull] StringBuilder builder, int level)
+        {
+            Check.NotNull(@class, nameof(@class));
+            Check.NotNull(builder, nameof(builder));
+
+            if (level > 10) throw new InvalidOperationException(nameof(GetIndividualTree));
+
+            var directIndividuals = @class.GetDirectIndividuals();
+            var subClasses = @class.GetDirectSubClasses();
+
+            if (level != 0)
+            {
+                builder.AppendLine("{");
+                builder.AppendLine($"text: '{@class}',");
+                builder.AppendLine("icon: 'glyphicon glyphicon-copyright-mark',");
+                builder.AppendLine($"href: '{Url.Action("Class", "Ontology", new {className = @class.Id})}',");
+                builder.AppendLine("state: { expanded: true },");
+                builder.AppendLine($"tags: [ '{@class.GetAllIndividuals()?.Count ?? 0} thể hiện' ],");
+                if (directIndividuals != null || subClasses != null) builder.AppendLine("nodes: [");
+            }
+
+            if (directIndividuals != null) GetDirectIndividualTree(directIndividuals, builder, level == 0);
+
+            if (subClasses != null)
+                foreach (var subClass in subClasses) GetIndividualTree(subClass, builder, level + 1);
+
+            if (level != 0)
+            {
+                if (directIndividuals != null || subClasses != null) builder.AppendLine("]");
+                builder.AppendLine("},");
+            }
+        }
+
+        private void GetDirectIndividualTree(
+            [NotNull] IReadOnlyCollection<Individual> individuals,
+            [NotNull] StringBuilder builder,
+            bool bold)
+        {
+            Check.NotNull(individuals, nameof(individuals));
+            Check.NotNull(builder, nameof(builder));
+
+            foreach (var individual in individuals)
+            {
+                builder.AppendLine("{");
+                builder.AppendLine(bold
+                    ? $"text: '<strong>{individual}</strong>',"
+                    : $"text: '{individual}',");
+                builder.AppendLine("icon: 'glyphicon glyphicon-info-sign',");
+                builder.AppendLine(
+                    $"href: '{Url.Action("Individual", "Ontology", new {individualName = individual.Id})}'");
+                builder.AppendLine("},");
+            }
         }
     }
 }

@@ -1,14 +1,24 @@
 ﻿{
     "Problems": [
         {
-            "Type": "Biết Triệu chứng, tìm Bệnh",
+            "Type": "Biết Bệnh hại -> tìm Thuốc trị bệnh",
+            "GoalTypes": ["Benh"],
+            "SuggestTypes": ["ThuocBenhHai"]
+        },
+        {
+            "Type": "Biết Tác nhân gây hại (Sâu, Cỏ, Ốc) -> tìm Thuốc diệt trừ",
+            "GoalTypes": ["ThuocSauHai", "ThuocTruCo"],
+            "SuggestTypes": ["TacNhanGayHai"]
+        },
+        {
+            "Type": "Biết Triệu chứng -> tìm Bệnh",
             "GoalTypes": ["Benh"],
             "SuggestTypes": ["TrieuChung"]
         },
         {
-            "Type": "Biết Giai đoạn và Tác nhân gây hại, tìm Bệnh",
+            "Type": "Biết lúa hiện đang ở Giai đoạn -> tìm Bệnh có thể có",
             "GoalTypes": ["Benh"],
-            "SuggestTypes": ["GiaiDoan", "TacNhanGayHai"]
+            "SuggestTypes": ["GiaiDoan"]
         }
     ]
 }

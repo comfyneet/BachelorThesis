@@ -1,18 +1,18 @@
-﻿@using RiceDoctor.OntologyManager
-@model RiceDoctor.OntologyManager.Class
+﻿@model RiceDoctor.OntologyManager.Class
 @{
-    var directSuperClassesTree = (List<IList<Class>>) ViewData["DirectSuperClassesTree"];
     var classTree = (string) ViewData["ClassTree"];
+    var individualTree = (string) ViewData["IndividualTree"];
     var showAdvance = (bool) ViewData["ShowAdvance"];
+
     ViewData["Title"] = "Lớp " + Model;
     ViewData["OntologyPage"] = true;
 }
 
 <div class="row">
-<div class="col-md-4">
-    <div id="tree"></div>
+<div class="col-md-3">
+    <div id="classTree"></div>
 </div>
-<div class="col-md-8">
+<div class="col-md-9">
 <ul class="nav nav-tabs">
     <li role="presentation"
         @if (!showAdvance)
@@ -199,40 +199,21 @@
 }
 
 <section>
-    <h4>Thể hiện của @Model</h4>
-    @{
-        var directIndividuals = Model.GetDirectIndividuals();
-        var allIndividuals = Model.GetAllIndividuals();
-    }
+    @{ var allIndividuals = Model.GetAllIndividuals(); }
     @if (allIndividuals == null)
     {
+        <h4>Thể hiện của @Model</h4>
         <p>Không tìm thấy</p>
     }
     else
     {
-        if (directIndividuals != null)
-        {
-            allIndividuals = allIndividuals.Where(i => !directIndividuals.Contains(i)).ToList();
+        <h4>@allIndividuals.Count Thể hiện của @Model</h4>
 
-            foreach (var directIndividual in directIndividuals)
-            {
-                <p>
-                    <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@directIndividual.Id">
-                        <span class="glyphicon glyphicon-info-sign"></span>
-                        <strong>@directIndividual</strong>
-                    </a>
-                </p>
-            }
-        }
-        foreach (var allIndividual in allIndividuals)
-        {
-            <p>
-                <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@allIndividual.Id">
-                    <span class="glyphicon glyphicon-info-sign"></span>
-                    @allIndividual
-                </a>
-            </p>
-        }
+        <div class="row">
+            <div class="col-md-12">
+                <div id="individualTree"></div>
+            </div>
+        </div>
     }
 </section>
 </div>
@@ -240,14 +221,23 @@
 
 @section Scripts {
     <script>
-        var data = @Html.Raw(classTree);
+        var classData = @Html.Raw(classTree);
+        var individualData = @Html.Raw(individualTree);
 
-        $('#tree').treeview({
+        $('#classTree').treeview({
             color: '#428bca',
             showBorder: false,
             showTags: true,
             enableLinks: true,
-            data: data
+            data: classData
+        });
+
+        $('#individualTree').treeview({
+            color: '#428bca',
+            showBorder: false,
+            showTags: true,
+            enableLinks: true,
+            data: individualData
         });
     </script>
 }

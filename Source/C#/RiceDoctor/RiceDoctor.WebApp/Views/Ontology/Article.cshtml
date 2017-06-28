@@ -1,7 +1,7 @@
 ﻿@model RiceDoctor.OntologyManager.Individual
 @{
     var article = (string) ViewData["Article"];
-    ViewData["Title"] = "Bài viết " + Model;
+    ViewData["Title"] = "Bài viết thể hiện" + Model;
     ViewData["OntologyPage"] = true;
 }
 
@@ -9,7 +9,7 @@
     <div class="col-md-12">
         <ul class="nav nav-tabs">
             <li role="presentation">
-                <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@Model.Id">Thông tin dạng wiki</a>
+                <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@Model.Id">Thông tin dạng tóm tắt</a>
             </li>
             <li role="presentation" class="active">
                 <a asp-controller="Ontology" asp-action="Article" asp-route-individualName="@Model.Id">Thông tin dạng bài viết</a>

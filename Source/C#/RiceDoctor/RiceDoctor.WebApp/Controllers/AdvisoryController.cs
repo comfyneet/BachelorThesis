@@ -58,14 +58,19 @@ namespace RiceDoctor.WebApp.Controllers
         }
 
         [HttpPost]
-        public IActionResult SelectProblem(string guid, int problemId, List<string> inputs, string fuzzyInputs,
-            double? fuzzyValues, List<string> outputs, int? totalGoals)
+        public IActionResult SelectProblem(
+            string guid,
+            int problemId,
+            List<string> inputs,
+            List<string> fuzzyInputs,
+            List<string> fuzzyValues,
+            List<string> outputs, int? totalGoals)
         {
             if (string.IsNullOrWhiteSpace(guid))
                 return RedirectToAction("Error", "Home", new {error = CoreStrings.MalformedArgument(nameof(guid))});
             guid = guid.Trim();
 
-            if (inputs == null || string.IsNullOrWhiteSpace(fuzzyInputs))
+            if (inputs == null && (fuzzyValues == null || fuzzyValues.All(string.IsNullOrWhiteSpace)))
                 return RedirectToAction("Error", "Home", new {error = CoreStrings.MalformedArgument(nameof(inputs))});
             var facts = new List<Fact>();
             foreach (var input in inputs)
@@ -76,17 +81,23 @@ namespace RiceDoctor.WebApp.Controllers
                 facts.Add(new IndividualFact(individual.GetDirectClass().Id, individual.Id));
             }
 
-            if (!string.IsNullOrWhiteSpace(fuzzyInputs) && fuzzyValues != null)
-            {
-                fuzzyInputs = fuzzyInputs.Trim();
-                var varSymbol = _fuzzyManager.Variables.FirstOrDefault(v => v.Id == fuzzyInputs);
-                if (varSymbol == null)
-                    return RedirectToAction("Error", "Home", new {error = CoreStrings.MalformedArgument(fuzzyInputs)});
+            if (fuzzyValues != null && !fuzzyValues.All(string.IsNullOrWhiteSpace))
+                for (var i = 0; i < fuzzyValues.Count; ++i)
+                {
+                    if (string.IsNullOrWhiteSpace(fuzzyValues[i])) continue;
+                    if (!double.TryParse(fuzzyValues[i].Trim(), out var number))
+                        return RedirectToAction("Error", "Home",
+                            new {error = CoreStrings.MalformedArgument(nameof(fuzzyValues))});
 
-                var newTerms = varSymbol.Stmt.Execute((double) fuzzyValues);
-                foreach (var newTerm in newTerms)
-                    if (newTerm.Value > 0) facts.Add(new IndividualFact(fuzzyInputs, newTerm.Key));
-            }
+                    var varSymbol = _fuzzyManager.Variables.FirstOrDefault(v => v.Id == fuzzyInputs[i].Trim());
+                    if (varSymbol == null)
+                        return RedirectToAction("Error", "Home",
+                            new {error = CoreStrings.MalformedArgument(nameof(fuzzyInputs))});
+
+                    var newTerms = varSymbol.Stmt.Execute(number);
+                    foreach (var newTerm in newTerms)
+                        if (newTerm.Value > 0) facts.Add(new IndividualFact(varSymbol.Id, newTerm.Key));
+                }
 
             if (problemId < -1 || problemId >= _ruleManager.Problems.Count)
                 return RedirectToAction("Error", "Home",

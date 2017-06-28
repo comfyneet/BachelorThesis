@@ -126,6 +126,9 @@ namespace RiceDoctor.FuzzyManager
             }
             if ("0123456789".IndexOf(CurrentChar) != -1)
                 return GetNumber();
+
+            if (CurrentChar == '"')
+                return GetUnquotedString();
             if (char.IsLetter(CurrentChar) || CurrentChar == '_')
             {
                 var id = GetIdentifier();
