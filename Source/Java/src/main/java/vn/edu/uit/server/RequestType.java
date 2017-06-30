@@ -3,9 +3,6 @@ package vn.edu.uit.server;
 import com.google.gson.annotations.SerializedName;
 
 public enum RequestType {
-    @SerializedName("SearchIndividuals")
-    SEARCH_INDIVIDUALS,
-
     @SerializedName("GetComment")
     GET_COMMENT,
 
@@ -62,6 +59,9 @@ public enum RequestType {
 
     @SerializedName("GetIndividualClasses")
     GET_INDIVIDUAL_CLASSES,
+
+    @SerializedName("GetIndividualNames")
+    GET_INDIVIDUAL_NAMES,
 
     @SerializedName("GetRelationValue")
     GET_RELATION_VALUE,

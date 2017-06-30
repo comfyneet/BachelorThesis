@@ -6,9 +6,6 @@ namespace RiceDoctor.OntologyManager
     public interface IOntologyManager
     {
         [CanBeNull]
-        IReadOnlyCollection<Individual> SearchIndividuals([NotNull] string keywords);
-
-        [CanBeNull]
         string GetComment([NotNull] string objectName);
 
         [CanBeNull]
@@ -67,6 +64,9 @@ namespace RiceDoctor.OntologyManager
 
         [CanBeNull]
         IReadOnlyCollection<Class> GetIndividualClasses([NotNull] string individualName);
+
+        [CanBeNull]
+        IReadOnlyCollection<string> GetIndividualNames([NotNull] string individualName);
 
         [CanBeNull]
         IReadOnlyCollection<Individual> GetRelationValue(

@@ -12,8 +12,10 @@ namespace RiceDoctor.OntologyManager
         private bool _canGetAllClasses;
         private bool _canGetAttributeValues;
         private bool _canGetDirectClass;
+        private bool _canGetNames;
         private bool _canGetRelationValues;
         [CanBeNull] private Class _directClass;
+        [CanBeNull] private IReadOnlyCollection<string> _names;
         [CanBeNull] private IReadOnlyDictionary<Relation, IReadOnlyCollection<Individual>> _relationValues;
 
         public Individual([NotNull] string id, [CanBeNull] string label = null) : base(id, label)
@@ -51,6 +53,17 @@ namespace RiceDoctor.OntologyManager
             _canGetAllClasses = true;
 
             return _allClasses;
+        }
+
+        [CanBeNull]
+        public IReadOnlyCollection<string> GetNames()
+        {
+            if (_canGetNames) return _names;
+
+            _names = Manager.Instance.GetIndividualNames(Id);
+            _canGetNames = true;
+
+            return _names;
         }
 
         public void SetAllClasses([CanBeNull] IReadOnlyCollection<Class> allClasses)

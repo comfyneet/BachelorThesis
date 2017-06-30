@@ -1,13 +1,12 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using JetBrains.Annotations;
 using Microsoft.AspNetCore.Mvc;
+using RiceDoctor.InformationRetrieval;
 using RiceDoctor.OntologyManager;
 using RiceDoctor.QueryManager;
 using RiceDoctor.Shared;
 using static RiceDoctor.OntologyManager.GetType;
-using Attribute = RiceDoctor.OntologyManager.Attribute;
 
 namespace RiceDoctor.WebApp.Controllers
 {
@@ -29,12 +28,96 @@ namespace RiceDoctor.WebApp.Controllers
 
         public IActionResult Index(string keywords)
         {
+            IReadOnlyDictionary<object, double> SearchClasses(string term)
+            {
+                var classes = _ontologyManager.GetSubClasses("Thing", GetAll);
+                var tmpResultClasses = new Dictionary<Class, double>();
+                foreach (var cls in classes)
+                {
+                    var distance = 0.0;
+                    if (cls.Label != null)
+                        distance = DiceCoefficient.Distance(cls.Label.ToLower().RemoveAccents(), term);
+                    var idDistance = DiceCoefficient.Distance(cls.Id.ToLower().RemoveAccents(), term);
+                    if (idDistance > distance) distance = idDistance;
+                    if (distance > 0) tmpResultClasses.Add(cls, distance);
+                }
+
+                var resultClasses = tmpResultClasses
+                    .OrderByDescending(c => c.Value)
+                    .ToDictionary(c => (object) c.Key, c => c.Value);
+                return resultClasses.Count == 0 ? null : resultClasses;
+            }
+
+            IReadOnlyDictionary<object, double> SearchIndividuals(string term)
+            {
+                var individuals = _ontologyManager.GetIndividuals();
+                var tmpResultIndividuals = new Dictionary<Individual, double>();
+                foreach (var individual in individuals)
+                {
+                    var distance = 0.0;
+                    var names = individual.GetNames();
+                    if (names != null)
+                        distance = names
+                            .Select(name => DiceCoefficient.Distance(name.ToLower().RemoveAccents(), term))
+                            .Concat(new[] {distance})
+                            .Max();
+                    var idDistance = DiceCoefficient.Distance(individual.Id.ToLower(), term);
+                    if (idDistance > distance) distance = idDistance;
+                    if (distance > 0) tmpResultIndividuals.Add(individual, distance);
+                }
+
+                var resultIndividuals = tmpResultIndividuals
+                    .OrderByDescending(i => i.Value)
+                    .ToDictionary(i => (object) i.Key, i => i.Value);
+                return resultIndividuals.Count == 0 ? null : resultIndividuals;
+            }
+
+            IReadOnlyDictionary<object, double> SearchRelations(string term)
+            {
+                var relations = _ontologyManager.GetRelations();
+                var tmpRelationResults = new Dictionary<Relation, double>();
+                foreach (var relation in relations)
+                {
+                    var distance = 0.0;
+                    if (relation.Label != null)
+                        distance = DiceCoefficient.Distance(relation.Label.ToLower().RemoveAccents(), term);
+                    var idDistance = DiceCoefficient.Distance(relation.Id.ToLower().RemoveAccents(), term);
+                    if (idDistance > distance) distance = idDistance;
+                    if (distance > 0) tmpRelationResults.Add(relation, distance);
+                }
+
+                var resultRelations = tmpRelationResults
+                    .OrderByDescending(r => r.Value)
+                    .ToDictionary(r => (object) r.Key, r => r.Value);
+                return resultRelations.Count == 0 ? null : resultRelations;
+            }
+
+            IReadOnlyDictionary<object, double> SearchAttributes(string term)
+            {
+                var attributes = _ontologyManager.GetAttributes();
+                var tmpAttributeResults = new Dictionary<Attribute, double>();
+                foreach (var attribute in attributes)
+                {
+                    var distance = 0.0;
+                    if (attribute.Label != null)
+                        distance = DiceCoefficient.Distance(attribute.Label.ToLower().RemoveAccents(), term);
+                    var idDistance = DiceCoefficient.Distance(attribute.Id.ToLower().RemoveAccents(), term);
+                    if (idDistance > distance) distance = idDistance;
+                    if (distance > 0) tmpAttributeResults.Add(attribute, distance);
+                }
+
+                var resultAttributes = tmpAttributeResults
+                    .OrderByDescending(a => a.Value)
+                    .ToDictionary(a => (object) a.Key, a => a.Value);
+                return resultAttributes.Count == 0 ? null : resultAttributes;
+            }
+
             if (string.IsNullOrWhiteSpace(keywords)) return RedirectToAction("Index", "Home");
             keywords = keywords.Trim();
 
             ViewData["Keywords"] = keywords;
 
-            var results = new Dictionary<string, List<KeyValuePair<QueryType, IReadOnlyCollection<object>>>>();
+            var results = new Dictionary<string, List<KeyValuePair<QueryType, IReadOnlyDictionary<object, double>>>>();
 
             foreach (var query in _queryManager.Queries)
             {
@@ -44,91 +127,43 @@ namespace RiceDoctor.WebApp.Controllers
                 for (var i = 0; i < terms.Count; ++i)
                 {
                     if (!results.ContainsKey(terms[i]))
-                        results.Add(terms[i], new List<KeyValuePair<QueryType, IReadOnlyCollection<object>>>());
+                        results.Add(terms[i], new List<KeyValuePair<QueryType, IReadOnlyDictionary<object, double>>>());
 
                     var resultTypes = query.ResultTypes[i];
                     foreach (var resultType in resultTypes)
                         switch (resultType)
                         {
                             case QueryType.Class:
-                                var classes = _ontologyManager.GetSubClasses("Thing", GetAll);
-                                var resultClasses = classes
-                                    .Where(cls => cls.Label?.ToLower().RemoveAccents().Contains(terms[i]) == true
-                                                  || cls.Id.ToLower().RemoveAccents().Contains(terms[i]))
-                                    .ToList();
                                 results[terms[i]].Add(
-                                    new KeyValuePair<QueryType, IReadOnlyCollection<object>>(QueryType.Class,
-                                        resultClasses.Count == 0 ? null : resultClasses));
+                                    new KeyValuePair<QueryType, IReadOnlyDictionary<object, double>>(
+                                        QueryType.Class,
+                                        SearchClasses(terms[i])));
                                 break;
 
                             case QueryType.Individual:
-                                var searchIndividuals = _ontologyManager.SearchIndividuals(terms[i]);
                                 results[terms[i]].Add(
-                                    new KeyValuePair<QueryType, IReadOnlyCollection<object>>(QueryType.Individual,
-                                        searchIndividuals));
+                                    new KeyValuePair<QueryType, IReadOnlyDictionary<object, double>>(
+                                        QueryType.Individual,
+                                        SearchIndividuals(terms[i])));
                                 break;
 
                             case QueryType.Relation:
-                                var relations = _ontologyManager.GetRelations();
-                                var resultRelations = relations
-                                    .Where(r => r.Label?.ToLower().RemoveAccents().Contains(terms[i]) == true
-                                                || r.Id.ToLower().RemoveAccents().Contains(terms[i]))
-                                    .ToList();
                                 results[terms[i]].Add(
-                                    new KeyValuePair<QueryType, IReadOnlyCollection<object>>(QueryType.Relation,
-                                        resultRelations.Count == 0 ? null : resultRelations));
+                                    new KeyValuePair<QueryType, IReadOnlyDictionary<object, double>>(
+                                        QueryType.Relation,
+                                        SearchRelations(terms[i])));
                                 break;
 
                             case QueryType.Attribute:
-                                var attributes = _ontologyManager.GetAttributes();
-                                var resultAttributes = attributes
-                                    .Where(a => a.Label?.ToLower().RemoveAccents().Contains(terms[i]) == true
-                                                || a.Id.ToLower().RemoveAccents().Contains(terms[i]))
-                                    .ToList();
                                 results[terms[i]].Add(
-                                    new KeyValuePair<QueryType, IReadOnlyCollection<object>>(QueryType.Attribute,
-                                        resultAttributes.Count == 0 ? null : resultAttributes));
+                                    new KeyValuePair<QueryType, IReadOnlyDictionary<object, double>>(
+                                        QueryType.Attribute,
+                                        SearchAttributes(terms[i])));
                                 break;
                         }
                 }
 
                 break;
-            }
-
-            if (results.Count == 1)
-            {
-                var result = results.First();
-                var hasOnlyOneResult = false;
-                Tuple<string, QueryType, object> oneResult = null;
-                foreach (var values in result.Value)
-                    if (values.Value != null)
-                    {
-                        if (values.Value.Count > 1 || hasOnlyOneResult)
-                        {
-                            hasOnlyOneResult = false;
-                            break;
-                        }
-
-                        hasOnlyOneResult = true;
-                        oneResult = new Tuple<string, QueryType, object>(result.Key, values.Key, values.Value.First());
-                    }
-
-                if (hasOnlyOneResult)
-                    switch (oneResult.Item2)
-                    {
-                        case QueryType.Class:
-                            return RedirectToAction("Class", "Ontology",
-                                new {className = ((Class) oneResult.Item3).Id, keywords = oneResult.Item1});
-                        case QueryType.Individual:
-                            return RedirectToAction("Individual", "Ontology",
-                                new {individualName = ((Individual) oneResult.Item3).Id, keywords = oneResult.Item1});
-                        case QueryType.Relation:
-                            return RedirectToAction("Relation", "Ontology",
-                                new {relationName = ((Relation) oneResult.Item3).Id, keywords = oneResult.Item1});
-                        case QueryType.Attribute:
-                            return RedirectToAction("Attribute", "Ontology",
-                                new {attributeName = ((Attribute) oneResult.Item3).Id, keywords = oneResult.Item1});
-                    }
             }
 
             return results.Count == 0 ? View(null) : View(results);

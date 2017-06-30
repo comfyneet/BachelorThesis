@@ -127,11 +127,11 @@ namespace RiceDoctor.Tests
                 Assert.True(data.Item2.ScrambledEqual(actualResultFacts));
             }
         }
+        //    [CanBeNull] IReadOnlyList<Tuple<double, IReadOnlyCollection<Fact>, IReadOnlyCollection<Fact>>>
+        //public void InferFalse([NotNull] IE.Request request,
+        //[MemberData(nameof(MockFalseData))]
 
         //[Theory]
-        //[MemberData(nameof(MockFalseData))]
-        //public void InferFalse([NotNull] IE.Request request,
-        //    [CanBeNull] IReadOnlyList<Tuple<double, IReadOnlyCollection<Fact>, IReadOnlyCollection<Fact>>>
         //        expectedIncompleteFacts)
         //{
         //    Check.NotNull(request, nameof(request));

@@ -34,25 +34,6 @@ namespace RiceDoctor.OntologyManager
         [NotNull]
         public static Manager Instance { get; }
 
-        public IReadOnlyCollection<Individual> SearchIndividuals(string keywords)
-        {
-            Check.NotEmpty(keywords, nameof(keywords));
-
-            var data = new Dictionary<string, object> {{"Keywords", keywords}};
-            var request = new Request(RequestType.SearchIndividuals, data);
-
-            var response = Send(request);
-            if (response.Status != Success) return null;
-
-            var jsonSearchIndividuals = (JArray) response.Data["SearchIndividuals"];
-            var searchIndividuals = jsonSearchIndividuals
-                .Select(i => JsonTemplates.JsonIndividual.Deserialize(i.ToString()))
-                .OrderBy(i => i.Label ?? i.Id)
-                .ToList();
-
-            return searchIndividuals;
-        }
-
         public string GetComment(string objectName)
         {
             Check.NotEmpty(objectName, nameof(objectName));
@@ -432,6 +413,25 @@ namespace RiceDoctor.OntologyManager
                 .ToList();
 
             return classes;
+        }
+
+        public IReadOnlyCollection<string> GetIndividualNames(string individualName)
+        {
+            Check.NotEmpty(individualName, nameof(individualName));
+
+            var data = new Dictionary<string, object> {{"Individual", individualName}};
+            var request = new Request(RequestType.GetIndividualNames, data);
+
+            var response = Send(request);
+            if (response.Status != Success) return null;
+
+            var jsonIndividualNames = (JArray) response.Data["IndividualNames"];
+            var individualNames = jsonIndividualNames
+                .Select(name => name.ToString())
+                .OrderBy(name => name)
+                .ToList();
+
+            return individualNames;
         }
 
         public IReadOnlyCollection<Individual> GetRelationValue(

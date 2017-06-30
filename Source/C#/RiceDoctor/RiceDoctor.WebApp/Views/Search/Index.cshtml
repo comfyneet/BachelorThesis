@@ -1,7 +1,7 @@
 ﻿@using RiceDoctor.OntologyManager
 @using RiceDoctor.QueryManager
 @using Attribute = RiceDoctor.OntologyManager.Attribute
-@model Dictionary<string, List<KeyValuePair<RiceDoctor.QueryManager.QueryType, IReadOnlyCollection<object>>>>
+@model Dictionary<string, List<KeyValuePair<RiceDoctor.QueryManager.QueryType, IReadOnlyDictionary<object, double>>>>
 @{
     var keywords = (string) ViewData["Keywords"];
     ViewData["Title"] = "Tra cứu \"" + keywords + "\"";
@@ -17,7 +17,7 @@
                 <h4>Không tìm thấy dữ liệu từ câu truy vấn</h4>
 
                 <p>
-                    Tìm kiếm trên internet với <a href="https://www.google.com/search?q=@keywords">Google</a>.
+                    Tìm kiếm "@keywords" trên Internet với <a href="https://www.google.com/search?q=@keywords">Google</a>.
                 </p>
             </section>
 
@@ -66,22 +66,34 @@
                                     {
                                         case QueryType.Class:
                                             <li>
-                                                <a asp-controller="Ontology" asp-action="Class" asp-route-className="@(((Class) value).Id)" asp-route-keywords="@result.Key">@value</a>
+                                                <a asp-controller="Ontology" asp-action="Class" asp-route-className="@(((Class) value.Key).Id)" asp-route-keywords="@result.Key">
+                                                    @value.Key
+                                                </a>
+                                                (@((value.Value * 100).ToString("#.##"))%)
                                             </li>
                                             break;
                                         case QueryType.Individual:
                                             <li>
-                                                <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@(((Individual) value).Id)" asp-route-keywords="@result.Key">@value</a>
+                                                <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@(((Individual) value.Key).Id)" asp-route-keywords="@result.Key">
+                                                    @value.Key
+                                                </a>
+                                                (@((value.Value * 100).ToString("#.##"))%)
                                             </li>
                                             break;
                                         case QueryType.Relation:
                                             <li>
-                                                <a asp-controller="Ontology" asp-action="Relation" asp-route-relationName="@(((Relation) value).Id)" asp-route-keywords="@result.Key">@value</a>
+                                                <a asp-controller="Ontology" asp-action="Relation" asp-route-relationName="@(((Relation) value.Key).Id)" asp-route-keywords="@result.Key">
+                                                    @value.Key
+                                                </a>
+                                                (@((value.Value * 100).ToString("#.##"))%)
                                             </li>
                                             break;
                                         case QueryType.Attribute:
                                             <li>
-                                                <a asp-controller="Ontology" asp-action="Attribute" asp-route-attributeName="@(((Attribute) value).Id)" asp-route-keywords="@result.Key">@value</a>
+                                                <a asp-controller="Ontology" asp-action="Attribute" asp-route-attributeName="@(((Attribute) value.Key).Id)" asp-route-keywords="@result.Key">
+                                                    @value.Key
+                                                </a>
+                                                (@((value.Value * 100).ToString("#.##"))%)
                                             </li>
                                             break;
                                     }
@@ -98,6 +110,10 @@
                     var pairStr = string.Join(", ", emptyPair);
                     <section>
                         <h4>Không tìm thấy @pairStr với từ khóa "@result.Key"</h4>
+
+                        <p>
+                            Tìm kiếm "@result.Key" trên Internet với <a href="https://www.google.com/search?q=@result.Key">Google</a>.
+                        </p>
                     </section>
 
                     <hr/>

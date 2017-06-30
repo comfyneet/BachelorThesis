@@ -48,6 +48,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RiceDoctor.QueryManager", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiceDoctor.FuzzyManager", "RiceDoctor\RiceDoctor.FuzzyManager\RiceDoctor.FuzzyManager.csproj", "{7BB428FA-EFD8-4A3A-9755-7AE990881E8B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiceDoctor.InformationRetrieval", "RiceDoctor\RiceDoctor.InformationRetrieval\RiceDoctor.InformationRetrieval.csproj", "{67B46D31-F692-443F-9D5F-9AE69A283602}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -94,6 +96,10 @@ Global
 		{7BB428FA-EFD8-4A3A-9755-7AE990881E8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BB428FA-EFD8-4A3A-9755-7AE990881E8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7BB428FA-EFD8-4A3A-9755-7AE990881E8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67B46D31-F692-443F-9D5F-9AE69A283602}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67B46D31-F692-443F-9D5F-9AE69A283602}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67B46D31-F692-443F-9D5F-9AE69A283602}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67B46D31-F692-443F-9D5F-9AE69A283602}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

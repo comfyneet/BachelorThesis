@@ -17,7 +17,6 @@ import vn.edu.uit.server.Request;
 import vn.edu.uit.server.RequestType;
 import vn.edu.uit.server.Response;
 import vn.edu.uit.shared.Pair;
-import vn.edu.uit.shared.StringUtils;
 
 import java.io.File;
 import java.util.*;
@@ -81,9 +80,6 @@ public class OntologyManager {
         try {
             final RequestType type = request.getType();
             switch (type) {
-                case SEARCH_INDIVIDUALS:
-                    response = parseSearchIndividuals(data);
-                    break;
                 case GET_COMMENT:
                     response = parseComment(data);
                     break;
@@ -141,6 +137,9 @@ public class OntologyManager {
                 case GET_INDIVIDUAL_CLASSES:
                     response = parseIndividualClasses(data);
                     break;
+                case GET_INDIVIDUAL_NAMES:
+                    response = parseIndividualNames(data);
+                    break;
                 case GET_RELATION_VALUE:
                     response = parseRelationValue(data);
                     break;
@@ -162,43 +161,6 @@ public class OntologyManager {
 
             return gson.toJson(response);
         }
-    }
-
-    @NotNull
-    private Response parseSearchIndividuals(@NotNull final Map<String, Object> data) {
-        final String keywords = (String) data.get("Keywords");
-
-        final Set<Individual> searchIndividuals = new HashSet<>();
-        final OWLDataProperty owlAttribute = factory.getOWLDataProperty(IRI.create(prefix, NAME_ATTRIBUTE));
-
-        for (final OWLNamedIndividual owlIndividual : ontology.getIndividualsInSignature()) {
-            final String individualName = owlIndividual.getIRI().getShortForm();
-
-            if (StringUtils.removeAccents(individualName).toLowerCase().contains(keywords)) {
-                final Individual individual = getIndividual(owlIndividual);
-                searchIndividuals.add(individual);
-            } else {
-                final Set<OWLLiteral> owlLiterals = reasoner.getDataPropertyValues(owlIndividual, owlAttribute);
-                for (final OWLLiteral owlLiteral : owlLiterals)
-                    if (StringUtils.removeAccents(owlLiteral.getLiteral()).toLowerCase().contains(keywords)) {
-                        final Individual individual = getIndividual(owlIndividual);
-
-                        searchIndividuals.add(individual);
-                        break;
-                    }
-            }
-        }
-
-        final Response.Builder builder;
-        if (searchIndividuals.isEmpty()) {
-            builder = new Response.Builder(FAIL);
-            builder.message("Search individuals \"" + keywords + "\" not found.");
-        } else {
-            builder = new Response.Builder(SUCCESS);
-            builder.data("SearchIndividuals", searchIndividuals);
-        }
-
-        return builder.build();
     }
 
     @NotNull
@@ -682,6 +644,38 @@ public class OntologyManager {
                 if (getClassType == GET_DIRECT)
                     builder.data("IndividualClass", classes.iterator().next());
                 else builder.data("IndividualClasses", classes);
+            }
+        }
+
+        return builder.build();
+    }
+
+
+    @NotNull
+    private Response parseIndividualNames(@NotNull final Map<String, Object> data) {
+        final String individualName = (String) data.get("Individual");
+        final GetType getClassType = gson.fromJson((String) data.get("GetClassType"), GetType.class);
+
+        final OWLNamedIndividual owlIndividual = getOWLIndividual(individualName);
+
+        final Response.Builder builder;
+        if (owlIndividual == null) {
+            builder = new Response.Builder(FAIL);
+            builder.message("Individual \"" + individualName + "\" not found.");
+        } else {
+            final List<String> names = new ArrayList<>();
+
+            final OWLDataProperty owlAttribute = factory.getOWLDataProperty(IRI.create(prefix, NAME_ATTRIBUTE));
+            final Set<OWLLiteral> owlLiterals = reasoner.getDataPropertyValues(owlIndividual, owlAttribute);
+            for (final OWLLiteral owlLiteral : owlLiterals)
+                names.add(owlLiteral.getLiteral());
+
+            if (names.isEmpty()) {
+                builder = new Response.Builder(FAIL);
+                builder.message("Names of \"" + individualName + "\" not found.");
+            } else {
+                builder = new Response.Builder(SUCCESS);
+                builder.data("IndividualNames", names);
             }
         }
 
