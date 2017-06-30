@@ -30,12 +30,12 @@ end;
 
 variable LuongMua "milimét"
 begin
-    term MuaIt    : trimf(0, 10, 20);
-    term MuaNhieu : trimf(10, 20, 30);
+    term MuaIt    : trimf(0, 200, 500);
+    term MuaNhieu : trimf(500, 700, 1000);
 end;
 
 variable NhietDo "độ"
 begin
-    term NhietDoCao  : trimf(0, 10, 20);
-    term NhietDoThap : trimf(10, 20, 30);
+    term NhietDoThap  : trimf(0, 10, 20);
+    term NhietDoCao : trimf(10, 20, 30);
 end;
