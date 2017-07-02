@@ -33,11 +33,9 @@ namespace RiceDoctor.ConsoleApp
 
             var problemPath = Path.Combine(AppContext.BaseDirectory, @"..\..\..\..\Resources\problem-types.json");
             var problemData = File.ReadAllText(problemPath);
-            var logicPath = Path.Combine(AppContext.BaseDirectory, @"..\..\..\..\Resources\logic-rules.txt");
-            var logicData = File.ReadAllText(logicPath);
-            var relationPath = Path.Combine(AppContext.BaseDirectory, @"..\..\..\..\Resources\relation-rules.txt");
-            var relationData = File.ReadAllText(relationPath);
-            var ruleManager = new RuleManager.Manager(problemData, logicData, relationData);
+            var rulePath = Path.Combine(AppContext.BaseDirectory, @"..\..\..\..\Resources\inference-rules.txt");
+            var ruleData = File.ReadAllText(rulePath);
+            var ruleManager = new RuleManager.Manager(problemData, ruleData);
 
             var ontologyManager = OntologyManager.Manager.Instance;
 

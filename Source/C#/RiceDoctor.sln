@@ -10,10 +10,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{391B7CE6-7A14-48B8-BD46-9ED3D927C529}"
 	ProjectSection(SolutionItems) = preProject
 		RiceDoctor\Resources\fuzzy-model.txt = RiceDoctor\Resources\fuzzy-model.txt
-		RiceDoctor\Resources\logic-rules.txt = RiceDoctor\Resources\logic-rules.txt
+		RiceDoctor\Resources\inference-rules.txt = RiceDoctor\Resources\inference-rules.txt
 		RiceDoctor\Resources\problem-types.json = RiceDoctor\Resources\problem-types.json
 		RiceDoctor\Resources\query-rules.txt = RiceDoctor\Resources\query-rules.txt
-		RiceDoctor\Resources\relation-rules.txt = RiceDoctor\Resources\relation-rules.txt
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RiceDoctor.InferenceEngine", "RiceDoctor\RiceDoctor.InferenceEngine\RiceDoctor.InferenceEngine.csproj", "{6486445C-333D-463F-9CA9-8E663C48B4C2}"
@@ -46,9 +45,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CompleteInferenceTests", "C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RiceDoctor.QueryManager", "RiceDoctor\RiceDoctor.QueryManager\RiceDoctor.QueryManager.csproj", "{C5BB91D9-CBDB-452B-A66C-65996E86D44E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiceDoctor.FuzzyManager", "RiceDoctor\RiceDoctor.FuzzyManager\RiceDoctor.FuzzyManager.csproj", "{7BB428FA-EFD8-4A3A-9755-7AE990881E8B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RiceDoctor.FuzzyManager", "RiceDoctor\RiceDoctor.FuzzyManager\RiceDoctor.FuzzyManager.csproj", "{7BB428FA-EFD8-4A3A-9755-7AE990881E8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiceDoctor.InformationRetrieval", "RiceDoctor\RiceDoctor.InformationRetrieval\RiceDoctor.InformationRetrieval.csproj", "{67B46D31-F692-443F-9D5F-9AE69A283602}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RiceDoctor.InformationRetrieval", "RiceDoctor\RiceDoctor.InformationRetrieval\RiceDoctor.InformationRetrieval.csproj", "{67B46D31-F692-443F-9D5F-9AE69A283602}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

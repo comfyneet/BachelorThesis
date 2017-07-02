@@ -39,11 +39,9 @@ namespace RiceDoctor.WebApp
 
             var problemData = File.ReadAllText(Path.Combine(AppContext.BaseDirectory,
                 @"..\..\..\..\Resources\problem-types.json"));
-            var logicData = File.ReadAllText(Path.Combine(AppContext.BaseDirectory,
-                @"..\..\..\..\Resources\logic-rules.txt"));
-            var relationData = File.ReadAllText(Path.Combine(AppContext.BaseDirectory,
-                @"..\..\..\..\Resources\relation-rules.txt"));
-            services.AddSingleton<IRuleManager>(new RuleManager.Manager(problemData, logicData, relationData));
+            var ruleData = File.ReadAllText(Path.Combine(AppContext.BaseDirectory,
+                @"..\..\..\..\Resources\inference-rules.txt"));
+            services.AddSingleton<IRuleManager>(new RuleManager.Manager(problemData, ruleData));
 
             var queryData = File.ReadAllText(Path.Combine(AppContext.BaseDirectory,
                 @"..\..\..\..\Resources\query-rules.txt"));

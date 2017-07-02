@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\RiceDoctor.FuzzyManager\RiceDoctor.FuzzyManager.csproj" />
     <ProjectReference Include="..\RiceDoctor.OntologyManager\RiceDoctor.OntologyManager.csproj" />
     <ProjectReference Include="..\RiceDoctor.RuleManager\RiceDoctor.RuleManager.csproj" />
     <ProjectReference Include="..\RiceDoctor.Shared\RiceDoctor.Shared.csproj" />

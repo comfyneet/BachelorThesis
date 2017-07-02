@@ -16,36 +16,30 @@ namespace RiceDoctor.RuleManager
         [JsonConstructor]
         public Manager(
             [NotNull] IReadOnlyList<Problem> problems,
-            [NotNull] IReadOnlyCollection<LogicRule> logicRules,
-            [NotNull] IReadOnlyCollection<Relation> relationRules)
+            [NotNull] IReadOnlyCollection<LogicRule> rules)
         {
             Check.NotNull(problems, nameof(problems));
-            Check.NotNull(logicRules, nameof(logicRules));
-            Check.NotNull(relationRules, nameof(relationRules));
+            Check.NotNull(rules, nameof(rules));
 
             Problems = problems;
-            LogicRules = logicRules;
-            RelationRules = relationRules;
+            Rules = rules;
         }
 
-        public Manager([NotNull] string problemData, [NotNull] string logicData, [NotNull] string relationData)
+        public Manager([NotNull] string problemData, [NotNull] string ruleData)
         {
             Check.NotEmpty(problemData, nameof(problemData));
-            Check.NotEmpty(logicData, nameof(logicData));
-            Check.NotEmpty(relationData, nameof(relationData));
+            Check.NotEmpty(ruleData, nameof(ruleData));
 
-            Problems = JsonTemplates.JsonRoot.Deserialize(problemData, _ontologyManager);
+            Problems = JsonTemplates.JsonProblem.Deserialize(problemData, _ontologyManager);
 
-            LogicRules = MakeLogicRules(logicData);
-
-            RelationRules = MakeRelationRules(relationData);
+            var lexer = new RuleLexer(ruleData);
+            var parser = new RuleParser(lexer);
+            Rules = parser.Parse();
         }
 
         public IReadOnlyList<Problem> Problems { get; }
 
-        public IReadOnlyCollection<LogicRule> LogicRules { get; }
-
-        public IReadOnlyCollection<Relation> RelationRules { get; }
+        public IReadOnlyCollection<Rule> Rules { get; }
 
         public bool CanClassCaptureFact(Class type, Fact fact)
         {
@@ -59,38 +53,6 @@ namespace RiceDoctor.RuleManager
             return false;
         }
 
-        [NotNull]
-        private IReadOnlyCollection<LogicRule> MakeLogicRules(string logicData)
-        {
-            var lexer = new LogicLexer(logicData);
-            var parser = new LogicParser(lexer);
-            var rules = parser.Parse();
-
-            return rules;
-        }
-
-        [NotNull]
-        private IReadOnlyCollection<Relation> MakeRelationRules(string relationData)
-        {
-            var relationRules = relationData
-                .Split(new[] {"\r\n", "\n"}, StringSplitOptions.None);
-
-            var relations = new HashSet<Relation>();
-            foreach (var relationRule in relationRules)
-            {
-                var relation = _ontologyManager.GetRelation(relationRule);
-                if (relation == null) throw new ArgumentException($"Relation rule '{relationRule}' doesn't exist");
-
-                if (!relations.Contains(relation)) relations.Add(relation);
-
-                var inverseRelation = relation.GetInverseRelation();
-                if (inverseRelation != null && !relations.Contains(inverseRelation))
-                    relations.Add(inverseRelation);
-            }
-
-            return relations;
-        }
-
         private class JsonTemplates
         {
             public class JsonProblem
@@ -98,11 +60,7 @@ namespace RiceDoctor.RuleManager
                 public string Type { get; set; }
                 public List<string> GoalTypes { get; set; }
                 public List<string> SuggestTypes { get; set; }
-            }
-
-            public class JsonRoot
-            {
-                public List<JsonProblem> Problems { get; set; }
+                public bool SuggestFuzzyTypes { get; set; }
 
                 [NotNull]
                 public static IReadOnlyList<Problem> Deserialize(
@@ -112,11 +70,11 @@ namespace RiceDoctor.RuleManager
                     Check.NotEmpty(json, nameof(json));
                     Check.NotNull(ontologyManager, nameof(ontologyManager));
 
-                    var templateProblems = JsonConvert.Deserialize<JsonRoot>(json);
+                    var templateProblems = JsonConvert.Deserialize<List<JsonProblem>>(json);
 
                     var problems = new List<Problem>();
                     var allTypes = new Dictionary<string, Class>();
-                    foreach (var templateProblem in templateProblems.Problems)
+                    foreach (var templateProblem in templateProblems)
                     {
                         var goalTypes = new List<Class>();
                         foreach (var templateGoalType in templateProblem.GoalTypes)
@@ -144,7 +102,11 @@ namespace RiceDoctor.RuleManager
                             suggestTypes.Add(suggestType);
                         }
 
-                        problems.Add(new Problem(templateProblem.Type, goalTypes, suggestTypes));
+                        problems.Add(new Problem(
+                            templateProblem.Type,
+                            goalTypes,
+                            suggestTypes,
+                            templateProblem.SuggestFuzzyTypes));
                     }
 
                     return problems;

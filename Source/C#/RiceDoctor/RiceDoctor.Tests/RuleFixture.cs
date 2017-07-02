@@ -13,15 +13,12 @@ namespace RiceDoctor.Tests
             var problemPath = Path.Combine(AppContext.BaseDirectory, @"..\..\..\..\Resources\problem-types.json");
             var problemData = File.ReadAllText(problemPath);
 
-            var logicPath = Path.Combine(AppContext.BaseDirectory, @"..\..\..\..\Resources\logic-rules.txt");
-            var logicData = File.ReadAllText(logicPath);
+            var rulePath = Path.Combine(AppContext.BaseDirectory, @"..\..\..\..\Resources\inference-rules.txt");
+            var ruleData = File.ReadAllText(rulePath);
 
-            var relationPath = Path.Combine(AppContext.BaseDirectory, @"..\..\..\..\Resources\relation-rules.txt");
-            var relationData = File.ReadAllText(relationPath);
+            RuleManager = new Manager(problemData, ruleData);
 
-            RuleManager = new Manager(problemData, logicData, relationData);
-
-            Assert.NotNull(RuleManager.LogicRules);
+            Assert.NotNull(RuleManager.Rules);
         }
 
         public IRuleManager RuleManager { get; }

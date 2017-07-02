@@ -2,48 +2,95 @@
 using System.Collections.Generic;
 using System.Linq;
 using JetBrains.Annotations;
+using RiceDoctor.OntologyManager;
 using RiceDoctor.Shared;
-using static RiceDoctor.RuleManager.LogicTokenType;
+using static RiceDoctor.RuleManager.RuleTokenType;
 using static RiceDoctor.Shared.TokenType;
 
 namespace RiceDoctor.RuleManager
 {
-    public class LogicParser : Parser<IReadOnlyCollection<LogicRule>>
+    public class RuleParser : Parser<IReadOnlyCollection<Rule>>
     {
-        [CanBeNull] private IReadOnlyCollection<LogicRule> _logicRules;
+        private readonly IOntologyManager _ontologyManager = OntologyManager.Manager.Instance;
 
-        public LogicParser([NotNull] LogicLexer lexer) : base(lexer)
+        [CanBeNull] private IReadOnlyCollection<Rule> _rules;
+
+        public RuleParser([NotNull] RuleLexer lexer) : base(lexer)
         {
         }
 
         [NotNull]
-        public override IReadOnlyCollection<LogicRule> Parse()
+        public override IReadOnlyCollection<Rule> Parse()
         {
-            if (_logicRules != null) return _logicRules;
+            if (_rules != null) return _rules;
 
-            _logicRules = ParseLogicRuleList();
+            _rules = ParseInferenceRules();
 
             if (CurrentToken.Type != Eof)
                 throw new InvalidOperationException(CoreStrings.SyntaxError(Eof.Name, CurrentToken.Type.Name));
 
-            return _logicRules;
+            return _rules;
         }
 
         [NotNull]
-        private IReadOnlyCollection<LogicRule> ParseLogicRuleList()
+        private IReadOnlyCollection<Rule> ParseInferenceRules()
         {
-            var logicRuleList = new List<LogicRule>();
-
-            var logicRules = ParseLogicRules();
-            logicRuleList.AddRange(logicRules);
+            var rules = new List<Rule>();
 
             while (CurrentToken.Type != Eof)
+                if (CurrentToken.Type == Ident && Peek().Type == Arrow)
+                {
+                    var relationRule = ParseRelationRule();
+                    if (relationRule != null) rules.Add(relationRule);
+                }
+                else
+                {
+                    rules.AddRange(ParseLogicRules());
+                }
+
+            return rules.Distinct().ToList();
+        }
+
+        [CanBeNull]
+        private RelationRule ParseRelationRule()
+        {
+            var domainName = ParseIdentifier();
+
+            Eat(Arrow);
+
+            var rangeName = ParseIdentifier();
+
+            Eat(Semi);
+
+            var domainClass = _ontologyManager.GetClass(domainName);
+            var rangeClass = _ontologyManager.GetClass(rangeName);
+            if (domainClass == null || rangeClass == null) return null;
+
+            var ruleRelations = new List<string>();
+            var relations = _ontologyManager.GetRelations();
+            foreach (var relation in relations)
             {
-                logicRules = ParseLogicRules();
-                logicRuleList.AddRange(logicRules);
+                var allDomains = relation.GetAllDomains();
+                var allRanges = relation.GetAllRanges();
+                if (allDomains == null || allRanges == null) continue;
+
+                if (allDomains.Any(d => d.Id == domainName) && allRanges.Any(r => r.Id == rangeName))
+                    ruleRelations.Add(relation.Id);
             }
 
-            return logicRuleList.Distinct().ToList();
+            if (ruleRelations.Count == 0) return null;
+
+            var inferredDomains = new List<string> {domainName};
+            var domainSubClasses = domainClass.GetAllSubClasses();
+            if (domainSubClasses != null) inferredDomains.AddRange(domainSubClasses.Select(c => c.Id));
+
+            var inferredRanges = new List<string> {rangeName};
+            var rangeSubClasses = rangeClass.GetAllSubClasses();
+            if (rangeSubClasses != null) inferredRanges.AddRange(rangeSubClasses.Select(c => c.Id));
+
+            var rule = new RelationRule(domainName, rangeName, inferredDomains, inferredRanges, ruleRelations);
+
+            return rule;
         }
 
         [NotNull]
@@ -228,28 +275,13 @@ namespace RiceDoctor.RuleManager
         {
             Check.NotNull(symbolTable, nameof(symbolTable));
 
-            Fact fact;
-            if (CurrentToken.Type == Ident)
-            {
-                var className = ParseIdentifier();
+            var className = ParseIdentifier();
 
-                Eat(Eq);
+            Eat(Eq);
 
-                var individualName = ParseIdentifier();
+            var individualName = ParseIdentifier();
 
-                fact = new IndividualFact(className, individualName);
-            }
-            else
-            {
-                var name = ParseUnquotedString();
-
-                Eat(Eq);
-
-                var value = ParseUnquotedString();
-
-                //fact = new ScalarFact(name, value);
-                fact = null;
-            }
+            Fact fact = new IndividualFact(className, individualName);
 
             symbolTable.Add(fact);
 

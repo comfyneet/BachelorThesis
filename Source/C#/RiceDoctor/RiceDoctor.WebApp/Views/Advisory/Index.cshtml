@@ -20,8 +20,36 @@
 }
 
 <script>
+    var suggestIndividualExamples = [];
     var suggestIndividuals = [];
+    var suggestFuzzyFacts = [];
+
+    var generalIndividualExamples = [];
+    var generalIndividuals = [];
 </script>
+
+@foreach (var individual in individuals)
+{
+    <script>
+        generalIndividuals.push({ id: '@individual.Id', text: '@Html.Raw(individual)' });
+    </script>
+}
+
+@{ var tmpGeneralIndividuals = individuals.ToList(); }
+@for (var i = 0; i < 4; ++i)
+{
+    if (tmpGeneralIndividuals.Count == 0)
+    {
+        break;
+    }
+
+    var randomIndividual = tmpGeneralIndividuals.RandomElement();
+    tmpGeneralIndividuals.Remove(randomIndividual);
+
+    <script>
+        generalIndividualExamples[@i] = "@Html.Raw(randomIndividual)";
+    </script>
+}
 
 <div class="row">
     <div class="col-md-12">
@@ -30,12 +58,19 @@
         <form asp-controller="Advisory" asp-action="SelectProblem" method="post">
             <input type="hidden" name="guid" value="@Model.Guid"/>
             <div class="form-group">
-                <label class="col-md-3 control-label">Chọn loại câu hỏi cần tư vấn</label>
+                <label class="col-md-3 control-label">
+                    Chọn loại câu hỏi cần tư vấn<br/>
+                    Sau đây là một số câu hỏi thường gặp
+                </label>
                 <div class="col-md-9">
                     @if (problems != null)
                     {
                         for (var i = 0; i < problems.Count; ++i)
                         {
+                            <script>
+                                suggestFuzzyFacts[@i] = @problems[i].SuggestFuzzyTypes.ToString().ToLower();
+                            </script>
+
                             <div class="radio">
                                 <label>
                                     <input type="radio" name="problemId" value="@i" onclick="handleProblem()">@problems[i].Type
@@ -62,7 +97,7 @@
                             }
                             var suggestTypesSb = new StringBuilder();
                             <p id="problemDescription@(i)" style="display: none">
-                                <span style="text-decoration: underline;">Sự kiện gợi ý</span>:
+                                <span style="text-decoration: underline;">Loại sự kiện gợi ý</span>:
 
                                 @for (var j = 0; j < suggestTypes.Count; ++j)
                                 {
@@ -94,9 +129,23 @@
                                     }
                                 }
                             }
+
                             <script>
                                 suggestIndividuals[@i] = [];
+                                suggestIndividualExamples[@i] = [];
+
                             </script>
+
+                            for (var j = 0; j < suggestIndividuals.Count; ++j)
+                            {
+                                <script>
+                                    suggestIndividuals[@i][@j] = {
+                                        id: "@suggestIndividuals[j].Id",
+                                        text: "@Html.Raw(suggestIndividuals[j])"
+                                    };
+                                </script>
+                            }
+
                             for (var j = 0; j < 4; ++j)
                             {
                                 if (suggestIndividuals.Count == 0)
@@ -108,7 +157,7 @@
                                 suggestIndividuals.Remove(randomIndividual);
 
                                 <script>
-                                    suggestIndividuals[@i][@j] = "@Html.Raw(randomIndividual)";
+                                    suggestIndividualExamples[@i][@j] = "@Html.Raw(randomIndividual)";
                                 </script>
                             }
                         }
@@ -137,14 +186,10 @@
                 <label class="col-md-3 control-label">Nhập các sự kiện đã biết về cây lúa</label>
                 <div class="col-md-9">
                     <select name="inputs" id="inputs" class="form-control" style="width: 100%" multiple>
-                        @foreach (var individual in individuals)
-                        {
-                            <option value="@individual.Id">@individual</option>
-                        }
                     </select>
                 </div>
             </div>
-            <div class="form-group">
+            <div id="fuzzyForm" class="form-group" style="display: none">
                 <label class="col-md-3 control-label" style="margin-top: 15px !important">Nhập các giá trị môi trường (nếu có)</label>
                 <div class="col-md-9">
                     <div class="row">
@@ -170,17 +215,6 @@
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-md-3 control-label" style="margin-top: 15px !important">Số kết quả cần tìm</label>
-                <div class="col-md-9">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <input type="number" style="margin-top: 15px !important" class="form-control" name="totalGoals" placeholder="Nếu tìm tất cả thì để trống"/>
-                        </div>
-                        <div class="col-md-8"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="form-group">
                 <div class="col-md-offset-3 col-md-9" style="margin-top: 15px !important">
                     <input type="submit" class="btn btn-default" value="Xử lý"/>
                 </div>
@@ -196,42 +230,66 @@
             {
                 <text>
                     for (var i = 0; i < @problems.Count; ++i) {
-                        var id = "#problemDescription" + i.toString();
+                        var pd = "#problemDescription" + i.toString();
                         if ($("input[name='problemId']:checked").val() === i.toString()) {
                             var placeholder = "";
-                            if (suggestIndividuals.length > 0) {
+                            if (suggestIndividualExamples[i].length > 0) {
                                 placeholder += "Ví dụ: ";
-                                for (var j = 0; j < suggestIndividuals.length; ++j) {
-                                    if (j > 0) {
-                                        placeholder += ", ";
-                                    }
-                                    placeholder += suggestIndividuals[i][j];
+                                for (var j = 0; j < suggestIndividualExamples[i].length; ++j) {
+                                    if (j > 0) placeholder += ", ";
+                                    placeholder += suggestIndividualExamples[i][j];
                                 }
                                 placeholder += ",...";
                             }
-                            $("#inputs").select2({ placeholder: placeholder });
 
-                            if ($(id).css('display') === 'none') {
-                                $(id).fadeIn();
+                            $("#inputs").empty();
+                            $("#inputs").select2({
+                                theme: "bootstrap",
+                                placeholder: placeholder,
+                                data: suggestIndividuals[i]
+                            });
+
+                            if ($(pd).css('display') === 'none') $(pd).fadeIn();
+
+                            if (suggestFuzzyFacts[i] && $("#fuzzyForm").css('display') === 'none') {
+                                $("#fuzzyForm").fadeIn();
+                            } else if ($("#fuzzyForm").css('display') !== 'none') {
+                                $("#fuzzyForm").hide();
                             }
-                        } else if ($(id).css('display') !== 'none') {
-                            $(id).hide();
+                        } else if ($(pd).css('display') !== 'none') {
+                            $(pd).hide();
                         }
                     }
                 </text>
             }
 
             if ($("input[name='problemId']:checked").val() === "-1") {
-                $("#inputs").select2({ placeholder: "Nhập sự kiện bất kỳ. Ví dụ: Thân ún, Rễ thối, Mép lá cháy..." });
+
+                var placeholder = "Nhập sự kiện bất kỳ.";
+                if (generalIndividualExamples.length > 0) {
+                    placeholder += " Ví dụ: ";
+                    for (var i = 0; i < generalIndividualExamples.length; ++i) {
+                        if (i > 0) placeholder += ", ";
+                        placeholder += generalIndividualExamples[i];
+                    }
+                    placeholder += ",...";
+                }
+
+                $("#inputs").empty();
+                $("#inputs").select2({
+                    theme: "bootstrap",
+                    placeholder: placeholder,
+                    data: generalIndividuals
+                });
 
                 if ($("#generalProblemForm").css('display') === 'none') {
                     $("#generalProblemForm").fadeIn();
                     $("#outputs").select2({ placeholder: "Ví dụ: Bệnh, Thuốc, Tác nhân gây bệnh,..." });
                 }
-            } else {
-                if ($("#generalProblemForm").css('display') !== 'none') {
-                    $("#generalProblemForm").hide();
-                }
+
+                if ($("#fuzzyForm").css('display') === 'none') $("#fuzzyForm").fadeIn();
+            } else if ($("#generalProblemForm").css('display') !== 'none') {
+                $("#generalProblemForm").hide();
             }
         }
 
@@ -240,7 +298,6 @@
         });
 
         $("#inputs").select2({
-            placeholder: "Nhập sự kiện bất kỳ. Ví dụ: Thân ún, Rễ thối, Mép lá cháy...",
             theme: "bootstrap"
         });
     </script>

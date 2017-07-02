@@ -1,14 +1,14 @@
 ﻿using System;
 using JetBrains.Annotations;
 using RiceDoctor.Shared;
-using static RiceDoctor.RuleManager.LogicTokenType;
+using static RiceDoctor.RuleManager.RuleTokenType;
 using static RiceDoctor.Shared.TokenType;
 
 namespace RiceDoctor.RuleManager
 {
-    public class LogicLexer : Lexer
+    public class RuleLexer : Lexer
     {
-        public LogicLexer([NotNull] string text) : base(text)
+        public RuleLexer([NotNull] string text) : base(text)
         {
         }
 

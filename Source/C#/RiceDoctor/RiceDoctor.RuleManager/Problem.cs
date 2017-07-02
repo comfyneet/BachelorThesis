@@ -10,7 +10,8 @@ namespace RiceDoctor.RuleManager
     {
         public Problem([NotNull] string type,
             [NotNull] IReadOnlyCollection<Class> goalTypes,
-            [NotNull] IReadOnlyCollection<Class> suggestTypes)
+            [NotNull] IReadOnlyCollection<Class> suggestTypes,
+            bool suggestFuzzyTypes)
         {
             Check.NotEmpty(type, nameof(type));
             Check.NotEmpty(goalTypes, nameof(goalTypes));
@@ -19,6 +20,7 @@ namespace RiceDoctor.RuleManager
             Type = type;
             GoalTypes = goalTypes;
             SuggestTypes = suggestTypes;
+            SuggestFuzzyTypes = suggestFuzzyTypes;
         }
 
         [NotNull]
@@ -29,6 +31,8 @@ namespace RiceDoctor.RuleManager
 
         [NotNull]
         public IReadOnlyCollection<Class> SuggestTypes { get; }
+
+        public bool SuggestFuzzyTypes { get; }
 
         public bool Equals(Problem other)
         {

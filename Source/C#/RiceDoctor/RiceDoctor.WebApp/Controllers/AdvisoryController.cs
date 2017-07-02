@@ -64,7 +64,7 @@ namespace RiceDoctor.WebApp.Controllers
             List<string> inputs,
             List<string> fuzzyInputs,
             List<string> fuzzyValues,
-            List<string> outputs, int? totalGoals)
+            List<string> outputs)
         {
             if (string.IsNullOrWhiteSpace(guid))
                 return RedirectToAction("Error", "Home", new {error = CoreStrings.MalformedArgument(nameof(guid))});
@@ -89,14 +89,7 @@ namespace RiceDoctor.WebApp.Controllers
                         return RedirectToAction("Error", "Home",
                             new {error = CoreStrings.MalformedArgument(nameof(fuzzyValues))});
 
-                    var varSymbol = _fuzzyManager.Variables.FirstOrDefault(v => v.Id == fuzzyInputs[i].Trim());
-                    if (varSymbol == null)
-                        return RedirectToAction("Error", "Home",
-                            new {error = CoreStrings.MalformedArgument(nameof(fuzzyInputs))});
-
-                    var newTerms = varSymbol.Stmt.Execute(number);
-                    foreach (var newTerm in newTerms)
-                        if (newTerm.Value > 0) facts.Add(new IndividualFact(varSymbol.Id, newTerm.Key));
+                    facts.Add(new FuzzyFact(fuzzyInputs[i], number));
                 }
 
             if (problemId < -1 || problemId >= _ruleManager.Problems.Count)
@@ -137,24 +130,19 @@ namespace RiceDoctor.WebApp.Controllers
                     suggestTypes.Add(suggestType);
                 }
 
-                problem = new Problem("General", goalTypes, suggestTypes);
+                problem = new Problem("General", goalTypes, suggestTypes, true);
             }
             else
             {
                 problem = _ruleManager.Problems[problemId];
             }
 
-            if (totalGoals != null && totalGoals <= 0)
-                return RedirectToAction("Error", "Home",
-                    new {error = CoreStrings.MalformedArgument(nameof(totalGoals))});
-
             var advisory = JsonConvert.DeserializeObject<Advisory>(HttpContext.Session.GetString(guid), jsonSettings);
-            advisory.Request = new Request(problem, RequestType.IndividualFact, totalGoals);
-            advisory.Engine = new Engine(_ruleManager, _ontologyManager, advisory.Request);
+            advisory.Request = new Request(problem, RequestType.IndividualFact);
+            advisory.Engine = new Engine(_ruleManager, _ontologyManager, _fuzzyManager, advisory.Request);
             advisory.Engine.AddFactsToKnown(facts.ToArray());
             HttpContext.Session.SetString(guid, JsonConvert.SerializeObject(advisory, jsonSettings));
 
-            //return View(advisory);
             return Infer(guid);
         }
 
@@ -186,6 +174,7 @@ namespace RiceDoctor.WebApp.Controllers
             var advisory = JsonConvert.DeserializeObject<Advisory>(HttpContext.Session.GetString(guid), jsonSettings);
             ((Engine) advisory.Engine)._ontologyManager = _ontologyManager;
             ((Engine) advisory.Engine)._ruleManager = _ruleManager;
+            ((Engine) advisory.Engine)._fuzzyManager = _fuzzyManager;
 
             if (guessableFacts != null)
             {

@@ -1,24 +1,26 @@
-﻿{
-    "Problems": [
-        {
-            "Type": "Biết Bệnh hại -> tìm Thuốc trị bệnh",
-            "GoalTypes": ["Benh"],
-            "SuggestTypes": ["ThuocBenhHai"]
-        },
-        {
-            "Type": "Biết Tác nhân gây hại (Sâu, Cỏ, Ốc) -> tìm Thuốc diệt trừ",
-            "GoalTypes": ["ThuocSauHai", "ThuocTruCo"],
-            "SuggestTypes": ["TacNhanGayHai"]
-        },
-        {
-            "Type": "Biết Triệu chứng -> tìm Bệnh",
-            "GoalTypes": ["Benh"],
-            "SuggestTypes": ["TrieuChung"]
-        },
-        {
-            "Type": "Biết lúa hiện đang ở Giai đoạn -> tìm Bệnh có thể có",
-            "GoalTypes": ["Benh"],
-            "SuggestTypes": ["GiaiDoan"]
-        }
-    ]
-}
+﻿[
+    {
+        "Type": "Biết Bệnh hại, tìm Thuốc trị bệnh",
+        "GoalTypes": ["Thuoc"],
+        "SuggestTypes": ["Benh"],
+        "SuggestFuzzyTypes": false
+    },
+    {
+        "Type": "Biết Tác nhân gây hại (Sâu, Cỏ, Ốc), tìm Thuốc diệt trừ",
+        "GoalTypes": ["ThuocSauHai", "ThuocTruCo"],
+        "SuggestTypes": ["TacNhanGayHai"],
+        "SuggestFuzzyTypes": false
+    },
+    {
+        "Type": "Biết Triệu chứng và các giá trị Môi trường, tìm Bệnh",
+        "GoalTypes": ["Benh"],
+        "SuggestTypes": ["TrieuChung"],
+        "SuggestFuzzyTypes": true
+    },
+    {
+        "Type": "Biết lúa hiện đang ở Giai đoạn, tìm Bệnh có thể có trong Giai đoạn này",
+        "GoalTypes": ["Benh"],
+        "SuggestTypes": ["GiaiDoan"],
+        "SuggestFuzzyTypes": false
+    }
+]

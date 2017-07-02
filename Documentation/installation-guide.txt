@@ -1,5 +1,5 @@
 - Install IntelliJ IDEA 2017 + Java SDK 8
-- Install Visual Studio 2017 (with 'ASP.NET and web development' workload) + IIS 10
+- Install Visual Studio 2017 (with 'ASP.NET and web development' workload)
 
 - Import 'pom.xml' from Source\Java with IDEA, build 'App'
 - Open 'RiceDoctor.sln' from Source\C# with VS, build 'WebApp'

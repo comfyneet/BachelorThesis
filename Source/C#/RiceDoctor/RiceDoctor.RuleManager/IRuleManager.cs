@@ -10,10 +10,7 @@ namespace RiceDoctor.RuleManager
         IReadOnlyList<Problem> Problems { get; }
 
         [NotNull]
-        IReadOnlyCollection<LogicRule> LogicRules { get; }
-
-        [NotNull]
-        IReadOnlyCollection<Relation> RelationRules { get; }
+        IReadOnlyCollection<Rule> Rules { get; }
 
         bool CanClassCaptureFact([NotNull] Class type, [NotNull] Fact fact);
     }

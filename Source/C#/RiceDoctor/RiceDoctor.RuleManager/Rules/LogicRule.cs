@@ -6,7 +6,7 @@ using RiceDoctor.Shared;
 
 namespace RiceDoctor.RuleManager
 {
-    public class LogicRule : IEquatable<LogicRule>
+    public class LogicRule : Rule, IEquatable<LogicRule>
     {
         public LogicRule(
             [NotNull] IReadOnlyList<Fact> hypotheses,

@@ -38,9 +38,6 @@
         <NamedIndividual IRI="#MuaNhieu"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#thoigianthuhoach"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#ThuocA1VAN_6.4SL"/>
     </Declaration>
     <Declaration>
@@ -128,7 +125,7 @@
         <DataProperty IRI="#lieuLuong"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#CoHienTuong"/>
+        <DataProperty IRI="#nguyenNhanGayBenh"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ThanThoi"/>
@@ -227,6 +224,9 @@
         <Class IRI="#DoAm"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#triBenh"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Ditacin_8L"/>
     </Declaration>
     <Declaration>
@@ -251,13 +251,16 @@
         <DataProperty IRI="#luongPhanBon"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#ThuHoachLua"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#DatAm"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#ThuHoachLua"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#BenhHoaCuc"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#coTheSuDungThuoc"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#LaUa"/>
@@ -290,13 +293,13 @@
         <NamedIndividual IRI="#PhanRac"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#HinhDangLa"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#cachCheBien"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ChieuCaoThap"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#HinhDangLa"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#OcNhot"/>
@@ -309,6 +312,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#KhongCoSau"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#triHienTuongBenh"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Co"/>
@@ -389,16 +395,10 @@
         <Class IRI="#GiaiDoan"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#nhuCauNuocOGiaiDoan"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#QuyTrinhTuoiNuocSauSa20-25Ngay"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Phan"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#nguyenNhan"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Actara_25WG"/>
@@ -450,6 +450,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Bassa_50EC"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hienTuongBenhSuDungThuoc"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Mau"/>
@@ -504,6 +507,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#RayNau"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HienTuongBenh"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#QuyTrinhBonLot"/>
@@ -581,6 +587,9 @@
         <NamedIndividual IRI="#CoChi"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#triTacNhanGayHai"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#LaBac"/>
     </Declaration>
     <Declaration>
@@ -656,9 +665,6 @@
         <Class IRI="#MoiTruong"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#coThuoc"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#SauGai"/>
     </Declaration>
     <Declaration>
@@ -716,6 +722,9 @@
         <NamedIndividual IRI="#MepLaChay"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#thoiGianThuHoach"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#CoOc"/>
     </Declaration>
     <Declaration>
@@ -729,6 +738,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#GiaiDoanMa"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nhuCauNuoc"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Bisomin_6WP_2SL"/>
@@ -782,16 +794,19 @@
         <NamedIndividual IRI="#Sasa_20WP"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#tacNhanGayHaiSuDungThuoc"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Tilt_Super_300_EC"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#LaVangCam"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#GiaiDoanDeNhanh"/>
+        <NamedIndividual IRI="#QuyTrinhTuoiNuocChinHoanToan"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#QuyTrinhTuoiNuocChinHoanToan"/>
+        <NamedIndividual IRI="#GiaiDoanDeNhanh"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#BenhVangLun"/>
@@ -812,7 +827,7 @@
         <NamedIndividual IRI="#HatLep"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#HienTuong"/>
+        <ObjectProperty IRI="#benhSuDungThuoc"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#PhanPhucHop"/>
@@ -855,9 +870,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#PhanDon"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#coTacNhanGayHai"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#nguonGoc"/>
@@ -1337,11 +1349,11 @@
         <NamedIndividual IRI="#HatLep"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#HienTuong"/>
+        <Class IRI="#HienTuongBenh"/>
         <NamedIndividual IRI="#HienTuongNgoDocHuuCo"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#HienTuong"/>
+        <Class IRI="#HienTuongBenh"/>
         <NamedIndividual IRI="#HienTuongThieuDam"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1473,7 +1485,7 @@
         <NamedIndividual IRI="#NangXuatKem"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#HienTuong"/>
+        <Class IRI="#HienTuongBenh"/>
         <NamedIndividual IRI="#NgoDocPhen"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1833,52 +1845,52 @@
         <NamedIndividual IRI="#dibavil_50FL_50_WP"/>
     </ClassAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayHai"/>
+        <ObjectProperty IRI="#triTacNhanGayHai"/>
         <NamedIndividual IRI="#Actara_25WG"/>
         <NamedIndividual IRI="#BoTri"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayHai"/>
+        <ObjectProperty IRI="#triTacNhanGayHai"/>
         <NamedIndividual IRI="#Actara_25WG"/>
         <NamedIndividual IRI="#RayNau"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayHai"/>
+        <ObjectProperty IRI="#triBenh"/>
         <NamedIndividual IRI="#Antracol_70WP"/>
         <NamedIndividual IRI="#BenhVangLa"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayHai"/>
+        <ObjectProperty IRI="#triTacNhanGayHai"/>
         <NamedIndividual IRI="#Bassa_50EC"/>
         <NamedIndividual IRI="#BoXit"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayHai"/>
+        <ObjectProperty IRI="#triTacNhanGayHai"/>
         <NamedIndividual IRI="#Bassa_50EC"/>
         <NamedIndividual IRI="#RayNau"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayHai"/>
+        <ObjectProperty IRI="#triTacNhanGayHai"/>
         <NamedIndividual IRI="#Bassa_50EC"/>
         <NamedIndividual IRI="#SauKeo"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coThuoc"/>
+        <ObjectProperty IRI="#benhSuDungThuoc"/>
         <NamedIndividual IRI="#BenhBacLa"/>
         <NamedIndividual IRI="#Ditacin_8L"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coThuoc"/>
+        <ObjectProperty IRI="#benhSuDungThuoc"/>
         <NamedIndividual IRI="#BenhBacLa"/>
         <NamedIndividual IRI="#Hoả_Tiễn_50WP"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coThuoc"/>
+        <ObjectProperty IRI="#benhSuDungThuoc"/>
         <NamedIndividual IRI="#BenhBacLa"/>
         <NamedIndividual IRI="#Sasa_20WP"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coThuoc"/>
+        <ObjectProperty IRI="#benhSuDungThuoc"/>
         <NamedIndividual IRI="#BenhBacLa"/>
         <NamedIndividual IRI="#Staner_20WP"/>
     </ObjectPropertyAssertion>
@@ -1893,27 +1905,27 @@
         <NamedIndividual IRI="#GiaiDoanLamDong"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coThuoc"/>
+        <ObjectProperty IRI="#benhSuDungThuoc"/>
         <NamedIndividual IRI="#BenhChayBiaLa"/>
         <NamedIndividual IRI="#Sasa_20WP"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coThuoc"/>
+        <ObjectProperty IRI="#benhSuDungThuoc"/>
         <NamedIndividual IRI="#BenhChayBiaLa"/>
         <NamedIndividual IRI="#Staner_20WP"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coThuoc"/>
+        <ObjectProperty IRI="#benhSuDungThuoc"/>
         <NamedIndividual IRI="#BenhDaoOn"/>
         <NamedIndividual IRI="#TAIYOU_20SC"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coThuoc"/>
+        <ObjectProperty IRI="#benhSuDungThuoc"/>
         <NamedIndividual IRI="#BenhDomNau"/>
         <NamedIndividual IRI="#Tilt_Super_300_EC"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coThuoc"/>
+        <ObjectProperty IRI="#benhSuDungThuoc"/>
         <NamedIndividual IRI="#BenhLemLepHat"/>
         <NamedIndividual IRI="#Tilt_Super_300_EC"/>
     </ObjectPropertyAssertion>
@@ -1948,47 +1960,47 @@
         <NamedIndividual IRI="#GiaiDoanTro"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coThuoc"/>
+        <ObjectProperty IRI="#benhSuDungThuoc"/>
         <NamedIndividual IRI="#BenhVangLa"/>
         <NamedIndividual IRI="#Antracol_70WP"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coThuoc"/>
+        <ObjectProperty IRI="#benhSuDungThuoc"/>
         <NamedIndividual IRI="#BenhVangLun"/>
         <NamedIndividual IRI="#Actara_25WG"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coThuoc"/>
+        <ObjectProperty IRI="#benhSuDungThuoc"/>
         <NamedIndividual IRI="#BenhVangLun"/>
         <NamedIndividual IRI="#Bassa_50EC"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coThuoc"/>
+        <ObjectProperty IRI="#benhSuDungThuoc"/>
         <NamedIndividual IRI="#BenhVangLun"/>
         <NamedIndividual IRI="#ThuocAdmire_50EC"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayHai"/>
+        <ObjectProperty IRI="#triBenh"/>
         <NamedIndividual IRI="#Binhtin_75_WP"/>
         <NamedIndividual IRI="#BenhDaoOn"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayHai"/>
+        <ObjectProperty IRI="#triBenh"/>
         <NamedIndividual IRI="#Bisomin_6WP_2SL"/>
         <NamedIndividual IRI="#BenhBacLa"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayHai"/>
+        <ObjectProperty IRI="#triBenh"/>
         <NamedIndividual IRI="#Bisomin_6WP_2SL"/>
         <NamedIndividual IRI="#BenhDaoOn"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coThuoc"/>
+        <ObjectProperty IRI="#tacNhanGayHaiSuDungThuoc"/>
         <NamedIndividual IRI="#CoDuoiPhung"/>
         <NamedIndividual IRI="#Star_10WP"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayHai"/>
+        <ObjectProperty IRI="#triBenh"/>
         <NamedIndividual IRI="#Damycine"/>
         <NamedIndividual IRI="#BenhKhoVan"/>
     </ObjectPropertyAssertion>
@@ -1998,17 +2010,12 @@
         <NamedIndividual IRI="#GiaiDoanMa"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayHai"/>
+        <ObjectProperty IRI="#triBenh"/>
         <NamedIndividual IRI="#Hoả_Tiễn_50WP"/>
         <NamedIndividual IRI="#BenhBacLa"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coThuoc"/>
-        <NamedIndividual IRI="#NgoDocPhen"/>
-        <NamedIndividual IRI="#PHÂN_HỦY_GỐC_RẠ"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#CoHienTuong"/>
+        <ObjectProperty IRI="#triHienTuongBenh"/>
         <NamedIndividual IRI="#PHÂN_HỦY_GỐC_RẠ"/>
         <NamedIndividual IRI="#NgoDocPhen"/>
     </ObjectPropertyAssertion>
@@ -2038,7 +2045,7 @@
         <NamedIndividual IRI="#GiaiDoanChin"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coThuoc"/>
+        <ObjectProperty IRI="#coTheSuDungThuoc"/>
         <NamedIndividual IRI="#QuyTrinhKichThichChin"/>
         <NamedIndividual IRI="#Luc_Diep_To"/>
     </ObjectPropertyAssertion>
@@ -2048,7 +2055,7 @@
         <NamedIndividual IRI="#GiaiDoanMa"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coThuoc"/>
+        <ObjectProperty IRI="#coTheSuDungThuoc"/>
         <NamedIndividual IRI="#QuyTrinhKichThichMa"/>
         <NamedIndividual IRI="#GOLIATH"/>
     </ObjectPropertyAssertion>
@@ -2058,12 +2065,12 @@
         <NamedIndividual IRI="#GiaiDoanTro"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coThuoc"/>
+        <ObjectProperty IRI="#coTheSuDungThuoc"/>
         <NamedIndividual IRI="#QuyTrinhKichThichTro"/>
         <NamedIndividual IRI="#DEKAMON"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coThuoc"/>
+        <ObjectProperty IRI="#coTheSuDungThuoc"/>
         <NamedIndividual IRI="#QuyTrinhKichThichTro"/>
         <NamedIndividual IRI="#Luc_Diep_To"/>
     </ObjectPropertyAssertion>
@@ -2113,112 +2120,112 @@
         <NamedIndividual IRI="#GiaiDoanLamDong"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coThuoc"/>
+        <ObjectProperty IRI="#tacNhanGayHaiSuDungThuoc"/>
         <NamedIndividual IRI="#RayLungTrang"/>
         <NamedIndividual IRI="#Bassa_50EC"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayHai"/>
+        <ObjectProperty IRI="#triBenh"/>
         <NamedIndividual IRI="#Sasa_20WP"/>
         <NamedIndividual IRI="#BenhBacLa"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayHai"/>
+        <ObjectProperty IRI="#triBenh"/>
         <NamedIndividual IRI="#Sasa_20WP"/>
         <NamedIndividual IRI="#BenhChayBiaLa"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayHai"/>
+        <ObjectProperty IRI="#triBenh"/>
         <NamedIndividual IRI="#Sasa_20WP"/>
         <NamedIndividual IRI="#BenhLemLepHat"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayHai"/>
+        <ObjectProperty IRI="#triBenh"/>
         <NamedIndividual IRI="#Staner_20WP"/>
         <NamedIndividual IRI="#BenhChayBiaLa"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayHai"/>
+        <ObjectProperty IRI="#triBenh"/>
         <NamedIndividual IRI="#Staner_20WP"/>
         <NamedIndividual IRI="#BenhLemLepHat"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayHai"/>
+        <ObjectProperty IRI="#triTacNhanGayHai"/>
         <NamedIndividual IRI="#TREBON_10EC"/>
         <NamedIndividual IRI="#RayNau"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayHai"/>
+        <ObjectProperty IRI="#triTacNhanGayHai"/>
         <NamedIndividual IRI="#TREBON_10EC"/>
         <NamedIndividual IRI="#SauCuonLaLon"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayHai"/>
+        <ObjectProperty IRI="#triTacNhanGayHai"/>
         <NamedIndividual IRI="#TREBON_10EC"/>
         <NamedIndividual IRI="#SauCuonLaNho"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayHai"/>
+        <ObjectProperty IRI="#triBenh"/>
         <NamedIndividual IRI="#ThuocA1VAN_6.4SL"/>
         <NamedIndividual IRI="#BenhBacLa"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayHai"/>
+        <ObjectProperty IRI="#triBenh"/>
         <NamedIndividual IRI="#ThuocA1VAN_6.4SL"/>
         <NamedIndividual IRI="#BenhDaoOn"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayHai"/>
+        <ObjectProperty IRI="#triTacNhanGayHai"/>
         <NamedIndividual IRI="#ThuocADORE_25SC"/>
         <NamedIndividual IRI="#CoChi"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayHai"/>
+        <ObjectProperty IRI="#triTacNhanGayHai"/>
         <NamedIndividual IRI="#ThuocADORE_25SC"/>
         <NamedIndividual IRI="#CoLongVuc"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayHai"/>
+        <ObjectProperty IRI="#triTacNhanGayHai"/>
         <NamedIndividual IRI="#ThuocAdmire_50EC"/>
         <NamedIndividual IRI="#BoTri"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayHai"/>
+        <ObjectProperty IRI="#triTacNhanGayHai"/>
         <NamedIndividual IRI="#ThuocAdmire_50EC"/>
         <NamedIndividual IRI="#RayNau"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayHai"/>
+        <ObjectProperty IRI="#triTacNhanGayHai"/>
         <NamedIndividual IRI="#ThuocAdmire_50EC"/>
         <NamedIndividual IRI="#RayXanhDuoiDen"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayHai"/>
+        <ObjectProperty IRI="#triTacNhanGayHai"/>
         <NamedIndividual IRI="#ThuocArmada"/>
         <NamedIndividual IRI="#BoTri"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayHai"/>
+        <ObjectProperty IRI="#triTacNhanGayHai"/>
         <NamedIndividual IRI="#ThuocArmada"/>
         <NamedIndividual IRI="#RayNau"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayHai"/>
+        <ObjectProperty IRI="#triTacNhanGayHai"/>
         <NamedIndividual IRI="#ThuocArmada"/>
         <NamedIndividual IRI="#RayXanhDuoiDen"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayHai"/>
+        <ObjectProperty IRI="#triBenh"/>
         <NamedIndividual IRI="#Tilt_Super_300_EC"/>
         <NamedIndividual IRI="#BenhDomVang"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayHai"/>
+        <ObjectProperty IRI="#triBenh"/>
         <NamedIndividual IRI="#Tilt_Super_300_EC"/>
         <NamedIndividual IRI="#BenhVangLa"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#coTacNhanGayHai"/>
+        <ObjectProperty IRI="#triBenh"/>
         <NamedIndividual IRI="#dana-win_12.5_WP"/>
         <NamedIndividual IRI="#BenhLemLepHat"/>
     </ObjectPropertyAssertion>
@@ -2452,7 +2459,7 @@ Ngoài ra có thể sử dụng các loại [Thuoc]thuốc[/Thuoc] thành phẩm
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">[Benh=BenhBacLa]bệnh bạc lá[/Benh] do vi khuẩn [url=&quot;https://www.google.com.vn/search?q=vi+khu%E1%BA%A9n+Xanthomonas+Oryzae&quot;] Xanthomonas Oryzae[/url] gây lên. Bệnh thường phát sinh đầu tiên ở rìa lá, mút lá sau đó lan dần vào trong phiến lá tạo thành các vết dài màu xanh nhạt sau chuyển thành màu trắng xám. Giữa phần lá bệnh và không bệnh thường có đường gợn sóng, vào sáng sớm có thể quan sát các giọt dịch vi khuẩn tròn nhỏ màu vàng nâu trên mép lá.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#nguyenNhan"/>
+        <DataProperty IRI="#nguyenNhanGayBenh"/>
         <NamedIndividual IRI="#BenhBacLa"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Một số giống mẫn cảm với [Benh=BenhBacLa] bệnh bạc lá [/Benh] như một số giống tạp giao và một số giống chất lượng.
 - Do thời tiết nóng ẩm, mưa to gió lớn xảy ra trong thời kỳ lúa cần quang hợp cao.
@@ -2722,7 +2729,7 @@ Khi nhiều vết [Benh=BenhDomNau]bệnh đốm nâu[/Benh] xuất hiện trên
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Bệnh do nấm Bipolaris Oryzae, tồn tại chủ yếu từ hạt giống. Phát sinh gây hại</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#nguyenNhan"/>
+        <DataProperty IRI="#nguyenNhanGayBenh"/>
         <NamedIndividual IRI="#BenhDomNau"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Nguyên nhân do thời tiết có nhiều nắng nóng nhiệt cao, độ ẩm không khí cao thấp thất thường, cây lúa thường xuyên bị đói hoặc không được đáp ứng kịp thời các yếu tố dinh dưỡng và nước vì đặc điểm chân ruộng.</Literal>
     </DataPropertyAssertion>
@@ -2965,7 +2972,7 @@ Những điều cần lưu ý để sử dụng [Thuoc]thuốc[/Thuoc] hóa họ
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">bệnh lem lép hạt</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#nguyenNhan"/>
+        <DataProperty IRI="#nguyenNhanGayBenh"/>
         <NamedIndividual IRI="#BenhLemLepHat"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">- Do nhện gié: nhện gié thường sống trong các bẹ lá lúa. Khi mật độ cao chúng có thể bò lên trên bông lúa chích hút các gié lúa đang phát triển. Các bông lúa bị hại thường mọc thẳng đứng và phần lớn số hạt đều bị lép. 
 - Do vi khuẩn Pseudomonas glumae (hay Bukhoderia glumae), vi khuẩn này làm thối đen hạt hoặc gây vết bệnh trên vỏ hạt. 
@@ -4068,7 +4075,7 @@ Gieo cấy, trồng lúa
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Giai đoạn gieo</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#nhuCauNuocOGiaiDoan"/>
+        <DataProperty IRI="#nhuCauNuoc"/>
         <NamedIndividual IRI="#GiaiDoanGieo"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Hạt giống mới được gieo xuống ruộng  cho đến 2-3 ngày sau gieo (hình
 3.20b), ruộng chỉ cần độ ẩm bão hòa. Bị ngập nước ở giai đoạn này còn ảnh hưởng
@@ -4110,7 +4117,7 @@ Hiện nay do thời tiết ngày nắng, đêm lạnh nhiều nên các loại 
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Giai đoạn làm đồng</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#nhuCauNuocOGiaiDoan"/>
+        <DataProperty IRI="#nhuCauNuoc"/>
         <NamedIndividual IRI="#GiaiDoanLamDong"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Lúc này cây lúa bắt đầu bướcvào thời kỳ đẻ nhánh. Chỉ cần mựcnước săm sắp mặt ruộng.
 Nước ngập sâu cây lúa đẻ nhánh yếu.
@@ -4198,7 +4205,7 @@ Thời kỳ mạ có ý nghĩa quan trọng, chăm sóc cho mạ tốt, mạ kho
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Giai đoạn mạ</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#nhuCauNuocOGiaiDoan"/>
+        <DataProperty IRI="#nhuCauNuoc"/>
         <NamedIndividual IRI="#GiaiDoanMa"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Sau sạ từ 5-7 ngày: Câylúa cần lớp nước mỏng săm sắp mặt ruộng . - Lúc này ruộng bị khô sẽ tổn thương đến rễ lúa, nên không thể để ruộng khô nứt nẻ .Để bộ rễ lúa không tổn thương, phải luôn duy trì lớpnước trên mặt ruộng đồng thời có tác dụng cho cây lúa hấp thụ phân bón dễ dàng và ém không cho hạt cỏ dại mọc.  Duy trì lớp nước ở mặt ruộng cho đến khi cây lúa được 20 ngày sau gieo.</Literal>
     </DataPropertyAssertion>
@@ -4234,7 +4241,7 @@ Phải mất khoảng một tuần các hoa trên cùng một bông lúa mới n
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Giai đoạn trổ</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#nhuCauNuocOGiaiDoan"/>
+        <DataProperty IRI="#nhuCauNuoc"/>
         <NamedIndividual IRI="#GiaiDoanTro"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">nhu cầu nước của cây lúa ở thời kỳ chín sáp: 
 Đầu thời kỳ chín sáp tức là sau khi trỗ khoảng 10 ngày, để nước săm sáp mặt ruộng.Đến cuối thời kỳ chín sáp (sautrỗ 20 ngày) bắt đầu rút cạn hết
@@ -4244,7 +4251,7 @@ nước ở mặt ruộng.
 dàng cho thu hoạch.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#nhuCauNuocOGiaiDoan"/>
+        <DataProperty IRI="#nhuCauNuoc"/>
         <NamedIndividual IRI="#GiaiDoanTro"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Ở giai đoạn lúa trỗ, mực nước trong ruộng từ 5-10cm là vừa. Ruộng khô lúa sẽ bị lép nhiều, ruộng ngập nước sâu (trên 20 cm), ảnh hưởng đến trỗ bông, thậm chí bị thối đòng.</Literal>
     </DataPropertyAssertion>
@@ -6005,7 +6012,7 @@ cloruakali.</Literal>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Quy trình bón lót</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#nhuCauNuocOGiaiDoan"/>
+        <DataProperty IRI="#nhuCauNuoc"/>
         <NamedIndividual IRI="#QuyTrinhBonLot"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Là bón phân trước cho ruộng khi gieo, cấy. Có thể bón lót cùng với quá trình làm đất, sau khi bón lót xong, tiến hành bừa đất, phân bón lót trên ruộng sẽ càng đều hơn. Cũng có thể làm đất xong rồi bón lót trước khi cấy.</Literal>
     </DataPropertyAssertion>
@@ -7459,7 +7466,7 @@ Loại máy này cần được khuyến khích, tuy nhiên giá mua máy còn c
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thu Hoạch Lúa</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#thoigianthuhoach"/>
+        <DataProperty IRI="#thoiGianThuHoach"/>
         <NamedIndividual IRI="#ThuHoachLua"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thu hoạch vào lúc sau trỗ 28-32 ngày hoặc khi thấy 85-90% số hạt trên bông đã chín vàng. Nếu cắt sớm hay trễ đều làm tăng tỷ lệ hao hụt.
 
@@ -7924,63 +7931,85 @@ Trà	Đốm lá
         <NamedIndividual IRI="#dibavil_50FL_50_WP"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">7 ngày</Literal>
     </DataPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#benhSuDungThuoc"/>
+        <ObjectProperty IRI="#triBenh"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#coGiaiDoan"/>
+        <ObjectProperty IRI="#coQuyTrinh"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hienTuongBenhSuDungThuoc"/>
+        <ObjectProperty IRI="#triHienTuongBenh"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#tacNhanGayHaiSuDungThuoc"/>
+        <ObjectProperty IRI="#triTacNhanGayHai"/>
+    </InverseObjectProperties>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#CoHienTuong"/>
-        <Class IRI="#Thuoc"/>
+        <ObjectProperty IRI="#benhSuDungThuoc"/>
+        <Class IRI="#Benh"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#coGiaiDoan"/>
-        <Class IRI="#GiaiDoan"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#coQuyTrinh"/>
         <Class IRI="#QuyTrinh"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#coTacNhanGayHai"/>
-        <ObjectUnionOf>
-            <Class IRI="#GiaiDoan"/>
-            <Class IRI="#Thuoc"/>
-        </ObjectUnionOf>
+        <ObjectProperty IRI="#coQuyTrinh"/>
+        <Class IRI="#GiaiDoan"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#coThuoc"/>
-        <ObjectUnionOf>
-            <Class IRI="#Benh"/>
-            <Class IRI="#QuyTrinh"/>
-            <Class IRI="#TacNhanGayHai"/>
-        </ObjectUnionOf>
+        <ObjectProperty IRI="#coTheSuDungThuoc"/>
+        <Class IRI="#QuyTrinh"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#triBenh"/>
+        <Class IRI="#Thuoc"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#triHienTuongBenh"/>
+        <Class IRI="#Thuoc"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#triTacNhanGayHai"/>
+        <Class IRI="#Thuoc"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#xuatHienOGiaiDoan"/>
         <ObjectUnionOf>
             <Class IRI="#Benh"/>
-            <Class IRI="#HienTuong"/>
+            <Class IRI="#HienTuongBenh"/>
             <Class IRI="#TacNhanGayHai"/>
         </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#CoHienTuong"/>
-        <Class IRI="#HienTuong"/>
+        <ObjectProperty IRI="#benhSuDungThuoc"/>
+        <Class IRI="#Thuoc"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#coGiaiDoan"/>
-        <Class IRI="#QuyTrinh"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#coQuyTrinh"/>
         <Class IRI="#GiaiDoan"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#coTacNhanGayHai"/>
-        <ObjectUnionOf>
-            <Class IRI="#Benh"/>
-            <Class IRI="#TacNhanGayHai"/>
-        </ObjectUnionOf>
+        <ObjectProperty IRI="#coQuyTrinh"/>
+        <Class IRI="#QuyTrinh"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#coThuoc"/>
+        <ObjectProperty IRI="#coTheSuDungThuoc"/>
         <Class IRI="#Thuoc"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#triBenh"/>
+        <Class IRI="#Benh"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#triHienTuongBenh"/>
+        <Class IRI="#HienTuongBenh"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#triTacNhanGayHai"/>
+        <Class IRI="#TacNhanGayHai"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#xuatHienOGiaiDoan"/>
@@ -7993,7 +8022,7 @@ Trà	Đốm lá
     <DataPropertyDomain>
         <DataProperty IRI="#bienPhapKhacPhuc"/>
         <ObjectUnionOf>
-            <Class IRI="#HienTuong"/>
+            <Class IRI="#HienTuongBenh"/>
             <Class IRI="#TacNhanGayHai"/>
         </ObjectUnionOf>
     </DataPropertyDomain>
@@ -8008,6 +8037,10 @@ Trà	Đốm lá
     <DataPropertyDomain>
         <DataProperty IRI="#dacDiem"/>
         <Class abbreviatedIRI="owl:Thing"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#dacDiemKichThich"/>
+        <Class IRI="#QuyTrinhKichThich"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#dacTinhCuaThuoc"/>
@@ -8056,7 +8089,7 @@ Trà	Đốm lá
     <DataPropertyDomain>
         <DataProperty IRI="#luongThuoc"/>
         <ObjectUnionOf>
-            <Class IRI="#TacNhanGayHai"/>
+            <Class IRI="#Oc"/>
             <Class IRI="#Thuoc"/>
         </ObjectUnionOf>
     </DataPropertyDomain>
@@ -8077,7 +8110,7 @@ Trà	Đốm lá
         </ObjectUnionOf>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="#nguyenNhan"/>
+        <DataProperty IRI="#nguyenNhanGayBenh"/>
         <Class IRI="#Benh"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
@@ -8085,8 +8118,11 @@ Trà	Đốm lá
         <Class IRI="#Thuoc"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="#nhuCauNuocOGiaiDoan"/>
-        <Class IRI="#GiaiDoan"/>
+        <DataProperty IRI="#nhuCauNuoc"/>
+        <ObjectUnionOf>
+            <Class IRI="#GiaiDoan"/>
+            <Class IRI="#QuyTrinh"/>
+        </ObjectUnionOf>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#thanhPhan"/>
@@ -8101,7 +8137,7 @@ Trà	Đốm lá
         <Class IRI="#Thuoc"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="#thoigianthuhoach"/>
+        <DataProperty IRI="#thoiGianThuHoach"/>
         <ObjectUnionOf>
             <Class IRI="#ThuHoachBaoQuan"/>
             <Class IRI="#VuMua"/>
@@ -8122,7 +8158,7 @@ Trà	Đốm lá
         <DataProperty IRI="#trieuChung"/>
         <ObjectUnionOf>
             <Class IRI="#Benh"/>
-            <Class IRI="#HienTuong"/>
+            <Class IRI="#HienTuongBenh"/>
         </ObjectUnionOf>
     </DataPropertyDomain>
     <DataPropertyDomain>
@@ -8157,6 +8193,10 @@ Trà	Đốm lá
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#dacDiem"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#dacDiemKichThich"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -8211,7 +8251,7 @@ Trà	Đốm lá
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="#nguyenNhan"/>
+        <DataProperty IRI="#nguyenNhanGayBenh"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -8219,7 +8259,7 @@ Trà	Đốm lá
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="#nhuCauNuocOGiaiDoan"/>
+        <DataProperty IRI="#nhuCauNuoc"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -8235,7 +8275,7 @@ Trà	Đốm lá
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="#thoigianthuhoach"/>
+        <DataProperty IRI="#thoiGianThuHoach"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -8275,11 +8315,6 @@ Trà	Đốm lá
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#CoHienTuong</IRI>
-        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">chữa hiện tượng bệnh</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#DacDiem</IRI>
         <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">đặc điểm của sâu</Literal>
     </AnnotationAssertion>
@@ -8310,8 +8345,8 @@ Trà	Đốm lá
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#HienTuong</IRI>
-        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Hiện tượng</Literal>
+        <IRI>#HienTuongBenh</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Hiện tượng bệnh</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -8446,7 +8481,7 @@ Trà	Đốm lá
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#ThuocBenhHai</IRI>
-        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thuộc Trị Bệnh Hại</Literal>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thuốc trị bệnh</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -8456,7 +8491,7 @@ Trà	Đốm lá
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#ThuocSauHai</IRI>
-        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thuốc trị sâu hại lúa</Literal>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thuốc diệt sâu hại</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -8494,6 +8529,16 @@ Trà	Đốm lá
         <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">bài viết</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#benhSuDungThuoc</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">{0} được chữa bởi thuốc {1}.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#benhSuDungThuoc</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">bệnh sử dụng thuốc</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#bienPhapKhacPhuc</IRI>
         <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">biện pháp khắc phục</Literal>
@@ -8509,11 +8554,6 @@ Trà	Đốm lá
         <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">chất lượng gạo</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#coGiaiDoan</IRI>
-        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">xuất hiện ở giai đoạn</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#coGiaiDoan</IRI>
         <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">có giai đoạn</Literal>
@@ -8524,24 +8564,9 @@ Trà	Đốm lá
         <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">có quy trình</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#coTacNhanGayHai</IRI>
-        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">trị các loại tác nhân gây hại như</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#coTacNhanGayHai</IRI>
-        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">có tác nhân gây hại</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#coThuoc</IRI>
-        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">được chữa bởi thuốc</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#coThuoc</IRI>
-        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">có thuốc</Literal>
+        <IRI>#coTheSuDungThuoc</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">có thể sử dụng thuốc</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -8551,7 +8576,7 @@ Trà	Đốm lá
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#dacDiemKichThich</IRI>
-        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Đặc điểm kích thích</Literal>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">đặc điểm kích thích</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -8575,8 +8600,18 @@ Trà	Đốm lá
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hienTuongBenhSuDungThuoc</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">{0} được chữa bởi thuốc {1}.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hienTuongBenhSuDungThuoc</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hiện tượng bệnh sử dụng thuốc</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#image</IRI>
-        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Hình ảnh liên quan đến</Literal>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Hình ảnh liên quan đến {0}.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -8599,9 +8634,14 @@ Trà	Đốm lá
         <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">lượng phân bón</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#luongThuoc</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Liều lượng thuốc được sử dụng cho {0}.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#luongThuoc</IRI>
-        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">lượng thuốc được sử dụng</Literal>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">lượng thuốc</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -8620,8 +8660,8 @@ Trà	Đốm lá
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#nguyenNhan</IRI>
-        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Nguyên Nhân Gây Bệnh</Literal>
+        <IRI>#nguyenNhanGayBenh</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">nguyên nhân gây bệnh</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -8630,8 +8670,18 @@ Trà	Đốm lá
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#nhuCauNuocOGiaiDoan</IRI>
-        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">nhu cầu nước ở giai đoạn</Literal>
+        <IRI>#nhuCauNuoc</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">nhu cầu nước</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#tacNhanGayHaiSuDungThuoc</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">{0} được chữa bởi thuốc {1}.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#tacNhanGayHaiSuDungThuoc</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">tác nhân gây hại sử dụng thuốc</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -8650,7 +8700,7 @@ Trà	Đốm lá
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#thoigianthuhoach</IRI>
+        <IRI>#thoiGianThuHoach</IRI>
         <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thời gian thu hoạch</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
@@ -8660,8 +8710,28 @@ Trà	Đốm lá
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#triBenh</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">trị bệnh</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#triHienTuongBenh</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">trị hiện tượng bệnh</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#triSauBenhHai</IRI>
         <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">trị sâu bệnh hại</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#triTacNhanGayHai</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">{0} trị các loại tác nhân gây hại như {1}.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#triTacNhanGayHai</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">trị tác nhân gây hại</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

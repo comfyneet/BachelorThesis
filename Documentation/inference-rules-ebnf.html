@@ -2,19 +2,21 @@
 <html>
 <head>
    <meta charset="UTF-8">
-   <title>EBNF definition of Logic Rules</title>
+   <title>EBNF definition of Inference Rules</title>
    <style>
-   code {
-     color: red;
-	 font-weight: bold;
-   }
+     code {
+       color: red;
+       font-weight: bold;
+     }
    </style>
 </head>
 
 <body>
-   <h3>EBNF definition of Logic Rules</h3>
+   <h3>EBNF definition of Inference Rules</h3>
    
-   <p>logic-rules = logic-rule { logic-rule }</p>
+   <p>inference-rules = inference-rule { inference-rule }</p>
+   <p>inference-rule = relation-rule | logic-rule</p>
+   <p>relation-rule = class-name <code>-&gt;</code> class-name <code>;</code></p>
    <p>logic-rule = expression <code>-&gt;</code> conclusions [ <code>{</code> certainty-factor <code>}</code> ] <code>;</code></p>
    <p>expression = term [ <code>|</code> term ]</p>
    <p>term = factor [ <code>&amp;</code> factor ]</p>

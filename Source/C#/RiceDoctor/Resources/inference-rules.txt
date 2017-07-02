@@ -1,4 +1,10 @@
-﻿Dat=Test_DuplicateHypothesis & Dat=Test_DuplicateHypothesis -> Dat=Test_Conclusion {0};
+﻿Benh -> Thuoc;
+TacNhanGayHai -> Thuoc;
+HienTuongBenh -> Thuoc;
+Thuoc -> Benh;
+Thuoc -> TacNhanGayHai;
+Thuoc -> HienTuongBenh;
+Dat=Test_DuplicateHypothesis & Dat=Test_DuplicateHypothesis -> Dat=Test_Conclusion {0};
 Dat=Test_Hypothesis -> Dat=Test_DuplicateConclusion & Dat=Test_DuplicateConclusion {0};
 Dat=Test_Duplicate & Dat=Test_Hypothesis -> Dat=Test_Duplicate & Dat=Test_Conclusion {0};
 Dat=Test_Hypothesis -> Dat=Test_Conclusion {0};

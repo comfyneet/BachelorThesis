@@ -16,7 +16,7 @@ namespace RiceDoctor.RuleManager
 
         public abstract override string ToString();
 
-        public abstract string GetLabel();
+        //public abstract string GetLabel();
 
         public static bool operator ==(Fact fact1, Fact fact2)
         {
