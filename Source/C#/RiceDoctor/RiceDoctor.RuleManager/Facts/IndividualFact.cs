@@ -65,17 +65,18 @@ namespace RiceDoctor.RuleManager
         {
             return $"{Name}={Value}";
         }
-        //}
 
-        //    return _label ?? ToString();
-        //    }
-        //        _canGetLabel = true;
-        //        if (individual != null) _label = individual.ToString();
-        //        var individual = OntologyManager.Manager.Instance.GetIndividual(Value);
-        //    {
-        //    if (!_canGetLabel)
-        //{
+        public override string ToLabelString()
+        {
+            if (!_canGetLabel)
+            {
+                var individual = OntologyManager.Manager.Instance.GetIndividual(Value);
+                if (individual != null) _label = individual.ToString();
 
-        //public override string GetLabel()
+                _canGetLabel = true;
+            }
+
+            return _label ?? ToString();
+        }
     }
 }

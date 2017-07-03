@@ -28,9 +28,9 @@ namespace RiceDoctor.OntologyManager
         GetIndividual,
         GetIndividuals,
         GetIndividualClasses,
-        GetIndividualNames,
         GetRelationValue,
         GetRelationValues,
-        GetAttributeValues
+        GetAttributeValues,
+        GetAttributeValuesByAttributeName
     }
 }

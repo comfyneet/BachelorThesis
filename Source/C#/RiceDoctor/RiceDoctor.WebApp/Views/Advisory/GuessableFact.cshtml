@@ -16,7 +16,7 @@
             {
                 <div class="form-group">
                     <label>
-                        Sự kiện <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@guessableFacts[i].Value">@guessableFacts[i].GetLabel()</a> có tồn tại không?
+                        Sự kiện <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@guessableFacts[i].Value">@guessableFacts[i].ToLabelString()</a> có tồn tại không?
                     </label>
                     <input type="hidden" name="guessableFacts[@i].ClassName" value="@guessableFacts[i].Name"/>
                     <input type="hidden" name="guessableFacts[@i].IndividualName" value="@guessableFacts[i].Value"/>

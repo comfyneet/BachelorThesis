@@ -60,9 +60,6 @@ public enum RequestType {
     @SerializedName("GetIndividualClasses")
     GET_INDIVIDUAL_CLASSES,
 
-    @SerializedName("GetIndividualNames")
-    GET_INDIVIDUAL_NAMES,
-
     @SerializedName("GetRelationValue")
     GET_RELATION_VALUE,
 
@@ -70,5 +67,8 @@ public enum RequestType {
     GET_RELATION_VALUES,
 
     @SerializedName("GetAttributeValues")
-    GET_ATTRIBUTE_VALUES
+    GET_ATTRIBUTE_VALUES,
+
+    @SerializedName("GetAttributeValuesByAttributeName")
+    GET_ATTRIBUTE_VALUES_BY_ATTRIBUTE_NAME,
 }

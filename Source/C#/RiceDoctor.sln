@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RiceDoctor.InferenceEngine"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RiceDoctor.RuleManager", "RiceDoctor\RiceDoctor.RuleManager\RiceDoctor.RuleManager.csproj", "{18F630C8-F9CC-4D98-AA21-0364646E8BDA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RiceDoctor.SemanticCode", "RiceDoctor\RiceDoctor.SemanticCode\RiceDoctor.SemanticCode.csproj", "{F761B5B4-16E0-4610-839D-980B7C998571}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RiceDoctor.SemanticCodeInterpreter", "RiceDoctor\RiceDoctor.SemanticCodeInterpreter\RiceDoctor.SemanticCodeInterpreter.csproj", "{F761B5B4-16E0-4610-839D-980B7C998571}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RiceDoctor.OntologyManager", "RiceDoctor\RiceDoctor.OntologyManager\RiceDoctor.OntologyManager.csproj", "{0B8956B7-53AA-4944-B264-81321984C98F}"
 EndProject
@@ -43,11 +43,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CompleteInferenceTests", "C
 		RiceDoctor\Resources\Tests\CompleteInferenceTests\5.out.json = RiceDoctor\Resources\Tests\CompleteInferenceTests\5.out.json
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RiceDoctor.QueryManager", "RiceDoctor\RiceDoctor.QueryManager\RiceDoctor.QueryManager.csproj", "{C5BB91D9-CBDB-452B-A66C-65996E86D44E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RiceDoctor.QueryAnalysis", "RiceDoctor\RiceDoctor.QueryAnalysis\RiceDoctor.QueryAnalysis.csproj", "{C5BB91D9-CBDB-452B-A66C-65996E86D44E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RiceDoctor.FuzzyManager", "RiceDoctor\RiceDoctor.FuzzyManager\RiceDoctor.FuzzyManager.csproj", "{7BB428FA-EFD8-4A3A-9755-7AE990881E8B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RiceDoctor.InformationRetrieval", "RiceDoctor\RiceDoctor.InformationRetrieval\RiceDoctor.InformationRetrieval.csproj", "{67B46D31-F692-443F-9D5F-9AE69A283602}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RiceDoctor.RetrievalAnalysis", "RiceDoctor\RiceDoctor.RetrievalAnalysis\RiceDoctor.RetrievalAnalysis.csproj", "{67B46D31-F692-443F-9D5F-9AE69A283602}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RiceDoctor.DatabaseManager", "RiceDoctor\RiceDoctor.DatabaseManager\RiceDoctor.DatabaseManager.csproj", "{0EC88602-72EB-4CC3-98C9-EA68664E593B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,6 +101,10 @@ Global
 		{67B46D31-F692-443F-9D5F-9AE69A283602}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67B46D31-F692-443F-9D5F-9AE69A283602}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67B46D31-F692-443F-9D5F-9AE69A283602}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EC88602-72EB-4CC3-98C9-EA68664E593B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EC88602-72EB-4CC3-98C9-EA68664E593B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EC88602-72EB-4CC3-98C9-EA68664E593B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EC88602-72EB-4CC3-98C9-EA68664E593B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

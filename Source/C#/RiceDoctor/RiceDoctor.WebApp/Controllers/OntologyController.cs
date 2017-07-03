@@ -5,7 +5,7 @@ using System.Text;
 using JetBrains.Annotations;
 using Microsoft.AspNetCore.Mvc;
 using RiceDoctor.OntologyManager;
-using RiceDoctor.SemanticCode;
+using RiceDoctor.SemanticCodeInterpreter;
 using RiceDoctor.Shared;
 using Attribute = RiceDoctor.OntologyManager.Attribute;
 
@@ -13,12 +13,17 @@ namespace RiceDoctor.WebApp.Controllers
 {
     public class OntologyController : Controller
     {
-        private readonly IOntologyManager _ontologyManager;
+        [NotNull] private readonly IOntologyManager _ontologyManager;
+        [NotNull] private readonly ISemanticCodeInterpreter _semanticCodeInterpreter;
 
-        public OntologyController([FromServices] [NotNull] IOntologyManager ontologyManager)
+        public OntologyController(
+            [FromServices] [NotNull] ISemanticCodeInterpreter semanticCodeInterpreter,
+            [FromServices] [NotNull] IOntologyManager ontologyManager)
         {
+            Check.NotNull(semanticCodeInterpreter, nameof(semanticCodeInterpreter));
             Check.NotNull(ontologyManager, nameof(ontologyManager));
 
+            _semanticCodeInterpreter = semanticCodeInterpreter;
             _ontologyManager = ontologyManager;
         }
 
@@ -29,7 +34,7 @@ namespace RiceDoctor.WebApp.Controllers
 
         public IActionResult Class(string className, bool showAdvance = false)
         {
-            className = string.IsNullOrWhiteSpace(className) ? "Thing" : className.Trim();
+            className = string.IsNullOrWhiteSpace(className) ? _ontologyManager.ThingClassId : className.Trim();
 
             var @class = _ontologyManager.GetClass(className);
             if (@class == null)
@@ -100,7 +105,7 @@ namespace RiceDoctor.WebApp.Controllers
                         av.Value.Select(v =>
                         {
                             if (av.Key.Id == "image" || av.Key.Id == "name") return v;
-                            return SemanticParser.Parse(v);
+                            return _semanticCodeInterpreter.Parse(v);
                         }).ToList()))
                     .ToDictionary(av => av.Key, av => av.Value);
             }
@@ -121,7 +126,7 @@ namespace RiceDoctor.WebApp.Controllers
                     foreach (var pair in attributeValues)
                     {
                         if (pair.Key.Id != "article") continue;
-                        ViewData["Article"] = SemanticParser.Parse(pair.Value.First());
+                        ViewData["Article"] = _semanticCodeInterpreter.Parse(pair.Value.First());
                         return View(individual);
                     }
             }
@@ -165,7 +170,7 @@ namespace RiceDoctor.WebApp.Controllers
             Check.NotNull(superClassesTree, nameof(superClassesTree));
             Check.NotNull(builder, nameof(builder));
 
-            if (@class.Id == "Thing") GetCurrentClassTree(@class, builder);
+            if (@class.Id == _ontologyManager.ThingClassId) GetCurrentClassTree(@class, builder);
             if (superClassesTree.Count == 0) return;
 
             var superClass = superClassesTree[0].First();

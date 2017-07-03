@@ -24,7 +24,7 @@ namespace RiceDoctor.Shared
         {
             Check.NotEmpty(text, nameof(text));
 
-            _text = text.Trim();
+            _text = text;
             _pos = 0;
             CurrentChar = _text[_pos];
             _tokens = new List<Token>();

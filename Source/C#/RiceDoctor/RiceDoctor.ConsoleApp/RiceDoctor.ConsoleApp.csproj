@@ -6,13 +6,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="HtmlAgilityPack" Version="1.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RiceDoctor.DatabaseManager\RiceDoctor.DatabaseManager.csproj" />
     <ProjectReference Include="..\RiceDoctor.FuzzyManager\RiceDoctor.FuzzyManager.csproj" />
     <ProjectReference Include="..\RiceDoctor.InferenceEngine\RiceDoctor.InferenceEngine.csproj" />
-    <ProjectReference Include="..\RiceDoctor.InformationRetrieval\RiceDoctor.InformationRetrieval.csproj" />
     <ProjectReference Include="..\RiceDoctor.OntologyManager\RiceDoctor.OntologyManager.csproj" />
-    <ProjectReference Include="..\RiceDoctor.QueryManager\RiceDoctor.QueryManager.csproj" />
+    <ProjectReference Include="..\RiceDoctor.QueryAnalysis\RiceDoctor.QueryAnalysis.csproj" />
+    <ProjectReference Include="..\RiceDoctor.RetrievalAnalysis\RiceDoctor.RetrievalAnalysis.csproj" />
     <ProjectReference Include="..\RiceDoctor.RuleManager\RiceDoctor.RuleManager.csproj" />
-    <ProjectReference Include="..\RiceDoctor.SemanticCode\RiceDoctor.SemanticCode.csproj" />
+    <ProjectReference Include="..\RiceDoctor.SemanticCodeInterpreter\RiceDoctor.SemanticCodeInterpreter.csproj" />
     <ProjectReference Include="..\RiceDoctor.Shared\RiceDoctor.Shared.csproj" />
   </ItemGroup>
 

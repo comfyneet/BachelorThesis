@@ -7,8 +7,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using RiceDoctor.FuzzyManager;
 using RiceDoctor.OntologyManager;
-using RiceDoctor.QueryManager;
+using RiceDoctor.QueryAnalysis;
 using RiceDoctor.RuleManager;
+using RiceDoctor.SemanticCodeInterpreter;
 using Manager = RiceDoctor.OntologyManager.Manager;
 
 namespace RiceDoctor.WebApp
@@ -35,6 +36,8 @@ namespace RiceDoctor.WebApp
             services.AddDistributedMemoryCache();
             services.AddSession();
 
+            services.AddSingleton<ISemanticCodeInterpreter>(new Interpreter());
+
             services.AddSingleton<IOntologyManager>(Manager.Instance);
 
             var problemData = File.ReadAllText(Path.Combine(AppContext.BaseDirectory,
@@ -45,7 +48,7 @@ namespace RiceDoctor.WebApp
 
             var queryData = File.ReadAllText(Path.Combine(AppContext.BaseDirectory,
                 @"..\..\..\..\Resources\query-rules.txt"));
-            services.AddSingleton<IQueryManager>(new QueryManager.Manager(queryData));
+            services.AddSingleton<IQueryAnalyzer>(new Analyzer(queryData));
 
             var fuzzyData = File.ReadAllText(Path.Combine(AppContext.BaseDirectory,
                 @"..\..\..\..\Resources\fuzzy-model.txt"));

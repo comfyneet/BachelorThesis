@@ -32,12 +32,16 @@ public class OntologyManager {
 
     @NotNull
     private static final Logger LOGGER = Logger.getLogger(OntologyManager.class.getName());
+
     @NotNull
     private static final String DEFAULT_LANG = "vi";
+
     @NotNull
     private static final String NAME_ATTRIBUTE = "name";
+
     @NotNull
     private final Gson gson;
+
     @NotNull
     private final OWLDataFactory factory;
 
@@ -137,9 +141,6 @@ public class OntologyManager {
                 case GET_INDIVIDUAL_CLASSES:
                     response = parseIndividualClasses(data);
                     break;
-                case GET_INDIVIDUAL_NAMES:
-                    response = parseIndividualNames(data);
-                    break;
                 case GET_RELATION_VALUE:
                     response = parseRelationValue(data);
                     break;
@@ -148,6 +149,9 @@ public class OntologyManager {
                     break;
                 case GET_ATTRIBUTE_VALUES:
                     response = parseAttributeValues(data);
+                    break;
+                case GET_ATTRIBUTE_VALUES_BY_ATTRIBUTE_NAME:
+                    response = parseAttributeValuesByAttributeName(data);
                     break;
                 default:
                     response = new Response.Builder(FAIL).message("Unknown request query type \"" + gson.toJson(type, RequestType.class) + "\".").build();
@@ -650,38 +654,6 @@ public class OntologyManager {
         return builder.build();
     }
 
-
-    @NotNull
-    private Response parseIndividualNames(@NotNull final Map<String, Object> data) {
-        final String individualName = (String) data.get("Individual");
-        final GetType getClassType = gson.fromJson((String) data.get("GetClassType"), GetType.class);
-
-        final OWLNamedIndividual owlIndividual = getOWLIndividual(individualName);
-
-        final Response.Builder builder;
-        if (owlIndividual == null) {
-            builder = new Response.Builder(FAIL);
-            builder.message("Individual \"" + individualName + "\" not found.");
-        } else {
-            final List<String> names = new ArrayList<>();
-
-            final OWLDataProperty owlAttribute = factory.getOWLDataProperty(IRI.create(prefix, NAME_ATTRIBUTE));
-            final Set<OWLLiteral> owlLiterals = reasoner.getDataPropertyValues(owlIndividual, owlAttribute);
-            for (final OWLLiteral owlLiteral : owlLiterals)
-                names.add(owlLiteral.getLiteral());
-
-            if (names.isEmpty()) {
-                builder = new Response.Builder(FAIL);
-                builder.message("Names of \"" + individualName + "\" not found.");
-            } else {
-                builder = new Response.Builder(SUCCESS);
-                builder.data("IndividualNames", names);
-            }
-        }
-
-        return builder.build();
-    }
-
     @NotNull
     private Response parseRelationValue(@NotNull final Map<String, Object> data) {
         final String individualName = (String) data.get("Individual");
@@ -756,6 +728,37 @@ public class OntologyManager {
             } else {
                 builder = new Response.Builder(SUCCESS);
                 builder.data("AttributeValues", attributeValues);
+            }
+        }
+
+        return builder.build();
+    }
+
+    @NotNull
+    private Response parseAttributeValuesByAttributeName(@NotNull final Map<String, Object> data) {
+        final String individualName = (String) data.get("Individual");
+        final String attributeName = (String) data.get("Attribute");
+
+        final OWLNamedIndividual owlIndividual = getOWLIndividual(individualName);
+
+        final Response.Builder builder;
+        if (owlIndividual == null) {
+            builder = new Response.Builder(FAIL);
+            builder.message("Individual \"" + individualName + "\" not found.");
+        } else {
+            final List<String> values = new ArrayList<>();
+
+            final OWLDataProperty owlAttribute = factory.getOWLDataProperty(IRI.create(prefix, attributeName));
+            final Set<OWLLiteral> owlLiterals = reasoner.getDataPropertyValues(owlIndividual, owlAttribute);
+            for (final OWLLiteral owlLiteral : owlLiterals)
+                values.add(owlLiteral.getLiteral());
+
+            if (values.isEmpty()) {
+                builder = new Response.Builder(FAIL);
+                builder.message("Attribute \"" + attributeName + "\" values of \"" + individualName + "\" not found.");
+            } else {
+                builder = new Response.Builder(SUCCESS);
+                builder.data("AttributeValues", values);
             }
         }
 

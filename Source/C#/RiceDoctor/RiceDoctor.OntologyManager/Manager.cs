@@ -415,25 +415,6 @@ namespace RiceDoctor.OntologyManager
             return classes;
         }
 
-        public IReadOnlyCollection<string> GetIndividualNames(string individualName)
-        {
-            Check.NotEmpty(individualName, nameof(individualName));
-
-            var data = new Dictionary<string, object> {{"Individual", individualName}};
-            var request = new Request(RequestType.GetIndividualNames, data);
-
-            var response = Send(request);
-            if (response.Status != Success) return null;
-
-            var jsonIndividualNames = (JArray) response.Data["IndividualNames"];
-            var individualNames = jsonIndividualNames
-                .Select(name => name.ToString())
-                .OrderBy(name => name)
-                .ToList();
-
-            return individualNames;
-        }
-
         public IReadOnlyCollection<Individual> GetRelationValue(
             string individualName,
             string relationName)
@@ -506,6 +487,38 @@ namespace RiceDoctor.OntologyManager
 
             return attributeValues;
         }
+
+        public IReadOnlyCollection<string> GetAttributeValuesByAttributeName(
+            string individualName,
+            string attributeName)
+        {
+            Check.NotEmpty(individualName, nameof(individualName));
+            Check.NotEmpty(attributeName, nameof(attributeName));
+
+            var data = new Dictionary<string, object>
+            {
+                {"Individual", individualName},
+                {"Attribute", attributeName}
+            };
+            var request = new Request(RequestType.GetAttributeValuesByAttributeName, data);
+
+            var response = Send(request);
+            if (response.Status != Success) return null;
+
+            var jsonIndividualNames = (JArray) response.Data["AttributeValues"];
+            var individualNames = jsonIndividualNames
+                .Select(name => name.ToString())
+                .OrderBy(name => name)
+                .ToList();
+
+            return individualNames;
+        }
+
+        public string ThingClassId => "Thing";
+
+        public string NameAttributeId => "name";
+
+        public string TermAttributeId => "term";
 
         [NotNull]
         private Response Send([NotNull] Request request)

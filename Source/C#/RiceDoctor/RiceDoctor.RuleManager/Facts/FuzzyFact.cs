@@ -1,11 +1,15 @@
 ﻿using System.Globalization;
 using JetBrains.Annotations;
+using Newtonsoft.Json;
 using RiceDoctor.Shared;
 
 namespace RiceDoctor.RuleManager
 {
     public class FuzzyFact : Fact
     {
+        private bool _canGetLabel;
+        [CanBeNull] private string _label;
+
         public FuzzyFact([NotNull] string variableName, double value)
         {
             Check.NotEmpty(variableName, nameof(variableName));
@@ -17,8 +21,10 @@ namespace RiceDoctor.RuleManager
 
         public double NumberValue { get; }
 
+        [JsonProperty(PropertyName = "variableName")]
         public override string Name { get; }
 
+        [JsonProperty(PropertyName = "value")]
         public override string Value { get; }
 
         public bool Equals(FuzzyFact other)
@@ -60,6 +66,19 @@ namespace RiceDoctor.RuleManager
         public override string ToString()
         {
             return $"{Name}={Value}";
+        }
+
+        public override string ToLabelString()
+        {
+            if (!_canGetLabel)
+            {
+                var cls = OntologyManager.Manager.Instance.GetClass(Name);
+                if (cls != null) _label = $"{cls}={Value}";
+
+                _canGetLabel = true;
+            }
+
+            return _label ?? ToString();
         }
     }
 }

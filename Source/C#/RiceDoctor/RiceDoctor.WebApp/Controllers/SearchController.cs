@@ -2,10 +2,11 @@ using System.Collections.Generic;
 using System.Linq;
 using JetBrains.Annotations;
 using Microsoft.AspNetCore.Mvc;
-using RiceDoctor.InformationRetrieval;
 using RiceDoctor.OntologyManager;
-using RiceDoctor.QueryManager;
+using RiceDoctor.QueryAnalysis;
+using RiceDoctor.RetrievalAnalysis;
 using RiceDoctor.Shared;
+using RiceDoctor.WebApp.Models;
 using static RiceDoctor.OntologyManager.GetType;
 
 namespace RiceDoctor.WebApp.Controllers
@@ -13,22 +14,22 @@ namespace RiceDoctor.WebApp.Controllers
     public class SearchController : Controller
     {
         private readonly IOntologyManager _ontologyManager;
-        private readonly IQueryManager _queryManager;
+        private readonly IQueryAnalyzer _queryAnalyzer;
 
         public SearchController(
             [FromServices] [NotNull] IOntologyManager ontologyManager,
-            [FromServices] [NotNull] IQueryManager queryManager)
+            [FromServices] [NotNull] IQueryAnalyzer queryAnalyzer)
         {
             Check.NotNull(ontologyManager, nameof(ontologyManager));
-            Check.NotNull(queryManager, nameof(queryManager));
+            Check.NotNull(queryAnalyzer, nameof(queryAnalyzer));
 
             _ontologyManager = ontologyManager;
-            _queryManager = queryManager;
+            _queryAnalyzer = queryAnalyzer;
         }
 
         public IActionResult Index(string keywords)
         {
-            IReadOnlyDictionary<object, double> SearchClasses(string term)
+            IReadOnlyDictionary<IAnalyzable, double> SearchClasses(string term)
             {
                 var classes = _ontologyManager.GetSubClasses("Thing", GetAll);
                 var tmpResultClasses = new Dictionary<Class, double>();
@@ -44,11 +45,11 @@ namespace RiceDoctor.WebApp.Controllers
 
                 var resultClasses = tmpResultClasses
                     .OrderByDescending(c => c.Value)
-                    .ToDictionary(c => (object) c.Key, c => c.Value);
+                    .ToDictionary(c => (IAnalyzable) c.Key, c => c.Value);
                 return resultClasses.Count == 0 ? null : resultClasses;
             }
 
-            IReadOnlyDictionary<object, double> SearchIndividuals(string term)
+            IReadOnlyDictionary<IAnalyzable, double> SearchIndividuals(string term)
             {
                 var individuals = _ontologyManager.GetIndividuals();
                 var tmpResultIndividuals = new Dictionary<Individual, double>();
@@ -68,48 +69,8 @@ namespace RiceDoctor.WebApp.Controllers
 
                 var resultIndividuals = tmpResultIndividuals
                     .OrderByDescending(i => i.Value)
-                    .ToDictionary(i => (object) i.Key, i => i.Value);
+                    .ToDictionary(i => (IAnalyzable) i.Key, i => i.Value);
                 return resultIndividuals.Count == 0 ? null : resultIndividuals;
-            }
-
-            IReadOnlyDictionary<object, double> SearchRelations(string term)
-            {
-                var relations = _ontologyManager.GetRelations();
-                var tmpRelationResults = new Dictionary<Relation, double>();
-                foreach (var relation in relations)
-                {
-                    var distance = 0.0;
-                    if (relation.Label != null)
-                        distance = DiceCoefficient.Distance(relation.Label.ToLower().RemoveAccents(), term);
-                    var idDistance = DiceCoefficient.Distance(relation.Id.ToLower().RemoveAccents(), term);
-                    if (idDistance > distance) distance = idDistance;
-                    if (distance > 0) tmpRelationResults.Add(relation, distance);
-                }
-
-                var resultRelations = tmpRelationResults
-                    .OrderByDescending(r => r.Value)
-                    .ToDictionary(r => (object) r.Key, r => r.Value);
-                return resultRelations.Count == 0 ? null : resultRelations;
-            }
-
-            IReadOnlyDictionary<object, double> SearchAttributes(string term)
-            {
-                var attributes = _ontologyManager.GetAttributes();
-                var tmpAttributeResults = new Dictionary<Attribute, double>();
-                foreach (var attribute in attributes)
-                {
-                    var distance = 0.0;
-                    if (attribute.Label != null)
-                        distance = DiceCoefficient.Distance(attribute.Label.ToLower().RemoveAccents(), term);
-                    var idDistance = DiceCoefficient.Distance(attribute.Id.ToLower().RemoveAccents(), term);
-                    if (idDistance > distance) distance = idDistance;
-                    if (distance > 0) tmpAttributeResults.Add(attribute, distance);
-                }
-
-                var resultAttributes = tmpAttributeResults
-                    .OrderByDescending(a => a.Value)
-                    .ToDictionary(a => (object) a.Key, a => a.Value);
-                return resultAttributes.Count == 0 ? null : resultAttributes;
             }
 
             if (string.IsNullOrWhiteSpace(keywords)) return RedirectToAction("Index", "Home");
@@ -117,50 +78,27 @@ namespace RiceDoctor.WebApp.Controllers
 
             ViewData["Keywords"] = keywords;
 
-            var results = new Dictionary<string, List<KeyValuePair<QueryType, IReadOnlyDictionary<object, double>>>>();
+            var results =
+                new Dictionary<string, List<KeyValuePair<SearchableType, IReadOnlyDictionary<IAnalyzable, double>>>>();
 
-            foreach (var query in _queryManager.Queries)
+            foreach (var query in _queryAnalyzer.Queries)
             {
                 var terms = query.Match(keywords);
                 if (terms == null) continue;
 
-                for (var i = 0; i < terms.Count; ++i)
+                foreach (var term in terms)
                 {
-                    if (!results.ContainsKey(terms[i]))
-                        results.Add(terms[i], new List<KeyValuePair<QueryType, IReadOnlyDictionary<object, double>>>());
+                    if (!results.ContainsKey(term))
+                        results.Add(term,
+                            new List<KeyValuePair<SearchableType, IReadOnlyDictionary<IAnalyzable, double>>>());
 
-                    var resultTypes = query.ResultTypes[i];
-                    foreach (var resultType in resultTypes)
-                        switch (resultType)
-                        {
-                            case QueryType.Class:
-                                results[terms[i]].Add(
-                                    new KeyValuePair<QueryType, IReadOnlyDictionary<object, double>>(
-                                        QueryType.Class,
-                                        SearchClasses(terms[i])));
-                                break;
+                    results[term]
+                        .Add(new KeyValuePair<SearchableType, IReadOnlyDictionary<IAnalyzable, double>>(
+                            SearchableType.Class, SearchClasses(term)));
 
-                            case QueryType.Individual:
-                                results[terms[i]].Add(
-                                    new KeyValuePair<QueryType, IReadOnlyDictionary<object, double>>(
-                                        QueryType.Individual,
-                                        SearchIndividuals(terms[i])));
-                                break;
-
-                            case QueryType.Relation:
-                                results[terms[i]].Add(
-                                    new KeyValuePair<QueryType, IReadOnlyDictionary<object, double>>(
-                                        QueryType.Relation,
-                                        SearchRelations(terms[i])));
-                                break;
-
-                            case QueryType.Attribute:
-                                results[terms[i]].Add(
-                                    new KeyValuePair<QueryType, IReadOnlyDictionary<object, double>>(
-                                        QueryType.Attribute,
-                                        SearchAttributes(terms[i])));
-                                break;
-                        }
+                    results[term]
+                        .Add(new KeyValuePair<SearchableType, IReadOnlyDictionary<IAnalyzable, double>>(
+                            SearchableType.Individual, SearchIndividuals(term)));
                 }
 
                 break;

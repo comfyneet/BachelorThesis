@@ -47,10 +47,10 @@
         <Class IRI="#ThuHoachBaoQuan"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <NamedIndividual IRI="#KhongNuoc"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#KhongNuoc"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#BenhDomVang"/>
@@ -92,10 +92,10 @@
         <NamedIndividual IRI="#CoSau"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#OcChery"/>
+        <NamedIndividual IRI="#BeThoi"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#BeThoi"/>
+        <NamedIndividual IRI="#OcChery"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#dacDiemKichThich"/>
@@ -161,6 +161,9 @@
         <NamedIndividual IRI="#BenhKhoVan"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#term"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#dandy_15_EC"/>
     </Declaration>
     <Declaration>
@@ -179,10 +182,10 @@
         <Class IRI="#ThuocKichThich"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#ReKho"/>
+        <NamedIndividual IRI="#PhanHonHop"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#PhanHonHop"/>
+        <NamedIndividual IRI="#ReKho"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ChauChau"/>
@@ -257,10 +260,10 @@
         <NamedIndividual IRI="#ThuHoachLua"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#BenhHoaCuc"/>
+        <ObjectProperty IRI="#coTheSuDungThuoc"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#coTheSuDungThuoc"/>
+        <NamedIndividual IRI="#BenhHoaCuc"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#LaUa"/>
@@ -335,10 +338,10 @@
         <NamedIndividual IRI="#QuyTrinhBonThucDot1"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#QuyTrinhKichThich"/>
+        <NamedIndividual IRI="#GiongDV108"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#GiongDV108"/>
+        <Class IRI="#QuyTrinhKichThich"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#MuaIt"/>
@@ -599,10 +602,10 @@
         <NamedIndividual IRI="#DatKho"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Dat"/>
+        <NamedIndividual IRI="#BenhTungo"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#BenhTungo"/>
+        <Class IRI="#Dat"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ReNgan"/>
@@ -857,10 +860,10 @@
         <NamedIndividual IRI="#BoTri"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Benh"/>
+        <Class IRI="#HinhDangBong"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#HinhDangBong"/>
+        <Class IRI="#Benh"/>
     </Declaration>
     <Declaration>
         <Class IRI="#TrungSau"/>
@@ -4001,6 +4004,11 @@ Giai đoạn chín hoàn toàn khi ta nhận thấy vỏ trấu từ màu vàng 
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Giai đoạn chín</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#term"/>
+        <NamedIndividual IRI="#GiaiDoanChin"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">chín</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#tuNgay"/>
         <NamedIndividual IRI="#GiaiDoanChin"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">60</Literal>
@@ -4043,6 +4051,11 @@ Theo Nguyễn Ngọc Đệ (2008), thông thường số chồi hình thành bô
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Giai đoạn đẻ nhánh</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#term"/>
+        <NamedIndividual IRI="#GiaiDoanDeNhanh"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">đẻ nhánh</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#tuNgay"/>
         <NamedIndividual IRI="#GiaiDoanDeNhanh"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">10</Literal>
@@ -4080,6 +4093,11 @@ Gieo cấy, trồng lúa
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Hạt giống mới được gieo xuống ruộng  cho đến 2-3 ngày sau gieo (hình
 3.20b), ruộng chỉ cần độ ẩm bão hòa. Bị ngập nước ở giai đoạn này còn ảnh hưởng
 xấu đến quá trình mọc mầm của hạt, thậm chí mầm không mọc được.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#term"/>
+        <NamedIndividual IRI="#GiaiDoanGieo"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">gieo</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#tuNgay"/>
@@ -4123,6 +4141,11 @@ Hiện nay do thời tiết ngày nắng, đêm lạnh nhiều nên các loại 
 Nước ngập sâu cây lúa đẻ nhánh yếu.
 lúa trong giai đoạn đẻ nhánh: Mực nước trong ruộng từ 3-5cm
 lúa sau giai đoạn đẻ nhánh: Từ 30-40 ngày sau sạ (hình 3.28), tức là sau giai đoạn đẻ nhánh. Lúc này để ruộng cạn, mặt ruộng không có nước, ruộng lúa khô ráo, thông thoáng,các lá già bên dưới khô, ít bị bệnh</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#term"/>
+        <NamedIndividual IRI="#GiaiDoanLamDong"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">làm đồng</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#tuNgay"/>
@@ -4210,6 +4233,11 @@ Thời kỳ mạ có ý nghĩa quan trọng, chăm sóc cho mạ tốt, mạ kho
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Sau sạ từ 5-7 ngày: Câylúa cần lớp nước mỏng săm sắp mặt ruộng . - Lúc này ruộng bị khô sẽ tổn thương đến rễ lúa, nên không thể để ruộng khô nứt nẻ .Để bộ rễ lúa không tổn thương, phải luôn duy trì lớpnước trên mặt ruộng đồng thời có tác dụng cho cây lúa hấp thụ phân bón dễ dàng và ém không cho hạt cỏ dại mọc.  Duy trì lớp nước ở mặt ruộng cho đến khi cây lúa được 20 ngày sau gieo.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#term"/>
+        <NamedIndividual IRI="#GiaiDoanMa"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">mạ</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#tuNgay"/>
         <NamedIndividual IRI="#GiaiDoanMa"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
@@ -4254,6 +4282,11 @@ dàng cho thu hoạch.</Literal>
         <DataProperty IRI="#nhuCauNuoc"/>
         <NamedIndividual IRI="#GiaiDoanTro"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Ở giai đoạn lúa trỗ, mực nước trong ruộng từ 5-10cm là vừa. Ruộng khô lúa sẽ bị lép nhiều, ruộng ngập nước sâu (trên 20 cm), ảnh hưởng đến trỗ bông, thậm chí bị thối đòng.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#term"/>
+        <NamedIndividual IRI="#GiaiDoanTro"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">trổ bông</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#tuNgay"/>
@@ -8125,6 +8158,10 @@ Trà	Đốm lá
         </ObjectUnionOf>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#term"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#thanhPhan"/>
         <Class IRI="#Thuoc"/>
     </DataPropertyDomain>
@@ -8260,6 +8297,10 @@ Trà	Đốm lá
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#nhuCauNuoc"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#term"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -8531,7 +8572,7 @@ Trà	Đốm lá
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#benhSuDungThuoc</IRI>
-        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">{0} được chữa bởi thuốc {1}.</Literal>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">được chữa bởi thuốc</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -8601,7 +8642,7 @@ Trà	Đốm lá
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hienTuongBenhSuDungThuoc</IRI>
-        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">{0} được chữa bởi thuốc {1}.</Literal>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">được chữa bởi thuốc</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -8611,7 +8652,7 @@ Trà	Đốm lá
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#image</IRI>
-        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Hình ảnh liên quan đến {0}.</Literal>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Hình ảnh liên quan đến</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -8636,7 +8677,7 @@ Trà	Đốm lá
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#luongThuoc</IRI>
-        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Liều lượng thuốc được sử dụng cho {0}.</Literal>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Liều lượng thuốc được sử dụng cho</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -8676,12 +8717,22 @@ Trà	Đốm lá
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#tacNhanGayHaiSuDungThuoc</IRI>
-        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">{0} được chữa bởi thuốc {1}.</Literal>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">được chữa bởi thuốc</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#tacNhanGayHaiSuDungThuoc</IRI>
         <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">tác nhân gây hại sử dụng thuốc</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#term</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Một số từ vựng liên quan đến</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#term</IRI>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">từ vựng liên quan</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -8726,7 +8777,7 @@ Trà	Đốm lá
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#triTacNhanGayHai</IRI>
-        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">{0} trị các loại tác nhân gây hại như {1}.</Literal>
+        <Literal xml:lang="vi" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">trị các loại tác nhân gây hại như</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

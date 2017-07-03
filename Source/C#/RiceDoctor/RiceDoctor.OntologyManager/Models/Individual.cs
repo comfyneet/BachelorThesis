@@ -5,7 +5,7 @@ using RiceDoctor.Shared;
 
 namespace RiceDoctor.OntologyManager
 {
-    public class Individual : Entity<Individual>
+    public class Individual : Entity<Individual>, IAnalyzable
     {
         [CanBeNull] private IReadOnlyCollection<Class> _allClasses;
         [CanBeNull] private IReadOnlyDictionary<Attribute, IReadOnlyCollection<string>> _attributeValues;
@@ -14,9 +14,11 @@ namespace RiceDoctor.OntologyManager
         private bool _canGetDirectClass;
         private bool _canGetNames;
         private bool _canGetRelationValues;
+        private bool _canGetTerms;
         [CanBeNull] private Class _directClass;
         [CanBeNull] private IReadOnlyCollection<string> _names;
         [CanBeNull] private IReadOnlyDictionary<Relation, IReadOnlyCollection<Individual>> _relationValues;
+        [CanBeNull] private IReadOnlyCollection<string> _terms;
 
         public Individual([NotNull] string id, [CanBeNull] string label = null) : base(id, label)
         {
@@ -60,10 +62,21 @@ namespace RiceDoctor.OntologyManager
         {
             if (_canGetNames) return _names;
 
-            _names = Manager.Instance.GetIndividualNames(Id);
+            _names = Manager.Instance.GetAttributeValuesByAttributeName(Id, Manager.Instance.NameAttributeId);
             _canGetNames = true;
 
             return _names;
+        }
+
+        [CanBeNull]
+        public IReadOnlyCollection<string> GetTerms()
+        {
+            if (_canGetTerms) return _terms;
+
+            _terms = Manager.Instance.GetAttributeValuesByAttributeName(Id, Manager.Instance.TermAttributeId);
+            _canGetTerms = true;
+
+            return _terms;
         }
 
         public void SetAllClasses([CanBeNull] IReadOnlyCollection<Class> allClasses)

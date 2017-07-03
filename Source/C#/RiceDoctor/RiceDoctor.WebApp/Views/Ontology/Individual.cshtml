@@ -162,24 +162,21 @@
                     var relation = pair.Key.GetComment() ?? pair.Key.ToString();
                     var values = pair.Value.ToList();
                     var valuesSb = new StringBuilder();
-                    <p>
-                        @Model <a asp-controller="Ontology" asp-action="Relation" asp-route-relationName="@pair.Key.Id">
-                            @relation
-                        </a>
-
-                        @for (var i = 0; i < values.Count; ++i)
+                    for (var i = 0; i < values.Count; ++i)
+                    {
+                        if (values.Count > 1 && i == values.Count - 1)
                         {
-                            if (values.Count > 1 && i == values.Count - 1)
-                            {
-                                valuesSb.Append(" và");
-                            }
-                            else if (i > 0)
-                            {
-                                valuesSb.Append(',');
-                            }
-                            valuesSb.Append($" <a href=\"{Url.Action("Class", "Ontology", new {className = values[i].Id})}\"> {values[i]}</a>");
+                            valuesSb.Append(" và");
                         }
-                        @Html.Raw(valuesSb).
+                        else if (i > 0)
+                        {
+                            valuesSb.Append(',');
+                        }
+                        valuesSb.Append($" <a href=\"{Url.Action("Class", "Ontology", new {className = values[i].Id})}\"> {values[i]}</a>");
+                    }
+
+                    <p>
+                        @Model <a asp-controller="Ontology" asp-action="Relation" asp-route-relationName="@pair.Key.Id">@relation</a> @Html.Raw(valuesSb).
                     </p>
                 }
             }

@@ -1,14 +1,23 @@
 ﻿using System.Collections.Generic;
 using JetBrains.Annotations;
-using RiceDoctor.SemanticCode;
+using RiceDoctor.SemanticCodeInterpreter;
 using RiceDoctor.Shared;
 using Xunit;
 
 namespace RiceDoctor.Tests
 {
     [Collection("Test collection")]
-    public class SemanticCodeTests
+    public class SemanticCodeTests : IClassFixture<SemanticCodeFixture>
     {
+        [NotNull] private readonly ISemanticCodeInterpreter _semanticCodeInterpreter;
+
+        public SemanticCodeTests([NotNull] SemanticCodeFixture fixture)
+        {
+            Check.NotNull(fixture.SemanticCodeInterpreter, nameof(fixture), nameof(fixture.SemanticCodeInterpreter));
+
+            _semanticCodeInterpreter = fixture.SemanticCodeInterpreter;
+        }
+
         public static IEnumerable<string[]> MockData
         {
             get
@@ -81,7 +90,7 @@ and it continues here </li></ol></li><li>This is line 3</li></ol>Another line</d
             Check.NotEmpty(semanticCode, nameof(semanticCode));
             Check.NotEmpty(expectedHtml, nameof(expectedHtml));
 
-            var actualHtml = SemanticParser.Parse(semanticCode);
+            var actualHtml = _semanticCodeInterpreter.Parse(semanticCode);
 
             Assert.Equal(expectedHtml, actualHtml);
         }

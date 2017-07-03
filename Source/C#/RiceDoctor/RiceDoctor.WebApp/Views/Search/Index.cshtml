@@ -1,7 +1,6 @@
 ﻿@using RiceDoctor.OntologyManager
-@using RiceDoctor.QueryManager
-@using Attribute = RiceDoctor.OntologyManager.Attribute
-@model Dictionary<string, List<KeyValuePair<RiceDoctor.QueryManager.QueryType, IReadOnlyDictionary<object, double>>>>
+@using RiceDoctor.WebApp.Models
+@model Dictionary<string, List<KeyValuePair<RiceDoctor.WebApp.Models.SearchableType, IReadOnlyDictionary<RiceDoctor.OntologyManager.IAnalyzable, double>>>>
 @{
     var keywords = (string) ViewData["Keywords"];
     ViewData["Title"] = "Tra cứu \"" + keywords + "\"";
@@ -33,17 +32,11 @@
                     string type = null;
                     switch (pair.Key)
                     {
-                        case QueryType.Class:
+                        case SearchableType.Class:
                             type = "lớp";
                             break;
-                        case QueryType.Individual:
+                        case SearchableType.Individual:
                             type = "thể hiện";
-                            break;
-                        case QueryType.Relation:
-                            type = "quan hệ";
-                            break;
-                        case QueryType.Attribute:
-                            type = "thuộc tính";
                             break;
                     }
 
@@ -64,7 +57,7 @@
                                 {
                                     switch (pair.Key)
                                     {
-                                        case QueryType.Class:
+                                        case SearchableType.Class:
                                             <li>
                                                 <a asp-controller="Ontology" asp-action="Class" asp-route-className="@(((Class) value.Key).Id)" asp-route-keywords="@result.Key">
                                                     @value.Key
@@ -72,25 +65,9 @@
                                                 (@((value.Value * 100).ToString("#.##"))%)
                                             </li>
                                             break;
-                                        case QueryType.Individual:
+                                        case SearchableType.Individual:
                                             <li>
                                                 <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@(((Individual) value.Key).Id)" asp-route-keywords="@result.Key">
-                                                    @value.Key
-                                                </a>
-                                                (@((value.Value * 100).ToString("#.##"))%)
-                                            </li>
-                                            break;
-                                        case QueryType.Relation:
-                                            <li>
-                                                <a asp-controller="Ontology" asp-action="Relation" asp-route-relationName="@(((Relation) value.Key).Id)" asp-route-keywords="@result.Key">
-                                                    @value.Key
-                                                </a>
-                                                (@((value.Value * 100).ToString("#.##"))%)
-                                            </li>
-                                            break;
-                                        case QueryType.Attribute:
-                                            <li>
-                                                <a asp-controller="Ontology" asp-action="Attribute" asp-route-attributeName="@(((Attribute) value.Key).Id)" asp-route-keywords="@result.Key">
                                                     @value.Key
                                                 </a>
                                                 (@((value.Value * 100).ToString("#.##"))%)

@@ -19,7 +19,7 @@
                 <h4>Kết quả</h4>
                 @foreach (var resultFact in Model.Results)
                 {
-                    <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@resultFact.Value">@resultFact.GetLabel()</a>
+                    <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@resultFact.Value">@resultFact.ToLabelString()</a>
                 }
             </section>
 
@@ -39,7 +39,7 @@
                     <h4>Luật quan hệ</h4>
                     @foreach (var rule in Model.Engine.InferredRelationRules)
                     {
-                        <p>@rule.Key.GetLabel() - @rule.Value</p>
+                        <p>@rule.Key.ToLabelString() - @rule.Value</p>
                     }
                 </section>
             </div>
@@ -63,7 +63,7 @@
                         {
                             incompleteFactsSb.Append(',');
                         }
-                        incompleteFactsSb.Append($" <a href=\"{Url.Action("Individual", "Ontology", new {individualName = incompleteFacts[i].Value})}\">{incompleteFacts[i].GetLabel()}</a>");
+                        incompleteFactsSb.Append($" <a href=\"{Url.Action("Individual", "Ontology", new {individualName = incompleteFacts[i].Value})}\">{incompleteFacts[i].ToLabelString()}</a>");
                     }
                     @Html.Raw(incompleteFactsSb) với độ chính xác @priority%.
                 </p>
@@ -95,7 +95,7 @@
                                         @:, 
                                     }
                                     <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@rule.Item3[i].Value">
-                                        @rule.Item3[i].GetLabel()
+                                        @rule.Item3[i].ToLabelString()
                                     </a>
                                 }</th>
                         </tr>

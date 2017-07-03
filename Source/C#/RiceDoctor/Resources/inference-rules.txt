@@ -1,9 +1,11 @@
 ﻿Benh -> Thuoc;
 TacNhanGayHai -> Thuoc;
 HienTuongBenh -> Thuoc;
+
 Thuoc -> Benh;
 Thuoc -> TacNhanGayHai;
 Thuoc -> HienTuongBenh;
+
 Dat=Test_DuplicateHypothesis & Dat=Test_DuplicateHypothesis -> Dat=Test_Conclusion {0};
 Dat=Test_Hypothesis -> Dat=Test_DuplicateConclusion & Dat=Test_DuplicateConclusion {0};
 Dat=Test_Duplicate & Dat=Test_Hypothesis -> Dat=Test_Duplicate & Dat=Test_Conclusion {0};
@@ -12,6 +14,8 @@ Dat=Test_Hypothesis -> Dat=Test_Conclusion {0};
 Dat=Test_Duplicate -> Dat=Test_Duplicate {0};
 HinhDangThan=Test_ThanUn -> HinhDangThan=Test_ThanLun {0.1e-10};
 MauLa=Test_LaVang & HinhDangThan=Test_ThanLun -> Benh=Test_BenhVangLa {0.1e-10};
+
+
 MauLa=LaVang & HinhDangThan=ThanUn -> Benh=BenhVangLa {1.0e+0};
 HinhDangThan=ThanLun & (MauLa=LaVang | HinhDangLa=LaUa) -> HienTuong=HienTuongThieuDam;
 TrieuChung=DeNhanhKem & ChieuCao=ChieuCaoThap -> HienTuong=HienTuongNgoDocHuuCo;

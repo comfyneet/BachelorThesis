@@ -5,6 +5,15 @@ namespace RiceDoctor.OntologyManager
 {
     public interface IOntologyManager
     {
+        [NotNull]
+        string ThingClassId { get; }
+
+        [NotNull]
+        string NameAttributeId { get; }
+
+        [NotNull]
+        string TermAttributeId { get; }
+
         [CanBeNull]
         string GetComment([NotNull] string objectName);
 
@@ -66,9 +75,6 @@ namespace RiceDoctor.OntologyManager
         IReadOnlyCollection<Class> GetIndividualClasses([NotNull] string individualName);
 
         [CanBeNull]
-        IReadOnlyCollection<string> GetIndividualNames([NotNull] string individualName);
-
-        [CanBeNull]
         IReadOnlyCollection<Individual> GetRelationValue(
             [NotNull] string individualName,
             [NotNull] string relationName);
@@ -79,5 +85,10 @@ namespace RiceDoctor.OntologyManager
 
         [CanBeNull]
         IReadOnlyDictionary<Attribute, IReadOnlyCollection<string>> GetAttributeValues([NotNull] string individualName);
+
+        [CanBeNull]
+        IReadOnlyCollection<string> GetAttributeValuesByAttributeName(
+            [NotNull] string individualName,
+            [NotNull] string attributeName);
     }
 }
