@@ -1,6 +1,5 @@
-﻿@using RiceDoctor.OntologyManager
-@using RiceDoctor.WebApp.Models
-@model Dictionary<string, List<KeyValuePair<RiceDoctor.WebApp.Models.SearchableType, IReadOnlyDictionary<RiceDoctor.OntologyManager.IAnalyzable, double>>>>
+﻿@using RiceDoctor.DatabaseManager
+@model List<KeyValuePair<RiceDoctor.DatabaseManager.Article, double>>
 @{
     var keywords = (string) ViewData["Keywords"];
     ViewData["Title"] = "Tra cứu \"" + keywords + "\"";
@@ -26,7 +25,24 @@
         {
             foreach (var result in Model)
             {
-                var emptyPair = new List<string>();
+                <p><a href="@Html.Raw(result.Key.Url)">@result.Key.Title</a> - @result.Value</p>
+                if (!string.IsNullOrWhiteSpace(result.Key.Content))
+                {
+                    var description = "";
+                    if (result.Key.Content.Count() < 200)
+                    {
+                        description = result.Key.Content.Substring(0, result.Key.Content.Count());
+                    }
+                    else
+                    {
+                        description = result.Key.Content.Substring(0, 200) + "...";
+                    }
+                    <p>@description</p>
+                }
+                <p>Ngày crawler: @result.Key.RetrievedDate</p>
+                <hr/>
+
+                @*var emptyPair = new List<string>();
                 foreach (var pair in result.Value)
                 {
                     string type = null;
@@ -94,7 +110,7 @@
                     </section>
 
                     <hr/>
-                }
+                }*@
             }
         }
     </div>

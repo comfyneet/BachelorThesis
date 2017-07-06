@@ -25,6 +25,11 @@ namespace RiceDoctor.Shared
             return _guid == other._guid && string.Equals(Name, other.Name);
         }
 
+        public override string ToString()
+        {
+            return Name;
+        }
+
         public override int GetHashCode()
         {
             unchecked

@@ -7,7 +7,6 @@ namespace RiceDoctor.QueryAnalysis
     {
         static QueryTokenType()
         {
-            Plus = new QueryTokenType('+');
             Colon = new QueryTokenType(':');
             LParen = new QueryTokenType('(');
             RParen = new QueryTokenType(')');
@@ -28,9 +27,6 @@ namespace RiceDoctor.QueryAnalysis
         public QueryTokenType(char name) : base(name)
         {
         }
-
-        [NotNull]
-        public static QueryTokenType Plus { get; }
 
         [NotNull]
         public static QueryTokenType Colon { get; }

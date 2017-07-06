@@ -22,7 +22,7 @@ namespace RiceDoctor.QueryAnalysis
         {
             if (_queries != null) return _queries;
 
-            _queries = ParseQueryList();
+            _queries = ParseQueries();
 
             if (CurrentToken.Type != Eof)
                 throw new InvalidOperationException(CoreStrings.SyntaxError(Eof.Name, CurrentToken.Type.Name));
@@ -31,7 +31,7 @@ namespace RiceDoctor.QueryAnalysis
         }
 
         [NotNull]
-        private IReadOnlyCollection<Query> ParseQueryList()
+        private IReadOnlyCollection<Query> ParseQueries()
         {
             var queryList = new List<Query>();
 
@@ -49,8 +49,6 @@ namespace RiceDoctor.QueryAnalysis
         [NotNull]
         private Query ParseQuery()
         {
-            Eat(Plus);
-
             var weight = 60;
             var queryContainer = new QueryContainerNode();
             while (CurrentToken.Type != NewLine)
@@ -95,6 +93,8 @@ namespace RiceDoctor.QueryAnalysis
                 }
 
             Eat(NewLine);
+            while (CurrentToken.Type == NewLine)
+                Eat(NewLine);
 
             return new Query(weight, queryContainer);
         }

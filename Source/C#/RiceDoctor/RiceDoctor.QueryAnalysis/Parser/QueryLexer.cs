@@ -20,11 +20,6 @@ namespace RiceDoctor.QueryAnalysis
             while (char.IsWhiteSpace(CurrentChar) && CurrentChar != '\r' && CurrentChar != '\n')
                 SkipWhitespace();
 
-            if (CurrentChar == '+')
-            {
-                Advance();
-                return new Token(Plus);
-            }
             if (CurrentChar == ':')
             {
                 Advance();
@@ -91,7 +86,7 @@ namespace RiceDoctor.QueryAnalysis
                 Advance();
             }
 
-            return new Token(Word, builder.ToString().RemoveAccents());
+            return new Token(Word, builder.ToString().RemoveDuplicateSpaces());
         }
     }
 }

@@ -26,9 +26,7 @@ namespace RiceDoctor.QueryAnalysis
         [CanBeNull]
         public IReadOnlyList<string> Match(string input)
         {
-            var unaccentKeywords = input.ToLower().RemoveAccents();
-
-            var match = _regex.Match(unaccentKeywords);
+            var match = _regex.Match(input.ToLower().RemoveDuplicateSpaces());
             if (!match.Success || match.Groups.Count < 2) return null;
 
             var terms = new List<string>();
@@ -37,7 +35,7 @@ namespace RiceDoctor.QueryAnalysis
                 var value = match.Groups[i].Value;
                 if (string.IsNullOrWhiteSpace(value)) continue;
 
-                var term = Regex.Replace(value.Trim(), @"\s+", " ");
+                var term = value.Trim().RemoveDuplicateSpaces();
                 terms.Add(term);
             }
 

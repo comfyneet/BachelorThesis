@@ -2470,6 +2470,11 @@ Ngoài ra có thể sử dụng các loại [Thuoc]thuốc[/Thuoc] thành phẩm
 - Bệnh thường mẫn cảm với lượng đạm dư trong lá, những ruộng bón đạm nhiều, bón muộn, bón lai rai, bón không cân đối giữ đạm, lân và kaly, những ruộng trũng hẩu dồn đạm cuối vụ, do biện pháp thâm canh gieo cấy, chăm bón không đúng kỹ thuật.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#term"/>
+        <NamedIndividual IRI="#BenhBacLa"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">bạc lá</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
         <NamedIndividual IRI="#BenhBuuRe"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Bệnh bướu rể lúa do tuyến trùng Meloidogyne graminicola.
@@ -2534,6 +2539,11 @@ Khi bị tuyến trùng ký sinh, cây lúa bị bệnh bướu rể nên tốn 
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tên khoa học: Meloidogyne graminicola.
 
 -Tên tiếng Anh: Root Knot Nematode.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#term"/>
+        <NamedIndividual IRI="#BenhBuuRe"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">bứu rễ</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
@@ -2610,6 +2620,16 @@ Khi ruộng lúa nhiễm nặng, năng suất có thể thất thu 20-30%, có k
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Bệnh cháy bìa lá</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#term"/>
+        <NamedIndividual IRI="#BenhChayBiaLa"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">bệnh cháy lá</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#term"/>
+        <NamedIndividual IRI="#BenhChayBiaLa"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">cháy bìa lá</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#image"/>
         <NamedIndividual IRI="#BenhChayLa"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">benhchayla.jpg</Literal>
@@ -2618,6 +2638,11 @@ Khi ruộng lúa nhiễm nặng, năng suất có thể thất thu 20-30%, có k
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#BenhChayLa"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">bệnh cháy lá</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#term"/>
+        <NamedIndividual IRI="#BenhChayLa"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">cháy lá</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#trieuChung"/>
@@ -2690,6 +2715,11 @@ Thông thường các giống lúa cao sản ngắn ngày khi được phóng th
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tác nhân gây hại là nấm Pyricularia oryzae Cav. hay P. grisea (Cook )Sacc. . Bào tử của nấm rất nhỏ, có thể phát tán và bay cao đến 24 m, thậm chí đến 10.000 m để lây lan cho các ruộng lân cận trong khu vực. Nấm phát triển tốt trong điều kiện mát từ 24-280C, ẫm độ cao &gt;80%, biên độ nhiệt giữa ngày và đêm cao sẽ dễ phát sinh thành dịch. Bào tử nấm nảy mầm khi gặp lớp nước tự do trên lá hay không khí bảo hòa nước; ở 240C bào tử cần 6 giờ, ở 280C mất 8 giờ; vượt quá 280C bào tử phát triển kém. Bào tử xâm nhập vào tế bào lá bằng cách mọc thành đĩa áp, chọc thủng vách tế bào lá lúa. Ngoài ra, bào tử còn tiết ra độc tố pyricularin gây độc cho cây (Ou, 1983). Cây lúa là ký chủ chính, bệnh có thể lưu tồn trên các cây ký chủ phụ mọc quanh ruộng như các loài [Co=CoLongVuc][Co=CoLongVuc] cỏ lồng vực [/Co][/Co], đuôi phụng, [Co=CoChi] cỏ chỉ  [/Co], lúa ma, lúa rày-lúa chét…</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#term"/>
+        <NamedIndividual IRI="#BenhDaoOn"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">đạo ôn</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#trieuChung"/>
         <NamedIndividual IRI="#BenhDaoOn"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Đốm bệnh điển hình trên lá có hình thoi, những đốm to thì hai đầu nhọn, tâm màu xám trắng. Trên giống nhiễm, các vết bệnh rất to có thể dài đến 1,5 cm thường liên kết với nhau tạo thành mãng cháy khô trên lá. Trên giống kháng, các vết bệnh thường rất nhỏ, bằng đầu kim màu nâu, rất dễ nhầm lần với vết bệnh đốm nâu mới phát triển.</Literal>
@@ -2735,6 +2765,11 @@ Khi nhiều vết [Benh=BenhDomNau]bệnh đốm nâu[/Benh] xuất hiện trên
         <DataProperty IRI="#nguyenNhanGayBenh"/>
         <NamedIndividual IRI="#BenhDomNau"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Nguyên nhân do thời tiết có nhiều nắng nóng nhiệt cao, độ ẩm không khí cao thấp thất thường, cây lúa thường xuyên bị đói hoặc không được đáp ứng kịp thời các yếu tố dinh dưỡng và nước vì đặc điểm chân ruộng.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#term"/>
+        <NamedIndividual IRI="#BenhDomNau"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">đốm nâu</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#trieuChung"/>
@@ -2786,6 +2821,11 @@ Khi nhiều vết [Benh=BenhDomNau]bệnh đốm nâu[/Benh] xuất hiện trên
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Bệnh đốm vàng</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#term"/>
+        <NamedIndividual IRI="#BenhDomVang"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">đốm vàng</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#trieuChung"/>
         <NamedIndividual IRI="#BenhDomVang"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Bệnh thường xuất hiện từ 40 ngày sau khi sạ tới khi lúa trổ. Đầu tiên là những vết bệnh xuất hiện trên bẹ lá ở gần gốc lúa, đôi khi lây trực tiếp qua lá từ những cây bị bệnh xung quanh.
@@ -2806,6 +2846,11 @@ Khi nhiều vết [Benh=BenhDomNau]bệnh đốm nâu[/Benh] xuất hiện trên
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#BenhHoaCuc"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">bệnh hoa cúc</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#term"/>
+        <NamedIndividual IRI="#BenhHoaCuc"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hoa cúc</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#trieuChung"/>
@@ -2885,6 +2930,11 @@ Biện pháp phòng trừ
         <DataProperty IRI="#nguonGoc"/>
         <NamedIndividual IRI="#BenhKhoVan"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Bệnh khô vằn được phát hiện ở Nhật Bản (Miyaka, 1910 và Sawada, 1912) và ở một số nướckhác (Reinking 1918; Palo, 1926). Địa bàn phân bố của bệnh khá rộng ở tất cả các nước trồng lúa vùng châu á và các châu lục khác. Cây lúa có thể bị giảm năng xuất 20-25% khi bệnh phát triển lên đến đòng (Hori, 1969).</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#term"/>
+        <NamedIndividual IRI="#BenhKhoVan"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">khô vằn</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#trieuChung"/>
@@ -2982,6 +3032,11 @@ Những điều cần lưu ý để sử dụng [Thuoc]thuốc[/Thuoc] hóa họ
 - Do các loại nấm: Alternaria padwickii, Bipolaris oryzae, Fusarium sp, Curvularia lunata, Microdochium oryzae, Phoma sp, Pyricularia oryzae, Sarocladium oryzae, Septoria sp, Tilletia barclayana, Ustilagonoides virens...</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#term"/>
+        <NamedIndividual IRI="#BenhLemLepHat"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">lem lép hạt</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#bienPhapKhacPhuc"/>
         <NamedIndividual IRI="#BenhLuaVon"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">nhổ sạch hết lúa von để tránh lây lan</Literal>
@@ -2995,6 +3050,11 @@ Những điều cần lưu ý để sử dụng [Thuoc]thuốc[/Thuoc] hóa họ
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#BenhLuaVon"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">bệnh lúa von</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#term"/>
+        <NamedIndividual IRI="#BenhLuaVon"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">lúa von</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#trieuChung"/>
@@ -3051,6 +3111,11 @@ Bố trí cơ cấu mùa vụ lúa hợp lý theo hướng giảm tỷ lệ trà
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#BenhLunSocDen"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">bệnh lùn sọc đen</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#term"/>
+        <NamedIndividual IRI="#BenhLunSocDen"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">bệnh lùn</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#triSauBenhHai"/>
@@ -3120,6 +3185,11 @@ Tiêu hủy nguồn bệnh trên đồng ruộng, cụ thể như sau:
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">bệnh lùn xoắn lá</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#term"/>
+        <NamedIndividual IRI="#BenhLunXoanLa"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">bệnh lùn</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#triSauBenhHai"/>
         <NamedIndividual IRI="#BenhLunXoanLa"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Biện pháp trừ bệnh hữu hiệu nhất đối với bệnh này là thực hiện việc tiêu huỷ nguồn bệnh trên đồng ruộng.
@@ -3134,6 +3204,11 @@ Tiêu hủy nguồn bệnh trên đồng ruộng, cụ thể như sau:
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#BenhThoiBe"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Bệnh thối bẹ</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#term"/>
+        <NamedIndividual IRI="#BenhThoiBe"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">thối bẹ</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#trieuChung"/>
@@ -3173,6 +3248,11 @@ Rải vôi: Sử dụng vôi bột (CaCo3 ), liều lượng 20-25kg rải cho 1
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#BenhThoiThan"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Bệnh thối thân</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#term"/>
+        <NamedIndividual IRI="#BenhThoiThan"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">thối thân</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#trieuChung"/>
@@ -3230,6 +3310,11 @@ Giữa các phương pháp canh tác, việc điều chỉnh thời gian cấy s
 Cày bừa đồng ruộng kỹ để loại trừ gốc rạ ngay sau khi thu hoạch, qua đó loại bỏ ký chủ của bệnh Tungro cũng được áp dụng.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#term"/>
+        <NamedIndividual IRI="#BenhTungo"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">tungo</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#trieuChung"/>
         <NamedIndividual IRI="#BenhTungo"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cây bị bệnh lá sẽ biến đổi màu và hạt không dày. Sự biến đổi màu lá bắt đầu từ chóp rồi lan rộng ra phía mép và xuống phần thấp hơn của lá lúa.
@@ -3267,6 +3352,16 @@ Tác nhân chính là nấm Gonatophragmium sp, bắt đầu giữa lá lúa xu�
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#BenhVangLa"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">bệnh vàng lá</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#term"/>
+        <NamedIndividual IRI="#BenhVangLa"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">bệnh lá vàng</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#term"/>
+        <NamedIndividual IRI="#BenhVangLa"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">vàng lá</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
@@ -3316,6 +3411,11 @@ Phòng trừ bằng cách:
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#BenhVangLun"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">bệnh vàng lùn</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#term"/>
+        <NamedIndividual IRI="#BenhVangLun"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">vàng lùn</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#trieuChung"/>
@@ -4006,7 +4106,7 @@ Giai đoạn chín hoàn toàn khi ta nhận thấy vỏ trấu từ màu vàng 
     <DataPropertyAssertion>
         <DataProperty IRI="#term"/>
         <NamedIndividual IRI="#GiaiDoanChin"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">chín</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">thời gian chín</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#tuNgay"/>
@@ -4053,7 +4153,7 @@ Theo Nguyễn Ngọc Đệ (2008), thông thường số chồi hình thành bô
     <DataPropertyAssertion>
         <DataProperty IRI="#term"/>
         <NamedIndividual IRI="#GiaiDoanDeNhanh"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">đẻ nhánh</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">thời gian đẻ nhánh</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#tuNgay"/>
@@ -4097,7 +4197,7 @@ xấu đến quá trình mọc mầm của hạt, thậm chí mầm không mọc
     <DataPropertyAssertion>
         <DataProperty IRI="#term"/>
         <NamedIndividual IRI="#GiaiDoanGieo"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">gieo</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">thời gian gieo</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#tuNgay"/>
@@ -4145,7 +4245,7 @@ lúa sau giai đoạn đẻ nhánh: Từ 30-40 ngày sau sạ (hình 3.28), tứ
     <DataPropertyAssertion>
         <DataProperty IRI="#term"/>
         <NamedIndividual IRI="#GiaiDoanLamDong"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">làm đồng</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">thời gian làm đồng</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#tuNgay"/>
@@ -4235,7 +4335,7 @@ Thời kỳ mạ có ý nghĩa quan trọng, chăm sóc cho mạ tốt, mạ kho
     <DataPropertyAssertion>
         <DataProperty IRI="#term"/>
         <NamedIndividual IRI="#GiaiDoanMa"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">mạ</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">thời gian mạ</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#tuNgay"/>
@@ -4286,7 +4386,7 @@ dàng cho thu hoạch.</Literal>
     <DataPropertyAssertion>
         <DataProperty IRI="#term"/>
         <NamedIndividual IRI="#GiaiDoanTro"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">trổ bông</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">thời gian trổ</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#tuNgay"/>
@@ -4329,6 +4429,11 @@ dàng cho thu hoạch.</Literal>
         <DataProperty IRI="#nguonGoc"/>
         <NamedIndividual IRI="#GiongBT7"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Là giống lúa thơm, chất lượng cao có nguồn gốc xuất xứ từ Trung Quốc.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#term"/>
+        <NamedIndividual IRI="#GiongBT7"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BT7</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#tinhThichNghi"/>
@@ -4418,6 +4523,11 @@ Trọng lượng 1000 hạt: 22 – 23 gram.</Literal>
 Được công nhận giống theo Quyết định số 5218 BNN-KHCN/QĐ, ngày 16 tháng 11 năm 2000.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#term"/>
+        <NamedIndividual IRI="#GiongDV108"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ĐV108</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#tinhThichNghi"/>
         <NamedIndividual IRI="#GiongDV108"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Khả năng chịu rét, chống đổ, chịu nóng và chịu hạn khá.
@@ -4489,6 +4599,11 @@ Giống lúa Gia Lộc 105 thích hợp gieo trồng trong cơ cấu luân canh 
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Giống lúa Gia Lộc 105 (GL105) được lai tạo từ tổ hợp P6/Xi23//IRBB7/Q5 và chọn lọc theo phương pháp phả hệ. Giống đã được công nhận giống cây trồng mới theo Quyết định số 398/QĐ-TT-CLT ngày 26/9/2019 của Cục Trồng trọt, Bộ Nông nghiệp và PTNT.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#term"/>
+        <NamedIndividual IRI="#GiongGL105"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">GL105</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#tinhThichNghi"/>
         <NamedIndividual IRI="#GiongGL105"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Giống thích hợp gieo trồng cả  2 vụ/năm trên các chân đất vàn, vàn cao, vàn thấp</Literal>
@@ -4537,6 +4652,11 @@ Nhiễm vừa [Benh=BenhDaoOn] bệnh đạo ôn[/Benh], bệnh Bạc lá, Nhi�
 Được công nhận giống theo Quyết định số 1659 QĐ/BNN-KHCN, ngày 13 tháng 5 năm 1999.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#term"/>
+        <NamedIndividual IRI="#GiongQ-5"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Q-5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#chatLuongGao"/>
         <NamedIndividual IRI="#GiongSV181"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Cơm thơm ngon, gạo trong ít bạc bụng, cơm mềm, đậm cơm, mùi thơm nhẹ.</Literal>
@@ -4555,6 +4675,16 @@ Nhiễm vừa [Benh=BenhDaoOn] bệnh đạo ôn[/Benh], bệnh Bạc lá, Nhi�
         <DataProperty IRI="#nguonGoc"/>
         <NamedIndividual IRI="#GiongSV181"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Do Công ty TNHH MTV Giống cây trồng Quảng Bình chọn tạo, sản xuất và cung ứng. Sản phẩm độc quyền đã được đăng ký quyền sở hữu trí tuệ.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#term"/>
+        <NamedIndividual IRI="#GiongSV181"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">SV</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#term"/>
+        <NamedIndividual IRI="#GiongSV181"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">SV181</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#tinhThichNghi"/>
@@ -4577,6 +4707,16 @@ Nhiễm vừa [Benh=BenhDaoOn] bệnh đạo ôn[/Benh], bệnh Bạc lá, Nhi�
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Giống SV 47</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#term"/>
+        <NamedIndividual IRI="#GiongSV47"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">SV</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#term"/>
+        <NamedIndividual IRI="#GiongSV47"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">SV47</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#chatLuongGao"/>
         <NamedIndividual IRI="#GiongTBR-1"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Tỷ lệ gạo lật 83,0%, tỷ lệ gạo xát 72,1%, tỷ lệ gạo nguyên/gạo xát 78,6%, chiều dài hạt gạo 6,0 - 6,2 mm, tỷ lệ D/R 2,3 - 2,4, hàm lượng Amylose trung bình 24,7%; chất lượng gạo khá, hàm lượng tinh bột cao, phù hợp với chế biến.</Literal>
@@ -4595,6 +4735,11 @@ Nhiễm vừa [Benh=BenhDaoOn] bệnh đạo ôn[/Benh], bệnh Bạc lá, Nhi�
         <DataProperty IRI="#nguonGoc"/>
         <NamedIndividual IRI="#GiongTBR-1"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">TBR-1 là giống lúa thuần do Công ty CP Tổng Công ty Giống cây trồng Thái Bình chọn tạo, được công nhận giống Quốc gia năm 2006.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#term"/>
+        <NamedIndividual IRI="#GiongTBR-1"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">TBR</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#tinhThichNghi"/>
@@ -4621,6 +4766,11 @@ Nhiễm vừa [Benh=BenhDaoOn] bệnh đạo ôn[/Benh], bệnh Bạc lá, Nhi�
         <DataProperty IRI="#nguonGoc"/>
         <NamedIndividual IRI="#GiongTBR-45"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">TBR45 là giống lúa thuần do Công ty CP Tổng Công ty Giống cây trồng Thái Bình chọn tạo, được công nhận giống Quốc gia năm 2011.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#term"/>
+        <NamedIndividual IRI="#GiongTBR-45"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">TBR</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#tinhThichNghi"/>
@@ -4652,6 +4802,11 @@ TBR45 là giống cảm ôn, ngắn ngày, canh tác được các vụ trong n�
         <DataProperty IRI="#nguonGoc"/>
         <NamedIndividual IRI="#GiongTBR255"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">TBR225 là giống lúa thuần do Công ty CP Tổng Công ty Giống cây trồng Thái Bình lai tạo, được công nhận giống Quốc gia năm 2015.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#term"/>
+        <NamedIndividual IRI="#GiongTBR255"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">TBR</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#article"/>
@@ -4696,6 +4851,11 @@ vụ [VuMua=VuHeThu]vụ hè thu[/VuMua] : mạ nền 8 - 10 ngày, mạ dược
         <DataProperty IRI="#nguonGoc"/>
         <NamedIndividual IRI="#GiongTBR36"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">TBR36 là giống lúa thuần do Công ty CP Tổng Công ty Giống cây trồng Thái Bình chọn tạo, được công nhận giống Quốc gia năm 2011.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#term"/>
+        <NamedIndividual IRI="#GiongTBR36"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">TBR</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#tinhThichNghi"/>

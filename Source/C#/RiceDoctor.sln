@@ -13,6 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{
 		RiceDoctor\Resources\inference-rules.txt = RiceDoctor\Resources\inference-rules.txt
 		RiceDoctor\Resources\problem-types.json = RiceDoctor\Resources\problem-types.json
 		RiceDoctor\Resources\query-rules.txt = RiceDoctor\Resources\query-rules.txt
+		RiceDoctor\Resources\rice.db = RiceDoctor\Resources\rice.db
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RiceDoctor.InferenceEngine", "RiceDoctor\RiceDoctor.InferenceEngine\RiceDoctor.InferenceEngine.csproj", "{6486445C-333D-463F-9CA9-8E663C48B4C2}"

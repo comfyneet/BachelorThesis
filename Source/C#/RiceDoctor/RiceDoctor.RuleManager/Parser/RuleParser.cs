@@ -154,7 +154,7 @@ namespace RiceDoctor.RuleManager
             var implicantId = 0;
             var implicants = new List<Implicant<int>>();
 
-            var subsets = GetSubsets(hypothesisTable.Symbols);
+            var subsets = hypothesisTable.Symbols.ToList().GetSubsets();
             foreach (var subset in subsets)
             {
                 var context = new RuntimeContext<Fact>(hypothesisTable);
@@ -286,28 +286,6 @@ namespace RiceDoctor.RuleManager
             symbolTable.Add(fact);
 
             return fact;
-        }
-
-        [NotNull]
-        private IReadOnlyCollection<IReadOnlyCollection<Fact>> GetSubsets([NotNull] IReadOnlyList<Fact> set)
-        {
-            Check.NotEmpty(set, nameof(set));
-
-            var subsets = new List<IReadOnlyCollection<Fact>>();
-
-            var n = set.Count;
-            for (var i = 1; i < 1 << n; i++)
-            {
-                var subset = new List<Fact>();
-
-                for (var j = 0; j < n; j++)
-                    if ((i & (1 << j)) > 0)
-                        subset.Add(set[j]);
-
-                subsets.Add(subset);
-            }
-
-            return subsets;
         }
     }
 }

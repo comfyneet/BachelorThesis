@@ -1,18 +1,13 @@
-﻿+ [tìm|tra cứu] * (về|của) lúa [*]
-0: individual, class
+﻿[tìm|tra cứu] * (về|của) lúa [*]
 
-+ *, * {60}
-0: individual
-1: individual
+*, * {60}
 
-+ * và * {50}
-0: individual
-1: individual
+* và * {60}
 
-+ *, * và * {70}
-0: individual
-1: individual
-2: individual
+*, *, * {70}
 
-+ * {1}
-0: individual, class, relation, attribute
+*, * và * {70}
+
+* và * và * {70}
+
+* {1}

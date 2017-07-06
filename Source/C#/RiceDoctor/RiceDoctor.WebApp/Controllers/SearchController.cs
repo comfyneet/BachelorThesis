@@ -2,11 +2,11 @@ using System.Collections.Generic;
 using System.Linq;
 using JetBrains.Annotations;
 using Microsoft.AspNetCore.Mvc;
+using RiceDoctor.DatabaseManager;
 using RiceDoctor.OntologyManager;
 using RiceDoctor.QueryAnalysis;
 using RiceDoctor.RetrievalAnalysis;
 using RiceDoctor.Shared;
-using RiceDoctor.WebApp.Models;
 using static RiceDoctor.OntologyManager.GetType;
 
 namespace RiceDoctor.WebApp.Controllers
@@ -29,82 +29,149 @@ namespace RiceDoctor.WebApp.Controllers
 
         public IActionResult Index(string keywords)
         {
-            IReadOnlyDictionary<IAnalyzable, double> SearchClasses(string term)
-            {
-                var classes = _ontologyManager.GetSubClasses("Thing", GetAll);
-                var tmpResultClasses = new Dictionary<Class, double>();
-                foreach (var cls in classes)
-                {
-                    var distance = 0.0;
-                    if (cls.Label != null)
-                        distance = DiceCoefficient.Distance(cls.Label.ToLower().RemoveAccents(), term);
-                    var idDistance = DiceCoefficient.Distance(cls.Id.ToLower().RemoveAccents(), term);
-                    if (idDistance > distance) distance = idDistance;
-                    if (distance > 0) tmpResultClasses.Add(cls, distance);
-                }
-
-                var resultClasses = tmpResultClasses
-                    .OrderByDescending(c => c.Value)
-                    .ToDictionary(c => (IAnalyzable) c.Key, c => c.Value);
-                return resultClasses.Count == 0 ? null : resultClasses;
-            }
-
-            IReadOnlyDictionary<IAnalyzable, double> SearchIndividuals(string term)
-            {
-                var individuals = _ontologyManager.GetIndividuals();
-                var tmpResultIndividuals = new Dictionary<Individual, double>();
-                foreach (var individual in individuals)
-                {
-                    var distance = 0.0;
-                    var names = individual.GetNames();
-                    if (names != null)
-                        distance = names
-                            .Select(name => DiceCoefficient.Distance(name.ToLower().RemoveAccents(), term))
-                            .Concat(new[] {distance})
-                            .Max();
-                    var idDistance = DiceCoefficient.Distance(individual.Id.ToLower(), term);
-                    if (idDistance > distance) distance = idDistance;
-                    if (distance > 0) tmpResultIndividuals.Add(individual, distance);
-                }
-
-                var resultIndividuals = tmpResultIndividuals
-                    .OrderByDescending(i => i.Value)
-                    .ToDictionary(i => (IAnalyzable) i.Key, i => i.Value);
-                return resultIndividuals.Count == 0 ? null : resultIndividuals;
-            }
-
             if (string.IsNullOrWhiteSpace(keywords)) return RedirectToAction("Index", "Home");
             keywords = keywords.Trim();
 
             ViewData["Keywords"] = keywords;
 
-            var results =
-                new Dictionary<string, List<KeyValuePair<SearchableType, IReadOnlyDictionary<IAnalyzable, double>>>>();
+            var ontologyClasses = _ontologyManager.GetSubClasses("Thing", GetAll);
+            var ontologyIndividuals = _ontologyManager.GetIndividuals();
 
+            List<Article> articles;
+            using (var context = new RiceContext())
+            {
+                articles = context.Articles.ToList();
+            }
+            var analyzer = new RetrievalAnalyzer(ontologyClasses, ontologyIndividuals);
+            ontologyClasses = analyzer.Entities.OfType<Class>().ToList();
+            ontologyIndividuals = analyzer.Entities.OfType<Individual>().ToList();
+            var articleWeightList = analyzer.AnalyzeArticles(articles);
+
+            List<KeyValuePair<Article, double>> results = null;
             foreach (var query in _queryAnalyzer.Queries)
             {
                 var terms = query.Match(keywords);
                 if (terms == null) continue;
 
+                var searchingEntities = new List<IAnalyzable>();
                 foreach (var term in terms)
                 {
-                    if (!results.ContainsKey(term))
-                        results.Add(term,
-                            new List<KeyValuePair<SearchableType, IReadOnlyDictionary<IAnalyzable, double>>>());
-
-                    results[term]
-                        .Add(new KeyValuePair<SearchableType, IReadOnlyDictionary<IAnalyzable, double>>(
-                            SearchableType.Class, SearchClasses(term)));
-
-                    results[term]
-                        .Add(new KeyValuePair<SearchableType, IReadOnlyDictionary<IAnalyzable, double>>(
-                            SearchableType.Individual, SearchIndividuals(term)));
+                    var cleanedTerm = term.RemoveNonWordChars();
+                    foreach (var individual in SearchIndividuals(ontologyIndividuals, cleanedTerm))
+                        if (!searchingEntities.Contains(individual))
+                            searchingEntities.Add(individual);
+                    foreach (var cls in SearchClasses(ontologyClasses, cleanedTerm))
+                        if (!searchingEntities.Contains(cls))
+                            searchingEntities.Add(cls);
                 }
+
+                var weights = new Dictionary<Article, double>();
+                foreach (var article in articles)
+                    weights[article] = 0;
+
+                foreach (var entitySubset in searchingEntities.GetSubsets())
+                {
+                    var generatedEntityWeights =
+                        GenerateEntityWeights(ontologyClasses, ontologyIndividuals, entitySubset);
+                    foreach (var articleWeights in articleWeightList)
+                    {
+                        var rank = analyzer.GetRelevanceRank(articleWeights.Value, generatedEntityWeights);
+                        if (weights[articleWeights.Key] < rank) weights[articleWeights.Key] = rank;
+                    }
+                }
+
+                results = weights.Where(w => w.Value > 0).ToList().OrderByDescending(w => w.Value).ToList();
 
                 break;
             }
 
-            return results.Count == 0 ? View(null) : View(results);
+            return results == null ? View(null) : View(results);
+        }
+
+        [NotNull]
+        private IReadOnlyCollection<Class> SearchClasses(
+            [NotNull] IReadOnlyCollection<Class> ontologyClasses,
+            [NotNull] string cleanedTerm)
+        {
+            Check.NotNull(ontologyClasses, nameof(ontologyClasses));
+            Check.NotEmpty(cleanedTerm, nameof(cleanedTerm));
+
+            var results = new List<Class>();
+            foreach (var cls in ontologyClasses)
+            {
+                if (cls.Label == null) continue;
+                var label = cls.Label.ToLower().RemoveNonWordChars();
+                if (label == cleanedTerm && !results.Contains(cls)) results.Add(cls);
+            }
+
+            return results;
+        }
+
+        [NotNull]
+        private IReadOnlyCollection<Individual> SearchIndividuals(
+            [NotNull] IReadOnlyCollection<Individual> ontologyIndividuals,
+            [NotNull] string cleanedTerm)
+        {
+            Check.NotNull(ontologyIndividuals, nameof(ontologyIndividuals));
+            Check.NotEmpty(cleanedTerm, nameof(cleanedTerm));
+
+            var results = new List<Individual>();
+
+            foreach (var individual in ontologyIndividuals)
+            {
+                var canAdd = false;
+                if (individual.GetNames() != null)
+                    if (individual.GetNames().Any(name => name == cleanedTerm))
+                        canAdd = true;
+
+                if (!canAdd && individual.GetTerms() != null)
+                    if (individual.GetTerms().Any(term => term == cleanedTerm))
+                        canAdd = true;
+
+                if (canAdd && !results.Contains(individual))
+                    results.Add(individual);
+            }
+
+            return results;
+        }
+
+        [NotNull]
+        private IReadOnlyDictionary<IAnalyzable, double> GenerateEntityWeights(
+            [NotNull] IReadOnlyCollection<Class> classes,
+            [NotNull] IReadOnlyCollection<Individual> individuals,
+            [NotNull] IReadOnlyCollection<IAnalyzable> entities)
+        {
+            Check.NotNull(classes, nameof(classes));
+            Check.NotNull(individuals, nameof(individuals));
+            Check.NotNull(entities, nameof(entities));
+
+            var weights = new Dictionary<IAnalyzable, double>();
+            foreach (var cls in classes)
+                weights[cls] = 0;
+            foreach (var individual in individuals)
+                weights[individual] = 0;
+
+            foreach (var entity in entities)
+            {
+                weights[entity] = 1.0;
+                if (entity is Class cls)
+                {
+                    if (cls.GetAllSubClasses() != null)
+                        foreach (var subClass in cls.GetAllSubClasses())
+                            if (weights[entity] < 0.8) weights[subClass] = 0.8;
+                    if (cls.GetDirectIndividuals() != null)
+                        foreach (var directIndividual in cls.GetDirectIndividuals())
+                            if (weights[directIndividual] < 0.7) weights[directIndividual] = 0.7;
+                }
+                else
+                {
+                    var individual = (Individual) entity;
+                    var directClass = individual.GetDirectClass();
+                    if (weights[directClass] < 0.5) weights[directClass] = 0.5;
+                }
+            }
+
+            return weights;
         }
     }
 }

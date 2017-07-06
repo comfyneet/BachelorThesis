@@ -8,12 +8,12 @@ namespace RiceDoctor.Shared
     {
         private static readonly Random _random = new Random();
 
-        public static bool ScrambledEqual<TSource>(this IEnumerable<TSource> first, IEnumerable<TSource> second)
+        public static bool ScrambledEqual<T>(this IEnumerable<T> first, IEnumerable<T> second)
         {
             if (ReferenceEquals(first, second)) return true;
             if (ReferenceEquals(null, second)) return false;
 
-            var elementCount = new Dictionary<TSource, int>();
+            var elementCount = new Dictionary<T, int>();
             var nullCount = 0;
 
             foreach (var s in first)
@@ -40,10 +40,27 @@ namespace RiceDoctor.Shared
             return hashCode;
         }
 
-        public static TSource RandomElement<TSource>(this IList<TSource> source)
+        public static T RandomElement<T>(this IList<T> source)
         {
             if (source.Count == 0) throw new IndexOutOfRangeException(nameof(source));
             return source[_random.Next(source.Count)];
+        }
+
+        public static IReadOnlyCollection<IReadOnlyCollection<T>> GetSubsets<T>(this IList<T> set)
+        {
+            var subsets = new List<IReadOnlyCollection<T>>();
+
+            for (var i = 1; i < 1 << set.Count; i++)
+            {
+                var subset = new List<T>();
+                for (var j = 0; j < set.Count; j++)
+                    if ((i & (1 << j)) > 0)
+                        subset.Add(set[j]);
+
+                subsets.Add(subset);
+            }
+
+            return subsets;
         }
     }
 }

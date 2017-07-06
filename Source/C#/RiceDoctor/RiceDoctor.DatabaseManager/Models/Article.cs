@@ -20,6 +20,11 @@ namespace RiceDoctor.DatabaseManager
             return Id == other.Id;
         }
 
+        public override string ToString()
+        {
+            return Title;
+        }
+
         public override bool Equals(object obj)
         {
             if (ReferenceEquals(null, obj)) return false;
