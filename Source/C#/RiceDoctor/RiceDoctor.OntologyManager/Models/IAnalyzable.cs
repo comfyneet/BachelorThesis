@@ -1,13 +1,11 @@
-﻿using JetBrains.Annotations;
-
-namespace RiceDoctor.OntologyManager
+﻿namespace RiceDoctor.OntologyManager
 {
     public interface IAnalyzable
     {
-        [NotNull]
         string Id { get; }
 
-        [CanBeNull]
-        string Label { get; }
+        bool IsDocumentAnalyzable { get; }
+
+        bool IsOntologyAnalyzable { get; }
     }
 }

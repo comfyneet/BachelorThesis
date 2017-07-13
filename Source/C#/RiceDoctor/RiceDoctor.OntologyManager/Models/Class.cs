@@ -33,6 +33,10 @@ namespace RiceDoctor.OntologyManager
 
         public override EntityType Type => EntityType.Class;
 
+        public bool IsDocumentAnalyzable => true;
+
+        public bool IsOntologyAnalyzable => true;
+
         [CanBeNull]
         public IReadOnlyCollection<Class> GetDirectSuperClasses()
         {

@@ -9,7 +9,7 @@
     var classes = (IReadOnlyList<Class>) ViewData["Classes"];
     var individuals = (IReadOnlyCollection<Individual>) ViewData["Individuals"];
     var fuzzyVariables = (IReadOnlyList<VariableSymbol>) ViewData["FuzzyVariables"];
-    ViewData["Title"] = "Tư vấn/Chuẩn đoán";
+    ViewData["Title"] = "Tư vấn / Chuẩn đoán";
     ViewData["AdvisoryPage"] = true;
 }
 
@@ -51,16 +51,19 @@
     </script>
 }
 
+
+<div class="page-header">
+    <h1>@ViewData["Title"]</h1>
+</div>
+
 <div class="row">
     <div class="col-md-12">
-        <h2>Tư vấn/Chuẩn đoán</h2>
-
         <form asp-controller="Advisory" asp-action="SelectProblem" method="post">
             <input type="hidden" name="guid" value="@Model.Guid"/>
             <div class="form-group">
                 <label class="col-md-3 control-label">
-                    Chọn loại câu hỏi cần tư vấn<br/>
-                    Sau đây là một số câu hỏi thường gặp
+                    Chọn loại câu hỏi cần tư vấn,<br/>
+                    sau đây là một số câu hỏi thường gặp
                 </label>
                 <div class="col-md-9">
                     @if (problems != null)
@@ -97,7 +100,7 @@
                             }
                             var suggestTypesSb = new StringBuilder();
                             <p id="problemDescription@(i)" style="display: none">
-                                <span style="text-decoration: underline;">Loại sự kiện gợi ý</span>:
+                                <span style="text-decoration: underline;">Gợi ý loại sự kiện có thể nhập</span>:
 
                                 @for (var j = 0; j < suggestTypes.Count; ++j)
                                 {
@@ -216,7 +219,7 @@
             </div>
             <div class="form-group">
                 <div class="col-md-offset-3 col-md-9" style="margin-top: 15px !important">
-                    <input type="submit" class="btn btn-default" value="Xử lý"/>
+                    <input type="submit" class="btn btn-primary" value="Xử lý"/>
                 </div>
             </div>
         </form>

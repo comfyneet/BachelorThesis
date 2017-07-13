@@ -8,14 +8,18 @@ namespace RiceDoctor.RetrievalAnalysis
     public interface IRetrievalAnalyzer
     {
         [NotNull]
-        IReadOnlyList<IAnalyzable> Entities { get; }
+        IReadOnlyDictionary<IAnalyzable, IReadOnlyList<string>> Entities { get; }
 
         [NotNull]
-        IReadOnlyDictionary<Article, IReadOnlyDictionary<IAnalyzable, double>>
-            AnalyzeArticles([NotNull] IReadOnlyCollection<Article> articles);
+        IReadOnlyDictionary<Article, IReadOnlyDictionary<IAnalyzable, double>> ArticleWeights { get; }
 
-        double GetRelevanceRank(
-            [NotNull] IReadOnlyDictionary<IAnalyzable, double> articleWeights,
-            [NotNull] IReadOnlyDictionary<IAnalyzable, double> queryWeights);
+        bool RequireUpdateWeights { get; set; }
+
+        [CanBeNull]
+        IReadOnlyCollection<KeyValuePair<Article, double>> AnalyzeRelevanceRank(
+            [NotNull] IReadOnlyCollection<string> queryTerms);
+
+        [NotNull]
+        IReadOnlyCollection<KeyValuePair<IAnalyzable, double>> FindOntologyEntity([NotNull] string term);
     }
 }

@@ -8,7 +8,7 @@ using RiceDoctor.DatabaseManager;
 namespace RiceDoctor.DatabaseManager.Migrations
 {
     [DbContext(typeof(RiceContext))]
-    [Migration("20170706180351_InitialCreate")]
+    [Migration("20170710181338_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -22,6 +22,8 @@ namespace RiceDoctor.DatabaseManager.Migrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Content");
+
+                    b.Property<string>("Image");
 
                     b.Property<DateTime>("RetrievedDate");
 

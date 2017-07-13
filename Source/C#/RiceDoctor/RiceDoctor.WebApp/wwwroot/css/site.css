@@ -1,4 +1,4 @@
-﻿body { padding-top: 70px; }
+﻿body { padding-top: 60px; }
 
 /* CSS Document */
 
@@ -30,31 +30,29 @@
     vertical-align: bottom;
 }
 
+.page-header { margin: 20px 0 20px; }
 
 /* footer*/
 
-.footer {
+footer {
     background: #21313F;
     border-bottom: 1px solid #CCCCCC;
     border-top: 1px solid #DDDDDD;
     height: auto;
-    margin-top: 200px;
-    padding-bottom: 20px;
     position: relative;
     width: 100%;
 }
 
-.footer h3 {
+footer h3 {
     border-bottom: 1px solid #BAC1C8;
     color: #fff;
     font-size: 18px;
     font-weight: 600;
     line-height: 27px;
-    padding: 10px 0 10px;
     text-transform: uppercase;
 }
 
-.footer ul {
+footer ul {
     color: #F5F5F5;
     font-size: 13px;
     list-style-type: none;
@@ -63,12 +61,12 @@
     padding-left: 0;
 }
 
-.footer ul li a {
+footer ul li a {
     display: block;
     padding: 0 0 5px 0;
 }
 
-.footer a { color: #F5F5F5 }
+footer a { color: #F5F5F5 }
 
 .supportLi h4 {
     font-size: 20px;

@@ -1,0 +1,62 @@
+﻿@model List<RiceDoctor.DatabaseManager.Website>
+@{
+    ViewData["Title"] = "Quản trị";
+    ViewData["AdminPage"] = true;
+}
+
+<div class="page-header">
+    <h1>@ViewData["Title"]</h1>
+</div>
+
+<ul class="nav nav-tabs">
+    <li role="presentation" class="active">
+        <a href="#">Quản lý trang tin</a>
+    </li>
+    <li role="presentation">
+        <a asp-controller="Admin" asp-action="Article">Quản lý tài liệu (ny)</a>
+    </li>
+</ul>
+
+<br/>
+
+<p>
+    <a asp-action="Create">Thêm trang tin</a> (not yet)
+</p>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model[0].Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model[0].Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model[0].Url)
+        </th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var website in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => website.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => website.Name)
+            </td>
+            <td>
+                <a href="@Html.Raw(website.Name)">@Html.DisplayFor(modelItem => website.Name)</a>
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@website.Id">Sửa</a> |
+                <a asp-action="Details" asp-route-id="@website.Id">Chi tiết</a> |
+                <a asp-action="Delete" asp-route-id="@website.Id">Xóa</a> (ny)
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

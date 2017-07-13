@@ -6,7 +6,7 @@ using static RiceDoctor.OntologyManager.GetType;
 
 namespace RiceDoctor.OntologyManager
 {
-    public class Attribute : Entity<Attribute>
+    public class Attribute : Entity<Attribute>, IAnalyzable
     {
         [CanBeNull] private IReadOnlyCollection<Class> _allDomains;
         private bool _canGetAllDomains;
@@ -43,6 +43,10 @@ namespace RiceDoctor.OntologyManager
         public IReadOnlyList<string> EnumeratedValues { get; }
 
         public override EntityType Type => EntityType.Attribute;
+
+        public bool IsDocumentAnalyzable => false;
+
+        public bool IsOntologyAnalyzable => true;
 
         [CanBeNull]
         public string GetComment()

@@ -1,10 +1,13 @@
 ﻿@using Microsoft.ApplicationInsights.AspNetCore
 @inject JavaScriptSnippet JavaScriptSnippet
 @{
-    var showOntologyPage = ViewData["OntologyPage"] != null && (bool) ViewData["OntologyPage"];
-    var showAdvisoryPage = ViewData["AdvisoryPage"] != null && (bool) ViewData["AdvisoryPage"];
-    var showAboutPage = ViewData["AboutPage"] != null && (bool) ViewData["AboutPage"];
+    var activeOntologyPage = ViewData["OntologyPage"] != null && (bool) ViewData["OntologyPage"];
+    var activeAdvisoryPage = ViewData["AdvisoryPage"] != null && (bool) ViewData["AdvisoryPage"];
+    var activeSearchPage = ViewData["SearchPage"] != null && (bool) ViewData["SearchPage"];
+    var activeAdminPage = ViewData["AdminPage"] != null && (bool) ViewData["AdminPage"];
+    var activeContactPage = ViewData["ContactPage"] != null && (bool) ViewData["ContactPage"];
 }
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,89 +47,87 @@
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li
-                    @if (showOntologyPage)
+                    @if (activeOntologyPage)
                     {
                         @:class="navbar-nav-active"
                     }>
                     <a asp-controller="Ontology" asp-action="Index">Ontology</a>
                 </li>
                 <li
-                    @if (showAdvisoryPage)
+                    @if (activeAdvisoryPage)
                     {
                         @:class="navbar-nav-active"
                     }>
                     <a asp-controller="Advisory" asp-action="Index">Tư vấn</a>
                 </li>
                 <li
-                    @if (showAboutPage)
+                    @if (activeSearchPage)
+                    {
+                        @: class="navbar-nav-active"
+                    }>
+                    <a asp-controller="Search" asp-action="Index">Tra cứu</a>
+                </li>
+                <li
+                    @if (activeAdminPage)
+                    {
+                        @: class="navbar-nav-active"
+                    }>
+                    <a asp-controller="Admin" asp-action="Index">Quản trị</a>
+                </li>
+                <li
+                    @if (activeContactPage)
                     {
                         @:class="navbar-nav-active"
                     }>
-                    <a asp-controller="Home" asp-action="About">Giới thiệu</a>
+                    <a asp-controller="Home" asp-action="Contact">Liên hệ</a>
 
                 </li>
             </ul>
-
-            <div class="input-group navbar-form navbar-right">
-                <form asp-controller="Search" asp-action="Index" method="get">
-                    <input type="text" class="form-control" name="keywords" placeholder="Câu truy vấn...">
-                    <span class="input-group-btn">
-                        <button type="submit" class="btn btn-default">Tra cứu</button>
-                    </span>
-                </form>
-            </div>
         </div>
     </div>
 </nav>
 
-<div class="container">
+<div class="container" style="min-height: 750px">
     @RenderBody()
+</div>
+
+<div class="container">
     <footer>
-        <div class="footer" id="footer">
-            <div class="row" style="padding-left: 20px">
-                <div class="col-md-4">
-                    <h3>Sinh viên</h3>
-                    <ul>
-                        <li>
-                            <a href="mailto:13520638@gm.uit.edu.vn">Nguyễn Minh Phúc 13520638@gm.uit.edu.vn</a>
-                        </li>
-                        <li>
-                            <a href="mailto:13520489@gm.uit.edu.vn">Lê Thị Tuyết Mai 13520489@gm.uit.edu.vn</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h3>Giảng viên hướng dẫn</h3>
-                    <ul>
-                        <li>
-                            <a href="mailto:thuonghtt@uit.edu.vn">Ths Huỳnh Thị Thanh Thương thuonghtt@uit.edu.vn</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h3>Trường</h3>
-                    <ul>
-                        <li>
-                            <a href="https://www.uit.edu.vn/">Đại Học Công Nghệ Thông Tin</a>
-                        </li>
-                        <li>
-                            <address>
-                                Khu phố 6, P. Linh Trung
-                                Quận Thủ Đức, Tp. Hồ Chí Minh
-                            </address>
-                        </li>
-                    </ul>
-                </div>
+        <div class="row" style="padding-left: 20px">
+            <div class="col-md-4">
+                <h3>Sinh viên</h3>
+                <ul>
+                    <li>
+                        <a href="mailto:13520638@gm.uit.edu.vn">Nguyễn Minh Phúc 13520638@gm.uit.edu.vn</a>
+                    </li>
+                    <li>
+                        <a href="mailto:13520489@gm.uit.edu.vn">Lê Thị Tuyết Mai 13520489@gm.uit.edu.vn</a>
+                    </li>
+                </ul>
             </div>
-            <!--/.row-->
-        </div>
-        <!--/.footer-->
-        <div class="footer-bottom">
-            <div class="container">
-                <p class="pull-left"> &copy; 2017 - Rice Doctor</p>
+            <div class="col-md-4">
+                <h3>Giảng viên hướng dẫn</h3>
+                <ul>
+                    <li>
+                        <a href="mailto:thuonghtt@uit.edu.vn">Ths Huỳnh Thị Thanh Thương thuonghtt@uit.edu.vn</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h3>Trường</h3>
+                <ul>
+                    <li>
+                        <a href="https://www.uit.edu.vn/">Đại Học Công Nghệ Thông Tin</a>
+                    </li>
+                    <li>
+                        <address>
+                            Khu phố 6, P. Linh Trung
+                            Quận Thủ Đức, Tp. Hồ Chí Minh
+                        </address>
+                    </li>
+                </ul>
             </div>
         </div>
-        <!--/.footer-bottom-->
     </footer>
 </div>
 

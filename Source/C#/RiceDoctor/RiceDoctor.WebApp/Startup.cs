@@ -5,9 +5,11 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using RiceDoctor.DatabaseManager;
 using RiceDoctor.FuzzyManager;
 using RiceDoctor.OntologyManager;
 using RiceDoctor.QueryAnalysis;
+using RiceDoctor.RetrievalAnalysis;
 using RiceDoctor.RuleManager;
 using RiceDoctor.SemanticCodeInterpreter;
 using Manager = RiceDoctor.OntologyManager.Manager;
@@ -40,6 +42,8 @@ namespace RiceDoctor.WebApp
 
             services.AddSingleton<IOntologyManager>(Manager.Instance);
 
+            services.AddSingleton<IRetrievalAnalyzer>(new RetrievalAnalyzer(Manager.Instance));
+
             var problemData = File.ReadAllText(Path.Combine(AppContext.BaseDirectory,
                 @"..\..\..\..\Resources\problem-types.json"));
             var ruleData = File.ReadAllText(Path.Combine(AppContext.BaseDirectory,
@@ -53,6 +57,8 @@ namespace RiceDoctor.WebApp
             var fuzzyData = File.ReadAllText(Path.Combine(AppContext.BaseDirectory,
                 @"..\..\..\..\Resources\fuzzy-model.txt"));
             services.AddSingleton<IFuzzyManager>(new FuzzyManager.Manager(fuzzyData));
+
+            services.AddDbContext<RiceContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

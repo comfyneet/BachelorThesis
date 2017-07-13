@@ -1,18 +1,240 @@
 ﻿@using RiceDoctor.DatabaseManager
-@model List<KeyValuePair<RiceDoctor.DatabaseManager.Article, double>>
+@using RiceDoctor.OntologyManager
+@using RiceDoctor.Shared
+@using Attribute = RiceDoctor.OntologyManager.Attribute
+@model RiceDoctor.WebApp.Models.SearchInfor
 @{
+    var searchArticles = ViewData["SearchArticles"] != null && (bool) ViewData["SearchArticles"];
+    var searchOntology = ViewData["SearchOntology"] != null && (bool) ViewData["SearchOntology"];
     var keywords = (string) ViewData["Keywords"];
-    ViewData["Title"] = "Tra cứu \"" + keywords + "\"";
+
+    ViewData["Title"] = "Tra cứu";
+    ViewData["SearchPage"] = true;
 }
 
-<div class="row">
-    <div class="col-md-12">
-        <h2>Tra cứu "@keywords"</h2>
+<div class="page-header">
+    <h1>@ViewData["Title"]</h1>
+</div>
 
-        @if (Model == null)
+<div class="row">
+<div class="col-md-12">
+<form asp-controller="Search" asp-action="Search" method="post">
+    <div class="input-group">
+        <input asp-for="Keywords" class="form-control" placeholder="Câu truy vấn..."
+               @if (keywords != null)
+               {
+                   @:value="@keywords"
+               }
+               required>
+        <span class="input-group-btn">
+            <input type="submit" class="btn btn-primary" value="Tra cứu"/>
+        </span>
+    </div>
+    <div class="text-center row">
+        <div class="col-md-1"></div>
+        <div class="col-md-4">
+            <div class="radio">
+                <label>
+                    <input type="radio" name="IsDocumentSearch" value="False"
+                           @if (searchOntology)
+                           {
+                               @:checked="checked"
+                           }
+                           required>
+                    Tìm kiếm trên Ontology
+                </label>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <div class="radio">
+                <label>
+                    <input type="radio" name="IsDocumentSearch" value="True"
+                           @if (searchArticles)
+                           {
+                               @:checked="checked"
+                           } required>
+                    Tìm kiếm trên tài liệu web
+                </label>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+</form>
+
+@if (searchArticles)
+{
+    var results = (IReadOnlyCollection<KeyValuePair<Article, double>>) ViewData["Results"];
+    if (results == null)
+    {
+        <section>
+            <h4>Không tìm thấy bài viết liên quan đến câu truy vấn</h4>
+
+            <p>
+                Tìm kiếm "@keywords" trên Internet với <a href="https://www.google.com/search?q=@keywords">Google</a>.
+            </p>
+        </section>
+
+        <hr/>
+    }
+    else
+    {
+        <h4>Tìm thấy @results.Count bài viết liên quan đến câu truy vấn</h4>
+
+        foreach (var result in results)
         {
             <section>
-                <h4>Không tìm thấy dữ liệu từ câu truy vấn</h4>
+                <div class="row">
+                    <div class="col-md-2 text-center">
+                        @result.Key.RetrievedDate.ToString("dd-MM-yyyy")
+                        <br/>
+                        @if (result.Key.Image == null)
+                        {
+                            <img src="~/images/uit-logo.gif" class="img-responsive img-rounded" alt="Hình đại diện cho bài viết">
+                        }
+                        else
+                        {
+                            <img src="~/images/@result.Key.Image" class="img-responsive img-rounded" alt="@result.Key.Title">
+                        }
+                    </div>
+                    <div class="col-md-4">
+                        <a href="@Html.Raw(result.Key.Url)">
+                            <strong>@result.Key.Title</strong>
+                        </a> - @result.Value
+                    </div>
+                    <div class="col-md-6">
+                        @{ var description = ""; }
+                        @if (!string.IsNullOrWhiteSpace(result.Key.Content))
+                        {
+                            if (result.Key.Content.Count() < 200)
+                            {
+                                description = result.Key.Content.Substring(0, result.Key.Content.Count());
+                            }
+                            else
+                            {
+                                description = result.Key.Content.Substring(0, 200) + "...";
+                            }
+                        }
+                        <p>
+                            @description
+                            <small>
+                                <a href="@Html.Raw(result.Key.Url)">[xem thêm]</a>
+                            </small>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <hr/>
+        }
+    }
+}
+
+else if (searchOntology)
+{
+    var results = (IReadOnlyCollection<KeyValuePair<IAnalyzable, double>>) ViewData["Results"];
+    var exactResults = results.Where(r => r.Value.Equals3DigitPrecision(1.0)).ToList();
+    var similarResults = results.Where(r => r.Value < 1.0).ToList();
+    if (results.Count == 0)
+    {
+        <section>
+            <h4>Không tìm thấy dữ liệu Ontology đến câu truy vấn</h4>
+
+            <p>
+                Tìm kiếm "@keywords" trên Internet với <a href="https://www.google.com/search?q=@keywords">Google</a>.
+            </p>
+        </section>
+
+        <hr/>
+    }
+    else
+    {
+        if (exactResults.Count > 0)
+        {
+            <section>
+                <h4>Tìm thấy @exactResults.Count dữ liệu Ontology</h4>
+
+                <ul>
+                    @foreach (var result in exactResults)
+                    {
+                        <li>
+                            @if (result.Key is Class)
+                            {
+                                <a asp-controller="Ontology" asp-action="Class" asp-route-className="@result.Key.Id">
+                                    <span class="glyphicon glyphicon-copyright-mark"></span>
+                                    @result.Key
+                                </a>
+                            }
+                            @if (result.Key is Individual)
+                            {
+                                <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@result.Key.Id">
+                                    <span class="glyphicon glyphicon-info-sign"></span>
+                                    @result.Key
+                                </a>
+                            }
+                            @if (result.Key is Attribute)
+                            {
+                                <a asp-controller="Ontology" asp-action="Attribute" asp-route-attributeName="@result.Key.Id">
+                                    <span class="glyphicon glyphicon-font"></span>
+                                    @result.Key
+                                </a>
+                            }
+                            @if (result.Key is Relation)
+                            {
+                                <a asp-controller="Ontology" asp-action="Relation" asp-route-relationName="@result.Key.Id">
+                                    <span class="glyphicon glyphicon-registration-mark"></span>
+                                    @result.Key
+                                </a>
+                            }
+                        </li>
+                    }
+                </ul>
+            </section>
+
+            <hr/>
+        }
+        if (similarResults.Count > 0)
+        {
+            <section>
+                <h4>Không tìm thấy dữ liệu Ontology. Có phải bạn muốn tìm:</h4>
+
+                <ul>
+                    @foreach (var result in similarResults)
+                    {
+                        <li>
+                            @if (result.Key is Class)
+                            {
+                                <a asp-controller="Ontology" asp-action="Class" asp-route-className="@result.Key.Id">
+                                    <span class="glyphicon glyphicon-copyright-mark"></span>
+                                    @result.Key - @result.Value
+                                </a>
+                            }
+                            @if (result.Key is Individual)
+                            {
+                                <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@result.Key.Id">
+                                    <span class="glyphicon glyphicon-info-sign"></span>
+                                    @result.Key - @result.Value
+                                </a>
+                            }
+                            @if (result.Key is Attribute)
+                            {
+                                <a asp-controller="Ontology" asp-action="Attribute" asp-route-attributeName="@result.Key.Id">
+                                    <span class="glyphicon glyphicon-font"></span>
+                                    @result.Key - @result.Value
+                                </a>
+                            }
+                            @if (result.Key is Relation)
+                            {
+                                <a asp-controller="Ontology" asp-action="Relation" asp-route-relationName="@result.Key.Id">
+                                    <span class="glyphicon glyphicon-registration-mark"></span>
+                                    @result.Key - @result.Value
+                                </a>
+                            }
+                        </li>
+                    }
+                </ul>
 
                 <p>
                     Tìm kiếm "@keywords" trên Internet với <a href="https://www.google.com/search?q=@keywords">Google</a>.
@@ -21,97 +243,7 @@
 
             <hr/>
         }
-        else
-        {
-            foreach (var result in Model)
-            {
-                <p><a href="@Html.Raw(result.Key.Url)">@result.Key.Title</a> - @result.Value</p>
-                if (!string.IsNullOrWhiteSpace(result.Key.Content))
-                {
-                    var description = "";
-                    if (result.Key.Content.Count() < 200)
-                    {
-                        description = result.Key.Content.Substring(0, result.Key.Content.Count());
-                    }
-                    else
-                    {
-                        description = result.Key.Content.Substring(0, 200) + "...";
-                    }
-                    <p>@description</p>
-                }
-                <p>Ngày crawler: @result.Key.RetrievedDate</p>
-                <hr/>
-
-                @*var emptyPair = new List<string>();
-                foreach (var pair in result.Value)
-                {
-                    string type = null;
-                    switch (pair.Key)
-                    {
-                        case SearchableType.Class:
-                            type = "lớp";
-                            break;
-                        case SearchableType.Individual:
-                            type = "thể hiện";
-                            break;
-                    }
-
-                    if (pair.Value == null)
-                    {
-                        if (!emptyPair.Contains(type))
-                        {
-                            emptyPair.Add(type);
-                        }
-                    }
-                    else
-                    {
-                        <section>
-                            <h4>Tìm thấy @pair.Value.Count @type với từ khóa "@result.Key"</h4>
-
-                            <ol>
-                                @foreach (var value in pair.Value)
-                                {
-                                    switch (pair.Key)
-                                    {
-                                        case SearchableType.Class:
-                                            <li>
-                                                <a asp-controller="Ontology" asp-action="Class" asp-route-className="@(((Class) value.Key).Id)" asp-route-keywords="@result.Key">
-                                                    @value.Key
-                                                </a>
-                                                (@((value.Value * 100).ToString("#.##"))%)
-                                            </li>
-                                            break;
-                                        case SearchableType.Individual:
-                                            <li>
-                                                <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@(((Individual) value.Key).Id)" asp-route-keywords="@result.Key">
-                                                    @value.Key
-                                                </a>
-                                                (@((value.Value * 100).ToString("#.##"))%)
-                                            </li>
-                                            break;
-                                    }
-                                }
-                            </ol>
-                        </section>
-
-                        <hr/>
-                    }
-                }
-
-                if (emptyPair.Count > 0)
-                {
-                    var pairStr = string.Join(", ", emptyPair);
-                    <section>
-                        <h4>Không tìm thấy @pairStr với từ khóa "@result.Key"</h4>
-
-                        <p>
-                            Tìm kiếm "@result.Key" trên Internet với <a href="https://www.google.com/search?q=@result.Key">Google</a>.
-                        </p>
-                    </section>
-
-                    <hr/>
-                }*@
-            }
-        }
-    </div>
+    }
+}
+</div>
 </div>

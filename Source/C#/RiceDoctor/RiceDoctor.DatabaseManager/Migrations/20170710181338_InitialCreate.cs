@@ -25,6 +25,7 @@ namespace RiceDoctor.DatabaseManager.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Content = table.Column<string>(nullable: true),
+                    Image = table.Column<string>(nullable: true),
                     RetrievedDate = table.Column<DateTime>(nullable: false),
                     Title = table.Column<string>(nullable: true),
                     Url = table.Column<string>(nullable: true),

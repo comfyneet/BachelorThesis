@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using RiceDoctor.DatabaseManager;
@@ -29,7 +30,9 @@ namespace RiceDoctor.ConsoleApp
                         .Where(newArticle => context.Articles.All(
                             existingArticle => !existingArticle.Url.Equals(newArticle.Url)))
                         .ToList();
-                    await context.Articles.AddRangeAsync(awaitToAddArticles);
+
+                    if (website.Articles == null) website.Articles = new List<Article>();
+                    website.Articles.AddRange(awaitToAddArticles);
                     await context.SaveChangesAsync();
                 }
             }

@@ -6,7 +6,7 @@ using static RiceDoctor.OntologyManager.GetType;
 
 namespace RiceDoctor.OntologyManager
 {
-    public class Relation : Entity<Relation>, IEquatable<Relation>
+    public class Relation : Entity<Relation>, IEquatable<Relation>, IAnalyzable
     {
         [CanBeNull] private IReadOnlyCollection<Class> _allDomains;
         [CanBeNull] private IReadOnlyCollection<Class> _allRanges;
@@ -35,6 +35,10 @@ namespace RiceDoctor.OntologyManager
         }
 
         public override EntityType Type => EntityType.Relation;
+
+        public bool IsDocumentAnalyzable => false;
+
+        public bool IsOntologyAnalyzable => true;
 
         public bool Equals(Relation other)
         {

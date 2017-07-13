@@ -1,6 +1,12 @@
-﻿@{
+﻿@model List<RiceDoctor.DatabaseManager.Article>
+@{
     ViewData["Title"] = "Trang chủ";
 }
+
+<div class="page-header">
+    <h1>Hệ thống hỗ trợ khuyến nông trên cây lúa</h1>
+</div>
+
 <div>
     <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -31,3 +37,51 @@
         <a class="carousel-control right" href="#carousel" data-slide="next">›</a>
     </div>
 </div>
+
+<h3>Tin tức mới nhất</h3>
+@foreach (var article in Model)
+{
+    <section>
+        <div class="row">
+            <div class="col-md-2 text-center">
+                @article.RetrievedDate.ToString("dd-MM-yyyy")
+                <br/>
+                @if (article.Image == null)
+                {
+                    <img src="~/images/uit-logo.gif" class="img-responsive img-rounded" alt="Hình đại diện cho bài viết">
+                }
+                else
+                {
+                    <img src="~/images/@article.Image" class="img-responsive img-rounded" alt="@article.Title">
+                }
+            </div>
+            <div class="col-md-4">
+                <a href="@Html.Raw(article.Url)">
+                    <strong>@article.Title</strong>
+                </a>
+            </div>
+            <div class="col-md-6">
+                @{ var description = ""; }
+                @if (!string.IsNullOrWhiteSpace(article.Content))
+                {
+                    if (article.Content.Count() < 200)
+                    {
+                        description = article.Content.Substring(0, article.Content.Count());
+                    }
+                    else
+                    {
+                        description = article.Content.Substring(0, 200) + "...";
+                    }
+                }
+                <p>
+                    @description
+                    <small>
+                        <a href="@Html.Raw(article.Url)">[xem thêm]</a>
+                    </small>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <hr/>
+}

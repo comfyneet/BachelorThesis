@@ -26,6 +26,10 @@ namespace RiceDoctor.OntologyManager
 
         public override EntityType Type => EntityType.Individual;
 
+        public bool IsDocumentAnalyzable => true;
+
+        public bool IsOntologyAnalyzable => true;
+
         [CanBeNull]
         public Class GetDirectClass()
         {

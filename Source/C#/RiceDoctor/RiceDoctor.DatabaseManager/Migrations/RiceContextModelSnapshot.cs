@@ -20,6 +20,8 @@ namespace RiceDoctor.DatabaseManager.Migrations
 
                 b.Property<string>("Content");
 
+                b.Property<string>("Image");
+
                 b.Property<DateTime>("RetrievedDate");
 
                 b.Property<string>("Title");
