@@ -1,4 +1,5 @@
-﻿@model RiceDoctor.OntologyManager.Class
+﻿@using RiceDoctor.DatabaseManager
+@model RiceDoctor.OntologyManager.Class
 @{
     var classTree = (string) ViewData["ClassTree"];
     var individualTree = (string) ViewData["IndividualTree"];
@@ -12,7 +13,7 @@
 <div class="col-md-3">
     <div id="classTree"></div>
 </div>
-<div class="col-md-9">
+<div class="col-md-9" typeof="rdfs:Class" resource="@($"{Context.Request.GetBaseUrl()}Class?className={Model.Id}")">
 <ul class="nav nav-tabs">
     <li role="presentation"
         @if (!showAdvance)
@@ -32,7 +33,7 @@
 
 <h2>
     <span class="glyphicon glyphicon-copyright-mark"></span>
-    @ViewData["Title"]
+    <span property="rdfs:label">@ViewData["Title"]</span>
 </h2>
 
 @if (showAdvance)
@@ -123,10 +124,11 @@
         {
             foreach (var attribute in Model.GetAttributes())
             {
-                <p>
-                    <a asp-controller="Ontology" asp-action="Attribute" asp-route-attributeName="@attribute.Id">
+                <p typeof="rdfs:Property">
+                    <a asp-controller="Ontology" asp-action="Attribute" asp-route-attributeName="@attribute.Id"
+                       resource="@($"{Context.Request.GetBaseUrl()}Attribute?attributeName={attribute.Id}")">
                         <span class="glyphicon glyphicon-font"></span>
-                        @attribute
+                        <span property="rdfs:label">@attribute</span>
                     </a> @attribute.Range
                 </p>
             }
@@ -216,6 +218,23 @@
         </div>
     }
 </section>
+
+@{ var articles = (List<KeyValuePair<Article, double>>) ViewData["Articles"]; }
+@if (articles != null)
+{
+    <hr/>
+    <section>
+        <h4>Tài liệu liên quan</h4>
+
+        @foreach (var article in articles)
+        {
+            <p>
+                <a href="@Html.Raw(article.Key.Url)">@article.Key.Title</a> - (@article.Key.Website.Name) @article.Key.RetrievedDate.ToString("dd/MM/yyyy")
+            </p>
+        }
+    </section>
+}
+
 </div>
 </div>
 

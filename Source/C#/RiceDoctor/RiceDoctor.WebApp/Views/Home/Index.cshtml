@@ -4,7 +4,7 @@
 }
 
 <div class="page-header">
-    <h1>Hệ thống hỗ trợ khuyến nông trên cây lúa</h1>
+    <h1>Đề tài: Hệ thống hỗ trợ khuyến nông trên cây lúa</h1>
 </div>
 
 <div>
@@ -38,7 +38,16 @@
     </div>
 </div>
 
-<h3>Tin tức mới nhất</h3>
+<div style="margin: 50px 0"></div>
+
+<ul class="nav nav-tabs">
+    <li role="presentation" class="active">
+        <a href="#">Tin tức mới nhất</a>
+    </li>
+</ul>
+
+<div style="margin-top: 20px"></div>
+
 @foreach (var article in Model)
 {
     <section>
@@ -48,32 +57,31 @@
                 <br/>
                 @if (article.Image == null)
                 {
-                    <img src="~/images/uit-logo.gif" class="img-responsive img-rounded" alt="Hình đại diện cho bài viết">
+                    <img src="~/images/uit-logo.gif" class="img-responsive img-rounded" alt="Hình đại diện cho bài viết" style="margin: auto; max-height: 70px;">
                 }
                 else
                 {
-                    <img src="~/images/@article.Image" class="img-responsive img-rounded" alt="@article.Title">
+                    <img src="~/images/@article.Image" class="img-responsive img-rounded" alt="@article.Title" style="margin: auto; max-height: 70px;">
                 }
             </div>
-            <div class="col-md-4">
+            <div class="col-md-10">
                 <a href="@Html.Raw(article.Url)">
                     <strong>@article.Title</strong>
                 </a>
-            </div>
-            <div class="col-md-6">
                 @{ var description = ""; }
                 @if (!string.IsNullOrWhiteSpace(article.Content))
                 {
-                    if (article.Content.Count() < 200)
+                    if (article.Content.Count() < 300)
                     {
                         description = article.Content.Substring(0, article.Content.Count());
                     }
                     else
                     {
-                        description = article.Content.Substring(0, 200) + "...";
+                        description = article.Content.Substring(0, 300) + "...";
                     }
                 }
                 <p>
+                    (<a href="@Html.Raw(article.Website.Url)">@article.Website.Name</a>) -
                     @description
                     <small>
                         <a href="@Html.Raw(article.Url)">[xem thêm]</a>

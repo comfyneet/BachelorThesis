@@ -1,0 +1,169 @@
+﻿@model RiceDoctor.DatabaseManager.Website
+@{
+    var createdCategory = (string) ViewData["CreatedCategory"];
+    var deletedCategory = (string) ViewData["DeletedCategory"];
+    var websiteCreated = ViewData["WebsiteCreated"] != null && (bool) ViewData["WebsiteCreated"];
+    var websiteEdited = ViewData["WebsiteEdited"] != null && (bool) ViewData["WebsiteEdited"];
+
+    ViewData["Title"] = $"Sửa trang tin - {Model.Name}";
+    ViewData["AdminPage"] = true;
+}
+
+<div class="page-header">
+    <h1>@ViewData["Title"]</h1>
+</div>
+
+<br/>
+@if (createdCategory != null)
+{
+    <div class="alert alert-success alert-dismissible fade in" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+        Đã thêm trang thể loại <strong>"@createdCategory"</strong>
+    </div>
+}
+
+@if (deletedCategory != null)
+{
+    <div class="alert alert-danger alert-dismissible fade in" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+        Đã xóa trang thể loại <strong>"@deletedCategory"</strong>
+    </div>
+}
+
+@if (websiteCreated)
+{
+    <div class="alert alert-success alert-dismissible fade in" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+        Đã thêm trang tin <strong>"@Model.Name"</strong>
+    </div>
+}
+
+@if (websiteEdited)
+{
+    <div class="alert alert-success alert-dismissible fade in" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+        Đã sửa trang tin <strong>"@Model.Name"</strong>
+    </div>
+}
+
+<form asp-action="EditWebsite" method="post">
+    <div class="form-horizontal">
+        <div class="form-group">
+            <label asp-for="Id" class="col-md-2 control-label">Id</label>
+            <div class="col-md-10">
+                <input asp-for="Id" type="text" value="@Model.Id" class="form-control" required readonly/>
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Name" class="col-md-2 control-label">Tên trang tin</label>
+            <div class="col-md-10">
+                <input asp-for="Name" class="form-control" required/>
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Url" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Url" type="url" class="form-control" required/>
+                <span asp-validation-for="Url" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label">Trang thể loại</label>
+            <div class="col-md-10">
+                @if (Model.Categories != null)
+                {
+                    foreach (var category in Model.Categories)
+                    {
+                        <div class="row">
+                            <div class="col-md-11">
+                                <p>
+                                    <a href="@Html.Raw(category.Url)">@category.Url</a>
+                                </p>
+                                <p>XPath tài liệu: @category.ArticleXPath</p>
+                                <p>XPath tiêu đề: @category.TitleXPath</p>
+                                <p>XPath nội dung: @category.ContentXPath</p>
+                            </div>
+                            <div class="col-md-1">
+                                @if (Model.Categories.Count > 1)
+                                {
+                                    <a asp-action="DeleteCategory" asp-route-id="@category.Id" class="btn btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa trang thể loại?')">
+                                        Xóa
+                                    </a>
+                                }
+                            </div>
+                        </div>
+
+                        <hr/>
+                    }
+                }
+
+                <a asp-action="CreateCategory" asp-route-websiteId="@Model.Id" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-plus"></span>
+                    Thêm trang thể loại mới
+                </a>
+                <br/>
+                <br/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label">Danh sách tài liệu</label>
+            <div class="col-md-10">
+                <table id="articleTable" class="table table-striped table-bordered">
+                    <thead>
+                    <tr>
+                        <th>Tên tài liệu</th>
+                        <th>Ngày lưu</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @if (Model.Articles != null)
+                    {
+                        foreach (var article in Model.Articles)
+                        {
+                            <tr>
+                                <td>
+                                    <a asp-action="Article" asp-route-id="@article.Id">@article.Title</a>
+                                </td>
+                                <td>@article.RetrievedDate.ToString("yyyy-MM-dd")</td>
+                            </tr>
+                        }
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Lưu" class="btn btn-primary"/>
+                <a asp-action="DeleteWebsite" asp-route-id="@Model.Id" class="btn btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa trang tin và các tài liệu liên quan?')">
+                    Xóa
+                </a>
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index"><< Trở về</a>
+</div>
+
+@section Scripts {
+    <script>
+        $('#articleTable').DataTable({
+            'order': [[1, 'desc']],
+            'language': {
+                'url': '../../js/datatables.vietnamese.json'
+            }
+        });
+    </script>
+}

@@ -92,32 +92,31 @@
                         <br/>
                         @if (result.Key.Image == null)
                         {
-                            <img src="~/images/uit-logo.gif" class="img-responsive img-rounded" alt="Hình đại diện cho bài viết">
+                            <img src="~/images/uit-logo.gif" class="img-responsive img-rounded" alt="Hình đại diện cho bài viết" style="margin: auto; max-height: 70px;">
                         }
                         else
                         {
-                            <img src="~/images/@result.Key.Image" class="img-responsive img-rounded" alt="@result.Key.Title">
+                            <img src="~/images/@result.Key.Image" class="img-responsive img-rounded" alt="@result.Key" style="margin: auto; max-height: 70px;">
                         }
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-10">
                         <a href="@Html.Raw(result.Key.Url)">
                             <strong>@result.Key.Title</strong>
-                        </a> - @result.Value
-                    </div>
-                    <div class="col-md-6">
+                        </a> - @result.Value.ToString("#.##")
                         @{ var description = ""; }
                         @if (!string.IsNullOrWhiteSpace(result.Key.Content))
                         {
-                            if (result.Key.Content.Count() < 200)
+                            if (result.Key.Content.Count() < 300)
                             {
                                 description = result.Key.Content.Substring(0, result.Key.Content.Count());
                             }
                             else
                             {
-                                description = result.Key.Content.Substring(0, 200) + "...";
+                                description = result.Key.Content.Substring(0, 300) + "...";
                             }
                         }
                         <p>
+                            (<a href="@Html.Raw(result.Key.Website.Url)">@result.Key.Website.Name</a>) -
                             @description
                             <small>
                                 <a href="@Html.Raw(result.Key.Url)">[xem thêm]</a>
@@ -208,28 +207,28 @@ else if (searchOntology)
                             {
                                 <a asp-controller="Ontology" asp-action="Class" asp-route-className="@result.Key.Id">
                                     <span class="glyphicon glyphicon-copyright-mark"></span>
-                                    @result.Key - @result.Value
+                                    @result.Key - @result.Value.ToString("#.##")
                                 </a>
                             }
                             @if (result.Key is Individual)
                             {
                                 <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@result.Key.Id">
                                     <span class="glyphicon glyphicon-info-sign"></span>
-                                    @result.Key - @result.Value
+                                    @result.Key - @result.Value.ToString("#.##")
                                 </a>
                             }
                             @if (result.Key is Attribute)
                             {
                                 <a asp-controller="Ontology" asp-action="Attribute" asp-route-attributeName="@result.Key.Id">
                                     <span class="glyphicon glyphicon-font"></span>
-                                    @result.Key - @result.Value
+                                    @result.Key - @result.Value.ToString("#.##")
                                 </a>
                             }
                             @if (result.Key is Relation)
                             {
                                 <a asp-controller="Ontology" asp-action="Relation" asp-route-relationName="@result.Key.Id">
                                     <span class="glyphicon glyphicon-registration-mark"></span>
-                                    @result.Key - @result.Value
+                                    @result.Key - @result.Value.ToString("#.##")
                                 </a>
                             }
                         </li>

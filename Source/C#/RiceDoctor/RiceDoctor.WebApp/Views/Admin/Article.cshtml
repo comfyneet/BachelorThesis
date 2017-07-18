@@ -1,0 +1,51 @@
+﻿@model RiceDoctor.DatabaseManager.Article
+@{
+    ViewData["Title"] = $"Tài liệu - {Model.Title}";
+}
+
+<div class="page-header">
+    <h1>@ViewData["Title"]</h1>
+</div>
+
+<br/>
+
+<dl class="dl-horizontal">
+    <dt>Id</dt>
+    <dd>@Model.Id</dd>
+
+    <dt>Hình đại diện</dt>
+    <dd>
+        @if (Model.Image != null)
+        {
+            <img src="~/images/@Model.Image" class="img-responsive img-rounded" alt="@Model.Title" style="max-height: 300px">
+        }
+        else
+        {
+            @:Không có
+        }
+    </dd>
+
+    <dt>Tiêu đề</dt>
+    <dd>@Model.Title</dd>
+
+    <dt>Nội dung</dt>
+    <dd>@Model.Content</dd>
+
+    <dt>Trang tin</dt>
+    <dd>
+        <a asp-action="Website" asp-route-id="@Model.WebsiteId">
+            @Model.Website.Name
+        </a>
+    </dd>
+
+    <dt>Ngày lưu</dt>
+    <dd>@Model.RetrievedDate.ToString("dd-MM-yyyy")</dd>
+</dl>
+
+<div class="text-center">
+    <button class="btn btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa tài liệu?')">Xóa</button>
+</div>
+
+<div>
+    <a asp-action="Articles"><< Trở về</a>
+</div>

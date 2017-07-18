@@ -72,8 +72,8 @@ namespace RiceDoctor.RetrievalAnalysis
             var searchingEntities = new List<IAnalyzable>();
             foreach (var term in queryTerms)
             {
-                var cleanedTerm = term.RemoveNonWordChars();
-                foreach (var individual in SearchEntities(individualEntities, term))
+                var cleanedTerm = term.ToLower().RemoveNonWordChars();
+                foreach (var individual in SearchEntities(individualEntities, cleanedTerm))
                     searchingEntities.Add(individual);
                 foreach (var cls in SearchEntities(classEntities, cleanedTerm))
                     searchingEntities.Add(cls);

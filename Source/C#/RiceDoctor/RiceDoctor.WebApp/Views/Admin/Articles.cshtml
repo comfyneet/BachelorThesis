@@ -1,0 +1,75 @@
+﻿@model List<RiceDoctor.DatabaseManager.Article>
+@{
+    var deletedArticle = (string) ViewData["DeletedArticle"];
+
+    ViewData["Title"] = "Quản lý tài liệu";
+    ViewData["AdminPage"] = true;
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<br/>
+
+<ul class="nav nav-tabs">
+    <li role="presentation">
+        <a asp-action="Index">Quản lý trang tin</a>
+    </li>
+    <li role="presentation" class="active">
+        <a asp-action="Articles">Quản lý tài liệu</a>
+    </li>
+</ul>
+
+<br/>
+
+@if (deletedArticle != null)
+{
+    <div class="alert alert-danger alert-dismissible fade in" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+        Đã xóa tài liệu <strong>"@deletedArticle"</strong>
+    </div>
+}
+
+<table id="articleTable" class="table table-striped table-bordered">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Tiêu đề tài liệu</th>
+        <th>Trang tin</th>
+        <th>Ngày lưu</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var article in Model)
+    {
+        <tr>
+            <td>@article.Id</td>
+            <td>
+                <a asp-action="Article" asp-route-id="@article.Id">
+                    @article.Title
+                </a>
+            </td>
+            <td>
+                <a asp-action="Website" asp-route-id="@article.WebsiteId">
+                    @article.Website.Name
+                </a>
+            </td>
+            <td>
+                @article.RetrievedDate.ToString("yyyy-MM-dd")
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+@section Scripts {
+    <script>
+        $('#articleTable').DataTable({
+            'order': [[3, 'desc']],
+            'language': {
+                'url': 'js/datatables.vietnamese.json'
+            }
+        });
+    </script>
+}

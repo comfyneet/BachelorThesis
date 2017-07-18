@@ -1,30 +1,40 @@
 ﻿@using Microsoft.ApplicationInsights.AspNetCore
 @inject JavaScriptSnippet JavaScriptSnippet
 @{
-    var activeOntologyPage = ViewData["OntologyPage"] != null && (bool) ViewData["OntologyPage"];
-    var activeAdvisoryPage = ViewData["AdvisoryPage"] != null && (bool) ViewData["AdvisoryPage"];
-    var activeSearchPage = ViewData["SearchPage"] != null && (bool) ViewData["SearchPage"];
-    var activeAdminPage = ViewData["AdminPage"] != null && (bool) ViewData["AdminPage"];
-    var activeContactPage = ViewData["ContactPage"] != null && (bool) ViewData["ContactPage"];
+    var activeOntologyPage = (bool?) ViewData["OntologyPage"] ?? false;
+    var activeAdvisoryPage = (bool?) ViewData["AdvisoryPage"] ?? false;
+    var activeSearchPage = (bool?) ViewData["SearchPage"] ?? false;
+    var activeAdminPage = (bool?) ViewData["AdminPage"] ?? false;
+    var activeContactPage = (bool?) ViewData["ContactPage"] ?? false;
 }
 
 <!DOCTYPE html>
-<html>
+<html
+    prefix="
+      rice: http://cs.uit.edu.vn/ontologies/rice#
+      doap: http://usefulinc.com/ns/doap#">
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta name="description" property="doap:shortdesc" content="Hệ thống hỗ trợ khuyến nông trên cây lúa"/>
+    <meta name="author" content="Nguyễn Minh Phúc, Lê Thị Tuyết Mai"/>
+    <link rel="doap:homepage" href="@Context.Request.GetBaseUrl()"/>
+
     <title>@ViewData["Title"] - Rice Doctor</title>
 
     <environment names="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css"/>
         <link rel="stylesheet" href="~/lib/select2/dist/css/select2.css"/>
         <link rel="stylesheet" href="~/lib/select2-bootstrap-theme/dist/select2-bootstrap.css"/>
+        <link rel="stylesheet" href="~/lib/datatables.net-bs/css/dataTables.bootstrap.css"/>
         <link rel="stylesheet" href="~/css/site.css"/>
     </environment>
     <environment names="Staging,Production">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="~/lib/select2/dist/css/select2.min.css"/>
         <link rel="stylesheet" href="~/lib/select2-bootstrap-theme/dist/select2-bootstrap.min.css"/>
+        <link rel="stylesheet" href="~/lib/datatables.net-bs/css/dataTables.bootstrap.min.css"/>
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true"/>
     </environment>
 
@@ -73,6 +83,9 @@
                         @: class="navbar-nav-active"
                     }>
                     <a asp-controller="Admin" asp-action="Index">Quản trị</a>
+                </li>
+                <li>
+                    <a href="#">Test (not yet)</a>
                 </li>
                 <li
                     @if (activeContactPage)
@@ -136,6 +149,8 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
     <script src="~/lib/bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
     <script src="~/lib/select2/dist/js/select2.js"></script>
+    <script src="~/lib/datatables.net/js/jquery.dataTables.js"></script>
+    <script src="~/lib/datatables.net-bs/js/dataTables.bootstrap.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
 </environment>
 <environment names="Staging,Production">
@@ -143,6 +158,8 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="~/lib/bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
     <script src="~/lib/select2/dist/js/select2.min.js"></script>
+    <script src="~/lib/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="~/lib/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
     <script src="~/js/site.min.js" asp-append-version="true"></script>
 </environment>
 

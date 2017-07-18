@@ -1,10 +1,12 @@
 ﻿@using System.Text
+@using RiceDoctor.DatabaseManager
 @using RiceDoctor.Shared
 @using Attribute = RiceDoctor.OntologyManager.Attribute
 @model RiceDoctor.OntologyManager.Individual
 @{
-    var keywords = (string) ViewData["Keywords"];
     var attributeValues = (IReadOnlyDictionary<Attribute, IReadOnlyCollection<string>>) ViewData["AttributeValues"];
+    var articles = (List<KeyValuePair<Article, double>>) ViewData["Articles"];
+
     ViewData["Title"] = "Thể hiện " + Model;
     ViewData["OntologyPage"] = true;
 
@@ -13,16 +15,6 @@
 
 <div class="row">
 <div class="col-md-12">
-@if (keywords != null)
-{
-    <div class="alert alert-success alert-dismissible fade in" role="alert">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">×</span>
-        </button>
-        Kết quả tra cứu <strong>"@keywords"</strong>
-    </div>
-}
-
 <ul class="nav nav-tabs">
     <li role="presentation" class="active">
         <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@Model.Id">Thông tin dạng tóm tắt</a>
@@ -70,6 +62,12 @@
                             </a>
                         </li>
                     }
+                }
+                @if (articles != null)
+                {
+                    <li>
+                        <a href="#TaiLieu">Tài liệu liên quan</a>
+                    </li>
                 }
             </ol>
         </section>
@@ -128,7 +126,7 @@
                 allClasses.Remove(directClass);
                 allClasses.Insert(0, directClass);
                 var allClassesSb = new StringBuilder();
-                <p>
+                <p typeof="rdfs:Class">
                     @Model là thể hiện của lớp
                     @for (var i = 0; i < allClasses.Count; ++i)
                     {
@@ -140,14 +138,14 @@
                         {
                             allClassesSb.Append(',');
                         }
-                        allClassesSb.Append($" <a href=\"{Url.Action("Class", "Ontology", new {className = allClasses[i].Id})}\"> ");
+                        allClassesSb.Append($" <a href=\"{Url.Action("Class", "Ontology", new {className = allClasses[i].Id})}\" resource=\"{Context.Request.GetBaseUrl()}Class?className={allClasses[i].Id}\"> ");
                         if (i == 0)
                         {
-                            allClassesSb.Append($"<strong>{allClasses[i]}</strong>");
+                            allClassesSb.Append($"<strong property=\"rdfs:label\">{allClasses[i]}</strong>");
                         }
                         else
                         {
-                            allClassesSb.Append(allClasses[i]);
+                            allClassesSb.Append($"<span property=\"rdfs:label\">{allClasses[i]}</span>");
                         }
                         allClassesSb.Append("</a>");
                     }
@@ -190,9 +188,9 @@
 {
     foreach (var pair in visibleValues)
     {
-        <section>
+        <section typeof="rdfs:Property" resource="@($"{Context.Request.GetBaseUrl()}Attribute?attributeName={pair.Key.Id}")">
             <h4 id="@pair.Key.Id">
-                <a asp-controller="Ontology" asp-action="Attribute" asp-route-attributeName="@pair.Key.Id">
+                <a asp-controller="Ontology" asp-action="Attribute" asp-route-attributeName="@pair.Key.Id" property="rdfs:label">
                     @(pair.Key.Label == null ? pair.Key.Id : pair.Key.Label.ToUpperFirstLetter())
                 </a>
             </h4>
@@ -227,5 +225,22 @@
         <hr/>
     }
 }
+
+@if (articles != null)
+{
+    <section>
+        <h4 id="TaiLieu">Tài liệu liên quan</h4>
+
+        @foreach (var article in articles)
+        {
+            <p>
+                <a href="@Html.Raw(article.Key.Url)">@article.Key.Title</a> - (@article.Key.Website.Name) @article.Key.RetrievedDate.ToString("dd/MM/yyyy")
+            </p>
+        }
+    </section>
+
+    <hr/>
+}
+
 </div>
 </div>

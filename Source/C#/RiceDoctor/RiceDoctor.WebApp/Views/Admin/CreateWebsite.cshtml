@@ -1,0 +1,64 @@
+﻿@model RiceDoctor.DatabaseManager.Website
+@{
+    ViewData["Title"] = "Thêm trang tin";
+    ViewData["AdminPage"] = true;
+}
+
+<div class="page-header">
+    <h1>@ViewData["Title"]</h1>
+</div>
+
+<br/>
+
+<form asp-action="PostCreateWebsite" method="post">
+    <div class="form-horizontal">
+        <div class="form-group">
+            <label asp-for="Name" class="col-md-3 control-label">Tên trang tin</label>
+            <div class="col-md-9">
+                <input asp-for="Name" class="form-control" placeholder="Ví dụ: TT-GTĐT Vĩnh Phúc" required/>
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Url" class="col-md-3 control-label"></label>
+            <div class="col-md-9">
+                <input asp-for="Url" type="url" class="form-control" placeholder="http://nnptnt.vinhphuc.gov.vn/Pages/home.aspx" required/>
+                <span asp-validation-for="Url" class="text-danger"></span>
+            </div>
+        </div>
+        <hr/>
+        <div class="form-group">
+            <label class="col-md-3 control-label">Url trang thể loại</label>
+            <div class="col-md-9">
+                <input name="Categories[0].Url" type="text" class="form-control" placeholder="http://nnptnt.vinhphuc.gov.vn/csdlnongnghiep/pages/lua.aspx?date=&date1=&chkNgayDang=False&chkNgayHa=False&EventID=0&Page=1" required/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-3 control-label">XPath tài liệu ở trang thể loại</label>
+            <div class="col-md-9">
+                <input name="Categories[0].ArticleXPath" type="text" class="form-control" placeholder="@(@"//a[@class='more' and starts-with(@href, 'lua.aspx')]/@href")" required/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-3 control-label">XPath tiêu đề ở trang tài liệu</label>
+            <div class="col-md-9">
+                <input name="Categories[0].TitleXPath" type="text" class="form-control" placeholder="@(@"//h1[@class='title']")" required/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-3 control-label">XPath nội dung ở trang tài liệu</label>
+            <div class="col-md-9">
+                <input name="Categories[0].ContentXPath" type="text" class="form-control" placeholder="@(@"//div[contains(@class, 'fck_detail')]")" required/>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-3 col-md-9">
+                <input type="submit" value="Thêm" class="btn btn-primary"/>
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index"><< Trở về</a>
+</div>

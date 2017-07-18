@@ -1,5 +1,5 @@
 ﻿@{
-    var message = ViewData["Message"];
+    var sentMail = (string) ViewData["SentMail"];
 
     ViewData["Title"] = "Liên hệ";
     ViewData["ContactPage"] = true;
@@ -15,13 +15,13 @@
     Hãy điền vào các thông tin sau và chúng tôi sẽ liên hệ lại với bạn sớm nhất có thể.
 </div>
 
-@if (message != null)
+@if (sentMail != null)
 {
     <div class="alert alert-success alert-dismissible fade in" role="alert">
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">×</span>
         </button>
-        @Html.Raw(message)
+        Đã gửi thông tin đến <a href="mailto:@sentMail">@sentMail</a> thành công.
     </div>
 }
 

@@ -4,7 +4,9 @@ using System.Linq;
 using System.Text;
 using JetBrains.Annotations;
 using Microsoft.AspNetCore.Mvc;
+using RiceDoctor.DatabaseManager;
 using RiceDoctor.OntologyManager;
+using RiceDoctor.RetrievalAnalysis;
 using RiceDoctor.SemanticCodeInterpreter;
 using RiceDoctor.Shared;
 using Attribute = RiceDoctor.OntologyManager.Attribute;
@@ -13,16 +15,24 @@ namespace RiceDoctor.WebApp.Controllers
 {
     public class OntologyController : Controller
     {
+        [NotNull] private readonly RiceContext _context;
         [NotNull] private readonly IOntologyManager _ontologyManager;
+        [NotNull] private readonly IRetrievalAnalyzer _retrievalAnalyzer;
         [NotNull] private readonly ISemanticCodeInterpreter _semanticCodeInterpreter;
 
         public OntologyController(
+            [NotNull] RiceContext context,
+            [FromServices] [NotNull] IRetrievalAnalyzer retrievalAnalyzer,
             [FromServices] [NotNull] ISemanticCodeInterpreter semanticCodeInterpreter,
             [FromServices] [NotNull] IOntologyManager ontologyManager)
         {
+            Check.NotNull(context, nameof(context));
+            Check.NotNull(retrievalAnalyzer, nameof(retrievalAnalyzer));
             Check.NotNull(semanticCodeInterpreter, nameof(semanticCodeInterpreter));
             Check.NotNull(ontologyManager, nameof(ontologyManager));
 
+            _context = context;
+            _retrievalAnalyzer = retrievalAnalyzer;
             _semanticCodeInterpreter = semanticCodeInterpreter;
             _ontologyManager = ontologyManager;
         }
@@ -52,6 +62,20 @@ namespace RiceDoctor.WebApp.Controllers
             ViewData["IndividualTree"] = "[" + individualBuilder + "]";
 
             ViewData["ShowAdvance"] = showAdvance;
+
+            if (@class.Id != "Thing")
+            {
+                var tmpArticles = _retrievalAnalyzer.AnalyzeRelevanceRank(new List<string> {@class.Id});
+                var articles = new List<KeyValuePair<Article, double>>();
+                if (tmpArticles != null)
+                    foreach (var pair in tmpArticles.Take(5))
+                    {
+                        var article = pair.Key;
+                        article.Website = _context.Websites.FirstOrDefault(w => w.Id == pair.Key.WebsiteId);
+                        articles.Add(new KeyValuePair<Article, double>(article, pair.Value));
+                    }
+                ViewData["Articles"] = articles;
+            }
 
             return View(@class);
         }
@@ -88,7 +112,7 @@ namespace RiceDoctor.WebApp.Controllers
             return View(attribute);
         }
 
-        public IActionResult Individual(string individualName, string keywords = null)
+        public IActionResult Individual(string individualName)
         {
             Individual individual = null;
             if (!string.IsNullOrWhiteSpace(individualName))
@@ -108,9 +132,18 @@ namespace RiceDoctor.WebApp.Controllers
                             return _semanticCodeInterpreter.Parse(v);
                         }).ToList()))
                     .ToDictionary(av => av.Key, av => av.Value);
-            }
 
-            if (!string.IsNullOrWhiteSpace(keywords)) ViewData["Keywords"] = keywords.Trim();
+                var tmpArticles = _retrievalAnalyzer.AnalyzeRelevanceRank(new List<string> {individual.Id});
+                var articles = new List<KeyValuePair<Article, double>>();
+                if (tmpArticles != null)
+                    foreach (var pair in tmpArticles.Take(5))
+                    {
+                        var article = pair.Key;
+                        article.Website = _context.Websites.First(w => w.Id == pair.Key.WebsiteId);
+                        articles.Add(new KeyValuePair<Article, double>(article, pair.Value));
+                    }
+                ViewData["Articles"] = articles;
+            }
 
             return View(individual);
         }
