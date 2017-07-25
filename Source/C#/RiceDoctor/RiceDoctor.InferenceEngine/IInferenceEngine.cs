@@ -11,19 +11,16 @@ namespace RiceDoctor.InferenceEngine
         IReadOnlyCollection<Rule> Rules { get; }
 
         [NotNull]
-        IReadOnlyCollection<LogicRule> InferredLogicRules { get; }
+        IReadOnlyCollection<LogicRule> InferredRules { get; }
 
         [NotNull]
-        IReadOnlyCollection<KeyValuePair<IndividualFact, RelationRule>> InferredRelationRules { get; }
+        IReadOnlyCollection<KeyValuePair<IndividualFact, RelationRule>> InferredRelations { get; }
 
-        int AddFactsToKnown([NotNull] params Fact[] facts);
+        int AddFactsToKnown(bool reliable, [NotNull] params Fact[] facts);
 
         void HandleGuessableFacts([NotNull] IReadOnlyCollection<Tuple<Fact, bool?>> guessableFacts);
 
         [NotNull]
         Response Infer();
-
-        [NotNull]
-        IReadOnlyCollection<Tuple<double, LogicRule, IReadOnlyList<Fact>>> GetIncompleteRules();
     }
 }

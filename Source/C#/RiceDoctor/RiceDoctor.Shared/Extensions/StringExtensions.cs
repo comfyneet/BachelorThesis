@@ -43,8 +43,7 @@ namespace RiceDoctor.Shared
         //}
 
         /// <summary>
-        ///     Remove all non alphanumeric characters except dash, underscore and space characters (new lines are parsed as
-        ///     spaces).
+        ///     Remove all non alphanumeric characters except space characters (new lines are parsed as spaces).
         ///     Then trim and remove duplicate spaces.
         /// </summary>
         /// <param name="s"></param>
@@ -54,7 +53,7 @@ namespace RiceDoctor.Shared
             var str = s.RemoveDuplicateSpaces();
             var builder = new StringBuilder();
             foreach (var c in str)
-                if (char.IsLetterOrDigit(c) || c == '-' || c == '_' || c == ' ')
+                if (char.IsLetterOrDigit(c) || c == ' ')
                     builder.Append(c);
 
             return builder.ToString().Trim().RemoveDuplicateSpaces();

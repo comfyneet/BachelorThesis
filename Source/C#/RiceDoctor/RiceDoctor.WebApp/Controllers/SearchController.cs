@@ -12,11 +12,13 @@ namespace RiceDoctor.WebApp.Controllers
 {
     public class SearchController : Controller
     {
+        [NotNull] private readonly RiceContext _context;
         private readonly IOntologyManager _ontologyManager;
         private readonly IQueryAnalyzer _queryAnalyzer;
         private readonly IRetrievalAnalyzer _retrievalAnalyzer;
 
         public SearchController(
+            [NotNull] RiceContext context,
             [FromServices] [NotNull] IOntologyManager ontologyManager,
             [FromServices] [NotNull] IRetrievalAnalyzer retrievalAnalyzer,
             [FromServices] [NotNull] IQueryAnalyzer queryAnalyzer)
@@ -25,6 +27,7 @@ namespace RiceDoctor.WebApp.Controllers
             Check.NotNull(retrievalAnalyzer, nameof(retrievalAnalyzer));
             Check.NotNull(queryAnalyzer, nameof(queryAnalyzer));
 
+            _context = context;
             _ontologyManager = ontologyManager;
             _retrievalAnalyzer = retrievalAnalyzer;
             _queryAnalyzer = queryAnalyzer;
@@ -75,6 +78,9 @@ namespace RiceDoctor.WebApp.Controllers
                 if (terms == null) continue;
 
                 results = _retrievalAnalyzer.AnalyzeRelevanceRank(terms);
+                if (results != null)
+                    foreach (var result in results)
+                        result.Key.Website = _context.Websites.Find(result.Key.WebsiteId);
 
                 break;
             }

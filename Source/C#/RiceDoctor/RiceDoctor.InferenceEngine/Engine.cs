@@ -7,50 +7,53 @@ using RiceDoctor.FuzzyManager;
 using RiceDoctor.OntologyManager;
 using RiceDoctor.RuleManager;
 using RiceDoctor.Shared;
-using static RiceDoctor.InferenceEngine.ResponseType;
 
 namespace RiceDoctor.InferenceEngine
 {
     public class Engine : IInferenceEngine
     {
-        [NotNull] private readonly List<LogicRule> _inferredLogicRules;
-        [NotNull] private readonly List<KeyValuePair<IndividualFact, RelationRule>> _inferredRelationRules;
+        [NotNull] [JsonProperty] private readonly List<KeyValuePair<IndividualFact, RelationRule>> _inferredRelations;
+        [NotNull] [JsonProperty] private readonly List<LogicRule> _inferredRules;
         [NotNull] [JsonProperty] private readonly IList<Fact> _knownFacts;
+        [NotNull] [JsonProperty] private readonly IList<Fact> _reliableKnownFacts;
         [NotNull] [JsonProperty] private readonly Request _request;
-        [NotNull] private readonly List<Rule> _rules;
+        [NotNull] [JsonProperty] private readonly List<Rule> _rules;
         [NotNull] [JsonProperty] private readonly IList<Fact> _unknownFacts;
-        [NotNull] public IFuzzyManager _fuzzyManager;
+        [JsonProperty] private bool _canAskOneTime;
+        [NotNull] [JsonIgnore] public IFuzzyManager _fuzzyManager;
         [CanBeNull] [JsonProperty] private List<Fact> _goalFacts;
-        [CanBeNull] [JsonProperty] private int? _maxGuessableFactsCanBeAsked;
-        [NotNull] public IOntologyManager _ontologyManager;
-        [NotNull] public IRuleManager _ruleManager;
+        [NotNull] [JsonIgnore] public IOntologyManager _ontologyManager;
+        [NotNull] [JsonIgnore] public IRuleManager _ruleManager;
 
         [JsonConstructor]
         public Engine(
+            bool _canAskOneTime,
+            [NotNull] IList<Fact> _reliableKnownFacts,
             [NotNull] IList<Fact> _knownFacts,
             [NotNull] Request _request,
             [NotNull] IList<Fact> _unknownFacts,
             [CanBeNull] List<Fact> _goalFacts,
-            [CanBeNull] int? _maxGuessableFactsCanBeAsked,
             [NotNull] List<Rule> rules,
-            [NotNull] List<LogicRule> inferredLogicRules,
-            [NotNull] List<KeyValuePair<IndividualFact, RelationRule>> inferredRelationRules)
+            [NotNull] List<LogicRule> inferredRules,
+            [NotNull] List<KeyValuePair<IndividualFact, RelationRule>> inferredRelations)
         {
+            Check.NotNull(_reliableKnownFacts, nameof(_reliableKnownFacts));
             Check.NotNull(_knownFacts, nameof(_knownFacts));
             Check.NotNull(_request, nameof(_request));
             Check.NotNull(_unknownFacts, nameof(_unknownFacts));
             Check.NotNull(rules, nameof(rules));
-            Check.NotNull(inferredLogicRules, nameof(inferredLogicRules));
-            Check.NotNull(inferredRelationRules, nameof(inferredRelationRules));
+            Check.NotNull(inferredRules, nameof(inferredRules));
+            Check.NotNull(inferredRelations, nameof(inferredRelations));
 
+            this._canAskOneTime = _canAskOneTime;
+            this._reliableKnownFacts = _reliableKnownFacts;
             this._knownFacts = _knownFacts;
             this._request = _request;
             this._unknownFacts = _unknownFacts;
             this._goalFacts = _goalFacts;
-            this._maxGuessableFactsCanBeAsked = _maxGuessableFactsCanBeAsked;
             _rules = rules;
-            _inferredLogicRules = inferredLogicRules;
-            _inferredRelationRules = inferredRelationRules;
+            _inferredRules = inferredRules;
+            _inferredRelations = inferredRelations;
         }
 
         public Engine(
@@ -71,10 +74,12 @@ namespace RiceDoctor.InferenceEngine
 
             _rules = SortRulesByRequest();
 
+            _canAskOneTime = true;
             _unknownFacts = new List<Fact>();
-            _inferredLogicRules = new List<LogicRule>();
-            _inferredRelationRules = new List<KeyValuePair<IndividualFact, RelationRule>>();
+            _inferredRules = new List<LogicRule>();
+            _inferredRelations = new List<KeyValuePair<IndividualFact, RelationRule>>();
             _knownFacts = new List<Fact>();
+            _reliableKnownFacts = new List<Fact>();
         }
 
         public void HandleGuessableFacts(IReadOnlyCollection<Tuple<Fact, bool?>> guessableFacts)
@@ -83,7 +88,7 @@ namespace RiceDoctor.InferenceEngine
 
             foreach (var guessableFact in guessableFacts)
                 if (guessableFact.Item2 == true)
-                    AddFactsToKnown(guessableFact.Item1);
+                    AddFactsToKnown(true, guessableFact.Item1);
                 else if (guessableFact.Item2 == false)
                     for (var i = 0; i < _rules.Count;)
                     {
@@ -100,61 +105,28 @@ namespace RiceDoctor.InferenceEngine
         public Response Infer()
         {
             var forwardResults = InferMixedForwardChaining();
-            if (forwardResults != null)
-                return new Response(forwardResults, InferredResults);
+            if (forwardResults != null) return Response.ShowInferredResults(forwardResults);
 
-            try
+            if (_canAskOneTime)
             {
-                var backwardResults = InferBackward();
-                if (backwardResults != null)
-                    return new Response(backwardResults, InferredResults);
-            }
-            catch (GuessableFactException e)
-            {
-                return new Response(e.Facts, GuessableFacts);
+                _canAskOneTime = false;
+
+                var guessableFacts = FindFactsToAsk();
+                return Response.AskGuessableFacts(guessableFacts);
             }
 
-            return new Response();
-        }
-
-        public IReadOnlyCollection<Tuple<double, LogicRule, IReadOnlyList<Fact>>> GetIncompleteRules()
-        {
-            var incompleteRules = new List<Tuple<double, LogicRule, IReadOnlyList<Fact>>>();
-
-            foreach (var rule in _rules.OfType<LogicRule>())
-            {
-                if (!rule.Hypotheses.Any(IsFactInKnown)) continue;
-
-                var goalFacts = rule.Conclusions
-                    .Where(c => _request.Problem.GoalTypes.Any(g => _ruleManager.CanClassCaptureFact(g, c)))
-                    .ToList();
-
-                if (goalFacts.Count == 0) continue;
-
-                var missingFacts = rule.Hypotheses
-                    .Where(h => !IsFactInKnown(h) &&
-                                _request.Problem.SuggestTypes.Any(s => _ruleManager.CanClassCaptureFact(s, h)))
-                    .ToList();
-
-                var priority = rule.CertaintyFactor * (1 - (double) missingFacts.Count / rule.Hypotheses.Count);
-
-                if (priority > 0)
-                    incompleteRules.Add(new Tuple<double, LogicRule, IReadOnlyList<Fact>>(priority, rule, goalFacts));
-            }
-
-            return incompleteRules
-                .OrderByDescending(r => r.Item1)
-                .ToList();
+            var incompleteResults = InferIncompleteRules();
+            return Response.ShowIncompleteResults(incompleteResults);
         }
 
         public IReadOnlyCollection<Rule> Rules => _rules;
 
-        public IReadOnlyCollection<LogicRule> InferredLogicRules => _inferredLogicRules;
+        public IReadOnlyCollection<LogicRule> InferredRules => _inferredRules;
 
-        public IReadOnlyCollection<KeyValuePair<IndividualFact, RelationRule>> InferredRelationRules =>
-            _inferredRelationRules;
+        public IReadOnlyCollection<KeyValuePair<IndividualFact, RelationRule>> InferredRelations =>
+            _inferredRelations;
 
-        public int AddFactsToKnown(params Fact[] facts)
+        public int AddFactsToKnown(bool reliable, params Fact[] facts)
         {
             Check.NotEmpty(facts, nameof(facts));
 
@@ -175,6 +147,7 @@ namespace RiceDoctor.InferenceEngine
                 if (!_knownFacts.Any(f => f.Equals(fact)))
                 {
                     _knownFacts.Add(fact);
+                    if (reliable) _reliableKnownFacts.Add(fact);
 
                     foreach (var goalType in _request.Problem.GoalTypes)
                         if (_ruleManager.CanClassCaptureFact(goalType, fact))
@@ -191,7 +164,7 @@ namespace RiceDoctor.InferenceEngine
         }
 
         [CanBeNull]
-        private IReadOnlyCollection<Fact> InferMixedForwardChaining(int minInferredGoals = 5)
+        private IReadOnlyDictionary<Fact, double> InferMixedForwardChaining(int minInferredGoals = 5)
         {
             while (true)
             {
@@ -206,7 +179,7 @@ namespace RiceDoctor.InferenceEngine
                             if (!(fact is IndividualFact individualFact)) continue;
                             if (relationRule.InferredDomains.Any(d => d == individualFact.Name))
                             {
-                                hasNewFacts = InferIndividualFact(individualFact, relationRule);
+                                hasNewFacts = InferGeneratedLogicRulesFromRelation(individualFact, relationRule);
                                 if (hasNewFacts) break;
                             }
                         }
@@ -229,31 +202,79 @@ namespace RiceDoctor.InferenceEngine
                 break;
             }
 
-            return _goalFacts;
-        }
-
-        [CanBeNull]
-        private IReadOnlyCollection<Fact> InferBackward(int minGuessableFactsToAskEachTime = 4)
-        {
-            if (_maxGuessableFactsCanBeAsked == null) _maxGuessableFactsCanBeAsked = 25;
-            else if (_maxGuessableFactsCanBeAsked <= 0) return _goalFacts;
-
-            var guessableFacts = new List<Fact>();
-            foreach (var rule in _rules.OfType<LogicRule>())
+            if (_goalFacts != null)
             {
-                var hasNewFacts = InferLogicRule(rule);
-                if (hasNewFacts) break;
+                var results = new Dictionary<Fact, double>();
+                var knownFacts = _reliableKnownFacts.ToList();
+                foreach (var goalFact in _goalFacts)
+                {
+                    var pair = FindBestPathForFact(goalFact, knownFacts, _inferredRules);
+                    results.Add(goalFact, pair.Item2);
+                }
 
-                guessableFacts.AddRange(rule.Hypotheses.Where(f => !IsFactInKnown(f) && !_unknownFacts.Contains(f)));
-                guessableFacts = guessableFacts.Distinct().ToList();
-
-                _maxGuessableFactsCanBeAsked -= guessableFacts.Count;
-                if (guessableFacts.Count >= minGuessableFactsToAskEachTime) break;
+                return results;
             }
 
-            if (guessableFacts.Count != 0) throw new GuessableFactException(guessableFacts);
+            return null;
+        }
 
-            return _goalFacts;
+        [NotNull]
+        private IReadOnlyDictionary<Fact, double> InferIncompleteRules()
+        {
+            var results = new Dictionary<Fact, double>();
+            var knownFacts = _reliableKnownFacts.ToList();
+            var priorityRules = GetMidAndHighPriorityLogicRules(_rules);
+
+            foreach (var rule in priorityRules)
+            {
+                var hypothesesInKnown = CountFactsInKnown(rule.Hypotheses);
+                if (hypothesesInKnown == 0) continue;
+
+                var hypotheses = new List<Fact>();
+                foreach (var h in rule.Hypotheses)
+                    if (IsFactInKnown(h)) hypotheses.Add(h);
+
+                var incompleteRule = new LogicRule(hypotheses, rule.Conclusions,
+                    rule.CertaintyFactor * ((double) hypothesesInKnown / rule.Hypotheses.Count));
+
+                var inferredRules = _inferredRules.Append(incompleteRule).ToList();
+
+                foreach (var c in rule.Conclusions)
+                {
+                    if (!_request.Problem.GoalTypes.Any(goalType => _ruleManager.CanClassCaptureFact(goalType, c)))
+                        continue;
+
+                    var pair = FindBestPathForFact(c, knownFacts, inferredRules);
+                    if (results.ContainsKey(c))
+                    {
+                        if (results[c] < pair.Item2) results[c] = pair.Item2;
+                    }
+                    else
+                    {
+                        results.Add(c, pair.Item2);
+                    }
+                }
+            }
+
+            return results;
+        }
+
+        [NotNull]
+        private IReadOnlyCollection<Fact> FindFactsToAsk(int maxRulesToAsk = 3)
+        {
+            var guessableFacts = new List<Fact>();
+
+            var askableRules = GetMidAndHighPriorityLogicRules(_rules)
+                .OrderBy(r => (float) (r.Hypotheses.Count - CountFactsInKnown(r.Hypotheses)) / r.Hypotheses.Count)
+                .Take(maxRulesToAsk)
+                .ToList();
+            foreach (var askableRule in askableRules)
+                guessableFacts.AddRange(
+                    askableRule.Hypotheses.Where(f => !IsFactInKnown(f) && !_unknownFacts.Contains(f)));
+
+            guessableFacts = guessableFacts.Distinct().ToList();
+
+            return guessableFacts;
         }
 
         [NotNull]
@@ -336,21 +357,23 @@ namespace RiceDoctor.InferenceEngine
         {
             Check.NotNull(rule, nameof(rule));
 
-            if (_inferredLogicRules.Any(rule.Equals)) return false;
+            if (_inferredRules.Any(rule.Equals)) return false;
 
             if (CountFactsInKnown(rule.Hypotheses) != rule.Hypotheses.Count) return false;
 
-            _inferredLogicRules.Add(rule);
+            _inferredRules.Add(rule);
 
-            return AddFactsToKnown(rule.Conclusions.ToArray()) > 0;
+            return AddFactsToKnown(false, rule.Conclusions.ToArray()) > 0;
         }
 
-        private bool InferIndividualFact([NotNull] IndividualFact individualFact, [NotNull] RelationRule relationRule)
+        private bool InferGeneratedLogicRulesFromRelation(
+            [NotNull] IndividualFact individualFact,
+            [NotNull] RelationRule relationRule)
         {
             Check.NotNull(individualFact, nameof(individualFact));
             Check.NotNull(relationRule, nameof(relationRule));
 
-            if (_inferredRelationRules.Any(r => r.Key.Equals(individualFact) && r.Value.Equals(relationRule)))
+            if (_inferredRelations.Any(r => r.Key.Equals(individualFact) && r.Value.Equals(relationRule)))
                 return false;
 
             var hasNewFacts = false;
@@ -365,15 +388,99 @@ namespace RiceDoctor.InferenceEngine
                     if (directClass == null) continue;
 
                     var newIndividualFact = new IndividualFact(directClass.Id, individual.Id);
-
-                    if (AddFactsToKnown(newIndividualFact) > 0)
-                        hasNewFacts = true;
+                    var rule = new LogicRule(new List<Fact> {individualFact}, new List<Fact> {newIndividualFact}, 1.0);
+                    if (InferLogicRule(rule)) hasNewFacts = true;
                 }
             }
 
-            _inferredRelationRules.Add(new KeyValuePair<IndividualFact, RelationRule>(individualFact, relationRule));
+            _inferredRelations.Add(new KeyValuePair<IndividualFact, RelationRule>(individualFact, relationRule));
 
             return hasNewFacts;
+        }
+
+        [CanBeNull]
+        private IReadOnlyCollection<Path> FindPaths(
+            Fact fact,
+            IReadOnlyCollection<Fact> knownFacts,
+            IReadOnlyCollection<LogicRule> rules,
+            int level)
+        {
+            var paths = new List<Path>();
+
+            var rulesCanInferFact = rules.Where(r => r.Conclusions.Contains(fact)).ToList();
+            if (rulesCanInferFact.Count == 0) return null;
+            foreach (var ruleCanInferFact in rulesCanInferFact)
+            {
+                var previousPaths = new List<Path>();
+                var newRules = rules.ToList();
+                newRules.Remove(ruleCanInferFact);
+
+                foreach (var h in ruleCanInferFact.Hypotheses)
+                {
+                    if (knownFacts.Contains(h)) continue;
+
+                    var tmpPreviousPaths = FindPaths(h, knownFacts, newRules, level + 1);
+                    if (tmpPreviousPaths == null) Logger.Log("Previous paths are null.");
+                    else previousPaths.AddRange(tmpPreviousPaths);
+                }
+
+                if (previousPaths.Count > 0)
+                {
+                    foreach (var previousPath in previousPaths)
+                    {
+                        var newKnown = previousPath.Known.ToList();
+                        if (!newKnown.Contains(fact)) newKnown.Add(fact);
+                        var path = new Path(newKnown, previousPath.Chains.Append(ruleCanInferFact).ToList());
+                        paths.Add(path);
+                    }
+                }
+                else
+                {
+                    var newKnown = knownFacts.ToList();
+                    if (!newKnown.Contains(fact)) newKnown.Add(fact);
+                    paths.Add(new Path(newKnown, new List<LogicRule> {ruleCanInferFact}));
+                }
+            }
+
+            return paths;
+        }
+
+        [NotNull]
+        private IReadOnlyCollection<LogicRule> GetMidAndHighPriorityLogicRules(
+            [NotNull] IReadOnlyCollection<Rule> rules)
+        {
+            Check.NotNull(rules, nameof(rules));
+
+            var priorityRules = new List<LogicRule>();
+            foreach (var logicRule in rules.OfType<LogicRule>())
+            {
+                var hasGoalType = _request.Problem.GoalTypes.Any(g => logicRule.Conclusions
+                    .Any(c => _ruleManager.CanClassCaptureFact(g, c)));
+                if (hasGoalType) priorityRules.Add(logicRule);
+            }
+
+            return priorityRules;
+        }
+
+        private Tuple<Path, double> FindBestPathForFact(
+            [NotNull] Fact fact,
+            [NotNull] IReadOnlyCollection<Fact> knownFacts,
+            [NotNull] IReadOnlyCollection<LogicRule> rules)
+        {
+            Path bestPath = null;
+            var bestCertainty = 0.0;
+            var paths = FindPaths(fact, knownFacts, rules, 0);
+            foreach (var path in paths)
+            {
+                var certainty = path.Chains.Aggregate(1.0, (current, rule) => current * rule.CertaintyFactor);
+                if (certainty > bestCertainty)
+                {
+                    bestCertainty = certainty;
+                    bestPath = path;
+                }
+            }
+
+            return new Tuple<Path, double>(bestPath, bestCertainty);
         }
     }
 }

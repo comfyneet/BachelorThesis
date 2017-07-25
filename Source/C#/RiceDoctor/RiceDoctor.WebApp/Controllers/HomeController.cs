@@ -69,6 +69,8 @@ namespace RiceDoctor.WebApp.Controllers
                     client.Send(message);
                     client.Disconnect(true);
                 }
+
+                ViewData["SentMail"] = Account.Email;
             }
 
             return View("Contact");

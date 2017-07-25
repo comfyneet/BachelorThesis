@@ -37,6 +37,22 @@ namespace RiceDoctor.DatabaseManager.Migrations
                 b.ToTable("Articles");
             });
 
+            modelBuilder.Entity("RiceDoctor.DatabaseManager.Association", b =>
+            {
+                b.Property<int>("Id")
+                    .ValueGeneratedOnAdd();
+
+                b.Property<double>("AssociationScore");
+
+                b.Property<string>("Term1");
+
+                b.Property<string>("Term2");
+
+                b.HasKey("Id");
+
+                b.ToTable("Associations");
+            });
+
             modelBuilder.Entity("RiceDoctor.DatabaseManager.Category", b =>
             {
                 b.Property<int>("Id")

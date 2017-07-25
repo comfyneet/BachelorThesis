@@ -454,7 +454,7 @@ public class OntologyManager {
                 builder = new Response.Builder(FAIL);
                 builder.message("Inverse relation of \"" + relationName + "\" not found.");
             } else {
-                final Relation relation = getRelation(owlRelation);
+                final Relation relation = getRelation(owlInverseRelation);
 
                 builder = new Response.Builder(SUCCESS);
                 builder.data("InverseRelation", relation);
@@ -1132,13 +1132,14 @@ public class OntologyManager {
         final Set<OWLObjectPropertyExpression> owlInverseRelations = reasoner.getInverseObjectProperties(owlRelation).getEntities();
 
         if (owlInverseRelations.size() == 2) {
-            final Iterator<OWLObjectPropertyExpression> owlInverseRelationIterator = owlInverseRelations.iterator();
-            final OWLObjectPropertyExpression owlInverseRelation = owlInverseRelationIterator.next();
-            if (!owlInverseRelation.getNamedProperty().getIRI().getShortForm().equals(owlRelation.getIRI().getShortForm()))
-                return owlInverseRelation.asOWLObjectProperty();
-            else {
-                return owlInverseRelationIterator.next().asOWLObjectProperty();
+            OWLObjectPropertyExpression owlInverseRelation = null;
+            for (final OWLObjectPropertyExpression owlInverseRelationExpression : owlInverseRelations) {
+                if (owlInverseRelationExpression.getNamedProperty().getIRI().getShortForm().equals(owlRelation.getIRI().getShortForm()))
+                    continue;
+                owlInverseRelation = owlInverseRelationExpression;
+                break;
             }
+            return owlInverseRelation.asOWLObjectProperty();
         } else return null;
     }
 

@@ -10,4 +10,10 @@
     <ProjectReference Include="..\RiceDoctor.Shared\RiceDoctor.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="System.Diagnostics.Process">
+      <HintPath>C:\Users\anon\.nuget\packages\system.diagnostics.process\4.3.0\ref\netstandard1.4\System.Diagnostics.Process.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

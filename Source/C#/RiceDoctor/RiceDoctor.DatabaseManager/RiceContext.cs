@@ -10,6 +10,8 @@ namespace RiceDoctor.DatabaseManager
 
         public DbSet<Website> Websites { get; set; }
 
+        public DbSet<Association> Associations { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite(@"Data Source=..\..\..\..\Resources\rice.db");

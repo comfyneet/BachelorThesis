@@ -6,7 +6,7 @@ namespace RiceDoctor.WebApp
     {
         public static string GetBaseUrl(this HttpRequest request)
         {
-            return $@"{request.Scheme}://{request.Host}/Class?className=";
+            return $@"{request.Scheme}://{request.Host}/";
         }
     }
 }

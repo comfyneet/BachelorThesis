@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.15
+VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RiceDoctor.ConsoleApp", "RiceDoctor\RiceDoctor.ConsoleApp\RiceDoctor.ConsoleApp.csproj", "{78DEE6C9-E201-483A-87A5-B75256482CA4}"
 EndProject
@@ -9,6 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RiceDoctor.Shared", "RiceDo
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{391B7CE6-7A14-48B8-BD46-9ED3D927C529}"
 	ProjectSection(SolutionItems) = preProject
+		RiceDoctor\Resources\association-matrix.txt = RiceDoctor\Resources\association-matrix.txt
 		RiceDoctor\Resources\fuzzy-model.txt = RiceDoctor\Resources\fuzzy-model.txt
 		RiceDoctor\Resources\inference-rules.txt = RiceDoctor\Resources\inference-rules.txt
 		RiceDoctor\Resources\problem-types.json = RiceDoctor\Resources\problem-types.json

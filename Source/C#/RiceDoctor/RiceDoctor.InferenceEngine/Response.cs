@@ -2,35 +2,63 @@
 using JetBrains.Annotations;
 using RiceDoctor.RuleManager;
 using RiceDoctor.Shared;
-using static RiceDoctor.InferenceEngine.ResponseType;
 
 namespace RiceDoctor.InferenceEngine
 {
     public enum ResponseType
     {
-        GuessableFacts,
-        InferredResults,
-        NoResults
+        AskGuessableFacts,
+        ShowCompleteResults,
+
+        ShowIncompleteResults
+        //ShowNoResults
     }
 
     public class Response
     {
-        public Response()
+        private Response()
         {
-            Type = NoResults;
-        }
-
-        public Response([NotNull] IReadOnlyCollection<Fact> facts, ResponseType type)
-        {
-            Check.NotNull(facts, nameof(facts));
-
-            Facts = facts;
-            Type = type;
         }
 
         [CanBeNull]
-        public IReadOnlyCollection<Fact> Facts { get; }
+        public IReadOnlyDictionary<Fact, double> ResultFacts { get; private set; }
 
-        public ResponseType Type { get; }
+        [CanBeNull]
+        public IReadOnlyCollection<Fact> GuessableFacts { get; private set; }
+
+        public ResponseType Type { get; private set; }
+
+        public static Response AskGuessableFacts([NotNull] IReadOnlyCollection<Fact> guessableFacts)
+        {
+            Check.NotNull(guessableFacts, nameof(guessableFacts));
+
+            return new Response
+            {
+                Type = ResponseType.AskGuessableFacts,
+                GuessableFacts = guessableFacts
+            };
+        }
+
+        public static Response ShowInferredResults([NotNull] IReadOnlyDictionary<Fact, double> resultFacts)
+        {
+            Check.NotNull(resultFacts, nameof(resultFacts));
+
+            return new Response
+            {
+                Type = ResponseType.ShowCompleteResults,
+                ResultFacts = resultFacts
+            };
+        }
+
+        public static Response ShowIncompleteResults([NotNull] IReadOnlyDictionary<Fact, double> resultFacts)
+        {
+            Check.NotNull(resultFacts, nameof(resultFacts));
+
+            return new Response
+            {
+                Type = ResponseType.ShowIncompleteResults,
+                ResultFacts = resultFacts
+            };
+        }
     }
 }

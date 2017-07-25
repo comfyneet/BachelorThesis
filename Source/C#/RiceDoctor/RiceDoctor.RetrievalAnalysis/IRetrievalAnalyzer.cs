@@ -8,7 +8,7 @@ namespace RiceDoctor.RetrievalAnalysis
     public interface IRetrievalAnalyzer
     {
         [NotNull]
-        IReadOnlyDictionary<IAnalyzable, IReadOnlyList<string>> Entities { get; }
+        IReadOnlyCollection<AnalyzableEntity> Entities { get; }
 
         [NotNull]
         IReadOnlyDictionary<Article, IReadOnlyDictionary<IAnalyzable, double>> ArticleWeights { get; }

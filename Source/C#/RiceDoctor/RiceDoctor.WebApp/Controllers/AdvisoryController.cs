@@ -53,7 +53,6 @@ namespace RiceDoctor.WebApp.Controllers
             var advisory = new Advisory {Guid = guid};
             HttpContext.Session.SetString(guid, JsonConvert.SerializeObject(advisory, jsonSettings));
 
-
             return View(advisory);
         }
 
@@ -140,7 +139,11 @@ namespace RiceDoctor.WebApp.Controllers
             var advisory = JsonConvert.DeserializeObject<Advisory>(HttpContext.Session.GetString(guid), jsonSettings);
             advisory.Request = new Request(problem, RequestType.IndividualFact);
             advisory.Engine = new Engine(_ruleManager, _ontologyManager, _fuzzyManager, advisory.Request);
-            advisory.Engine.AddFactsToKnown(facts.ToArray());
+            advisory.Engine.AddFactsToKnown(true, facts.ToArray());
+
+            ((Engine) advisory.Engine)._ontologyManager = null;
+            ((Engine) advisory.Engine)._ruleManager = null;
+            ((Engine) advisory.Engine)._fuzzyManager = null;
             HttpContext.Session.SetString(guid, JsonConvert.SerializeObject(advisory, jsonSettings));
 
             return Infer(guid);
@@ -158,6 +161,11 @@ namespace RiceDoctor.WebApp.Controllers
                     new {error = CoreStrings.MalformedArgument(nameof(guessableFacts))});
 
             var advisory = JsonConvert.DeserializeObject<Advisory>(HttpContext.Session.GetString(guid), jsonSettings);
+            ((Engine) advisory.Engine)._ontologyManager = _ontologyManager;
+            ((Engine) advisory.Engine)._ruleManager = _ruleManager;
+            ((Engine) advisory.Engine)._fuzzyManager = _fuzzyManager;
+
+            if (guessableFacts.Count == 0) return View("Infer");
 
             ViewData["GuessableFacts"] = guessableFacts.ToList();
 
@@ -205,32 +213,25 @@ namespace RiceDoctor.WebApp.Controllers
             }
 
             var response = advisory.Engine.Infer();
+
+            ((Engine) advisory.Engine)._ontologyManager = null;
+            ((Engine) advisory.Engine)._ruleManager = null;
+            ((Engine) advisory.Engine)._fuzzyManager = null;
             HttpContext.Session.SetString(guid, JsonConvert.SerializeObject(advisory, jsonSettings));
 
-            if (response.Type == GuessableFacts) return GuessableFact(guid, response.Facts);
-            if (response.Type == InferredResults)
+            switch (response.Type)
             {
-                advisory.Results = response.Facts;
-                HttpContext.Session.SetString(guid, JsonConvert.SerializeObject(advisory, jsonSettings));
-            }
-            else
-            {
-                var incompleteRules = advisory.Engine.GetIncompleteRules();
-                ViewData["IncompleteRules"] = incompleteRules;
-
-                if (incompleteRules.Count > 0)
-                {
-                    var priority = incompleteRules.First().Item1;
-                    ViewData["Priority"] = priority * 100;
-
-                    var incompleteFacts = new List<Fact>();
-                    foreach (var rule in incompleteRules.Where(r => r.Item1.Equals3DigitPrecision(priority)))
-                        incompleteFacts.AddRange(rule.Item3);
-                    ViewData["IncompleteFacts"] = incompleteFacts;
-                }
+                case AskGuessableFacts:
+                    return GuessableFact(guid, response.GuessableFacts);
+                case ShowCompleteResults:
+                    ViewData["CompleteResults"] = response.ResultFacts.OrderByDescending(r => r.Value).ToList();
+                    break;
+                case ShowIncompleteResults:
+                    ViewData["IncompleteResults"] = response.ResultFacts.OrderByDescending(r => r.Value).ToList();
+                    break;
             }
 
-            return View("Infer", advisory);
+            return View("Infer");
         }
     }
 }

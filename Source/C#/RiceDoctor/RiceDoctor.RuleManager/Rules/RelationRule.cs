@@ -7,10 +7,6 @@ namespace RiceDoctor.RuleManager
 {
     public class RelationRule : Rule, IEquatable<RelationRule>
     {
-        [NotNull] private readonly string _domain;
-
-        [NotNull] private readonly string _range;
-
         public RelationRule(
             [NotNull] string domain,
             [NotNull] string range,
@@ -24,12 +20,18 @@ namespace RiceDoctor.RuleManager
             Check.NotEmpty(inferredRanges, nameof(inferredRanges));
             Check.NotEmpty(relations, nameof(relations));
 
-            _domain = domain;
-            _range = range;
+            Domain = domain;
+            Range = range;
             InferredDomains = inferredDomains;
             InferredRanges = inferredRanges;
             Relations = relations;
         }
+
+        [NotNull]
+        public string Domain { get; }
+
+        [NotNull]
+        public string Range { get; }
 
         [NotNull]
         public IReadOnlyCollection<string> InferredDomains { get; }
@@ -44,7 +46,7 @@ namespace RiceDoctor.RuleManager
         {
             if (ReferenceEquals(null, other)) return false;
             if (ReferenceEquals(this, other)) return true;
-            return string.Equals(_domain, other._domain) && string.Equals(_range, other._range);
+            return string.Equals(Domain, other.Domain) && string.Equals(Range, other.Range);
         }
 
         public override bool Equals(object obj)
@@ -72,7 +74,7 @@ namespace RiceDoctor.RuleManager
         {
             unchecked
             {
-                return (_domain.GetHashCode() * 397) ^ _range.GetHashCode();
+                return (Domain.GetHashCode() * 397) ^ Range.GetHashCode();
             }
         }
     }

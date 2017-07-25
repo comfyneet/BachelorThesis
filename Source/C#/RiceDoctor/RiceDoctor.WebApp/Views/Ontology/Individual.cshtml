@@ -10,7 +10,22 @@
     ViewData["Title"] = "Thể hiện " + Model;
     ViewData["OntologyPage"] = true;
 
-    var visibleValues = attributeValues?.Where(a => a.Key.Id != "definition" && a.Key.Id != "name" && a.Key.Id != "article").ToList();
+    var tmpNearSynonyms = attributeValues?.Where(a => a.Key.Id == "term").ToList();
+    List<string> nearSynonyms = null;
+    if (tmpNearSynonyms != null && tmpNearSynonyms.Count > 0)
+    {
+        nearSynonyms = new List<string>();
+        foreach (var pair in tmpNearSynonyms)
+        {
+            nearSynonyms.AddRange(pair.Value);
+        }
+    }
+
+    var relativeTerms = ((IReadOnlyCollection<string>) ViewData["RelatableTerms"])?.ToList();
+
+    var visibleValues = attributeValues?
+        .Where(a => !new List<string> {"definition", "name", "article", "term"}.Contains(a.Key.Id))
+        .ToList();
 }
 
 <div class="row">
@@ -62,6 +77,12 @@
                             </a>
                         </li>
                     }
+                }
+                @if (nearSynonyms != null || relativeTerms != null)
+                {
+                    <li>
+                        <a href="#TuVung">Từ vựng liên quan</a>
+                    </li>
                 }
                 @if (articles != null)
                 {
@@ -138,7 +159,7 @@
                         {
                             allClassesSb.Append(',');
                         }
-                        allClassesSb.Append($" <a href=\"{Url.Action("Class", "Ontology", new {className = allClasses[i].Id})}\" resource=\"{Context.Request.GetBaseUrl()}Class?className={allClasses[i].Id}\"> ");
+                        allClassesSb.Append($" <a href=\"{Url.Action("Class", "Ontology", new {className = allClasses[i].Id})}\" resource=\"{Context.Request.GetBaseUrl()}Ontology/Class?className={allClasses[i].Id}\"> ");
                         if (i == 0)
                         {
                             allClassesSb.Append($"<strong property=\"rdfs:label\">{allClasses[i]}</strong>");
@@ -188,7 +209,7 @@
 {
     foreach (var pair in visibleValues)
     {
-        <section typeof="rdfs:Property" resource="@($"{Context.Request.GetBaseUrl()}Attribute?attributeName={pair.Key.Id}")">
+        <section typeof="rdfs:Property" resource="@($"{Context.Request.GetBaseUrl()}Ontology/Attribute?attributeName={pair.Key.Id}")">
             <h4 id="@pair.Key.Id">
                 <a asp-controller="Ontology" asp-action="Attribute" asp-route-attributeName="@pair.Key.Id" property="rdfs:label">
                     @(pair.Key.Label == null ? pair.Key.Id : pair.Key.Label.ToUpperFirstLetter())
@@ -199,7 +220,6 @@
             {
                 <p>@pair.Key.GetComment() @Model.</p>
             }
-
             @if (pair.Key.Id == "image")
             {
                 <div>
@@ -224,6 +244,55 @@
 
         <hr/>
     }
+}
+
+@if (nearSynonyms != null || relativeTerms != null)
+{
+    <section>
+        <h4 id="TuVung">Từ vựng liên quan</h4>
+
+        @if (nearSynonyms != null)
+        {
+            var nearSynonymsSb = new StringBuilder();
+            <p>
+                @for (var i = 0; i < nearSynonyms.Count; ++i)
+                {
+                    if (nearSynonyms.Count > 1 && i == nearSynonyms.Count - 1)
+                    {
+                        nearSynonymsSb.Append(" và");
+                    }
+                    else if (i > 0)
+                    {
+                        nearSynonymsSb.Append(',');
+                    }
+                    nearSynonymsSb.Append($" {nearSynonyms[i]}");
+                }
+                @Model có các từ gần nghĩa là @nearSynonymsSb.
+            </p>
+        }
+
+        @if (relativeTerms != null)
+        {
+            var relativeTermsSb = new StringBuilder();
+            <p>
+                @for (var i = 0; i < relativeTerms.Count; ++i)
+                {
+                    if (relativeTerms.Count > 1 && i == relativeTerms.Count - 1)
+                    {
+                        relativeTermsSb.Append(" và");
+                    }
+                    else if (i > 0)
+                    {
+                        relativeTermsSb.Append(',');
+                    }
+                    relativeTermsSb.Append($" {relativeTerms[i]}");
+                }
+                @Model có các từ vựng liên quan là @relativeTermsSb.
+            </p>
+        }
+    </section>
+
+    <hr/>
 }
 
 @if (articles != null)

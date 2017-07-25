@@ -65,7 +65,10 @@ namespace RiceDoctor.WebApp.Controllers
 
             if (@class.Id != "Thing")
             {
-                var tmpArticles = _retrievalAnalyzer.AnalyzeRelevanceRank(new List<string> {@class.Id});
+                var entity = _retrievalAnalyzer.Entities.FirstOrDefault(e => e.Entity.Equals(@class));
+                if (entity != null) ViewData["RelatableTerms"] = entity.RelatableTerms;
+
+                var tmpArticles = _retrievalAnalyzer.AnalyzeRelevanceRank(new List<string> {@class.ToString()});
                 var articles = new List<KeyValuePair<Article, double>>();
                 if (tmpArticles != null)
                     foreach (var pair in tmpArticles.Take(5))
@@ -133,7 +136,7 @@ namespace RiceDoctor.WebApp.Controllers
                         }).ToList()))
                     .ToDictionary(av => av.Key, av => av.Value);
 
-                var tmpArticles = _retrievalAnalyzer.AnalyzeRelevanceRank(new List<string> {individual.Id});
+                var tmpArticles = _retrievalAnalyzer.AnalyzeRelevanceRank(new List<string> {individual.ToString()});
                 var articles = new List<KeyValuePair<Article, double>>();
                 if (tmpArticles != null)
                     foreach (var pair in tmpArticles.Take(5))
@@ -143,6 +146,9 @@ namespace RiceDoctor.WebApp.Controllers
                         articles.Add(new KeyValuePair<Article, double>(article, pair.Value));
                     }
                 ViewData["Articles"] = articles;
+
+                var entity = _retrievalAnalyzer.Entities.FirstOrDefault(e => e.Entity.Equals(individual));
+                if (entity != null) ViewData["RelatableTerms"] = entity.RelatableTerms;
             }
 
             return View(individual);

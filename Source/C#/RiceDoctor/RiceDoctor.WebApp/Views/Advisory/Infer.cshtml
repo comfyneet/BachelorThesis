@@ -1,128 +1,95 @@
-﻿@using System.Text
-@using RiceDoctor.RuleManager
-@model RiceDoctor.WebApp.Models.Advisory
+﻿@using RiceDoctor.RuleManager
 @{
-    var incompleteRules = (IReadOnlyCollection<Tuple<double, LogicRule, IReadOnlyList<Fact>>>) ViewData["IncompleteRules"];
-    var incompleteFacts = (IReadOnlyList<Fact>) ViewData["IncompleteFacts"];
-    var priority = ViewData["Priority"];
+    var completeResult = (List<KeyValuePair<Fact, double>>) ViewData["CompleteResults"];
+    var incompleteResult = (List<KeyValuePair<Fact, double>>) ViewData["IncompleteResults"];
+
     ViewData["Title"] = "Tư vấn/Chuẩn đoán";
     ViewData["AdvisoryPage"] = true;
 }
 
 <div class="row">
     <div class="col-md-12">
-        @if (Model.Results != null)
+        @if (completeResult != null || incompleteResult != null)
         {
-            <h2>Suy diễn thành công</h2>
-
-            <section>
-                <h4>Kết quả</h4>
-                @foreach (var resultFact in Model.Results)
-                {
-                    <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@resultFact.Value">@resultFact.ToLabelString()</a>
-                }
-            </section>
-
-            <hr/>
-
-            <button id="inferredRulesBtn" class="btn btn-default">Xem danh sách luật được áp dụng</button>
-            <div id="inferredRules" style="display: none">
-                <section>
-                    <h4>Luật tường minh</h4>
-                    @foreach (var rule in Model.Engine.InferredLogicRules)
-                    {
-                        <p>@rule</p>
-                    }
-                </section>
-
-                <section>
-                    <h4>Luật quan hệ</h4>
-                    @foreach (var rule in Model.Engine.InferredRelationRules)
-                    {
-                        <p>@rule.Key.ToLabelString() - @rule.Value</p>
-                    }
-                </section>
-            </div>
-        }
-        else
-        {
-            <h2>Suy diễn không thành công</h2>
-
-            if (incompleteFacts != null)
+            List<KeyValuePair<Fact, double>> result;
+            if (completeResult != null)
             {
-                var incompleteFactsSb = new StringBuilder();
-                <p>
-                    Hệ thống chuẩn đoán kết quả là
-                    @for (var i = 0; i < incompleteFacts.Count; ++i)
-                    {
-                        if (incompleteFacts.Count > 1 && i == incompleteFacts.Count - 1)
-                        {
-                            incompleteFactsSb.Append(" và");
-                        }
-                        else if (i > 0)
-                        {
-                            incompleteFactsSb.Append(',');
-                        }
-                        incompleteFactsSb.Append($" <a href=\"{Url.Action("Individual", "Ontology", new {individualName = incompleteFacts[i].Value})}\">{incompleteFacts[i].ToLabelString()}</a>");
-                    }
-                    @Html.Raw(incompleteFactsSb) với độ chính xác @priority%.
-                </p>
+                result = completeResult;
+                <h2>Chuẩn đoán thành công</h2>
+            }
+            else
+            {
+                result = incompleteResult;
+                <h2>Chuẩn đoán thành công</h2>
             }
 
-            <hr/>
-
-            <button id="incompleteRulesBtn" class="btn btn-default">Xem danh sách luật thiếu</button>
-            <div id="incompleteRules" style="display: none">
-                <table class="table">
-                    <thead>
-                    <tr>
-                        <th>%</th>
-                        <th>Luật</th>
-                        <th>Sự kiện mục tiêu</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    @foreach (var rule in incompleteRules)
-                    {
-                        <tr>
-                            <th>@(rule.Item1 * 100)</th>
-                            <th>@rule.Item2</th>
-                            <th>
-                                @for (var i = 0; i < rule.Item3.Count; ++i)
-                                {
-                                    if (i > 0)
-                                    {
-                                        @:, 
-                                    }
-                                    <a asp-controller="Ontology" asp-action="Individual" asp-route-individualName="@rule.Item3[i].Value">
-                                        @rule.Item3[i].ToLabelString()
-                                    </a>
-                                }</th>
-                        </tr>
-                    }
-                    </tbody>
-                </table>
-            </div>
-        }
-    </div>
-</div>
+            <div id="chartContainer"></div>
 
 @section Scripts {
     <script>
-        $("#inferredRulesBtn").click(function() {
-            if ($("#inferredRules").css('display') === 'none') {
-                $("#inferredRules").fadeIn();
-            } else {
-                $("#inferredRules").fadeOut();
-            }
-        });
-
-        $("#incompleteRulesBtn").click(function() {
-            if ($("#incompleteRules").css('display') === 'none') {
-                $("#incompleteRules").fadeIn();
-            } else {
-                $("#incompleteRules").fadeOut();
-            }
-        });
+        Highcharts.chart('chartContainer',
+            {
+                chart: {
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    plotShadow: false,
+                    fontFamily: 'Arial',
+                    type: 'pie'
+                },
+                title: {
+                    text: 'Kết quả chuẩn đoán'
+                },
+                tooltip: {
+                    pointFormat: '<b>{point.percentage:.1f}%</b>'
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: true,
+                            format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                            style: {
+                                color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black',
+                            }
+                        },
+                        events: {
+                            click: function(event) {
+                                window.location.href = "@Context.Request.GetBaseUrl()" +
+                                    "Ontology/Individual?individualName=" +
+                                    event.point.nameId;
+                            }
+                        }
+                    }
+                },
+                series: [
+                    {
+                        name: '',
+                        colorByPoint: true,
+                        data: [
+                            @for (var i = 0; i < result.Count; ++i)
+                            {
+                                @:{
+                                @:name: '@Html.Raw(result[i].Key.ToLabelString())',
+                                @:nameId: '@Html.Raw(result[i].Key.Value)',
+                                @:y: @result[i].Value,
+                                if (i == 0 && result.Count > 1)
+                                {
+                                    @:sliced: true, selected: true
+                                }
+                                @:},
+                            }
+                        ]
+                    }
+                ]
+            });
     </script>
 }
+            <hr/>
+        }
+        else
+        {
+            <h2>Chuẩn đoán không thành công</h2>
+        }
+    </div>
+</div>

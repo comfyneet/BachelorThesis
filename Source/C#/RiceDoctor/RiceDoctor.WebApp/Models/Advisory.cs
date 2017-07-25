@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using RiceDoctor.InferenceEngine;
-using RiceDoctor.RuleManager;
+﻿using RiceDoctor.InferenceEngine;
 
 namespace RiceDoctor.WebApp.Models
 {
@@ -11,7 +9,5 @@ namespace RiceDoctor.WebApp.Models
         public Request Request { get; set; }
 
         public IInferenceEngine Engine { get; set; }
-
-        public IReadOnlyCollection<Fact> Results { get; set; }
     }
 }

@@ -12,6 +12,7 @@
 <html
     prefix="
       rice: http://cs.uit.edu.vn/ontologies/rice#
+      rdfs: http://www.w3.org/2000/01/rdf-schema#
       doap: http://usefulinc.com/ns/doap#">
 <head>
     <meta charset="utf-8"/>
@@ -28,6 +29,7 @@
         <link rel="stylesheet" href="~/lib/select2/dist/css/select2.css"/>
         <link rel="stylesheet" href="~/lib/select2-bootstrap-theme/dist/select2-bootstrap.css"/>
         <link rel="stylesheet" href="~/lib/datatables.net-bs/css/dataTables.bootstrap.css"/>
+        <link rel="stylesheet" href="~/lib/highcharts/css/highcharts.css"/>
         <link rel="stylesheet" href="~/css/site.css"/>
     </environment>
     <environment names="Staging,Production">
@@ -83,9 +85,6 @@
                         @: class="navbar-nav-active"
                     }>
                     <a asp-controller="Admin" asp-action="Index">Quản trị</a>
-                </li>
-                <li>
-                    <a href="#">Test (not yet)</a>
                 </li>
                 <li
                     @if (activeContactPage)
@@ -151,6 +150,7 @@
     <script src="~/lib/select2/dist/js/select2.js"></script>
     <script src="~/lib/datatables.net/js/jquery.dataTables.js"></script>
     <script src="~/lib/datatables.net-bs/js/dataTables.bootstrap.js"></script>
+    <script src="~/lib/highcharts/js/highcharts.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
 </environment>
 <environment names="Staging,Production">
@@ -160,6 +160,7 @@
     <script src="~/lib/select2/dist/js/select2.min.js"></script>
     <script src="~/lib/datatables.net/js/jquery.dataTables.min.js"></script>
     <script src="~/lib/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script src="~/lib/highcharts/js/highcharts.js"></script>
     <script src="~/js/site.min.js" asp-append-version="true"></script>
 </environment>
 

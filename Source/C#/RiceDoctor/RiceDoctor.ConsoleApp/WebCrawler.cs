@@ -84,6 +84,8 @@ namespace RiceDoctor.ConsoleApp
             Check.NotNull(articleDocument, nameof(articleDocument));
             Check.NotNull(category, nameof(category));
 
+            Logger.Log($"Download tin bai {articleUrl}");
+
             var title = WebUtility.HtmlDecode(articleDocument.DocumentNode.SelectSingleNode(category.TitleXPath)
                 .InnerText);
             var content = WebUtility.HtmlDecode(articleDocument.DocumentNode.SelectSingleNode(category.ContentXPath)
