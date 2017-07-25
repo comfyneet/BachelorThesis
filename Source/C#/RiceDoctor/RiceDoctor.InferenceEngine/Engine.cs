@@ -467,9 +467,16 @@ namespace RiceDoctor.InferenceEngine
             [NotNull] IReadOnlyCollection<Fact> knownFacts,
             [NotNull] IReadOnlyCollection<LogicRule> rules)
         {
+            Check.NotNull(fact, nameof(fact));
+            Check.NotNull(knownFacts, nameof(knownFacts));
+            Check.NotNull(rules, nameof(rules));
+
+            var paths = FindPaths(fact, knownFacts, rules, 0);
+
+            if (paths == null) return new Tuple<Path, double>(null, 1.0);
+
             Path bestPath = null;
             var bestCertainty = 0.0;
-            var paths = FindPaths(fact, knownFacts, rules, 0);
             foreach (var path in paths)
             {
                 var certainty = path.Chains.Aggregate(1.0, (current, rule) => current * rule.CertaintyFactor);
@@ -479,7 +486,6 @@ namespace RiceDoctor.InferenceEngine
                     bestPath = path;
                 }
             }
-
             return new Tuple<Path, double>(bestPath, bestCertainty);
         }
     }

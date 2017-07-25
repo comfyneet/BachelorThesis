@@ -129,24 +129,25 @@ namespace RiceDoctor.RetrievalAnalysis
             var dictionary = new Dictionary<string, Dictionary<string, double>>();
             var matrixFile = Path.Combine(AppContext.BaseDirectory,
                 @"..\..\..\..\Resources\association-matrix.txt");
-            using (var fs = File.OpenRead(matrixFile))
-            {
-                using (var sr = new StreamReader(fs))
+            if (File.Exists(matrixFile))
+                using (var fs = File.OpenRead(matrixFile))
                 {
-                    string line;
-                    while ((line = sr.ReadLine()) != null)
+                    using (var sr = new StreamReader(fs))
                     {
-                        var values = line.Split('\t');
-                        var term1 = values[0];
-                        var term2 = values[1];
-                        var score = double.Parse(values[2]);
-                        if (!dictionary.ContainsKey(term1)) dictionary.Add(term1, new Dictionary<string, double>());
-                        if (!dictionary.ContainsKey(term2)) dictionary.Add(term2, new Dictionary<string, double>());
-                        dictionary[term1][term2] = score;
-                        dictionary[term2][term1] = score;
+                        string line;
+                        while ((line = sr.ReadLine()) != null)
+                        {
+                            var values = line.Split('\t');
+                            var term1 = values[0];
+                            var term2 = values[1];
+                            var score = double.Parse(values[2]);
+                            if (!dictionary.ContainsKey(term1)) dictionary.Add(term1, new Dictionary<string, double>());
+                            if (!dictionary.ContainsKey(term2)) dictionary.Add(term2, new Dictionary<string, double>());
+                            dictionary[term1][term2] = score;
+                            dictionary[term2][term1] = score;
+                        }
                     }
                 }
-            }
 
             var entities = new List<AnalyzableEntity>();
 
