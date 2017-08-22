@@ -8,6 +8,8 @@ thế nào là *
 
 phân biệt * và *
 
+* cho giai đoạn *
+
 *, * {60}
 
 * và * {60}
